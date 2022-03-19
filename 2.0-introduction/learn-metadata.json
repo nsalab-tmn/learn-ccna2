@@ -1,9 +1,9 @@
 {
-    "title": "Введение в коммутацию, маршрутизацию и беспроводные сети",
+    "title": "Введение в принципы коммутации",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT0H5M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
