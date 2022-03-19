@@ -200,8 +200,8 @@ Part 3: Проверка сетевых подключений
 
 **Packet Tracer в режиме симуляции физического оборудования (PTPM)**
 
-![Базовая конфигурация коммутатора - PDF](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pdf)
-![Базовая конфигурация коммутатора - PKA](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pka)
+[Базовая конфигурация коммутатора - PDF](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pdf)
+[Базовая конфигурация коммутатора - PKA](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pka)
 
 **Лабораторное оборудование**
-![Базовая конфигурация коммутатора - PDF](./assets/1.1.7-lab---basic-switch-configuration_ru-RU.pdf)
+[Базовая конфигурация коммутатора - PDF](./assets/1.1.7-lab---basic-switch-configuration_ru-RU.pdf)
