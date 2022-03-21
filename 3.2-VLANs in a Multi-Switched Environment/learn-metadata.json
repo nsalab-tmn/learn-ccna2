@@ -1,9 +1,9 @@
 {
-    "title": "Обзор виртуальных локальных сетей",
+    "title": "Виртуальные локальные сети в среде с несколькими коммутаторами",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT0H30M",
+    "duration": "PT0H20M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
