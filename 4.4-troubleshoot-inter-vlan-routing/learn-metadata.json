@@ -1,0 +1,11 @@
+{
+    "title": "Поиск и устранение неполадок маршрутизации между VLAN",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT0H45M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
