@@ -135,7 +135,7 @@
 - Обзор работы протокола STP
 - Отключите STP и снова просмотрите работу сети.
 
-[Открыть описание в PDF](./assets/5.1.9-packet-tracer---investigate-stp-loop-prevention_ru-RU.pd)
+[Открыть описание в PDF](./assets/5.1.9-packet-tracer---investigate-stp-loop-prevention_ru-RU.pdf)
 
 [Скачать файл для Packet Tracer](./assets/5.1.9-packet-tracer---investigate-stp-loop-prevention_ru-RU.pka)
 
