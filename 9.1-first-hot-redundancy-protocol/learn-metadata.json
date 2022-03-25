@@ -1,9 +1,9 @@
 {
-    "title": "Принципы DHCPv4",
+    "title": "Протокол резервирования первого перехода (FHRP)",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT1H0M",
+    "duration": "PT0H40M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
