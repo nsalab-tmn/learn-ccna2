@@ -1,0 +1,11 @@
+{
+    "title": "Поиск и устранение проблем с конфигурацией статических маршрутов IPv4 и маршрутов IPv4 по умолчанию",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT0H45M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
