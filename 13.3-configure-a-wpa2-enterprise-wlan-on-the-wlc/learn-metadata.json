@@ -1,0 +1,11 @@
+{
+    "title": "Конфигурация WPA2 Enterprise WLAN с контроллером беспроводной сети",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT2H0M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
