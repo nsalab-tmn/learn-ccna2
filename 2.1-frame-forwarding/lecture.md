@@ -43,6 +43,9 @@
 <!-- 2.1.4 -->
 ## Видеоролик. Таблицы MAC-адресов на подключенных друг к другу коммутаторах
 
+<video width="768" height="432" controls>
+  <source src="https://github.com/nsalab-tmn/learn-ccna2/raw/main/2.1-frame-forwarding/assets/2.1.4.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+</video>
 
 <!-- 2.1.5 -->
 ## Способы пересылки на коммутаторе
