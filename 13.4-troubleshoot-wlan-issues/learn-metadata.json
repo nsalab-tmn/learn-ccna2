@@ -1,0 +1,11 @@
+{
+    "title": "Практика и контрольная работа модуля конфигурация WLAN",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT1H0M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
