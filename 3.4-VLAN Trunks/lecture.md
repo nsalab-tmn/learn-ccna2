@@ -10,10 +10,10 @@
 | Задача | 	Команда IOS |
 | --- | --- |
 | Войдите в режим глобальной настройки. | Switch# **configure terminal** |
-| Войдите в режим интерфейсной конфигурации. | Switch(config)# **interface** interface-id |
+| Войдите в режим интерфейсной конфигурации. | Switch(config)# **interface** *interface-id* |
 | Установите порт в режим постоянного транка. | Switch(config-if)# **switchport mode trunk** |
-| Установите в качестве VLAN с нетегированным трафиком сеть, отличную от VLAN 1. | Switch(config-if)# **switchport trunk native vlan** vlan-id |
-| Укажите список сетей VLAN, которым разрешен доступ в магистральный канал. | Switch(config-if)# **switchport trunk allowed vlan** vlan-list |
+| Установите в качестве VLAN с нетегированным трафиком сеть, отличную от VLAN 1. | Switch(config-if)# **switchport trunk native vlan** *vlan-id* |
+| Укажите список сетей VLAN, которым разрешен доступ в магистральный канал. | Switch(config-if)# **switchport trunk allowed vlan** *vlan-list* |
 | Вернитесь в привилегированный исполнительский режим. | Switch(config-if)# **end** |
 
 <!-- 3.4.2 -->
@@ -44,7 +44,7 @@ S1(config-if)# end
 <!-- 3.4.3 -->
 ## Пример конфигурации магистрального канала
 
-Выходной сигнал коммутатора отображает конфигурацию порта коммутатора F0/1 коммутатора S1. Конфигурация проверяется с помощью команды **show interfaces** interface-ID **switchport**.
+Выходной сигнал коммутатора отображает конфигурацию порта коммутатора F0/1 коммутатора S1. Конфигурация проверяется с помощью команды **show interfaces** *interface-ID* **switchport**.
 
 ```
 S1# show interfaces fa0/1 switchport
