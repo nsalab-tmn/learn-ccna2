@@ -10,8 +10,6 @@
 
 Предположим, что на рисунке интернет-провайдер настроен на предоставление избранным клиентам IP-адресов из диапазона сети 209.165.201.0/27 после того, как интерфейс G0/0/1 настроен с помощью команды **ip address dhcp**.
 
-На рисунке изображен маршрутизатор, настроенный в качестве клиента DHCPv4, подключается через G0/0/1 к кабелю или DSL-модему, который затем подключается к облаку, которое затем подключается к маршрутизатору ISP, функционирующем в качестве сервера DHCPv4.
-
 ![](./assets/7.3.1.PNG)
 <!-- /courses/srwe-dl/af9ece96-34fe-11eb-b1b2-9b1b0c1f7e0d/afb69c50-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9fcc671-1c27-11ea-af09-3b2e6521927c.svg -->
 
@@ -20,21 +18,23 @@
 ## Пример конфигурации
 Для настройки Ethernet-интерфейса в качестве DHCP-клиента используйте команду режима настройки интерфейса **ip address dhcp**. Эта конфигурация предполагает, что поставщик услуг Интернета был настроен на предоставление информации адресации IPv4 для отдельных клиентов.
 
-<code><pre>SOHO(config)# interface G0/0/1
+```
+SOHO(config)# interface G0/0/1
 SOHO(config-if)# ip address dhcp
 SOHO(config-if)# no shutdown
 Sep 12 10:01:25.773: %DHCP-6-ADDRESS_ASSIGN: Interface GigabitEthernet0/0/1 assigned DHCP address 209.165.201.12, mask 255.255.255.224, hostname SOHO
-</code></pre>
+```
 
 Команда **show ip interface g0/0/1** подтверждает, что интерфейс запущен и что адрес был выделен сервером DHCPv4.
 
-<code><pre>SOHO# show ip interface g0/0/1
+```
+SOHO# show ip interface g0/0/1
 GigabitEthernet0/0/1 is up, line protocol is up
   Internet address is 209.165.201.12/27
   Broadcast address is 255.255.255.255
   Address determined by DHCP
 (output omitted)
-</code></pre>
+```
 
 <!-- 7.3.3 -->
 ## Домашний маршрутизатор как клиент DHCPv4
