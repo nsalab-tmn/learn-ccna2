@@ -1,9 +1,9 @@
 {
-    "title": "Принципы маршрутизации между виртуальными локальными сетями",
+    "title": "Маршрутизация между сетями VLAN с использованием метода Router-on-a-Stick",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT1H0M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
