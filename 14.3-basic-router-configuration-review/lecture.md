@@ -7,7 +7,7 @@
 
 Топология на рисунке будет использоваться для примеров конфигурации и проверки. Он также будет использован в следующем разделе для обсуждения таблицы IP-маршрутизации.
 <!-- /courses/srwe-dl/af9ef5a2-34fe-11eb-b1b2-9b1b0c1f7e0d/afb7fbe0-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/cacd5ce1-1c27-11ea-af09-3b2e6521927c.svg -->
-![](./assets/14.3.1.png)
+![](./assets/14.3.1.PNG)
 
 <!-- 14.3.2-->
 ## Команды настройки
@@ -82,9 +82,9 @@ R1#
 В каждом случае замените **ip** на версию команды IPv6 **ipv6**. На рисунке показана топология снова для удобства использования.
 
 <!-- /courses/srwe-dl/af9ef5a2-34fe-11eb-b1b2-9b1b0c1f7e0d/afb7fbe0-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/cacd5ce1-1c27-11ea-af09-3b2e6521927c.svg -->
-![](./assets/14.3.3.png)
+![](./assets/14.3.3.PNG)
 
-1. **show ip interface brief**
+**show ip interface brief**
 
 ```
 R1# show ip interface brief
@@ -97,7 +97,7 @@ GigabitEthernet0 unassigned YES unset down down
 R1#
 ```
 
-2. **show ipv6 interface brief**
+**show ipv6 interface brief**
 
 ```
 R1# show ipv6 interface brief
@@ -119,7 +119,7 @@ R1#
 
 
 
-3. **show running-config interface gigabitethernet 0/0/0**
+**show running-config interface gigabitethernet 0/0/0**
 
 ```
 R1# show running-config interface gigabitethernet 0/0/0
@@ -136,7 +136,7 @@ end
 R1#
 ```
 
-4. **show interfaces**
+**show interfaces**
 
 ```
 R1# show interfaces gigabitEthernet 0/0/0
@@ -171,7 +171,7 @@ GigabitEthernet0/0/0 is up, line protocol is up
 R1#
 ```
 
-5. **show ip interfaces**
+**show ip interfaces**
 
 ```
 R1# show ip interface gigabitethernet 0/0/0
@@ -220,7 +220,7 @@ GigabitEthernet0/0/0 is up, line protocol is up
 R1#
 ```
 
-6. **show ipv6 interfaces**
+**show ipv6 interfaces**
 
 ```
 R1# show ipv6 interface gigabitethernet 0/0/0
@@ -251,7 +251,7 @@ GigabitEthernet0/0/0 is up, line protocol is up
 R1#
 ```
 
-7. **show ip route**
+**show ip route**
 
 ```
 R1# show ip route
@@ -268,7 +268,7 @@ L 10.0.3.1/32 is directly connected, Serial0/1/1
 R1#
 ```
 
-8. **show ipv6 route**
+**show ipv6 route**
 
 ```
 R1# show ipv6 route
@@ -292,7 +292,7 @@ L FF00::/8 [0/0]
 R1#
 ```
 
-9. **ping**
+**ping**
 
 ```
 R1# ping 10.0.3.2
@@ -316,17 +316,18 @@ R1#
 
 К параметрам фильтрации, которые следует указывать после вертикальной черты, относятся:
 
-**section** — показать целый раздел, который начинается с заданного фильтра.
-**include** — включить все строки выходных данных, которые соответствуют заданному фильтру.
-**exclude** — исключить все строки выходных данных, которые соответствуют заданному фильтру.
-**begin** — показать все строки выходных данных от конкретного места, начиная с линии, которая соответствует заданному фильтру.
+- **section** — показать целый раздел, который начинается с заданного фильтра.
+- **include** — включить все строки выходных данных, которые соответствуют заданному фильтру.
+- **exclude** — исключить все строки выходных данных, которые соответствуют заданному фильтру.
+- **begin** — показать все строки выходных данных от конкретного места, начиная с линии, которая соответствует заданному фильтру.
 
 **Примечание**: Фильтры выходных данных можно использовать в сочетании с любой командой **show**.
 
-На рисунке снова показана топология для вашего удобства
+На рисунке снова показана топология для вашего удобства.
 
 <!-- /courses/srwe-dl/af9ef5a2-34fe-11eb-b1b2-9b1b0c1f7e0d/afb7fbe0-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/cacd5ce1-1c27-11ea-af09-3b2e6521927c.svg -->
-![](./assets/14.3.4.png)
+
+![](./assets/14.3.4.PNG)
 
 Эти примеры демонстрируют некоторые из наиболее распространенных способов использования параметров фильтрации.
 
