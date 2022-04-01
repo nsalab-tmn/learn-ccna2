@@ -1,0 +1,11 @@
+{
+    "title": "Настройка статических маршрутов для пересылки IP-пакетов по умолчанию",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT1H0M",
+    "tags": ["Network", "Cisco"],
+    "skills": {},
+    "testProjectPath": "./lecture.md",
+    "assetsPath": "assets"
+}
