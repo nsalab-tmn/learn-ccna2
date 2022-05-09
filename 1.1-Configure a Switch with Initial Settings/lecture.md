@@ -213,11 +213,11 @@ Vlan99 [вниз/вниз]
 
 **Packet Tracer в режиме симуляции физического оборудования (PTPM)**
 
-[Базовая конфигурация коммутатора - Режим симуляции физического оборудования (pdf)](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode.pdf)
+[Базовая конфигурация коммутатора - Режим симуляции физического оборудования (pdf)](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pdf)
 
-[Базовая конфигурация коммутатора - Режим симуляции физического оборудования (pka)](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode.pka)
+[Базовая конфигурация коммутатора - Режим симуляции физического оборудования (pka)](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pka)
 
 **Лабораторное оборудование** 
 
-[Базовая настройка коммутатора (lab)](./assets/1.1.7-lab---basic-switch-configuration.pdf)
+[Базовая настройка коммутатора (lab)](./assets/1.1.7-lab---basic-switch-configuration_ru-RU.pdf)
 
