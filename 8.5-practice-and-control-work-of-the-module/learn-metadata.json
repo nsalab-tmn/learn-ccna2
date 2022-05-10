@@ -1,9 +1,9 @@
 {
-    "title": "Практика и контрольная работа модуля SLAAC И DHCPv6",
+    "title": "Практика и контрольная работа модуля",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT1H0M",
+    "duration": "PT0H7M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
