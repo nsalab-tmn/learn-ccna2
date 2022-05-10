@@ -1,26 +1,22 @@
-# Практика и контрольная работа модуля EtherChannel
-
 <!-- 6.4.1 -->
 ## Packet Tracer. Внедрение EtherChannel
 
 Вам было поручено разработать реализацию EtherChannel для компании, которая хочет улучшить производительность магистральных каналов коммутатора. Вы попробуете несколько различных способов реализации каналов EtherChannel, чтобы оценить, что лучше для компании. Вы будете строить топологию, настраивать магистральные порты и реализовывать EtherChannels LACP и PAgP.
 
-[Открыть описание в PDF](./assets/6.4.1-packet-tracer---implement-etherchannel_ru-RU.pdf)
+[Внедрение EtherChannel (pdf)](./assets/6.4.1-packet-tracer---implement-etherchannel_ru-RU.pdf)
 
-[Скачать файл для Packet Tracer](./assets/6.4.1-packet-tracer---implement-etherchannel_ru-RU.pka)
+[Внедрение EtherChannel (pka)](./assets/6.4.1-packet-tracer---implement-etherchannel_ru-RU.pka)
 
 <!-- 6.4.2 -->
 ## Лабораторная работа - Внедрение EtherChannel
 
 В этой лабораторной работе вы выполните следующие задачи.
+* Часть 1: Создание сети и настройка основных параметров устройства
+* Часть 2: Создание сетей VLAN и назначение портов коммутатора
+* Часть 3: Конфигурация магистрального канала стандарта 802.1Q между коммутаторами
+* Часть 4: Внедрение и проверка EtherChannel между коммутаторами
 
-- Часть 1: Создание сети и настройка основных параметров устройства
-- Часть 2: Создание сетей VLAN и назначение портов коммутатора
-- Часть 3: Конфигурация магистрального канала стандарта 802.1Q между коммутаторами
-- Часть 4: Внедрение и проверка EtherChannel между коммутаторами
-
-[Открыть описание в PDF](./assets/6.4.2-lab---implement-etherchannel_ru-RU.pdf)
-
+[Внедрение Etherchannel (lab)](./assets/6.4.2-lab---implement-etherchannel_ru-RU.pdf)
 
 <!-- 6.4.3 -->
 ## Что я изучил в этом модуле?
@@ -48,14 +44,13 @@
 
 **Поиск и устранение проблем в работе EtherChannel.**
 
-including {1}, {2}, {3}, and {4}.Для проверки конфигурации EtherChannel доступно несколько команд, включая **show interfaces port-channel, show etherchannel summary, show etherchannel port-channel и show interfaces etherchannel**. К числу распространенных проблем EtherChannel относятся следующие:
+Для проверки конфигурации EtherChannel доступно несколько команд, включая **show interfaces port-channel**, **show etherchannel summary**, **show etherchannel port-channel** и **show interfaces etherchannel**. К числу распространенных проблем EtherChannel относятся следующие:
 
-- Назначенные порты в EtherChannel не являются частью одной VLAN или не настроены как транки. Порты с различными native VLAN не могут образовать EtherChannel.
-- Транк был настроен на некоторых портах, которые составляют EtherChannel, но не на всех из них.
-- Если диапазоны разрешённых VLAN не совпадают, порты не смогут сформировать EtherChannel даже при выборе auto или desirable режимов для PAgP.
-- Параметры динамического согласования для PAgP и LACP не совместимы на обоих концах EtherChannel.
+* Назначенные порты в EtherChannel не являются частью одной VLAN или не настроены как транки. Порты с различными native VLAN не могут образовать EtherChannel.
+* Транк был настроен на некоторых портах, которые составляют EtherChannel, но не на всех из них.
+* Если диапазоны разрешённых VLAN не совпадают, порты не смогут сформировать EtherChannel даже при выборе auto или desirable режимов для PAgP.
+* Параметры динамического согласования для PAgP и LACP не совместимы на обоих концах EtherChannel.
 
-<!-- 6.4.4 Контрольная работа - Etherchannel -quiz -->
-
-
+<!-- 6.4.4 -->
+<!-- quiz -->
 
