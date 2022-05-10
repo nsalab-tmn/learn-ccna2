@@ -1,9 +1,9 @@
 {
-    "title": "Практика и контрольная работа модуля Принципы STP",
+    "title": "Практика и контрольная работа модуля",
     "materialType": "lecture",
     "description": "",
     "difficulty": 3,
-    "duration": "PT0H40M",
+    "duration": "PT0H7M",
     "tags": ["Network", "Cisco"],
     "skills": {},
     "testProjectPath": "./lecture.md",
