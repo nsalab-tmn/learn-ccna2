@@ -395,8 +395,3 @@ R1#
 [Поиск и устранение неполадок в маршрутизации между VLAN - Режим симуляции физического оборудования. (pdf)](./assets/4.4.9-packet-tracer---troubleshoot-inter-vlan-routing---physical-mode_ru-RU.pdf)
 
 [Поиск и устранение неполадок в маршрутизации между VLAN - Режим симуляции физического оборудования. (pka)](./assets/4.4.9-packet-tracer---troubleshoot-inter-vlan-routing---physical-mode_ru-RU.pka)
-
-**Лабораторное оборудование** 
-
-[Поиск и устранение неполадок маршрутизации между VLAN (lab)](./assets/4.4.9-lab---troubleshoot-inter-vlan-routing_ru-RU.pdf)
-

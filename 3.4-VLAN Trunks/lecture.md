@@ -159,11 +159,6 @@ Administrative Native VLAN tagging: enabled
 *  Конфигурация магистрального канала стандарта 802.1Q между коммутаторами
 * Удаление базы данных VLAN 
 
-[ Конфигурация VLAN и транкинга — Режим симуляции физического оборудования (pdf)](./assets/3.4.6-packet-tracer---configure-vlans-and-trunking---physical-mode_ru-RU.pdf)
+[Конфигурация VLAN и транкинга — Режим симуляции физического оборудования (pdf)](./assets/3.4.6-packet-tracer---configure-vlans-and-trunking---physical-mode_ru-RU.pdf)
 
 [Конфигурация VLAN и транкинга — Режим симуляции физического оборудования (pka)](./assets/3.4.6-packet-tracer---configure-vlans-and-trunking---physical-mode_ru-RU.pka)
-
-**Лабораторное оборудование** 
-
-[Настройка VLAN и магистральных каналов (lab)](./assets/3.4.6-lab---configure-vlans-and-trunking_ru-RU.pdf)
-

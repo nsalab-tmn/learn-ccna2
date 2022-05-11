@@ -216,8 +216,3 @@ Vlan99 [вниз/вниз]
 [Базовая конфигурация коммутатора - Режим симуляции физического оборудования (pdf)](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pdf)
 
 [Базовая конфигурация коммутатора - Режим симуляции физического оборудования (pka)](./assets/1.1.7-packet-tracer---basic-switch-configuration---physical-mode_ru-RU.pka)
-
-**Лабораторное оборудование** 
-
-[Базовая настройка коммутатора (lab)](./assets/1.1.7-lab---basic-switch-configuration_ru-RU.pdf)
-

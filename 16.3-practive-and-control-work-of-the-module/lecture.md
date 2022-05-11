@@ -24,7 +24,3 @@
 [Устранение неполадок статических маршрутов IPv4 и IPv6 и маршрутов по умолчанию - режим симуляции физического оборудования (pdf)](./assets/16.3.2-packet-tracer---troubleshoot-ipv4-and-ipv6-static-and-default-routes---physical-mode_ru-RU.pdf)
 
 [Устранение неполадок статических маршрутов IPv4 и IPv6 и маршрутов по умолчанию - режим симуляции физического оборудования (pka)](./assets/16.3.2-packet-tracer---troubleshoot-ipv4-and-ipv6-static-and-default-routes---physical-mode_ru-RU.pka)
-
-**Лабораторное оборудование** 
-
-[Поиск и устранение неполадок, связанных со статическими маршрутами и маршрутами по умолчанию (lab)](./assets/16.3.2-lab---troubleshoot-ipv4-and-ipv6-static-and-default-routes_ru-RU.pdf)

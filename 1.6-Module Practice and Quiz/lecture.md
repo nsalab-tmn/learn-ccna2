@@ -15,7 +15,3 @@
 [Настройка базовых параметров маршрутизатора -Режим симуляции физического оборудования (pdf)](./assets/1.6.2-packet-tracer----configure-basic-router-settings---physical-mode_ru-RU.pdf)
 
 [Настройка базовых параметров маршрутизатора -Режим симуляции физического оборудования (pka)](./assets/1.6.2-packet-tracer----configure-basic-router-settings---physical-mode_ru-RU.pka)
-
-**Лабораторное оборудование** 
-
-[Настройка основных параметров маршрутизатора (lab)](./assets/1.6.2-lab---configure-basic-router-settings_ru-RU.pdf)
