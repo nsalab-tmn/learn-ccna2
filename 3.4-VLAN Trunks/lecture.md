@@ -137,7 +137,7 @@ Administrative Native VLAN tagging: enabled
 ```
 
 <!-- 3.4.5 -->
-## Packet Tracer. Настройка магистральных каналов
+## Работа в симуляторе: настройка магистральных каналов
 
 В этом упражнении Packet Tracer вам нужно:
 

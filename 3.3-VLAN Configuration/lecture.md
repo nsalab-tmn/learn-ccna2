@@ -265,7 +265,7 @@ Trunking Native Mode VLAN: 1 (default)
 <!-- syntax -->
 
 <!-- 3.3.12 -->
-## Packet Tracer - Конфигурация сетей VLAN
+## Работа в симуляторе: конфигурация сетей VLAN
 
 В этом упражнении Packet Tracer вам нужно:
 
