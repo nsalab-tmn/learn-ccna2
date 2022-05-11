@@ -149,7 +149,7 @@ Administrative Native VLAN tagging: enabled
 [Настройка магистральных каналов (pka)](./assets/3.4.5-packet-tracer---configure-trunks_ru-RU.pka)
 
 <!-- 3.4.6 -->
-## Лабораторная работа. Настройка VLAN и магистральных каналов
+## Работа в симуляторе: настройка VLAN и магистральных каналов
 
 В этом упражнении Packet Tracer вам нужно:
 
