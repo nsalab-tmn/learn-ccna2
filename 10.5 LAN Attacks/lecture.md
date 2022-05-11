@@ -5,7 +5,7 @@
 
 После нажатия на рисунок, вы будете перенаправлены на YouTube для просмотра видео о атаках VLAN и DHCP.
 
-[![VLAN и DHCP-атаки] (./assets/10.5.1.png)](https://www.youtube.com/watch?v=ye_f86EfTl8 "VLAN и DHCP-атаки")
+[![VLAN и DHCP-атаки](./assets/10.5.1.png)](https://www.youtube.com/watch?v=ye_f86EfTl8 "VLAN и DHCP-атаки")
 
 <!-- 10.5.2 -->
 ## Атака VLAN Hopping
