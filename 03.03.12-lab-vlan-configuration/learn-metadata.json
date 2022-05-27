@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: конфигурация сетей VLAN",
+    "shortName": "lab-3.3.12",
+    "materialType": "lab",
+    "description": "В этом упражнении Packet Tracer вам нужно:\n\n* Проверка конфигурации VLAN, установленной по умолчанию\n* Настройка сетей VLAN\n* Назначение сетей VLAN портам",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

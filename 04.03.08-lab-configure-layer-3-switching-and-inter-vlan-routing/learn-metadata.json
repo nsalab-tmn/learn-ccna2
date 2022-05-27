@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: настройка коммутации уровня 3 и маршрутизации между сетями VLAN",
+    "shortName": "lab-4.3.8",
+    "materialType": "lab",
+    "description": "В этом упражнении вы настроите коммутацию уровня 3 и маршрутизацию между сетями VLAN на коммутаторе Cisco 3560.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}
