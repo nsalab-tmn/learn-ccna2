@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: поиск и устранение неполадок, связанных со статическими маршрутами и маршрутами по умолчанию",
+    "shortName": "lab-16.3.2",
+    "materialType": "lab",
+    "description": "В этой лабораторной работе вы выполните следующие задачи.\n\n* Оценка работы сети\n* Сбор информации, создание плана действий и внесение исправлений",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}
