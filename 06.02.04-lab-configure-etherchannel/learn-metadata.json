@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: настройка EtherChannel",
+    "shortName": "lab-6.2.4",
+    "materialType": "lab",
+    "description": "Только что были установлены три коммутатора. Между коммутаторами настроены избыточные каналы. Обычно можно использовать лишь один из этих каналов, иначе может возникнуть петля на втором уровне модели OSI. Однако при эксплуатации одного канала используется только половина доступной пропускной способности. EtherChannel позволяет объединять до восьми избыточных каналов в один логический. В этой лабораторной работе вам предстоит настроить протокол агрегирования портов (PAgP), протокол Cisco EtherChannel и протокол управления агрегированием каналов (LACP), версию EtherChannel открытого стандарта IEEE 802.3ad.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

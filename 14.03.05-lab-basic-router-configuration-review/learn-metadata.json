@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: обзор базовой конфигурации маршрутизатора",
+    "shortName": "lab-14.3.5",
+    "materialType": "lab",
+    "description": "К маршрутизаторам R1 и R2 подключено по две локальных сети. R1 уже настроен. Ваша задача - настроить соответствующую адресацию для R2 и проверить подключение между локальными сетями.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: поиск и устранение неполадок WLAN сетей.",
+    "shortName": "lab-13.4.5",
+    "materialType": "lab",
+    "description": "Теперь, когда вы узнали, как настроить беспроводную связь в домашних и корпоративных сетях, вам нужно научиться устранять неполадки в беспроводных средах. Ваша цель - включить соединение между хостами в сетях с веб-сервером по IP-адресу и URL-адресу. Связь между домашней и корпоративной сетями не требуется.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

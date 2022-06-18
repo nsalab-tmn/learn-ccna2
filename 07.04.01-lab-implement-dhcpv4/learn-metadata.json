@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: реализация DHCPv4",
+    "shortName": "lab-7.4.1",
+    "materialType": "lab",
+    "description": "Как специалисту по обслуживанию сетей, вам необходимо настроить маршрутизатор Cisco в качестве сервера DHCP, чтобы обеспечить динамическое распределение адресов для клиентов внутри сети. Также необходимо настроить пограничный маршрутизатор в качестве DHCP-клиента таким образом, чтобы он получал IP-адрес от сети интернет-провайдера. Поскольку сервер централизован, необходимо настроить два маршрутизатора LAN для ретрансляции DHCP-трафика между локальными сетями и маршрутизатором, который выступает в качестве DHCP-сервера.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: внедрение EtherChannel",
+    "shortName": "lab-6.4.1",
+    "materialType": "lab",
+    "description": "Вам было поручено разработать реализацию EtherChannel для компании, которая хочет улучшить производительность магистральных каналов коммутатора. Вы попробуете несколько различных способов реализации каналов EtherChannel, чтобы оценить, что лучше для компании. Вы будете строить топологию, настраивать магистральные порты и реализовывать EtherChannels LACP и PAgP.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}

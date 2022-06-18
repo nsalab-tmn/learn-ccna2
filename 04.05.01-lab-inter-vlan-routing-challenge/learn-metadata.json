@@ -1,0 +1,30 @@
+{
+    "title": "Работа в симуляторе: устранение неполадок маршрутизации между VLAN",
+    "shortName": "lab-4.5.1",
+    "materialType": "lab",
+    "description": "В этом задании вам предстоит продемонстрировать и закрепить навыки реализации маршрутизации между VLAN, включая настройку IP-адресов, cетей VLAN, транковых каналов и подынтерфейсов.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": [
+        "Cisco",
+        "Packet Tracer"
+    ],
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "testProjectPath": "./README.md",
+    "deploymentPath": "deploy",
+    "assetsPath": "assets"
+}
