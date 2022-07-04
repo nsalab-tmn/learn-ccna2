@@ -247,4 +247,4 @@ DC1R5_SwitchA(config-if-range)# no shutdown
 
     **Введите ваш ответ здесь.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/9.3.4-packet-tracer---data-center-exploration---physical-mode_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/9.3.4-lab.pka)

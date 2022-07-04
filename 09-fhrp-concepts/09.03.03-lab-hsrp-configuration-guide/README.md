@@ -252,4 +252,4 @@
 
     **Введите ваш ответ здесь.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/9.3.3-packet-tracer---hsrp-configuration-guide_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/9.3.3-lab.pka)

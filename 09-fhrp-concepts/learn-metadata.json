@@ -1,0 +1,30 @@
+{
+    "title": "Принципы работы FHRP",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./09.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.01-first-hop-redundancy-protocol/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.02-hsrp/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.03-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.03.03-lab-hsrp-configuration-guide/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.03.04-lab-data-center-exploration-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.04-summary/learn-metadata.json"
+        }
+    ]
+}
