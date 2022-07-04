@@ -1,0 +1,36 @@
+{
+    "title": "EtherChannel",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./06.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.01-etherchannel-operation/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.02-configure-etherchannel/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.02.04-lab-configure-etherchannel/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.03-verify-and-troubleshoot-etherchannel/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.03.04-lab-troubleshoot-etherchannel/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.04-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.04.01-lab-implement-etherchannel/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.05-summary/learn-metadata.json"
+        }
+    ]
+}

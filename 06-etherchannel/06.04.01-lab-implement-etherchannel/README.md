@@ -71,4 +71,4 @@
 
 Настройте Port Channel 3 в качестве канала LACP между SWB и SWC. В этом случае SWC инициирует согласование с SWB. SWB не инициирует согласование канала.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/6.4.1-packet-tracer---implement-etherchannel_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/6.4.1-lab.pka)

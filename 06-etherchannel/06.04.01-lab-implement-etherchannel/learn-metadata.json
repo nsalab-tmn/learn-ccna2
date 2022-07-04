@@ -5,10 +5,9 @@
     "description": "Вам было поручено разработать реализацию EtherChannel для компании, которая хочет улучшить производительность магистральных каналов коммутатора. Вы попробуете несколько различных способов реализации каналов EtherChannel, чтобы оценить, что лучше для компании. Вы будете строить топологию, настраивать магистральные порты и реализовывать EtherChannels LACP и PAgP.",
     "difficulty": 1,
     "duration": "PT0H22M",
-    "tags": [
-        "Cisco",
-        "Packet Tracer"
-    ],
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
     "credentialsSchema": {
         "userName": {
             "title": "Имя пользователя",
@@ -24,7 +23,13 @@
         }
     },
     "skills": {},
-    "testProjectPath": "./README.md",
-    "deploymentPath": "deploy",
-    "assetsPath": "assets"
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
 }
