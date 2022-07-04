@@ -11,6 +11,7 @@
     { "$ref": "./06-etherchannel/learn-metadata.json" },
     { "$ref": "./07-dhcpv4/learn-metadata.json" },
     { "$ref": "./08-slaac-and-dhcpv6-concepts/learn-metadata.json" },
-    { "$ref": "./09-fhrp-concepts/learn-metadata.json" }
+    { "$ref": "./09-fhrp-concepts/learn-metadata.json" },
+    { "$ref": "./10-lan-security-concepts/learn-metadata.json" }
   ]
 }

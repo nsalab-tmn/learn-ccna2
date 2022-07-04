@@ -1,0 +1,30 @@
+{
+    "title": "Принципы обеспечения безопасности локальной сети",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./10.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.01-endpoint-security/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.02-access-control/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.03-layer-2-security-threats/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.04-mac-address-table-attack/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.05-lan-attacks/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.06-summary/learn-metadata.json"
+        }
+    ]
+}
