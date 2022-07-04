@@ -1,0 +1,36 @@
+{
+    "title": "Статическая IP-маршрутизация",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./15.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.01-static-routes/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.02-configure-ip-static-routes/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.03-configure-ip-default-static-routes/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.04-configure-floating-static-routes/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.05-configure-static-host-routes/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.06-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.06.01-lab-configure-ipv4-and-ipv6-static-and-default-routes/learn-metadata.json"
+        },
+        {
+            "$ref": "./15.07-summary/learn-metadata.json"
+        }
+    ]
+}
