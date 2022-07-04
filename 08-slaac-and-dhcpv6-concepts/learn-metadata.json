@@ -1,0 +1,27 @@
+{
+    "title": "Принципы работы SLAAC и DHCPv6",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./08.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.01-ipv6-global-unicast-address-assigment/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.02-slaac/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.03-dhcpv6/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.04-configure-dhcpv6-server/learn-metadata.json"
+        },
+        {
+            "$ref": "./08.05-summary/learn-metadata.json"
+        }
+    ]
+}
