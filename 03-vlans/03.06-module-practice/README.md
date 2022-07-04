@@ -8,8 +8,8 @@
 * Настройка статического транкинга
 * Выполнить настройку протокола DTP (Dynamic Trunking Protocol).
 
-[Реализация VLAN и транков (pdf)](./assets/3.6.1-packet-tracer---implement-vlans-and-trunking_ru-RU.pdf)
+[Реализация VLAN и транков (pdf)](./assets/3.6.1-lab.pdf)
 
-[Реализация VLAN и транков (pka)](./assets/3.6.1-packet-tracer---implement-vlans-and-trunking_ru-RU.pka)
+[Реализация VLAN и транков (pka)](./assets/3.6.1-lab.pka)
 
 <!-- 3.6.2 -->
