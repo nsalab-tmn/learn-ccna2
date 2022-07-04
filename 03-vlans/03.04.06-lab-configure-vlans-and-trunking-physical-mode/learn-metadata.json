@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: настройка VLAN и магистральных каналов",
+    "shortName": "lab-3.4.6",
+    "materialType": "lab",
+    "description": "В этом упражнении Packet Tracer вам нужно:\n\n* Создание сети и настройка основных параметров устройства\n* Создание сетей VLAN и назначение портов коммутатора\n* Поддержка назначения портов VLAN и базы данных VLAN\n*  Конфигурация магистрального канала стандарта 802.1Q между коммутаторами\n* Удаление базы данных VLAN",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

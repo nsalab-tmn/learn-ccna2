@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: получатели широковещательной рассылки.",
+    "shortName": "lab-3.1.4",
+    "materialType": "lab",
+    "description": "В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.\n*  Часть 1: Наблюдение за трафиком широковещательной рассылки в сети VLAN\n*  Часть 2: Вопросы на закрепление",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

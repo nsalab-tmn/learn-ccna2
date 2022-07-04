@@ -1,0 +1,54 @@
+{
+    "title": "Сети VLAN",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./03.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.01-overview-of-vlans/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.01.04-lab-who-hears-the-broadcast-ilm/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.02-vlans-in-a-multi-switched-environment/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.02.08-lab-investigate-a-vlan-implementation-ilm/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.03-vlan-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.03.12-lab-vlan-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.04-vlan-trunks/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.04.05-lab-configure-trunks/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.04.06-lab-configure-vlans-and-trunking-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.05-dynamic-trunking-protocol/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.05.05-lab-configure-dtp/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.06-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.06.01-lab-implement-vlans-and-trunking/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.07-summary/learn-metadata.json"
+        }
+    ]
+}
