@@ -71,4 +71,4 @@
 
 3.  Выполните планы действий по одному для каждого критерия, который терпит неудачу, и записывайте действия по исправлению.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/16.3.2-packet-tracer---troubleshoot-ipv4-and-ipv6-static-and-default-routes---physical-mode_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/16.3.2-lab.pka)

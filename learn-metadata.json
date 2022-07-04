@@ -17,6 +17,7 @@
     { "$ref": "./12-wlan-concepts/learn-metadata.json" },
     { "$ref": "./13-wlan-configuration/learn-metadata.json" },
     { "$ref": "./14-routing-concepts/learn-metadata.json" },
-    { "$ref": "./15-ip-static-routing/learn-metadata.json" }
+    { "$ref": "./15-ip-static-routing/learn-metadata.json" },
+    { "$ref": "./16-troubleshoot-static-and-default-routes/learn-metadata.json" }
   ]
 }
