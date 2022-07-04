@@ -13,6 +13,7 @@
     { "$ref": "./08-slaac-and-dhcpv6-concepts/learn-metadata.json" },
     { "$ref": "./09-fhrp-concepts/learn-metadata.json" },
     { "$ref": "./10-lan-security-concepts/learn-metadata.json" },
-    { "$ref": "./11-switch-security-configuration/learn-metadata.json" }
+    { "$ref": "./11-switch-security-configuration/learn-metadata.json" },
+    { "$ref": "./12-wlan-concepts/learn-metadata.json" }
   ]
 }
