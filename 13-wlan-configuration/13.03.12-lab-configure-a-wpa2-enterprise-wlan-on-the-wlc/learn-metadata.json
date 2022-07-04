@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: конфигурация WPA2 Enterprise WLAN с контроллером беспроводной сети",
+    "shortName": "lab-13.3.12",
+    "materialType": "lab",
+    "description": "В этом упражнении вы настроите новую WLAN на контроллере беспроводной локальной сети (WLC), включая интерфейс VLAN, который он будет использовать. Вы настроите WLAN для использования сервера RADIUS и WPA2-Enterprise для аутентификации пользователей. Вы также настроите WLC для использования сервера SNMP.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

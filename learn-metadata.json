@@ -14,6 +14,7 @@
     { "$ref": "./09-fhrp-concepts/learn-metadata.json" },
     { "$ref": "./10-lan-security-concepts/learn-metadata.json" },
     { "$ref": "./11-switch-security-configuration/learn-metadata.json" },
-    { "$ref": "./12-wlan-concepts/learn-metadata.json" }
+    { "$ref": "./12-wlan-concepts/learn-metadata.json" },
+    { "$ref": "./13-wlan-configuration/learn-metadata.json" }
   ]
 }

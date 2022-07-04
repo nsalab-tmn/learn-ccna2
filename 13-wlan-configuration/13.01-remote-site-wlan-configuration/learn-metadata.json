@@ -1,0 +1,17 @@
+{
+    "title": "Настройка беспроводных локальных сетей для удаленных объектов",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT1H1M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    }
+}

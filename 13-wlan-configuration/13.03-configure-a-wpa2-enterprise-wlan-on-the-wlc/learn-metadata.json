@@ -1,0 +1,17 @@
+{
+    "title": "Конфигурация WPA2 Enterprise WLAN с контроллером беспроводной сети",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT1H21M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    }
+}

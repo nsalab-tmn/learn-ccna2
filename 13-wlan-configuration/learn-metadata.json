@@ -1,0 +1,48 @@
+{
+    "title": "Конфигурация WLAN",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./13.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.01-remote-site-wlan-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.01.10-lab-configure-a-wireless-network/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.02-configure-a-basic-wlc-on-the-wlc/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.02.07-lab-configure-a-basic-wlan-on-the-wlc/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.03.12-lab-configure-a-wpa2-enterprise-wlan-on-the-wlc/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.04-troubleshoot-wlan-issues/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.04.05-lab-troubleshoot-wlan-issues/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.05-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.05.01-lab-wlan-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.05.02-lab-wireless-technology-exploration-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./13.06-summary/learn-metadata.json"
+        }
+    ]
+}
