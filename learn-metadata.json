@@ -8,6 +8,7 @@
     { "$ref": "./03-vlans/learn-metadata.json" },
     { "$ref": "./04-inter-vlan-routing/learn-metadata.json" },
     { "$ref": "./05-stp/learn-metadata.json" },
-    { "$ref": "./06-etherchannel/learn-metadata.json" }
+    { "$ref": "./06-etherchannel/learn-metadata.json" },
+    { "$ref": "./07-dhcpv4/learn-metadata.json" }
   ]
 }

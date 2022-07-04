@@ -123,4 +123,4 @@ IP address Client-ID/ Lease expiration Type
 
 Убедитесь в том, что **PC1** и **PC2** теперь могут отправлять эхо-запросы друг другу и другим устройствам.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/7.2.10-packet-tracer---configure-dhcpv4_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/7.2.10-lab.pka)

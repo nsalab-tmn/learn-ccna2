@@ -62,4 +62,4 @@
 
 **Шаг 2. Активируйте интерфейс.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/7.4.1-packet-tracer---implement-dhcpv4_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/7.4.1-lab.pka)

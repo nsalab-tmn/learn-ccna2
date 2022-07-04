@@ -1,0 +1,33 @@
+{
+    "title": "DHCPv4",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./07.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.01-dhcpv4-concepts/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.02-configure-dhcpv4-server/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.02.10-lab-configure-dhcpv4/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.03-configure-dhcpv4-client/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.04-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.04.01-lab-implement-dhcpv4/learn-metadata.json"
+        },
+        {
+            "$ref": "./07.05-summary/learn-metadata.json"
+        }
+    ]
+}
