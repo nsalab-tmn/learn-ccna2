@@ -1,0 +1,21 @@
+{
+    "title": "Принципы коммутации",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./02.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.01-frame-forwarding/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.02-switching-domains/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.03-summary/learn-metadata.json"
+        }
+    ]
+}
