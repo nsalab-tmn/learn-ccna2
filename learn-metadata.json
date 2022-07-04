@@ -5,6 +5,7 @@
   "materials": [
     { "$ref": "./01-basic-device-configuration/learn-metadata.json" },
     { "$ref": "./02-switching-concepts/learn-metadata.json" },
-    { "$ref": "./03-vlans/learn-metadata.json" }
+    { "$ref": "./03-vlans/learn-metadata.json" },
+    { "$ref": "./04-inter-vlan-routing/learn-metadata.json" }
   ]
 }

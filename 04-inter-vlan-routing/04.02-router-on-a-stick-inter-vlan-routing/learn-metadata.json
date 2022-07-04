@@ -1,0 +1,17 @@
+{
+    "title": "Маршрутизация между сетями VLAN с использованием метода Router-on-a-Stick",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT1H11M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    }
+}

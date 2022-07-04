@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: поиск и устранение неполадок в маршрутизации между сетями VLAN",
+    "shortName": "lab-4.4.9",
+    "materialType": "lab",
+    "description": "В этой лабораторной работе вы выполните следующие задачи.\n*  Часть 1: Построение сети и загрузка настроек устройств\n*  Часть 2: Поиск и устранение неполадок в конфигурации маршрутизации между VLAN\n*  Часть 3: Проверка конфигурации сети VLAN, назначения портов и транковой связи\n*  Часть 4: Проверка подключения 3-го уровня",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

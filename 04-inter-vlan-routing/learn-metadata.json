@@ -1,0 +1,45 @@
+{
+    "title": "Маршрутизация между сетями VLAN",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./04.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.01-inter-vlan-routing-operation/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.02-router-on-a-stick-inter-vlan-routing/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.02.07-lab-configure-router-on-a-stick-inter-vlan-routing/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.03-inter-vlan-routing-using-layer-3-switches/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.03.08-lab-configure-layer-3-switching-and-inter-vlan-routing/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.04-troubleshoot-inter-vlan-routing/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.04.08-lab-troubleshoot-inter-vlan-routing/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.04.09-lab-troubleshoot-inter-vlan-routing-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.05-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.05.01-lab-inter-vlan-routing-challenge/learn-metadata.json"
+        },
+        {
+            "$ref": "./04.06-summary/learn-metadata.json"
+        }
+    ]
+}

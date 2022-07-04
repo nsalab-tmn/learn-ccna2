@@ -1,0 +1,17 @@
+{
+    "title": "Маршрутизация между виртуальными локальными сетями с помощью устройств коммутации уровня 3.",
+    "materialType": "lecture",
+    "description": "",
+    "difficulty": 3,
+    "duration": "PT0H45M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    }
+}
