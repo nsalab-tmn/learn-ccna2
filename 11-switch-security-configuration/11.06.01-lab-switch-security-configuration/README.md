@@ -85,4 +85,4 @@
 
 3.  Настройте SW-2, чтобы все порты доступа использовали PortFast по умолчанию.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/11.6.1-packet-tracer---switch-security-configuration_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/11.6.1-lab.pka)

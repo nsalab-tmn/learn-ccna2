@@ -94,4 +94,4 @@
 
     **Введите ваш ответ здесь.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/11.1.10-packet-tracer---implement-port-security_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/11.1.10-lab.pka)

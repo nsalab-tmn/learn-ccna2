@@ -1,0 +1,39 @@
+{
+    "title": "Настройка параметров безопасности коммутатора",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./11.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.01-implement-port-security/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.01.10-lab-implement-port-security/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.02-mitigate-vlan-attacks/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.03-mitigate-dhcp-attacks/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.04-mitigate-arp-attacks/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.05-mitigate-stp-attacks/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.06-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.06.01-lab-switch-security-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./11.07-summary/learn-metadata.json"
+        }
+    ]
+}
