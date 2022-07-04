@@ -1,0 +1,27 @@
+{
+    "title": "STP",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./05.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.01-purpose-of-stp/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.01.09-lab-investigate-stp-loop-prevention/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.02-stp-operations/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.03-evolution-of-stp/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.04-summary/learn-metadata.json"
+        }
+    ]
+}
