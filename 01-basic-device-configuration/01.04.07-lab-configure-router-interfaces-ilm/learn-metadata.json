@@ -1,0 +1,35 @@
+{
+    "title": "Работа в симуляторе: настройка интерфейсов маршрутизатора",
+    "shortName": "lab-1.4.7",
+    "materialType": "lab",
+    "description": "В этом задании Packet Tracer вы будете настраивать маршрутизаторы с адресацией IPv4 и IPv6.",
+    "difficulty": 1,
+    "duration": "PT0H22M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "credentialsSchema": {
+        "userName": {
+            "title": "Имя пользователя",
+            "source": "learn_user"
+        },
+        "password": {
+            "title": "Пароль",
+            "source": "learn_password"
+        },
+        "consoleURL": {
+            "title": "Адрес портала",
+            "value": "https://portal.skillscloud.company"
+        }
+    },
+    "skills": {},
+    "text": {
+        "$ref": "./README.md"
+    },
+    "assets": {
+        "$ref": "./assets"
+    },
+    "deploy": {
+        "$ref": "./deploy"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "title": "Базовая настройка устройств",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "materials": [
+        {
+            "$ref": "./01.00-introduction/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.00.05-lab-logical-and-physical-mode-exploration/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.01-configure-a-switch-with-initial-settings/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.01.07-lab-basic-switch-configuration-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.02-configure-switch-ports/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.03-secure-remote-access/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.03.06-lab-configure-ssh-ilm/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.04-basic-router-configuration/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.04.07-lab-configure-router-interfaces-ilm/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.05-verify-directly-connected-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.05.10-lab-verify-directly-connected-networks/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.06-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.06.01-lab-implement-a-small-network/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.06.02-lab-configure-basic-router-settings-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.07-summary/learn-metadata.json"
+        }
+    ]
+}

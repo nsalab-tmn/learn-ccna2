@@ -1,0 +1,8 @@
+{
+  "title": "Ведение в коммутацию, маршрутизацию и беспроводные сети v7.2 (SRWE)",
+  "materialType": "course",
+  "tags": { "$ref": "./material-tags.json" },
+  "materials": [
+    { "$ref": "./01-basic-device-configuration/learn-metadata.json" }
+  ]
+}
