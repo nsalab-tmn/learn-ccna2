@@ -9,9 +9,6 @@
             "$ref": "./01.00-introduction/learn-metadata.json"
         },
         {
-            "$ref": "./01.00.05-lab-logical-and-physical-mode-exploration/learn-metadata.json"
-        },
-        {
             "$ref": "./01.01-configure-a-switch-with-initial-settings/learn-metadata.json"
         },
         {
