@@ -219,4 +219,4 @@
 
     **Введите ваш ответ здесь.**
 
-[Скачать файл Packet Tracer для локального запуска](./assets/14.3.5-packet-tracer---basic-router-configuration-review_ru-RU.pka)
+[Скачать файл Packet Tracer для локального запуска](./assets/14.3.5-lab.pka)
