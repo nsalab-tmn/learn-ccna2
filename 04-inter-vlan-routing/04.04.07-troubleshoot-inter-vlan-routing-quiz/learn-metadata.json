@@ -1,0 +1,137 @@
+{
+    "title": "Тест на понимание темы: Поиск и устранение неполадок маршрутизации между VLAN",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Вы устраняете проблему между сетями VLAN на маршрутизаторе и необходимо убедиться, что подинтерфейсы находятся в таблице маршрутизации. Какую команду устранения неполадок маршрутизации между VLAN вы используете для этого?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show interfaces",
+                    "correct": false,
+                    "comment": "Команда show ip route подтверждает, что субинтерфейсы находятся в таблице маршрутизации."
+                },
+                {
+                    "answer": "show interfaces interface-id switchport",
+                    "correct": false,
+                    "comment": "Команда show ip route подтверждает, что субинтерфейсы находятся в таблице маршрутизации."
+                },
+                {
+                    "answer": "show ip interface brief",
+                    "correct": false,
+                    "comment": "Команда show ip route подтверждает, что субинтерфейсы находятся в таблице маршрутизации."
+                },
+                {
+                    "answer": "show ip route",
+                    "correct": true
+                },
+                {
+                    "answer": "show vlan",
+                    "correct": false,
+                    "comment": "Команда show ip route подтверждает, что субинтерфейсы находятся в таблице маршрутизации."
+                }
+            ]
+        },
+        {
+            "question": "Вы устраняете проблему между сетями VLAN на коммутаторе и необходимо проверить список VLAN и назначенных им портов. Какую команду устранения неполадок маршрутизации между VLAN вы используете для этого?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show interfaces",
+                    "correct": false,
+                    "comment": "Команда show vlan отобразит список VLAN и назначенных им портов."
+                },
+                {
+                    "answer": "show interfaces interface-id switchport",
+                    "correct": false,
+                    "comment": "Команда show vlan отобразит список VLAN и назначенных им портов."
+                },
+                {
+                    "answer": "show ip interface brief",
+                    "correct": false,
+                    "comment": "Команда show vlan отобразит список VLAN и назначенных им портов."
+                },
+                {
+                    "answer": "show ip route",
+                    "correct": false,
+                    "comment": "Команда show vlan отобразит список VLAN и назначенных им портов."
+                },
+                {
+                    "answer": "show vlan",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Вы устраняете проблему между сетями VLAN на коммутаторе и необходимо проверить состояние порта доступа и режим доступа VLAN. Какую команду устранения неполадок вы бы использовали для этого?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show interfaces",
+                    "correct": false,
+                    "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к сети VLAN."
+                },
+                {
+                    "answer": "show interfaces (interface-id) switchport",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip interface brief",
+                    "correct": false,
+                    "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к сети VLAN."
+                },
+                {
+                    "answer": "show ip route",
+                    "correct": false,
+                    "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к сети VLAN."
+                },
+                {
+                    "answer": "show vlan",
+                    "correct": false,
+                    "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к сети VLAN."
+                }
+            ]
+        },
+        {
+            "question": "Вы устраняете проблему между сетями VLAN на маршрутизаторе и должны проверить состояние и IP-адрес всех интерфейсов в сжатом формате. Какую команду устранения неполадок маршрутизации между VLAN вы используете для этого?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show interfaces",
+                    "correct": false,
+                    "comment": "Команда show ip interfaces brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате."
+                },
+                {
+                    "answer": "show interfaces interface-id switchport",
+                    "correct": false,
+                    "comment": "Команда show ip interfaces brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате."
+                },
+                {
+                    "answer": "show ip interface brief",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip route",
+                    "correct": false,
+                    "comment": "Команда show ip interfaces brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате."
+                },
+                {
+                    "answer": "show vlan",
+                    "correct": false,
+                    "comment": "Команда show ip interfaces brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате."
+                }
+            ]
+        }
+    ]
+}
