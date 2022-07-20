@@ -15,10 +15,16 @@
             "$ref": "./03.01.04-lab-who-hears-the-broadcast-ilm/learn-metadata.json"
         },
         {
+            "$ref": "./03.01.05-overview-of-vlans-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.02-vlans-in-a-multi-switched-environment/learn-metadata.json"
         },
         {
             "$ref": "./03.02.08-lab-investigate-a-vlan-implementation-ilm/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.02.09-vlans-in-a-multi-switched-environment-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.03-vlan-configuration/learn-metadata.json"
@@ -42,10 +48,16 @@
             "$ref": "./03.05.05-lab-configure-dtp/learn-metadata.json"
         },
         {
+            "$ref": "./03.05.06-dynamic-trunking-protocol-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./03.06-module-practice/learn-metadata.json"
         },
         {
             "$ref": "./03.06.01-lab-implement-vlans-and-trunking/learn-metadata.json"
+        },
+        {
+            "$ref": "./03.06.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./03.07-summary/learn-metadata.json"

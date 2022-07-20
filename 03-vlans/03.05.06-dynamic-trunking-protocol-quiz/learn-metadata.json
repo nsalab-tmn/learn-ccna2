@@ -1,0 +1,96 @@
+{
+    "title": "Тест на понимание темы: Динамический протокол транкинга (DTP)",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Верно или нет утверждение? DTP — это открытый стандартный протокол IEEE, который определяет автоматическое согласование магистральных каналов коммутатора.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Верно",
+                    "correct": false,
+                    "comment": "Правильный ответ - Ложь. DTP — это собственный протокол Cisco для автоматического согласования магистральных портов коммутатора."
+                },
+                {
+                    "answer": "Неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Каков режим порта по умолчанию для коммутаторов Cisco Catalyst?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "access",
+                    "correct": false,
+                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst - dynamic auto."
+                },
+                {
+                    "answer": "trunk",
+                    "correct": false,
+                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst - dynamic auto."
+                },
+                {
+                    "answer": "dynamic auto",
+                    "correct": true
+                },
+                {
+                    "answer": "dynamic desirable",
+                    "correct": false,
+                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst - dynamic auto."
+                }
+            ]
+        },
+        {
+            "question": "Верно или нет утверждение? Два коммутационных порта на канале, оба сконфигурированные как dynamic auto, успешно согласуют магистраль.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Верно",
+                    "correct": false,
+                    "comment": "Правильный ответ - Ложь. Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable."
+                },
+                {
+                    "answer": "Неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие два режима DTP образуют магистраль с интерфейсом, настроенным как dynamic auto? (Выберите два варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "access",
+                    "correct": false,
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable."
+                },
+                {
+                    "answer": "trunk",
+                    "correct": true
+                },
+                {
+                    "answer": "dynamic auto",
+                    "correct": false,
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable."
+                },
+                {
+                    "answer": "dynamic desirable",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}
