@@ -15,13 +15,25 @@
             "$ref": "./05.01.09-lab-investigate-stp-loop-prevention/learn-metadata.json"
         },
         {
+            "$ref": "./05.01.10-purpose-of-stp-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./05.02-stp-operations/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.02.12-stp-operations-quiz/learn-metadata.json"
         },
         {
             "$ref": "./05.03-evolution-of-stp/learn-metadata.json"
         },
         {
+            "$ref": "./05.03.06-evolution-of-stp-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./05.04-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./05.04.02-quiz/learn-metadata.json"
         }
     ]
 }
