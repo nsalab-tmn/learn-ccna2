@@ -15,7 +15,13 @@
             "$ref": "./02.02-switching-domains/learn-metadata.json"
         },
         {
+            "$ref": "./02.02.04-switching-domains-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./02.03-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./02.03.02-quiz/learn-metadata.json"
         }
     ]
 }
