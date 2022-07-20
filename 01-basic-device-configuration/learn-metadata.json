@@ -36,6 +36,9 @@
             "$ref": "./01.05.10-lab-verify-directly-connected-networks/learn-metadata.json"
         },
         {
+            "$ref": "./01.05.11-verify-directly-connected-networks-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./01.06-module-practice/learn-metadata.json"
         },
         {
@@ -43,6 +46,9 @@
         },
         {
             "$ref": "./01.06.02-lab-configure-basic-router-settings-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./01.06.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./01.07-summary/learn-metadata.json"
