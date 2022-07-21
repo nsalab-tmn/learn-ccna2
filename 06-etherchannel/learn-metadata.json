@@ -12,6 +12,9 @@
             "$ref": "./06.01-etherchannel-operation/learn-metadata.json"
         },
         {
+            "$ref": "./06.01.10-etherchannel-operation-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./06.02-configure-etherchannel/learn-metadata.json"
         },
         {
@@ -28,6 +31,9 @@
         },
         {
             "$ref": "./06.04.01-lab-implement-etherchannel/learn-metadata.json"
+        },
+        {
+            "$ref": "./06.04.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./06.05-summary/learn-metadata.json"

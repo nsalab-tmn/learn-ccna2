@@ -1,0 +1,151 @@
+{
+    "title": "Тест на понимание темы: Принципы работы EtherChannel",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Каковы преимущества технологии EtherChannel? (Выберите все подходящие варианты).",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "отказоустойчивость",
+                    "correct": true
+                },
+                {
+                    "answer": "Распределение нагрузки",
+                    "correct": true
+                },
+                {
+                    "answer": "Увеличение пропускной способности",
+                    "correct": true
+                },
+                {
+                    "answer": "избыточность каналов связи",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно или нет утверждение? Каналы FastEthernet и GigabitEthernet могут быть объединены в один EtherChannel.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": false,
+                    "comment": "Правильный ответ - Ложь. Интерфейсы, объединенные в EtherChannel, должны быть одинаковыми по типу и скорости."
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно или нет утверждение? PAgP и LACP являются протоколами агрегации каналов Cisco.",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истина",
+                    "correct": false,
+                    "comment": "Правильный ответ - Ложь. PAgP — это собственная разработка компании Cisco. LACP является спецификацией IEEE 802.3ad."
+                },
+                {
+                    "answer": "Ложь",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие три режима интерфейса относятся к PAgP? (Выберите три варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "on",
+                    "correct": true
+                },
+                {
+                    "answer": "auto",
+                    "correct": true
+                },
+                {
+                    "answer": "active",
+                    "correct": false,
+                    "comment": "On, Auto и Desirable - режимы PAgP. On, Active и Passive - режимы LACP."
+                },
+                {
+                    "answer": "passive",
+                    "correct": false,
+                    "comment": "On, Auto и Desirable - режимы PAgP. On, Active и Passive - режимы LACP."
+                },
+                {
+                    "answer": "desirable",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой режим интерфейса PAgP инициирует согласование с другими интерфейсами?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "active",
+                    "correct": false,
+                    "comment": "Только режим PAgP Desirable инициирует согласование. Режимы On и Auto - нет."
+                },
+                {
+                    "answer": "desirable",
+                    "correct": true
+                },
+                {
+                    "answer": "auto",
+                    "correct": false,
+                    "comment": "Только режим PAgP Desirable инициирует согласование. Режимы On и Auto - нет."
+                }
+            ]
+        },
+        {
+            "question": "Какие комбинации режимов PAgP образуют EtherChannel? (Выберите все подходящие варианты).",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "auto > desirable",
+                    "correct": true
+                },
+                {
+                    "answer": "desirable > on",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образует EtherChannel."
+                },
+                {
+                    "answer": "auto > on",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образует EtherChannel."
+                },
+                {
+                    "answer": "on > on",
+                    "correct": true
+                },
+                {
+                    "answer": "on > active",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образует EtherChannel."
+                },
+                {
+                    "answer": "active > passive",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образует EtherChannel."
+                }
+            ]
+        }
+    ]
+}
