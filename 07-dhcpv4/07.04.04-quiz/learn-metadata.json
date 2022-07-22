@@ -93,7 +93,7 @@
             ]
         },
         {
-            "question": "Какое сообщение DHCP IPv4 содержит следующие сведения?\n\nDestination address: 255.255.255.255\nClient IPv4 address: 0.0.0.0\nDefault gateway address: 0.0.0.0\nSubnet mask: 0.0.0.0",
+            "question": "Какое сообщение DHCP IPv4 содержит следующие сведения?\n\nDestination address: 255.255.255.255\n\nClient IPv4 address: 0.0.0.0\n\nDefault gateway address: 0.0.0.0\n\nSubnet mask: 0.0.0.0",
             "answerType": "singleChoice",
             "answers": [
                 {
@@ -197,7 +197,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "Discover, Offer, Request, Acknowledge ",
+                    "answer": "request, discover, offer, acknowledgment",
                     "correct": false,
                     "comment": "Тема 7.1.0 - DHCP-узел передает широковещательное сообщение DHCP DISCOVER для поиска доступных серверов. Если доступно несколько DHCP-серверов, каждый сервер будет отвечать узлу одноадресным сообщением DHCP OFFER, которое предлагает клиенту аренду. Затем клиент передает широковещательное сообщение DHCP REQUEST, в котором идентифицируется конкретный сервер и предложение, которое клиент примет. Выбранный сервер отправит сообщение DHCP ACKNOWLEDGMENT для завершения предложения."
                 },
