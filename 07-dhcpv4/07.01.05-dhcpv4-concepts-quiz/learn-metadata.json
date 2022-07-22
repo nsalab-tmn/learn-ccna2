@@ -1,0 +1,90 @@
+{
+    "title": "Тест на понимание темы: Принципы DHCPv4",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какое сообщение отправляется клиентом DHCPv4 для инициирования процесса получения аренды?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DHCPDISCOVER",
+                    "correct": true
+                },
+                {
+                    "answer": "DCHPOFFER",
+                    "correct": false,
+                    "comment": "Клиенты DHCPv4 инициируют процесс аренды, отправив сообщение DHCPDISCOVER в виде широковещательной рассылки по сети для поиска сервера DHCPv4."
+                },
+                {
+                    "answer": "DHCPREQUEST",
+                    "correct": false,
+                    "comment": "Клиенты DHCPv4 инициируют процесс аренды, отправив сообщение DHCPDISCOVER в виде широковещательной рассылки по сети для поиска сервера DHCPv4."
+                },
+                {
+                    "answer": "DHCPACK",
+                    "correct": false,
+                    "comment": "Клиенты DHCPv4 инициируют процесс аренды, отправив сообщение DHCPDISCOVER в виде широковещательной рассылки по сети для поиска сервера DHCPv4."
+                }
+            ]
+        },
+        {
+            "question": "Какие два DHCPv4 сообщения отправляются сервером в процессе получения аренды? (Выберите два варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "DHCPDISCOVER",
+                    "correct": false,
+                    "comment": "Серверы DCHPv4 отправляют два сообщения в процессе создания аренды, DHCPOFFER и DHCPACK."
+                },
+                {
+                    "answer": "DCHPOFFER",
+                    "correct": true
+                },
+                {
+                    "answer": "DHCPREQUEST",
+                    "correct": false,
+                    "comment": "Серверы DCHPv4 отправляют два сообщения в процессе создания аренды, DHCPOFFER и DHCPACK."
+                },
+                {
+                    "answer": "DHCPACK",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие два сообщения DHCPv4 используются в процессе продления аренды? (Выберите два варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "DHCPDISCOVER",
+                    "correct": false,
+                    "comment": "Процесс продления аренды включает два сообщения. Клиент отправляет DHCPREQUEST, и сервер отвечает DHCPAK."
+                },
+                {
+                    "answer": "DCHPOFFER",
+                    "correct": false,
+                    "comment": "Процесс продления аренды включает два сообщения. Клиент отправляет DHCPREQUEST, и сервер отвечает DHCPAK."
+                },
+                {
+                    "answer": "DHCPREQUEST",
+                    "correct": true
+                },
+                {
+                    "answer": "DHCPACK",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}
