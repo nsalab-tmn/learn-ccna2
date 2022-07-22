@@ -12,10 +12,19 @@
             "$ref": "./09.01-first-hop-redundancy-protocol/learn-metadata.json"
         },
         {
+            "$ref": "./09.01.05-first-hop-redundancy-protocol-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./09.02-hsrp/learn-metadata.json"
         },
         {
+            "$ref": "./09.02.04-hsrp-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./09.03-module-practice/learn-metadata.json"
+        },
+        {
+            "$ref": "./09.03.02-quiz/learn-metadata.json"
         },
         {
             "$ref": "./09.03.03-lab-hsrp-configuration-guide/learn-metadata.json"
