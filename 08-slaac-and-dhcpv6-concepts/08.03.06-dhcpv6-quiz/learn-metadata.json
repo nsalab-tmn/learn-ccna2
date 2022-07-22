@@ -1,0 +1,132 @@
+{
+    "title": "Тест на понимание темы: DHCPv6",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какой UDP-порт используют клиенты DHCPv6 для отправки сообщений DHCPv6?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "67",
+                    "correct": false,
+                    "comment": "Клиенты DHCPv6 используют UDP-порт 547 для отправки сообщений DHCPv6. Серверы DHCPv6 используют UDP-порт 546."
+                },
+                {
+                    "answer": "68",
+                    "correct": false,
+                    "comment": "Клиенты DHCPv6 используют UDP-порт 547 для отправки сообщений DHCPv6. Серверы DHCPv6 используют UDP-порт 546."
+                },
+                {
+                    "answer": "546",
+                    "correct": false,
+                    "comment": "Клиенты DHCPv6 используют UDP-порт 547 для отправки сообщений DHCPv6. Серверы DHCPv6 используют UDP-порт 546."
+                },
+                {
+                    "answer": "547",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какое сообщение DHCPv6 отправляет хост для поиска сервера DHCPv6?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ADVERTISE",
+                    "correct": false,
+                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами."
+                },
+                {
+                    "answer": "SOLICIT",
+                    "correct": true
+                },
+                {
+                    "answer": "INFORMATION-REQUEST",
+                    "correct": false,
+                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами."
+                },
+                {
+                    "answer": "REQUEST",
+                    "correct": false,
+                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами."
+                }
+            ]
+        },
+        {
+            "question": "Какое сообщение DHCPv6 отправляет хост серверу DHCPv6, если он использует DHCPv6 с сохранением состояния?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ADVERTISE",
+                    "correct": false,
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния."
+                },
+                {
+                    "answer": "SOLICIT",
+                    "correct": false,
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния."
+                },
+                {
+                    "answer": "INFORMATION-REQUEST",
+                    "correct": false,
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния."
+                },
+                {
+                    "answer": "REQUEST",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какая комбинация параметров флага используется для DHCP без сохранения состояния?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "A=1, M=0, O=0",
+                    "correct": false,
+                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1."
+                },
+                {
+                    "answer": "A=0, M=1, O=0",
+                    "correct": false,
+                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1."
+                },
+                {
+                    "answer": "A=1, M=0, O=1",
+                    "correct": true
+                },
+                {
+                    "answer": "A=0, M=1, O=1",
+                    "correct": false,
+                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1."
+                }
+            ]
+        },
+        {
+            "question": "Какая настройка флага M указывает на то, что используется DHCPv6 с сохранением состояния?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "M=0",
+                    "correct": false,
+                    "comment": "DHCPv6 с сохранением состояния  устанавливает флаги M=1."
+                },
+                {
+                    "answer": "M=1",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}

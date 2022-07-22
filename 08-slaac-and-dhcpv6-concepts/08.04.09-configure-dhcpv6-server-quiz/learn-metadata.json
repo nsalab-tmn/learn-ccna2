@@ -1,0 +1,185 @@
+{
+    "title": "Тест на понимание темы: Настройка сервера DHCPv6",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какие три роли DHCPv6 может выполнять маршрутизатор? (Выберите все подходящие варианты).",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Клиент DHCPv6",
+                    "correct": true
+                },
+                {
+                    "answer": "Агент ретрансляции DHCPv6",
+                    "correct": true
+                },
+                {
+                    "answer": "DHCPv6 сервер",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какая команда не используется в конфигурации DHCPv6 без сохранения состояния?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "address prefix (ipv6-address/prefix)",
+                    "correct": true
+                },
+                {
+                    "answer": "domain-name (name)",
+                    "correct": false,
+                    "comment": "Команда address prefix (ipv6-address/prefix) используется для DHCPv6 с сохранением состояния."
+                },
+                {
+                    "answer": "dns-server (server-address)",
+                    "correct": false,
+                    "comment": "Команда address prefix (ipv6-address/prefix) используется для DHCPv6 с сохранением состояния."
+                },
+                {
+                    "answer": "ipv6 dhcp server (pool-name)",
+                    "correct": false,
+                    "comment": "Команда address prefix (ipv6-address/prefix) используется для DHCPv6 с сохранением состояния."
+                }
+            ]
+        },
+        {
+            "question": "Маршрутизатор с поддержкой IPv6 должен получить свой GUA IPv6 от другого маршрутизатора IPv6 с помощью SLAAC. Какая команда конфигурации интерфейса должна быть настроена на клиентском маршрутизаторе?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ipv6 address autoconfig",
+                    "correct": true
+                },
+                {
+                    "answer": "ipv6 address auto config",
+                    "correct": false,
+                    "comment": "Команда ipv6 address autoconfig включает автоматическую настройку адресации IPv6 с помощью SLAAC."
+                },
+                {
+                    "answer": "ipv6 address dhcp",
+                    "correct": false,
+                    "comment": "Команда ipv6 address autoconfig включает автоматическую настройку адресации IPv6 с помощью SLAAC."
+                },
+                {
+                    "answer": "ipv6 address dhcpv6",
+                    "correct": false,
+                    "comment": "Команда ipv6 address autoconfig включает автоматическую настройку адресации IPv6 с помощью SLAAC."
+                }
+            ]
+        },
+        {
+            "question": "Маршрутизатор должен предоставлять службы DHCPv6 сервера. Какая команда должна быть настроена на интерфейсе, к которому подключены клиенты?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ipv6 enable",
+                    "correct": false,
+                    "comment": "Команду ipv6 dhcp server POOL-NAME следует выполнять на интерфейсе, к которому подключены клиенты DHCPv6."
+                },
+                {
+                    "answer": "ipv6 dhcp pool POOL-NAME",
+                    "correct": false,
+                    "comment": "Команду ipv6 dhcp server POOL-NAME следует выполнять на интерфейсе, к которому подключены клиенты DHCPv6."
+                },
+                {
+                    "answer": "ipv6 dhcp server POOL-NAME",
+                    "correct": true
+                },
+                {
+                    "answer": "ipv6 nd other-config-flag",
+                    "correct": false,
+                    "comment": "Команду ipv6 dhcp server POOL-NAME следует выполнять на интерфейсе, к которому подключены клиенты DHCPv6."
+                }
+            ]
+        },
+        {
+            "question": "Маршрутизатор с поддержкой IPv6 должен получить свой GUA IPv6 с сервера DHCPv6. Какая команда конфигурации интерфейса должна быть настроена на клиентском маршрутизаторе?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ipv6 address autoconfig",
+                    "correct": false,
+                    "comment": "Команда ipv6 address dhcp настроит интерфейс маршрутизатора как клиент DHCPv6."
+                },
+                {
+                    "answer": "ipv6 address auto config",
+                    "correct": false,
+                    "comment": "Команда ipv6 address dhcp настроит интерфейс маршрутизатора как клиент DHCPv6."
+                },
+                {
+                    "answer": "ipv6 address dhcp",
+                    "correct": true
+                },
+                {
+                    "answer": "ipv6 address dhcpv6",
+                    "correct": false,
+                    "comment": "Команда ipv6 address dhcp настроит интерфейс маршрутизатора как клиент DHCPv6."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда проверки DHCPv6 будет отображать локальный адрес канала и GUA для каждого активного клиента?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip dhcp pool",
+                    "correct": false,
+                    "comment": "Выходные данные команды show ipv6 dhcp binding показывают список активных аренд DHCPv6."
+                },
+                {
+                    "answer": "show ipv6 dhcp binding",
+                    "correct": true
+                },
+                {
+                    "answer": "show ipv6 dhcp interface",
+                    "correct": false,
+                    "comment": "Выходные данные команды show ipv6 dhcp binding показывают список активных аренд DHCPv6."
+                },
+                {
+                    "answer": "show ipv6 dhcp pool",
+                    "correct": false,
+                    "comment": "Выходные данные команды show ipv6 dhcp binding показывают список активных аренд DHCPv6."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда конфигурации интерфейса локальной сети клиентов настраивает маршрутизатор как агент ретрансляции DHCPv6?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip helper-address",
+                    "correct": false,
+                    "comment": "Команда ipv6 dhcp relay destination настраивает маршрутизатор как агент ретрансляции DHCPv6."
+                },
+                {
+                    "answer": "ipv6 dhcp relay destination",
+                    "correct": true
+                },
+                {
+                    "answer": "ipv6 enable",
+                    "correct": false,
+                    "comment": "Команда ipv6 dhcp relay destination настраивает маршрутизатор как агент ретрансляции DHCPv6."
+                },
+                {
+                    "answer": "ipv6 helper-address",
+                    "correct": false,
+                    "comment": "Команда ipv6 dhcp relay destination настраивает маршрутизатор как агент ретрансляции DHCPv6."
+                }
+            ]
+        }
+    ]
+}

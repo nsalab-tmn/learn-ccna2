@@ -1,0 +1,57 @@
+{
+    "title": "Тест на понимание темы: Назначение GUA IPv6",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какой тип адреса автоматически создается по умолчанию на интерфейсе хоста при отсутствии RA?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Глобальный индивидуальный адрес",
+                    "correct": false,
+                    "comment": "Локальный адрес канала IPv6 автоматически создается хостом при его загрузке и активном интерфейсе Ethernet."
+                },
+                {
+                    "answer": "Локальный адрес канала",
+                    "correct": true
+                },
+                {
+                    "answer": "MAC-адрес",
+                    "correct": false,
+                    "comment": "Локальный адрес канала IPv6 автоматически создается хостом при его загрузке и активном интерфейсе Ethernet."
+                }
+            ]
+        },
+        {
+            "question": "Какой метод использует DHCP без сохранения состояния?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Только SLAAC",
+                    "correct": false,
+                    "comment": "SLAAC с DHCP-сервером — это метод без учета состояния распределения адресов IPv6."
+                },
+                {
+                    "answer": "SLAAC с DHCPv6 сервером.",
+                    "correct": true
+                },
+                {
+                    "answer": "Только DHCPv6",
+                    "correct": false,
+                    "comment": "SLAAC с DHCP-сервером — это метод без учета состояния распределения адресов IPv6."
+                }
+            ]
+        }
+    ]
+}
