@@ -1,0 +1,145 @@
+{
+    "title": "Тест на понимание темы: Угрозы безопасности на уровне коммутации",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какие из следующих методов нейтрализации используются для защиты от уровня 3 до уровня 7 модели OSI? (Выберите три варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "VPN, межсетевые экраны и IPS являются примерами методов нейтрализации  угроз уровня с 3 до 7. DHCP Snooping и IPSG используются для нейтрализации атак уровня 2."
+                },
+                {
+                    "answer": "Сеть VPN",
+                    "correct": true
+                },
+                {
+                    "answer": "Межсетевые экраны",
+                    "correct": true
+                },
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "VPN, межсетевые экраны и IPS являются примерами методов нейтрализации  угроз уровня с 3 до 7. DHCP Snooping и IPSG используются для нейтрализации атак уровня 2."
+                },
+                {
+                    "answer": "IPS устройства",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов нейтрализации атак предотвращает многие типы атак, включая переполнение таблицы MAC-адресов и атаки с истощением DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Port security предотвращает различные типы атак, включая переполнение таблицы CAM и истощение ресурсов DHCP."
+                },
+                {
+                    "answer": "Анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "Port security предотвращает различные типы атак, включая переполнение таблицы CAM и истощение ресурсов DHCP."
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "Port security предотвращает различные типы атак, включая переполнение таблицы CAM и истощение ресурсов DHCP."
+                },
+                {
+                    "answer": "Port security",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой из перечисленных ниже способов нейтрализации атак может предотвратить подделку MAC-адресов и IP-адресов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": true
+                },
+                {
+                    "answer": "Анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "IP Source Guard (IPSG) предотвращает атаки спуфингом MAC- и IP-адресов."
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "IP Source Guard (IPSG) предотвращает атаки спуфингом MAC- и IP-адресов."
+                },
+                {
+                    "answer": "Port security",
+                    "correct": false,
+                    "comment": "IP Source Guard (IPSG) предотвращает атаки спуфингом MAC- и IP-адресов."
+                }
+            ]
+        },
+        {
+            "question": "Какой из перечисленных ниже способов нейтрализации атак может предотвратить подделку ARP-адресов и «отравление» ARP-кэша?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Динамический анализ протокола ARP (DAI) предотвращает ARP-спуфинг и «отравление» ARP-кэша."
+                },
+                {
+                    "answer": "Анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "Динамический анализ протокола ARP (DAI) предотвращает ARP-спуфинг и «отравление» ARP-кэша."
+                },
+                {
+                    "answer": "DAI",
+                    "correct": true
+                },
+                {
+                    "answer": "Port security",
+                    "correct": false,
+                    "comment": "Динамический анализ протокола ARP (DAI) предотвращает ARP-спуфинг и «отравление» ARP-кэша."
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов нейтрализации атак предотвращает истощение DHCP и атаки спуфинга DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Анализ DHCP-трафика предотвращает истощение ресурсов DHCP и DHCP-спуфинг."
+                },
+                {
+                    "answer": "Анализ DHCP-трафика",
+                    "correct": true
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "Анализ DHCP-трафика предотвращает истощение ресурсов DHCP и DHCP-спуфинг."
+                },
+                {
+                    "answer": "Port security",
+                    "correct": false,
+                    "comment": "Анализ DHCP-трафика предотвращает истощение ресурсов DHCP и DHCP-спуфинг."
+                }
+            ]
+        }
+    ]
+}

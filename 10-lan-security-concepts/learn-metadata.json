@@ -12,19 +12,37 @@
             "$ref": "./10.01-endpoint-security/learn-metadata.json"
         },
         {
+            "$ref": "./10.01.06-endpoint-security-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./10.02-access-control/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.02.07-access-control-quiz/learn-metadata.json"
         },
         {
             "$ref": "./10.03-layer-2-security-threats/learn-metadata.json"
         },
         {
+            "$ref": "./10.03.04-layer-2-security-threats-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./10.04-mac-address-table-attack/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.04.04-mac-address-table-attack-quiz/learn-metadata.json"
         },
         {
             "$ref": "./10.05-lan-attacks/learn-metadata.json"
         },
         {
+            "$ref": "./10.05.11-lan-attacks-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./10.06-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./10.06.02-quiz/learn-metadata.json"
         }
     ]
 }
