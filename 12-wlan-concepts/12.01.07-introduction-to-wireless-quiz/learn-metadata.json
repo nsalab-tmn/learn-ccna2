@@ -1,0 +1,141 @@
+{
+    "title": "Тест на понимание темы: Введение в технологии беспроводной связи",
+    "materialType": "test",
+    "description": "Нажмите ``Начать прохождение`` для отображения вопросов и выберите самый подходящий ответ",
+    "difficulty": 1,
+    "duration": "PT0H30M",
+    "tags": {
+        "$ref": "../../material-tags.json"
+    },
+    "skills": {},
+    "passingScore": 100,
+    "assets": {
+        "$ref": "./assets"
+    },
+    "questions": [
+        {
+            "question": "Какая из следующих беспроводных сетей обычно использует маломощные передатчики на небольших расстояниях?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WPAN",
+                    "correct": true
+                },
+                {
+                    "answer": "WLAN",
+                    "correct": false,
+                    "comment": "В сетях WPAN используются маломощные передатчики на коротких дистанциях, обычно от 6 до 9 метров."
+                },
+                {
+                    "answer": "WMAN",
+                    "correct": false,
+                    "comment": "В сетях WPAN используются маломощные передатчики на коротких дистанциях, обычно от 6 до 9 метров."
+                },
+                {
+                    "answer": "WWAN",
+                    "correct": false,
+                    "comment": "В сетях WPAN используются маломощные передатчики на коротких дистанциях, обычно от 6 до 9 метров."
+                }
+            ]
+        },
+        {
+            "question": "Какие из следующих беспроводных сетей определены в стандартах IEEE 802.11 для радиочастот 2,4 ГГц и 5 ГГц?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WPAN",
+                    "correct": false,
+                    "comment": "Сети WLAN основаны на стандартах 802.11 и могут охватывать до 100 м."
+                },
+                {
+                    "answer": "WLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "WMAN",
+                    "correct": false,
+                    "comment": "Сети WLAN основаны на стандартах 802.11 и могут охватывать до 100 м."
+                },
+                {
+                    "answer": "WWAN",
+                    "correct": false,
+                    "comment": "Сети WLAN основаны на стандартах 802.11 и могут охватывать до 100 м."
+                }
+            ]
+        },
+        {
+            "question": "Что из следующего является стандартом IEEE 802.15 WPAN, в котором для связи используется процесс сопряжения устройств?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Сотовая связь",
+                    "correct": false,
+                    "comment": "Bluetooth - стандарт IEEE 802.15 WPAN, использующий процесс сопряжения устройств для связи."
+                },
+                {
+                    "answer": "WiMAX",
+                    "correct": false,
+                    "comment": "Bluetooth - стандарт IEEE 802.15 WPAN, использующий процесс сопряжения устройств для связи."
+                },
+                {
+                    "answer": "Wi-Fi",
+                    "correct": false,
+                    "comment": "Bluetooth - стандарт IEEE 802.15 WPAN, использующий процесс сопряжения устройств для связи."
+                },
+                {
+                    "answer": "Bluetooth",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие стандарты 802.11 используют исключительно радиочастоту 5 ГГц? (Выберите 2 варианта.)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "802.11a",
+                    "correct": true
+                },
+                {
+                    "answer": "802.11g",
+                    "correct": false,
+                    "comment": "И 802.11a, и 802.11ac используют исключительно радиочастоту 5 ГГц."
+                },
+                {
+                    "answer": "802.11n",
+                    "correct": false,
+                    "comment": "И 802.11a, и 802.11ac используют исключительно радиочастоту 5 ГГц."
+                },
+                {
+                    "answer": "802.11ac",
+                    "correct": true
+                },
+                {
+                    "answer": "802.11ax",
+                    "correct": false,
+                    "comment": "И 802.11a, и 802.11ac используют исключительно радиочастоту 5 ГГц."
+                }
+            ]
+        },
+        {
+            "question": "Какая организация по стандартизации отвечает за распределение радиочастот?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IEEE",
+                    "correct": false,
+                    "comment": "ITU-R организация по стандартизации, которая отвечает за распределение радиочастот."
+                },
+                {
+                    "answer": "ITU-R",
+                    "correct": true
+                },
+                {
+                    "answer": "⁪Wi-Fi Alliance",
+                    "correct": false,
+                    "comment": "ITU-R организация по стандартизации, которая отвечает за распределение радиочастот."
+                }
+            ]
+        }
+    ]
+}

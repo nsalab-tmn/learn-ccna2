@@ -12,25 +12,49 @@
             "$ref": "./12.01-introduction-to-wireless/learn-metadata.json"
         },
         {
+            "$ref": "./12.01.07-introduction-to-wireless-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./12.02-components-of-wlans/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.02.07-components-of-wlans-quiz/learn-metadata.json"
         },
         {
             "$ref": "./12.03-wlan-operation/learn-metadata.json"
         },
         {
+            "$ref": "./12.03.08-wlan-operation-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./12.04-capwap-operation/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.04.06-capwap-operation-quiz/learn-metadata.json"
         },
         {
             "$ref": "./12.05-channel-management/learn-metadata.json"
         },
         {
+            "$ref": "./12.05.04-channel-management-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./12.06-wlan-threats/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.06.06-wlan-threats-quiz/learn-metadata.json"
         },
         {
             "$ref": "./12.07-secure-wlans/learn-metadata.json"
         },
         {
+            "$ref": "./12.07.09-secure-wlans-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./12.08-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./12.08.02-quiz/learn-metadata.json"
         }
     ]
 }
