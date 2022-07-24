@@ -12,7 +12,13 @@
             "$ref": "./14.01-path-determination/learn-metadata.json"
         },
         {
+            "$ref": "./14.01.07-path-determination-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.02-packet-forwarding/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.02.04-packet-forwarding-quiz/learn-metadata.json"
         },
         {
             "$ref": "./14.03-basic-router-configuration-review/learn-metadata.json"
@@ -24,10 +30,19 @@
             "$ref": "./14.04-ip-routing-table/learn-metadata.json"
         },
         {
+            "$ref": "./14.04.13-ip-routing-table-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.05-static-and-dynamic-routing/learn-metadata.json"
         },
         {
+            "$ref": "./14.05.06-static-and-dynamic-routing-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./14.06-summary/learn-metadata.json"
+        },
+        {
+            "$ref": "./14.06.02-quiz/learn-metadata.json"
         }
     ]
 }
