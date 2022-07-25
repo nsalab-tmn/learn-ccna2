@@ -12,6 +12,9 @@
             "$ref": "./16.01-packet-processing-with-static-routes/learn-metadata.json"
         },
         {
+            "$ref": "./16.01.02-packet-processing-with-static-routes-quiz/learn-metadata.json"
+        },
+        {
             "$ref": "./16.02-troubleshoot-ipv4-static-and-default-route-configuration/learn-metadata.json"
         },
         {
@@ -22,6 +25,9 @@
         },
         {
             "$ref": "./16.03.02-lab-troubleshoot-ipv4-and-ipv6-static-and-default-routes-physical-mode/learn-metadata.json"
+        },
+        {
+            "$ref": "./16.03.04-quiz/learn-metadata.json"
         },
         {
             "$ref": "./16.04-summary/learn-metadata.json"
