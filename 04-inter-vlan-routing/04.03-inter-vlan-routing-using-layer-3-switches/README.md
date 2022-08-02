@@ -259,13 +259,3 @@ Approximate round trip times in milli-seconds:
     Minimum = 1ms, Maximum = 2ms, Average = 1ms
 C:\Users\PC2> 
 ```
-
-<!-- 4.3.8 -->
-## Работа в симуляторе: настройка коммутации уровня 3 и маршрутизации между сетями VLAN
-
-В этом упражнении вы настроите коммутацию уровня 3 и маршрутизацию между сетями VLAN на коммутаторе Cisco 3560.
-
-[Настройка коммутации уровня 3 и маршрутизации между сетями VLAN (pdf)](./assets/4.3.8-packet-tracer---configure-layer-3-switching-and-inter-vlan-routing_ru-RU.pdf)
-
-[Настройка коммутации уровня 3 и маршрутизации между сетями VLAN (pka)](./assets/4.3.8-packet-tracer---configure-layer-3-switching-and-inter-vlan-routing_ru-RU.pka)
-

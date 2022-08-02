@@ -39,9 +39,6 @@
             "$ref": "./04.04.09-lab-troubleshoot-inter-vlan-routing-physical-mode/learn-metadata.json"
         },
         {
-            "$ref": "./04.05-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./04.05.01-lab-inter-vlan-routing-challenge/learn-metadata.json"
         },
         {
