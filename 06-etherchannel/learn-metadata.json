@@ -27,9 +27,6 @@
             "$ref": "./06.03.04-lab-troubleshoot-etherchannel/learn-metadata.json"
         },
         {
-            "$ref": "./06.04-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./06.04.01-lab-implement-etherchannel/learn-metadata.json"
         },
         {

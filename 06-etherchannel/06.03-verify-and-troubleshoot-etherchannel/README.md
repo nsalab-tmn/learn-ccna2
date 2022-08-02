@@ -227,12 +227,3 @@ Group Port-channel Protocol Ports
 1 Po1(SU) PAgP Fa0/1(P) Fa0/2(P)
 ```
 
-<!-- 6.3.4 -->
-## Работа в симуляторе: поиск и устранение неполадок в работе EtherChannel.
-
-Недавно младший специалист настроил четыре коммутатора. Пользователи были недовольны медленной работой сети и попросили вас найти проблему.
-
-[поиск и устранение неисправностей в работе EtherChannel (pdf)](./assets/6.3.4-packet-tracer---troubleshoot-etherchannel_ru-RU.pdf)
-
-[поиск и устранение неисправностей в работе EtherChannel (pka)](./assets/6.3.4-packet-tracer---troubleshoot-etherchannel_ru-RU.pka)
-
