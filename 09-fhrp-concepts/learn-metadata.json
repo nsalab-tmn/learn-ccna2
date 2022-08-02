@@ -21,9 +21,6 @@
             "$ref": "./09.02.04-hsrp-quiz/learn-metadata.json"
         },
         {
-            "$ref": "./09.03-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./09.03.02-quiz/learn-metadata.json"
         },
         {
