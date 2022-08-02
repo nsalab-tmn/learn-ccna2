@@ -293,16 +293,5 @@ DHCPv4 — не единственная служба, на ретрансляц
 * Port 137: NetBIOS name service
 * Port 138: NetBIOS datagram service
 
-<!-- 7.2.10 -->
-## Работа в симуляторе: настройка протокола DHCPv4
 
-В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.
-* Часть 1: Настройка маршрутизатора в роли DHCP-сервера
-* Часть 2: Настройка DHCP-ретрансляции
-* Часть 3: Настройка маршрутизатора в качестве DHCP-клиента
-* Часть 4: Проверка DHCP и связности
-
-[Настройка DHCPv4 (pdf)](./assets/7.2.10-packet-tracer---configure-dhcpv4_ru-RU.pdf)
-
-[Настройка DHCPv4 (pka)](./assets/7.2.10-packet-tracer---configure-dhcpv4_ru-RU.pka)
 
