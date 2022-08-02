@@ -119,19 +119,3 @@ The figure is an animation with the same topology as in the previous animation.T
 Посмотрите видео о работе протокола STP.
 
 ![youtube](https://www.youtube.com/watch?v=TZrrTw5uhNI)
-
-<!-- 5.1.9 -->
-## Работа в симуляторе: изучение работы STP для предотвращения петли 
-
-В рамках данного упражнения Packet Tracer необходимо решить следующие задачи.
-
-* Создайте и настройте простую сеть с тремя коммутаторами с STP.
-* Обзор работы протокола STP
-* Отключите STP и снова просмотрите работу сети.
-
-[изучение  работы  STP для предотвращения петли (pdf)](./assets/5.1.9-packet-tracer---investigate-stp-loop-prevention_ru-RU.pdf)
-
-[изучение  работы  STP для предотвращения петли (pka)](./assets/5.1.9-packet-tracer---investigate-stp-loop-prevention_ru-RU.pka)
-
-<!-- 5.1.10 -->
-<!-- quiz -->
