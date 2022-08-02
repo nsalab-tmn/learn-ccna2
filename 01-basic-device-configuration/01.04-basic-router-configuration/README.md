@@ -122,12 +122,3 @@ R1(config)#
 %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
 ```
 
-<!-- 1.4.7 -->
-## Работа в симуляторе: настройка интерфейсов маршрутизатора
-
-В этом задании Packet Tracer вы будете настраивать маршрутизаторы с адресацией IPv4 и IPv6.
-
-[Настройка интерфейсов маршрутизатора (pdf)](./assets/1.4.7-packet-tracer---configure-router-interfaces_ru-RU.pdf)
-
-[Настройка интерфейсов маршрутизатора (pka)](./assets/1.4.7-packet-tracer---configure-router-interfaces_ru-RU.pka)
-

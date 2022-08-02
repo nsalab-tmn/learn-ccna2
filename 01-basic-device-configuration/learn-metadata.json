@@ -39,9 +39,6 @@
             "$ref": "./01.05.11-verify-directly-connected-networks-quiz/learn-metadata.json"
         },
         {
-            "$ref": "./01.06-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./01.06.01-lab-implement-a-small-network/learn-metadata.json"
         },
         {
