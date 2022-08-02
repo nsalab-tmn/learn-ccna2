@@ -117,15 +117,3 @@ Administrative Native VLAN tagging: enabled
 Voice VLAN: 150 (voice) 
 ```
 
-<!-- 3.2.8 -->
-## Работа в симуляторе: исследование методов реализации сети VLAN
-
-В этом упражнении необходимо отслеживать пересылку широковещательного трафика через коммутаторы при сконфигурированных и не сконфигурированных VLAN.
-
-[Исследование методов реализации сети VLAN (pdf)](./assets/3.2.8-packet-tracer---investigate-a-vlan-implementation_ru-RU.pdf)
-
-[Исследование методов реализации сети VLAN (pka)](./assets/3.2.8-packet-tracer---investigate-a-vlan-implementation_ru-RU.pka)
-
-<!-- 3.2.9 -->
-<!-- quiz -->
-

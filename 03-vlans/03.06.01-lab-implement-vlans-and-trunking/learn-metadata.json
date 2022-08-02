@@ -2,7 +2,7 @@
     "title": "Работа в симуляторе: реализация VLAN и транков",
     "shortName": "lab-3.6.1",
     "materialType": "lab",
-    "description": "В этом упражнении Packet Tracer вам нужно:\n\n* Настройка сетей VLAN\n* Назначение портов сетям VLAN\n* Настройка статического транкинга\n* Выполнить настройку протокола DTP (Dynamic Trunking Protocol).",
+    "description": "**Цель лабораторной работы**: отработка комплексных навыков.",
     "difficulty": 1,
     "duration": "PT0H22M",
     "tags": {

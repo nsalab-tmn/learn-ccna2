@@ -2,7 +2,7 @@
     "title": "Работа в симуляторе: настройка протокола DTP",
     "shortName": "lab-3.5.5",
     "materialType": "lab",
-    "description": "В этом задании Packet Tracer вы будете настраивать и проверять DTP.",
+    "description": "**Цель лабораторной работы**: отработка навыков, необходимых для настройки и проверки протокола DTP.",
     "difficulty": 1,
     "duration": "PT0H22M",
     "tags": {

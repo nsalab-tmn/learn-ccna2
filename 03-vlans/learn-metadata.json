@@ -51,9 +51,6 @@
             "$ref": "./03.05.06-dynamic-trunking-protocol-quiz/learn-metadata.json"
         },
         {
-            "$ref": "./03.06-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./03.06.01-lab-implement-vlans-and-trunking/learn-metadata.json"
         },
         {

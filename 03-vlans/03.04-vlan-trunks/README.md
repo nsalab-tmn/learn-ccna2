@@ -135,30 +135,3 @@ Trunking Native Mode VLAN: 1 (default)
 Administrative Native VLAN tagging: enabled
 (output omitted)
 ```
-
-<!-- 3.4.5 -->
-## Работа в симуляторе: настройка магистральных каналов
-
-В этом упражнении Packet Tracer вам нужно:
-
-* Проверка сетей VLAN
-* Настройка магистральных каналов
-
-[Настройка магистральных каналов (pdf)](./assets/3.4.5-packet-tracer---configure-trunks_ru-RU.pdf)
-
-[Настройка магистральных каналов (pka)](./assets/3.4.5-packet-tracer---configure-trunks_ru-RU.pka)
-
-<!-- 3.4.6 -->
-## Работа в симуляторе: настройка VLAN и магистральных каналов
-
-В этом упражнении Packet Tracer вам нужно:
-
-* Создание сети и настройка основных параметров устройства
-* Создание сетей VLAN и назначение портов коммутатора
-* Поддержка назначения портов VLAN и базы данных VLAN
-*  Конфигурация магистрального канала стандарта 802.1Q между коммутаторами
-* Удаление базы данных VLAN 
-
-[Конфигурация VLAN и транкинга — Режим симуляции физического оборудования (pdf)](./assets/3.4.6-packet-tracer---configure-vlans-and-trunking---physical-mode_ru-RU.pdf)
-
-[Конфигурация VLAN и транкинга — Режим симуляции физического оборудования (pka)](./assets/3.4.6-packet-tracer---configure-vlans-and-trunking---physical-mode_ru-RU.pka)
