@@ -27,9 +27,6 @@
             "$ref": "./11.05-mitigate-stp-attacks/learn-metadata.json"
         },
         {
-            "$ref": "./11.06-module-practice/learn-metadata.json"
-        },
-        {
             "$ref": "./11.06.01-lab-switch-security-configuration/learn-metadata.json"
         },
         {
