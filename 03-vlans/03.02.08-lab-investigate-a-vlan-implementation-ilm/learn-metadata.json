@@ -31,5 +31,76 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Успешно ли выполнена проверка связи? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Взгляните на Simulation Panel (Панель моделирования) и скажите, куда коммутатор **S3** отправил пакет после того, как получил его?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Успешно ли выполнена проверка связи? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Почему коммутатор **S1**, получив пакет, пересылает его на узел **PC7**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Какая команда используется для удаления загрузочной конфигурации на коммутаторах?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Где на коммутаторах хранится файл сети VLAN?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Вопрос: С помощью какой команды можно удалить файл сети VLAN на коммутаторах?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Если компьютер в сети VLAN 10 отправляет широковещательное сообщение, какие устройства его получат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Если компьютер в сети VLAN 20 отправляет широковещательное сообщение, какие устройства его получат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Если компьютер в сети VLAN 30 отправляет широковещательное сообщение, какие устройства его получат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Что происходит с кадром, отправленным с компьютера сети VLAN 10 на компьютер сети VLAN 30?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Что представляют собой коллизионные домены на коммутаторе применительно к портам?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Что представляют собой широковещательные домены на коммутаторе применительно к портам?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

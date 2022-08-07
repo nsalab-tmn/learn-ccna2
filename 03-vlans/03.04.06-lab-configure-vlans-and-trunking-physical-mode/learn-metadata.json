@@ -31,5 +31,131 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Успешно ли выполняется эхо-запрос от узла **PC-A** до узла **PC-В**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Успешно ли выполняется эхо-запрос от узла **PC-A** до коммутатора **S1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Успешно ли выполняется эхо-запрос от узла **PC-B** до коммутатора **S2**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Успешно ли выполняется эхо-запрос от коммутатора **S1** на коммутатор **S2**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Если на один из этих вопросов вы ответили отрицательно, укажите причину неудавшейся отправки эхо-запросов.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какая VLAN является VLAN по умолчанию?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Какие порты назначены для сети VLAN по умолчанию?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. В каком состоянии находится сеть VLAN 99? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Успешно ли выполняется эхо-запрос от коммутатора **S1** на коммутатор **S2**? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Успешно ли выполняется эхо-запрос от узла **РС-А** на узел **PC-B**? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. С какой сетью VLAN теперь связан порт F0/24?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Какое имя присвоено сети VLAN 30?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Почему после удаления VLAN 30 из базы данных VLAN F0/24 больше не отображается в выходных данных команды **show vlan brief**? Какой VLAN теперь назначен порт F0/24? Что происходит с трафиком, предназначенным для узла, подключенного к F0/24?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Какой сети VLAN назначен порт F0/24?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_15": {
+                "type": "string",
+                "title": "15. Почему перед удалением сети VLAN из базы данных рекомендуется назначить порт другой сети VLAN?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_16": {
+                "type": "string",
+                "title": "16. Успешно ли выполняется эхо-запрос от коммутатора S1 до коммутатора **S2**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_17": {
+                "type": "string",
+                "title": "17. Успешно ли выполняется эхо-запрос от узла **PC-A** до узла **PC-В**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_18": {
+                "type": "string",
+                "title": "18. Успешно ли выполняется эхо-запрос от узла **PC-A** до коммутатора **S1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_19": {
+                "type": "string",
+                "title": "19. Успешно ли выполняется эхо-запрос от узла **PC-B** до коммутатора **S2**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_20": {
+                "type": "string",
+                "title": "20. Если на один из этих вопросов вы ответили отрицательно, ниже объясните причины такого результата.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_21": {
+                "type": "string",
+                "title": "21. Почему вместо использования протокола DTP рекомендуется вручную настраивать интерфейс на магистральный режим?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_22": {
+                "type": "string",
+                "title": "22. Почему рекомендуется изменить native VLAN на магистрали?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_23": {
+                "type": "string",
+                "title": "23. Что нужно для того, чтобы узлы в сети VLAN 10 могли обмениваться данными с узлами в сети VLAN 20?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_24": {
+                "type": "string",
+                "title": "24. В чем заключаются основные преимущества, которые получает организация при использовании сетей VLAN?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

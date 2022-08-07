@@ -31,5 +31,61 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Назовите не менее трех других доступных приложений.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Что произошло с пакетом?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Если компьютер в сети VLAN 10 отправляет широковещательное сообщение, какие устройства его получат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Если компьютер в сети VLAN 20 отправляет широковещательное сообщение, какие устройства его получат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Если компьютер в сети VLAN 30 отправляет широковещательное сообщение, какие устройства его получат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Что происходит с кадром, отправленным с компьютера сети VLAN 10 на компьютер сети VLAN 30?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Какие порты включаются на коммутаторе, если компьютер, подключенный к порту 11, отправляет одноадресное сообщение на компьютер, подключенный к порту 13?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Какие порты включаются на коммутаторе, если компьютер, подключенный к порту 2, отправляет одноадресное сообщение на компьютер, подключенный к порту 23?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Что представляют собой коллизионные домены на коммутаторе применительно к портам?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Что представляют собой широковещательные домены на коммутаторе применительно к портам?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

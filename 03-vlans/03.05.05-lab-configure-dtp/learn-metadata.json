@@ -31,5 +31,66 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какие сети VLAN настроены на этих коммутаторах?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. В дополнение к VLAN по умолчанию, какие VLAN настроены на S2?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Успешно ли выполнен эхо-запрос? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Что будет результатом согласования транка между S1 и S2?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Каков режим и состояние этого порта?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какая сеть VLAN с нетегированным трафиком сейчас используется для этих магистралей?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Какие сообщения были получены на S1? Как бы вы исправили эту ошибку?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Почему проверка связи с помощью эхо-запросов завершается неудачно?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Какой режим и инкапсуляция на G0/2?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Каков режим и инкапсуляция на G0/2 после изменения?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Что отображается в состоянии **\"Negotiation of Trunking\"**?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

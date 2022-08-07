@@ -31,5 +31,26 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Несмотря на несоответствие сети VLAN с нетегированным трафиком, эхо-запросы между компьютерами одной и той же сети VLAN будут успешными. Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Каким активным сетям VLAN разрешено передавать данные по этому магистральному каналу?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Почему порт G0/1 на коммутаторе S2 больше не назначен сети VLAN 1?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

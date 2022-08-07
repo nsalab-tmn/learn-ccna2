@@ -31,5 +31,31 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какие преимущества могут предоставить сети VLAN?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. С помощью какой команды отображается только имя сети VLAN, состояние сети и связанные с ней порты коммутатора?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Успешно ли выполняются эхо-запросы при назначении портов доступа в соответствующие сети VLAN? Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Что можно сделать для разрешения этой проблемы?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
