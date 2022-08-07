@@ -31,5 +31,101 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Что произойдет, если перезагрузить маршрутизатор до того, как будет выполнена команда **copy running-config startup-config**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Почему использование протокола Telnet считается угрозой безопасности?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Как называется образ IOS, под управлением которой работает маршрутизатор?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Какой объем энергонезависимого ОЗУ (NVRAM) имеет маршрутизатор?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5.  Каким объемом флеш-памяти обладает маршрутизатор?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6.  Каков был бы процесс загрузки маршрутизатора при следующей перезагрузке, если регистр конфигурации был 0x2142?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Как пароли представлены в выходных данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Что происходит в результате выполнения этой команды?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Какой код используется в таблице маршрутизации для обозначения сети с прямым подключением?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Сколько записей маршрутов закодированы с символом «C» в таблице маршрутизации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Какая команда позволяет изменить состояние портов Gigabit Ethernet с DOWN на UP?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. В чем смысл части **\\[up/up\\]** вывода?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Какой IPv6-адрес назначен на **Server**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Каким будет шлюз по умолчанию для этого сервера **Server**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_15": {
+                "type": "string",
+                "title": "15. От компьютера **PC-B** отправьте эхо-запрос на локальный адрес канала шлюза по умолчанию маршрутизатора **R1**. Была ли проверка успешной?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_16": {
+                "type": "string",
+                "title": "16. От сервера **Server** отправьте эхо-запрос на индивидуальный IPv6-адрес маршрутизатора **R1** 2001:db8:acad:a::1. Была ли проверка успешной?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_17": {
+                "type": "string",
+                "title": "17. Какую команду **show** следует использовать специалисту для выявления и устранения этой неполадки?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_18": {
+                "type": "string",
+                "title": "18. Какую команду **show** следует использовать специалисту для выявления и устранения этой неполадки?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

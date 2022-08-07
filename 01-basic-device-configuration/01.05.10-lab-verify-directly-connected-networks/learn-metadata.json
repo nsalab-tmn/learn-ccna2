@@ -31,5 +31,41 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какой шлюз является шлюзом «последней надежды»?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Что такое Circuit ID, отображаемый на выводе?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Что такое настройка дуплекса, скорость и тип среды?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Каково состояние настроенных интерфейсов?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Какой правильный адрес должен быть установлен на интерфейсе.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Сколько адресов настроено на каждом интерфейсе Gigabit?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
