@@ -31,5 +31,36 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Как вы думаете, что это индикатор канала означает?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какой путь выберут кадры от PC1 до PC2?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Почему кадры не проходят через S3?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Почему связующее дерево помещало порт в блокирующее состояние?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Что произошло со статусом порта G0/2 во время этого процесса?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
