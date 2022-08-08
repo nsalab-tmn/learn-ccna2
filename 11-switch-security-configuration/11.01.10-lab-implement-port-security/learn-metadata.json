@@ -31,5 +31,21 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Сколько нарушений произошло?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Почему узел **PC2** может отправлять эхо-запросы на **PC1**, а **постороннее подключение** не может?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
