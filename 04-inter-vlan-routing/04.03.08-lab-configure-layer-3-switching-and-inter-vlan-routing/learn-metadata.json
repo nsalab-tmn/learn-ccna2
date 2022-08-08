@@ -31,5 +31,16 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Есть ли активные маршруты?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

@@ -31,5 +31,36 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Успешно ли выполнена проверка связи? Почему вы получили этот результат?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Отправьте эхо-запрос от узла **PC1** на **PC3**. Эхо-запросы по-прежнему должны не проходить между узлами. Дайте пояснение.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3.  Какой сети VLAN назначен интерфейс G0/1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Как с помощью команды **show vlan** можно определить, что интерфейс — это магистральный порт?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Какие адреса используют PC1 и PC3 в качестве адресов шлюза по умолчанию?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
