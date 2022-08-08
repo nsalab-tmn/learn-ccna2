@@ -31,5 +31,71 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какие устройства находятся на пути от PC-A к веб-серверу? Используйте таблицу адресации для определения имен устройств.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какие устройства находятся на пути от PC-B к веб-серверу?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Каков будет приоритет HSRP R3, когда он будет добавлен в группу HSRP 1?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Какой маршрутизатор является активным?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Какой MAC-адрес используется для виртуального IP-адреса?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какой IP-адрес и приоритет используются для резервного маршрутизатора?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Какой адрес следует использовать?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Успешно ли выполнены эхо-запросы?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Отличается ли путь от пути, использованного до настройки HSRP?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Чем эта трасировка отличается от предыдущей?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Какой путь используется для доступа к веб-серверу?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Если команда preempt не была настроена для группы HSRP на R1, будут ли результаты такими же?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

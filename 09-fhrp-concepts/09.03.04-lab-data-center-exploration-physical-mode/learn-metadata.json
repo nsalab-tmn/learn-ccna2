@@ -31,5 +31,136 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Как **Branch Office** физически подключен к центрам обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Какая логическая конфигурация в **Branch Office** обеспечивает избыточность?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Как связаны **Data Center 1** и **Data Center 2**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Как физически организованы устройства в **Data Center 1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Отличается ли компоновка оборудования **Data Center 2** от **Data Center 1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Почему важна физическая организация устройств центра обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Как называются устройства в центрах обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_8": {
+                "type": "string",
+                "title": "8. Как устройства адресуются в центрах обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_9": {
+                "type": "string",
+                "title": "9. Почему важны именование и адресация устройств центра обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_10": {
+                "type": "string",
+                "title": "10. Какая технология используется для обеспечения избыточности и стабильности их конфигурации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_11": {
+                "type": "string",
+                "title": "11. Какова цель этой технологии?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_12": {
+                "type": "string",
+                "title": "12. Какова общая пропускная способность через **Port-Channel1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_13": {
+                "type": "string",
+                "title": "13. Что произойдет, если **FastEthernet 0/1** на **DC1 R0 Switch A** выйдет из строя и почему?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_14": {
+                "type": "string",
+                "title": "14. Какая технология используется для обеспечения избыточности и стабильности их конфигурации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_15": {
+                "type": "string",
+                "title": "15. Какова задача этой технологии?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_16": {
+                "type": "string",
+                "title": "16. Какой маршрутизатор и интерфейс будут использоваться в качестве шлюза по умолчанию для сети 172.16.0.0/16 и почему?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_17": {
+                "type": "string",
+                "title": "17. Какой маршрутизатор и интерфейс будут использоваться в качестве шлюза по умолчанию для сети 10.16.0.0/16 и почему?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_18": {
+                "type": "string",
+                "title": "18. Какой шлюз по умолчанию и DNS-сервер на интерфесе **FastEthernet0** всех серверов в **Data Center 1**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_19": {
+                "type": "string",
+                "title": "19. Какой шлюз по умолчанию и DNS-сервер на интерфесе **FastEthernet** всех серверов в **Data Center 2**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_20": {
+                "type": "string",
+                "title": "20. Запишите команду, используемую для проверки.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_21": {
+                "type": "string",
+                "title": "21. Что такое центр обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_22": {
+                "type": "string",
+                "title": "22. Какие преимущества предоставляет центр обработки данных для организации?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_23": {
+                "type": "string",
+                "title": "23. Почему избыточность важна в центре обработки данных?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_24": {
+                "type": "string",
+                "title": "24. Какие элементы центра обработки данных должны включать избыточность?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_25": {
+                "type": "string",
+                "title": "25. Какова важность EtherChannel в среде центра обработки данных?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
