@@ -31,5 +31,41 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Какой IP-адрес у данного компьютера?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Укажите маску подсети данного компьютера.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Укажите шлюз по умолчанию данного компьютера.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Находится ли IP-адрес **Admin** в этом диапазоне? Можно ли ожидать этого? Поясните свой ответ.",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Почему через некоторое время веб-браузер отображает сообщение **Request Timeout** (Время ожидания запроса истекло)?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какая информация о новом IP-адресе для **Admin**?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

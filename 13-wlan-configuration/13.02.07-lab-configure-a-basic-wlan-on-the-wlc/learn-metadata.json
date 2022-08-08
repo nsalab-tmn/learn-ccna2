@@ -31,5 +31,31 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Что можно узнать на этом экране?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Есть ли точки доступа АР подключенные к контроллеру WLC?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какую информацию вы можете найти о AP на экране All AP?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Какая информация о новой сети WLAN доступна на этом экране?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }

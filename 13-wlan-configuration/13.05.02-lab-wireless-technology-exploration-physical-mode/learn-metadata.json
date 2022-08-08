@@ -31,5 +31,46 @@
     },
     "deploy": {
         "$ref": "./deploy"
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Как подключаются четыре офиса и какие кабели соединяют их?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Как LWAP подключаются к сети?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Как вышки сотовой связи подключаются к **Central Office Server**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_4": {
+                "type": "string",
+                "title": "4. Каковы различные физические соединения, используемые между **Smartphone1** и сервером **Corporate Office Server**?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_5": {
+                "type": "string",
+                "title": "5. Какое общее преимущество предоставляет беспроводные технологии конечному пользователю?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_6": {
+                "type": "string",
+                "title": "6. Какая форма беспроводных сетей является наиболее выгодной?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_7": {
+                "type": "string",
+                "title": "7. Каким образом каждая из следующих групп может получить пользу от различных беспроводных технологий, представленных в этом упражнении?\n\n-   Студент\n\n-   Менеджеру по продажам\n\n-   Инженер RD\n\n-   Корпоративный исполнительный",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
