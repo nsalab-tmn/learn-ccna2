@@ -1911,7 +1911,7 @@
         }
     ],
     "tags": {
-        "$ref": "../../material-tags.json"
+        "$ref": "../material-tags.json"
     },
     "skills": {},
     "assets": {
