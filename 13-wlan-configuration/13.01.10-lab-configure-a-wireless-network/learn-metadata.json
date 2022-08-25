@@ -29,9 +29,6 @@
     "assets": {
         "$ref": "./assets"
     },
-    "deploy": {
-        "$ref": "./deploy"
-    },
     "answerSchema": {
         "type": "object",
         "additionalProperties": false,
