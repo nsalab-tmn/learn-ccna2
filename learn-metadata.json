@@ -25,6 +25,7 @@
     { "$ref": "./16-troubleshoot-static-and-default-routes/learn-metadata.json" },
     { "$ref": "./14-16-exam/learn-metadata.json" },
     { "$ref": "./final-lab-part1/learn-metadata.json" },
+    { "$ref": "./final-lab-part2/learn-metadata.json" },
     { "$ref": "./final-exam/learn-metadata.json" }
   ]
 }
