@@ -117,7 +117,7 @@ Fa0/1 SA 32768 c025.5cd7.ef00 12s 0x0 0x1 0x102 0x3Dof the port in the current s
 На рисунке интерфейсы F0/1 и F0/2 на коммутаторах S1 и S2 соединены с помощью EtherChannel. Тем не менее EtherChannel не работает.
 
 ![](./assets/6.3.1.svg)
-<-- same as 6.3.3 -->
+<!-- same as 6.3.3 -->
 
 
 **Шаг 1. Просмотр сводной информации EtherChannel**
