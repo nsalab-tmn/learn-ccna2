@@ -73,7 +73,7 @@ Router(config)# ipv6 route ipv6-prefix/prefix-length {ipv6-address | exit-intf [
 На рисунке приведена топология двойного стека. В настоящее время статические маршруты не настроены для IPv4 или IPv6.
 
 ![](./assets/15.1.5.png)
-<!-- /courses/srwe-dl/af9ef5a4-34fe-11eb-b1b2-9b1b0c1f7e0d/afb7fbea-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/cade73e0-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 <!-- 15.1.6 -->
 ## IPv4 Начальные таблицы маршрутизации

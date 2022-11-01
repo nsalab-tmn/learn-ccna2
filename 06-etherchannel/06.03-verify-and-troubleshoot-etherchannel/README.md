@@ -6,7 +6,7 @@
 Примеры команд проверки будут использовать топологию, показанную на рисунке.
 
 ![](./assets/6.3.1.png)
-<!-- /courses/srwe-dl/af9ece94-34fe-11eb-b1b2-9b1b0c1f7e0d/afb67543-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9f01c41-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 **show interfaces port-channel**
 
@@ -117,7 +117,7 @@ Fa0/1 SA 32768 c025.5cd7.ef00 12s 0x0 0x1 0x102 0x3Dof the port in the current s
 На рисунке интерфейсы F0/1 и F0/2 на коммутаторах S1 и S2 соединены с помощью EtherChannel. Тем не менее EtherChannel не работает.
 
 ![](./assets/6.3.3.png)
-<!-- /courses/srwe-dl/af9ece94-34fe-11eb-b1b2-9b1b0c1f7e0d/afb67543-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9f17bd2-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 **Шаг 1. Просмотр сводной информации EtherChannel**
 

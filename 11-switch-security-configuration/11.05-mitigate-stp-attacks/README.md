@@ -9,7 +9,7 @@
 На рисунке порты доступа для S1 должны быть настроены с PortFast и BPDU Guard.
 
 ![](./assets/11.5.1.png)
-<!-- /courses/srwe-dl/af9ece9e-34fe-11eb-b1b2-9b1b0c1f7e0d/afb7118e-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/ca6b3fb2-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 <!-- 11.5.2 -->
 ## Настройка PortFast

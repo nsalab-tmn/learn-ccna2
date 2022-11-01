@@ -6,7 +6,7 @@
 На рисунке интерфейс R1 GigabitEthernet 0/0/1 подключен к порту S1 FastEthernet 0/5. Порт S1 FastEthernet 0/1 подключен к порту S2 FastEthernet 0/1. Это магистральные каналы, которые необходимы для пересылки трафика внутри VLAN и между ними.
 
 ![](./assets/4.2.1.png)
-<!-- /courses/srwe-dl/af9ece90-34fe-11eb-b1b2-9b1b0c1f7e0d/afb60018-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9b3af82-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 Для маршрутизации между VLAN интерфейс R1 GigabitEthernet 0/0/1 логически разделен на три подинтерфейса, как показано в таблице. В таблице также показаны три VLAN, которые будут настроены на коммутаторах.
 
@@ -36,7 +36,7 @@
 **Шаг 4**. Настройте транковые порты.
 
 ![](./assets/4.2.2.png)
-<!-- /courses/srwe-dl/af9ece90-34fe-11eb-b1b2-9b1b0c1f7e0d/afb60018-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9b472d1-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 **1. Создайте сети VLAN и присвойте им имена.**
 
@@ -104,7 +104,7 @@ S1(config-if)# end
 Конфигурация S2 аналогична конфигурации S1.
 
 ![](./assets/4.2.3.png)
-<!-- /courses/srwe-dl/af9ece90-34fe-11eb-b1b2-9b1b0c1f7e0d/afb60018-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9b5f971-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 ```
 S2(config)# vlan 10
@@ -154,7 +154,7 @@ S2(config-if)# end
 В следующей конфигурации субинтерфейсы R1 G0/0/1 настроены для VLAN 10, 20 и 99.
 
 ![](./assets/4.2.4.png)
-<!-- /courses/srwe-dl/af9ece90-34fe-11eb-b1b2-9b1b0c1f7e0d/afb60018-34fe-11eb-b1b2-9b1b0c1f7e0d/assets/c9b695b0-1c27-11ea-af09-3b2e6521927c.svg -->
+
 
 ```
 R1(config)# interface G0/0/1.10
