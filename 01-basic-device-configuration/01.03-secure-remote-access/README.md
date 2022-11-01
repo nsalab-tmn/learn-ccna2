@@ -110,7 +110,7 @@ S1(config)# ip ssh version 2
 <!-- 1.3.5 -->
 ## Убедитесь, что SSH работает
 
-Для подключения к серверу SSH на ПК используется SSH-клиент, например PuTTY. Например, предположим следующее:
+Для подключения к серверу SSH на ПК используется встроенный SSH-клиент. Например, предположим следующее:
 
 * SSH включен на коммутаторе S1;
 * На коммутаторе S1 интерфейсу VLAN 99 (SVI) присвоен IPv4-адрес 172.17.99.11;
@@ -118,7 +118,7 @@ S1(config)# ip ssh version 2
 
 На рисунке PC инициирует SSH-подключение по IPv4-адресу VLAN SVI коммутатора S1.
 
-![](./assets/1.3.5.png)
+![](./assets/1.3.5.svg)
 
 
 <!--
@@ -128,10 +128,11 @@ S1(config)# ip ssh version 2
 При подключении пользователю будет предложено ввести имя пользователя и пароль, как показано в примере. Используя конфигурацию, приведенную в предыдущем примере, вводятся имя пользователя **admin** и пароль **ccna**. После ввода правильной комбинации пользователь подключается через SSH к интерфейсу командной строки (CLI) коммутатора Catalyst 2960.
 
 ```
-Login as: admin
-Using keyboard-interactive
-Authentication.
-Password:
+The authenticity of host '172.17.99.11' can't be established.
+ECDSA key fingerprint is SHA256:UBbv42HNcpT5eTwtqk2rctA1RxSUiRcLj7z6uxuCqtY.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? [!mark!]yes[!/mark!] <--- необходимо подтверждение
+Warning: Permanently added '172.17.99.11' (ECDSA) to the list of known hosts.
+admin@172.17.99.11's password: [!mark!]ccna[!/mark!] <--- пароль не будет отображаться при вводе в целях безопасности
 S1> enable
 Password: 
 S1#
