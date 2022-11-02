@@ -16,7 +16,7 @@
 
 **Примечание**: Настройка SNMP-сервера и RADIUS-сервера выходит за рамки этого модуля.
 
-![](./assets/13.3.2.png)
+![](./assets/13.3.2.svg)
 
 
 <!-- 13.3.3 -->
@@ -71,7 +71,7 @@
 
 Администратор сети решил, что новый WLAN будет использовать интерфейс VLAN 5 и сеть 192.168.5.0/24. R1 уже имеет настроенный подынтерфейс для VLAN 5, как показано в топологии и показывает **show ip interface brief** вывод.
 
-![](./assets/13.3.6.png)
+![](./assets/13.3.6.svg)
 
 
 ```
@@ -80,7 +80,7 @@ Interface                  IP-Address      OK? Method Status                Prot
 FastEthernet0/0            172.16.1.1      YES manual up                    up
 FastEthernet0/1            unassigned      YES unset  up                    up
 FastEthernet0/1.1          192.168.200.1   YES manual up                    up
-FastEthernet0/1.5          192.168.5.254   YES manual up                    up
+FastEthernet0/1.5          192.168.5.1     YES manual up                    up
 (output omitted)
 R1#
 ```
@@ -261,12 +261,3 @@ WLAN создана, но ее все еще необходимо включит
 Чтобы убедиться, что новый WLAN указан и включен, нажмите кнопку **Back** или подменю **WLANs** слева. В списке указаны как WLAN  **Wireless\_LAN**, так и WLAN **CompanyName**. Обратите внимание, что на рисунке оба активированы. **Wireless\_LAN** использует WPA2 с аутентификацией PSK. **CompanyName** использует безопасность WPA2 с аутентификацией 802.1X.
 
 ![](./assets/13.3.11-6.png)
-
-<!-- 13.3.12 -->
-## Работа в симуляторе: конфигурация WPA2 Enterprise WLAN с контроллером беспроводной сети
-
-В этом упражнении вы настроите новую WLAN на контроллере беспроводной локальной сети (WLC), включая интерфейс VLAN, который он будет использовать. Вы настроите WLAN для использования сервера RADIUS и WPA2-Enterprise для аутентификации пользователей. Вы также настроите WLC для использования сервера SNMP.
-
-[Конфигурация WPA2 Enterprise WLAN с контроллером беспроводной сети (pdf)](./assets/13.3.12-packet-tracer---configure-a-wpa2-enterprise-wlan-on-the-wlc_ru-RU.pdf)
-
-[Конфигурация WPA2 Enterprise WLAN с контроллером беспроводной сети (pka)](./assets/13.3.12-packet-tracer---configure-a-wpa2-enterprise-wlan-on-the-wlc_ru-RU.pka)
