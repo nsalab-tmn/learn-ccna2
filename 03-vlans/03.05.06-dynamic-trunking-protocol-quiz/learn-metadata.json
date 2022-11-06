@@ -14,16 +14,16 @@
     },
     "questions": [
         {
-            "question": "Верно или нет утверждение? DTP — это открытый стандартный протокол IEEE, который определяет автоматическое согласование магистральных каналов коммутатора.",
+            "question": "Верно ли утверждение, что DTP — это открытый стандартный протокол IEEE, который определяет автоматическое согласование магистральных каналов коммутатора?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "Верно",
+                    "answer": "верно",
                     "correct": false,
-                    "comment": "Правильный ответ - Ложь. DTP — это собственный протокол Cisco для автоматического согласования магистральных портов коммутатора."
+                    "comment": "DTP — это собственный протокол Cisco для автоматического согласования магистральных портов коммутатора"
                 },
                 {
-                    "answer": "Неверно",
+                    "answer": "неверно",
                     "correct": true
                 }
             ]
@@ -35,12 +35,12 @@
                 {
                     "answer": "access",
                     "correct": false,
-                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst - dynamic auto."
+                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst — dynamic auto"
                 },
                 {
                     "answer": "trunk",
                     "correct": false,
-                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst - dynamic auto."
+                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst — dynamic auto"
                 },
                 {
                     "answer": "dynamic auto",
@@ -49,33 +49,33 @@
                 {
                     "answer": "dynamic desirable",
                     "correct": false,
-                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst - dynamic auto."
+                    "comment": "Режим порта по умолчанию для коммутаторов Cisco Catalyst — dynamic auto"
                 }
             ]
         },
         {
-            "question": "Верно или нет утверждение? Два коммутационных порта на канале, оба сконфигурированные как dynamic auto, успешно согласуют магистраль.",
+            "question": "Верно ли утверждение, что два коммутационных порта на канале, сконфигурированные как dynamic auto, успешно согласуют магистраль?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "Верно",
+                    "answer": "верно",
                     "correct": false,
-                    "comment": "Правильный ответ - Ложь. Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable."
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
                 },
                 {
-                    "answer": "Неверно",
+                    "answer": "неверно",
                     "correct": true
                 }
             ]
         },
         {
-            "question": "Какие два режима DTP образуют магистраль с интерфейсом, настроенным как dynamic auto? (Выберите два варианта.)",
+            "question": "Какие режимы DTP образуют магистраль с интерфейсом, настроенным как dynamic auto? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
                     "answer": "access",
                     "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable."
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable"
                 },
                 {
                     "answer": "trunk",
@@ -84,7 +84,7 @@
                 {
                     "answer": "dynamic auto",
                     "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable."
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable"
                 },
                 {
                     "answer": "dynamic desirable",
