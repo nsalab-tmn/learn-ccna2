@@ -1,0 +1,152 @@
+Criterions:
+- code: A
+  name: S1
+  subCriterions:
+  - name: DNS
+    code: 1
+    aspects:
+    - name: IP Domain Name
+      code: 1
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."DNS"."IP Domain Name"."status"'
+              value: Correct
+      result: null
+  - name: Security
+    code: 2
+    aspects:
+    - name: Modulus Bits
+      code: 1
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Security"."Modulus Bits"."status"'
+              value: Correct
+      result: null
+  - name: User Names
+    code: 3
+    aspects:
+    - name: Username
+      code: 1
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."User Names"."Username"."status"'
+              value: Correct
+      result: null
+  - name: VTY Lines
+    code: 4
+    aspects:
+    - name: VTY Line 0.Login
+      code: 1
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."VTY Lines"."VTY Line 0"."Login"."status"'
+              value: Correct
+      result: null
+    - name: VTY Line 0.Password
+      code: 2
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 6
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."VTY Lines"."VTY Line 0"."Password"."status"'
+              value: Correct
+      result: null
+    - name: VTY Line 0.Transport Input
+      code: 3
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."VTY Lines"."VTY Line 0"."Transport Input"."status"'
+              value: Correct
+      result: null
+  - name: Miscellaneous
+    code: 5
+    aspects:
+    - name: Service Password Encryption
+      code: 1
+      description: null
+      skills: Device Hardening Configuration
+      max_mark: 20
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Service Password Encryption"."status"'
+              value: Correct
+      result: null
