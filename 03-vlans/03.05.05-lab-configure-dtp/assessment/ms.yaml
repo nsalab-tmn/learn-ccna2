@@ -1,0 +1,510 @@
+Criterions:
+- code: A
+  name: S1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/1.Dynamic Mode
+      code: 1
+      description: null
+      skills: DTP Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Dynamic
+                Mode"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Native VLAN
+      code: 2
+      description: null
+      skills: Trunk Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Dynamic Mode
+      code: 3
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/2"."Dynamic
+                Mode"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Native VLAN
+      code: 4
+      description: null
+      skills: Trunk Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/2"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Nonegotiate
+      code: 5
+      description: null
+      skills: DTP Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/2"."Nonegotiate"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Port Mode
+      code: 6
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/2"."Port Mode"."status"'
+              value: Correct
+      result: null
+  - name: VLANS
+    code: 2
+    aspects:
+    - name: VLAN 10.VLAN Name
+      code: 1
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."VLANS"."VLAN 10"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 20.VLAN Name
+      code: 2
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."VLANS"."VLAN 20"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 30.VLAN Name
+      code: 3
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."VLANS"."VLAN 30"."VLAN Name"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: S2
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/1.Access VLAN
+      code: 1
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."Ports"."FastEthernet0/1"."Access VLAN"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/12.Access VLAN
+      code: 2
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."Ports"."FastEthernet0/12"."Access VLAN"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/20.Access VLAN
+      code: 3
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."Ports"."FastEthernet0/20"."Access VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Native VLAN
+      code: 4
+      description: null
+      skills: Trunk Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."Ports"."GigabitEthernet0/1"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+  - name: VLANS
+    code: 2
+    aspects:
+    - name: VLAN 10.VLAN Name
+      code: 1
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."VLANS"."VLAN 10"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 20.VLAN Name
+      code: 2
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."VLANS"."VLAN 20"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 30.VLAN Name
+      code: 3
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S2"."VLANS"."VLAN 30"."VLAN Name"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: S3
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/11.Access VLAN
+      code: 1
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/11"."Access VLAN"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Access VLAN
+      code: 2
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/2"."Access VLAN"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/20.Access VLAN
+      code: 3
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."FastEthernet0/20"."Access VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Dynamic Mode
+      code: 4
+      description: null
+      skills: DTP Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."GigabitEthernet0/2"."Dynamic
+                Mode"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Native VLAN
+      code: 5
+      description: null
+      skills: Trunk Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."GigabitEthernet0/2"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Nonegotiate
+      code: 6
+      description: null
+      skills: DTP Config
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."Ports"."GigabitEthernet0/2"."Nonegotiate"."status"'
+              value: Correct
+      result: null
+  - name: VLANS
+    code: 2
+    aspects:
+    - name: VLAN 10.VLAN Name
+      code: 1
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."VLANS"."VLAN 10"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 20.VLAN Name
+      code: 2
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."VLANS"."VLAN 20"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 30.VLAN Name
+      code: 3
+      description: null
+      skills: VLAN Config
+      max_mark: 2
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S3"."VLANS"."VLAN 30"."VLAN Name"."status"'
+              value: Correct
+      result: null
