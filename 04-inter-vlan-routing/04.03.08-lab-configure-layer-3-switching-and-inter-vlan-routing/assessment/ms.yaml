@@ -1,0 +1,508 @@
+Criterions:
+- code: A
+  name: MLS
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/1.Native VLAN
+      code: 1
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/1"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Port Mode
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/1"."Port Mode"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.IP Address
+      code: 3
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/2"."IP Address"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.IPv6 Addresses.2001:DB8:ACAD:A::1.IP Address
+      code: 4
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/2"."IPv6 Addresses"."2001:DB8:ACAD:A::1"."IP
+                Address"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.IPv6 Addresses.2001:DB8:ACAD:A::1.Prefix Length
+      code: 5
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/2"."IPv6 Addresses"."2001:DB8:ACAD:A::1"."Prefix
+                Length"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Subnet Mask
+      code: 6
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/2"."Subnet
+                Mask"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.SwitchPort
+      code: 7
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."GigabitEthernet0/2"."SwitchPort"."status"'
+              value: Correct
+      result: null
+    - name: Vlan10.IP Address
+      code: 8
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan10"."IP Address"."status"'
+              value: Correct
+      result: null
+    - name: Vlan10.IPv6 Addresses.2001:DB8:ACAD:10::1.IP Address
+      code: 9
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan10"."IPv6 Addresses"."2001:DB8:ACAD:10::1"."IP
+                Address"."status"'
+              value: Correct
+      result: null
+    - name: Vlan10.IPv6 Addresses.2001:DB8:ACAD:10::1.Prefix Length
+      code: 10
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan10"."IPv6 Addresses"."2001:DB8:ACAD:10::1"."Prefix
+                Length"."status"'
+              value: Correct
+      result: null
+    - name: Vlan20.IP Address
+      code: 11
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan20"."IP Address"."status"'
+              value: Correct
+      result: null
+    - name: Vlan20.IPv6 Addresses.2001:DB8:ACAD:20::1.IP Address
+      code: 12
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan20"."IPv6 Addresses"."2001:DB8:ACAD:20::1"."IP
+                Address"."status"'
+              value: Correct
+      result: null
+    - name: Vlan20.IPv6 Addresses.2001:DB8:ACAD:20::1.Prefix Length
+      code: 13
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan20"."IPv6 Addresses"."2001:DB8:ACAD:20::1"."Prefix
+                Length"."status"'
+              value: Correct
+      result: null
+    - name: Vlan30.IP Address
+      code: 14
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan30"."IP Address"."status"'
+              value: Correct
+      result: null
+    - name: Vlan30.IPv6 Addresses.2001:DB8:ACAD:30::1.IP Address
+      code: 15
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan30"."IPv6 Addresses"."2001:DB8:ACAD:30::1"."IP
+                Address"."status"'
+              value: Correct
+      result: null
+    - name: Vlan30.IPv6 Addresses.2001:DB8:ACAD:30::1.Prefix Length
+      code: 16
+      description: null
+      skills: IPv6
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan30"."IPv6 Addresses"."2001:DB8:ACAD:30::1"."Prefix
+                Length"."status"'
+              value: Correct
+      result: null
+    - name: Vlan99.IP Address
+      code: 17
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Ports"."Vlan99"."IP Address"."status"'
+              value: Correct
+      result: null
+  - name: Routes
+    code: 2
+    aspects:
+    - name: IP Routing
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Routes"."IP Routing"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 0
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Routes"."Static Routes"."status"'
+              value: Correct
+      result: null
+  - name: Routesv6
+    code: 3
+    aspects:
+    - name: IPv6 Unicast Routing
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."Routesv6"."IPv6 Unicast Routing"."status"'
+              value: Correct
+      result: null
+  - name: VLANS
+    code: 4
+    aspects:
+    - name: VLAN 10.VLAN Name
+      code: 1
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."VLANS"."VLAN 10"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 20.VLAN Name
+      code: 2
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."VLANS"."VLAN 20"."VLAN Name"."status"'
+              value: Correct
+      result: null
+    - name: VLAN 30.VLAN Name
+      code: 3
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."MLS"."VLANS"."VLAN 30"."VLAN Name"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: S1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/1.Native VLAN
+      code: 1
+      description: null
+      skills: Switching
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Native
+                VLAN"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Port Mode
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Port Mode"."status"'
+              value: Correct
+      result: null

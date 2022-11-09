@@ -1,0 +1,117 @@
+Criterions:
+- code: A
+  name: PC3
+  subCriterions:
+  - name: Miscellaneous
+    code: 1
+    aspects:
+    - name: Default Gateway
+      code: 1
+      description: null
+      skills: Troubleshoot Inter-VLAN Routing
+      max_mark: 15
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC3"."Default Gateway"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: R1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/1.10.802.1Q.VLAN ID
+      code: 1
+      description: null
+      skills: Troubleshoot Inter-VLAN Routing
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/1"."10"."802"."1Q"."VLAN
+                ID"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.10.Port Status
+      code: 2
+      description: null
+      skills: Troubleshoot Inter-VLAN Routing
+      max_mark: 15
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/1"."10"."Port
+                Status"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.30.802.1Q.VLAN ID
+      code: 3
+      description: null
+      skills: Troubleshoot Inter-VLAN Routing
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/1"."30"."802"."1Q"."VLAN
+                ID"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: S1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/1.Port Mode
+      code: 1
+      description: null
+      skills: Troubleshoot Inter-VLAN Routing
+      max_mark: 15
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Port Mode"."status"'
+              value: Correct
+      result: null
