@@ -1,0 +1,471 @@
+Criterions:
+- code: A
+  name: PC1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0.IP Address
+      code: 1
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC1"."Ports"."FastEthernet0"."IP Address"."status"'
+              value: Correct
+      result: null
+  - name: Miscellaneous
+    code: 2
+    aspects:
+    - name: DNS Server IP
+      code: 1
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC1"."DNS Server IP"."status"'
+              value: Correct
+      result: null
+    - name: Default Gateway
+      code: 2
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC1"."Default Gateway"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: PC2
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0.IP Address
+      code: 1
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC2"."Ports"."FastEthernet0"."IP Address"."status"'
+              value: Correct
+      result: null
+  - name: Miscellaneous
+    code: 2
+    aspects:
+    - name: DNS Server IP
+      code: 1
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC2"."DNS Server IP"."status"'
+              value: Correct
+      result: null
+    - name: Default Gateway
+      code: 2
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."PC2"."Default Gateway"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: R1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/0.Helper Addresses.Helper Address
+      code: 1
+      description: null
+      skills: DHCPv4 Relay Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R1"."Ports"."GigabitEthernet0/0"."Helper
+                Addresses"."Helper Address"."status"'
+              value: Correct
+      result: null
+- code: D
+  name: R2
+  subCriterions:
+  - name: DHCP Server
+    code: 1
+    aspects:
+    - name: Excluded Addresses.192.168.10.1 192.168.10.10
+      code: 1
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Excluded Addresses"."192"."168"."10"."1
+                192"."168"."10"."10"."status"'
+              value: Correct
+      result: null
+    - name: Excluded Addresses.192.168.30.1 192.168.30.10
+      code: 2
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Excluded Addresses"."192"."168"."30"."1
+                192"."168"."30"."10"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R1-LAN.DNS server IP
+      code: 3
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R1-LAN"."DNS
+                server IP"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R1-LAN.Default Gateway
+      code: 4
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R1-LAN"."Default
+                Gateway"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R1-LAN.Name
+      code: 5
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R1-LAN"."Name"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R1-LAN.Start IP address
+      code: 6
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R1-LAN"."Start
+                IP address"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R1-LAN.Subnet mask
+      code: 7
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R1-LAN"."Subnet
+                mask"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R3-LAN.DNS server IP
+      code: 8
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R3-LAN"."DNS
+                server IP"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R3-LAN.Default Gateway
+      code: 9
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R3-LAN"."Default
+                Gateway"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R3-LAN.Name
+      code: 10
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R3-LAN"."Name"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R3-LAN.Start IP address
+      code: 11
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R3-LAN"."Start
+                IP address"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool R3-LAN.Subnet mask
+      code: 12
+      description: null
+      skills: DHCPv4 Server Configuration
+      max_mark: 4
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."DHCP Server"."Pools"."Pool R3-LAN"."Subnet
+                mask"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: GigabitEthernet0/1.DHCP client enable
+      code: 1
+      description: null
+      skills: DHCPv4 Client Configuration
+      max_mark: 10
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Ports"."GigabitEthernet0/1"."DHCP client
+                enable"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Port Status
+      code: 2
+      description: null
+      skills: Configure Interface
+      max_mark: 3
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R2"."Ports"."GigabitEthernet0/1"."Port Status"."status"'
+              value: Correct
+      result: null
+- code: E
+  name: R3
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: GigabitEthernet0/0.Helper Addresses.Helper Address
+      code: 1
+      description: null
+      skills: DHCPv4 Relay Configuration
+      max_mark: 5
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."R3"."Ports"."GigabitEthernet0/0"."Helper
+                Addresses"."Helper Address"."status"'
+              value: Correct
+      result: null
