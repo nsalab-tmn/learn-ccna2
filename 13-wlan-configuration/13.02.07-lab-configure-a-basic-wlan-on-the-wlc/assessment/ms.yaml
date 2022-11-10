@@ -1,0 +1,192 @@
+Criterions:
+- code: A
+  name: WLC-1
+  subCriterions:
+  - name: CAPWAP Wireless
+    code: 1
+    aspects:
+    - name: Wireless LANs.Floor 2 Employees.SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Floor
+                2 Employees"."SSID"."status"'
+              value: Correct
+      result: null
+    - name: Wireless LANs.Floor 2 Employees.Security Mode.Authen Type
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Floor
+                2 Employees"."Security Mode"."Authen Type"."status"'
+              value: Correct
+      result: null
+    - name: Wireless LANs.Floor 2 Employees.Security Mode.Encryption Type
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Floor
+                2 Employees"."Security Mode"."Encryption Type"."status"'
+              value: Correct
+      result: null
+    - name: Wireless LANs.Floor 2 Employees.Security Mode.Pass Phrase
+      code: 4
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Floor
+                2 Employees"."Security Mode"."Pass Phrase"."status"'
+              value: Correct
+      result: null
+    - name: Wireless LANs.Floor 2 Employees.VLAN
+      code: 5
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Floor
+                2 Employees"."VLAN"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: Wireless Host
+  subCriterions:
+  - name: Wireless
+    code: 1
+    aspects:
+    - name: SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Wireless Host"."Wireless"."SSID"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Authen Type
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Wireless Host"."Wireless"."Security Mode"."Authen
+                Type"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Encryption Type
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Wireless Host"."Wireless"."Security Mode"."Encryption
+                Type"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Pass Phrase
+      code: 4
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Wireless Host"."Wireless"."Security Mode"."Pass
+                Phrase"."status"'
+              value: Correct
+      result: null

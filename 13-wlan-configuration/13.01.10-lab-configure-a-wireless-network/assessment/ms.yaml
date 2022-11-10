@@ -1,0 +1,434 @@
+Criterions:
+- code: A
+  name: AP
+  subCriterions:
+  - name: Wireless
+    code: 1
+    aspects:
+    - name: SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."AP"."Wireless"."SSID"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Authen Type
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."AP"."Wireless"."Security Mode"."Authen Type"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Encryption Type
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."AP"."Wireless"."Security Mode"."Encryption
+                Type"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Pass Phrase
+      code: 4
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."AP"."Wireless"."Security Mode"."Pass Phrase"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: Admin
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0.DHCP client enable
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Admin"."Ports"."FastEthernet0"."DHCP client
+                enable"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: Laptop1
+  subCriterions:
+  - name: Wireless
+    code: 1
+    aspects:
+    - name: SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Laptop1"."Wireless"."SSID"."status"'
+              value: Correct
+      result: null
+- code: D
+  name: Laptop2
+  subCriterions:
+  - name: Wireless
+    code: 1
+    aspects:
+    - name: SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Laptop2"."Wireless"."SSID"."status"'
+              value: Correct
+      result: null
+- code: E
+  name: Laptop3
+  subCriterions:
+  - name: Wireless
+    code: 1
+    aspects:
+    - name: SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Laptop3"."Wireless"."SSID"."status"'
+              value: Correct
+      result: null
+- code: F
+  name: WR
+  subCriterions:
+  - name: DHCP Server
+    code: 1
+    aspects:
+    - name: Pools.Pool linksysPool.DNS server IP
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."DHCP Server"."Pools"."Pool linksysPool"."DNS
+                server IP"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool linksysPool.Default Gateway
+      code: 2
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."DHCP Server"."Pools"."Pool linksysPool"."Default
+                Gateway"."status"'
+              value: Correct
+      result: null
+    - name: Pools.Pool linksysPool.Start IP address
+      code: 3
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."DHCP Server"."Pools"."Pool linksysPool"."Start
+                IP address"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: Internet.IP Address
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Ports"."Internet"."IP Address"."status"'
+              value: Correct
+      result: null
+    - name: Internet.Subnet Mask
+      code: 2
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Ports"."Internet"."Subnet Mask"."status"'
+              value: Correct
+      result: null
+  - name: Wireless 2.4G
+    code: 3
+    aspects:
+    - name: SSID
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Wireless 2"."4G"."SSID"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Authen Type
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Wireless 2"."4G"."Security Mode"."Authen
+                Type"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Encryption Type
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Wireless 2"."4G"."Security Mode"."Encryption
+                Type"."status"'
+              value: Correct
+      result: null
+    - name: Security Mode.Pass Phrase
+      code: 4
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Wireless 2"."4G"."Security Mode"."Pass
+                Phrase"."status"'
+              value: Correct
+      result: null
+  - name: Miscellaneous
+    code: 4
+    aspects:
+    - name: DNS Server IP
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."DNS Server IP"."status"'
+              value: Correct
+      result: null
+    - name: Default Gateway
+      code: 2
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Default Gateway"."status"'
+              value: Correct
+      result: null
+    - name: Password
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WR"."Password"."status"'
+              value: Correct
+      result: null

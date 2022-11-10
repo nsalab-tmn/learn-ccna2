@@ -1,0 +1,168 @@
+Criterions:
+- code: A
+  name: Home Wireless Router
+  subCriterions:
+  - name: DHCP Server
+    code: 1
+    aspects:
+    - name: Pools.Pool linksysPool.DNS server IP
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Home Wireless Router"."DHCP Server"."Pools"."Pool
+                linksysPool"."DNS server IP"."status"'
+              value: Correct
+      result: null
+  - name: Ports
+    code: 2
+    aspects:
+    - name: Internet.DHCP client enable
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Home Wireless Router"."Ports"."Internet"."DHCP
+                client enable"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: Laptop 2
+  subCriterions:
+  - name: Wireless
+    code: 1
+    aspects:
+    - name: Security Mode.User Id
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Laptop 2"."Wireless"."Security Mode"."User
+                Id"."status"'
+              value: Correct
+      result: null
+- code: C
+  name: Tablet PC
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: Wireless0.DHCP client enable
+      code: 1
+      description: null
+      skills: Ip
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Tablet PC"."Ports"."Wireless0"."DHCP client
+                enable"."status"'
+              value: Correct
+      result: null
+- code: D
+  name: WLC-1
+  subCriterions:
+  - name: CAPWAP Wireless
+    code: 1
+    aspects:
+    - name: Wireless LANs.Wireless VLAN 10.Security Mode.Authen Type
+      code: 1
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Wireless
+                VLAN 10"."Security Mode"."Authen Type"."status"'
+              value: Correct
+      result: null
+    - name: Wireless LANs.Wireless VLAN 10.Security Mode.Pass Phrase
+      code: 2
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Wireless
+                VLAN 10"."Security Mode"."Pass Phrase"."status"'
+              value: Correct
+      result: null
+    - name: Wireless LANs.Wireless VLAN 20.Enabled
+      code: 3
+      description: null
+      skills: Other
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."WLC-1"."CAPWAP Wireless"."Wireless LANs"."Wireless
+                VLAN 20"."Enabled"."status"'
+              value: Correct
+      result: null
