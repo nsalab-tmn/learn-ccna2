@@ -1,0 +1,323 @@
+Criterions:
+- code: A
+  name: Edge_Router
+  subCriterions:
+  - name: Routes
+    code: 1
+    aspects:
+    - name: Static Routes.Route0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routes"."Static Routes"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route1
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routes"."Static Routes"."Route1"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route2
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routes"."Static Routes"."Route2"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route3
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routes"."Static Routes"."Route3"."status"'
+              value: Correct
+      result: null
+  - name: Routesv6
+    code: 2
+    aspects:
+    - name: Static Routes.Route0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routesv6"."Static Routes"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route1
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routesv6"."Static Routes"."Route1"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route2
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routesv6"."Static Routes"."Route2"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route3
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."Edge_Router"."Routesv6"."Static Routes"."Route3"."status"'
+              value: Correct
+      result: null
+- code: B
+  name: ISP1
+  subCriterions:
+  - name: Routes
+    code: 1
+    aspects:
+    - name: Static Routes.Route0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routes"."Static Routes"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route1
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routes"."Static Routes"."Route1"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route2
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routes"."Static Routes"."Route2"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route3
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routes"."Static Routes"."Route3"."status"'
+              value: Correct
+      result: null
+  - name: Routesv6
+    code: 2
+    aspects:
+    - name: Static Routes.Route0
+      code: 1
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routesv6"."Static Routes"."Route0"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route1
+      code: 2
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routesv6"."Static Routes"."Route1"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route2
+      code: 3
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routesv6"."Static Routes"."Route2"."status"'
+              value: Correct
+      result: null
+    - name: Static Routes.Route3
+      code: 4
+      description: null
+      skills: Routing
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."ISP1"."Routesv6"."Static Routes"."Route3"."status"'
+              value: Correct
+      result: null

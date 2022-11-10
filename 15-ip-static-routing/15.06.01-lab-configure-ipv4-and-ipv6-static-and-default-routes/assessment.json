@@ -1,0 +1,5 @@
+{
+    "./assessment/ms.yaml":	        "https://github.com/nsalab-tmn/learn-ccna2/blob/15-ip-static-routing/15.06.01-lab-configure-ipv4-and-ipv6-static-and-default-routes/assessment/ms.yaml?ref=main",
+    "./assessment/testbed.yaml":	"https://github.com/nsalab-tmn/learn-ccna2/blob/15-ip-static-routing/15.06.01-lab-configure-ipv4-and-ipv6-static-and-default-routes/assessment/testbed.yaml?ref=main",
+    "./assessment/parameters.yaml":	"https://github.com/nsalab-tmn/learn-ccna2/blob/15-ip-static-routing/15.06.01-lab-configure-ipv4-and-ipv6-static-and-default-routes/assessment/parameters.yaml?ref=main"
+}
