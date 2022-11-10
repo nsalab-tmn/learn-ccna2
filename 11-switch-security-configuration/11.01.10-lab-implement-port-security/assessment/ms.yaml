@@ -1,0 +1,661 @@
+Criterions:
+- code: A
+  name: S1
+  subCriterions:
+  - name: Ports
+    code: 1
+    aspects:
+    - name: FastEthernet0/1.Port Security.Enabled
+      code: 1
+      description: null
+      skills: Port Security Configuration
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/1"."Port Security"."Enabled"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/1.Port Security.Maximum Static MACs
+      code: 2
+      description: null
+      skills: Port Security Configuration
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/1"."Port Security"."Maximum
+                Static MACs"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/1.Port Security.Port Security Violation
+      code: 3
+      description: null
+      skills: Port Security Configuration
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/1"."Port Security"."Port
+                Security Violation"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/1.Port Security.Sticky Enabled
+      code: 4
+      description: null
+      skills: Port Security Configuration
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/1"."Port Security"."Sticky
+                Enabled"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/1.Port Security.Sticky MACs.00E0.B027.2245
+      code: 5
+      description: null
+      skills: Port Security Configuration
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/1"."Port Security"."Sticky
+                MACs"."00E0"."B027"."2245"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/10.Port Status
+      code: 6
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/10"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/11.Port Status
+      code: 7
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/11"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/12.Port Status
+      code: 8
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/12"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/13.Port Status
+      code: 9
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/13"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/14.Port Status
+      code: 10
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/14"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/15.Port Status
+      code: 11
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/15"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/16.Port Status
+      code: 12
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/16"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/17.Port Status
+      code: 13
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/17"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/18.Port Status
+      code: 14
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/18"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/19.Port Status
+      code: 15
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/19"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Port Security.Enabled
+      code: 16
+      description: null
+      skills: Port Security Configuration
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/2"."Port Security"."Enabled"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Port Security.Maximum Static MACs
+      code: 17
+      description: null
+      skills: Port Security Configuration
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/2"."Port Security"."Maximum
+                Static MACs"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Port Security.Port Security Violation
+      code: 18
+      description: null
+      skills: Port Security Configuration
+      max_mark: 8
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/2"."Port Security"."Port
+                Security Violation"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Port Security.Sticky Enabled
+      code: 19
+      description: null
+      skills: Port Security Configuration
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/2"."Port Security"."Sticky
+                Enabled"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/2.Port Security.Sticky MACs.0001.647C.697E
+      code: 20
+      description: null
+      skills: Port Security Configuration
+      max_mark: 7
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/2"."Port Security"."Sticky
+                MACs"."0001"."647C"."697E"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/20.Port Status
+      code: 21
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/20"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/21.Port Status
+      code: 22
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/21"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/22.Port Status
+      code: 23
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/22"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/23.Port Status
+      code: 24
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/23"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/24.Port Status
+      code: 25
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/24"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/3.Port Status
+      code: 26
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/3"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/4.Port Status
+      code: 27
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/4"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/5.Port Status
+      code: 28
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/5"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/6.Port Status
+      code: 29
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/6"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/7.Port Status
+      code: 30
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/7"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/8.Port Status
+      code: 31
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/8"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: FastEthernet0/9.Port Status
+      code: 32
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."FastEthernet0/9"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/1.Port Status
+      code: 33
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/1"."Port Status"."status"'
+              value: Correct
+      result: null
+    - name: GigabitEthernet0/2.Port Status
+      code: 34
+      description: null
+      skills: Port Security Configuration
+      max_mark: 1
+      steps:
+      - name: Register packet tracer aspect mark
+        code: register
+        type: check
+        result: null
+        device: dummy
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{pt-url}:{pt-api-port}
+            assert_jmespath:
+              path: '"assessment_items"."S1"."Ports"."GigabitEthernet0/2"."Port Status"."status"'
+              value: Correct
+      result: null
