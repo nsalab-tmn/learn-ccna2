@@ -20,17 +20,17 @@
                 {
                     "answer": "67",
                     "correct": false,
-                    "comment": "Клиенты DHCPv6 используют UDP-порт 547 для отправки сообщений DHCPv6. Серверы DHCPv6 используют UDP-порт 546."
+                    "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
                 },
                 {
                     "answer": "68",
                     "correct": false,
-                    "comment": "Клиенты DHCPv6 используют UDP-порт 547 для отправки сообщений DHCPv6. Серверы DHCPv6 используют UDP-порт 546."
+                    "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
                 },
                 {
                     "answer": "546",
                     "correct": false,
-                    "comment": "Клиенты DHCPv6 используют UDP-порт 547 для отправки сообщений DHCPv6. Серверы DHCPv6 используют UDP-порт 546."
+                    "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
                 },
                 {
                     "answer": "547",
@@ -45,7 +45,7 @@
                 {
                     "answer": "ADVERTISE",
                     "correct": false,
-                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами."
+                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
                 },
                 {
                     "answer": "SOLICIT",
@@ -54,33 +54,33 @@
                 {
                     "answer": "INFORMATION-REQUEST",
                     "correct": false,
-                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами."
+                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
                 },
                 {
                     "answer": "REQUEST",
                     "correct": false,
-                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами."
+                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
                 }
             ]
         },
         {
-            "question": "Какое сообщение DHCPv6 отправляет хост серверу DHCPv6, если он использует DHCPv6 с сохранением состояния?",
+            "question": "Какое сообщение отправляет хост серверу DHCPv6, если он использует DHCPv6 с сохранением состояния?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "ADVERTISE",
                     "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния."
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния"
                 },
                 {
                     "answer": "SOLICIT",
                     "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния."
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния"
                 },
                 {
                     "answer": "INFORMATION-REQUEST",
                     "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния."
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния DHCPv6 и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния"
                 },
                 {
                     "answer": "REQUEST",
@@ -95,12 +95,12 @@
                 {
                     "answer": "A=1, M=0, O=0",
                     "correct": false,
-                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1."
+                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
                 },
                 {
                     "answer": "A=0, M=1, O=0",
                     "correct": false,
-                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1."
+                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
                 },
                 {
                     "answer": "A=1, M=0, O=1",
@@ -109,7 +109,7 @@
                 {
                     "answer": "A=0, M=1, O=1",
                     "correct": false,
-                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1."
+                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
                 }
             ]
         },
@@ -120,7 +120,7 @@
                 {
                     "answer": "M=0",
                     "correct": false,
-                    "comment": "DHCPv6 с сохранением состояния  устанавливает флаги M=1."
+                    "comment": "DHCPv6 с сохранением состояния  устанавливает флаги M=1"
                 },
                 {
                     "answer": "M=1",
