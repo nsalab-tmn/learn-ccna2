@@ -14,37 +14,37 @@
     },
     "questions": [
         {
-            "question": "Какие два сообщения ICMPv6 используются в процессе SLAAC? (Выберите два варианта.)",
+            "question": "Какие сообщения ICMPv6 используются в процессе SLAAC? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
-                    "answer": "Сообщение «Объявление соседнего узла» (Neighbor Advertisement, NA).",
+                    "answer": "сообщение «Объявление соседнего узла» (Neighbor Advertisement, NA)",
                     "correct": false,
-                    "comment": "Процесс SLAAC использует сообщения RA и может также отвечать на сообщения RS от хоста."
+                    "comment": "Процесс SLAAC использует сообщения RA и может также отвечать на сообщения RS от хоста"
                 },
                 {
-                    "answer": "Сообщение «Запрос соседнего узла» (Neighbor Solicitation, NS)",
+                    "answer": "сообщение «Запрос соседнего узла» (Neighbor Solicitation, NS)",
                     "correct": false,
-                    "comment": "Процесс SLAAC использует сообщения RA и может также отвечать на сообщения RS от хоста."
+                    "comment": "Процесс SLAAC использует сообщения RA и может также отвечать на сообщения RS от хоста"
                 },
                 {
-                    "answer": "Сообщение «Запрос маршрутизатора» (Router Solicitation, RS)",
+                    "answer": "сообщение «Запрос маршрутизатора» (Router Solicitation, RS)",
                     "correct": true
                 },
                 {
-                    "answer": "Сообщение «Объявление маршрутизатора» (Router Advertisement, RA)",
+                    "answer": "сообщение «Объявление маршрутизатора» (Router Advertisement, RA)",
                     "correct": true
                 }
             ]
         },
         {
-            "question": "Какая команда должна быть настроена на маршрутизаторе, чтобы подключить его к многоадресной рассылке IPv6 ff02::2?",
+            "question": "Какая команда должна быть настроена на роутере, чтобы подключить его к многоадресной рассылке IPv6 ff02::2?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "ip routing",
                     "correct": false,
-                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы маршрутизатор присоединился к группе IPv6 all-routers (multicast адрес ff02::2)."
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (multicast адрес ff02::2)"
                 },
                 {
                     "answer": "ipv6 unicast-routing",
@@ -53,12 +53,12 @@
                 {
                     "answer": "ipv6 address (ipv6-address/prefix-length)",
                     "correct": false,
-                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы маршрутизатор присоединился к группе IPv6 all-routers (multicast адрес ff02::2)."
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (multicast адрес ff02::2)"
                 },
                 {
                     "answer": "ipv6 address (ipv6-address) link-local",
                     "correct": false,
-                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы маршрутизатор присоединился к группе IPv6 all-routers (multicast адрес ff02::2)."
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (multicast адрес ff02::2)"
                 }
             ]
         },
@@ -73,53 +73,53 @@
                 {
                     "answer": "A=1, M=1, O=0",
                     "correct": false,
-                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0."
+                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0"
                 },
                 {
                     "answer": "A=1, M=0, O=1",
                     "correct": false,
-                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0."
+                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0"
                 },
                 {
                     "answer": "A=0, M=1, O=1",
                     "correct": false,
-                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0."
+                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0"
                 }
             ]
         },
         {
-            "question": "Какое сообщение ICMPv6 отправляется хостом в попытке найти сетевой маршрутизатор с поддержкой IPv6 для получения информации об адресации IPv6?",
+            "question": "Какое сообщение ICMPv6 отправляется хостом в попытке найти сетевой роутер с поддержкой IPv6 для получения информации об адресации IPv6?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "Сообщение «Объявление соседнего узла» (Neighbor Advertisement, NA).",
+                    "answer": "сообщение «Объявление соседнего узла» (Neighbor Advertisement, NA)",
                     "correct": false,
-                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор."
+                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный роутер"
                 },
                 {
-                    "answer": "Сообщение «Запрос соседнего узла» (Neighbor Solicitation, NS)",
+                    "answer": "сообщение «Запрос соседнего узла» (Neighbor Solicitation, NS)",
                     "correct": false,
-                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор."
+                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный роутер"
                 },
                 {
-                    "answer": "Сообщение «Запрос маршрутизатора» (Router Solicitation, RS)",
+                    "answer": "сообщение «Запрос роутера» (Router Solicitation, RS)",
                     "correct": true
                 },
                 {
-                    "answer": "Сообщение «Объявление маршрутизатора» (Router Advertisement, RA)",
+                    "answer": "сообщение «Объявление роутера» (Router Advertisement, RA)",
                     "correct": false,
-                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор."
+                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный роутер"
                 }
             ]
         },
         {
-            "question": "Какой метод используется узлом для проверки уникальности IPv6-адреса в локальной сети перед назначением этого адреса интерфейсу?",
+            "question": "Какой метод используется узлом для проверки уникальности IPv6-адреса в локальной сети перед назначением его интерфейсу?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "⁪протокол ARP",
                     "correct": false,
-                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети."
+                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
                 },
                 {
                     "answer": "DAD",
@@ -128,12 +128,12 @@
                 {
                     "answer": "PING",
                     "correct": false,
-                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети."
+                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
                 },
                 {
                     "answer": "SLAAC",
                     "correct": false,
-                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети."
+                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
                 }
             ]
         }
