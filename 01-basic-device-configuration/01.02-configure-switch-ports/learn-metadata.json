@@ -1,7 +1,7 @@
 {
     "title": "Настройка портов коммутатора",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое дуплекс и как он может влиять на ошибки ввода-вывода на портах коммутатора?",
     "difficulty": 3,
     "duration": "PT0H20M",
     "tags": {

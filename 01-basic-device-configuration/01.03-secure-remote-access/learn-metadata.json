@@ -1,7 +1,7 @@
 {
     "title": "Защищенный удаленный доступ",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое SSH и чем он отличается от Telnet? Как настроить SSH для управления коммутатором?",
     "difficulty": 3,
     "duration": "PT0H18M",
     "tags": {
