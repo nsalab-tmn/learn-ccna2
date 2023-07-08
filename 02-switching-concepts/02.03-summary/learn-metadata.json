@@ -1,7 +1,7 @@
 {
     "title": "Принципы коммутации: краткое изложение",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какие используются режимы пересылки кадров? Какими бывают коммутационные домены?",
     "difficulty": 3,
     "duration": "PT0H3M",
     "tags": {

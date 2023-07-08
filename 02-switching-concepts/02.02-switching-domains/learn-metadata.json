@@ -1,7 +1,7 @@
 {
     "title": "Коммутационные домены",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое домен коллизии? Что такое домен широковещательной рассылки? Чем отличаются эти домены?",
     "difficulty": 3,
     "duration": "PT0H6M",
     "tags": {

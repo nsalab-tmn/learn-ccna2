@@ -1,7 +1,7 @@
 {
     "title": "Пересылка кадров",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое таблица MAC-адресов и для чего она нужна? Какие способы пересылки фреймов существуют на коммутаторах?",
     "difficulty": 3,
     "duration": "PT0H13M",
     "tags": {
