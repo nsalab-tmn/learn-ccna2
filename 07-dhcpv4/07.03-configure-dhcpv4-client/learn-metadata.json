@@ -1,7 +1,7 @@
 {
     "title": "Настройка клиента DHCPv4",
     "materialType": "lecture",
-    "description": "",
+    "description": "В каких случаях маршрутизатор может выступать DHCP-клиентом? Как настроить маршрутизатор в качестве DHCP-клиента?",
     "difficulty": 3,
     "duration": "PT0H3M",
     "tags": {

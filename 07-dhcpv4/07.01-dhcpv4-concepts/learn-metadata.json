@@ -1,7 +1,7 @@
 {
-    "title": "Принципы DHCPv4",
+    "title": "Принципы работы DHCP в сетях IPv4",
     "materialType": "lecture",
-    "description": "",
+    "description": "За что отвечает DHCP-сервер? Как клиенты запрашивают IP-адреса у DHCP-сервера?",
     "difficulty": 3,
     "duration": "PT0H6M",
     "tags": {
