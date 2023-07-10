@@ -1,7 +1,7 @@
 {
     "title": "Принципы работы STP",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как коммутаторы выбирают по какому пути направлять трафик, чтобы не возникало петель? Как работает протокол STP?",
     "difficulty": 3,
     "duration": "PT0H22M",
     "tags": {

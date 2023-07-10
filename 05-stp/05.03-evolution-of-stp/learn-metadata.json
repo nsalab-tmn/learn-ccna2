@@ -1,7 +1,7 @@
 {
-    "title": "Эволюция STP",
+    "title": "Эволюция протоколов STP",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какие есть вариации протокола STP? Какие есть альтернативные способы избежать появления коммутационных петель?",
     "difficulty": 3,
     "duration": "PT0H12M",
     "tags": {
