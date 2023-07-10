@@ -1,7 +1,7 @@
 {
     "title": "Поиск и устранение проблем в работе EtherChannel",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как проверить работу логических каналов EtherChannel? Какие типовые неисправности при могут возникнуть при настройке EtherChannel и как их устранять?",
     "difficulty": 3,
     "duration": "PT0H27M",
     "tags": {

@@ -1,7 +1,7 @@
 {
     "title": "Настройка EtherChannel",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как настроить агрегацию каналов между коммутаторами по протоколу LACP?",
     "difficulty": 3,
     "duration": "PT0H49M",
     "tags": {

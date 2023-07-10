@@ -1,7 +1,7 @@
 {
     "title": "Принципы работы EtherChannel",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое агрегация каналов и для чего она нужна? Какие бывают протоколы автосогласования для агрегации каналов?",
     "difficulty": 3,
     "duration": "PT0H13M",
     "tags": {
