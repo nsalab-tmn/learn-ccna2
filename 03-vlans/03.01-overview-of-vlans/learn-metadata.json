@@ -1,7 +1,7 @@
 {
-    "title": "Обзор виртуальных локальных сетей",
+    "title": "Обзор технологии VLAN",
     "materialType": "lecture",
-    "description": "",
+    "description": "В чем заключается приемущество использование VLAN? Какие бывают типы VLAN?",
     "difficulty": 3,
     "duration": "PT0H22M",
     "tags": {

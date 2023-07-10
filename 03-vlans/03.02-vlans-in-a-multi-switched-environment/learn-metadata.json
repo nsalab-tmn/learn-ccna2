@@ -1,7 +1,7 @@
 {
     "title": "Виртуальные локальные сети в среде с несколькими коммутаторами",
     "materialType": "lecture",
-    "description": "",
+    "description": "Зачем нужны магистральные каналы (trunk)? Как идентифицировать VLAN на магистральном канале?",
     "difficulty": 3,
     "duration": "PT0H33M",
     "tags": {

@@ -1,7 +1,7 @@
 {
     "title": "Настройка VLAN",
     "materialType": "lecture",
-    "description": "",
+    "description": "Сколько всего VLAN можно создать на коммутаторе? Как создать и удалить VLAN? Как назначить VLAN на порт коммутатора?",
     "difficulty": 3,
     "duration": "PT0H37M",
     "tags": {
