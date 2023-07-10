@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./04.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./04.01-inter-vlan-routing-operation/learn-metadata.json"
         },
@@ -42,10 +42,10 @@
             "$ref": "./04.05.01-lab-inter-vlan-routing-challenge/learn-metadata.json"
         },
         {
-            "$ref": "./04.05.04-quiz/learn-metadata.json"
+            "$ref": "./04.06-summary/learn-metadata.json"
         },
         {
-            "$ref": "./04.06-summary/learn-metadata.json"
+            "$ref": "./04.05.04-quiz/learn-metadata.json"
         }
     ]
 }
