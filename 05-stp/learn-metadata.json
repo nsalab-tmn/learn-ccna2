@@ -1,13 +1,13 @@
 {
-    "title": "STP",
+    "title": "Протокол оставного дерева (STP)",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./05.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./05.01-purpose-of-stp/learn-metadata.json"
         },
