@@ -1,5 +1,5 @@
 {
-    "title": "Маршрутизация между сетями VLAN",
+    "title": "Маршрутизация между VLAN",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
