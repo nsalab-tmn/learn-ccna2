@@ -204,7 +204,7 @@ MLS (config-if) # IPv6 address 2001:db8:acad:10::1/64
 
     ```
     MLS(config)# interface G0/2
-    MLS (config-if) # IPv6 address 2001:db8:acad:a::1/64
+    MLS(config-if) # IPv6 address 2001:db8:acad:a::1/64
     ```
 
 2. Используйте команду **show ipv6 route** для проверки подключенных IPv6-сетей.
