@@ -30,6 +30,9 @@
             "$ref": "./06.04.01-lab-implement-etherchannel/learn-metadata.json"
         },
         {
+            "$ref": "./06.04.02-lab-implement-etherchannel/learn-metadata.json"
+        },
+        {
             "$ref": "./06.05-summary/learn-metadata.json"
         },
         {
