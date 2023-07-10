@@ -1,5 +1,5 @@
 {
-    "title": "Базовая настройка устройств",
+    "title": "Базовая настройка сетевых устройств",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
