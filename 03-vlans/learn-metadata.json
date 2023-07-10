@@ -1,5 +1,5 @@
 {
-    "title": "Сети VLAN",
+    "title": "Виртуальные локальные сети (VLAN)",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
@@ -54,10 +54,10 @@
             "$ref": "./03.06.01-lab-implement-vlans-and-trunking/learn-metadata.json"
         },
         {
-            "$ref": "./03.06.04-quiz/learn-metadata.json"
+            "$ref": "./03.07-summary/learn-metadata.json"
         },
         {
-            "$ref": "./03.07-summary/learn-metadata.json"
+            "$ref": "./03.06.04-quiz/learn-metadata.json"
         }
     ]
 }
