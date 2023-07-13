@@ -1,7 +1,7 @@
 {
     "title": "Атака на таблицу MAC-адресов",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как осуществляется атака на таблицу MAC-адресов коммутатора и как ей противодействовать?",
     "difficulty": 3,
     "duration": "PT0H5M",
     "tags": {

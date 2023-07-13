@@ -1,7 +1,7 @@
 {
     "title": "Контроль доступа",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое концепция AAA? Чем отличаются друг от друга аутентификация, авторизация и учет?",
     "difficulty": 3,
     "duration": "PT0H9M",
     "tags": {
