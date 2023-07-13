@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./13.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./13.01-remote-site-wlan-configuration/learn-metadata.json"
         },
@@ -39,10 +39,10 @@
             "$ref": "./13.05.02-lab-wireless-technology-exploration-physical-mode/learn-metadata.json"
         },
         {
-            "$ref": "./13.05.04-quiz/learn-metadata.json"
+            "$ref": "./13.06-summary/learn-metadata.json"
         },
         {
-            "$ref": "./13.06-summary/learn-metadata.json"
+            "$ref": "./13.05.04-quiz/learn-metadata.json"
         }
     ]
 }
