@@ -1,5 +1,5 @@
 {
-    "title": "Отражение атак через DHCP",
+    "title": "Отражение атак на DHCP",
     "materialType": "lecture",
     "description": "Какие бывают атаки на протокол DHCP? Зачем нужно отслеживать сообщения DHCP?",
     "difficulty": 3,
