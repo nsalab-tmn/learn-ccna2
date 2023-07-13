@@ -1,5 +1,5 @@
 {
-    "title": "Конфигурация WLAN",
+    "title": "Настройка беспроводных локальных сетей",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
