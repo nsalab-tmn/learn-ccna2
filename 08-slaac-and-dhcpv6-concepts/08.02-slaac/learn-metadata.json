@@ -1,7 +1,7 @@
 {
-    "title": "SLAAC",
+    "title": "Автоматическая конфигурация IPv6-адресов без сохранения состояния (SLAAC)",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такео SLAAC в IPv6-сетях? Как генерируется идентификатор IPv6-интерфейса? Как работает обнаружение дублирующихся адресов?",
     "difficulty": 3,
     "duration": "PT0H11M",
     "tags": {
