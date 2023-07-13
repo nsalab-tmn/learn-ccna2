@@ -1,13 +1,13 @@
 {
-    "title": "Принципы работы WLAN",
+    "title": "Принципы работы беспроводных локальных сетей",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./12.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./12.01-introduction-to-wireless/learn-metadata.json"
         },
