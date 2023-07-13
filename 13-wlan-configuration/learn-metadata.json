@@ -32,9 +32,7 @@
         {
             "$ref": "./13.04.05-lab-troubleshoot-wlan-issues/learn-metadata.json"
         },
-        {
-            "$ref": "./13.05.01-lab-wlan-configuration/learn-metadata.json"
-        },
+
         {
             "$ref": "./13.05.02-lab-wireless-technology-exploration-physical-mode/learn-metadata.json"
         },
