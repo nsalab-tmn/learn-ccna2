@@ -1,7 +1,7 @@
 {
     "title": "Отражение атак на виртуальные локальные сети",
     "materialType": "lecture",
-    "description": "",
+    "description": "Как можно \"перепрыгнуть\" через VLAN? Что такое двойное тегирование?",
     "difficulty": 3,
     "duration": "PT0H3M",
     "tags": {

@@ -1,7 +1,7 @@
 {
     "title": "Обеспечение безопасности портов",
     "materialType": "lecture",
-    "description": "",
+    "description": "Зачем нужно защищать неиспользуемые порты и как это правильно делать?",
     "difficulty": 3,
     "duration": "PT0H34M",
     "tags": {

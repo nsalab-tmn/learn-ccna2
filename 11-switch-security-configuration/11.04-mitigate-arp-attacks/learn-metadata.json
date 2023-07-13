@@ -1,7 +1,7 @@
 {
     "title": "Отражение атак через ARP",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое динамический анализ ARP и как он помогает предотвратить подмену пары MAC- и IP-адреса?",
     "difficulty": 3,
     "duration": "PT0H5M",
     "tags": {

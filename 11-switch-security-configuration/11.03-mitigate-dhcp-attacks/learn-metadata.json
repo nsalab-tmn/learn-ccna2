@@ -1,7 +1,7 @@
 {
     "title": "Отражение атак через DHCP",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какие бывают атаки на протокол DHCP? Зачем нужно отслеживать сообщения DHCP?",
     "difficulty": 3,
     "duration": "PT0H6M",
     "tags": {
