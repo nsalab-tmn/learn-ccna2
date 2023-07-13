@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./08.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./08.01-ipv6-global-unicast-address-assigment/learn-metadata.json"
         },
