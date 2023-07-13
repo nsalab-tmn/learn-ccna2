@@ -4,10 +4,10 @@
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./11.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./11.01-implement-port-security/learn-metadata.json"
         },
@@ -30,10 +30,10 @@
             "$ref": "./11.06.01-lab-switch-security-configuration/learn-metadata.json"
         },
         {
-            "$ref": "./11.06.04-quiz/learn-metadata.json"
+            "$ref": "./11.07-summary/learn-metadata.json"
         },
         {
-            "$ref": "./11.07-summary/learn-metadata.json"
+            "$ref": "./11.06.04-quiz/learn-metadata.json"
         }
     ]
 }
