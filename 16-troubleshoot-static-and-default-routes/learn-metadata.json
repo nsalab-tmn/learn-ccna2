@@ -1,13 +1,13 @@
 {
-    "title": "Поиск и устранение неполадок, связанных со статическими маршрутами и маршрутами по умолчанию",
+    "title": "Поиск и устранение неисправностей в статической маршрутизации",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
     },
+    "description": {
+        "$ref": "./README.md"
+    },
     "materials": [
-        {
-            "$ref": "./16.00-introduction/learn-metadata.json"
-        },
         {
             "$ref": "./16.01-packet-processing-with-static-routes/learn-metadata.json"
         },
