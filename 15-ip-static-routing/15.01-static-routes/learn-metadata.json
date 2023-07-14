@@ -1,7 +1,7 @@
 {
     "title": "Статические маршруты",
     "materialType": "lecture",
-    "description": "",
+    "description": "Какими бывают типы статических маршрутов? Как настроить статический маршрут на маршрутизаторе?",
     "difficulty": 3,
     "duration": "PT0H10M",
     "tags": {

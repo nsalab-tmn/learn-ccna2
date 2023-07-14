@@ -1,7 +1,7 @@
 {
     "title": "Настройка статических маршрутов хостов",
     "materialType": "lecture",
-    "description": "",
+    "description": "Что такое \"узловой\" или \"хостовый\" статический маршрут и в каких случаях он нужен?",
     "difficulty": 3,
     "duration": "PT0H5M",
     "tags": {
