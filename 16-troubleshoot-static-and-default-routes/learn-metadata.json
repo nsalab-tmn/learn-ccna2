@@ -9,9 +9,6 @@
     },
     "materials": [
         {
-            "$ref": "./16.01-packet-processing-with-static-routes/learn-metadata.json"
-        },
-        {
             "$ref": "./16.01.02-packet-processing-with-static-routes-quiz/learn-metadata.json"
         },
         {
