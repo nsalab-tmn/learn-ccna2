@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как коммутаторы выбирают по какому пути направлять трафик, чтобы не возникало петель? Как работает протокол STP?",
     "difficulty": 3,
-    "duration": "PT0H22M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

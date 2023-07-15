@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие есть вариации протокола STP? Какие есть альтернативные способы избежать появления коммутационных петель?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
