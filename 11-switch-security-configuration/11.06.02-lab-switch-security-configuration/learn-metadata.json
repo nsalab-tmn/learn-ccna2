@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "**Цель лабораторной работы**: отработка комплексных навыков конфигурации безопасной локальной сети.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H37M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
