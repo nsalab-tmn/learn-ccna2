@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как настроить DHCP-сервер? Как проверить его работу? В каких случаях требуется ретрансляция DHCP-сообщений?",
     "difficulty": 3,
-    "duration": "PT0H34M",
+    "duration": "PT0H15M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
