@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "В чем преимущества беспроводных сетей? Какие бывают типы и стандарты беспроводных сетей?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

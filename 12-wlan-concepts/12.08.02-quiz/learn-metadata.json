@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Принципы работы беспроводных локальных сетей\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H20M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
