@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое \"плавающий\" статический маршрут и для чего он нужен? Как проверить его работу?",
     "difficulty": 3,
-    "duration": "PT0H8M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
