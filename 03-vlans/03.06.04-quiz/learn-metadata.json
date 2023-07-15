@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Виртуальные локальные сети (VLAN)\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

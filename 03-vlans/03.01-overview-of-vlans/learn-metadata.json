@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "В чем заключается приемущество использование VLAN? Какие бывают типы VLAN?",
     "difficulty": 3,
-    "duration": "PT0H22M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

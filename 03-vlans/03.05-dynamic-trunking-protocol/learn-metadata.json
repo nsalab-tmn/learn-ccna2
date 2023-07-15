@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Для чего нужен протокол DTP? Как происходит согласовние магистрального режима на интерфейсе?",
     "difficulty": 3,
-    "duration": "PT0H34M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
