@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие атаки на конечные устройства популярны сегодня? Какие устройства помогают повысить уровень безопасности локальной сети?",
     "difficulty": 3,
-    "duration": "PT0H8M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
