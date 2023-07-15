@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как проверять конфигурацию интерфейсов маршрутизатора и их состояние? Как проверять маршрутную информацию?",
     "difficulty": 3,
-    "duration": "PT0H29M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

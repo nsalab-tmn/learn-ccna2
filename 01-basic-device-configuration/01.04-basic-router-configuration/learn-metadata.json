@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие подготовить маршрутизатор к работе? Как настроить интерфейсы для топологии Dual-Stack? Что такое интерфейс типа \"петля\"?",
     "difficulty": 3,
-    "duration": "PT0H13M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
