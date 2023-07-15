@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как настроить маршрутизацию между VLAN на многоуровневом коммутаторе?",
     "difficulty": 3,
-    "duration": "PT0H45M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

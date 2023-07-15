@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие распространенные проблемы возникают при маршрутизации между VLAN? Как правильно искать и устранять такие неисправности?",
     "difficulty": 3,
-    "duration": "PT0H39M",
+    "duration": "PT0H16M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
