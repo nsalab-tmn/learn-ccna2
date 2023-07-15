@@ -2,7 +2,7 @@
     "title": "Экзамен по базовым концепциям коммутации",
     "description": "Проверьте свои знания по темам:\r\r* Базовая настройка сетевых устройств\r* Принципы коммутации\r* Виртуальные локальные сети (VLAN)\r* Маршрутизация между VLAN",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT1H45M",
     "materialType": "test-exam",
     "passingScore": 100,
     "questions": [
