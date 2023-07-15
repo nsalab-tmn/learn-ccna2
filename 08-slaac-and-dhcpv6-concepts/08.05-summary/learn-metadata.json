@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие типы адресов можно назначить с помощью SLAAC и DHCPv6? Как работают SLAAC и DHCPv6 и чем они отличаются? Как настроить маршрутизатор в качестве DHCPv6-сервера?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

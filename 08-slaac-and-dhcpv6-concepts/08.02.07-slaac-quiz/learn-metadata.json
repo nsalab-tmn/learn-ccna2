@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Автоматическая конфигурация IPv6-адресов без сохранения состояния (SLAAC)\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
