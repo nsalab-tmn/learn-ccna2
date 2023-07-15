@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое таблица MAC-адресов и для чего она нужна? Какие способы пересылки фреймов существуют на коммутаторах?",
     "difficulty": 3,
-    "duration": "PT0H13M",
+    "duration": "PT0H12M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
