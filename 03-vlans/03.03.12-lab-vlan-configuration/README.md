@@ -160,4 +160,4 @@ VLAN Name Status Ports
 
 - Ответьте на вопрос №4
 
-[Скачать файл Packet Tracer для локального запуска](./assets/3.3.12-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/3.3.12-lab.pka) -->
