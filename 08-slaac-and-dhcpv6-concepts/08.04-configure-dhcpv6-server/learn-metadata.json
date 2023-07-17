@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как настроить  маршрутизатор в качестве сервера DHCPv6 и как проверить его работу? Как настроить агент ретрансляции сообщений DHCPv6?",
     "difficulty": 3,
-    "duration": "PT0H26M",
+    "duration": "PT0H25M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

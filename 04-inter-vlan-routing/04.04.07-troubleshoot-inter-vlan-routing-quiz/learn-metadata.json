@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Тест на понимание темы: Поиск и устранение неполадок в маршрутизации между VLAN\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H5M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

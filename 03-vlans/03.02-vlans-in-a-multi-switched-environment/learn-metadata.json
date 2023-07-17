@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Зачем нужны магистральные каналы (trunk)? Как идентифицировать VLAN на магистральном канале?",
     "difficulty": 3,
-    "duration": "PT0H33M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

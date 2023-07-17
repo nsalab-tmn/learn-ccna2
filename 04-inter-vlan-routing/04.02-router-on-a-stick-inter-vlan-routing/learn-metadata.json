@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как настроить маршрутизацию между VLAN с помощью одного интерфейса маршрутизатора?",
     "difficulty": 3,
-    "duration": "PT1H11M",
+    "duration": "PT0H55M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

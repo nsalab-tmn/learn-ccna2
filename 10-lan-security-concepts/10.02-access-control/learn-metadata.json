@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое концепция AAA? Чем отличаются друг от друга аутентификация, авторизация и учет?",
     "difficulty": 3,
-    "duration": "PT0H9M",
+    "duration": "PT0H8M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

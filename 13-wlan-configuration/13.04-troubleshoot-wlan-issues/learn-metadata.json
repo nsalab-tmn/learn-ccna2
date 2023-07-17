@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие неисправности часто встречаются при настройке беспроводных сетей? Как искать и устранять такие неисправности?",
     "difficulty": 3,
-    "duration": "PT0H23M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

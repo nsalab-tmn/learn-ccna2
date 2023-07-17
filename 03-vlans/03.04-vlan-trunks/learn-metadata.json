@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Как настроить магистральный канал на коммутаторе и как проверить его работу?",
     "difficulty": 3,
-    "duration": "PT1H20M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

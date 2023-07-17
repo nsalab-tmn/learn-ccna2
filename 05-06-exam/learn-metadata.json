@@ -2,7 +2,7 @@
     "title": "Экзамен по избыточной коммутации",
     "description": "Проверьте свои знания по темам:\r\r* Протокол оставного дерева (STP)\r* Агрегация каналов с использованием EtherChannel",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT1H25M",
     "materialType": "test-exam",
     "passingScore": 100,
     "questions": [

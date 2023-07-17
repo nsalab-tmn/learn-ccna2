@@ -87,4 +87,4 @@
 
 2.  Перезапустите команду **show etherchannel summary**, чтобы убедиться, что все каналы EtherChannel настроены правильно.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/6.3.4-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/6.3.4-lab.pka) -->

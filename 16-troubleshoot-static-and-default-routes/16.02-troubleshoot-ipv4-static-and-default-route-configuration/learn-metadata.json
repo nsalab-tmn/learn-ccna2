@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Какие команды помогают эффективно проверять работу статических маршрутов?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

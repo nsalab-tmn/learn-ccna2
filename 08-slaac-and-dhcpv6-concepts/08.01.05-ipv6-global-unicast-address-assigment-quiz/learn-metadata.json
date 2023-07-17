@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Назначение глобальных IPv6-адресов\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H2M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

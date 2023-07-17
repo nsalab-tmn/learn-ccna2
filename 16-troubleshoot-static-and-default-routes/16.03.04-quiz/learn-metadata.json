@@ -3,7 +3,7 @@
     "materialType": "test",
     "description": "Проверьте свои знания по теме \"Поиск и устранение неисправностей в статической маршрутизации\"",
     "difficulty": 1,
-    "duration": "PT0H30M",
+    "duration": "PT0H16M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

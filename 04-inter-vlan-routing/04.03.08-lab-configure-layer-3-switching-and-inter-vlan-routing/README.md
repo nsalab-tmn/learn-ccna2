@@ -254,4 +254,4 @@ MLS (config-if) # IPv6 address 2001:db8:acad:10::1/64
 
 5. Из PC3 задайте команду **ping** внутри облака, 2001:db8:acad:a::2.
 
-[Скачать файл Packet Tracer для локального запуска](./assets/4.3.8-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/4.3.8-lab.pka) -->

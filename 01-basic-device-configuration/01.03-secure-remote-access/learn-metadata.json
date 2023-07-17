@@ -3,7 +3,7 @@
     "materialType": "lecture",
     "description": "Что такое SSH и чем он отличается от Telnet? Как настроить SSH для управления коммутатором?",
     "difficulty": 3,
-    "duration": "PT0H18M",
+    "duration": "PT0H8M",
     "tags": {
         "$ref": "../../material-tags.json"
     },

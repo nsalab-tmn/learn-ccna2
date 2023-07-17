@@ -214,4 +214,4 @@ DC1R5_SwitchA(config-if-range)# no shutdown
 
 Вопрос №25
 
-[Скачать файл Packet Tracer для локального запуска](./assets/9.3.4-lab.pka)
+<!-- [Скачать файл Packet Tracer для локального запуска](./assets/9.3.4-lab.pka) -->

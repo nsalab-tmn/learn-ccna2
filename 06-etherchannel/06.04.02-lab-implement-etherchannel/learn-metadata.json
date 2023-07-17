@@ -4,7 +4,7 @@
     "materialType": "lab",
     "description": "**Цель лабораторной работы**: отработка комплексных навыков по конфигурации EtherChannel.",
     "difficulty": 1,
-    "duration": "PT0H22M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
