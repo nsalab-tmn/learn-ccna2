@@ -2,7 +2,7 @@
     "title": "Работа в симуляторе: внедрение агрегации каналов EtherChannel (сценарий 1)",
     "shortName": "lab-6.4.1",
     "materialType": "lab",
-    "description": "**Цель лабораторной работы**: отработка комплексных навыков по конфигурации EtherChannel.",
+    "description": "Цель лабораторной работы: отработка комплексных навыков по конфигурации EtherChannel.",
     "difficulty": 1,
     "duration": "PT0H4M",
     "tags": {

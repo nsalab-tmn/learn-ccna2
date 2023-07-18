@@ -2,7 +2,7 @@
     "title": "Работа в симуляторе: реализация Port Security",
     "shortName": "lab-11.1.10",
     "materialType": "lab",
-    "description": "**Цель лабораторной работы**: отработка навыков, необходимых для реализации функции Port security.",
+    "description": "Цель лабораторной работы: отработка навыков, необходимых для реализации функции Port security.",
     "difficulty": 1,
     "duration": "PT0H13M",
     "tags": {
