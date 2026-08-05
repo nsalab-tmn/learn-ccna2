@@ -1121,7 +1121,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/7.png) Посмотрите на изображение. Сетевой администратор ввел команду `how etherchannel summary на коммутаторе S1. Какой вывод можно сделать?"
+            "question": "![](./assets/7.png) Посмотрите на изображение. Сетевой администратор ввел команду `show etherchannel summary` на коммутаторе S1. Какой вывод можно сделать?"
         },
         {
             "answerType": "singleChoice",
