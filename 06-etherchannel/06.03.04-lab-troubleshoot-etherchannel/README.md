@@ -30,7 +30,7 @@
 | 1 | S1: G0/1, G0/2<br>S2: G0/1, G0/2 | LACP active |
 | 2 | S2: G0/1, G0/2<br>S4: G0/1, G0/2 | LACP active |
 | 3 | S1: F0/23, F0/24<br>S2: F0/23, F0/24 | LACP active |
-| 4 | S3: F0/23, F0/24<br>С4: F0/23, F0/24 | LACP active |
+| 4 | S3: F0/23, F0/24<br>S4: F0/23, F0/24 | LACP active |
 | 5 | S1: F0/21, F0/22<br>С4: F0/21, F0/22 | LACP active |
 | 6 | S2: F0/21, F0/22<br>S3: F0/21, F0/22 | LACP active |
 
