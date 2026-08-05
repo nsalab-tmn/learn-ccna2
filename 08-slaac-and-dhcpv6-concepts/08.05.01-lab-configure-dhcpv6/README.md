@@ -15,13 +15,13 @@
 
 | **Устройство** | **Интерфейс** | **IPv6-адрес**           |
 |------------|-----------|----------------------|
-| R1         | G0/0/0    | 2001:db8:acad:2።1/64 |
+| R1         | G0/0/0    | 2001:db8:acad:2::1/64 |
 | R1         | G0/0/0    | fe80::1              |
-| R1         | G0/0/1    | 2001:db8:acad:1።1/64 |
+| R1         | G0/0/1    | 2001:db8:acad:1::1/64 |
 | R1         | G0/0/1    | fe80::1              |
-| R2         | G0/0/0    | 2001:db8:acad:2።2/64 |
+| R2         | G0/0/0    | 2001:db8:acad:2::2/64 |
 | R2         | G0/0      | fe80::2              |
-| R2         | G0/0/1    | 2001:db8:acad:3።1/64 |
+| R2         | G0/0/1    | 2001:db8:acad:3::1/64 |
 | R2         | G0/0/1    | fe80::1              |
 | PC-A       | NIC       | DHCP                 |
 | PC-B       | NIC       | DHCP                 |
@@ -126,10 +126,10 @@ Ethernet adapter Ethernet 2:
    Connection-specific DNS Suffix . : 
    IPv6 Address. . . . . . . . . . . : 2001:db8:acad: 1:5 c43:ee7c:2959:da68
    Temporary IPv6 Address. . . . . . : 2001:db8:acad: 1:3 c64:e4f 9:46 e 1:1 f23
-   Link-local IPv6-адрес. . . . .: fe80። 5c43:ee7c:2959:да 68% 6
+   Link-local IPv6-адрес. . . . .: fe80:: 5c43:ee7c:2959:да 68% 6
    IPv4-адрес. . . . . . . . . . . : 169.254.218.104
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
-   Default Gateway . . . . . . . . .: fe80።1%6
+   Default Gateway . . . . . . . . .: fe80::1%6
 ```
 
 Откуда взялась часть адреса с идентификатором хоста?
@@ -164,7 +164,7 @@ Ethernet adapter Ethernet0:
    Link-local IPv6-адрес. . . . . : fe80::5c43:ee7c:2959:da68%6(Preferred)
    IPv4 Address. . . . . . . . . . . : 169.254.218.104(Preferred)
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
-   Шлюз по умолчанию . . . . . . . . .: fe80።1%6
+   Шлюз по умолчанию . . . . . . . . .: fe80::1%6
    DHCPv6 IAID . . . . . . . . . . . : 50334761
    DHCPv6 Client DUID.  . . . . . . . : 00-01-00-01-24-F5-CE-A2-00-50-56-B3-63-6D
    DNS-серверы . . . . . . . . . . . : fec0:0:0:ffff::1%1
@@ -220,10 +220,10 @@ Ethernet adapter Ethernet0:
    Link-local IPv6-адрес. . . . . : fe80::5c43:ee7c:2959:da68%6(Preferred)
    IPv4 Address. . . . . . . . . . . : 169.254.218.104(Preferred)
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
-   Default Gateway . . . . . . . . .: fe80።1%6
+   Default Gateway . . . . . . . . .: fe80::1%6
    DHCPv6 IAID . . . . . . . . . . . : 50334761
    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-24-F5-CE-A2-00-50-56-B3-63-6D
-   DNS Servers . . . . . . . . . . . : 2001:db8:acad። 254
+   DNS Servers . . . . . . . . . . . : 2001:db8:acad:: 254
    NetBIOS over Tcpip. . . . . . . . : Enabled
    Список поиска DNS-суффиксов подключения: 
                                        STATELESS.com
@@ -279,7 +279,7 @@ Ethernet adapter Ethernet0:
    Link-local IPv6 address. . . . . : fe80::a0f3:3d39:f9fb:a020%6(Preferred) 
    IPv4 Address. . . . . . . . . . . : 169.254.160.32(Preferred) 
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
-   Default Gateway . . . . . . . . .: fe80።1%6
+   Default Gateway . . . . . . . . .: fe80::1%6
    DHCPv6 IAID . . . . . . . . . . . : 50334761
    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-24-F2-08-38-00-50-56-B3-7B-06
    DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
@@ -331,10 +331,10 @@ Ethernet adapter Ethernet0:
    Link-local IPv6-адрес. . . . . : fe80::a0f3:3d39:f9fb:a020%6(Preferred)
    IPv4 Address. . . . . . . . . . . : 169.254.160.32(Preferred)
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
-   Default Gateway . . . . . . . . .: fe80። 2% 6
+   Default Gateway . . . . . . . . .: fe80:: 2% 6
    DHCPv6 IAID . . . . . . . . . . . : 50334761
    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-24-F2-08-38-00-50-56-B3-7B-06
-   DNS Servers . . . . . . . . . . . : 2001:db8:acad። 254
+   DNS Servers . . . . . . . . . . . : 2001:db8:acad:: 254
    NetBIOS over Tcpip. . . . . . . . : Включен
    Список поиска DNS-суффиксов подключения:
                                        STATEFUL.com

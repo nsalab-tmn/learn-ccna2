@@ -48,7 +48,7 @@
                     "comment": "Серверы DCHPv4 отправляют два сообщения в процессе создания аренды: DHCPOFFER и DHCPACK"
                 },
                 {
-                    "answer": "DCHPOFFER",
+                    "answer": "DHCPOFFER",
                     "correct": true
                 },
                 {
