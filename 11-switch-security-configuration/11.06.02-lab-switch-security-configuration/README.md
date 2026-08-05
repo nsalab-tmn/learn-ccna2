@@ -339,7 +339,7 @@ C:\Users\Student> ipconfig /renew
 
 ```
 S2# show ip dhcp snooping binding 
-MacIp адресAddress Lease(sec) Type VLAN Interface
+MacAddress         IpAddress       Lease(sec) Type          VLAN Interface
 ------------------ --------------- ---------- ------------- ---- --------------------
 00:50:56:90:D0:8E 192.168.10.11 86213 dhcp-snooping 10 FastEthernet0/18
 Total number of bindings: 1
@@ -363,7 +363,7 @@ S1# show spanning-tree interface f0/6 detail
    BPDU: sent 128, received 0
 ```
 
-**Шаг 7. Проверьте наличие сквозного ⁪подключения**
+**Шаг 7. Проверьте наличие сквозного подключения**
 
 Проверьте **ping**-связь между всеми устройствами в таблице IP-адресации. В случае сбоя проверки связи может потребоваться отключить брандмауэр на хостах.
 
