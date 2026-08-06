@@ -238,7 +238,7 @@
                     "correct": false
                 },
                 {
-                    "answer": "vагистральный канал был настроен с помощью команды switchport nonegotiate",
+                    "answer": "Магистральный канал был настроен с помощью команды switchport nonegotiate",
                     "comment": "Поскольку PC-A и PC-B подключены к разным коммутаторам, трафик между ними должен проходить через магистральный канал. Магистральные каналы могут быть настроены так, чтобы через канал разрешалось прохождение только трафика определённых сетей VLAN. В этом случае для сети VLAN 60 (сеть VLAN, связанная с PC-A и PC-B) не разрешена передача трафика через магистральный канал, что отражается в результатах выполнения команды show interfaces trunk .",
                     "correct": false
                 },
@@ -274,7 +274,7 @@
                     "correct": false
                 }
             ],
-            "question": "Какой тип VLAN настраивается специально для сетевого трафика, такого как SSH, Telnet, HTTPS, HHTP и SNMP?"
+            "question": "Какой тип VLAN настраивается специально для сетевого трафика, такого как SSH, Telnet, HTTPS, HTTP и SNMP?"
         },
         {
             "answerType": "singleChoice",
@@ -1014,7 +1014,7 @@
                     "correct": false
                 },
                 {
-                    "answer": "спользовать VLAN 1 в качестве Native VLAN на магистральных портах",
+                    "answer": "использовать VLAN 1 в качестве Native VLAN на магистральных портах",
                     "comment": "Атаки перехода в сетях VLAN основаны на способности злоумышленника создать магистральный канал связи с коммутатором. Для предотвращения атак такого типа следует отключить DTP и настроить пользовательские порты в качестве статических портов доступа. Отключение протокола STP не позволяет избежать атак перехода в сетях VLAN.",
                     "correct": false
                 },
@@ -1255,7 +1255,7 @@
             "question": "Сопоставьте компоненты протокола динамической маршрутизации с соответствующими характеристиками (используются НЕ все варианты)."
         },
         {
-            "answerType": "multiChoice",
+            "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "::/0",
@@ -1286,7 +1286,7 @@
                 {
                     "answer": "Serial0/0/0",
                     "comment": "",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "answer": "GigabitEthernet0/0",
@@ -1301,13 +1301,13 @@
                 {
                     "answer": "ни один, пакет будет отброшен",
                     "comment": "",
-                    "correct": false
+                    "correct": true
                 }
             ],
             "question": "```\nGateway of last resort is not set.\n172.18.115.0/26 is variously subnetted, 7 subnets, 3 masks\nO 172.18.115.0/26 [110/10] via 172.18.39.1, 00:00:24, Serial0/0/0\nO 172.18.115.64/26 [110/20] via 172.18.39.6, 00:00:56, Serial 0/0/1\nO 172.18.115.128/26 [110/10] via 172.18.39.1, 00:00:24, Serial 0/0/0\nC 172.18.115.192/27 is directly connected, GigabitEthernet0/0\nL 172.18.115.193/27 is directly connected, GigabitEthernet0/0\nC 172.18.115.224/27 is directly connected, GigabitEthernet0/1\nL 172.18.115.225/27 is directly connected, GigabitEthernet0/1\n172.18.39.0/24 is variably subnetted, 4 subnets, 2 masks\nC 172.18.39.0/30 is directly connected, Serial0/0/0\nL 172.18.39.2/32 is directly connected, Serial0/0/0\nC 172.18.39.4/30 is directly connected, Serial0/0/1\nL 172.18.39.5/32 is directly connected, Serial0/0/1\nS 172.18.40.0/26 [1/0] via 172.18.39.1, 00:00:24, Serial0/0/0\nR1#\n``` Посмотрите на пример. Какой интерфейс будет интерфейсом выхода для пересылки пакета данных, который имеет IP-адрес назначения 172.18.109.152?"
         },
         {
-            "answerType": "singleChoice",
+            "answerType": "multiChoice",
             "answers": [
                 {
                     "answer": "пакеты пересылаются на основе информации из FIB и таблицы смежности",
@@ -1469,7 +1469,7 @@
                     "correct": false
                 }
             ],
-            "question": "Рассмотрим следующую команду: ip route 192.168.10.0 255.255.0 10.10.10.2 5. Что означает 5 в конце команды?"
+            "question": "Рассмотрим следующую команду: ip route 192.168.10.0 255.255.255.0 10.10.10.2 5. Что означает 5 в конце команды?"
         },
         {
             "answerType": "singleChoice",

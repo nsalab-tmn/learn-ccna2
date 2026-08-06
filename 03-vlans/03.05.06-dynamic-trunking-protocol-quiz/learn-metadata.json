@@ -75,7 +75,7 @@
                 {
                     "answer": "access",
                     "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable"
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
                 },
                 {
                     "answer": "trunk",
@@ -84,7 +84,7 @@
                 {
                     "answer": "dynamic auto",
                     "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с другим интерфейсом, только с интерфейсом, настроенным как trunk или dynamic desirable"
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
                 },
                 {
                     "answer": "dynamic desirable",

@@ -117,7 +117,7 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "⁪протокол ARP",
+                    "answer": "протокол ARP",
                     "correct": false,
                     "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
                 },

@@ -78,7 +78,7 @@ GigabitEthernet0/0/0 is up, line protocol is up
 Выходные данные отображают текущие команды **show running-config interface**, настроенные на указанном интерфейсе.
 
 ```
-R1 show running-config interface gigabitethernet 0/0/0
+R1# show running-config interface gigabitethernet 0/0/0
 Building configuration...
 Current configuration : 158 bytes
 !

@@ -60,7 +60,7 @@
 | 1                      | SWA - SWB  | G0/1 - G0/1                      | PAgP |
 | 1                      | SWA - SWB  | G0/2 - G0/2                      | PAgP |
 | 2                      | SWA - SWC  | F0/21 - F0/21                    | LACP |
-| 2                      | SWA - SWC  | F0/22 Кому PARTIALURLPLACEHOLDER | LACP |
+| 2                      | SWA - SWC  | F0/22 - F0/22                    | LACP |
 | 3                      | SWB - SWC  | F0/23 - F0/23                    | LACP |
 | 3                      | SWB - SWC  | F0/24 - F0/24                    | LACP |
 

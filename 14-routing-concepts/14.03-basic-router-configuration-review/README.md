@@ -101,16 +101,16 @@ R1#
 ```
 R1# show ipv6 interface brief
 GigabitEthernet0/0/0 [up/up]
-    FE80። 1:A
+    FE80::1:A
     2001:DB8:ACAD:1::1
 GigabitEthernet0/0/1 [up/up]
-    FE80። 1:B
+    FE80:: 1:B
     2001:DB8:ACAD:2::1
 Serial0/1/0 [administratively down/down]
     unassigned
 Serial0/1/1 [up/up]
-    FE80።1:C
-    2001:DB8:ACAD:3።1
+    FE80::1:C
+    2001:DB8:ACAD:3::1
 GigabitEthernet0 [down/down]
     unassigned
 R1#
@@ -232,7 +232,7 @@ GigabitEthernet0/0/0 is up, line protocol is up
     FF02::5
     FF02::6
     FF02::1:FF00:1
-    FF02።1:FF01:A
+    FF02::1:FF01:A
   MTU is 1500 bytes
   ICMP error messages limited to one every 100 milliseconds
   ICMP redirects are enabled

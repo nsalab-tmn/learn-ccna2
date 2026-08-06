@@ -153,7 +153,7 @@ Success rate is 0 percent (0/5)
 ```
 R1# ping  172.16.2.2
 Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 172.16.2.1, timeout is 2 seconds:
+Sending 5, 100-byte ICMP Echos to 172.16.2.2, timeout is 2 seconds:
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 3/3/4 ms
 ```
@@ -195,7 +195,8 @@ R2#
 Далее, запущенная конфигурация фактически раскрывает неверное **ip route** утверждение. Неверный маршрут удаляется, после чего указывается верный.
 
 ```
-R2# show running-config | include ip route ip route 172.16.3.0 255.255.255.0 192.168.1.1
+R2# show running-config | include ip route
+ip route 172.16.3.0 255.255.255.0 192.168.1.1
 ip route 192.168.2.0 255.255.255.0 192.168.1.1
 R2#
 R2# configure terminal
