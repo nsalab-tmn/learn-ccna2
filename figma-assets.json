@@ -1,0 +1,5133 @@
+{
+ "version": 1,
+ "course": "ccna2",
+ "figma": {
+  "fileKey": "3FtCg22qFubpLBPOetQU03"
+ },
+ "assets": [
+  {
+   "id": "ccna2-uulxhj6",
+   "kind": "illustration",
+   "display": {
+    "key": "1.1.5"
+   },
+   "figma": {
+    "nodeId": "4191:438497",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/assets/1.1.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.1.5.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-h7pge5z",
+   "kind": "illustration",
+   "display": {
+    "key": "1.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:438523",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.02-configure-switch-ports/assets/1.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.2.1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-gbbcnmw",
+   "kind": "illustration",
+   "display": {
+    "key": "1.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:438551",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.02-configure-switch-ports/assets/1.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.2.2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-3jfgdvh",
+   "kind": "illustration",
+   "display": {
+    "key": "1.2.8"
+   },
+   "figma": {
+    "nodeId": "4191:438580",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.02-configure-switch-ports/assets/1.2.8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.2.8.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-jk5v2x2",
+   "kind": "illustration",
+   "display": {
+    "key": "1.3.5"
+   },
+   "figma": {
+    "nodeId": "4191:438623",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.3.5.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-xvspvir",
+   "kind": "illustration",
+   "display": {
+    "key": "1.4.3"
+   },
+   "figma": {
+    "nodeId": "4191:438638",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.04-basic-router-configuration/assets/1.4.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.4.3.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-byjldvb",
+   "kind": "illustration",
+   "display": {
+    "key": "1.5.1"
+   },
+   "figma": {
+    "nodeId": "4191:438734",
+    "page": "CCNA2 · 01 basic-device-configuration"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.05-verify-directly-connected-networks/assets/1.5.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.5.1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-ewe7sxr",
+   "kind": "animation",
+   "display": {
+    "key": "2.1.1"
+   },
+   "figma": {
+    "nodeId": "4191:438831",
+    "page": "CCNA2 · 02 switching-concepts",
+    "motion": {
+     "sectionId": "4540:2",
+     "animId": "4585:3"
+    }
+   },
+   "out": {
+    "path": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.1.svg",
+    "format": "animated-svg",
+    "fallback": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.1.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-ewe7sxr/spec.json",
+   "provenance": {
+    "legacy": "2.1.1.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-yiazdcm",
+   "kind": "illustration",
+   "display": {
+    "key": "2.1.6"
+   },
+   "figma": {
+    "nodeId": "4191:438899",
+    "page": "CCNA2 · 02 switching-concepts"
+   },
+   "out": {
+    "path": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.1.6.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-2fkjq6f",
+   "kind": "illustration",
+   "display": {
+    "key": "2.1.7"
+   },
+   "figma": {
+    "nodeId": "4191:438940",
+    "page": "CCNA2 · 02 switching-concepts"
+   },
+   "out": {
+    "path": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.1.7.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-7uyqoo5",
+   "kind": "illustration",
+   "display": {
+    "key": "2.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:438982",
+    "page": "CCNA2 · 02 switching-concepts"
+   },
+   "out": {
+    "path": "02-switching-concepts/02.02-switching-domains/assets/2.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.2.1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-4eba6u4",
+   "kind": "animation",
+   "display": {
+    "key": "2.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:439038",
+    "page": "CCNA2 · 02 switching-concepts",
+    "motion": {
+     "sectionId": "4545:2",
+     "animId": "4545:4"
+    }
+   },
+   "out": {
+    "path": "02-switching-concepts/02.02-switching-domains/assets/2.2.2.svg",
+    "format": "animated-svg",
+    "fallback": "02-switching-concepts/02.02-switching-domains/assets/2.2.2.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-4eba6u4/spec.json",
+   "provenance": {
+    "legacy": "2.2.2.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-gjckk3j",
+   "kind": "illustration",
+   "display": {
+    "key": "3.1.1"
+   },
+   "figma": {
+    "nodeId": "4191:439096",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.01-overview-of-vlans/assets/3.1.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.1.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-rhvp6gp",
+   "kind": "illustration",
+   "display": {
+    "key": "3.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:439131",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.01-overview-of-vlans/assets/3.1.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.1.2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-izednrk",
+   "kind": "illustration",
+   "display": {
+    "key": "3.1.3"
+   },
+   "figma": {
+    "nodeId": "4191:439215",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.01-overview-of-vlans/assets/3.1.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.1.3.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-jw3jkgh",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:439269",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-kuyx7li",
+   "kind": "animation",
+   "display": {
+    "key": "3.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:439347",
+    "page": "CCNA2 · 03 vlans",
+    "motion": {
+     "sectionId": "4546:2",
+     "animId": "4586:3"
+    }
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.2.svg",
+    "format": "animated-svg",
+    "fallback": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.2.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-kuyx7li/spec.json",
+   "provenance": {
+    "legacy": "3.2.2.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-jznpo32",
+   "kind": "animation",
+   "display": {
+    "key": "3.2.3"
+   },
+   "figma": {
+    "nodeId": "4191:439426",
+    "page": "CCNA2 · 03 vlans",
+    "motion": {
+     "sectionId": "4539:2",
+     "animId": "4539:4"
+    }
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.3.svg",
+    "format": "animated-svg",
+    "fallback": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.3.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-jznpo32/spec.json",
+   "provenance": {
+    "legacy": "3.2.3.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-6iu5nvw",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.4"
+   },
+   "figma": {
+    "nodeId": "4191:439499",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.4.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-6jkjrez",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.5"
+   },
+   "figma": {
+    "nodeId": "4191:439549",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-kwlykkg",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.6"
+   },
+   "figma": {
+    "nodeId": "4191:439603",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.6.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-pfb6iow",
+   "kind": "illustration",
+   "display": {
+    "key": "3.3.3"
+   },
+   "figma": {
+    "nodeId": "4191:439657",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.03-vlan-configuration/assets/3.3.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.3.3.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-2daxro3",
+   "kind": "illustration",
+   "display": {
+    "key": "3.3.5"
+   },
+   "figma": {
+    "nodeId": "4191:439679",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.03-vlan-configuration/assets/3.3.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.3.5.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-ts7o63b",
+   "kind": "illustration",
+   "display": {
+    "key": "3.3.6"
+   },
+   "figma": {
+    "nodeId": "4191:439703",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.03-vlan-configuration/assets/3.3.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.3.6.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-oud4njx",
+   "kind": "illustration",
+   "display": {
+    "key": "3.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:439739",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.04-vlan-trunks/assets/3.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.4.2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-lr6b2on",
+   "kind": "illustration",
+   "display": {
+    "key": "4.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:439778",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.1.2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-2dfudhn",
+   "kind": "animation",
+   "display": {
+    "key": "4.1.3"
+   },
+   "figma": {
+    "nodeId": "4191:439821",
+    "page": "CCNA2 · 04 inter-vlan-routing",
+    "motion": {
+     "sectionId": "4575:2",
+     "animId": "4575:4"
+    }
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.3.svg",
+    "format": "animated-svg",
+    "fallback": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.3.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-2dfudhn/spec.json",
+   "provenance": {
+    "legacy": "4.1.3.png"
+   },
+   "notes": "· вариант 4   [APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-vcahq3g",
+   "kind": "illustration",
+   "display": {
+    "key": "4.1.4"
+   },
+   "figma": {
+    "nodeId": "4191:439879",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.1.4.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-rsehnxj",
+   "kind": "illustration",
+   "display": {
+    "key": "4.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:439919",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.02-router-on-a-stick-inter-vlan-routing/assets/4.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.2.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-l2cvxd5",
+   "kind": "illustration",
+   "display": {
+    "key": "4.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:439964",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.02-router-on-a-stick-inter-vlan-routing/assets/4.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.2.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-75tptbx",
+   "kind": "illustration",
+   "display": {
+    "key": "4.2.3"
+   },
+   "figma": {
+    "nodeId": "4191:440009",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.02-router-on-a-stick-inter-vlan-routing/assets/4.2.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.2.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-d25acmv",
+   "kind": "illustration",
+   "display": {
+    "key": "4.2.4"
+   },
+   "figma": {
+    "nodeId": "4191:440054",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.02-router-on-a-stick-inter-vlan-routing/assets/4.2.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.2.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-igo6fho",
+   "kind": "illustration",
+   "display": {
+    "key": "4.3.2"
+   },
+   "figma": {
+    "nodeId": "4191:440100",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.03-inter-vlan-routing-using-layer-3-switches/assets/4.3.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.3.2.svg"
+   },
+   "notes": "[svg в git · пара: текст]"
+  },
+  {
+   "id": "ccna2-qfpgxwy",
+   "kind": "illustration",
+   "display": {
+    "key": "4.3.6"
+   },
+   "figma": {
+    "nodeId": "4191:440130",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.03-inter-vlan-routing-using-layer-3-switches/assets/4.3.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.3.6.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-6uqeuht",
+   "kind": "illustration",
+   "display": {
+    "key": "4.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:440178",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.04-troubleshoot-inter-vlan-routing/assets/4.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.4.2.svg"
+   },
+   "notes": "[svg в git · один ассет на 4 сценария неполадок в разделе 04.04 · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-ac77fgv",
+   "kind": "animation",
+   "display": {
+    "key": "5.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:440465",
+    "page": "CCNA2 · 05 stp",
+    "motion": {
+     "sectionId": "4544:2",
+     "animId": "4544:4"
+    }
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.2.svg",
+    "format": "animated-svg",
+    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.2.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-ac77fgv/spec.json",
+   "provenance": {
+    "legacy": "5.1.2.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-itz24qh",
+   "kind": "animation",
+   "display": {
+    "key": "5.1.3"
+   },
+   "figma": {
+    "nodeId": "4191:440526",
+    "page": "CCNA2 · 05 stp",
+    "motion": {
+     "sectionId": "4542:440",
+     "animId": "4542:442"
+    }
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.3.svg",
+    "format": "animated-svg",
+    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.3.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-itz24qh/spec.json",
+   "provenance": {
+    "legacy": "5.1.3.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-celtotc",
+   "kind": "animation",
+   "display": {
+    "key": "5.1.5"
+   },
+   "figma": {
+    "nodeId": "4191:440592",
+    "page": "CCNA2 · 05 stp",
+    "motion": {
+     "sectionId": "4576:2",
+     "animId": "4588:3"
+    }
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.5.svg",
+    "format": "animated-svg",
+    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.5.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-celtotc/spec.json",
+   "provenance": {
+    "legacy": "5.1.5.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-awyyltz",
+   "kind": "animation",
+   "display": {
+    "key": "5.1.6"
+   },
+   "figma": {
+    "nodeId": "4191:440671",
+    "page": "CCNA2 · 05 stp",
+    "motion": {
+     "sectionId": "4578:2",
+     "animId": "4578:4"
+    }
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.6.svg",
+    "format": "animated-svg",
+    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.6.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-awyyltz/spec.json",
+   "provenance": {
+    "legacy": "5.1.6.png"
+   },
+   "notes": "[APNG в git (анимация) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-ptefkqu",
+   "kind": "illustration",
+   "display": {
+    "key": "5.1.7-1"
+   },
+   "figma": {
+    "nodeId": "4191:440730",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.7-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.1.7-1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-3pxy2ec",
+   "kind": "illustration",
+   "display": {
+    "key": "5.1.7-2"
+   },
+   "figma": {
+    "nodeId": "4191:440772",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.7-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.1.7-2.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-uwsr6gs",
+   "kind": "illustration",
+   "display": {
+    "key": "5.1.7-3"
+   },
+   "figma": {
+    "nodeId": "4191:440825",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.7-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.1.7-3.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-x73stda",
+   "kind": "illustration",
+   "display": {
+    "key": "5.1.7-4"
+   },
+   "figma": {
+    "nodeId": "4191:440881",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.7-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.1.7-4.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-rwmo3mu",
+   "kind": "illustration",
+   "display": {
+    "key": "5.1.7-5"
+   },
+   "figma": {
+    "nodeId": "4191:440931",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.01-purpose-of-stp/assets/5.1.7-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.1.7-5.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-axuqilu",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:440997",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.1.svg"
+   },
+   "notes": "[svg в git · пара: текст]"
+  },
+  {
+   "id": "ccna2-wlneila",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:441023",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.2.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-3hu2gz4",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.3"
+   },
+   "figma": {
+    "nodeId": "4191:441073",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.3.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-ihs7e3t",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.5"
+   },
+   "figma": {
+    "nodeId": "4191:441123",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.5.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-x4axdii",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.6-1"
+   },
+   "figma": {
+    "nodeId": "4191:441202",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.6-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.6-1.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-r5iybzb",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.6-2"
+   },
+   "figma": {
+    "nodeId": "4191:441262",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.6-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.6-2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-4atdkuj",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.6-3"
+   },
+   "figma": {
+    "nodeId": "4191:441329",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.6-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.6-3.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-m6wcg5g",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.7"
+   },
+   "figma": {
+    "nodeId": "4191:441389",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.7.svg"
+   },
+   "notes": "[svg в git · пара: ПРОВЕРИТЬ]"
+  },
+  {
+   "id": "ccna2-pemvt5l",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.8-1"
+   },
+   "figma": {
+    "nodeId": "4191:441451",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.8-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.8-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-cuh7o6t",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.8-2"
+   },
+   "figma": {
+    "nodeId": "4191:441528",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.8-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.8-2.svg"
+   },
+   "notes": "[svg в git · оригинал не найден · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-zuovhbt",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.8-3"
+   },
+   "figma": {
+    "nodeId": "4191:441562",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.8-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.8-3.svg"
+   },
+   "notes": "[svg в git · оригинал не найден · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-scnskhx",
+   "kind": "illustration",
+   "display": {
+    "key": "5.2.9"
+   },
+   "figma": {
+    "nodeId": "4191:441596",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.02-stp-operations/assets/5.2.9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.2.9.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-gsn3syd",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.3-1"
+   },
+   "figma": {
+    "nodeId": "4191:441624",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.3-1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-4jg6rrx",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.3-2"
+   },
+   "figma": {
+    "nodeId": "4191:441648",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.3-2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-4ssb3k5",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.3-3"
+   },
+   "figma": {
+    "nodeId": "4191:441670",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.3-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.3-3.svg"
+   },
+   "notes": "[svg в git · пара: текст]"
+  },
+  {
+   "id": "ccna2-dydcrgf",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.4"
+   },
+   "figma": {
+    "nodeId": "4191:441732",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.4.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-w5fa4jp",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.5-1"
+   },
+   "figma": {
+    "nodeId": "4191:441783",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.5-1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-dlsleiw",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.5-2"
+   },
+   "figma": {
+    "nodeId": "4191:441927",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.5-2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-etb65uc",
+   "kind": "illustration",
+   "display": {
+    "key": "5.3.5-3"
+   },
+   "figma": {
+    "nodeId": "4191:441975",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.03-evolution-of-stp/assets/5.3.5-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "5.3.5-3.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-7zi2oec",
+   "kind": "illustration",
+   "display": {
+    "key": "6.1.1"
+   },
+   "figma": {
+    "nodeId": "4191:442243",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.01-etherchannel-operation/assets/6.1.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.1.1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-jxwd3l5",
+   "kind": "illustration",
+   "display": {
+    "key": "6.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:442276",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.01-etherchannel-operation/assets/6.1.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.1.2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-fuhjsur",
+   "kind": "illustration",
+   "display": {
+    "key": "6.1.4"
+   },
+   "figma": {
+    "nodeId": "4191:442306",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.01-etherchannel-operation/assets/6.1.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.1.4.svg"
+   },
+   "notes": "[svg в git · пара: текст]"
+  },
+  {
+   "id": "ccna2-fyukqvf",
+   "kind": "illustration",
+   "display": {
+    "key": "6.1.7"
+   },
+   "figma": {
+    "nodeId": "4191:442507",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.01-etherchannel-operation/assets/6.1.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.1.7.svg"
+   }
+  },
+  {
+   "id": "ccna2-fkgifod",
+   "kind": "illustration",
+   "display": {
+    "key": "6.1.9"
+   },
+   "figma": {
+    "nodeId": "4191:442530",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.01-etherchannel-operation/assets/6.1.9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.1.9.svg"
+   }
+  },
+  {
+   "id": "ccna2-ly6ztfi",
+   "kind": "illustration",
+   "display": {
+    "key": "6.2.1-1"
+   },
+   "figma": {
+    "nodeId": "4191:442554",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.02-configure-etherchannel/assets/6.2.1-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.2.1-1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-lmyozsg",
+   "kind": "illustration",
+   "display": {
+    "key": "6.2.1-2"
+   },
+   "figma": {
+    "nodeId": "4191:442616",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.02-configure-etherchannel/assets/6.2.1-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.2.1-2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-vnw5nfa",
+   "kind": "illustration",
+   "display": {
+    "key": "6.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:442681",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.02-configure-etherchannel/assets/6.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.2.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-czdsr6k",
+   "kind": "illustration",
+   "display": {
+    "key": "6.3.1"
+   },
+   "figma": {
+    "nodeId": "4191:442702",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.03-verify-and-troubleshoot-etherchannel/assets/6.3.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "6.3.1.svg"
+   },
+   "notes": "[svg в git · дублирует 6.2.2 — тот же оригинал · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-dv2kock",
+   "kind": "illustration",
+   "display": {
+    "key": "6.3.3"
+   },
+   "figma": {
+    "nodeId": "4191:442723",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-UNPLACED/assets/6.3.3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · дублирует 6.2.2 — тот же оригинал · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-2kyv4ml",
+   "kind": "illustration",
+   "display": {
+    "key": "7.1.1"
+   },
+   "figma": {
+    "nodeId": "4191:442745",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.01-dhcpv4-concepts/assets/7.1.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.1.1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-wosyaq7",
+   "kind": "illustration",
+   "display": {
+    "key": "7.1.3-1"
+   },
+   "figma": {
+    "nodeId": "4191:442769",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.01-dhcpv4-concepts/assets/7.1.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.1.3-1.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-mtoikdb",
+   "kind": "illustration",
+   "display": {
+    "key": "7.1.3-2"
+   },
+   "figma": {
+    "nodeId": "4191:442794",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.01-dhcpv4-concepts/assets/7.1.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.1.3-2.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-ebk5gg7",
+   "kind": "illustration",
+   "display": {
+    "key": "7.1.3-3"
+   },
+   "figma": {
+    "nodeId": "4191:442826",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.01-dhcpv4-concepts/assets/7.1.3-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.1.3-3.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-hrf5dfz",
+   "kind": "illustration",
+   "display": {
+    "key": "7.1.3-4"
+   },
+   "figma": {
+    "nodeId": "4191:442866",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.01-dhcpv4-concepts/assets/7.1.3-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.1.3-4.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-gqoj7r2",
+   "kind": "illustration",
+   "display": {
+    "key": "7.1.4"
+   },
+   "figma": {
+    "nodeId": "4191:442913",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.01-dhcpv4-concepts/assets/7.1.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.1.4.svg"
+   },
+   "notes": "[svg в git · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-iw6tsnu",
+   "kind": "illustration",
+   "display": {
+    "key": "7.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:442944",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.02-configure-dhcpv4-server/assets/7.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.2.1.svg"
+   },
+   "notes": "[svg в git · один ассет на 3 ссылки в разделе 07.02 · пара: косвенно]"
+  },
+  {
+   "id": "ccna2-757vk2i",
+   "kind": "illustration",
+   "display": {
+    "key": "7.2.8"
+   },
+   "figma": {
+    "nodeId": "4191:442981",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.02-configure-dhcpv4-server/assets/7.2.8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.2.8.svg"
+   }
+  },
+  {
+   "id": "ccna2-p2gmfic",
+   "kind": "illustration",
+   "display": {
+    "key": "7.3.1"
+   },
+   "figma": {
+    "nodeId": "4191:443030",
+    "page": "CCNA2 · 07 dhcpv4"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.03-configure-dhcpv4-client/assets/7.3.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.3.1.svg"
+   },
+   "notes": "[svg в git · оригинал в файле не найден · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-roygne7",
+   "kind": "illustration",
+   "display": {
+    "key": "8.1.3"
+   },
+   "figma": {
+    "nodeId": "4191:443067",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.1.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-lamr65t",
+   "kind": "illustration",
+   "display": {
+    "key": "8.1.4"
+   },
+   "figma": {
+    "nodeId": "4191:443113",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.1.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-gusohnl",
+   "kind": "illustration",
+   "display": {
+    "key": "8.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:443183",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.02-slaac/assets/8.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.2.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-4saf7ua",
+   "kind": "illustration",
+   "display": {
+    "key": "8.2.3"
+   },
+   "figma": {
+    "nodeId": "4191:443206",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.02-slaac/assets/8.2.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.2.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-6nn6b3g",
+   "kind": "illustration",
+   "display": {
+    "key": "8.2.4"
+   },
+   "figma": {
+    "nodeId": "4191:443255",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.02-slaac/assets/8.2.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.2.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-l7npngz",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.1-1"
+   },
+   "figma": {
+    "nodeId": "4191:443292",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.1-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.1-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-pxnsmjf",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.1-2"
+   },
+   "figma": {
+    "nodeId": "4191:443325",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.1-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.1-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-b5n2nmb",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.1-3"
+   },
+   "figma": {
+    "nodeId": "4191:443364",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.1-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.1-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-vtjzkzd",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.1-4"
+   },
+   "figma": {
+    "nodeId": "4191:443414",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.1-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.1-4.svg"
+   }
+  },
+  {
+   "id": "ccna2-u6ts25e",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.1-5"
+   },
+   "figma": {
+    "nodeId": "4191:443470",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.1-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.1-5.svg"
+   }
+  },
+  {
+   "id": "ccna2-ht2mhhi",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.1-6"
+   },
+   "figma": {
+    "nodeId": "4191:443532",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.1-6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.1-6.svg"
+   }
+  },
+  {
+   "id": "ccna2-25cwws4",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.2"
+   },
+   "figma": {
+    "nodeId": "4191:443600",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-jp5hynp",
+   "kind": "illustration",
+   "display": {
+    "key": "8.3.4"
+   },
+   "figma": {
+    "nodeId": "4191:443627",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.03-dhcpv6/assets/8.3.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.3.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-wljk4yw",
+   "kind": "illustration",
+   "display": {
+    "key": "8.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:443683",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.4.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-6xy57de",
+   "kind": "illustration",
+   "display": {
+    "key": "8.4.3"
+   },
+   "figma": {
+    "nodeId": "4191:443711",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.4.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-irikrhh",
+   "kind": "illustration",
+   "display": {
+    "key": "8.4.4"
+   },
+   "figma": {
+    "nodeId": "4191:443739",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-UNPLACED/assets/8.4.4.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[svg в git · в README не вставлена — issue learn-ccna2#5 · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-c7y3c7d",
+   "kind": "illustration",
+   "display": {
+    "key": "8.4.5"
+   },
+   "figma": {
+    "nodeId": "4191:443767",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.4.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-y3jap6r",
+   "kind": "illustration",
+   "display": {
+    "key": "8.4.7"
+   },
+   "figma": {
+    "nodeId": "4191:443795",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.4.7.svg"
+   }
+  },
+  {
+   "id": "ccna2-dtjlnlg",
+   "kind": "illustration",
+   "display": {
+    "key": "9.1.1"
+   },
+   "figma": {
+    "nodeId": "4191:443824",
+    "page": "CCNA2 · 09 fhrp-concepts"
+   },
+   "out": {
+    "path": "09-fhrp-concepts/09.01-first-hop-redundancy-protocol/assets/9.1.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.1.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-ryq6e7v",
+   "kind": "illustration",
+   "display": {
+    "key": "9.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:443865",
+    "page": "CCNA2 · 09 fhrp-concepts"
+   },
+   "out": {
+    "path": "09-fhrp-concepts/09.01-first-hop-redundancy-protocol/assets/9.1.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.1.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-uxcqrcm",
+   "kind": "illustration",
+   "display": {
+    "key": "9.1.3"
+   },
+   "figma": {
+    "nodeId": "4191:443912",
+    "page": "CCNA2 · 09 fhrp-concepts"
+   },
+   "out": {
+    "path": "09-fhrp-concepts/09.01-first-hop-redundancy-protocol/assets/9.1.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.1.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-rb275g3",
+   "kind": "illustration",
+   "display": {
+    "key": "9.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:443969",
+    "page": "CCNA2 · 09 fhrp-concepts"
+   },
+   "out": {
+    "path": "09-fhrp-concepts/09.02-hsrp/assets/9.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "9.2.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-qetlwq4",
+   "kind": "illustration",
+   "display": {
+    "key": "10.1.2-1"
+   },
+   "figma": {
+    "nodeId": "4191:444020",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-UNPLACED/assets/10.1.2-1.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · одиночная иконка, в текст намеренно не вставлена · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-xwurloj",
+   "kind": "illustration",
+   "display": {
+    "key": "10.1.2-2"
+   },
+   "figma": {
+    "nodeId": "4191:444026",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-UNPLACED/assets/10.1.2-2.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · одиночная иконка, в текст намеренно не вставлена · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-x3rotzd",
+   "kind": "illustration",
+   "display": {
+    "key": "10.1.2-3"
+   },
+   "figma": {
+    "nodeId": "4191:444030",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-UNPLACED/assets/10.1.2-3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · одиночная иконка, в текст намеренно не вставлена · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-npwf2s5",
+   "kind": "illustration",
+   "display": {
+    "key": "10.1.3"
+   },
+   "figma": {
+    "nodeId": "4191:444067",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.01-endpoint-security/assets/10.1.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.1.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-wromn3t",
+   "kind": "illustration",
+   "display": {
+    "key": "10.1.4"
+   },
+   "figma": {
+    "nodeId": "4191:444146",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.01-endpoint-security/assets/10.1.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.1.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-57cy3es",
+   "kind": "illustration",
+   "display": {
+    "key": "10.1.5"
+   },
+   "figma": {
+    "nodeId": "4191:444233",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.01-endpoint-security/assets/10.1.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.1.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-6535vqk",
+   "kind": "illustration",
+   "display": {
+    "key": "10.2.3-1"
+   },
+   "figma": {
+    "nodeId": "4191:444303",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.2.3-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-bceg2vn",
+   "kind": "illustration",
+   "display": {
+    "key": "10.2.3-2"
+   },
+   "figma": {
+    "nodeId": "4191:444325",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.2.3-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-jwl6w5r",
+   "kind": "illustration",
+   "display": {
+    "key": "10.2.4"
+   },
+   "figma": {
+    "nodeId": "4191:444352",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.2.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-3emsyhj",
+   "kind": "illustration",
+   "display": {
+    "key": "10.2.5"
+   },
+   "figma": {
+    "nodeId": "4191:444377",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.2.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-b7jtoqy",
+   "kind": "illustration",
+   "display": {
+    "key": "10.2.6"
+   },
+   "figma": {
+    "nodeId": "4191:444394",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.2.6.svg"
+   }
+  },
+  {
+   "id": "ccna2-a6rphgl",
+   "kind": "illustration",
+   "display": {
+    "key": "10.3.1"
+   },
+   "figma": {
+    "nodeId": "4191:444411",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.03-layer-2-security-threats/assets/10.3.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.3.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-oaw3jwc",
+   "kind": "illustration",
+   "display": {
+    "key": "10.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:444473",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.04-mac-address-table-attack/assets/10.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.4.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-gfwcjnp",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.2"
+   },
+   "figma": {
+    "nodeId": "4191:444494",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-rzdg5x5",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.3-1"
+   },
+   "figma": {
+    "nodeId": "4191:444520",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.3-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-rum2kzr",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.3-2"
+   },
+   "figma": {
+    "nodeId": "4191:444551",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.3-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-32rcak6",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.3-3"
+   },
+   "figma": {
+    "nodeId": "4191:444580",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.3-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.3-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-ceirrtq",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.4"
+   },
+   "figma": {
+    "nodeId": "4191:444608",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-7q3albu",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.5-1"
+   },
+   "figma": {
+    "nodeId": "4191:444645",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.5-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-cdpwdhr",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.5-2"
+   },
+   "figma": {
+    "nodeId": "4191:444668",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.5-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-g6ldj6r",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.5-3"
+   },
+   "figma": {
+    "nodeId": "4191:444711",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.5-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.5-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-pdnjf2k",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.5-4"
+   },
+   "figma": {
+    "nodeId": "4191:444752",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.5-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.5-4.svg"
+   }
+  },
+  {
+   "id": "ccna2-zdgq5du",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.5-5"
+   },
+   "figma": {
+    "nodeId": "4191:444796",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.5-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.5-5.svg"
+   }
+  },
+  {
+   "id": "ccna2-sy7bl7s",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.7-1"
+   },
+   "figma": {
+    "nodeId": "4191:444831",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.7-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.7-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-ndbhclg",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.7-2"
+   },
+   "figma": {
+    "nodeId": "4191:444914",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.7-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.7-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-xkgfl4f",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.7-3"
+   },
+   "figma": {
+    "nodeId": "4191:445012",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.7-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.7-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-l7efvem",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.8"
+   },
+   "figma": {
+    "nodeId": "4191:445100",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.8.svg"
+   }
+  },
+  {
+   "id": "ccna2-bixl5zg",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.9-1"
+   },
+   "figma": {
+    "nodeId": "4191:445144",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.9-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.9-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-aeoix6v",
+   "kind": "illustration",
+   "display": {
+    "key": "10.5.9-2"
+   },
+   "figma": {
+    "nodeId": "4191:445195",
+    "page": "CCNA2 · 10 lan-security-concepts"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.9-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.9-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-jzcg7hj",
+   "kind": "illustration",
+   "display": {
+    "key": "11.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:445243",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.01-implement-port-security/assets/11.1.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.1.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-u3deofk",
+   "kind": "illustration",
+   "display": {
+    "key": "11.3.2"
+   },
+   "figma": {
+    "nodeId": "4191:445306",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.03-mitigate-dhcp-attacks/assets/11.3.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-niqtask",
+   "kind": "illustration",
+   "display": {
+    "key": "11.3.4"
+   },
+   "figma": {
+    "nodeId": "4191:445365",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.03-mitigate-dhcp-attacks/assets/11.3.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.3.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-ftll6qy",
+   "kind": "illustration",
+   "display": {
+    "key": "11.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:445397",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.04-mitigate-arp-attacks/assets/11.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.4.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-qn2sbft",
+   "kind": "illustration",
+   "display": {
+    "key": "11.5.1"
+   },
+   "figma": {
+    "nodeId": "4191:445441",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.05-mitigate-stp-attacks/assets/11.5.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "11.5.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-p3ctm5p",
+   "kind": "illustration",
+   "display": {
+    "key": "12.1.2-1"
+   },
+   "figma": {
+    "nodeId": "4191:445472",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.2-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.1.2-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-7itugau",
+   "kind": "illustration",
+   "display": {
+    "key": "12.1.2-2"
+   },
+   "figma": {
+    "nodeId": "4191:445502",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.2-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.1.2-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-nnzxxrd",
+   "kind": "illustration",
+   "display": {
+    "key": "12.1.2-3"
+   },
+   "figma": {
+    "nodeId": "4191:445525",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.2-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.1.2-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-5fzm2tw",
+   "kind": "illustration",
+   "display": {
+    "key": "12.1.2-4"
+   },
+   "figma": {
+    "nodeId": "4191:445538",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.2-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.1.2-4.svg"
+   }
+  },
+  {
+   "id": "ccna2-odrrn3f",
+   "kind": "illustration",
+   "display": {
+    "key": "12.1.5"
+   },
+   "figma": {
+    "nodeId": "4191:445567",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.1.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-2f57u44",
+   "kind": "illustration",
+   "display": {
+    "key": "12.2.5-1"
+   },
+   "figma": {
+    "nodeId": "4191:445649",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.2.5-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-grdzoou",
+   "kind": "illustration",
+   "display": {
+    "key": "12.2.5-2"
+   },
+   "figma": {
+    "nodeId": "4191:445674",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.2.5-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-b6dhamj",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.2-1"
+   },
+   "figma": {
+    "nodeId": "4191:445709",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.2-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.2-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-o6cvrsv",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.2-2"
+   },
+   "figma": {
+    "nodeId": "4191:445716",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.2-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.2-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-zofxwns",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.2-3"
+   },
+   "figma": {
+    "nodeId": "4191:445742",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.2-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.2-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-yx4zsnz",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.3-1"
+   },
+   "figma": {
+    "nodeId": "4191:445753",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.3-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-747cg7o",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.3-2"
+   },
+   "figma": {
+    "nodeId": "4191:445779",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.3-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-eawiwn6",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.4"
+   },
+   "figma": {
+    "nodeId": "4191:445823",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-w5bxqzo",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.6"
+   },
+   "figma": {
+    "nodeId": "4191:445850",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.6.svg"
+   }
+  },
+  {
+   "id": "ccna2-qs7gzo2",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.7-1"
+   },
+   "figma": {
+    "nodeId": "4191:445878",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.7-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.7-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-kchwjul",
+   "kind": "illustration",
+   "display": {
+    "key": "12.3.7-2"
+   },
+   "figma": {
+    "nodeId": "4191:445897",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.7-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.3.7-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-72zcdf4",
+   "kind": "illustration",
+   "display": {
+    "key": "12.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:445915",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.04-capwap-operation/assets/12.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.4.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-vu3hd45",
+   "kind": "illustration",
+   "display": {
+    "key": "12.4.4"
+   },
+   "figma": {
+    "nodeId": "4191:445952",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.04-capwap-operation/assets/12.4.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.4.4.svg"
+   }
+  },
+  {
+   "id": "ccna2-4htv2yx",
+   "kind": "illustration",
+   "display": {
+    "key": "12.4.5"
+   },
+   "figma": {
+    "nodeId": "4191:445978",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.04-capwap-operation/assets/12.4.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.4.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-so3knnh",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.1-1"
+   },
+   "figma": {
+    "nodeId": "4191:446024",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.1-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.1-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-vyhmiux",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.1-2"
+   },
+   "figma": {
+    "nodeId": "4191:446039",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.1-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.1-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-k5z6zgj",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.1-3"
+   },
+   "figma": {
+    "nodeId": "4191:446064",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.1-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.1-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-rx6zg5l",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.2-1"
+   },
+   "figma": {
+    "nodeId": "4191:446109",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.2-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.2-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-e3tdc6b",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.2-2"
+   },
+   "figma": {
+    "nodeId": "4191:446166",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.2-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.2-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-hozgm75",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.2-3"
+   },
+   "figma": {
+    "nodeId": "4191:446182",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.2-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.2-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-gphftlj",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.2-4"
+   },
+   "figma": {
+    "nodeId": "4191:446313",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.2-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.2-4.svg"
+   }
+  },
+  {
+   "id": "ccna2-ownqjea",
+   "kind": "illustration",
+   "display": {
+    "key": "12.5.3"
+   },
+   "figma": {
+    "nodeId": "4191:446329",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.05-channel-management/assets/12.5.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.5.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-k3wupgu",
+   "kind": "illustration",
+   "display": {
+    "key": "12.6.3"
+   },
+   "figma": {
+    "nodeId": "4191:446500",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.6.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-gpmnioe",
+   "kind": "illustration",
+   "display": {
+    "key": "12.6.5-1"
+   },
+   "figma": {
+    "nodeId": "4191:446603",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.6.5-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-dcxfgri",
+   "kind": "illustration",
+   "display": {
+    "key": "12.6.5-2"
+   },
+   "figma": {
+    "nodeId": "4191:446625",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.6.5-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-xzyap53",
+   "kind": "illustration",
+   "display": {
+    "key": "12.7.3"
+   },
+   "figma": {
+    "nodeId": "4191:446646",
+    "page": "CCNA2 · 12 wlan-concepts"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.7.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-z7kul23",
+   "kind": "illustration",
+   "display": {
+    "key": "13.1.2-2"
+   },
+   "figma": {
+    "nodeId": "4191:446686",
+    "page": "CCNA2 · 13 wlan-configuration"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.2-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.2-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-572awte",
+   "kind": "illustration",
+   "display": {
+    "key": "13.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:446720",
+    "page": "CCNA2 · 13 wlan-configuration"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-wf5weeu",
+   "kind": "illustration",
+   "display": {
+    "key": "13.3.2"
+   },
+   "figma": {
+    "nodeId": "4191:446759",
+    "page": "CCNA2 · 13 wlan-configuration"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-hxi7o2b",
+   "kind": "illustration",
+   "display": {
+    "key": "13.3.6"
+   },
+   "figma": {
+    "nodeId": "4191:446801",
+    "page": "CCNA2 · 13 wlan-configuration"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.6.svg"
+   }
+  },
+  {
+   "id": "ccna2-2fil2hl",
+   "kind": "illustration",
+   "display": {
+    "key": "13.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:446851",
+    "page": "CCNA2 · 13 wlan-configuration"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.4.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-pa2gwkf",
+   "kind": "illustration",
+   "display": {
+    "key": "13.4.3"
+   },
+   "figma": {
+    "nodeId": "4191:446882",
+    "page": "CCNA2 · 13 wlan-configuration"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.4.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-vazbtn3",
+   "kind": "animation",
+   "display": {
+    "key": "14.1.2"
+   },
+   "figma": {
+    "nodeId": "4191:446908",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4551:2",
+     "animId": "4589:3"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.01-path-determination/assets/14.1.2.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.01-path-determination/assets/14.1.2.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-vazbtn3/spec.json",
+   "provenance": {
+    "legacy": "14.1.2.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; оригинал и перерисовка — в зоне анимаций (x≈-26379) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-ixjqrg5",
+   "kind": "illustration",
+   "display": {
+    "key": "14.1.6"
+   },
+   "figma": {
+    "nodeId": "4191:446969",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.01-path-determination/assets/14.1.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.1.6.svg"
+   }
+  },
+  {
+   "id": "ccna2-r3asmmy",
+   "kind": "illustration",
+   "display": {
+    "key": "14.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:447118",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.2.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-5tvjuav",
+   "kind": "animation",
+   "display": {
+    "key": "14.2.2-1"
+   },
+   "figma": {
+    "nodeId": "4191:447204",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4538:2",
+     "animId": "4592:3"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-1.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-1.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-5tvjuav/spec.json",
+   "provenance": {
+    "legacy": "14.2.2-1.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-bwcpr4t",
+   "kind": "animation",
+   "display": {
+    "key": "14.2.2-2"
+   },
+   "figma": {
+    "nodeId": "4191:447309",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4547:2",
+     "animId": "4593:3"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-2.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-2.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-bwcpr4t/spec.json",
+   "provenance": {
+    "legacy": "14.2.2-2.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-pltuckr",
+   "kind": "animation",
+   "display": {
+    "key": "14.2.2-3"
+   },
+   "figma": {
+    "nodeId": "4191:447471",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4549:2",
+     "animId": "4594:3"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-3.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-3.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-pltuckr/spec.json",
+   "provenance": {
+    "legacy": "14.2.2-3.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций, был пиксельный дубль 930:97050 · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-7flcplk",
+   "kind": "animation",
+   "display": {
+    "key": "14.2.2-4"
+   },
+   "figma": {
+    "nodeId": "4191:447626",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4577:2",
+     "animId": "4595:3"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-4.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-4.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-7flcplk/spec.json",
+   "provenance": {
+    "legacy": "14.2.2-4.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-5ptumqz",
+   "kind": "illustration",
+   "display": {
+    "key": "14.2.3-1"
+   },
+   "figma": {
+    "nodeId": "4191:447790",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.2.3-1.svg"
+   }
+  },
+  {
+   "id": "ccna2-ldzs3lf",
+   "kind": "illustration",
+   "display": {
+    "key": "14.2.3-2"
+   },
+   "figma": {
+    "nodeId": "4191:447855",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.2.3-2.svg"
+   }
+  },
+  {
+   "id": "ccna2-qh6qvho",
+   "kind": "illustration",
+   "display": {
+    "key": "14.2.3-3"
+   },
+   "figma": {
+    "nodeId": "4191:447923",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.3-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.2.3-3.svg"
+   }
+  },
+  {
+   "id": "ccna2-lanqewo",
+   "kind": "illustration",
+   "display": {
+    "key": "14.3.1"
+   },
+   "figma": {
+    "nodeId": "4191:447992",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.03-basic-router-configuration-review/assets/14.3.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.3.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-vmyvypr",
+   "kind": "illustration",
+   "display": {
+    "key": "14.3.3"
+   },
+   "figma": {
+    "nodeId": "4191:448115",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-UNPLACED/assets/14.3.3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · копия 14.3.1 (отличия только в положении подписей); в git не выгружается · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-ssmdbry",
+   "kind": "illustration",
+   "display": {
+    "key": "14.3.4"
+   },
+   "figma": {
+    "nodeId": "4191:448234",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-UNPLACED/assets/14.3.4.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · копия 14.3.1 (отличия только в положении подписей); в git не выгружается · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-xd3lgos",
+   "kind": "illustration",
+   "display": {
+    "key": "14.4.1"
+   },
+   "figma": {
+    "nodeId": "4191:448354",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.04-ip-routing-table/assets/14.4.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-pifzlaw",
+   "kind": "illustration",
+   "display": {
+    "key": "14.4.3"
+   },
+   "figma": {
+    "nodeId": "4191:448473",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.04-ip-routing-table/assets/14.4.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-lletn5r",
+   "kind": "illustration",
+   "display": {
+    "key": "14.4.5"
+   },
+   "figma": {
+    "nodeId": "4191:448522",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.04-ip-routing-table/assets/14.4.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-3uyhd3n",
+   "kind": "illustration",
+   "display": {
+    "key": "14.4.6"
+   },
+   "figma": {
+    "nodeId": "4191:448605",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.04-ip-routing-table/assets/14.4.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.6.svg"
+   }
+  },
+  {
+   "id": "ccna2-s2ycrcr",
+   "kind": "illustration",
+   "display": {
+    "key": "14.4.7"
+   },
+   "figma": {
+    "nodeId": "4191:448679",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.04-ip-routing-table/assets/14.4.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.7.svg"
+   }
+  },
+  {
+   "id": "ccna2-mtzj36a",
+   "kind": "illustration",
+   "display": {
+    "key": "14.4.9"
+   },
+   "figma": {
+    "nodeId": "4191:448825",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.04-ip-routing-table/assets/14.4.9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.4.9.svg"
+   }
+  },
+  {
+   "id": "ccna2-b4o25q3",
+   "kind": "illustration",
+   "display": {
+    "key": "14.5.2"
+   },
+   "figma": {
+    "nodeId": "4191:448969",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "14.5.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-wvbb57a",
+   "kind": "animation",
+   "display": {
+    "key": "14.5.3"
+   },
+   "figma": {
+    "nodeId": "4191:449030",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4537:2",
+     "animId": "4543:3"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.3.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.3.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-wvbb57a/spec.json",
+   "provenance": {
+    "legacy": "14.5.3.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-lfthw2h",
+   "kind": "animation",
+   "display": {
+    "key": "14.5.4"
+   },
+   "figma": {
+    "nodeId": "4191:449055",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4542:2",
+     "animId": "4542:4"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.4.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.4.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-lfthw2h/spec.json",
+   "provenance": {
+    "legacy": "14.5.4.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-vu7a3oy",
+   "kind": "animation",
+   "display": {
+    "key": "14.5.5"
+   },
+   "figma": {
+    "nodeId": "4191:449093",
+    "page": "CCNA2 · 14 routing-concepts",
+    "motion": {
+     "sectionId": "4550:2",
+     "animId": "4550:4"
+    }
+   },
+   "out": {
+    "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.5.svg",
+    "format": "animated-svg",
+    "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.5.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-vu7a3oy/spec.json",
+   "provenance": {
+    "legacy": "14.5.5.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-zjgvyfz",
+   "kind": "illustration",
+   "display": {
+    "key": "15.1.5"
+   },
+   "figma": {
+    "nodeId": "4191:449176",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.01-static-routes/assets/15.1.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.1.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-gppugb3",
+   "kind": "illustration",
+   "display": {
+    "key": "15.2.1"
+   },
+   "figma": {
+    "nodeId": "4191:449239",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.02-configure-ip-static-routes/assets/15.2.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.2.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-dvolqqe",
+   "kind": "illustration",
+   "display": {
+    "key": "15.2.3"
+   },
+   "figma": {
+    "nodeId": "4191:449301",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-UNPLACED/assets/15.2.3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · в git не выгружена: в README вставлена 15.2.1 (same as 15.2.3) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-g4omdv4",
+   "kind": "illustration",
+   "display": {
+    "key": "15.2.5"
+   },
+   "figma": {
+    "nodeId": "4191:449363",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.02-configure-ip-static-routes/assets/15.2.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.2.5.svg"
+   }
+  },
+  {
+   "id": "ccna2-yzpaytr",
+   "kind": "illustration",
+   "display": {
+    "key": "15.2.6"
+   },
+   "figma": {
+    "nodeId": "4191:449423",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.02-configure-ip-static-routes/assets/15.2.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.2.6.svg"
+   }
+  },
+  {
+   "id": "ccna2-djrv3rz",
+   "kind": "illustration",
+   "display": {
+    "key": "15.2.7"
+   },
+   "figma": {
+    "nodeId": "4191:449455",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-UNPLACED/assets/15.2.7.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · в git не выгружена: в README вставлена 15.2.1 (same as 15.2.7) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-gxbsjkf",
+   "kind": "illustration",
+   "display": {
+    "key": "15.3.1"
+   },
+   "figma": {
+    "nodeId": "4191:449518",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.03-configure-ip-default-static-routes/assets/15.3.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.3.1.svg"
+   }
+  },
+  {
+   "id": "ccna2-s4jw4o5",
+   "kind": "illustration",
+   "display": {
+    "key": "15.3.2"
+   },
+   "figma": {
+    "nodeId": "4191:449558",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-UNPLACED/assets/15.3.2.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · в git не выгружена: в README вставлена 15.3.3 (same as 15.3.2, dce is useless) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-2ump4qp",
+   "kind": "illustration",
+   "display": {
+    "key": "15.3.3"
+   },
+   "figma": {
+    "nodeId": "4191:449622",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.03-configure-ip-default-static-routes/assets/15.3.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.3.3.svg"
+   }
+  },
+  {
+   "id": "ccna2-y3gmvk5",
+   "kind": "illustration",
+   "display": {
+    "key": "15.4.1"
+   },
+   "figma": {
+    "nodeId": "4191:449685",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.04-configure-floating-static-routes/assets/15.4.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.4.1.svg"
+   },
+   "notes": "[svg в git · ошибка: оба интерфейса Филиала подписаны S0/1/1 — issue learn-ccna2#7 · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-htekvfb",
+   "kind": "illustration",
+   "display": {
+    "key": "15.4.2"
+   },
+   "figma": {
+    "nodeId": "4191:449733",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.04-configure-floating-static-routes/assets/15.4.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.4.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-ljfpgmf",
+   "kind": "illustration",
+   "display": {
+    "key": "15.4.3"
+   },
+   "figma": {
+    "nodeId": "4191:449802",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-UNPLACED/assets/15.4.3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · в git не выгружена: в README вставлена 15.4.2 (same as 15.4.3) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-yl2c5pg",
+   "kind": "illustration",
+   "display": {
+    "key": "15.5.2"
+   },
+   "figma": {
+    "nodeId": "4191:449872",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.05-configure-static-host-routes/assets/15.5.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "15.5.2.svg"
+   },
+   "notes": "[svg в git · ошибка: адреса 200.165.200.238/27 и 192.51.100.0/30 вместо 209.165.200.238/27 и 198.51.100.0/30 — issue learn-ccna2#7 · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-ushanxw",
+   "kind": "illustration",
+   "display": {
+    "key": "15.5.3"
+   },
+   "figma": {
+    "nodeId": "4191:449903",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-UNPLACED/assets/15.5.3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · в git не выгружена: в README вставлена 15.5.2 (same as 15.5.3) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-tiqr6cj",
+   "kind": "animation",
+   "display": {
+    "key": "16.1.1"
+   },
+   "figma": {
+    "nodeId": "4191:449936",
+    "page": "CCNA2 · 16 troubleshoot-static-and-default-routes",
+    "motion": {
+     "sectionId": "4548:2",
+     "animId": "4590:3"
+    }
+   },
+   "out": {
+    "path": "16-troubleshoot-static-and-default-routes/16.02-troubleshoot-ipv4-static-and-default-route-configuration/assets/16.1.1.svg",
+    "format": "animated-svg",
+    "fallback": "16-troubleshoot-static-and-default-routes/16.02-troubleshoot-ipv4-static-and-default-route-configuration/assets/16.1.1.png"
+   },
+   "status": "pending",
+   "spec": "animations/ccna2-tiqr6cj/spec.json",
+   "provenance": {
+    "legacy": "16.1.1.png"
+   },
+   "notes": "[APNG в git (анимация) · APNG; оригинал и перерисовка — в зоне анимаций (x≈-26379) · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-7jnjw6e",
+   "kind": "illustration",
+   "display": {
+    "key": "16.2.2"
+   },
+   "figma": {
+    "nodeId": "4191:449995",
+    "page": "CCNA2 · 16 troubleshoot-static-and-default-routes"
+   },
+   "out": {
+    "path": "16-troubleshoot-static-and-default-routes/16.02-troubleshoot-ipv4-static-and-default-route-configuration/assets/16.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "16.2.2.svg"
+   }
+  },
+  {
+   "id": "ccna2-hdqnzsh",
+   "kind": "illustration",
+   "display": {
+    "key": "16.2.3"
+   },
+   "figma": {
+    "nodeId": "4191:450044",
+    "page": "CCNA2 · 16 troubleshoot-static-and-default-routes"
+   },
+   "out": {
+    "path": "16-UNPLACED/assets/16.2.3.svg",
+    "format": "svg"
+   },
+   "status": "orphan",
+   "notes": "[нет в git · в git не выгружена (в README вставлена 16.2.2, same as 16.2.3); в перерисовке левый узел подписан PC2 вместо PC1 · пара: закреплена]"
+  },
+  {
+   "id": "ccna2-zxfbh6x",
+   "kind": "native",
+   "display": {
+    "key": "1.1.3"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/assets/1.1.3.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-hogtbh5",
+   "kind": "native",
+   "display": {
+    "key": "1.3.1"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-sgwsmzp",
+   "kind": "native",
+   "display": {
+    "key": "1.3.2"
+   },
+   "out": {
+    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-24ydbhg",
+   "kind": "native",
+   "display": {
+    "key": "7.3.3"
+   },
+   "out": {
+    "path": "07-dhcpv4/07.03-configure-dhcpv4-client/assets/7.3.3.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-vzvxiad",
+   "kind": "native",
+   "display": {
+    "key": "8.1.1-1"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-22bg3na",
+   "kind": "native",
+   "display": {
+    "key": "8.1.1-2"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-ohmgjha",
+   "kind": "native",
+   "display": {
+    "key": "10.1.1"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.01-endpoint-security/assets/10.1.1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-rqnt64r",
+   "kind": "native",
+   "display": {
+    "key": "10.2.2"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-xcipdwf",
+   "kind": "native",
+   "display": {
+    "key": "10.5.10"
+   },
+   "out": {
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.10.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-espzyao",
+   "kind": "native",
+   "display": {
+    "key": "12.1.1"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.1.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-ndskmzn",
+   "kind": "native",
+   "display": {
+    "key": "12.2.2"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.2.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-mchj5qx",
+   "kind": "native",
+   "display": {
+    "key": "12.2.3"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.3.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-wrs5sh3",
+   "kind": "native",
+   "display": {
+    "key": "12.2.4"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.4.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-cdyqm6x",
+   "kind": "native",
+   "display": {
+    "key": "12.6.4"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.4.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-27phqmb",
+   "kind": "native",
+   "display": {
+    "key": "12.7.2-1"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-on35ynb",
+   "kind": "native",
+   "display": {
+    "key": "12.7.2-2"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-vdp5yfi",
+   "kind": "native",
+   "display": {
+    "key": "12.7.5"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.5.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-4lyepeq",
+   "kind": "native",
+   "display": {
+    "key": "12.7.6"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.6.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-swrj7k3",
+   "kind": "native",
+   "display": {
+    "key": "12.7.7"
+   },
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.7.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-f7gzukq",
+   "kind": "native",
+   "display": {
+    "key": "13.1.2-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.2-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-aaddirv",
+   "kind": "native",
+   "display": {
+    "key": "13.1.3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.3.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-h2ma3gz",
+   "kind": "native",
+   "display": {
+    "key": "13.1.4-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-1.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-7em3x3d",
+   "kind": "native",
+   "display": {
+    "key": "13.1.4-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-2.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-gzusope",
+   "kind": "native",
+   "display": {
+    "key": "13.1.4-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-3.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-vwszqcz",
+   "kind": "native",
+   "display": {
+    "key": "13.1.4-4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-4.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-x2rrjlr",
+   "kind": "native",
+   "display": {
+    "key": "13.1.4-5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-5.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-tvtxnq4",
+   "kind": "native",
+   "display": {
+    "key": "13.1.4-6"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-6.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-yqea2s2",
+   "kind": "native",
+   "display": {
+    "key": "13.1.5-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-1.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-pbhi26r",
+   "kind": "native",
+   "display": {
+    "key": "13.1.5-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-2.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-mc5ksd5",
+   "kind": "native",
+   "display": {
+    "key": "13.1.5-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-3.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-urys7ks",
+   "kind": "native",
+   "display": {
+    "key": "13.1.5-4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-4.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-khy5kcn",
+   "kind": "native",
+   "display": {
+    "key": "13.1.5-5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-5.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-l5zzyrc",
+   "kind": "native",
+   "display": {
+    "key": "13.1.5-6"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-6.jpeg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-4fbge46",
+   "kind": "native",
+   "display": {
+    "key": "13.1.6"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.6.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-twi4nmg",
+   "kind": "native",
+   "display": {
+    "key": "13.1.7"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.7.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-hmpls6f",
+   "kind": "native",
+   "display": {
+    "key": "13.1.8"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.8.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-o4w7who",
+   "kind": "native",
+   "display": {
+    "key": "13.1.9"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.9.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-o57otdh",
+   "kind": "native",
+   "display": {
+    "key": "13.2.3-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-x3g6fjt",
+   "kind": "native",
+   "display": {
+    "key": "13.2.3-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-vrpox6i",
+   "kind": "native",
+   "display": {
+    "key": "13.2.4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.4.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-ehpufl5",
+   "kind": "native",
+   "display": {
+    "key": "13.2.5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.5.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-b3qhq2s",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-543u5cp",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-jbdgdye",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-3.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-igaahnm",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-4.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-nixexlm",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-5.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-6leva43",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-6"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-6.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-2rb53d3",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-7"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-7.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-3ukquhl",
+   "kind": "native",
+   "display": {
+    "key": "13.2.6-8"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-8.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-kizdwf4",
+   "kind": "native",
+   "display": {
+    "key": "13.3.3-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-1.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-7iwxofr",
+   "kind": "native",
+   "display": {
+    "key": "13.3.3-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-2.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-abhq7bl",
+   "kind": "native",
+   "display": {
+    "key": "13.3.4-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-1.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-kf4l7iv",
+   "kind": "native",
+   "display": {
+    "key": "13.3.4-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-2.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-tfordvx",
+   "kind": "native",
+   "display": {
+    "key": "13.3.4-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-3.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-vxky4zg",
+   "kind": "native",
+   "display": {
+    "key": "13.3.7-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-1.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-whna47d",
+   "kind": "native",
+   "display": {
+    "key": "13.3.7-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-2.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-7yz54z3",
+   "kind": "native",
+   "display": {
+    "key": "13.3.7-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-3.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-q6vpotn",
+   "kind": "native",
+   "display": {
+    "key": "13.3.7-4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-4.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-pgjvfxp",
+   "kind": "native",
+   "display": {
+    "key": "13.3.7-5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-5.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-4mu7gag",
+   "kind": "native",
+   "display": {
+    "key": "13.3.7-6"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-6.jpg",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-ywelc3y",
+   "kind": "native",
+   "display": {
+    "key": "13.3.9-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-af4q2oy",
+   "kind": "native",
+   "display": {
+    "key": "13.3.9-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-mfhfd2v",
+   "kind": "native",
+   "display": {
+    "key": "13.3.9-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-3.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-blxapmv",
+   "kind": "native",
+   "display": {
+    "key": "13.3.9-4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-4.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-c54fbce",
+   "kind": "native",
+   "display": {
+    "key": "13.3.9-5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-5.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-vfaxihk",
+   "kind": "native",
+   "display": {
+    "key": "13.3.11-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-lifdcb6",
+   "kind": "native",
+   "display": {
+    "key": "13.3.11-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-wfb2ebn",
+   "kind": "native",
+   "display": {
+    "key": "13.3.11-3"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-3.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-xq4tgaa",
+   "kind": "native",
+   "display": {
+    "key": "13.3.11-4"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-4.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-4g3r6dq",
+   "kind": "native",
+   "display": {
+    "key": "13.3.11-5"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-5.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-2tjgb2b",
+   "kind": "native",
+   "display": {
+    "key": "13.3.11-6"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-6.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-cwdugsn",
+   "kind": "native",
+   "display": {
+    "key": "13.4.4-1"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.4-1.png",
+    "format": "native"
+   },
+   "status": "manual"
+  },
+  {
+   "id": "ccna2-xp2jz4k",
+   "kind": "native",
+   "display": {
+    "key": "13.4.4-2"
+   },
+   "out": {
+    "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.4-2.png",
+    "format": "native"
+   },
+   "status": "manual"
+  }
+ ]
+}
