@@ -1981,11 +1981,14 @@
     "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
    },
    "out": {
-    "path": "08-UNPLACED/assets/8.4.4.svg",
+    "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.4.svg",
     "format": "svg"
    },
-   "status": "orphan",
-   "notes": "[svg в git · в README не вставлена — issue learn-ccna2#5 · пара: закреплена]"
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.4.4.svg"
+   },
+   "notes": "[svg в git · вставлена в README блока 8.4.4 (issue learn-ccna2#5) · пара: закреплена]"
   },
   {
    "id": "ccna2-c7y3c7d",
