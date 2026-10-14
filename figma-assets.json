@@ -201,6 +201,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-ewe7sxr/spec.json",
+   "tracks": "animations/ccna2-ewe7sxr/tracks.json",
    "provenance": {
     "legacy": "2.1.1.png"
    },
@@ -302,6 +303,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-4eba6u4/spec.json",
+   "tracks": "animations/ccna2-4eba6u4/tracks.json",
    "provenance": {
     "legacy": "2.2.2.png"
    },
@@ -427,6 +429,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-kuyx7li/spec.json",
+   "tracks": "animations/ccna2-kuyx7li/tracks.json",
    "provenance": {
     "legacy": "3.2.2.png"
    },
@@ -453,6 +456,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-jznpo32/spec.json",
+   "tracks": "animations/ccna2-jznpo32/tracks.json",
    "provenance": {
     "legacy": "3.2.3.png"
    },
@@ -678,6 +682,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-2dfudhn/spec.json",
+   "tracks": "animations/ccna2-2dfudhn/tracks.json",
    "provenance": {
     "legacy": "4.1.3.png"
    },
@@ -900,6 +905,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-ac77fgv/spec.json",
+   "tracks": "animations/ccna2-ac77fgv/tracks.json",
    "provenance": {
     "legacy": "5.1.2.png"
    },
@@ -926,6 +932,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-itz24qh/spec.json",
+   "tracks": "animations/ccna2-itz24qh/tracks.json",
    "provenance": {
     "legacy": "5.1.3.png"
    },
@@ -952,6 +959,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-celtotc/spec.json",
+   "tracks": "animations/ccna2-celtotc/tracks.json",
    "provenance": {
     "legacy": "5.1.5.png"
    },
@@ -978,6 +986,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-awyyltz/spec.json",
+   "tracks": "animations/ccna2-awyyltz/tracks.json",
    "provenance": {
     "legacy": "5.1.6.png"
    },
@@ -2416,11 +2425,14 @@
     "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
    },
    "out": {
-    "path": "08-UNPLACED/assets/8.4.4.svg",
+    "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.4.svg",
     "format": "svg"
    },
-   "status": "orphan",
-   "notes": "[svg в git · в README не вставлена — issue learn-ccna2#5 · пара: закреплена]"
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.4.4.svg"
+   },
+   "notes": "[svg в git · вставлена в README блока 8.4.4 (issue learn-ccna2#5) · пара: закреплена]"
   },
   {
    "id": "ccna2-c7y3c7d",
@@ -4270,6 +4282,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-vazbtn3/spec.json",
+   "tracks": "animations/ccna2-vazbtn3/tracks.json",
    "provenance": {
     "legacy": "14.1.2.png"
    },
@@ -4344,6 +4357,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-5tvjuav/spec.json",
+   "tracks": "animations/ccna2-5tvjuav/tracks.json",
    "provenance": {
     "legacy": "14.2.2-1.png"
    },
@@ -4370,6 +4384,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-bwcpr4t/spec.json",
+   "tracks": "animations/ccna2-bwcpr4t/tracks.json",
    "provenance": {
     "legacy": "14.2.2-2.png"
    },
@@ -4396,6 +4411,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-pltuckr/spec.json",
+   "tracks": "animations/ccna2-pltuckr/tracks.json",
    "provenance": {
     "legacy": "14.2.2-3.png"
    },
@@ -4422,6 +4438,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-7flcplk/spec.json",
+   "tracks": "animations/ccna2-7flcplk/tracks.json",
    "provenance": {
     "legacy": "14.2.2-4.png"
    },
@@ -4746,6 +4763,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-wvbb57a/spec.json",
+   "tracks": "animations/ccna2-wvbb57a/tracks.json",
    "provenance": {
     "legacy": "14.5.3.png"
    },
@@ -4772,6 +4790,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-lfthw2h/spec.json",
+   "tracks": "animations/ccna2-lfthw2h/tracks.json",
    "provenance": {
     "legacy": "14.5.4.png"
    },
@@ -4798,6 +4817,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-vu7a3oy/spec.json",
+   "tracks": "animations/ccna2-vu7a3oy/tracks.json",
    "provenance": {
     "legacy": "14.5.5.png"
    },
@@ -5127,6 +5147,7 @@
    },
    "status": "pending",
    "spec": "animations/ccna2-tiqr6cj/spec.json",
+   "tracks": "animations/ccna2-tiqr6cj/tracks.json",
    "provenance": {
     "legacy": "16.1.1.png"
    },
