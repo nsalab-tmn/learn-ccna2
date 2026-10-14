@@ -199,11 +199,18 @@
     "format": "animated-svg",
     "fallback": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-ewe7sxr/spec.json",
    "tracks": "animations/ccna2-ewe7sxr/tracks.json",
    "provenance": {
-    "legacy": "2.1.1.png"
+    "legacy": "2.1.1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "8e7301b5b94984362df9f9baf7826ed35eaf203b45dbe18cb39fa9c2b4bd443a",
+     "specSha256": "24281947141c597afc384c35b21e0c7eea700804227acfe0768f523c65991fbf",
+     "tracksSha256": "05c45d853d452fab21d1c53aba700665b9c2cd85623997b4bc5cf240003b3849"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -301,11 +308,18 @@
     "format": "animated-svg",
     "fallback": "02-switching-concepts/02.02-switching-domains/assets/2.2.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-4eba6u4/spec.json",
    "tracks": "animations/ccna2-4eba6u4/tracks.json",
    "provenance": {
-    "legacy": "2.2.2.png"
+    "legacy": "2.2.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "c5460b4bcdc3541a94211d80a07032ad1d241dd1addc5954b06d1ab0299414f1",
+     "specSha256": "b5b6d302ed31a3e0e8c7e0c05e2a346d9b9f0074d535b34db3a348bc5c940ad2",
+     "tracksSha256": "b6ac872ce291075e13eaf262fd039ea22b80cbe95023dc9ba18b29f0be653ac4"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -427,11 +441,18 @@
     "format": "animated-svg",
     "fallback": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-kuyx7li/spec.json",
    "tracks": "animations/ccna2-kuyx7li/tracks.json",
    "provenance": {
-    "legacy": "3.2.2.png"
+    "legacy": "3.2.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "5ed7f2f51467ec3018b2bbad251f08de0b93307ea39120c7e6337aea2e910369",
+     "specSha256": "5ba196cadbd8fec96be099301e53d722ceeacdc90c8481ea29462d759e563d7e",
+     "tracksSha256": "2112789e42df91749961299c320c779906b7aa222527788e5d3eb272c873c65a"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -454,11 +475,18 @@
     "format": "animated-svg",
     "fallback": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-jznpo32/spec.json",
    "tracks": "animations/ccna2-jznpo32/tracks.json",
    "provenance": {
-    "legacy": "3.2.3.png"
+    "legacy": "3.2.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "bd42362981fee7854e7c66903f10df2b784f59dfabf6676a7ddc617fb5732b45",
+     "specSha256": "c1b16d0c1d3690cd8c6668c0dde3480af369739c135c6e54fbc7e27e1a78e2f1",
+     "tracksSha256": "43fd3980e120aebb9d87d52d68415510bfedb47f9e021b38a18c7a83e5dacfc1"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -680,11 +708,18 @@
     "format": "animated-svg",
     "fallback": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-2dfudhn/spec.json",
    "tracks": "animations/ccna2-2dfudhn/tracks.json",
    "provenance": {
-    "legacy": "4.1.3.png"
+    "legacy": "4.1.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "f836cd4fb04285f658cd36498119f695dafda1d6ae24ac9557626f0dd6541c70",
+     "specSha256": "ce7a96f83ed28b33a9fae7946c7ed1a558f1a904d936137b24881247c15bafd0",
+     "tracksSha256": "c760d48b1896e9c4314820a1c3cbb649bf42d734a0b78b5529d9407aa7dee940"
+    }
    },
    "notes": "· вариант 4   [APNG в git (анимация) · пара: закреплена]"
   },
@@ -903,11 +938,18 @@
     "format": "animated-svg",
     "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-ac77fgv/spec.json",
    "tracks": "animations/ccna2-ac77fgv/tracks.json",
    "provenance": {
-    "legacy": "5.1.2.png"
+    "legacy": "5.1.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "6529a0eddb1ae73b33fc3307781bd26729cd7fea1a35dd97851b8ff65c1606c9",
+     "specSha256": "4486e6ed163e59d9bd63b96dc693b09d071b96d15c902752b48d6aa9456fab0c",
+     "tracksSha256": "d1955138a9b5bde816f97cac7c1e72f0a7bcdb3c0363ca7a442d4cfb29845514"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -930,11 +972,18 @@
     "format": "animated-svg",
     "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-itz24qh/spec.json",
    "tracks": "animations/ccna2-itz24qh/tracks.json",
    "provenance": {
-    "legacy": "5.1.3.png"
+    "legacy": "5.1.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "ca5e13ec4c0e451a6e7ea1c7b48811209082817bbdd5b4c75856e46d7fd85a06",
+     "specSha256": "fba8b2a7df6f0d0e5b20261e397b930abc3f65e0128c407546eaeeaf667f888c",
+     "tracksSha256": "80189fae574c0583d0b1a89e157d300aba58828114af7dc820ba164b9215eb78"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -957,11 +1006,18 @@
     "format": "animated-svg",
     "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.5.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-celtotc/spec.json",
    "tracks": "animations/ccna2-celtotc/tracks.json",
    "provenance": {
-    "legacy": "5.1.5.png"
+    "legacy": "5.1.5.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "4ec952e9aa83430acf85617e907e229442f5acefc6b8b5d85cd5e32db5ab55a1",
+     "specSha256": "056308d8a08556ca60e2740669f06bc2d9ee266b541a11b02abfe1c35b489dd0",
+     "tracksSha256": "1a9b2c39c9d737c10945cd1521b3634b3639fb2abe10e20202c8759f93f26800"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -984,11 +1040,18 @@
     "format": "animated-svg",
     "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.6.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-awyyltz/spec.json",
    "tracks": "animations/ccna2-awyyltz/tracks.json",
    "provenance": {
-    "legacy": "5.1.6.png"
+    "legacy": "5.1.6.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "8832653a8b6bde158e2827937e596c69b3bd22cdfeba9bddf7d5ccb4ad00277e",
+     "specSha256": "4f58fc81c3997dfd0a8ce4b63220a471e7a71276978a3881b4713d5cc4a21f12",
+     "tracksSha256": "d7918fa3cb0de7156ce790901710c8515c369ca8c87d79ce80fbb6457eaaf491"
+    }
    },
    "notes": "[APNG в git (анимация) · пара: закреплена]"
   },
@@ -4280,11 +4343,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.01-path-determination/assets/14.1.2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-vazbtn3/spec.json",
    "tracks": "animations/ccna2-vazbtn3/tracks.json",
    "provenance": {
-    "legacy": "14.1.2.png"
+    "legacy": "14.1.2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "009fc6c618c185636d0a723ad6d70b8fd64064cc9f2d5959a96c9ce0d699c7a2",
+     "specSha256": "9a02c6da2b2434d72877c3650ddf7ebf774054650b31a69c6a5a1bd3c02cf9e3",
+     "tracksSha256": "8460256678bb9388d6bba045424fbd892cb497ce9fb1feda3d9f64374abd5445"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; оригинал и перерисовка — в зоне анимаций (x≈-26379) · пара: закреплена]"
   },
@@ -4355,11 +4425,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-5tvjuav/spec.json",
    "tracks": "animations/ccna2-5tvjuav/tracks.json",
    "provenance": {
-    "legacy": "14.2.2-1.png"
+    "legacy": "14.2.2-1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "8f9b738d7ea6f4e6fb4d37ae12891fcaff80939ac29f6f471e073e38760b96ef",
+     "specSha256": "725353bfab5362b1ed66322e95b17514db95e41c5604353fd4255db8f91dbb65",
+     "tracksSha256": "2936f0f37b84f8afe8442d8e145f0cea90f5a5a1e94dafc97df761ebe65d63cb"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
   },
@@ -4382,11 +4459,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-2.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-bwcpr4t/spec.json",
    "tracks": "animations/ccna2-bwcpr4t/tracks.json",
    "provenance": {
-    "legacy": "14.2.2-2.png"
+    "legacy": "14.2.2-2.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "d7ce9185a888b2a6e6843b8aa310acbbff9e933875901bce33d4f94d4f104e0d",
+     "specSha256": "736bfd637d3b4b113370d020b241bf2e8ad9c51a91641a52a8c104b8c370c527",
+     "tracksSha256": "147fa4a42c4215df3e67dc1c206c288b6d5f82d5775727e5f52eb40fdfbceacf"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
   },
@@ -4409,11 +4493,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-pltuckr/spec.json",
    "tracks": "animations/ccna2-pltuckr/tracks.json",
    "provenance": {
-    "legacy": "14.2.2-3.png"
+    "legacy": "14.2.2-3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "a15c15a01fd9fc15140fda95251e442b4d3b117740f70562af6a2f0623feb1e9",
+     "specSha256": "a57fc9885934ae4d8f36720b70b76569efaae8ecb08f69fbc845dda3d88c063c",
+     "tracksSha256": "bbd5291676627e00053f044225d5e8f3e56e850a1e179cb7820228a92d50c804"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций, был пиксельный дубль 930:97050 · пара: закреплена]"
   },
@@ -4436,11 +4527,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-4.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-7flcplk/spec.json",
    "tracks": "animations/ccna2-7flcplk/tracks.json",
    "provenance": {
-    "legacy": "14.2.2-4.png"
+    "legacy": "14.2.2-4.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "ede7535f82742d000dbccbc9816f072ac13d06a2b038a5edd651330d8463e4cc",
+     "specSha256": "efb22743f0617b55000d05a8556b99cf7964a6af740ecb48a7b3c5b6fa60594e",
+     "tracksSha256": "6020c777aec56a492494162e51bc6e66bfe8e9a8dd193b06b006f663479bcd8f"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
   },
@@ -4761,11 +4859,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.3.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-wvbb57a/spec.json",
    "tracks": "animations/ccna2-wvbb57a/tracks.json",
    "provenance": {
-    "legacy": "14.5.3.png"
+    "legacy": "14.5.3.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "ad2da4c3877aeeb4ee9a0661faa8459df8f143b4e3d7ecb0dc534a3397c0cb0a",
+     "specSha256": "43b698fb4217f50c482b16885812e316c4f244bdbcb6ec6a12e397dbacbe4743",
+     "tracksSha256": "d383aa25a81da274403fd068a863eb8a6f8b3690ad6f3ffe72bdbca9361cc2b2"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
   },
@@ -4788,11 +4893,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.4.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-lfthw2h/spec.json",
    "tracks": "animations/ccna2-lfthw2h/tracks.json",
    "provenance": {
-    "legacy": "14.5.4.png"
+    "legacy": "14.5.4.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "e16ab868a528c610719fde77d07669f5c8942f7c563abc2b7d595a3817258ad8",
+     "specSha256": "c3da917370c01b4613c9279b912591fd868fb720b8205bfb0fbf8f0003dbc28a",
+     "tracksSha256": "88cd67983d65c3ac9f62be70e2acde52e2e4c26bee5424381f3c16ff287abe13"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
   },
@@ -4815,11 +4927,18 @@
     "format": "animated-svg",
     "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.5.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-vu7a3oy/spec.json",
    "tracks": "animations/ccna2-vu7a3oy/tracks.json",
    "provenance": {
-    "legacy": "14.5.5.png"
+    "legacy": "14.5.5.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "f0779b9556c01f174edbc6a566aa5ad29ee2649259652d6d68c50c3cde131d62",
+     "specSha256": "615b050b400e42b9fbd66eb5b94e6a54a1f6feb9ca82af972ea61ee46a131818",
+     "tracksSha256": "a35b0923c1a9ede9135950f039ed30bee136d5e5b82e100773eca273ca66a72c"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; зона анимаций · пара: закреплена]"
   },
@@ -5124,7 +5243,14 @@
     "format": "svg"
    },
    "status": "orphan",
-   "notes": "[нет в git · в git не выгружена: в README вставлена 15.5.2 (same as 15.5.3) · пара: закреплена]"
+   "notes": "[нет в git · в git не выгружена: в README вставлена 15.5.2 (same as 15.5.3) · пара: закреплена]",
+   "provenance": {
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "f238996ca028fd1f9a425f00ee942744452f3f7fd6694c6ac40eee8220f76be1"
+    }
+   }
   },
   {
    "id": "ccna2-tiqr6cj",
@@ -5145,11 +5271,18 @@
     "format": "animated-svg",
     "fallback": "16-troubleshoot-static-and-default-routes/16.02-troubleshoot-ipv4-static-and-default-route-configuration/assets/16.1.1.png"
    },
-   "status": "pending",
+   "status": "synced",
    "spec": "animations/ccna2-tiqr6cj/spec.json",
    "tracks": "animations/ccna2-tiqr6cj/tracks.json",
    "provenance": {
-    "legacy": "16.1.1.png"
+    "legacy": "16.1.1.png",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "d4d042dcc8f10b3aac1a6b68db0e82e9d33d121c5fb220ebf0993547119697ed",
+     "specSha256": "ad3efca764fb53574de8dc168c7322af2f92b79a5f6b5efa6b004fbb84d4f5f3",
+     "tracksSha256": "b44ed23edae4b7108b50f6e5dacf408717a14fdb35809726f0e1cb23a43f7d0c"
+    }
    },
    "notes": "[APNG в git (анимация) · APNG; оригинал и перерисовка — в зоне анимаций (x≈-26379) · пара: закреплена]"
   },
@@ -5192,7 +5325,14 @@
     "format": "svg"
    },
    "status": "orphan",
-   "notes": "[нет в git · в git не выгружена (в README вставлена 16.2.2, same as 16.2.3); в перерисовке левый узел подписан PC2 вместо PC1 · пара: закреплена]"
+   "notes": "[нет в git · в git не выгружена (в README вставлена 16.2.2, same as 16.2.3); в перерисовке левый узел подписан PC2 вместо PC1 · пара: закреплена]",
+   "provenance": {
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:20:08Z",
+     "sha256": "dd0766e7dff4fdd4a1e7ba385405b26e1a08c1e935e0a076c9a9973f25127881"
+    }
+   }
   },
   {
    "id": "ccna2-zxfbh6x",
