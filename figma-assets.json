@@ -2491,9 +2491,14 @@
     "path": "08-slaac-and-dhcpv6-concepts/08.04-configure-dhcpv6-server/assets/8.4.4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "8.4.4.svg"
+    "legacy": "8.4.4.svg",
+    "synced": {
+     "figmaVersion": "2409982897191414088",
+     "at": "2026-10-14T00:40:50Z",
+     "sha256": "4dde327805a339626dc36f3104234ae2e0a452e7b4ea099d4de1b45d500b088c"
+    }
    },
    "notes": "[svg в git · вставлена в README блока 8.4.4 (issue learn-ccna2#5) · пара: закреплена]"
   },
