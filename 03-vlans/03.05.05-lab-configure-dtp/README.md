@@ -9,7 +9,20 @@
 
 ## Топология
 
-![](./assets/topology.png)
+Лабораторная работа выполняется в симуляторе. Схема с устройствами и кабелями открывается по адресу лаборатории; нажмите на устройство на схеме, чтобы открыть его консоль.
+
+| Кабель | Устройство | Порт | Устройство | Порт |
+|---|---|---|---|---|
+| Медный | S1 | G0/1 | S2 | G0/1 |
+| Медный | S1 | G0/2 | S3 | G0/2 |
+| Медный | PC1 | F0 | S2 | F0/1 |
+| Медный | PC2 | F0 | S2 | F0/12 |
+| Медный | PC3 | F0 | S2 | F0/20 |
+| Медный | PC4 | F0 | S3 | F0/20 |
+| Медный | PC5 | F0 | S3 | F0/11 |
+| Медный | PC6 | F0 | S3 | F0/2 |
+
+Коммутаторы S1–S3 соединены портами G0/1 и G0/2. На коммутаторах уже созданы сети VLAN 99 (Management) и 999 (Native) и настроены адреса SVI VLAN 99. ПК уже настроены по таблице адресации.
 
 ## Таблица адресации
 
@@ -47,21 +60,21 @@
 
     ```
     S1# show vlan brief
-    VLAN Name Status Ports
+    VLAN Name                             Status    Ports
     ---- -------------------------------- --------- -------------------------------
-    1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4
+    1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
                                                     Fa0/5, Fa0/6, Fa0/7, Fa0/8
                                                     Fa0/9, Fa0/10, Fa0/11, Fa0/12
                                                     Fa0/13, Fa0/14, Fa0/15, Fa0/16
                                                     Fa0/17, Fa0/18, Fa0/19, Fa0/20
                                                     Fa0/21, Fa0/22, Fa0/23, Fa0/24
-                                                    Gig0/1, Gig0/2
-    99 Management active
-    999 Native active
-    1002 fddi-default active
-    1003 token-ring-default active
-    1004 fddinet-default active
-    1005 trnet-default active
+                                                    Gi0/1, Gi0/2
+    99   Management                       active
+    999  Native                           active
+    1002 fddi-default                     act/unsup
+    1003 token-ring-default               act/unsup
+    1004 fddinet-default                  act/unsup
+    1005 trnet-default                    act/unsup
     ```
 
 2.  Повторите шаг 1.1 на **S2** и **S3**.
@@ -90,6 +103,8 @@
     - Ответьте на вопрос №2
 
 4.  Повторите предыдущие шаги, чтобы создать дополнительные VLAN на S3.
+
+5.  Создайте те же сети VLAN 10, 20 и 30 на **S1**. Коммутатор S1 стоит между S2 и S3: трафик сети VLAN, которой нет на S1, через него не пройдёт.
 
 ### Часть 3. Назначение сетей VLAN портам
 
@@ -151,30 +166,31 @@ DTP управляет магистральными каналами между 
     ```
     S1# show dtp
     Global DTP information
-    Sending DTP Hello packets every 30 seconds
-    Dynamic Trunk timeout is 300 seconds
-    1 interfaces using DTP
+    	Sending DTP Hello packets every 30 seconds
+    	Dynamic Trunk timeout is 300 seconds
+    	25 interfaces using DTP
     ```
 
 5. Убедитесь, что режим транкинга включен на всех коммутаторах, выполнив команду **show interfaces trunk**.
 
     ```
     S1# show interfaces trunk
-    Port Mode Encapsulation Status Native vlan
-    Gig0/1 desirable n-802.1q trunking 1
-    Gig0/2 on 802.1q trunking 1
 
-    Port Vlans allowed on trunk
-    Gig0/1 1-1005
-    Gig0/2 1-1005
+    Port        Mode             Encapsulation  Status        Native vlan
+    Gi0/1       desirable        n-802.1q       trunking      1
+    Gi0/2       on               802.1q         trunking      1
 
-    Port Vlans allowed and active in management domain
-    Gig0/1 1,99,999
-    Gig0/2 1,99,999
-    
-    Port Vlans in spanning tree forwarding state and not pruned
-    Gig0/1 1,99,999
-    Gig0/2 1,99,999
+    Port        Vlans allowed on trunk
+    Gi0/1       1-4094
+    Gi0/2       1-4094
+
+    Port        Vlans allowed and active in management domain
+    Gi0/1       1,10,20,30,99,999,1002-1005
+    Gi0/2       1,10,20,30,99,999,1002-1005
+
+    Port        Vlans in spanning tree forwarding state and not pruned
+    Gi0/1       1,10,20,30,99,999,1002-1005
+    Gi0/2       1,10,20,30,99,999,1002-1005
     ```
 
     - Ответьте на вопрос №6
