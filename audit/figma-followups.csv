@@ -1,0 +1,5 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+12-wlan-concepts/12.02-components-of-wlans/README.md,assets/12.2.4.png,продуктовое фото двух точек доступа Cisco Meraki Go с логотипами «cisco»,библиотечные точки доступа без бренда,изображение; текст 12.2.4 исправлен в этом PR
+13-wlan-configuration/13.01-remote-site-wlan-configuration/README.md,assets/13.1.2-1.png,продуктовое фото Cisco Meraki MX64W,библиотечный беспроводной маршрутизатор без бренда,изображение; подпись над фото заменена на «Беспроводной маршрутизатор» в этом PR
+13-wlan-configuration/13.01-remote-site-wlan-configuration/README.md,assets/13.1.8.png,макет страницы «Настройка QoS» в стиле GUI Netgear,нейтральный компонент «веб-интерфейс SOHO-роутера»,изображение; текст 13.1.8 исправлен в этом PR
+13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/README.md,assets/13.2.4.png,"GUI WLC, Access Point View: модель «AIR-AP1815I-…»",нейтральный макет без модели AP,изображение; текст 13.2.4 (Cisco Aironet 1815i) исправлен в этом PR

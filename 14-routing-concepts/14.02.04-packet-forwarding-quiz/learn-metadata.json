@@ -50,21 +50,21 @@
                 {
                     "answer": "коммутация процессов",
                     "correct": false,
-                    "comment": "Метод пересылки пакетов, используемый по умолчанию на роутерах Cisco, — Cisco Express Forwarding."
+                    "comment": "Метод пересылки пакетов, используемый по умолчанию на роутерах, — CEF."
                 },
                 {
                     "answer": "быстрая коммутация",
                     "correct": false,
-                    "comment": "Метод пересылки пакетов, используемый по умолчанию на роутерах Cisco, — Cisco Express Forwarding."
+                    "comment": "Метод пересылки пакетов, используемый по умолчанию на роутерах, — CEF."
                 },
                 {
-                    "answer": "Cisco Express Forwarding",
+                    "answer": "CEF",
                     "correct": true
                 },
                 {
                     "answer": "коммутация Ethernet",
                     "correct": false,
-                    "comment": "Метод пересылки пакетов, используемый по умолчанию на роутерах Cisco, — Cisco Express Forwarding."
+                    "comment": "Метод пересылки пакетов, используемый по умолчанию на роутерах, — CEF."
                 }
             ]
         }
