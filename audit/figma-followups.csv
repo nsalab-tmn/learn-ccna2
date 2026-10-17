@@ -1,0 +1,3 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+10-lan-security-concepts/10.02-access-control/README.md,assets/10.2.2.png,кредитная карта и выписка с оранжевыми выносками «Аутентификация / Авторизация / Учёт» в фирменном стиле NetAcad,та же сцена в стиле курса,изображение (audit ccna2-vm-1388)
+10-lan-security-concepts/10.05-lan-attacks/README.md,assets/10.5.10.png,"захват Wireshark (фильтр cdp): дерево Cisco Discovery Protocol с «Cisco IOS Software, C3550…», «Copyright … Cisco Systems», Platform","захват CDP/LLDP с данными ОС симулятора, без бренда (текст 10.5.10 говорит о версии ОС в пакете CDP)",растр с выводом оборудования (audit ccna2-vm-1412); ждёт вывода симулятора
