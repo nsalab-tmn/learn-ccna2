@@ -1,7 +1,7 @@
 <!-- 14.3.1 -->
 ## Пример топологии
 
-Роутер создает таблицу маршрутизации, чтобы помочь ему определить, куда направить пакеты. Но прежде чем подробно ознакомиться с таблицей IP-маршрутизации, в этом разделе рассматриваются основные задачи настройки роутера и проверки. Выполните задание Packet Tracer, чтобы обновить свои навыки.
+Роутер создает таблицу маршрутизации, чтобы помочь ему определить, куда направить пакеты. Но прежде чем подробно ознакомиться с таблицей IP-маршрутизации, в этом разделе рассматриваются основные задачи настройки роутера и проверки. Выполните задание в симуляторе, чтобы обновить свои навыки.
 
 Топология на рисунке будет использоваться для примеров конфигурации и проверки, а также для обсуждения таблицы IP-маршрутизации в следующем разделе.
 
@@ -18,14 +18,14 @@ Router> enable
 Router# configure terminal
 Enter configuration commands, one per line. End with CNTL/Z.
 Router(config)# hostname R1
-R1(config)# enable secret class 
+R1(config)# enable secret netlab 
 R1(config)# line console 0  
 R1(config-line)# logging synchronous
-R1(config-line)# password cisco 
+R1(config-line)# password netlab 
 R1(config-line)# login 
 R1(config-line)# exit 
 R1(config)# line vty 0 4 
-R1(config-line)# password cisco 
+R1(config-line)# password netlab 
 R1(config-line)# login 
 R1(config-line)# transport input ssh telnet 
 R1(config-line)# exit 

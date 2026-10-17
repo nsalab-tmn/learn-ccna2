@@ -1,0 +1,2 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+16-troubleshoot-static-and-default-routes/16.01.02-packet-processing-with-static-routes-quiz/learn-metadata.json,assets/16.1.2.png,рисунок к квизу в стиле NetAcad: бирюзовые иконки устройств Cisco,схема в стиле курса на библиотечных иконках,изображение; зависит от открытого пункта ADR о библиотеке иконок
