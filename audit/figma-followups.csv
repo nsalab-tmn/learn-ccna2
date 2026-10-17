@@ -1,0 +1,2 @@
+path,asset_or_figure,what_is_shown,should_become,reason
+07-dhcpv4/07.03-configure-dhcpv4-client/README.md,assets/7.3.3.png (native),"GUI домашнего роутера Packet Tracer: «Wireless Tri-Band Home Router», «HomeRouter-PT-AC», Setup → Internet Connection type «Automatic Configuration - DHCP»",нейтральный компонент «веб-интерфейс SOHO-роутера» (К3) без названия модели PT; текст 7.3 уже говорит «в симуляторе»,изображение (audit ccna2-vm-1071; plan 2.8)
