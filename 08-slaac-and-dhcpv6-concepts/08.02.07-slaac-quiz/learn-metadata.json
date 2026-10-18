@@ -18,12 +18,12 @@
             "answerType": "multiChoice",
             "answers": [
                 {
-                    "answer": "сообщение «Объявление соседнего узла» (Neighbor Advertisement, NA)",
+                    "answer": "сообщение «Объявление соседа» (Neighbor Advertisement, NA)",
                     "correct": false,
                     "comment": "Процесс SLAAC использует сообщения RA и может также отвечать на сообщения RS от узла"
                 },
                 {
-                    "answer": "сообщение «Запрос соседнего узла» (Neighbor Solicitation, NS)",
+                    "answer": "сообщение «Запрос соседа» (Neighbor Solicitation, NS)",
                     "correct": false,
                     "comment": "Процесс SLAAC использует сообщения RA и может также отвечать на сообщения RS от узла"
                 },
@@ -92,12 +92,12 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "сообщение «Объявление соседнего узла» (Neighbor Advertisement, NA)",
+                    "answer": "сообщение «Объявление соседа» (Neighbor Advertisement, NA)",
                     "correct": false,
                     "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор"
                 },
                 {
-                    "answer": "сообщение «Запрос соседнего узла» (Neighbor Solicitation, NS)",
+                    "answer": "сообщение «Запрос соседа» (Neighbor Solicitation, NS)",
                     "correct": false,
                     "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор"
                 },
