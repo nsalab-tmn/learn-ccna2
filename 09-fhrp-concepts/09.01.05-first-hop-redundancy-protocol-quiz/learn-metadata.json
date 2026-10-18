@@ -114,13 +114,13 @@
             ]
         },
         {
-            "question": "Какие FHRP являются собственностью компании Cisco? (верны два варианта)",
+            "question": "Какие FHRP являются проприетарными? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
                     "answer": "IRDP",
                     "correct": false,
-                    "comment": "HSRP и HSRP для IPv6 являются собственностью Cisco. VRRPv2 и IRDP являются непроприетарными протоколами"
+                    "comment": "HSRP и HSRP для IPv6 являются проприетарными протоколами. VRRPv2 и IRDP являются непроприетарными протоколами"
                 },
                 {
                     "answer": "HSRP",
@@ -133,7 +133,7 @@
                 {
                     "answer": "VRRPv2",
                     "correct": false,
-                    "comment": "HSRP и HSRP для IPv6 являются собственностью Cisco. VRRPv2 и IRDP являются непроприетарными протоколами"
+                    "comment": "HSRP и HSRP для IPv6 являются проприетарными протоколами. VRRPv2 и IRDP являются непроприетарными протоколами"
                 }
             ]
         }

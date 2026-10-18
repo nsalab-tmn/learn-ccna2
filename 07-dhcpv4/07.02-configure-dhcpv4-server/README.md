@@ -57,7 +57,7 @@ Router(dhcp-config)#
 | Определение срока DHCP-аренды | lease {days [hours [minutes]] \| infinite} |
 | Определение сервера NetBIOS WINS | netbios-name-server address [address2…address8] |
 
-**Примечание.** Корпорация Microsoft рекомендует не развертывать WINS, а вместо этого настроить DNS для разрешения имен Windows и вывода из эксплуатации WINS.
+**Примечание.** Рекомендуется не развертывать WINS, а вместо этого настроить DNS для разрешения имен Windows и вывода из эксплуатации WINS.
 
 <!-- 7.2.3 -->
 ## Пример конфигурации
