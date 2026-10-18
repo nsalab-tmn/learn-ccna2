@@ -70,17 +70,17 @@
                 {
                     "answer": "ADVERTISE",
                     "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния"
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
                 },
                 {
                     "answer": "SOLICIT",
                     "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния"
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
                 },
                 {
                     "answer": "INFORMATION-REQUEST",
                     "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без состояния"
+                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
                 },
                 {
                     "answer": "REQUEST",
