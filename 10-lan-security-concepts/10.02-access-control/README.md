@@ -7,7 +7,7 @@
 
 ```
 R1(config)# line vty 0 4
-R1(config-line)# password ci5c0
+R1(config-line)# password n3tl4b
 R1(config-line)# login
 ```
 
