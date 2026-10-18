@@ -8,7 +8,7 @@
 
 Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
 
-**Готово: 1 из 15** (explainer — 1 из 8) · собрано и ждёт приёмки (Motion): 3.
+**Готово: 1 из 15** (explainer — 1 из 8) · собрано и ждёт приёмки (Motion): 4.
 
 | статус | значит |
 |---|---|
@@ -32,7 +32,7 @@
 | `XI_F7TvuDBs` | 12-wlan-concepts / 12.03-wlan-operation | Принципы работы WLAN | 11:50 | explainer (слайды) | текст + иллюстрация; опц. 2 анимации Figma ≤ 45 с (CSMA/CA, обнаружение) | Motion · 2:12 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5158-9679) | [12.03--XI_F7TvuDBs](12-wlan-concepts/12.03-wlan-operation--XI_F7TvuDBs.md) |
 | `qXXGwkLZ6hI` | 12-wlan-concepts / 12.04-capwap-operation | CAPWAP | 3:45 | explainer (слайды) | текст + иллюстрация (опц. Figma ≤ 45 с) | Motion · 1:40 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5166-7871) | [12.04--qXXGwkLZ6hI](12-wlan-concepts/12.04-capwap-operation--qXXGwkLZ6hI.md) |
 | `RhcFm7fBVH0` | 12-wlan-concepts / 12.06-wlan-threats | Угрозы безопасности WLAN | 5:41 | explainer (слайды) | текст + иллюстрация (опц. Figma «evil twin» ≤ 45 с) | — | [12.06--RhcFm7fBVH0](12-wlan-concepts/12.06-wlan-threats--RhcFm7fBVH0.md) |
-| `Pl3u95xY2RQ` | 12-wlan-concepts / 12.07-secure-wlans | Защита беспроводных сетей | 7:09 | explainer | текст + иллюстрация (опц. Figma ≤ 45 с); поля GUI — в макет симулятора | — | [12.07--Pl3u95xY2RQ](12-wlan-concepts/12.07-secure-wlans--Pl3u95xY2RQ.md) |
+| `Pl3u95xY2RQ` | 12-wlan-concepts / 12.07-secure-wlans | Защита беспроводных сетей | 7:09 | explainer | текст + иллюстрация (опц. Figma ≤ 45 с); поля GUI — в макет симулятора | Motion · 1:56 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5173-8272) | [12.07--Pl3u95xY2RQ](12-wlan-concepts/12.07-secure-wlans--Pl3u95xY2RQ.md) |
 | `dzWPJ4Q57cg` | 13-wlan-configuration / 13.01-remote-site-wlan-configuration | Настройка домашнего роутера (Cisco RV130W) | 9:12 | lab-demo | видео с голосом (код-рендер) ~5:00; GUI-упражнение симулятора | — | [13.01--dzWPJ4Q57cg](13-wlan-configuration/13.01-remote-site-wlan-configuration--dzWPJ4Q57cg.md) |
 | `O-KpLNWHQhA` | 13-wlan-configuration / 13.02-configure-a-basic-wlc-on-the-wlc | Базовая WLAN на WLC 3504 | 7:14 | lab-demo | видео с голосом (код-рендер) ~4:30; GUI-упражнение симулятора | — | [13.02--O-KpLNWHQhA](13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc--O-KpLNWHQhA.md) |
 | `0f4OhO7N1mg` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | SNMP и RADIUS на WLC | 5:36 | lab-demo | видео с голосом (код-рендер) ~3:00 (серия 13.3) | — | [13.03--0f4OhO7N1mg](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--0f4OhO7N1mg.md) |
