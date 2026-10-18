@@ -187,17 +187,15 @@
     "key": "2.1.1"
    },
    "figma": {
-    "nodeId": "4191:438831",
+    "nodeId": "4585:3",
     "page": "CCNA2 · 02 switching-concepts",
     "motion": {
-     "sectionId": "4540:2",
      "animId": "4585:3"
     }
    },
    "out": {
     "path": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.1.svg",
-    "format": "animated-svg",
-    "fallback": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-ewe7sxr/spec.json",
@@ -296,17 +294,15 @@
     "key": "2.2.2"
    },
    "figma": {
-    "nodeId": "4191:439038",
+    "nodeId": "4545:4",
     "page": "CCNA2 · 02 switching-concepts",
     "motion": {
-     "sectionId": "4545:2",
      "animId": "4545:4"
     }
    },
    "out": {
     "path": "02-switching-concepts/02.02-switching-domains/assets/2.2.2.svg",
-    "format": "animated-svg",
-    "fallback": "02-switching-concepts/02.02-switching-domains/assets/2.2.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-4eba6u4/spec.json",
@@ -429,17 +425,15 @@
     "key": "3.2.2"
    },
    "figma": {
-    "nodeId": "4191:439347",
+    "nodeId": "4586:3",
     "page": "CCNA2 · 03 vlans",
     "motion": {
-     "sectionId": "4546:2",
      "animId": "4586:3"
     }
    },
    "out": {
     "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.2.svg",
-    "format": "animated-svg",
-    "fallback": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-kuyx7li/spec.json",
@@ -463,17 +457,15 @@
     "key": "3.2.3"
    },
    "figma": {
-    "nodeId": "4191:439426",
+    "nodeId": "4539:4",
     "page": "CCNA2 · 03 vlans",
     "motion": {
-     "sectionId": "4539:2",
      "animId": "4539:4"
     }
    },
    "out": {
     "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.3.svg",
-    "format": "animated-svg",
-    "fallback": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-jznpo32/spec.json",
@@ -696,17 +688,15 @@
     "key": "4.1.3"
    },
    "figma": {
-    "nodeId": "4191:439821",
+    "nodeId": "4575:4",
     "page": "CCNA2 · 04 inter-vlan-routing",
     "motion": {
-     "sectionId": "4575:2",
      "animId": "4575:4"
     }
    },
    "out": {
     "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.3.svg",
-    "format": "animated-svg",
-    "fallback": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-2dfudhn/spec.json",
@@ -926,17 +916,15 @@
     "key": "5.1.2"
    },
    "figma": {
-    "nodeId": "4191:440465",
+    "nodeId": "4544:4",
     "page": "CCNA2 · 05 stp",
     "motion": {
-     "sectionId": "4544:2",
      "animId": "4544:4"
     }
    },
    "out": {
     "path": "05-stp/05.01-purpose-of-stp/assets/5.1.2.svg",
-    "format": "animated-svg",
-    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-ac77fgv/spec.json",
@@ -960,17 +948,15 @@
     "key": "5.1.3"
    },
    "figma": {
-    "nodeId": "4191:440526",
+    "nodeId": "4542:442",
     "page": "CCNA2 · 05 stp",
     "motion": {
-     "sectionId": "4542:440",
      "animId": "4542:442"
     }
    },
    "out": {
     "path": "05-stp/05.01-purpose-of-stp/assets/5.1.3.svg",
-    "format": "animated-svg",
-    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-itz24qh/spec.json",
@@ -994,17 +980,15 @@
     "key": "5.1.5"
    },
    "figma": {
-    "nodeId": "4191:440592",
+    "nodeId": "4588:3",
     "page": "CCNA2 · 05 stp",
     "motion": {
-     "sectionId": "4576:2",
      "animId": "4588:3"
     }
    },
    "out": {
     "path": "05-stp/05.01-purpose-of-stp/assets/5.1.5.svg",
-    "format": "animated-svg",
-    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.5.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-celtotc/spec.json",
@@ -1028,17 +1012,15 @@
     "key": "5.1.6"
    },
    "figma": {
-    "nodeId": "4191:440671",
+    "nodeId": "4578:4",
     "page": "CCNA2 · 05 stp",
     "motion": {
-     "sectionId": "4578:2",
      "animId": "4578:4"
     }
    },
    "out": {
     "path": "05-stp/05.01-purpose-of-stp/assets/5.1.6.svg",
-    "format": "animated-svg",
-    "fallback": "05-stp/05.01-purpose-of-stp/assets/5.1.6.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-awyyltz/spec.json",
@@ -4336,17 +4318,15 @@
     "key": "14.1.2"
    },
    "figma": {
-    "nodeId": "4191:446908",
+    "nodeId": "4589:3",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4551:2",
      "animId": "4589:3"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.01-path-determination/assets/14.1.2.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.01-path-determination/assets/14.1.2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-vazbtn3/spec.json",
@@ -4418,17 +4398,15 @@
     "key": "14.2.2-1"
    },
    "figma": {
-    "nodeId": "4191:447204",
+    "nodeId": "4592:3",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4538:2",
      "animId": "4592:3"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-1.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-5tvjuav/spec.json",
@@ -4452,17 +4430,15 @@
     "key": "14.2.2-2"
    },
    "figma": {
-    "nodeId": "4191:447309",
+    "nodeId": "4593:3",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4547:2",
      "animId": "4593:3"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-2.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-2.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-bwcpr4t/spec.json",
@@ -4486,17 +4462,15 @@
     "key": "14.2.2-3"
    },
    "figma": {
-    "nodeId": "4191:447471",
+    "nodeId": "4594:3",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4549:2",
      "animId": "4594:3"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-3.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-pltuckr/spec.json",
@@ -4520,17 +4494,15 @@
     "key": "14.2.2-4"
    },
    "figma": {
-    "nodeId": "4191:447626",
+    "nodeId": "4595:3",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4577:2",
      "animId": "4595:3"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-4.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.02-packet-forwarding/assets/14.2.2-4.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-7flcplk/spec.json",
@@ -4852,17 +4824,15 @@
     "key": "14.5.3"
    },
    "figma": {
-    "nodeId": "4191:449030",
+    "nodeId": "4543:3",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4537:2",
      "animId": "4543:3"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.3.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.3.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-wvbb57a/spec.json",
@@ -4886,17 +4856,15 @@
     "key": "14.5.4"
    },
    "figma": {
-    "nodeId": "4191:449055",
+    "nodeId": "4542:4",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4542:2",
      "animId": "4542:4"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.4.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.4.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-lfthw2h/spec.json",
@@ -4920,17 +4888,15 @@
     "key": "14.5.5"
    },
    "figma": {
-    "nodeId": "4191:449093",
+    "nodeId": "4550:4",
     "page": "CCNA2 · 14 routing-concepts",
     "motion": {
-     "sectionId": "4550:2",
      "animId": "4550:4"
     }
    },
    "out": {
     "path": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.5.svg",
-    "format": "animated-svg",
-    "fallback": "14-routing-concepts/14.05-static-and-dynamic-routing/assets/14.5.5.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-vu7a3oy/spec.json",
@@ -5264,17 +5230,15 @@
     "key": "16.1.1"
    },
    "figma": {
-    "nodeId": "4191:449936",
+    "nodeId": "4590:3",
     "page": "CCNA2 · 16 troubleshoot-static-and-default-routes",
     "motion": {
-     "sectionId": "4548:2",
      "animId": "4590:3"
     }
    },
    "out": {
     "path": "16-troubleshoot-static-and-default-routes/16.02-troubleshoot-ipv4-static-and-default-route-configuration/assets/16.1.1.svg",
-    "format": "animated-svg",
-    "fallback": "16-troubleshoot-static-and-default-routes/16.02-troubleshoot-ipv4-static-and-default-route-configuration/assets/16.1.1.png"
+    "format": "animated-svg"
    },
    "status": "synced",
    "spec": "animations/ccna2-tiqr6cj/spec.json",

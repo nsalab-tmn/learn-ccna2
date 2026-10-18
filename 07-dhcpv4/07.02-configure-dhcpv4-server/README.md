@@ -1,15 +1,15 @@
 <!-- 7.2.1 -->
-## Настройка сервера DHCPv4 в Cisco IOS
+## Настройка сервера DHCPv4 на роутере
 
-Теперь у вас есть общее представление о том, как работает DHCPv4 и как это упрощает вашу работу. Если у вас нет отдельного сервера DHCPv4, в этом разделе будет показано, как настроить роутер Cisco IOS. Устройство Cisco под управлением ОС Cisco IOS можно настроить в качестве DHCPv4-сервера. DHCPv4-сервер под управлением Cisco IOS присваивает DHCPv4-клиентам IPv4-адреса из заданного пула адресов роутера и управляет этими адресами.
+Теперь у вас есть общее представление о том, как работает DHCPv4 и как это упрощает вашу работу. Если у вас нет отдельного сервера DHCPv4, в этом разделе будет показано, как настроить роутер. Сетевое устройство можно настроить в качестве DHCPv4-сервера. DHCPv4-сервер устройства присваивает DHCPv4-клиентам IPv4-адреса из заданного пула адресов роутера и управляет этими адресами.
 
 ![](./assets/7.2.1.svg)
 
 
 <!-- 7.2.2 -->
-## Действия по настройке сервера DHCPv4 Cisco IOS
+## Действия по настройке сервера DHCPv4
 
-Для настройки сервера DHCPv4 Cisco IOS необходимо выполнить ряд действий.
+Для настройки сервера DHCPv4 необходимо выполнить ряд действий.
 
 **Шаг 1**. Исключить IPv4-адреса.
 
@@ -48,7 +48,7 @@ Router(dhcp-config)#
 
 Остальные команды DHCPv4-пула являются дополнительными. Например, IPv4-адрес DNS-сервера, доступный DHCPv4-клиенту, настраивается с помощью команды **dns-server**. Команда **domain-name** используется, чтобы задать доменное имя. Продолжительность аренды протокола DHCPv4 изменяется командой **lease**. По умолчанию продолжительность аренды равна одному дню. Чтобы задать сервер NetBIOS WINS, используется команда **netbios-name-server**.
 
-| **Задача** | **Команда IOS** |
+| **Задача** | **Команда** |
 | --- | --- |
 | Определение пула адресов | network network-number [mask \| / prefix-length] |
 | Определение маршрутизатора или шлюза по умолчанию | default-router address [address2…address8] |
@@ -57,7 +57,7 @@ Router(dhcp-config)#
 | Определение срока DHCP-аренды | lease {days [hours [minutes]] \| infinite} |
 | Определение сервера NetBIOS WINS | netbios-name-server address [address2…address8] |
 
-**Примечание.** Корпорация Microsoft рекомендует не развертывать WINS, а вместо этого настроить DNS для разрешения имен Windows и вывода из эксплуатации WINS.
+**Примечание.** Рекомендуется не развертывать WINS, а вместо этого настроить DNS для разрешения имен Windows и вывода из эксплуатации WINS.
 
 <!-- 7.2.3 -->
 ## Пример конфигурации
@@ -76,7 +76,7 @@ R1(config)# ip dhcp pool LAN-POOL-1
 R1(dhcp-config)# network 192.168.10.0 255.255.255.0
 R1(dhcp-config)# default-router 192.168.10.1
 R1(dhcp-config)# dns-server 192.168.11.5
-R1(dhcp-config)# domain-name example.com
+R1(dhcp-config)# domain-name nsalab.local
 R1(dhcp-config)# end
 R1#
 ```
@@ -84,7 +84,7 @@ R1#
 <!-- 7.2.4 -->
 ## Команды проверки DHCPv4 сервера
 
-Используйте команды, приведенные в таблице, чтобы проверить работоспособность сервера Cisco IOS DHCPv4.
+Используйте команды, приведенные в таблице, чтобы проверить работоспособность сервера DHCPv4.
 
 | **Команда** | **Описание** |
 | --- | --- |
@@ -115,7 +115,7 @@ ip dhcp pool LAN-POOL-1
  network 192.168.10.0 255.255.255.0
  default-router 192.168.10.1
  dns-server 192.168.11.5
- domain-name example.com
+ domain-name nsalab.local
 ```
 
 **Проверка связи MAC и IP-адресов в DHCPv4**
@@ -168,13 +168,13 @@ DHCPINFORM 0
 ```
 C:\Users\Student> ipconfig /all
 Windows IP Configuration
-   Host Name . . . . . . . . . . . . : ciscolab
+   Host Name . . . . . . . . . . . . : netlab
    Primary Dns Suffix . . . . . . . :
    Node Type . . . . . . . . . . . . : Hybrid
    IP Routing Enabled. . . . . . . . : No
    WINS Proxy Enabled. . . . . . . . : No
 Ethernet adapter Ethernet0:
-   Connection-specific DNS Suffix . : example.com
+   Connection-specific DNS Suffix . : nsalab.local
    Description . . . . . . . . . . . : Realtek PCIe GBE Family Controller
    Physical Address. . . . . . . . . : 00-05-9A-3C-7A-00
    DHCP Enabled. . . . . . . . . . . : Yes
@@ -192,7 +192,7 @@ Ethernet adapter Ethernet0:
 <!-- syntax -->
 
 <!-- 7.2.7 -->
-## Отключение сервера DHCPv4 Cisco IOS
+## Отключение сервера DHCPv4
 
 Служба DHCPv4 включена по умолчанию. Для того чтобы отключить ее, введите команду в режиме глобальной конфигурации **no service dhcp**. Для возобновления работы DHCPv4-сервера используйте команду **service dhcp** в том же режиме. В случае, если параметры не настроены, активация службы не имеет эффекта.
 
@@ -273,7 +273,7 @@ C:\Users\Student> ipconfig /all
 Настройка IP для Windows
   
 Ethernet adapter Ethernet0:
-   Connection-specific DNS Suffix . : example.com
+   Connection-specific DNS Suffix . : nsalab.local
    IPv4 Address. . . . . . . . . . . : 192.168.10.10
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
    Default Gateway . . . . . . . . . : 192.168.10.1
