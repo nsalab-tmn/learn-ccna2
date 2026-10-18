@@ -4,25 +4,41 @@
 
 Классы: `marketing` (реклама академии/продукта — убрать) · `explainer` (концепция на слайдах/схемах) · `cli-basics` (основы IOS CLI) · `lab-demo` (сквозная демонстрация в GUI / на реальном устройстве) · `other`.
 
+## Видеоряд в Figma
+
+Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
+
+**Готово: 5 из 15** (explainer — 5 из 8). Три explainer-ролика об атаках (`ye_f86EfTl8`, `JhiaFeH9ZOU`, `RhcFm7fBVH0`) в цепочку пересборки 2026-10-18 не вошли — решение по ним за оператором.
+
+| статус | значит |
+|---|---|
+| — | пересборка не начата |
+| Motion | анимация собрана и ждёт приёмки оператора; время — её хронометраж, ссылка ведёт на кадр анимации |
+| **готов** | анимация Figma Motion принята оператором; время — её хронометраж (у оригинала — колонка «Длит.»), ссылка ведёт на кадр анимации |
+
+Всё лежит в рабочем файле Figma `3FtCg22qFubpLBPOetQU03` (CCNA Design): по листу на видео «Видео · ‹videoId› · ‹название› · прототип» после листа своего модуля, с секциями «Motion · …» (анимация и набор-кит, из которого она собрана) и «Раскадровка · …» (базовая сцена и кадры раскадровки с описаниями). У этих листов нет курсового префикса и штампов `⟨id⟩`, поэтому синхронизация иллюстраций (`figma_sync.py`) их не читает. Метод сборки — `runbooks/video-motion-build.md` в learn-knowledge-base. Каждая анимация — самостоятельный explainer: титул задаёт вопрос, на который она отвечает, без отсылок к тексту лекции; примеры — из текста темы. Подробности по каждому видео — раздел «Видеоряд в Figma» в его документе.
+
+`fi7Ss-_9LvY` встроен и в CCNA1 (7.3.4) — там тот же видеоряд, принятый оператором.
+
 ## Индекс
 
-| videoId | Модуль / тема | Название | Длит. | Класс | Пересборка | Документ |
-|---|---|---|---|---|---|---|
-| `fi7Ss-_9LvY` | 02-switching-concepts / 02.01-frame-forwarding | Таблицы MAC-адресов на соединённых коммутаторах | 3:05 | explainer | анимация Figma ≤ 60 с (+ опц. озвученный ~2:30) | [02.01--fi7Ss-_9LvY](02-switching-concepts/02.01-frame-forwarding--fi7Ss-_9LvY.md) |
-| `TZrrTw5uhNI` | 05-stp / 05.01-purpose-of-stp | Наблюдение за работой STP | 6:18 | lab-demo | видео с голосом (код-рендер) ~4:30; часть 1 — анимация Figma | [05.01--TZrrTw5uhNI](05-stp/05.01-purpose-of-stp--TZrrTw5uhNI.md) |
-| `ye_f86EfTl8` | 10-lan-security-concepts / 10.05-lan-attacks | Атаки на VLAN и DHCP | 5:41 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (double-tagging, DHCP spoofing) | [10.05--ye_f86EfTl8](10-lan-security-concepts/10.05-lan-attacks--ye_f86EfTl8.md) |
-| `JhiaFeH9ZOU` | 10-lan-security-concepts / 10.05-lan-attacks | ARP-атаки, STP-атаки, CDP-разведка | 6:14 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (ARP poisoning, STP root) | [10.05--JhiaFeH9ZOU](10-lan-security-concepts/10.05-lan-attacks--JhiaFeH9ZOU.md) |
-| `3bOfIlu0BzI` | 12-wlan-concepts / 12.02-components-of-wlans | Компоненты WLAN | 6:12 | explainer (ведущий с железом) | текст + иллюстрация (опц. Figma ≤ 45 с) | [12.02--3bOfIlu0BzI](12-wlan-concepts/12.02-components-of-wlans--3bOfIlu0BzI.md) |
-| `XI_F7TvuDBs` | 12-wlan-concepts / 12.03-wlan-operation | Принципы работы WLAN | 11:50 | explainer (слайды) | текст + иллюстрация; опц. 2 анимации Figma ≤ 45 с (CSMA/CA, обнаружение) | [12.03--XI_F7TvuDBs](12-wlan-concepts/12.03-wlan-operation--XI_F7TvuDBs.md) |
-| `qXXGwkLZ6hI` | 12-wlan-concepts / 12.04-capwap-operation | CAPWAP | 3:45 | explainer (слайды) | текст + иллюстрация (опц. Figma ≤ 45 с) | [12.04--qXXGwkLZ6hI](12-wlan-concepts/12.04-capwap-operation--qXXGwkLZ6hI.md) |
-| `RhcFm7fBVH0` | 12-wlan-concepts / 12.06-wlan-threats | Угрозы безопасности WLAN | 5:41 | explainer (слайды) | текст + иллюстрация (опц. Figma «evil twin» ≤ 45 с) | [12.06--RhcFm7fBVH0](12-wlan-concepts/12.06-wlan-threats--RhcFm7fBVH0.md) |
-| `Pl3u95xY2RQ` | 12-wlan-concepts / 12.07-secure-wlans | Защита беспроводных сетей | 7:09 | explainer | текст + иллюстрация (опц. Figma ≤ 45 с); поля GUI — в макет симулятора | [12.07--Pl3u95xY2RQ](12-wlan-concepts/12.07-secure-wlans--Pl3u95xY2RQ.md) |
-| `dzWPJ4Q57cg` | 13-wlan-configuration / 13.01-remote-site-wlan-configuration | Настройка домашнего роутера (Cisco RV130W) | 9:12 | lab-demo | видео с голосом (код-рендер) ~5:00; GUI-упражнение симулятора | [13.01--dzWPJ4Q57cg](13-wlan-configuration/13.01-remote-site-wlan-configuration--dzWPJ4Q57cg.md) |
-| `O-KpLNWHQhA` | 13-wlan-configuration / 13.02-configure-a-basic-wlc-on-the-wlc | Базовая WLAN на WLC 3504 | 7:14 | lab-demo | видео с голосом (код-рендер) ~4:30; GUI-упражнение симулятора | [13.02--O-KpLNWHQhA](13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc--O-KpLNWHQhA.md) |
-| `0f4OhO7N1mg` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | SNMP и RADIUS на WLC | 5:36 | lab-demo | видео с голосом (код-рендер) ~3:00 (серия 13.3) | [13.03--0f4OhO7N1mg](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--0f4OhO7N1mg.md) |
-| `DinzgbcB-So` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | VLAN-интерфейс для новой WLAN | 5:05 | lab-demo | видео с голосом (код-рендер) ~3:00 (серия 13.3) | [13.03--DinzgbcB-So](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--DinzgbcB-So.md) |
-| `j9nrRvV3JKo` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | Область DHCP на WLC | 3:35 | lab-demo | видео с голосом (код-рендер) ~2:00 (серия 13.3) | [13.03--j9nrRvV3JKo](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--j9nrRvV3JKo.md) |
-| `PF8gfBfJN8M` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | WLAN с WPA2 Enterprise (+ `test aaa radius`) | 5:24 | lab-demo | видео с голосом (код-рендер) ~4:00 (серия 13.3); GUI + CLI симулятора | [13.03--PF8gfBfJN8M](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--PF8gfBfJN8M.md) |
+| videoId | Модуль / тема | Название | Длит. | Класс | Пересборка | Видеоряд (Figma) | Документ |
+|---|---|---|---|---|---|---|---|
+| `fi7Ss-_9LvY` | 02-switching-concepts / 02.01-frame-forwarding | Таблицы MAC-адресов на соединённых коммутаторах | 3:05 | explainer | анимация Figma ≤ 60 с (+ опц. озвученный ~2:30) | **готов** · 1:35 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=4933-8671) | [02.01--fi7Ss-_9LvY](02-switching-concepts/02.01-frame-forwarding--fi7Ss-_9LvY.md) |
+| `TZrrTw5uhNI` | 05-stp / 05.01-purpose-of-stp | Наблюдение за работой STP | 6:18 | lab-demo | видео с голосом (код-рендер) ~4:30; часть 1 — анимация Figma | — | [05.01--TZrrTw5uhNI](05-stp/05.01-purpose-of-stp--TZrrTw5uhNI.md) |
+| `ye_f86EfTl8` | 10-lan-security-concepts / 10.05-lan-attacks | Атаки на VLAN и DHCP | 5:41 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (double-tagging, DHCP spoofing) | — | [10.05--ye_f86EfTl8](10-lan-security-concepts/10.05-lan-attacks--ye_f86EfTl8.md) |
+| `JhiaFeH9ZOU` | 10-lan-security-concepts / 10.05-lan-attacks | ARP-атаки, STP-атаки, CDP-разведка | 6:14 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (ARP poisoning, STP root) | — | [10.05--JhiaFeH9ZOU](10-lan-security-concepts/10.05-lan-attacks--JhiaFeH9ZOU.md) |
+| `3bOfIlu0BzI` | 12-wlan-concepts / 12.02-components-of-wlans | Компоненты WLAN | 6:12 | explainer (ведущий с железом) | текст + иллюстрация (опц. Figma ≤ 45 с) | **готов** · 1:26 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5145-8215) | [12.02--3bOfIlu0BzI](12-wlan-concepts/12.02-components-of-wlans--3bOfIlu0BzI.md) |
+| `XI_F7TvuDBs` | 12-wlan-concepts / 12.03-wlan-operation | Принципы работы WLAN | 11:50 | explainer (слайды) | текст + иллюстрация; опц. 2 анимации Figma ≤ 45 с (CSMA/CA, обнаружение) | **готов** · 2:12 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5158-9679) | [12.03--XI_F7TvuDBs](12-wlan-concepts/12.03-wlan-operation--XI_F7TvuDBs.md) |
+| `qXXGwkLZ6hI` | 12-wlan-concepts / 12.04-capwap-operation | CAPWAP | 3:45 | explainer (слайды) | текст + иллюстрация (опц. Figma ≤ 45 с) | **готов** · 1:40 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5166-7871) | [12.04--qXXGwkLZ6hI](12-wlan-concepts/12.04-capwap-operation--qXXGwkLZ6hI.md) |
+| `RhcFm7fBVH0` | 12-wlan-concepts / 12.06-wlan-threats | Угрозы безопасности WLAN | 5:41 | explainer (слайды) | текст + иллюстрация (опц. Figma «evil twin» ≤ 45 с) | — | [12.06--RhcFm7fBVH0](12-wlan-concepts/12.06-wlan-threats--RhcFm7fBVH0.md) |
+| `Pl3u95xY2RQ` | 12-wlan-concepts / 12.07-secure-wlans | Защита беспроводных сетей | 7:09 | explainer | текст + иллюстрация (опц. Figma ≤ 45 с); поля GUI — в макет симулятора | **готов** · 1:56 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5173-8272) | [12.07--Pl3u95xY2RQ](12-wlan-concepts/12.07-secure-wlans--Pl3u95xY2RQ.md) |
+| `dzWPJ4Q57cg` | 13-wlan-configuration / 13.01-remote-site-wlan-configuration | Настройка домашнего роутера (Cisco RV130W) | 9:12 | lab-demo | видео с голосом (код-рендер) ~5:00; GUI-упражнение симулятора | — | [13.01--dzWPJ4Q57cg](13-wlan-configuration/13.01-remote-site-wlan-configuration--dzWPJ4Q57cg.md) |
+| `O-KpLNWHQhA` | 13-wlan-configuration / 13.02-configure-a-basic-wlc-on-the-wlc | Базовая WLAN на WLC 3504 | 7:14 | lab-demo | видео с голосом (код-рендер) ~4:30; GUI-упражнение симулятора | — | [13.02--O-KpLNWHQhA](13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc--O-KpLNWHQhA.md) |
+| `0f4OhO7N1mg` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | SNMP и RADIUS на WLC | 5:36 | lab-demo | видео с голосом (код-рендер) ~3:00 (серия 13.3) | — | [13.03--0f4OhO7N1mg](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--0f4OhO7N1mg.md) |
+| `DinzgbcB-So` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | VLAN-интерфейс для новой WLAN | 5:05 | lab-demo | видео с голосом (код-рендер) ~3:00 (серия 13.3) | — | [13.03--DinzgbcB-So](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--DinzgbcB-So.md) |
+| `j9nrRvV3JKo` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | Область DHCP на WLC | 3:35 | lab-demo | видео с голосом (код-рендер) ~2:00 (серия 13.3) | — | [13.03--j9nrRvV3JKo](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--j9nrRvV3JKo.md) |
+| `PF8gfBfJN8M` | 13-wlan-configuration / 13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc | WLAN с WPA2 Enterprise (+ `test aaa radius`) | 5:24 | lab-demo | видео с голосом (код-рендер) ~4:00 (серия 13.3); GUI + CLI симулятора | — | [13.03--PF8gfBfJN8M](13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc--PF8gfBfJN8M.md) |
 
 Ни одно видео не встроено в README лабораторной работы (путей с `-lab-` нет).
 
