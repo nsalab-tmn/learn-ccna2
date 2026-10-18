@@ -164,7 +164,7 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
 ```
 R1# show running-config | section line vty 
 line vty 0 4
- password 7 110A1016141D
+ password 7 11071C111B1309
  login
  transport input all
 ```
