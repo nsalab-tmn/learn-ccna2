@@ -1,5 +1,5 @@
 {
-    "title": "Настройка сервера DHCPv4 в Cisco IOS",
+    "title": "Настройка сервера DHCPv4 на роутере",
     "materialType": "lecture",
     "description": "Как настроить DHCP-сервер? Как проверить его работу? В каких случаях требуется ретрансляция DHCP-сообщений?",
     "difficulty": 3,
