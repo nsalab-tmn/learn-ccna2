@@ -20,7 +20,7 @@
                 {
                     "answer": "HSRP",
                     "correct": false,
-                    "comment": "Тема 10.2.0 - В сетевых устройствах поддерживаются два протокола AAA: TACACS+ и RADIUS. HSRP используется в роутерах для обеспечения резервирования шлюза"
+                    "comment": "Тема 10.2.0 - В сетевых устройствах поддерживаются два протокола AAA: TACACS+ и RADIUS. HSRP используется в маршрутизаторах для обеспечения резервирования шлюза"
                 },
                 {
                     "answer": "VTP",
@@ -143,13 +143,13 @@
             ]
         },
         {
-            "question": "В серверной реализации AAA какой протокол позволит роутеру успешно обмениваться данными с сервером AAA?",
+            "question": "В серверной реализации AAA какой протокол позволит маршрутизатору успешно обмениваться данными с сервером AAA?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answer": "802.1x",
                     "correct": false,
-                    "comment": "Тема 10.2.0 - При использовании серверной реализации AAA роутер использует для связи с сервером протокол Terminal Access Controller Access Control System (TACACS+) или протокол Remote Authentication Dial-In User Service (RADIUS). 802.1x — это протокол, используемый при проверке подлинности на основе портов."
+                    "comment": "Тема 10.2.0 - При использовании серверной реализации AAA маршрутизатор использует для связи с сервером протокол Terminal Access Controller Access Control System (TACACS+) или протокол Remote Authentication Dial-In User Service (RADIUS). 802.1x — это протокол, используемый при проверке подлинности на основе портов."
                 },
                 {
                     "answer": "RADIUS",
@@ -158,12 +158,12 @@
                 {
                     "answer": "SSH",
                     "correct": false,
-                    "comment": "Тема 10.2.0 - При использовании серверной реализации AAA роутер использует для связи с сервером протокол Terminal Access Controller Access Control System (TACACS+) или протокол Remote Authentication Dial-In User Service (RADIUS). SSH — это протокол, используемый для удаленного входа в систему"
+                    "comment": "Тема 10.2.0 - При использовании серверной реализации AAA маршрутизатор использует для связи с сервером протокол Terminal Access Controller Access Control System (TACACS+) или протокол Remote Authentication Dial-In User Service (RADIUS). SSH — это протокол, используемый для удаленного входа в систему"
                 },
                 {
                     "answer": "TACACS",
                     "correct": false,
-                    "comment": "Тема 10.2.0 - При использовании серверной реализации AAA роутер использует для связи с сервером протокол Terminal Access Controller Access Control System (TACACS+) или протокол Remote Authentication Dial-In User Service (RADIUS). SSH — это протокол, используемый для удаленного входа в систему. 802.1x — это протокол, используемый при проверке подлинности на основе портов. TACACS является устаревшим протоколом и больше не используется"
+                    "comment": "Тема 10.2.0 - При использовании серверной реализации AAA маршрутизатор использует для связи с сервером протокол Terminal Access Controller Access Control System (TACACS+) или протокол Remote Authentication Dial-In User Service (RADIUS). SSH — это протокол, используемый для удаленного входа в систему. 802.1x — это протокол, используемый при проверке подлинности на основе портов. TACACS является устаревшим протоколом и больше не используется"
                 }
             ]
         },
