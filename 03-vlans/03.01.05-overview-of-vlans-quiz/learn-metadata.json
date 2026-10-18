@@ -14,7 +14,7 @@
     },
     "questions": [
         {
-            "question": "Верно ли утверждение, что разделяя крупные широковещательные домены на более мелкие сети, VLAN повышают производительность сети?",
+            "question": "Верно ли утверждение, что, разделяя крупные широковещательные домены на более мелкие сети, VLAN повышают производительность сети?",
             "answerType": "singleChoice",
             "answers": [
                 {
@@ -48,16 +48,16 @@
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answer": "default VLAN",
+                    "answer": "VLAN по умолчанию",
                     "correct": false,
                     "comment": "Магистральным портам 802.1Q для передачи нетегированного трафика назначается Native VLAN"
                 },
                 {
-                    "answer": "native VLAN",
+                    "answer": "собственная VLAN (native VLAN)",
                     "correct": true
                 },
                 {
-                    "answer": "данные",
+                    "answer": "VLAN данных",
                     "correct": false,
                     "comment": "Магистральным портам 802.1Q для передачи нетегированного трафика назначается Native VLAN"
                 },
