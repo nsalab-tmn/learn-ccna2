@@ -29,7 +29,8 @@ The quizzes and exams are translations of the vendor's question banks. The de-ma
 2. **Review:** six reviewers each took a block of modules or exams and wrote findings with evidence (`README.md:line`, RFC or IEEE) and a proposed minimal fix. The CCNA1 lessons went into their brief: check every claim of a rewritten comment, keep bank twins word for word, and don't swap «роутер» / «хост».
 3. **Verification:** every finding was checked again before it went into a PR. The coordinator checked the quiz findings. Four second reviewers checked the exam findings, confirmed every key change on their own, and rewrote fixes where needed; the coordinator then read every error-severity fix. Fixes were checked against the glossary (`conventions/ru-glossary.md` in the knowledge base, with the rows decided in kb#279).
 4. **Fix PRs:** one per module block, so no two open PRs share a line. The bank copies live in learn-ccna1, so each exam block has a paired PR there with the same wording.
-5. **Doubtful items** are not changed. They go to the operator on kb#275: two defensible answers, content the course does not teach, a structural fix to the JSON, or a course text that is itself wrong.
+5. **Review of the fix PRs:** kb read every changed string of the quiz PRs. Its fixes, the optional suggestions taken and three operator items it judged fixable went into follow-up commits on the same PRs, and this report includes them.
+6. **Doubtful items** are not changed. They go to the operator on kb#275: two defensible answers, content the course does not teach, a structural fix to the JSON, or a course text that is itself wrong.
 
 Severity follows kb#275:
 - `error`: a wrong key, a distractor that is actually right, a wrong statement in a question or comment, or a comment copied from another question;
@@ -65,12 +66,12 @@ Findings are counted per file. A bank copy's finding counts separately from its 
 | | quizzes | exams | bank copies | all |
 |---|---|---|---|---|
 | error | 25 | 25 | 43 | 93 |
-| style | 215 | 134 | 180 | 529 |
+| style | 230 | 134 | 180 | 544 |
 | unclear | 13 | 8 | 19 | 40 |
-| **fixed** | 240 | 158 | 218 | 616 |
-| **to the operator** | 13 | 9 | 24 | 46 |
-| **rejected on verification** | 0 | 0 | 0 | 0 |
-| **total findings** | 253 | 167 | 242 | 662 |
+| **fixed** | 258 | 158 | 218 | 634 |
+| **to the operator** | 8 | 9 | 24 | 41 |
+| **rejected on verification** | 2 | 0 | 0 | 2 |
+| **total findings** | 268 | 167 | 242 | 677 |
 
 The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with their reasons, in the kb#275 comment for the operator.
 
@@ -83,6 +84,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 01.05.11-verify-directly-connected-networks-quiz | 2 | style | Broken MT construction: «для идентификации напрямую подключенных» has no noun, and the clause order is garbled. | #45 → «Каким кодом в таблице маршрутизации обозначаются напрямую подключенные маршруты?» |
 | 01.05.11-verify-directly-connected-networks-quiz | 2 | style | MT artefact: «RIP означает протокол маршрутизации, который является одним из первых протоколов маршрутизации» (calque of 'RIP stands for ...', tautological). | #45 → «RIP (Routing Information Protocol) — один из первых протоколов маршрутизации» |
 | 01.05.11-verify-directly-connected-networks-quiz | 3 | style | Mistranslation: «количество потоков пакетов» means 'number of packet flows'; the lecture says 'packet-flow counters'. | #45 → «счетчики потока пакетов» |
+| 01.05.11-verify-directly-connected-networks-quiz | 3 | style | «конфликты» mistranslates collisions (course term «коллизии»), and «счетчики потока пакетов» reads oddly; the comments change too (review suggestion) | #45 → «Какая команда будет отображать статистику потока пакетов, коллизии и сбои буфера на интерфейсе?» |
 | 01.05.11-verify-directly-connected-networks-quiz | 5 | style | Leftover English in an answer option: «pipe \|». | #45 → «"answer": "вертикальная черта \\|"» |
 | 01.05.11-verify-directly-connected-networks-quiz | 5 | style | Leftover English in an answer option: «comma ,». | #45 → «"answer": "запятая ,"» |
 | 01.05.11-verify-directly-connected-networks-quiz | 5 | style | Leftover English in an answer option: «colon :». | #45 → «"answer": "двоеточие :"» |
@@ -95,6 +97,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 01.06.04-quiz | 5 | style | Case error «настроил ... IP-адресом и маску» (instrumental instead of accusative); «ё» against the course convention. | #45 → «настроил для нее IP-адрес и маску подсети» |
 | 01.06.04-quiz | 8 | unclear | The router boot sequence (and 'setup mode', «режим настройки») is not taught in the course; module 1 covers only the switch boot sequence, which the comment cit… | operator (kb#275) |
 | 01.06.04-quiz | 11 | style | Punctuation error: comma after the introductory prepositional phrase before the question word. | #45 → «При настройке коммутатора для доступа SSH какую команду» |
+| 01.06.04-quiz | 11 | style | The stem says «коммутатор» twice (review suggestion) | #45 → «какую команду, связанную с login local, необходимо ввести?» |
 | 02.02.04-switching-domains-quiz | 1 | style | Broken construction: «между узлом ..., подключенным к коммутатору ...» names only one party after «между». | #45 → «Какая скорость будет автоматически согласована между узлом с NIC 1 Гбит/с и портом коммутатора 100 Мбит/с?» |
 | 02.02.04-switching-domains-quiz | 1 | style | Calque «согласовываться на более медленную скорость»; the comment calls the device «Хост» while the stem calls it «узел». | #45 → «Узел и коммутатор автоматически согласуют меньшую из двух скоростей — 100 Мбит/с» |
 | 02.02.04-switching-domains-quiz | 2 | style | Agreement error: singular «отделяет домен» is followed by plural «их не разделяют»; «отделяет» is also the wrong verb (the router separates domains from each ot… | #45 → «разделяет домены широковещательной рассылки. Точки» |
@@ -102,10 +105,12 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 02.03.02-quiz | 3 | style | MT artefact: «Какова значительная разница» (calque of 'What is a significant difference'). | #45 → «В чем существенное различие между концентратором» |
 | 02.03.02-quiz | 7 | style | Garbled MT: «Один коммутатор доступа в стойку» (from 'a single rack-unit access switch'). | #45 → «Коммутатор доступа высотой в одну монтажную единицу (1U) может иметь до 48 портов» |
 | 02.03.02-quiz | 11 | style | MT artefact: «Какой параметр» for 'Which statement'; the options are statements. | #45 → «Какое утверждение правильно описывает метод коммутации?» |
+| 02.03.02-quiz | 11 | style | Cyrillic «МАС» in the comments (review suggestion) | #45 → «MAC-адреса назначения» |
 | 03.01.05-overview-of-vlans-quiz | 1 | style | Punctuation: the participial phrase «разделяя ... сети» is not opened by a comma after «что». | #45 → «Верно ли утверждение, что, разделяя крупные» |
 | 03.01.05-overview-of-vlans-quiz | 3 | style | Leftover English answer label «default VLAN». | #45 → «"answer": "VLAN по умолчанию"» |
-| 03.01.05-overview-of-vlans-quiz | 3 | style | English-only answer label «native VLAN»; the lecture gives the Russian term with the English one in brackets. | #45 → «"answer": "собственная VLAN (native VLAN)"» |
+| 03.01.05-overview-of-vlans-quiz | 3 | style | English-only answer label «native VLAN»; the lecture gives the Russian term with the English one in brackets. | #45 → «"answer": "собственная VLAN"» |
 | 03.01.05-overview-of-vlans-quiz | 3 | style | Answer label «данные» is not a VLAN type name; the lecture calls it «VLAN данных». | #45 → «"answer": "VLAN данных"» |
+| 03.01.05-overview-of-vlans-quiz | 3 | style | English gloss moved from the key to the comment, so the key no longer stands out among the options (review suggestion) | #45 → «Магистральным портам 802.1Q для передачи нетегированного трафика назначается собственная VLAN (native VLAN)» |
 | 03.02.09-vlans-in-a-multi-switched-environment-quiz | 1 | style | Typo «сформированое» (double н required). | #45 → «PC1 и PC4 находятся в одной и той же VLAN 10, а широковещательное сообщение, сформированное» |
 | 03.02.09-vlans-in-a-multi-switched-environment-quiz | 2 | style | Agreement error «компьютерами, принимающий» and typo «сформированое». | #45 → «единственными компьютерами, принимающими широковещательную рассылку от PC2. Это связано с тем, что PC3, PC4 и PC6 находя…» |
 | 03.02.09-vlans-in-a-multi-switched-environment-quiz | 3 | style | Typo «сформированое» (double н required). | #45 → «PC3 и PC5 находятся в одной и той же VLAN 10, а широковещательное сообщение, сформированное» |
@@ -118,16 +123,18 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 03.06.04-quiz | 12 | error | Distractor «изучить согласование DTP» is defensible as correct: the module's own labs use show interface(s) trunk to confirm what DTP negotiated. The English or… | #45 → «"answer": "для наблюдения за согласованием DTP в реальном времени"» |
 | 03.06.04-quiz | 12 | style | Typo «на канал.»; the same comment on the other wrong answers reads «на канале». | #45 → «разрешенные VLAN на канале» |
 | 03.06.04-quiz | 14 | style | Mistranslation «встроенной VLAN» for native VLAN ('built-in VLAN'). | #45 → «должен быть тегирован в собственной VLAN» |
-| 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Clumsy/ungrammatical lead-in «Посмотрите каждую из топологий сценария» (singular «сценария» for three scenarios). | #45 → «Рассмотрите топологии трех сценариев. **Сценарий А**» |
+| 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Clumsy/ungrammatical lead-in «Посмотрите каждую из топологий сценария» (singular «сценария» for three scenarios). | #45 → «Рассмотрите топологии трех сценариев. **Сценарий A**» |
 | 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Truncated name «router-on-stick»; the course and the operator decision use «router-on-a-stick». | #45 → «решения маршрутизации между VLAN с использованием router-on-a-stick» |
 | 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Number error «Сценарии C — это решение» (plural noun, one scenario) and truncated «router-on-stick». | #45 → «Сценарий C — это решение маршрутизации между VLAN с использованием router-on-a-stick» |
 | 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Same number error «Сценарии C» and truncated «Router-on-stick» in the full explanation. | #45 → «Сценарий C — это решение маршрутизации между VLAN с использованием router-on-a-stick» |
-| 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Wrong answers 2 and 3 carry a truncated comment that only restates scenario A and does not say why B and C are misclassified; answer 1 has the full explanation.… | #45 comments rewritten: «Сценарий А — это решение для маршрутизации между VLAN уровня 3. Сценарий В — это устаревшее решение маршрутизации между …» |
+| 04.01.05-inter-vlan-routing-operation-quiz | 1 | style | Wrong answers 2 and 3 carry a truncated comment that only restates scenario A and does not say why B and C are misclassified; answer 1 has the full explanation.… | #45 comments rewritten: «Сценарий A — это решение для маршрутизации между VLAN уровня 3. Сценарий B — это устаревшее решение маршрутизации между …» |
 | 04.04.07-troubleshoot-inter-vlan-routing-quiz | 1 | style | Calque «проблему между VLAN» ('inter-VLAN issue'): a problem 'between VLANs' instead of an inter-VLAN routing problem. | #45 → «Вы устраняете проблему маршрутизации между VLAN на роутере.» |
 | 04.04.07-troubleshoot-inter-vlan-routing-quiz | 2 | style | Calque «проблему между VLAN» ('inter-VLAN issue'): a problem 'between VLANs' instead of an inter-VLAN routing problem. | #45 → «Вы устраняете проблему маршрутизации между VLAN на коммутаторе. Необходимо проверить список» |
 | 04.04.07-troubleshoot-inter-vlan-routing-quiz | 3 | style | Calque «проблему между VLAN» ('inter-VLAN issue'): a problem 'between VLANs' instead of an inter-VLAN routing problem. | #45 → «Вы устраняете проблему маршрутизации между VLAN на коммутаторе. Необходимо проверить состояние» |
+| 04.04.07-troubleshoot-inter-vlan-routing-quiz | 3 | style | Same short last sentence as Q1, Q2, Q4 (review suggestion) | #45 → «Какую команду вы используете для этого?» |
 | 04.04.07-troubleshoot-inter-vlan-routing-quiz | 4 | style | Calque «проблему между VLAN» ('inter-VLAN issue'): a problem 'between VLANs' instead of an inter-VLAN routing problem. | #45 → «Вы устраняете проблему маршрутизации между сетями VLAN на роутере» |
 | 04.04.07-troubleshoot-inter-vlan-routing-quiz | 4 | style | Comment names the command «show ip interfaces brief», which differs from the key «show ip interface brief». | #45 → «Команда show ip interface brief» |
+| 04.04.07-troubleshoot-inter-vlan-routing-quiz | 1, 2, 4 | style | After the first fix each stem said «маршрутизации между VLAN» twice (operator text rule); the last sentence is shortened (review) | #45 → «Какую команду вы используете для этого?» |
 | 04.05.04-quiz | 2 | error | Factually wrong comment: it says Layer 2 switches can do static routing; the course says a Layer 2 switch does not route. | #45 → «Коммутаторы уровня 2 не выполняют маршрутизацию, поэтому статические маршруты на них не обеспечат связь между VLAN» |
 | 04.05.04-quiz | 2 | style | Word-order MT artefact «каждого интерфейса физического маршрутизатора» ('each interface of the physical router'). | #45 → «подключение каждого физического интерфейса маршрутизатора» |
 | 04.05.04-quiz | 4 | style | Typo «подключеным». | #45 → «подключенным к SVI» |
@@ -138,7 +145,8 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 04.05.04-quiz | 15 | error | Comment repeats the wrong command (show ip interface); align it with the corrected key. | #45 → «Команды show interfaces и show running-config» |
 | 04.05.04-quiz | 15 | style | Case error «полезную информации». | #45 → «не выводит полезной информации» |
 | 05.02.12-stp-operations-quiz | 1 | style | MT word order: comma between the introductory adverbial and the question word ("По умолчанию (...), что будет определять"). | #46 → «Что по умолчанию (без какой-либо конфигурации на коммутаторе) будет определять,» |
-| 05.02.12-stp-operations-quiz | 1 | unclear | Distractor "идентификатор моста" is arguably correct: the root bridge is always the switch with the lowest BID; with default priorities the MAC address only bre… | operator (kb#275) |
+| 05.02.12-stp-operations-quiz | 1 | style | The stem repeats «коммутатор» (review suggestion) | #46 → «Что по умолчанию (без какой-либо настройки) определяет, какой коммутатор станет корневым мостом?» |
+| 05.02.12-stp-operations-quiz | 1 | unclear | Distractor «идентификатор моста» was arguably correct (the root is the switch with the lowest BID, as Q2 keys); it becomes the false «стоимость корневого пути» … | #46 → «"answer": "стоимость корневого пути"» |
 | 05.02.12-stp-operations-quiz | 2 | error | Key says "lowest root bridge ID" (Root ID, the BID of the current root carried in BPDUs, which converges to the same value on every switch); the criterion is th… | #46 → «"answer": "самым низким идентификатором моста"» |
 | 05.02.12-stp-operations-quiz | 3 | style | "к корневому мосту" repeated twice in one short stem. | #46 → «с точки зрения наименьшей общей стоимости пути (лучший путь) — это...» |
 | 05.02.12-stp-operations-quiz | 3 | style | "невыделенный порт" (non-designated port): the module calls designated ports «назначенный» and the old role «неназначенный»; «выделенный» is not its term. Same … | #46 → «заблокированный порт или неназначенный порт» |
@@ -149,7 +157,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 05.04.02-quiz | 2 | style | Comma between the fronted adverbial and the question word ("После завершения выбора корневого моста, как ..."). | #46 → «После завершения выбора корневого моста как коммутаторы» |
 | 05.04.02-quiz | 2 | style | Agreement error in all four answers: plural "проанализируют" followed by singular "использует". | #46 → «и используют» |
 | 05.04.02-quiz | 5 | style | "возникновение цикла": the module calls a switching loop «петля» throughout; «цикл» reads as a calque of "loop". | #46 → «чтобы предотвратить возникновение петли» |
-| 05.04.02-quiz | 6 | style | MT: "not intended to connect to another switch" is attached to the end devices instead of to the port, so the stem reads as end devices that are not meant to be… | #46 → «Какие понятия относятся к порту коммутатора, к которому предполагается подключать только оконечные устройства и никогда …» |
+| 05.04.02-quiz | 6 | style | MT: "not intended to connect to another switch" is attached to the end devices instead of to the port, so the stem reads as end devices that are not meant to be… | #46 → «Какие понятия относятся к порту, к которому предполагается подключать только оконечные устройства и никогда — другой ком…» |
 | 05.04.02-quiz | 6 | style | "состояние переадресации": «переадресация» means redirect; the port state is forwarding («пересылка»). | #46 → «состояние пересылки, пропуская таким образом состояния прослушивания и обучения» |
 | 05.04.02-quiz | 6 | style | Copies on answers 4 and 5 differ from answer 1: missing spaces after periods ("коммутатору.Пограничные", "времени.PVST+"), "переадресации" for forwarding, and "… | #46 → «коммутатору. Пограничные порты RSTP должны немедленно перейти в состояние пересылки, пропуская таким образом состояния п…» |
 | 05.04.02-quiz | 6 | unclear | Key "пограничный порт" (RSTP edge port) is not taught anywhere in the course; only the comment explains it, so the second key cannot be derived from the module. | operator (kb#275) |
@@ -169,6 +177,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 06.01.10-etherchannel-operation-quiz | 6 | style | Agreement: two subjects ("On > On и Auto > Desirable") with a singular verb "образует". | #46 → «Auto > Desirable образуют EtherChannel» |
 | 06.04.04-quiz | 1 | style | Comma between the fronted adverbial and the question word ("При проверке конфигурации, какая ..."). | #46 → «При проверке конфигурации какая комбинация» |
 | 06.04.04-quiz | 2 | style | Comma between the fronted adverbial and the question word ("... для EtherChannel, в каком режиме"). | #46 → «диапазона портов для EtherChannel в каком режиме необходимо настроить PAgP» |
+| 06.04.04-quiz | 2 | style | «При настройке … необходимо настроить» repeats the verb (review suggestion) | #46 → «При настройке диапазона портов для EtherChannel какой режим PAgP нужно выбрать, чтобы порт сам инициировал согласование?» |
 | 06.04.04-quiz | 5 | error | Comment says a "shortest-path tree" recalculation is not required; the protocol in question is STP (spanning tree). The shortest-path tree is a different (link-… | #46 → «пересчет связующего дерева не требуется» |
 | 06.04.04-quiz | 5 | style | "один из входящих портов EtherChannel" reads as "one of the incoming ports"; meant: one of the ports that belong to the EtherChannel. | #46 → «Когда один из портов, входящих в EtherChannel, выходит из строя» |
 | 06.04.04-quiz | 7 | style | Comma between the fronted adverbial and the question word ("... с помощью PAgP, какой режим"). | #46 → «с помощью PAgP какой режим» |
@@ -177,6 +186,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 06.04.04-quiz | 11 | style | Comma before the final "и" in a list ("desirable/auto, и desirable/desirable"). | #46 → «desirable/auto и desirable/desirable» |
 | 06.04.04-quiz | 12 | style | Grammar: "LACP, также известен как" needs the participle "известный". | #46 → «LACP, также известный как IEEE 802.3ad» |
 | 06.04.04-quiz | 13 | style | Comma between the fronted adverbial and the question word ("... для EtherChannel, в каком режиме"). | #46 → «диапазона портов для EtherChannel в каком режиме необходимо настроить LACP» |
+| 06.04.04-quiz | 13 | style | «При настройке … необходимо настроить» repeats the verb (review suggestion) | #46 → «При настройке диапазона портов для EtherChannel какой режим LACP нужно выбрать, чтобы порт сам инициировал согласование?» |
 | 06.04.04-quiz | 14 | style | "в пакете EtherChannel": "bundle" calqued as «пакет» (packet), which is misleading; the module says «объединение». | #46 → «Все порты в объединении EtherChannel» |
 | 06.04.04-quiz | 15 | style | Comma between the fronted adverbial and the question word ("... с помощью LACP, какой режим"). | #46 → «с помощью LACP какой режим» |
 | 07.01.05-dhcpv4-concepts-quiz | 1 | style | Typo "DCHPOFFER" (should be DHCPOFFER), in Q1 and Q3. | #46 → «"answer": "DHCPOFFER"» |
@@ -194,8 +204,9 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 08.01.05-ipv6-global-unicast-address-assigment-quiz | 2 | style | Broken word order: "метод без учета состояния распределения IPv6-адресов" (the qualifier splits "метод распределения"); also "DHCP-сервер" where the key says DH… | #46 → «SLAAC с сервером DHCPv6 — это метод распределения IPv6-адресов без сохранения состояния» |
 | 08.02.07-slaac-quiz | 2 | style | Leftover English in prose: "multicast адрес". | #46 → «(адрес многоадресной рассылки ff02::2)» |
 | 08.03.06-dhcpv6-quiz | 3 | style | Duplicated "DHCPv6" ("с сохранением состояния DHCPv6") and a missing comma before the second clause. | #46 → «с сохранением состояния, и сообщение» |
-| 08.05.03-quiz | 1 | error | Key says the DAD Neighbor Solicitation is sent with the host's own IPv6 address as the destination; DAD sends it to the solicited-node multicast address, with t… | #46 → «отправить сообщение ICMPv6 «Запрос соседнего узла» (Neighbor Solicitation, NS) о собственном IPv6-адресе» |
-| 08.05.03-quiz | 1 | error | Same error in the comment: NS "со своим собственным IPv6 в качестве адреса назначения", and NS called "Обнаружение соседей". | #46 → «Он отправляет сообщение ICMPv6 «Запрос соседнего узла» (Neighbor Solicitation, NS) о своем IPv6-адресе на адрес многоадр…» |
+| 08.03.06-dhcpv6-quiz | 3 | style | «DHCPv6 без состояния» next to «с сохранением состояния»; the glossary pair is «без сохранения состояния» (review suggestion) | #46 → «если он использует DHCPv6 без сохранения состояния» |
+| 08.05.03-quiz | 1 | error | Key says the DAD Neighbor Solicitation is sent with the host's own IPv6 address as the destination; DAD sends it to the solicited-node multicast address, with t… | #46 → «отправить сообщение ICMPv6 «Запрос соседа» (Neighbor Solicitation, NS) о собственном IPv6-адресе» |
+| 08.05.03-quiz | 1 | error | Same error in the comment: NS "со своим собственным IPv6 в качестве адреса назначения", and NS called "Обнаружение соседей". | #46 → «Он отправляет сообщение ICMPv6 «Запрос соседа» (Neighbor Solicitation, NS) о своем IPv6-адресе на адрес многоадресной ра…» |
 | 08.05.03-quiz | 2 | style | Calque "для изучения адреса шлюза по умолчанию" ("to learn the address"). | #46 → «чтобы узнать адрес шлюза по умолчанию?» |
 | 08.05.03-quiz | 2 | style | Missing space: "роутера(RA)". | #46 → «а (RA)»» |
 | 08.05.03-quiz | 3 | style | Calque "для создания идентификатора интерфейса с помощью хоста IPv6" ("by an IPv6 host"); reads as if the host were a tool. | #46 → «Какие методы может использовать хост IPv6, работающий по SLAAC, для создания идентификатора интерфейса?» |
@@ -203,7 +214,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 08.05.03-quiz | 5 | style | Missing space: "интерфейсероутера". | #46 → «интерфейсе ро» |
 | 08.05.03-quiz | 7 | error | Comment says FF02::1:2 corresponds to "all DHCP routers"; it is the All_DHCP_Relay_Agents_and_Servers group. Also "DHCP SOLICIT" for the DHCPv6 message. | #46 → «сообщение DHCPv6 SOLICIT на групповой адрес FF02::1:2, который прослушивают все серверы DHCPv6 и агенты ретрансляции» |
 | 08.05.03-quiz | 10 | style | Calque "используется в ICMPv6 для хоста, чтобы проверить" and "настройкой в интерфейсе". | #46 → «Какой процесс на основе ICMPv6 используется хостом, чтобы проверить уникальность IPv6-адреса перед его назначением интер…» |
-| 08.05.03-quiz | 10 | style | NS mistranslated as "Обнаружение соседей" (Neighbor Discovery, the protocol), and "на собственный IPv6-адрес" suggests it is addressed to the own address. | #46 → «сообщения «Запрос соседнего узла» (Neighbor Solicitation, NS) о собственном IPv6-адресе» |
+| 08.05.03-quiz | 10 | style | NS mistranslated as "Обнаружение соседей" (Neighbor Discovery, the protocol), and "на собственный IPv6-адрес" suggests it is addressed to the own address. | #46 → «сообщения «Запрос соседа» (Neighbor Solicitation, NS) о собственном IPv6-адресе» |
 | 08.05.03-quiz | 11 | style | Broken word order: "метод без учета состояния получения адреса IPv6". | #46 → «SLAAC — это метод получения адреса IPv6 без сохранения состояния, который не требует серверов» |
 | 08.05.03-quiz | 13 | style | "без контроля состояния": a rendering of "stateless" the module never uses (and the comment says "с сохранением состояния или без"). | #46 → «сервера DHCPv6 без сохранения состояния» |
 | 08.05.03-quiz | 13 | style | "с контролем состояния": a rendering of "stateful" the module never uses. | #46 → «сервера DHCPv6 с сохранением состояния» |
@@ -215,15 +226,17 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 09.01.05-first-hop-redundancy-protocol-quiz | 4 | style | Same calque in the comment: "входящее в группу виртуальных". | #46 → «входящее в группу виртуального маршрутизатора, которому назначена роль шлюза» |
 | 09.02.04-hsrp-quiz | 2 | style | Wrong government: "перенимает на себя роль активного с существующего устройства" (should be "у"). | #46 → «он перенимает роль активного у существующего устройства» |
 | 09.03.02-quiz | 3 | style | Stem asks for characteristics (plural) but the question is singleChoice with one key. | #46 → «Укажите характеристику VRRPv3.» |
-| 09.03.02-quiz | 4 | style | Missing noun: "а все остальные HSRP поддерживают состояние резервирования" (all other HSRP [routers]). | #46 → «а все остальные маршрутизаторы HSRP поддерживают состояние резервирования» |
-| 09.03.02-quiz | 6 | style | Leftover English in an answer: "hostname" (the comment says "имя хоста"). | #46 → «"answer": "имя хоста"» |
+| 09.03.02-quiz | 4 | style | Missing noun: "а все остальные HSRP поддерживают состояние резервирования" (all other HSRP [routers]). | #46 → «а остальные находятся в резерве» |
+| 09.03.02-quiz | 4 | style | The comment repeats HSRP in its last clause (review suggestion) | #46 → «и поддерживает адресацию IPv6» |
+| 09.03.02-quiz | 6 | style | Leftover English in an answer: "hostname" (the comment says "имя хоста"). | #46 → «"answer": "имя узла"» |
 | 09.03.02-quiz | 6 | style | Calque "представлял иллюзию" ("present the illusion"); the module and 09.01.05 say "создать иллюзию". | #46 → «создавал иллюзию» |
+| 09.03.02-quiz | 6 | style | "hostname" rendered «имя хоста» in the comments; the glossary decides «узел» instead of «хост» (review) | #46 → «BID или имя узла в этом контексте» |
 | 09.03.02-quiz | 7 | style | Clumsy calque "Чем представляется в терминологии FHRP набор роутеров"; meant: what the set is called. | #46 → «Как в терминологии FHRP называется набор» |
-| 09.03.02-quiz | 11 | unclear | GLBP details (number of gateways, virtual MACs, IPv6) are not taught; the module only says GLBP balances load. The comment claims there is no four-gateway limit… | operator (kb#275) |
+| 09.03.02-quiz | 11 | unclear | GLBP allows at most four active forwarders per group, so the distractor «максимум для четырех шлюзов» was true and the comment wrong; the distractor now says «т… | #46 → «"answer": "обеспечивает балансировку нагрузки только между двумя шлюзами"» |
 | 10.01.06-endpoint-security-quiz | 1 | unclear | Distractor 'вредоносное ПО' is defensible: the module classifies ransomware as a malware attack, and the comment on that option does not say why it is wrong | operator (kb#275) |
 | 10.01.06-endpoint-security-quiz | 2 | style | Calque 'могут быть настроены с мерами безопасности' (configured with security measures) | #47 → «Хотя на коммутаторе и WLC можно настроить функции безопасности» |
 | 10.01.06-endpoint-security-quiz | 3 | style | Broken purpose chain 'чтобы блокировать ... и шифровать ... и предотвратить': two 'и' and a perfective verb mixed with imperfectives; data-loss prevention is th… | #47 → «чтобы блокировать угрозы и шифровать исходящие сообщения для предотвращения потери данных?» |
-| 10.02.07-access-control-quiz | 1 | style | Clumsy inversion 'Собирает данные и формирует отчеты учет AAA': the object 'отчеты' runs into the subject 'учет AAA' | #47 → «Сбор данных и формирование отчетов – задача учета AAA» |
+| 10.02.07-access-control-quiz | 1 | style | Clumsy inversion 'Собирает данные и формирует отчеты учет AAA': the object 'отчеты' runs into the subject 'учет AAA' | #47 → «Сбор данных и формирование отчетов — задача учета AAA» |
 | 10.02.07-access-control-quiz | 4 | style | English-style comma after the introductory phrase in a question | #47 → «В реализации 802.1X какое устройство» |
 | 10.03.04-layer-2-security-threats-quiz | 1 | style | 'для защиты от 3 до 7 уровня' reads as 'protection against layers 3 to 7'; range should be 'уровней с 3 по 7' | #47 → «используются для защиты уровней с 3 по 7 модели OSI?» |
 | 10.03.04-layer-2-security-threats-quiz | 1 | style | Comment says 'уровня с 3 до 7' (mixed range construction) and names option 1 in English 'DHCP Snooping' while the option says 'анализ DHCP-трафика' | #47 → «угроз на уровнях с 3 по 7. Анализ DHCP-трафика и IPSG» |
@@ -235,8 +248,8 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 10.04.04-mac-address-table-attack-quiz | 3 | style | Leftover English 'Port security' as the key answer | #47 → «"answer": "безопасность портов"» |
 | 10.04.04-mac-address-table-attack-quiz | 3 | style | Calque 'методом снижения атак' (mitigating attacks) and 'обеспечение безопасности порта' | #47 → «Основным методом защиты от атак на таблицу MAC-адресов является безопасность портов» |
 | 10.05.11-lan-attacks-quiz | 1 | style | Broken government 'выдать себя за другое ... устройство, например, как шлюз' (should be 'за шлюз') | #47 → «чтобы выдать себя за другое легитимное устройство, например за шлюз по умолчанию» |
-| 10.05.11-lan-attacks-quiz | 4 | style | Typo 'незапрощенный' and broken construction 'полагать, что его устройство является законным, например, как шлюз' | #47 → «Злоумышленник может отправить незапрошенный (gratuitous) ARP-ответ, заставляющий все устройства считать его устройство з…» |
-| 10.06.02-quiz | 2 | unclear | Key CDP is a vendor-proprietary protocol; distractor LLDP is defensible in a vendor-neutral course, since many vendors ship LLDP enabled by default (the stem as… | operator (kb#275) |
+| 10.05.11-lan-attacks-quiz | 4 | style | Typo 'незапрощенный' and broken construction 'полагать, что его устройство является законным, например, как шлюз' | #47 → «Злоумышленник может отправить незапрошенный (gratuitous) ARP-ответ, заставляющий остальные узлы считать его устройство л…» |
+| 10.06.02-quiz | 2 | unclear | Key CDP next to the defensible LLDP for «включен по умолчанию на многих роутерах»; the stem now asks for the proprietary service (moved from the operator list a… | #47 → «Какой проприетарный сервис, по умолчанию включенный на многих роутерах, может выдать значимую информацию о нем» |
 | 10.06.02-quiz | 4 | style | 'МАС' typed in Cyrillic letters, plus a stray final period in the option | #47 → «"переполнение таблицы MAC-адресов"» |
 | 10.06.02-quiz | 5 | style | Leftover English 'Topic' instead of 'Тема' (the other comments in the file use 'Тема') | #47 → «Тема 10.2.0 - Метод аутентификации» |
 | 10.06.02-quiz | 6 | error | Answer 4 is text copied from Q12 ('подставной DHCP-сервер предоставляет ложные параметры...'), not a protocol; its own comment shows the intended option was TAC… | #47 comments emptied |
@@ -261,9 +274,10 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 11.06.04-quiz | 2 | style | Key 'применимо ко всем портам конечного пользователя' does not answer 'На каких портах...' and does not match the other options' form | #47 → «"answer": "на всех портах конечного пользователя"» |
 | 11.06.04-quiz | 4 | style | Leftover English 'port security' as the key answer (Q4 and Q12) | #47 → «"answer": "безопасность портов",» |
 | 11.06.04-quiz | 4 | style | English 'port security' in prose and the ungrammatical calque 'блокировать вредоносные от выдачи информации' | #47 → «Функция безопасности портов может ограничивать количество динамически изучаемых MAC-адресов на порт или разрешать подклю…» |
-| 11.06.04-quiz | 5 | error | Key is mistranslated: 'согласования внешних линий для внешних портов' (external lines/ports) instead of trunk negotiation on trunk ports, so the correct answer … | #47 → «отключение согласования магистрального канала на магистральных портах и статическая настройка немагистральных портов в к…» |
+| 11.06.04-quiz | 5 | error | Key is mistranslated: 'согласования внешних линий для внешних портов' (external lines/ports) instead of trunk negotiation on trunk ports, so the correct answer … | #47 → «отключение согласования на магистральных каналах и перевод всех остальных портов в режим доступа» |
 | 11.06.04-quiz | 5 | style | Distractor uses ISL, a vendor-proprietary trunking encapsulation that the course never mentions | #47 → «использование инкапсуляции 802.1Q на всех магистральных каналах» |
 | 11.06.04-quiz | 5 | style | Tautology with leftover English 'протокола Spanning Tree Protocol (STP)' | #47 → «Отключение протокола связующего дерева (STP) на это не повлияет» |
+| 11.06.04-quiz | 5 | style | «нетранковых» in the distractor while the key avoids «транк» (review suggestion) | #47 → «отключение STP на всех немагистральных портах» |
 | 11.06.04-quiz | 6 | style | Leftover English 'port security' in an answer option | #47 → «"answer": "включение безопасности портов глобально"» |
 | 11.06.04-quiz | 7 | style | Redundant 'типы портов коммутаторов используются на коммутаторах' and the calque 'в составе средств защиты' | #47 → «Какие типы портов используются на коммутаторах для защиты от атак DHCP-спуфинга?» |
 | 11.06.04-quiz | 9 | style | Leftover English 'port security' in an answer option | #47 → «а затем повторно включить безопасность портов» |
@@ -292,15 +306,16 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 14.01.07-path-determination-quiz | 1 | style | Distractor renders "neighbor cache" as "кэш соседнего устройства" (a neighbouring device's cache); the module term is «кэш соседей». | #48 → «"answer": "кэш соседей"» |
 | 14.01.07-path-determination-quiz | 3 | style | Participial phrase after the noun is not set off by a comma. | #48 → «"маршруты, полученные через протокол динамической маршрутизации"» |
 | 14.02.04-packet-forwarding-quiz | 2 | style | Typo: "IPv4 пакета" lacks the hyphen used everywhere else ("IPv4-пакета", Q1). | #48 → «"на устройство с адресом назначения IPv4-пакета"» |
-| 14.02.04-packet-forwarding-quiz | 3 | unclear | Asks for the default forwarding mechanism "in the router OS" with key CEF, a Cisco-proprietary mechanism and a vendor default. The lecture still teaches CEF, so… | operator (kb#275) |
+| 14.02.04-packet-forwarding-quiz | 3 | unclear | Asks for the default forwarding mechanism "in the router OS" with key CEF, a Cisco-proprietary mechanism and a vendor default. The lecture still teaches CEF, so… | rejected: kb (review of learn-ccna2#48): CEF stays as a technology (ADR principle 3) and 14.02 teaches it, so the question stays as it is |
 | 14.04.13-ip-routing-table-quiz | 1 | style | Clumsy genitive chain and redundancy: «информация о маршруте пути … об обратном маршруте или пути возврата». | #48 → «информация о пути из одной сети в другую также предоставляет сведения об обратном пути» |
+| 14.04.13-ip-routing-table-quiz | 1 | style | «не верен» → «неверен», as fixed elsewhere (review suggestion) | #48 → «Какой принцип таблицы маршрутизации неверен?» |
 | 14.04.13-ip-routing-table-quiz | 3 | style | Comma before «и» joining two homogeneous clauses under one «если». | #48 → «доступен один маршрут и у роутера» |
 | 14.04.13-ip-routing-table-quiz | 6 | style | Agreement error garbles the stem: masculine «который был автоматически определен» attaches to «статический маршрут», so it says the static route was learned by … | #48 → «Администратор настраивает статический маршрут к сети назначения, о которой маршрутизатор уже узнал автоматически с помощ…» |
-| 14.05.06-static-and-dynamic-routing-quiz | 4 | style | Colloquial definition «— это когда роутер имеет …»; not literary Russian. | #48 → «Балансировка нагрузки с равной стоимостью — это отправка пакетов по двум или более путям к месту назначения с метриками …» |
+| 14.05.06-static-and-dynamic-routing-quiz | 4 | style | Colloquial definition «— это когда роутер имеет …»; not literary Russian. | #48 → «Балансировка нагрузки с равной стоимостью — это отправка пакетов по двум или более путям к месту назначения с одинаковой…» |
 | 14.06.02-quiz | 1 | style | English left in an answer option: "next-hop". | #48 → «"answer": "следующий переход"» |
 | 14.06.02-quiz | 1 | style | MT artefact: «— это назначения для отправки трафика после его сопоставления в роутере». | #48 → «Следующий переход или выходной интерфейс указывают, куда отправить трафик после того, как для него найден маршрут» |
 | 14.06.02-quiz | 2 | style | MT artefacts: calque «для размещения растущей сети» and tautology «Вмешательство требуется …, когда требуется изменение маршрута». | #48 → «Они плохо масштабируются, так как по мере роста сети их приходится перенастраивать вручную. Любое изменение маршрута тре…» |
-| 14.06.02-quiz | 6 | unclear | Question is about CEF (FIB + adjacency table → "CEF"), a Cisco-proprietary mechanism. The lecture still teaches CEF; de-marketing item 2.5 renames it to «пересы… | operator (kb#275) |
+| 14.06.02-quiz | 6 | unclear | Question is about CEF (FIB + adjacency table → "CEF"), a Cisco-proprietary mechanism. The lecture still teaches CEF; de-marketing item 2.5 renames it to «пересы… | rejected: kb (review of learn-ccna2#48): CEF stays as a technology (ADR principle 3) and 14.02 teaches it, so the question stays as it is |
 | 14.06.02-quiz | 7 | style | Wrong case «используется на пограничный роутер» (should be prepositional), and English left in prose «маршрут quad zero»; the course term is «маршрут с четырьмя… | #48 → «Маршрут по умолчанию обычно используется на пограничном роутере компании для подключения к поставщику услуг Интернета. М…» |
 | 14.06.02-quiz | 9 | style | Collocation error «самая быстрая пропускная способность» (calque of "fastest bandwidth"); bandwidth is high, not fast. | #48 → «"самая высокая пропускная способность исходящих интерфейсов"» |
 | 14.06.02-quiz | 10 | style | Route-source code typed as Cyrillic «Н» (U+041D) instead of Latin "H" (the NHRP code in the table legend). | #48 → «"answer": "H"» |
@@ -312,6 +327,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 15.01.08-static-routes-quiz | 1 | error | The key says the next hop is identified by the "destination IP address". The next hop is identified by its own IP address (and/or the exit interface), not by th… | #48 → «"answer": "IP-адрес следующего перехода"» |
 | 15.01.08-static-routes-quiz | 1 | error | The comment repeats the error: «по IP-адресу назначения и/или выходному интерфейсу». | #48 → «по его IP-адресу и/или по выходному интерфейсу» |
 | 15.01.08-static-routes-quiz | 2 | error | The distractor «сеть назначения определяется с помощью сетевого адреса и маски» is a true statement about an IPv4 static route, so the question has two correct … | #48 → «"сеть назначения определяется только сетевым адресом, без маски подсети"» |
+| 15.01.08-static-routes-quiz | 2 | style | The rewritten distractor was false but easy to dismiss; «…сетевого адреса и шаблонной маски» is plausible, and the comment now explains it (review suggestion) | #48 → «"answer": "сеть назначения определяется с помощью сетевого адреса и шаблонной маски"» |
 | 15.01.08-static-routes-quiz | 3 | style | Stray comma between subject and predicate: «… в статическом маршруте IPv6, идентифицируется». | #48 → «Сеть назначения в статическом маршруте IPv6 идентифицируется» |
 | 15.01.08-static-routes-quiz | 3 | style | Dangling gerund: «используя только префикс IPv6» answers a passive «Как определяется сеть…?», and breaks the parallel with the other options («с помощью …»). | #48 → «"только с помощью префикса IPv6"» |
 | 15.06.04-quiz | 4 | error | The comment says a floating static route has a higher metric than dynamic routes; it has a higher administrative distance. | #48 → «Плавающий статический маршрут имеет более высокое административное расстояние, чем основной маршрут, и служит резервным» |
@@ -326,10 +342,10 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 16.01.02-packet-processing-with-static-routes-quiz | 2 | style | Typo «состоящийиз» (missing space) and missing comma before the participial phrase. | #48 → «использует адрес назначения, состоящий из всех единиц» |
 | 16.03.04-quiz | 1 | style | MT artefacts: tautology «проверка MAC-адреса … для проверки того», dangling gerund «Предполагая, что …, поле «Тип Ethernet» проверяется», and a missing comma be… | #48 → «Когда роутер получает пакет, он сначала проверяет MAC-адрес назначения, чтобы решить, нужно ли обрабатывать пакет дальше…» |
 | 16.03.04-quiz | 2 | style | MT error changes the meaning: «помогающие устранять статические маршруты» says the commands help remove static routes, not troubleshoot them. | #48 → «помогающие устранять неполадки статических маршрутов» |
-| 16.03.04-quiz | 3 | style | «интерфейса, находящегося по адресу следующего перехода» says the interface at the next-hop address, which is on the neighbour; show ip interface brief shows on… | #48 → «интерфейса, подключенного к сети следующего перехода» |
+| 16.03.04-quiz | 3 | style | «интерфейса, находящегося по адресу следующего перехода» says the interface at the next-hop address, which is on the neighbour; show ip interface brief shows on… | #48 → «интерфейса, через который доступен адрес следующего перехода» |
 | 16.03.04-quiz | 5 | style | «Какой оператор описывает …» mistranslates "statement"; «оператор» means operator. | #48 → «Какое утверждение описывает последовательность процессов» |
-| 16.03.04-quiz | 6 | style | CDP leftover: the stem asks about `show cdp neighbor`, but the module now presents the standard LLDP (`show lldp neighbors`) for this check, and de-marketing it… | #48 → «вводит команду `show lldp neighbors` на нескольких устройствах при документировании сети» |
-| 16.03.04-quiz | 6 | style | The comments name the CDP command; they follow the stem change to LLDP. | #48 → «Команда show lldp neighbors выводит сведения о напрямую подключенных соседних устройствах» |
+| 16.03.04-quiz | 6 | style | Stem: the singular «show cdp neighbor» and the calque «в процессе сетевой документации» | #48 → «вводит команду `show cdp neighbors` на нескольких устройствах при документировании сети» |
+| 16.03.04-quiz | 6 | style | The comment names the singular command; it now names `show cdp neighbors` and mentions LLDP beside it, as 16.02 does | #48 → «Команда show cdp neighbors (как и show lldp neighbors для протокола LLDP) выводит сведения о напрямую подключенных сосед…» |
 | 16.03.04-quiz | 8 | style | MT errors: «статическая сеть» for a static route, and «этот маршрут не обязательно должен находиться в состоянии «up/up» … на удаленном роутере» (routes have no… | #48 → «правильно введенный статический маршрут не попадает в таблицу маршрутизации, если выходной интерфейс недоступен. 192.168…» |
 | 16.03.04-quiz | 9 | style | The key says the router «удалит» (deletes) the packet; the course and this question's own comment say «отбрасывает» (drops). | #48 → «"answer": "отбросит его"» |
 
@@ -609,7 +625,7 @@ Errors in the lecture text that the review ran into. None of them is changed by 
 | `11-switch-security-configuration/11.04-mitigate-arp-attacks/README.md:53` | each new `ip arp inspection validate` command «просматривает предыдущую»; it replaces the previous one. The exam comments are fixed in learn-ccna2#50 |
 | `12-wlan-concepts/12.04-capwap-operation/README.md:13` | CAPWAP called «стандартный протокол IEEE»; it is an IETF standard (RFC 5415). 10-13-exam Q68 repeats it and waits for this line |
 
-Two vendor items in the lecture text are known and planned, not new: CEF is still taught in 14.02 (de-marketing item 2.5, which also lists 14.02.04 q3 and 14.06.02 q6), and CDP still appears in 03.02, 10.05, 10.06, 13.02 and 16.02 next to LLDP.
+CEF and CDP stay in the lectures as technologies (ADR principle 3, confirmed by kb's review of learn-ccna2#48), so the questions about them stay as they are: 14.02.04 q3 and 14.06.02 q6 are recorded as "rejected" with that reason, and 16.03.04 q6 keeps `show cdp neighbors`.
 
 ## Follow-ups
 
