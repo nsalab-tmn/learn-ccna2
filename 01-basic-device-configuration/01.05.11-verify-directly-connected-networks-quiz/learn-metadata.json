@@ -64,7 +64,7 @@
             ]
         },
         {
-            "question": "Какая команда будет отображать счетчики потока пакетов, конфликты и сбои буфера на интерфейсе?",
+            "question": "Какая команда будет отображать статистику потока пакетов, коллизии и сбои буфера на интерфейсе?",
             "answerType": "singleChoice",
             "answers": [
                 {
@@ -74,12 +74,12 @@
                 {
                     "answer": "show ip interface",
                     "correct": false,
-                    "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, конфликты и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
+                    "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, коллизии и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
                 },
                 {
                     "answer": "show running-config interface",
                     "correct": false,
-                    "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, конфликты и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
+                    "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, коллизии и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
                 }
             ]
         },
