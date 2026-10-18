@@ -464,7 +464,7 @@ R1(config)#
 <!-- 8.4.8 -->
 ## Проверка агента ретрансляции DHCPv6
 
-Убедитесь, что агент ретрансляции DHCPv6 работает командами **show ipv6 dhcp interface** и **show ipv6 dhcp binding**. Проверьте, что хосты Windows получили информацию об адресации IPv6 с помощью команды **ipconfig /all**. 
+Убедитесь, что агент ретрансляции DHCPv6 работает командами **show ipv6 dhcp interface** и **show ipv6 dhcp binding**. Проверьте, что узлы Windows получили информацию об адресации IPv6 с помощью команды **ipconfig /all**. 
 
 **show ipv6 dhcp interface**
 
