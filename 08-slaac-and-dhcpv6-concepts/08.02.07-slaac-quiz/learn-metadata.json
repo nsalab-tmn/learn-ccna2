@@ -44,7 +44,7 @@
                 {
                     "answer": "ip routing",
                     "correct": false,
-                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (multicast адрес ff02::2)"
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (адрес многоадресной рассылки ff02::2)"
                 },
                 {
                     "answer": "ipv6 unicast-routing",
@@ -53,12 +53,12 @@
                 {
                     "answer": "ipv6 address (ipv6-address/prefix-length)",
                     "correct": false,
-                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (multicast адрес ff02::2)"
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (адрес многоадресной рассылки ff02::2)"
                 },
                 {
                     "answer": "ipv6 address (ipv6-address) link-local",
                     "correct": false,
-                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (multicast адрес ff02::2)"
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы роутер присоединился к группе IPv6 all-routers (адрес многоадресной рассылки ff02::2)"
                 }
             ]
         },
