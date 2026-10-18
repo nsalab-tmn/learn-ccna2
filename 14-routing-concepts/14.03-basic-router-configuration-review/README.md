@@ -332,7 +332,7 @@ R1#
 ```
 R1# show running-config | section line vty
 line vty 0 4
- password 7 121A0C0411044C
+ password 7 121700031E0A0E
  login
  transport input telnet ssh
 R1#
