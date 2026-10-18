@@ -1,5 +1,5 @@
 {
-    "title": "Автоматическая конфигурация хостов в сетях IPv6 (DHCPv6)",
+    "title": "DHCPv6",
     "materialType": "lecture",
     "description": "Как работает протокол DHCP в IPv6-сетях? Чем DHCPv6 отличается от SLAAC?",
     "difficulty": 3,
