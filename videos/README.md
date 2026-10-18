@@ -8,7 +8,7 @@
 
 Колонка «Видеоряд (Figma)» в таблице фиксирует прогресс пересборки: по каким видео собран новый видеоряд — анимация Figma Motion на нашей дизайн-системе, тем же методом, что в CCNA1. Голосовая дорожка — отдельный трек, пока не начат ни для одного видео.
 
-**Готово: 1 из 15** (explainer — 1 из 8) · собрано и ждёт приёмки (Motion): 1.
+**Готово: 1 из 15** (explainer — 1 из 8) · собрано и ждёт приёмки (Motion): 2.
 
 | статус | значит |
 |---|---|
@@ -29,7 +29,7 @@
 | `ye_f86EfTl8` | 10-lan-security-concepts / 10.05-lan-attacks | Атаки на VLAN и DHCP | 5:41 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (double-tagging, DHCP spoofing) | — | [10.05--ye_f86EfTl8](10-lan-security-concepts/10.05-lan-attacks--ye_f86EfTl8.md) |
 | `JhiaFeH9ZOU` | 10-lan-security-concepts / 10.05-lan-attacks | ARP-атаки, STP-атаки, CDP-разведка | 6:14 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (ARP poisoning, STP root) | — | [10.05--JhiaFeH9ZOU](10-lan-security-concepts/10.05-lan-attacks--JhiaFeH9ZOU.md) |
 | `3bOfIlu0BzI` | 12-wlan-concepts / 12.02-components-of-wlans | Компоненты WLAN | 6:12 | explainer (ведущий с железом) | текст + иллюстрация (опц. Figma ≤ 45 с) | Motion · 1:26 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5145-8215) | [12.02--3bOfIlu0BzI](12-wlan-concepts/12.02-components-of-wlans--3bOfIlu0BzI.md) |
-| `XI_F7TvuDBs` | 12-wlan-concepts / 12.03-wlan-operation | Принципы работы WLAN | 11:50 | explainer (слайды) | текст + иллюстрация; опц. 2 анимации Figma ≤ 45 с (CSMA/CA, обнаружение) | — | [12.03--XI_F7TvuDBs](12-wlan-concepts/12.03-wlan-operation--XI_F7TvuDBs.md) |
+| `XI_F7TvuDBs` | 12-wlan-concepts / 12.03-wlan-operation | Принципы работы WLAN | 11:50 | explainer (слайды) | текст + иллюстрация; опц. 2 анимации Figma ≤ 45 с (CSMA/CA, обнаружение) | Motion · 2:12 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5158-9679) | [12.03--XI_F7TvuDBs](12-wlan-concepts/12.03-wlan-operation--XI_F7TvuDBs.md) |
 | `qXXGwkLZ6hI` | 12-wlan-concepts / 12.04-capwap-operation | CAPWAP | 3:45 | explainer (слайды) | текст + иллюстрация (опц. Figma ≤ 45 с) | — | [12.04--qXXGwkLZ6hI](12-wlan-concepts/12.04-capwap-operation--qXXGwkLZ6hI.md) |
 | `RhcFm7fBVH0` | 12-wlan-concepts / 12.06-wlan-threats | Угрозы безопасности WLAN | 5:41 | explainer (слайды) | текст + иллюстрация (опц. Figma «evil twin» ≤ 45 с) | — | [12.06--RhcFm7fBVH0](12-wlan-concepts/12.06-wlan-threats--RhcFm7fBVH0.md) |
 | `Pl3u95xY2RQ` | 12-wlan-concepts / 12.07-secure-wlans | Защита беспроводных сетей | 7:09 | explainer | текст + иллюстрация (опц. Figma ≤ 45 с); поля GUI — в макет симулятора | — | [12.07--Pl3u95xY2RQ](12-wlan-concepts/12.07-secure-wlans--Pl3u95xY2RQ.md) |
