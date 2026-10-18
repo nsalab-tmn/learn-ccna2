@@ -22,7 +22,7 @@
                     "correct": true
                 },
                 {
-                    "answer": "DCHPOFFER",
+                    "answer": "DHCPOFFER",
                     "correct": false,
                     "comment": "Клиенты DHCPv4 инициируют процесс аренды, отправив сообщение DHCPDISCOVER в виде широковещательной рассылки по сети для поиска сервера DHCPv4"
                 },
@@ -45,7 +45,7 @@
                 {
                     "answer": "DHCPDISCOVER",
                     "correct": false,
-                    "comment": "Серверы DCHPv4 отправляют два сообщения в процессе создания аренды: DHCPOFFER и DHCPACK"
+                    "comment": "Серверы DHCPv4 отправляют два сообщения в процессе создания аренды: DHCPOFFER и DHCPACK"
                 },
                 {
                     "answer": "DHCPOFFER",
@@ -54,7 +54,7 @@
                 {
                     "answer": "DHCPREQUEST",
                     "correct": false,
-                    "comment": "Серверы DCHPv4 отправляют два сообщения в процессе создания аренды: DHCPOFFER и DHCPACK"
+                    "comment": "Серверы DHCPv4 отправляют два сообщения в процессе создания аренды: DHCPOFFER и DHCPACK"
                 },
                 {
                     "answer": "DHCPACK",
@@ -69,12 +69,12 @@
                 {
                     "answer": "DHCPDISCOVER",
                     "correct": false,
-                    "comment": "Процесс продления аренды включает два сообщения: клиент отправляет DHCPREQUEST, а сервер отвечает DHCPAK"
+                    "comment": "Процесс продления аренды включает два сообщения: клиент отправляет DHCPREQUEST, а сервер отвечает DHCPACK"
                 },
                 {
-                    "answer": "DCHPOFFER",
+                    "answer": "DHCPOFFER",
                     "correct": false,
-                    "comment": "Процесс продления аренды включает два сообщения: клиент отправляет DHCPREQUEST, а сервер отвечает DHCPAK"
+                    "comment": "Процесс продления аренды включает два сообщения: клиент отправляет DHCPREQUEST, а сервер отвечает DHCPACK"
                 },
                 {
                     "answer": "DHCPREQUEST",

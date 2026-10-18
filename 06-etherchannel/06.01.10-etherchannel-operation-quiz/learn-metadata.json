@@ -85,7 +85,7 @@
                 {
                     "answer": "passive",
                     "correct": false,
-                    "comment": "On, Auto и Desirable -— режимы PAgP. On, Active и Passive — режимы LACP"
+                    "comment": "On, Auto и Desirable — режимы PAgP. On, Active и Passive — режимы LACP"
                 },
                 {
                     "answer": "desirable",
@@ -124,12 +124,12 @@
                 {
                     "answer": "desirable > on",
                     "correct": false,
-                    "comment": "On > On и Auto > Desirable образует EtherChannel"
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 },
                 {
                     "answer": "auto > on",
                     "correct": false,
-                    "comment": "On > On и Auto > Desirable образует EtherChannel"
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 },
                 {
                     "answer": "on > on",
@@ -138,12 +138,12 @@
                 {
                     "answer": "on > active",
                     "correct": false,
-                    "comment": "On > On и Auto > Desirable образует EtherChannel"
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 },
                 {
                     "answer": "active > passive",
                     "correct": false,
-                    "comment": "On > On и Auto > Desirable образует EtherChannel"
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 }
             ]
         }
