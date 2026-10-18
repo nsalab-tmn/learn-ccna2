@@ -39,58 +39,64 @@
             ]
         },
         {
-            "question": "Какие UDP-порты и IP-протоколы в заголовке кадра используются CAPWAP для IPv4? (верны три варианта)",
+            "question": "Какие порты и какой номер протокола в IP-заголовке использует CAPWAP в IPv4? (верны три варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
                     "answer": "17",
-                    "correct": true
+                    "correct": true,
+                    "comment": "В IPv4 оба канала CAPWAP, управления и данных, работают поверх UDP — протокола с номером 17"
                 },
                 {
                     "answer": "136",
                     "correct": false,
-                    "comment": "CAPWAP для IPv4 использует IP-протокол 17 в заголовке кадра и UDP-порты 5246 и 5247"
+                    "comment": "Протокол 136 (UDP-Lite) CAPWAP применяет только в IPv6, для канала данных"
                 },
                 {
                     "answer": "5246",
-                    "correct": true
+                    "correct": true,
+                    "comment": "UDP-порт 5246 занимает канал управления CAPWAP"
                 },
                 {
                     "answer": "5247",
-                    "correct": true
+                    "correct": true,
+                    "comment": "Порт 5247 служит для передачи данных"
                 },
                 {
                     "answer": "802.11",
                     "correct": false,
-                    "comment": "CAPWAP для IPv4 использует IP-протокол 17 в заголовке кадра и UDP-порты 5246 и 5247"
+                    "comment": "802.11 — семейство стандартов беспроводных локальных сетей IEEE, а не номер порта или протокола"
                 }
             ]
         },
         {
-            "question": "Какие UDP-порты и IP-протоколы в заголовке кадра используются CAPWAP для IPv6? (верны три варианта)",
+            "question": "Какие порты использует CAPWAP в IPv6 и какой номер протокола по умолчанию указывается в IP-заголовке пакетов с данными? (верны три варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
                     "answer": "17",
                     "correct": false,
-                    "comment": "CAPWAP для IPv6 использует IP-протокол 136 в заголовке кадра и UDP-порты 5246 и 5247"
+                    "comment": "Поверх UDP (протокол 17) в IPv6 работает канал управления, а данные по умолчанию передаются поверх UDP-Lite"
                 },
                 {
                     "answer": "136",
-                    "correct": true
+                    "correct": true,
+                    "comment": "В IPv6 данные CAPWAP по умолчанию идут поверх UDP-Lite — протокола с номером 136"
                 },
                 {
                     "answer": "5246",
-                    "correct": true
+                    "correct": true,
+                    "comment": "UDP-порт 5246 занимает канал управления CAPWAP"
                 },
                 {
                     "answer": "5247",
-                    "correct": true
+                    "correct": true,
+                    "comment": "Порт 5247 служит для передачи данных"
                 },
                 {
                     "answer": "802.11",
                     "correct": false,
-                    "comment": "CAPWAP для IPv6 использует IP-протокол 136 в заголовке кадра и UDP-порты 5246 и 5247"
+                    "comment": "802.11 — семейство стандартов беспроводных локальных сетей IEEE, а не номер порта или протокола"
                 }
             ]
         },
