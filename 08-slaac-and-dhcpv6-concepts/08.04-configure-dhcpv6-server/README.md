@@ -1,7 +1,7 @@
 <!-- 8.4.1 -->
 ## Роли роутера DHCPv6
 
-Роутеры Cisco IOS являются мощными устройствами. В небольших сетях нет необходимости иметь отдельные устройства, чтобы иметь DHCPv6 сервер, клиент или агент ретрансляции. Роутер Cisco можно настроить для предоставления служб DHCPv6.
+Роутеры являются мощными устройствами. В небольших сетях нет необходимости иметь отдельные устройства, чтобы иметь DHCPv6 сервер, клиент или агент ретрансляции. Роутер можно настроить для предоставления служб DHCPv6.
 
 В частности, он может быть настроен следующим образом:
 
@@ -55,7 +55,7 @@ R1 будет настроен на предоставление дополни�
 
 ```
 R1(config-dhcpv6)# dns-server 2001:db8:acad:1::254 
-R1(config-dhcpv6)# domain-name example.com
+R1(config-dhcpv6)# domain-name nsalab.local
 R1(config-dhcpv6)# exit
 R1(config)#
 ```
@@ -90,7 +90,7 @@ R1#
 C:\PC1> ipconfig /all
 Windows IP Configuration
 Ethernet adapter Ethernet0:
-   Connection-specific DNS Suffix . : example.com
+   Connection-specific DNS Suffix . : nsalab.local
    Description . . . . . . . . . . . : Intel(R) 82574L Gigabit Network Connection
    Physical Address. . . . . . . . . : 00-05-9A-3C-7A-00
    DHCP Enabled. . . . . . . . . . . : Yes
@@ -134,7 +134,7 @@ R3(config)#
 
 **Шаг 2. Настройте клиентский роутер для создания LLA**
 
-Роутер должен иметь локальный адрес канала IPv6, который создается на интерфейсе устройства при настройке глобального одноадресного адреса. Он также может быть создан без GUA с помощью команды конфигурации интерфейса **ipv6 enable**. Cisco IOS использует EUI-64 для создания случайного идентификатора интерфейса.
+Роутер должен иметь локальный адрес канала IPv6, который создается на интерфейсе устройства при настройке глобального одноадресного адреса. Он также может быть создан без GUA с помощью команды конфигурации интерфейса **ipv6 enable**. ОС роутера использует EUI-64 для создания случайного идентификатора интерфейса.
 
 В примере команда **ipv6 enable** настраивается на интерфейсе Gigabit Ethernet 0/0/1 клиентского роутера R3.
 
@@ -190,7 +190,7 @@ GigabitEthernet0/0/1 is in client mode
     Preference: 0
     Configuration parameters:
       DNS server: 2001:DB8:ACAD:1::254
-      Domain name: example.com
+      Domain name: nsalab.local
       Information refresh time: 0
   Prefix Rapid-Commit: disabled
   Address Rapid-Commit: disabled
@@ -236,12 +236,12 @@ R1(config-dhcpv6)#
 
 R1 будет настроен на предоставление IPv6-адресации, адреса DNS-сервера и имени домена, как показано в выходных данных команды. При использовании DHCPv6 с отслеживанием состояния все параметры адресации и другие параметры конфигурации должны назначаться сервером DHCPv6. Команда **address prefix** используется для обозначения адресного пула, из которого сервер будет выделять адреса. Другая информация, предоставленная DHCPv6-сервером с отслеживанием состояния, обычно включает адрес DNS-сервера и доменное имя.
 
-**Примечание.** В этом примере устанавливается DNS-сервер на общедоступный DNS-сервер Google.
+**Примечание.** В этом примере устанавливается DNS-сервер на общедоступный DNS-сервер Яндекса.
 
 ```
 R1(config-dhcpv6)# address prefix 2001:db8:acad:1::/64
-R1(config-dhcpv6)# dns-server 2001:4860:4860::8888
-R1(config-dhcpv6)# domain-name example.com
+R1(config-dhcpv6)# dns-server 2a02:6b8::feed:0ff
+R1(config-dhcpv6)# domain-name nsalab.local
 R1(config-dhcpv6)#
 ```
 
@@ -278,7 +278,7 @@ R1#
 C:\PC1> ipconfig /all
 Windows IP Configuration
 Ethernet adapter Ethernet0:
-   Connection-specific DNS Suffix . : example.com
+   Connection-specific DNS Suffix . : nsalab.local
    Description . . . . . . . . . . . : IntelI 82574L Gigabit Network Connection
    Physical Address. . . . . . . . . : 00-05-9A-3C-7A-00
    DHCP Enabled. . . . . . . . . . . : Yes
@@ -292,7 +292,7 @@ Ethernet adapter Ethernet0:
    Default Gateway . . . . . . . . .: fe80::1%6
    DHCPv6 IAID . . . . . . . . . . . : 318768538
    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-21-F3-76-54-E1-AD-DA-9A
-   DNS Servers . . . . . . . . . . . : 2001:4860:4860:: 8888
+   DNS Servers . . . . . . . . . . . : 2a02:6b8::feed:0ff
    NetBIOS over Tcpip. . . . . . . . : Включен
 C:\PC1>
 ```
@@ -381,8 +381,8 @@ GigabitEthernet0/0/1 is in client mode
         Address: 2001:DB8:ACAD:1:B4CB:25FA:3C9:747C/128
                 preferred lifetime 86400, valid lifetime 172800
                 expires at Sep 29 2019 11:52 AM (172593 seconds)
-      DNS server: 2001:4860:4860::8888
-      Domain name: example.com
+      DNS server: 2a02:6b8::feed:0ff
+      Domain name: nsalab.local
       Information refresh time: 0
   Prefix Rapid-Commit: disabled
   Address Rapid-Commit: disabled
@@ -404,7 +404,7 @@ R3#
 R1# show ipv6 dhcp pool
 DHCPv6 pool: IPV6-STATEFUL
   Address allocation prefix: 2001:DB8:ACAD:1::/64 valid 172800 preferred 86400 (2 in use,  0 conflicts)
-  DNS server: 2001:4860:4860::8888 Domain name: example.com Active clients: 2
+  DNS server: 2a02:6b8::feed:0ff Domain name: nsalab.local Active clients: 2
 R1#
 ```
 
@@ -505,7 +505,7 @@ R3#
 C:\PC1> ipconfig /all
 Windows IP Configuration
 Ethernet adapter Ethernet0:
-   Connection-specific DNS Suffix . : example.com
+   Connection-specific DNS Suffix . : nsalab.local
    Description . . . . . . . . . . . : Intel(R) 82574L Gigabit Network Connection
    Physical Address. . . . . . . . . : 00-05-9A-3C-7A-00
    DHCP Enabled. . . . . . . . . . . : Yes
@@ -519,7 +519,7 @@ Ethernet adapter Ethernet0:
    Default Gateway . . . . . . . . .: fe80::1%6
    DHCPv6 IAID . . . . . . . . . . . : 318768538
    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-21-F3-76-54-E1-AD-DA-9A
-   DNS Servers . . . . . . . . . . . : 2001:4860:4860:: 8888
+   DNS Servers . . . . . . . . . . . : 2a02:6b8::feed:0ff
    NetBIOS over Tcpip. . . . . . . . : Enabled
 C:\PC1>
 ```
