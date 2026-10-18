@@ -69,13 +69,13 @@ Findings are counted per file. A bank copy's finding counts separately from its 
 
 | | quizzes | exams | bank copies | all |
 |---|---|---|---|---|
-| error | 25 | 25 | 43 | 93 |
+| error | 25 | 26 | 44 | 95 |
 | style | 230 | 134 | 180 | 544 |
 | unclear | 13 | 8 | 20 | 41 |
-| **fixed** | 258 | 158 | 218 | 634 |
+| **fixed** | 258 | 159 | 219 | 636 |
 | **to the operator** | 8 | 9 | 25 | 42 |
 | **rejected** | 2 | 0 | 0 | 2 |
-| **total findings** | 268 | 167 | 243 | 678 |
+| **total findings** | 268 | 168 | 244 | 680 |
 
 The fix PRs are listed in *Fix PRs* above. The items for the operator are listed again, with their reasons, in the kb#275 comment. *How*, step 6, says how each kind was decided.
 
@@ -426,6 +426,7 @@ The fix PRs are listed in *Fix PRs* above. The items for the operator are listed
 | 07-09-exam | 43 | style | Calque «непатентованный» ("not patented") for "nonproprietary"; the module calls these protocols open («открытый»). | #49 → «является открытым протоколом только для IPv4, который имеет» |
 | 07-09-exam | 45 | style | Shared comment of q45-q48: calque «значения косой черты» (slash value), doubled «необходимые … необходимые», wrong numeral agreement («254 хостов», «62 хостов»)… | #49 → «Рассчитайте максимальное количество узлов для данной длины префикса и вычтите число статических IP-адресов, зарезервиров…» |
 | 07-09-exam | 50 | style | MT artefact: "local link" rendered as «локальная ссылка» (hyperlink). | #49 → «в локальном канале» |
+| 07-09-exam | 50 | error | The key and the shared comment say the DAD neighbor solicitation is sent to the generated address; it goes to the solicited-node multicast address, and the gene… | #49 → «"answer": "хост отправляет сообщение ICMPv6 «Запрос соседа» (NS) о сгенерированном адресе, и, если ответ не возвращается…» |
 | 10-13-exam | 3 | style | Typo: «DCHP» for DHCP | #50 → «Атаки на исчерпание ресурсов DHCP» |
 | 10-13-exam | 5 | style | Broken agreement: «Имя пользователя и пароль могут быть опознан» (plural subject, singular short participle); «опознан» is also the wrong verb (credentials are … | #50 → «Имя пользователя и пароль могут быть раскрыты, если передача данных перехвачена.» |
 | 10-13-exam | 7 | style | MT artefact: «адресно-ориентированного пространства памяти» mistranslates content-addressable memory (CAM), which is addressed by content, not by address; the s… | #50 → «ограниченный размер ассоциативной памяти (CAM)» |
@@ -527,7 +528,7 @@ The fix PRs are listed in *Fix PRs* above. The items for the operator are listed
 
 ## Findings: Bank copies (`__exams/CCNA2`)
 
-The bank copies live in learn-ccna1 and have extra questions, so their numbering differs from the connected exams; twins were matched by content. 132 of their 243 findings mirror an exam fix above and get the same fix, with the same wording, in the paired learn-ccna1 PR; they are not repeated here. The table lists the other 111: fixes whose wording differs from the exam's, problems that exist only in the bank, and every bank item for the operator.
+The bank copies live in learn-ccna1 and have extra questions, so their numbering differs from the connected exams; twins were matched by content. 132 of their 244 findings mirror an exam fix above and get the same fix, with the same wording, in the paired learn-ccna1 PR; they are not repeated here. The table lists the other 112: fixes whose wording differs from the exam's, problems that exist only in the bank, and every bank item for the operator.
 
 | File | Q | Sev | Issue | Fix |
 |---|---|---|---|---|
@@ -563,7 +564,7 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank 07-09 | 40 | style | Calque «непатентованный» ("not patented") for "nonproprietary"; the module calls these protocols open («открытый»). (bank twin of 07-09-exam q39) | learn-ccna1#120 → «является открытым протоколом выборов только для IPv4 с ограниченной» |
 | bank 07-09 | 47 | style | Calque «непатентованный» ("not patented") for "nonproprietary"; the module calls these protocols open («открытый»). (bank twin of 07-09-exam q43; same stem in b… | learn-ccna1#120 → «является открытым протоколом выборов только для IPv4, который имеет» |
 | bank 07-09 | 51 | style | Bank-only: numeral agreement «3 IP-адресов» (should be «3 IP-адреса»); same in q52. | learn-ccna1#120 → «резервирует 3 IP-адреса» |
-| bank 07-09 | 61 | error | Bank-only: the marked answer is a copy of distractor 1 (ICMPv6 echo request); the correct answer (neighbor solicitation to the generated address, DAD) is missin… | learn-ccna1#120 → «"answer": "Хост отправляет сообщение запроса соседа ICMPv6 на сгенерированный адрес, и, если ответ не возвращается, адре…» |
+| bank 07-09 | 61 | error | Bank-only: the marked answer is a copy of distractor 1 (ICMPv6 echo request); the correct answer (a neighbor solicitation about the generated address, DAD) is m… | learn-ccna1#120 → «"answer": "Хост отправляет сообщение ICMPv6 «Запрос соседа» (NS) о сгенерированном адресе, и, если ответ не возвращается…» |
 | bank 07-09 | 63 | unclear | Bank-only (known): Packet Tracer .pka activity question ("Откройте интерактивное задание в Packet Tracer…", www.netacad.com); .pka files are out of scope. | operator (kb#275) |
 | bank 10-13 | 0 | style | Bank only: typo «бузопасность» in the exam title (top-level field, not a question) | learn-ccna1#121 → «безопасность WLAN» |
 | bank 10-13 | 6 | style | Bank only: «Какой оператор описывает» — «оператор» mistranslates «statement» (the connected copy has «утверждение») | learn-ccna1#121 → «Какое утверждение описывает поведение коммутатора при переполнении таблицы MAC-адресов?» |
@@ -593,6 +594,7 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank 10-13 | 75 | unclear | Bank only: Packet Tracer activity (.pka) question; .pka files are out of scope | operator (kb#275) |
 | bank 14-16 | 6 | style | Bank only: «Какая характеристика статического маршрута соответствует всем пакетам?» says the characteristic matches packets (the connected copy: «Какая характер… | learn-ccna1#121 → «Какая характеристика описывает статический маршрут, который соответствует всем пакетам?» |
 | bank 14-16 | 6 | style | Bank only: «для отправки нескольких статических маршрутов по одному адресу назначения» — routes are not sent; the option describes a summary route | learn-ccna1#121 → «Использует один сетевой адрес для сопоставления нескольких статических маршрутов одному адресу назначения.» |
+| bank 14-16 | 12 | style | Bank only: conversion markers «[+] » left at the start of the four matching items | learn-ccna1#121 → «» |
 | bank 14-16 | 12 | unclear | Bank only: placeholder item «- не забито -» (a garbled «not scored») matched to the unused option; learners see it as an item. The connected copy dropped it | operator (kb#275) |
 | bank 14-16 | 14 | style | Bank only: commands not formatted, stray spaces before «.» and «,» | learn-ccna1#121 → «с помощью команды `ip address 172.16.1.254 255.255.255.0`. Однако когда администратор вводит команду `show ip route`, в …» |
 | bank 14-16 | 19 | error | Garbled option «полностью статический маршрут» that duplicates answer 4 in substance; the source option is a plain static route via Fa0/0 with AD 1 (bank twin o… | learn-ccna1#121 → «Создайте статический маршрут к Fa0/0 с административным расстоянием 1.» |
@@ -645,7 +647,7 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 
 ## Course text found on the way
 
-Errors in the lecture text that the review ran into. The quiz PRs don't change them, because the lectures are outside kb#275. By the operator's decision (kb#275 comment 6250372119, item 3), the factual errors are fixed in CCNA2 `content(accuracy)` PRs, like learn-ccna1#108, each with a source. learn-ccna2#52 fixed 01.01:54, 03.02:47 and 12.04:13. A follow-up PR takes 11.04:53 and the two errors found after this review, 12.04:17 and 05.02:130 (the last two rows). The other three rows are wording, not factual errors, so they are not in that PR. The questions that repeat a lecture error (01-04 Q27, 10-13 Q68, 12.04.06 q3) are rephrased after the fix.
+Errors in the lecture text that the review ran into. The quiz PRs don't change them, because the lectures are outside kb#275. By the operator's decision (kb#275 comment 6250372119, item 3), the factual errors are fixed in CCNA2 `content(accuracy)` PRs, like learn-ccna1#108, each with a source. learn-ccna2#52 fixed 01.01:54, 03.02:47 and 12.04:13. learn-ccna2#58 takes 11.04:53 and the two errors found after this review, 12.04:17 and 05.02:130 (the last two rows). The other three rows are wording, not factual errors, so they are not in that PR. The questions that repeat a lecture error (01-04 Q27, 10-13 Q68, 12.04.06 q3) are rephrased after the fix.
 
 | Lecture | Problem |
 |---|---|
@@ -654,7 +656,7 @@ Errors in the lecture text that the review ran into. The quiz PRs don't change t
 | `10-lan-security-concepts/10.03-layer-2-security-threats/README.md:38` | «САМ таблицы» typed in Cyrillic letters; it should be Latin CAM |
 | `10-lan-security-concepts/10.05-lan-attacks/README.md:46` | «к порту, находящимся» (should be «находящемуся»), and «транкового порта», a variant the glossary forbids |
 | `11-switch-security-configuration/11.01-implement-port-security/README.md:99` | «значение безопасности порта по умолчанию равно 1» is clumsy; «максимальное число MAC-адресов по умолчанию» is meant (noted by kb's review of learn-ccna2#44) |
-| `11-switch-security-configuration/11.04-mitigate-arp-attacks/README.md:53` | each new `ip arp inspection validate` command «просматривает предыдущую»; it replaces the previous one. The exam comments are fixed in learn-ccna2#50; the lecture goes to the follow-up `content(accuracy)` PR |
+| `11-switch-security-configuration/11.04-mitigate-arp-attacks/README.md:53` | each new `ip arp inspection validate` command «просматривает предыдущую»; it replaces the previous one. The exam comments are fixed in learn-ccna2#50; the lecture is fixed in learn-ccna2#58 |
 | `12-wlan-concepts/12.04-capwap-operation/README.md:13` | CAPWAP called «стандартный протокол IEEE»; it is an IETF standard (RFC 5415). 10-13-exam Q68 repeats it and waits for this line. Fixed in learn-ccna2#52 |
 | `12-wlan-concepts/12.04-capwap-operation/README.md:17` | IPv6 is said to carry CAPWAP as IP protocol 136, with the number «в заголовке кадра». By RFC 5415 §3 the control channel runs over UDP in both IP versions, only the IPv6 data channel defaults to UDP-Lite (136), and the number sits in the IP header. Found in kb's review of learn-ccna2#52; 12.04.06 q3 depends on it |
 | `05-stp/05.02-stp-operations/README.md:130` | «альтернативным (резервным) портом»: the backup port («резервный») is a separate role (IEEE 802.1D-2004 §17.3.1), and the section heading says «альтернативных (заблокированных)». Named in the operator's decision after kb's review of this report |
