@@ -1,6 +1,6 @@
 # CCNA2 quiz and exam review (kb#275)
 
-> **Status:** review done on 2026-10-18 at `origin/main` `7a5dcf0`, after all CCNA2 de-marketing and accuracy PRs were merged. Fixes are in the PRs listed below. Doubtful items wait for the operator on kb#275.
+> **Status:** review done on 2026-10-18 at `origin/main` `7a5dcf0`, after all CCNA2 de-marketing and accuracy PRs were merged. Fixes are in the PRs listed below. The operator decided the doubtful items on 2026-10-18 (kb#275 comment 6250372119): follow-up PRs rephrase them, and CCNA2 `content(accuracy)` PRs fix the lecture errors first.
 
 ## What
 
@@ -12,7 +12,7 @@ A question-by-question review of every CCNA2 quiz and exam, and of the CCNA2 ban
 | module and final exams (`*-exam/`, `final-exam/`) | 6 | 343 |
 | bank copies (learn-ccna1 `__exams/CCNA2/*_Exam/`) | 6 | 386 |
 
-The CCNA1 review is in learn-ccna1 `audit/quiz-review.md`; CCNA3 follows. Labs and `.pka` files are out of scope (kb#271).
+The CCNA1 review is in learn-ccna1 `audit/quiz-review.md` (learn-ccna1#119); CCNA3 follows. Labs and `.pka` files are out of scope (kb#271).
 
 ## Why
 
@@ -30,7 +30,11 @@ The quizzes and exams are translations of the vendor's question banks. The de-ma
 3. **Verification:** every finding was checked again before it went into a PR. The coordinator checked the quiz findings. Four second reviewers checked the exam findings, confirmed every key change on their own, and rewrote fixes where needed; the coordinator then read every error-severity fix. Fixes were checked against the glossary (`conventions/ru-glossary.md` in the knowledge base, with the rows decided in kb#279).
 4. **Fix PRs:** one per module block, so no two open PRs share a line. The bank copies live in learn-ccna1, so each exam block has a paired PR there with the same wording.
 5. **Review of the fix PRs:** kb read every changed string of the quiz PRs. Its fixes, the optional suggestions taken and three operator items it judged fixable went into follow-up commits on the same PRs, and this report includes them.
-6. **Doubtful items** are not changed. They go to the operator on kb#275: two defensible answers, content the course does not teach, a structural fix to the JSON, or a course text that is itself wrong.
+6. **Doubtful items** are not changed in these PRs. They were raised on kb#275, and the operator decided them on 2026-10-18 (comment 6250372119):
+   - two defensible answers, or content the course does not teach: a follow-up PR rephrases each one until exactly one answer can be defended from the lecture text. It may add or replace an answer's `comment`;
+   - a course text that is itself wrong: the lecture is fixed first, in a CCNA2 `content(accuracy)` PR, and then the question;
+   - a fix that changes the JSON shape stays open, because the decision keeps keys and array lengths. After kb's review of this report, the operator added the ones that fit the current shape to the rephrasing pass: bank 14-16 Q56 gets «пакет будет отброшен» as its key, and the placeholders in bank 10-13 Q67 and 14-16 Q12 become real unused items;
+   - the `.pka` questions wait for the lab rework, and the image paths are logged as follow-ups.
 
 Severity follows kb#275:
 - `error`: a wrong key, a distractor that is actually right, a wrong statement in a question or comment, or a comment copied from another question;
@@ -39,7 +43,7 @@ Severity follows kb#275:
 
 ## JSON structure (recorded, unchanged)
 
-No PR changes keys, key order, the number of questions or answers, image paths or HTML comments. The one value change outside text is `answerType` in bank Practice Final Q45 and Q47, which now matches their number of correct answers.
+No PR changes keys, key order, the number of questions or answers, image paths or HTML comments. The value changes outside text are the seven bank key moves listed in *Fix PRs* (`correct` in bank 14-16 Q55 and bank Practice Final Q46, Q49–Q52, Q54) and `answerType` in bank Practice Final Q45 and Q47, which now matches their number of correct answers.
 
 - **Top level:** quizzes have `title`, `materialType`, `description`, `difficulty`, `duration`, `tags`, `skills`, `passingScore`, `assets`, `questions`. The exams have the same keys in another order, and the bank copies carry `assetsPath` instead of `assets`.
 - **Question:** `question` (string, Markdown; an image as `![](./assets/x.png)`), `answerType` and `answers`. A `matching` question also has `options`.
@@ -67,13 +71,13 @@ Findings are counted per file. A bank copy's finding counts separately from its 
 |---|---|---|---|---|
 | error | 25 | 25 | 43 | 93 |
 | style | 230 | 134 | 180 | 544 |
-| unclear | 13 | 8 | 19 | 40 |
+| unclear | 13 | 8 | 20 | 41 |
 | **fixed** | 258 | 158 | 218 | 634 |
-| **to the operator** | 8 | 9 | 24 | 41 |
-| **rejected on verification** | 2 | 0 | 0 | 2 |
-| **total findings** | 268 | 167 | 242 | 677 |
+| **to the operator** | 8 | 9 | 25 | 42 |
+| **rejected** | 2 | 0 | 0 | 2 |
+| **total findings** | 268 | 167 | 243 | 678 |
 
-The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with their reasons, in the kb#275 comment for the operator.
+The fix PRs are listed in *Fix PRs* above. The items for the operator are listed again, with their reasons, in the kb#275 comment. *How*, step 6, says how each kind was decided.
 
 
 ## Findings: Quizzes
@@ -83,7 +87,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 01.05.11-verify-directly-connected-networks-quiz | 1 | style | Comment names 'show ip route', but the option offered is 'show ipv6 route'. | #45 → «show ipv6 route и show running-config interface не предоставляют эту информацию» |
 | 01.05.11-verify-directly-connected-networks-quiz | 2 | style | Broken MT construction: «для идентификации напрямую подключенных» has no noun, and the clause order is garbled. | #45 → «Каким кодом в таблице маршрутизации обозначаются напрямую подключенные маршруты?» |
 | 01.05.11-verify-directly-connected-networks-quiz | 2 | style | MT artefact: «RIP означает протокол маршрутизации, который является одним из первых протоколов маршрутизации» (calque of 'RIP stands for ...', tautological). | #45 → «RIP (Routing Information Protocol) — один из первых протоколов маршрутизации» |
-| 01.05.11-verify-directly-connected-networks-quiz | 3 | style | Mistranslation: «количество потоков пакетов» means 'number of packet flows'; the lecture says 'packet-flow counters'. | #45 → «счетчики потока пакетов» |
+| 01.05.11-verify-directly-connected-networks-quiz | 3 | style | Mistranslation: «количество потоков пакетов» means 'number of packet flows'; the lecture says 'packet-flow counters'. | #45 → «счетчики потока пакетов» (superseded by the next row) |
 | 01.05.11-verify-directly-connected-networks-quiz | 3 | style | «конфликты» mistranslates collisions (course term «коллизии»), and «счетчики потока пакетов» reads oddly; the comments change too (review suggestion) | #45 → «Какая команда будет отображать статистику потока пакетов, коллизии и сбои буфера на интерфейсе?» |
 | 01.05.11-verify-directly-connected-networks-quiz | 5 | style | Leftover English in an answer option: «pipe \|». | #45 → «"answer": "вертикальная черта \\|"» |
 | 01.05.11-verify-directly-connected-networks-quiz | 5 | style | Leftover English in an answer option: «comma ,». | #45 → «"answer": "запятая ,"» |
@@ -144,7 +148,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 04.05.04-quiz | 15 | error | Wrong key: show ip interface does not display the 802.1Q VLAN ID of a subinterface; the course uses show interfaces (and show running-config) to find a wrong VL… | #45 → «"answer": "show interfaces"» |
 | 04.05.04-quiz | 15 | error | Comment repeats the wrong command (show ip interface); align it with the corrected key. | #45 → «Команды show interfaces и show running-config» |
 | 04.05.04-quiz | 15 | style | Case error «полезную информации». | #45 → «не выводит полезной информации» |
-| 05.02.12-stp-operations-quiz | 1 | style | MT word order: comma between the introductory adverbial and the question word ("По умолчанию (...), что будет определять"). | #46 → «Что по умолчанию (без какой-либо конфигурации на коммутаторе) будет определять,» |
+| 05.02.12-stp-operations-quiz | 1 | style | MT word order: comma between the introductory adverbial and the question word ("По умолчанию (...), что будет определять"). | #46 → «Что по умолчанию (без какой-либо конфигурации на коммутаторе) будет определять,» (superseded by the next row) |
 | 05.02.12-stp-operations-quiz | 1 | style | The stem repeats «коммутатор» (review suggestion) | #46 → «Что по умолчанию (без какой-либо настройки) определяет, какой коммутатор станет корневым мостом?» |
 | 05.02.12-stp-operations-quiz | 1 | unclear | Distractor «идентификатор моста» was arguably correct (the root is the switch with the lowest BID, as Q2 keys); it becomes the false «стоимость корневого пути» … | #46 → «"answer": "стоимость корневого пути"» |
 | 05.02.12-stp-operations-quiz | 2 | error | Key says "lowest root bridge ID" (Root ID, the BID of the current root carried in BPDUs, which converges to the same value on every switch); the criterion is th… | #46 → «"answer": "самым низким идентификатором моста"» |
@@ -176,7 +180,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 06.01.10-etherchannel-operation-quiz | 4 | style | Typo: stray hyphen before the dash ("Desirable -— режимы"). | #46 → «Desirable — режимы» |
 | 06.01.10-etherchannel-operation-quiz | 6 | style | Agreement: two subjects ("On > On и Auto > Desirable") with a singular verb "образует". | #46 → «Auto > Desirable образуют EtherChannel» |
 | 06.04.04-quiz | 1 | style | Comma between the fronted adverbial and the question word ("При проверке конфигурации, какая ..."). | #46 → «При проверке конфигурации какая комбинация» |
-| 06.04.04-quiz | 2 | style | Comma between the fronted adverbial and the question word ("... для EtherChannel, в каком режиме"). | #46 → «диапазона портов для EtherChannel в каком режиме необходимо настроить PAgP» |
+| 06.04.04-quiz | 2 | style | Comma between the fronted adverbial and the question word ("... для EtherChannel, в каком режиме"). | #46 → «диапазона портов для EtherChannel в каком режиме необходимо настроить PAgP» (superseded by the next row) |
 | 06.04.04-quiz | 2 | style | «При настройке … необходимо настроить» repeats the verb (review suggestion) | #46 → «При настройке диапазона портов для EtherChannel какой режим PAgP нужно выбрать, чтобы порт сам инициировал согласование?» |
 | 06.04.04-quiz | 5 | error | Comment says a "shortest-path tree" recalculation is not required; the protocol in question is STP (spanning tree). The shortest-path tree is a different (link-… | #46 → «пересчет связующего дерева не требуется» |
 | 06.04.04-quiz | 5 | style | "один из входящих портов EtherChannel" reads as "one of the incoming ports"; meant: one of the ports that belong to the EtherChannel. | #46 → «Когда один из портов, входящих в EtherChannel, выходит из строя» |
@@ -185,7 +189,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 06.04.04-quiz | 8 | style | Case error "IP-адреса источника к IP-адреса назначения" (should be "IP-адрес источника к IP-адресу назначения"); like answer 1, it makes the keys look different… | #46 → «"answer": "IP-адрес источника к IP-адресу назначения"» |
 | 06.04.04-quiz | 11 | style | Comma before the final "и" in a list ("desirable/auto, и desirable/desirable"). | #46 → «desirable/auto и desirable/desirable» |
 | 06.04.04-quiz | 12 | style | Grammar: "LACP, также известен как" needs the participle "известный". | #46 → «LACP, также известный как IEEE 802.3ad» |
-| 06.04.04-quiz | 13 | style | Comma between the fronted adverbial and the question word ("... для EtherChannel, в каком режиме"). | #46 → «диапазона портов для EtherChannel в каком режиме необходимо настроить LACP» |
+| 06.04.04-quiz | 13 | style | Comma between the fronted adverbial and the question word ("... для EtherChannel, в каком режиме"). | #46 → «диапазона портов для EtherChannel в каком режиме необходимо настроить LACP» (superseded by the next row) |
 | 06.04.04-quiz | 13 | style | «При настройке … необходимо настроить» repeats the verb (review suggestion) | #46 → «При настройке диапазона портов для EtherChannel какой режим LACP нужно выбрать, чтобы порт сам инициировал согласование?» |
 | 06.04.04-quiz | 14 | style | "в пакете EtherChannel": "bundle" calqued as «пакет» (packet), which is misleading; the module says «объединение». | #46 → «Все порты в объединении EtherChannel» |
 | 06.04.04-quiz | 15 | style | Comma between the fronted adverbial and the question word ("... с помощью LACP, какой режим"). | #46 → «с помощью LACP какой режим» |
@@ -252,7 +256,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 10.06.02-quiz | 2 | unclear | Key CDP next to the defensible LLDP for «включен по умолчанию на многих роутерах»; the stem now asks for the proprietary service (moved from the operator list a… | #47 → «Какой проприетарный сервис, по умолчанию включенный на многих роутерах, может выдать значимую информацию о нем» |
 | 10.06.02-quiz | 4 | style | 'МАС' typed in Cyrillic letters, plus a stray final period in the option | #47 → «"переполнение таблицы MAC-адресов"» |
 | 10.06.02-quiz | 5 | style | Leftover English 'Topic' instead of 'Тема' (the other comments in the file use 'Тема') | #47 → «Тема 10.2.0 - Метод аутентификации» |
-| 10.06.02-quiz | 6 | error | Answer 4 is text copied from Q12 ('подставной DHCP-сервер предоставляет ложные параметры...'), not a protocol; its own comment shows the intended option was TAC… | #47 comments emptied |
+| 10.06.02-quiz | 6 | error | Answer 4 is text copied from Q12 ('подставной DHCP-сервер предоставляет ложные параметры...'), not a protocol; its own comment shows the intended option was TAC… | #47 → «"answer": "TACACS"» |
 | 10.06.02-quiz | 6 | style | English-style comma after the introductory phrase in a question | #47 → «В серверной реализации AAA какой протокол» |
 | 10.06.02-quiz | 7 | style | Comment mixes English feature names (Dynamic ARP Inspection, DHCP-Snooping, Port security) and the MT calque 'голодание DHCP'; options use the Russian names | #47 → «динамический анализ ARP-трафика (DAI) — предотвращает атаки подмены ARP и «отравление» ARP-кэша; отслеживание DHCP-сообщ…» |
 | 10.06.02-quiz | 7 | style | Leftover English 'Port security' as an answer option | #47 → «"answer": "безопасность портов"» |
@@ -326,7 +330,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 14.06.02-quiz | 15 | error | The comment gives the IPv6 default route as ":/0" (invalid notation, contradicts the key "::/0"); the next sentence is a calque («Это представляет все нули…»). | #48 → «IPv6-адрес и префикс для статического маршрута по умолчанию — ::/0, то есть адрес из одних нулей с длиной префикса 0» |
 | 15.01.08-static-routes-quiz | 1 | error | The key says the next hop is identified by the "destination IP address". The next hop is identified by its own IP address (and/or the exit interface), not by th… | #48 → «"answer": "IP-адрес следующего перехода"» |
 | 15.01.08-static-routes-quiz | 1 | error | The comment repeats the error: «по IP-адресу назначения и/или выходному интерфейсу». | #48 → «по его IP-адресу и/или по выходному интерфейсу» |
-| 15.01.08-static-routes-quiz | 2 | error | The distractor «сеть назначения определяется с помощью сетевого адреса и маски» is a true statement about an IPv4 static route, so the question has two correct … | #48 → «"сеть назначения определяется только сетевым адресом, без маски подсети"» |
+| 15.01.08-static-routes-quiz | 2 | error | The distractor «сеть назначения определяется с помощью сетевого адреса и маски» is a true statement about an IPv4 static route, so the question has two correct … | #48 → «"сеть назначения определяется только сетевым адресом, без маски подсети"» (superseded by the next row) |
 | 15.01.08-static-routes-quiz | 2 | style | The rewritten distractor was false but easy to dismiss; «…сетевого адреса и шаблонной маски» is plausible, and the comment now explains it (review suggestion) | #48 → «"answer": "сеть назначения определяется с помощью сетевого адреса и шаблонной маски"» |
 | 15.01.08-static-routes-quiz | 3 | style | Stray comma between subject and predicate: «… в статическом маршруте IPv6, идентифицируется». | #48 → «Сеть назначения в статическом маршруте IPv6 идентифицируется» |
 | 15.01.08-static-routes-quiz | 3 | style | Dangling gerund: «используя только префикс IPv6» answers a passive «Как определяется сеть…?», and breaks the parallel with the other options («с помощью …»). | #48 → «"только с помощью префикса IPv6"» |
@@ -383,7 +387,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 05-06-exam | 5 | error | Comment says VLANs reduce the NUMBER of broadcast domains; VLANs split a broadcast domain, i.e. they reduce the size (and increase the number). | #49 → «Виртуальные LAN уменьшают размер доменов широковещательной рассылки» |
 | 05-06-exam | 5 | style | Distractor «для широковещательной адресации» ("for broadcast addressing") is a mistranslation of "to contain broadcasts". | #49 → «внедрение VLAN для ограничения широковещательной рассылки» |
 | 05-06-exam | 7 | style | Matching item «динамичное усиление схождения IEEE 802.1D» is garbled ("dynamic strengthening of converging"); it describes RSTP, an 802.1D enhancement for faste… | #49 → «улучшение IEEE 802.1D, ускоряющее сходимость» |
-| 05-06-exam | 11 | style | Comments end with «Протокол CDP используется для обнаружения информации о соседнем устройстве»: CDP is one vendor's protocol, and module 05 mentions neither CDP… | #49 → «Сведения о соседних устройствах собирают протоколы обнаружения соседей, например LLDP.» |
+| 05-06-exam | 11 | style | Comments end with «Протокол CDP используется для обнаружения информации о соседнем устройстве», a clumsy sentence that names only CDP; module 05 mentions neithe… | #49 → «Сведения о соседних устройствах собирают протоколы CDP и LLDP.» |
 | 05-06-exam | 12 | style | Mistranslation: "faster convergence" rendered as «более быстрое взаимодействие» ("faster interaction"). | #49 → «802.1w или RSTP обеспечивает более быструю сходимость» |
 | 05-06-exam | 13 | style | Case error in the option: «петель на роутер» (should be prepositional; new text uses «маршрутизатор» per the operator decision). | #49 → «образования петель на маршрутизаторе» |
 | 05-06-exam | 15 | style | Stem asks «В каком из состояний» (which one state) while two answers are correct («верны два варианта»). | #49 → «В каких состояниях портов PVST+» |
@@ -461,7 +465,7 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 | 14-16-exam | 10 | style | MT artefact «с исходным кодом R» (reads as program source code; meant: the route source code R) and «переадресация» for forwarding | #50 → «Маршрут RIP с кодом источника R используется для пересылки трафика» |
 | 14-16-exam | 11 | style | The stem says not all options are used, but both options (static, dynamic) are used: each of the four items maps to one of them | #50 → «Сопоставьте характеристики и соответствующие типы маршрутизации.» |
 | 14-16-exam | 14 | style | Stray space before the semicolon after the command | #50 → «no shutdown;» |
-| 14-16-exam | 19 | error | Answers 1 and 4 are identical («создать полностью заданный статический маршрут через Fa0/0 с административным расстоянием 1»); in the source the first option is… | #50 comments emptied |
+| 14-16-exam | 19 | error | Answers 1 and 4 are identical («создать полностью заданный статический маршрут через Fa0/0 с административным расстоянием 1»); in the source the first option is… | #50 → «"answer": "создать статический маршрут через Fa0/0 с административным расстоянием 1"» |
 | 14-16-exam | 19 | error | The comment says a floating static route has a LOWER administrative distance than the route already in the table; it must be higher (the comment itself then say… | #50 → «если его административное расстояние больше административного расстояния другого маршрута» |
 | 14-16-exam | 19 | style | Genitive chain / calque: «потенциальные проблемы следующих переходов в результате природы множественного доступа сегмента сети Ethernet через роутер B» | #50 → «предотвратит рекурсивный поиск маршрутов и возможные проблемы со следующим переходом, вызванные тем, что сегмент Etherne…» |
 | 14-16-exam | 19 | style | «переадресация» for forwarding is a variant the glossary forbids (forwarding row): «пересылка» | #50 → «для пересылки пакета» |
@@ -523,14 +527,17 @@ The fix PRs are listed in *Fix PRs* above. Doubtful items are listed again, with
 
 ## Findings: Bank copies (`__exams/CCNA2`)
 
-The bank copies live in learn-ccna1 and have extra questions, so their numbering differs from the connected exams; twins were matched by content. 159 of their 242 findings mirror an exam finding above and get the same fix, with the same wording, in the paired learn-ccna1 PR; they are not repeated here. The table lists the 83 bank findings whose fix differs: the bank wording differs, or the problem exists only in the bank.
+The bank copies live in learn-ccna1 and have extra questions, so their numbering differs from the connected exams; twins were matched by content. 132 of their 243 findings mirror an exam fix above and get the same fix, with the same wording, in the paired learn-ccna1 PR; they are not repeated here. The table lists the other 111: fixes whose wording differs from the exam's, problems that exist only in the bank, and every bank item for the operator.
 
 | File | Q | Sev | Issue | Fix |
 |---|---|---|---|---|
 | bank 01-04 | 12 | style | Bank-only: key says «трансляций портов» (port translations, a NAT term) for the MAC-to-port mapping of the CAM table. | learn-ccna1#120 → «MAC-адресов и соответствующих портов» |
 | bank 01-04 | 16 | error | Bank-only: the stem says the steps are performed by a router («выполняемые маршрутизатором шаги»), but the question is about a switch. | learn-ccna1#120 → «выполняемые коммутатором шаги» |
+| bank 01-04 | 25 | error | Bank-only (known): image path "./assert/4.png" does not exist; the file is "assert/4.PNG" (case-sensitive path). | operator (kb#275) |
+| bank 01-04 | 27 | unclear | Option «значение, которое поддерживает реализацию уровня или сервиса» is garbled ("level or service" for "level of service", i.e. QoS priority); the lecture has… | operator (kb#275) |
 | bank 01-04 | 28 | style | Bank-only: option «при разрешении по умолчанию» is garbled (a switchport mode is meant). | learn-ccna1#120 → «режим по умолчанию» |
 | bank 01-04 | 34 | error | Marked answer lost its negation: it says G0/2 IS configured as a trunk, but the exhibit lists only Gig0/1 and the comment says G0/2 is not a trunk. (bank twin o… | learn-ccna1#120 → «Интерфейс G0/2 не настроен в качестве магистрального канала.» |
+| bank 01-04 | 45 | error | Bank-only (known): image path "./assert/15.png" does not exist; the file is "assert/15.PNG" (case-sensitive path). | operator (kb#275) |
 | bank 01-04 | 46 | style | Bank-only: Gender agreement: the answer refers to «команда» (feminine) as «Он»; the connected twin uses «она». | learn-ccna1#120 → «Она автоматически настраивает порт таким образом» |
 | bank 01-04 | 46 | style | Bank-only: Gender agreement: the answer refers to «команда» (feminine) as «Он»; the connected twin uses «она». Same string in q46 answer 2 and q47 answer 1. | learn-ccna1#120 → «Она применяет IPv4 адрес к виртуальному интерфейсу.» |
 | bank 01-04 | 46 | style | Bank-only: Gender agreement: the answer refers to «команда» (feminine) as «Он»; the connected twin uses «она». Same string in q46 answer 3 and q47 answer 2. | learn-ccna1#120 → «Она применяет IPv6-адрес к виртуальному интерфейсу.» |
@@ -539,18 +546,25 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank 01-04 | 47 | style | Bank-only: Gender agreement: the answer refers to «команда» (feminine) as «Он»; the connected twin uses «она». | learn-ccna1#120 → «Она активирует виртуальный или физический интерфейс коммутатора.» |
 | bank 01-04 | 48 | style | Bank-only: wrong verb form «Она применяется IPv4 адрес» (reflexive verb with a direct object); same in q51 answer 2. | learn-ccna1#120 → «Она применяет» |
 | bank 01-04 | 58 | style | Bank-only: «качества IP-телефона» (quality of the IP phone) for IP telephony quality. | learn-ccna1#120 → «качества IP-телефонии» |
+| bank 01-04 | 59 | unclear | Two defensible answers: the stem asks which VLAN type is initially "the management VLAN", and the distractor "Management VLAN" / «VLAN управления» is tautologic… | operator (kb#275) |
 | bank 01-04 | 62 | style | Bank-only: typo "HHTP" for HTTP (also in q63). | learn-ccna1#120 → «HTTP» |
+| bank 01-04 | 73 | unclear | Bank-only (known): Packet Tracer .pka activity question ("Откройте упражнение в Packet Tracer…"); .pka files are out of scope. | operator (kb#275) |
 | bank 05-06 | 15 | style | Stem asks «В каком из двух состояний» (which one) while two answers are correct (bank twin of 05-06-exam Q15) | learn-ccna1#120 → «В каких двух состояниях портов PVST+» |
 | bank 05-06 | 35 | style | Bank-only: key «Это сделано путем объединения…» ("this is done by combining") does not answer "which statement describes EtherChannel" and drops "логическая". | learn-ccna1#120 → «Он представляет собой объединение нескольких физических связей, которые рассматриваются как одна логическая связь между …» |
+| bank 05-06 | 50 | unclear | Bank-only: distractor «выделенный порт» is a common Russian rendering of "designated port", so it reads as a second correct answer next to the key «назначенный … | operator (kb#275) |
 | bank 05-06 | 53 | style | Bank-only: option uses «дублирование» instead of a port role. | learn-ccna1#120 → «назначенный, альтернативный, корневой, корневой» |
 | bank 05-06 | 54 | style | Bank-only: missing word in «каждый канал коммутатора уровня будет агрегированным» (the layer number is lost). | learn-ccna1#120 → «коммутатора уровня 3 будет агрегированным» |
+| bank 05-06 | 56 | unclear | Bank-only (known): Packet Tracer .pka activity question; .pka files are out of scope. | operator (kb#275) |
 | bank 07-09 | 1 | style | Bank-only: missing space «принимаетIP-адрес». | learn-ccna1#120 → «клиент принимает IP-адрес» |
 | bank 07-09 | 5 | style | Bank-only: garbled CLI «show running-config I section_dhcp» (letter I for the pipe, underscore). | learn-ccna1#120 → «show running-config \\| section dhcp» |
 | bank 07-09 | 21 | style | Bank-only: option uses «лизинга» for the DHCP lease. | learn-ccna1#120 → «дождаться истечения срока аренды» |
 | bank 07-09 | 25 | error | Bank-only: the stem asks how PC-A gets an IPv6 address from a DHCPv4 server; the exhibit and the key are about a DHCPv6 server. | learn-ccna1#120 → «получить IPv6-адрес от сервера DHCPv6» |
+| bank 07-09 | 32 | error | Bank-only: matching question with no answers and no options (empty "answers" and "options"); it cannot be answered. | operator (kb#275) |
 | bank 07-09 | 40 | style | Calque «непатентованный» ("not patented") for "nonproprietary"; the module calls these protocols open («открытый»). (bank twin of 07-09-exam q39) | learn-ccna1#120 → «является открытым протоколом выборов только для IPv4 с ограниченной» |
 | bank 07-09 | 47 | style | Calque «непатентованный» ("not patented") for "nonproprietary"; the module calls these protocols open («открытый»). (bank twin of 07-09-exam q43; same stem in b… | learn-ccna1#120 → «является открытым протоколом выборов только для IPv4, который имеет» |
 | bank 07-09 | 51 | style | Bank-only: numeral agreement «3 IP-адресов» (should be «3 IP-адреса»); same in q52. | learn-ccna1#120 → «резервирует 3 IP-адреса» |
+| bank 07-09 | 61 | error | Bank-only: the marked answer is a copy of distractor 1 (ICMPv6 echo request); the correct answer (neighbor solicitation to the generated address, DAD) is missin… | learn-ccna1#120 → «"answer": "Хост отправляет сообщение запроса соседа ICMPv6 на сгенерированный адрес, и, если ответ не возвращается, адре…» |
+| bank 07-09 | 63 | unclear | Bank-only (known): Packet Tracer .pka activity question ("Откройте интерактивное задание в Packet Tracer…", www.netacad.com); .pka files are out of scope. | operator (kb#275) |
 | bank 10-13 | 0 | style | Bank only: typo «бузопасность» in the exam title (top-level field, not a question) | learn-ccna1#121 → «безопасность WLAN» |
 | bank 10-13 | 6 | style | Bank only: «Какой оператор описывает» — «оператор» mistranslates «statement» (the connected copy has «утверждение») | learn-ccna1#121 → «Какое утверждение описывает поведение коммутатора при переполнении таблицы MAC-адресов?» |
 | bank 10-13 | 12 | style | Bank only: stray space before the full stop after the command | learn-ccna1#121 → «switchport port-security aging.» |
@@ -560,6 +574,7 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank 10-13 | 15 | style | Bank key in Russian next to CLI keywords; aligned with the connected copy (see the «выкл» row) | learn-ccna1#121 → «"answer": "protect"» |
 | bank 10-13 | 21 | style | Bank only: command not formatted and a stray space before the full stop (the connected copy uses `...`) | learn-ccna1#121 → «команды `ip arp inspection validate src-mac`. Зачем» |
 | bank 10-13 | 29 | style | Bank only: «режим ..., требуемый сервером RADIUS» inverts the sense (the mode requires a RADIUS server, not the other way round) | learn-ccna1#121 → «использующий сервер RADIUS» |
+| bank 10-13 | 30 | unclear | Same as 10-13-exam Q30: 802.11ad band claim (2.4/5/60 GHz) not covered by the course and inaccurate for the 802.11ad PHY (60 GHz) | operator (kb#275) |
 | bank 10-13 | 36 | style | Bank only (question not in the connected exam): typo «Вредоносные токи» for «Вредоносные точки доступа» (rogue APs) | learn-ccna1#121 → «Вредоносные точки доступа» |
 | bank 10-13 | 36 | style | Bank only: the key «Продвинутый уровень» does not match the button named in the comment («кнопку Дополнительно») or in the lecture («Advanced (дополнительно)»);… | learn-ccna1#121 → «Нажав кнопку Дополнительно, пользователь получит доступ к странице расширенной сводки и ко всем функциям WLC.» |
 | bank 10-13 | 36 | style | Bank only: key label «Продвинутый уровень» → the button name used by the lecture | learn-ccna1#121 → «Дополнительно» |
@@ -568,10 +583,17 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank 10-13 | 41 | style | Bank only: garbled option «Доступный сервер RADIUS или создание сервера RADIUS.» | learn-ccna1#121 → «Создайте сервер RADIUS или убедитесь, что он доступен.» |
 | bank 10-13 | 42 | style | Bank only: nonsense «не требует помех» (the connected copy: «не подвержена помехам») | learn-ccna1#121 → «скорее всего, не подвержена помехам.» |
 | bank 10-13 | 44 | style | Bank only (question not in the connected exam): «позволяет пользователям аутентифицировать» — the verb lacks its object; users pass authentication | learn-ccna1#121 → «Он позволяет пользователям пройти аутентификацию и получить доступ к WLAN.» |
+| bank 10-13 | 44 | unclear | Bank only: the key says the shared secret encrypts messages between the WLC and the RADIUS server, while the course says it authenticates the AP/WLC to the RADI… | operator (kb#275) |
 | bank 10-13 | 45 | error | Nonsense distractor «прейскурант» (price list) — a mistranslation of the network medium; the comment explains the medium (bank twin of 10-13-exam Q41, where the… | learn-ccna1#121 → «Убедитесь, что выбрана правильная среда передачи.» |
 | bank 10-13 | 52 | style | Garbled stem with no predicate: «...или протокол управления доступом, которым разрешен доступ к сети?» (bank twin of 10-13-exam Q48) | learn-ccna1#121 → «Какой компонент, механизм или протокол контроля доступа определяет, кому разрешен доступ к сети?» |
+| bank 10-13 | 67 | unclear | Bank only: the matching question carries a placeholder item «– не оценивается –» paired with the extra option, a leftover of the source's unscored distractor; l… | operator (kb#275) |
+| bank 10-13 | 71 | unclear | Same as 10-13-exam Q66: distractor «AAA» is defensible (a RADIUS server is an AAA server) | operator (kb#275) |
+| bank 10-13 | 72 | unclear | Bank only (question not in the connected exam): the network consists of 802.11b/g clients, which cannot use 5 GHz, so splitting traffic onto the 5 GHz band (the… | operator (kb#275) |
+| bank 10-13 | 74 | unclear | Same as 10-13-exam Q68: CAPWAP is an IETF standard (RFC 5415), not IEEE; the lecture repeats the error | operator (kb#275) |
+| bank 10-13 | 75 | unclear | Bank only: Packet Tracer activity (.pka) question; .pka files are out of scope | operator (kb#275) |
 | bank 14-16 | 6 | style | Bank only: «Какая характеристика статического маршрута соответствует всем пакетам?» says the characteristic matches packets (the connected copy: «Какая характер… | learn-ccna1#121 → «Какая характеристика описывает статический маршрут, который соответствует всем пакетам?» |
 | bank 14-16 | 6 | style | Bank only: «для отправки нескольких статических маршрутов по одному адресу назначения» — routes are not sent; the option describes a summary route | learn-ccna1#121 → «Использует один сетевой адрес для сопоставления нескольких статических маршрутов одному адресу назначения.» |
+| bank 14-16 | 12 | unclear | Bank only: placeholder item «- не забито -» (a garbled «not scored») matched to the unused option; learners see it as an item. The connected copy dropped it | operator (kb#275) |
 | bank 14-16 | 14 | style | Bank only: commands not formatted, stray spaces before «.» and «,» | learn-ccna1#121 → «с помощью команды `ip address 172.16.1.254 255.255.255.0`. Однако когда администратор вводит команду `show ip route`, в …» |
 | bank 14-16 | 19 | error | Garbled option «полностью статический маршрут» that duplicates answer 4 in substance; the source option is a plain static route via Fa0/0 with AD 1 (bank twin o… | learn-ccna1#121 → «Создайте статический маршрут к Fa0/0 с административным расстоянием 1.» |
 | bank 14-16 | 23 | style | Bank only: invalid mask «255.255.0» in the command (the connected copy and Q22/Q24 have 255.255.255.0) | learn-ccna1#121 → «ip route 192.168.10.0 255.255.255.0 10.10.10.2 5» |
@@ -579,14 +601,18 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank 14-16 | 38 | style | Typo in the command: mask «0.0.0» has three octets; the command is also not formatted (bank twin of 14-16-exam Q38) | learn-ccna1#121 → «Команда плавающего статического маршрута `ip route 0.0.0.0 0.0.0.0 S0/1/1 100` была» |
 | bank 14-16 | 38 | style | Bank only: «чтобы трафик использовал канал OSPF только после его запуска» garbles the source («when it is up»); the connected copy ends «...использовал канал OS… | learn-ccna1#121 → «чтобы трафик использовал канал OSPF?» |
 | bank 14-16 | 39 | style | Calque «Какая структура завершает следующее утверждение?» in the stems of Q39-Q48 (bank twins of 14-16-exam Q39-Q42 and their bank-only variants) | learn-ccna1#121 → «Какой вариант завершает следующее утверждение?» |
+| bank 14-16 | 40 | unclear | Bank only: Q39-Q48 are ten single-choice variants cut from one matching item (Q40, Q42, Q45, Q46, Q48 have no connected twin). The shared options are not fitted… | operator (kb#275) |
 | bank 14-16 | 51 | style | Bank only: missing full stop «Посмотрите на пример Какой интерфейс» | learn-ccna1#121 → «Посмотрите на пример. Какой» |
 | bank 14-16 | 54 | style | Bank only: malformed address «L 0.3.86.193/27» (leading 1 lost) | learn-ccna1#121 → «L 10.3.86.193/27» |
 | bank 14-16 | 55 | error | Bank only: wrong key. 172.18.109.152 matches no route in the exhibit and there is no gateway of last resort, so the packet is dropped (answer 4); the bank marks… | learn-ccna1#121 key → answer 4 |
+| bank 14-16 | 56 | error | Bank only (no connected twin): 172.18.109.152 matches no route and there is no gateway of last resort, so the packet is dropped, but no option says so and Seria… | operator (kb#275) |
+| bank 14-16 | 64 | unclear | Bank only: Packet Tracer activity (.pka) question; .pka files are out of scope | operator (kb#275) |
 | bank 14-16 | 49–58 | style | Garbled word order «имеет назначение IP-адрес» (stems of bank Q49–Q58); the connected copy says «IP-адрес назначения» | learn-ccna1#121 → «имеет IP-адрес назначения» |
 | bank Practice Final | 1 | style | Bank only: command garbled by spacing «BranchSw (config) #interface VLAN88 ?» | learn-ccna1#121 → «команды `BranchSw(config)# interface VLAN88`?» |
 | bank Practice Final | 9 | style | Bank only: stray space before the full stop after the command | learn-ccna1#121 → «switchport nonegotiate.» |
 | bank Practice Final | 10 | style | Bank only: typo «HHTP» for HTTP | learn-ccna1#121 → «HTTP» |
 | bank Practice Final | 14 | style | Bank only: garbled option «порт на двух коммутаторах портов FastEthernet» (the connected copy: «режимы портов FastEthernet на коммутаторе») | learn-ccna1#121 → «режимы портов FastEthernet на коммутаторе» |
+| bank Practice Final | 16 | unclear | Same as final-exam Q16: PVST+ load balancing is not taught in the module | operator (kb#275) |
 | bank Practice Final | 22 | style | Bank only: stray space before the full stop after the command | learn-ccna1#121 → «команда ip helper-address.» |
 | bank Practice Final | 24 | style | Bank only: DHCPACK described as «определения успешности аренды»; it confirms the lease (the connected copy: «подтверждения») | learn-ccna1#121 → «сообщение, используемое для подтверждения успешности аренды» |
 | bank Practice Final | 25 | style | Bank only: stray space before the full stop after the command | learn-ccna1#121 → «managed-config-flag. Как» |
@@ -597,12 +623,18 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 | bank Practice Final | 33 | style | Bank only: stray space before the full stop after the command | learn-ccna1#121 → «командой no shutdown.» |
 | bank Practice Final | 34 | error | Bank only: the stem of Q32 (port security rejected) was copied onto this question; the exhibit (10.png) and the options are about three ip arp inspection valida… | learn-ccna1#121 → «![](./assert/10.png) Посмотрите на изображение. К какому результату приведет применение данной последовательности команд…» |
 | bank Practice Final | 34 | style | Bank only: the second sentence has no verb («Если один набор параметров действителен, разрешение передачи пакета ARP.») | learn-ccna1#121 → «Если хотя бы один параметр действителен, то пакет ARP может быть передан.» |
+| bank Practice Final | 35 | unclear | Same as final-exam Q35: two defensible answers (uplink trust vs inspection on untrusted ports); misleading comment | operator (kb#275) |
 | bank Practice Final | 36 | style | Distractor names ISL, a vendor-proprietary trunking encapsulation the course never mentions; a standard encapsulation keeps the option wrong (bank twin of final… | learn-ccna1#121 → «Использовать инкапсуляцию 802.1Q на всех магистральных каналах.» |
 | bank Practice Final | 37 | style | Bank only: broken syntax «Какие два метода можно использовать беспроводной сетевой адаптер» | learn-ccna1#121 → «Какие два метода может использовать беспроводной сетевой адаптер» |
+| bank Practice Final | 41 | unclear | Same as final-exam Q41: distractor «AAA» is defensible (a RADIUS server is an AAA server) | operator (kb#275) |
+| bank Practice Final | 44 | error | Known issue confirmed (bank twin of final-exam Q44): item «маршруты, реализуемые администратором вручную» has match "0", not among the options 1-3; needs a stru… | operator (kb#275) |
+| bank Practice Final | 45 | error | Known issue confirmed: multiChoice with one correct answer (::/0) and a single-answer stem; the connected copy is singleChoice | learn-ccna1#121 → «"answerType": "singleChoice"» |
 | bank Practice Final | 46 | error | Bank only: wrong key. 172.18.109.152 matches no route and there is no gateway of last resort, so the packet is dropped (answer 4); the bank marks Serial0/0/0. T… | learn-ccna1#121 key → answer 4 |
 | bank Practice Final | 46 | style | Garbled word order «имеет назначение IP-адрес»; the connected copy says «IP-адрес назначения» | learn-ccna1#121 → «имеет IP-адрес назначения» |
+| bank Practice Final | 47 | error | Known issue confirmed: singleChoice with two correct answers while the stem says «две ... (Выберите два варианта.)»; the connected copy is multiChoice | learn-ccna1#121 → «"answerType": "multiChoice"» |
 | bank Practice Final | 47 | style | Bank only: missing space «CEF?(Выберите» | learn-ccna1#121 → «CEF? (Выберите» |
 | bank Practice Final | 48 | style | Bank only: «показатель» for metric; the module and the connected copy say «метрика» | learn-ccna1#121 → «"answer": "метрика"» |
+| bank Practice Final | 48 | unclear | Bank only: the unused option "C" is also a route-source code shown in the exhibit, so «протокол источника маршрута» could match it as well as "D" | operator (kb#275) |
 | bank Practice Final | 49 | error | Bank only: wrong key. The options were reordered but the key stayed on answer 1 («Добавить адрес следующего перехода 192.168.0.36.»); the fix is to raise the AD… | learn-ccna1#121 key → answer 4 |
 | bank Practice Final | 49 | style | Bank only: stray space before the comma after the command | learn-ccna1#121 → «S0/0/1 100, и» |
 | bank Practice Final | 50 | error | Bank only: wrong key. Answer 1 «ipv6 route ::/0 fe80::1» is invalid (a link-local next hop needs an exit interface, as the comment says); the valid default rout… | learn-ccna1#121 key → answer 3 |
@@ -613,17 +645,19 @@ The bank copies live in learn-ccna1 and have extra questions, so their numbering
 
 ## Course text found on the way
 
-Errors in the lecture text that the review ran into. None of them is changed by the quiz PRs, because the lectures are outside kb#275. They go to the operator with the doubtful items.
+Errors in the lecture text that the review ran into. The quiz PRs don't change them, because the lectures are outside kb#275. By the operator's decision (kb#275 comment 6250372119, item 3), the factual errors are fixed in CCNA2 `content(accuracy)` PRs, like learn-ccna1#108, each with a source. learn-ccna2#52 fixed 01.01:54, 03.02:47 and 12.04:13. A follow-up PR takes 11.04:53 and the two errors found after this review, 12.04:17 and 05.02:130 (the last two rows). The other three rows are wording, not factual errors, so they are not in that PR. The questions that repeat a lecture error (01-04 Q27, 10-13 Q68, 12.04.06 q3) are rephrased after the fix.
 
 | Lecture | Problem |
 |---|---|
-| `01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/README.md:54` | «Если индикатор горит зеленым цветом, вентиляторы работают нормально» under the system LED; green means the system works normally. The quiz fix in 01.06.04 q2 does not depend on this sentence |
-| `03-vlans/03.02-vlans-in-a-multi-switched-environment/README.md:47` | 802.1Q user priority «поддерживает реализацию уровня или сервиса», a garble of "level of service"; 01-04-exam Q27 repeats it and waits for this line |
+| `01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/README.md:54` | «Если индикатор горит зеленым цветом, вентиляторы работают нормально» under the system LED; green means the system works normally. The quiz fix in 01.06.04 q2 does not depend on this sentence. Fixed in learn-ccna2#52 |
+| `03-vlans/03.02-vlans-in-a-multi-switched-environment/README.md:47` | 802.1Q user priority «поддерживает реализацию уровня или сервиса», a garble of "level of service"; 01-04-exam Q27 repeats it and waits for this line. Fixed in learn-ccna2#52 |
 | `10-lan-security-concepts/10.03-layer-2-security-threats/README.md:38` | «САМ таблицы» typed in Cyrillic letters; it should be Latin CAM |
 | `10-lan-security-concepts/10.05-lan-attacks/README.md:46` | «к порту, находящимся» (should be «находящемуся»), and «транкового порта», a variant the glossary forbids |
 | `11-switch-security-configuration/11.01-implement-port-security/README.md:99` | «значение безопасности порта по умолчанию равно 1» is clumsy; «максимальное число MAC-адресов по умолчанию» is meant (noted by kb's review of learn-ccna2#44) |
-| `11-switch-security-configuration/11.04-mitigate-arp-attacks/README.md:53` | each new `ip arp inspection validate` command «просматривает предыдущую»; it replaces the previous one. The exam comments are fixed in learn-ccna2#50 |
-| `12-wlan-concepts/12.04-capwap-operation/README.md:13` | CAPWAP called «стандартный протокол IEEE»; it is an IETF standard (RFC 5415). 10-13-exam Q68 repeats it and waits for this line |
+| `11-switch-security-configuration/11.04-mitigate-arp-attacks/README.md:53` | each new `ip arp inspection validate` command «просматривает предыдущую»; it replaces the previous one. The exam comments are fixed in learn-ccna2#50; the lecture goes to the follow-up `content(accuracy)` PR |
+| `12-wlan-concepts/12.04-capwap-operation/README.md:13` | CAPWAP called «стандартный протокол IEEE»; it is an IETF standard (RFC 5415). 10-13-exam Q68 repeats it and waits for this line. Fixed in learn-ccna2#52 |
+| `12-wlan-concepts/12.04-capwap-operation/README.md:17` | IPv6 is said to carry CAPWAP as IP protocol 136, with the number «в заголовке кадра». By RFC 5415 §3 the control channel runs over UDP in both IP versions, only the IPv6 data channel defaults to UDP-Lite (136), and the number sits in the IP header. Found in kb's review of learn-ccna2#52; 12.04.06 q3 depends on it |
+| `05-stp/05.02-stp-operations/README.md:130` | «альтернативным (резервным) портом»: the backup port («резервный») is a separate role (IEEE 802.1D-2004 §17.3.1), and the section heading says «альтернативных (заблокированных)». Named in the operator's decision after kb's review of this report |
 
 CEF and CDP stay in the lectures as technologies (ADR principle 3, confirmed by kb's review of learn-ccna2#48), so the questions about them stay as they are: 14.02.04 q3 and 14.06.02 q6 are recorded as "rejected" with that reason, and 16.03.04 q6 keeps `show cdp neighbors`.
 
@@ -631,5 +665,5 @@ CEF and CDP stay in the lectures as technologies (ADR principle 3, confirmed by 
 
 - **Images:** bank 01-04 Q25 and Q45 point to `assert/4.png` and `assert/15.png`, while the files are `4.PNG` and `15.PNG`. Image paths are out of scope, so they are logged in learn-ccna1#120's `audit/figma-followups/` file.
 - **Packet Tracer items:** five bank questions are `.pka` activities (01-04 Q73, 05-06 Q56, 07-09 Q63, 10-13 Q75, 14-16 Q64). Files with `.pka` are out of scope, so the questions stay until the lab rework.
-- **Structural fixes:** final-exam Q44 and its bank twin (a matching item with no option), bank 07-09 Q32 (an empty matching question), bank 10-13 Q67 and bank 14-16 Q12 (placeholder items) and bank 14-16 Q56 (no correct option) need changes to the JSON structure, which kb#275 does not make. They are on the operator list.
-- **Term alignment:** existing «роутер», «хост» and «транк» are left to the kb#276 alignment PRs, which start after this course's kb#275 PRs are merged.
+- **Structural fixes:** final-exam Q44 and its bank twin (a matching item with no option), bank 07-09 Q32 (an empty matching question), bank 10-13 Q67 and bank 14-16 Q12 (placeholder items) and bank 14-16 Q56 (no correct option) need changes to the JSON structure, which kb#275 does not make. They are on the operator list. By the operator's later decision, bank 14-16 Q56 and the two placeholders are fixed inside the current shape in the rephrasing pass; final-exam Q44 and its twin, bank 07-09 Q32 and bank 14-16 Q39–Q48 stay open.
+- **Term alignment:** existing «роутер», «хост» and «транк» are left to the kb#276 alignment PRs, which start after this course's kb#275 PRs are merged. So are the NS / NA renderings that kb#281 decided («запрос соседа (NS)», «объявление соседа (NA)»), for example «Запрос соседнего узла» in 08.02.07. The kb#275 PRs change a term only where they rewrite the sentence, as 08.05.03 does. The Time Exceeded row (kb#281) has no occurrence in CCNA2.
