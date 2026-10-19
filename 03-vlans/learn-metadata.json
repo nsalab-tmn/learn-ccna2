@@ -33,9 +33,6 @@
             "$ref": "./03.04.05-lab-configure-trunks/learn-metadata.json"
         },
         {
-            "$ref": "./03.04.06-lab-configure-vlans-and-trunking-physical-mode/learn-metadata.json"
-        },
-        {
             "$ref": "./03.05-dynamic-trunking-protocol/learn-metadata.json"
         },
         {
