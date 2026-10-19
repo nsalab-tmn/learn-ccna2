@@ -1,9 +1,10 @@
 {
     "title": "Базовая настройка контроллера беспроводной сети",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-configuration.configure-a-wpa2-enterprise-wlan-on-the-wlc",
+    "type": "scored-lecture",
     "description": "Какие протоколы помогают следить за работой беспроводной сети? Как правильно подключить контроллер беспроводной сети к коммутатору? Какие базовые настройки необходимо произвести на контроллере?",
     "difficulty": 3,
-    "duration": "PT0H32M",
+    "duration": "PT0H37M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,123 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-configuration.configure-a-wpa2-enterprise-wlan-on-the-wlc",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Explain how a WPA2 Enterprise WLAN on a controller differs from WPA2-PSK (per-user credentials checked by a RADIUS server, the shared key between the controller and the RADIUS server), what SNMP traps are for, and which security a new WLAN gets by default (WPA2 with AES and 802.1X)."
+        },
+        "requires": [
+            "ksa.ccna2.wlan-configuration.configure-a-basic-wlc-on-the-wlc",
+            "ksa.ccna2.wlan-concepts.secure-wlans",
+            "ksa.ccna2.lan-security-concepts.access-control"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): WPA2 Enterprise and RADIUS, the controller–RADIUS key, SNMP traps, default WLAN security.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Чем для пользователей WLAN аутентификация WPA2 Enterprise отличается от WPA2-PSK?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Каждый пользователь вводит собственные имя пользователя и пароль, которые проверяет сервер RADIUS",
+                    "correct": true
+                },
+                {
+                    "answer": "Все пользователи вводят один и тот же предварительный общий ключ",
+                    "correct": false,
+                    "comment": "Так работает WPA2-PSK. В WPA2 Enterprise каждый пользователь вводит собственные имя пользователя и пароль, и их проверяет сервер RADIUS."
+                },
+                {
+                    "answer": "Пользователи вводят ключ, которым контроллер связывается с сервером RADIUS",
+                    "correct": false,
+                    "comment": "Этот ключ используют между собой контроллер и сервер RADIUS; пользователям он не нужен. Пользователи вводят собственные имя пользователя и пароль, которые проверяет сервер RADIUS."
+                },
+                {
+                    "answer": "Пользователи подключаются без учетных данных, а сервер RADIUS только ведет учет",
+                    "correct": false,
+                    "comment": "В WPA2 Enterprise пользователи обязательно вводят учетные данные: собственные имя пользователя и пароль, которые проверяет сервер RADIUS."
+                }
+            ]
+        },
+        {
+            "question": "Для чего контроллер беспроводной сети настраивают на работу с сервером SNMP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Чтобы пересылать на сервер сообщения журнала SNMP (прерывания) для мониторинга сети",
+                    "correct": true
+                },
+                {
+                    "answer": "Чтобы проверять имена пользователей и пароли беспроводных клиентов",
+                    "correct": false,
+                    "comment": "Учетные данные пользователей проверяет сервер RADIUS. SNMP используют для мониторинга сети: контроллер пересылает на сервер SNMP сообщения журнала, называемые прерываниями."
+                },
+                {
+                    "answer": "Чтобы выдавать беспроводным клиентам IP-адреса",
+                    "correct": false,
+                    "comment": "Адреса клиентам выдает DHCP. SNMP используют для мониторинга сети: контроллер пересылает на сервер SNMP сообщения журнала, называемые прерываниями."
+                },
+                {
+                    "answer": "Чтобы шифровать трафик между клиентами и точкой доступа",
+                    "correct": false,
+                    "comment": "Трафик WLAN шифрует AES. SNMP используют для мониторинга сети: контроллер пересылает на сервер SNMP сообщения журнала, называемые прерываниями."
+                }
+            ]
+        },
+        {
+            "question": "Для кого предназначен ключ аутентификации, который вводят на контроллере вместе с адресом сервера RADIUS?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Это пароль, который используют между собой контроллер и сервер RADIUS; пользователям он не нужен",
+                    "correct": true
+                },
+                {
+                    "answer": "Это предварительный общий ключ, который вводят пользователи WLAN",
+                    "correct": false,
+                    "comment": "Пользователи WPA2 Enterprise вводят собственные имя пользователя и пароль. Ключ аутентификации на контроллере — пароль между контроллером и сервером RADIUS."
+                },
+                {
+                    "answer": "Это пароль администратора для входа на контроллер",
+                    "correct": false,
+                    "comment": "Для входа на контроллер используют учетные данные, заданные при начальной настройке. Ключ аутентификации — пароль между контроллером и сервером RADIUS."
+                }
+            ]
+        },
+        {
+            "question": "Какую защиту по умолчанию получает новая WLAN, созданная на контроллере?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WPA2 с шифрованием AES и протоколом управления ключами 802.1X",
+                    "correct": true
+                },
+                {
+                    "answer": "Открытую аутентификацию без шифрования",
+                    "correct": false,
+                    "comment": "Новая WLAN на контроллере по умолчанию защищена: она использует WPA2 с шифрованием AES, а протокол управления ключами по умолчанию — 802.1X."
+                },
+                {
+                    "answer": "WPA2-PSK с предварительным общим ключом по умолчанию",
+                    "correct": false,
+                    "comment": "Предварительный общий ключ администратор задает сам, если выбирает PSK. По умолчанию новая WLAN использует WPA2 с AES и 802.1X."
+                },
+                {
+                    "answer": "WPA с шифрованием TKIP",
+                    "correct": false,
+                    "comment": "По умолчанию новая WLAN на контроллере использует WPA2 с шифрованием AES и протоколом управления ключами 802.1X."
+                }
+            ]
+        }
+    ]
 }
