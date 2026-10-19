@@ -22,7 +22,7 @@
 
 ## Описание топологии
 
-Топология состоит из трех коммутаторов S1, S2, S3 и шести компьютеров PC1–PC6: коммутатор S1 соединен с коммутаторами S2 и S3, и к каждому из них подключено по три компьютера.
+Топология состоит из трех коммутаторов S1, S2, S3 и шести компьютеров PC1–PC6: коммутатор S1 соединен с коммутаторами S2 и S3, и к каждому из коммутаторов S2 и S3 подключено по три компьютера.
 
 Схема сети открывается по ссылке «Адрес лаборатории» после развертывания лабораторной работы. Щелчок по коммутатору на схеме открывает его консоль. Щелчок по компьютеру открывает окно устройства: на вкладке «Рабочий стол» в нем есть приложение «Командная строка».
 
@@ -127,7 +127,7 @@ S1(config-vlan)#name Management&Native
 S1(config-vlan)#vlan 150
 S1(config-vlan)#name VOICE
 S1(config-vlan)#end
-*Mar  1 00:00:50.498: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:00:50.437: %SYS-5-CONFIG_I: Configured from console by console
 ```
 
 4. Убедитесь, что сети VLAN созданы, с помощью команды **show vlan brief**. Новые сети VLAN активны, но портов в них пока нет.
@@ -158,7 +158,7 @@ VLAN Name                             Status    Ports
 
 > **Примечание.** В этой лабораторной работе сети VLAN создаются на каждом коммутаторе вручную: сеть VLAN, созданная на одном коммутаторе, на других коммутаторах не появляется.
 
-6. Аналогично создайте те же сети VLAN с теми же именами на коммутаторах S2 и S3. Команды на S3 те же, что на S2.
+6. На коммутаторах S2 и S3 откройте консоль, нажмите Enter и перейдите в привилегированный режим EXEC командой **enable**. Затем аналогично создайте те же сети VLAN с теми же именами. Команды на S3 те же, что на S2.
 
 ```
 S2>enable
@@ -175,7 +175,7 @@ S2(config-vlan)#name Management&Native
 S2(config-vlan)#vlan 150
 S2(config-vlan)#name VOICE
 S2(config-vlan)#end
-*Mar  1 00:01:01.765: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:01.702: %SYS-5-CONFIG_I: Configured from console by console
 ```
 
 ## Назначение портов сетям VLAN
@@ -198,7 +198,7 @@ S2(config-if)#interface f0/6
 S2(config-if)#switchport mode access
 S2(config-if)#switchport access vlan 30
 S2(config-if)#end
-*Mar  1 00:01:20.067: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:19.989: %SYS-5-CONFIG_I: Configured from console by console
 S2#show vlan brief
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
@@ -236,7 +236,7 @@ S3(config-if)#interface f0/6
 S3(config-if)#switchport mode access
 S3(config-if)#switchport access vlan 30
 S3(config-if)#end
-*Mar  1 00:01:28.507: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:28.436: %SYS-5-CONFIG_I: Configured from console by console
 ```
 
 ## Настройка голосовой сети VLAN
@@ -253,7 +253,7 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 S3(config)#interface f0/11
 S3(config-if)#switchport voice vlan 150
 S3(config-if)#end
-*Mar  1 00:01:31.320: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:31.249: %SYS-5-CONFIG_I: Configured from console by console
 S3#show interfaces f0/11 switchport
 Name: Fa0/11
 Switchport: Enabled
@@ -286,7 +286,7 @@ Ping statistics for 172.17.10.24:
     Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
 ```
 
-2. На коммутаторе S2 снова выведите список сетей VLAN командой **show vlan brief** и найдите в нем порт G0/1, которым коммутатор S2 подключен к коммутатору S1.
+2. На коммутаторе S2 снова выведите список сетей VLAN командой **show vlan brief** и найдите в нем порт, которым коммутатор S2 подключен к коммутатору S1 (G0/1). Он остался в сети VLAN 1: ни одна из ваших сетей VLAN не настроена на соединении между коммутаторами.
 
 ```
 S2#show vlan brief
@@ -304,6 +304,12 @@ VLAN Name                             Status    Ports
 …
 ```
 
-3. Ответьте на вопросы 3 и 4 в форме ответов.
+3. На коммутаторе S2 выведите список магистральных каналов (trunk) командой **show interfaces trunk**. Вывод пуст: между коммутаторами нет ни одного магистрального канала.
+
+```
+S2#show interfaces trunk
+```
+
+4. Ответьте на вопросы 3 и 4 в форме ответов.
 
 <!-- [Скачать файл Packet Tracer для локального запуска](./assets/3.3.12-lab.pka) -->
