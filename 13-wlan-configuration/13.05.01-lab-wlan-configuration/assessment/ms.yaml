@@ -190,7 +190,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'Home-Wireless-Router: config.wifinet0.key == ''Cisco123'''
+      - name: 'Home-Wireless-Router: config.wifinet0.key == ''Wlanpa55'''
         code: check
         type: check
         device: Home-Admin
@@ -201,7 +201,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: config.wifinet0.key
-              value: Cisco123
+              value: Wlanpa55
   - code: HOME-WIRELESS-ROUTER.MISC
     name: Miscellaneous
     aspects:
@@ -231,7 +231,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'Home-Wireless-Router: password == ''Cisco123'''
+      - name: 'Home-Wireless-Router: password == ''Wlanpa55'''
         code: check
         type: check
         device: Home-Admin
@@ -242,7 +242,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: password
-              value: Cisco123
+              value: Wlanpa55
 - code: LAPTOP
   name: Laptop
   subCriterions:
@@ -294,7 +294,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'Laptop: connected.key == ''Cisco123'''
+      - name: 'Laptop: connected.key == ''Wlanpa55'''
         code: check
         type: check
         device: Laptop
@@ -305,7 +305,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: connected.key
-              value: Cisco123
+              value: Wlanpa55
 - code: SMARTPHONE
   name: Smartphone
   subCriterions:
@@ -357,7 +357,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'Smartphone: connected.key == ''Cisco123'''
+      - name: 'Smartphone: connected.key == ''Wlanpa55'''
         code: check
         type: check
         device: Smartphone
@@ -368,7 +368,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: connected.key
-              value: Cisco123
+              value: Wlanpa55
 - code: TABLET-PC
   name: Tablet-PC
   subCriterions:
@@ -420,7 +420,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'Tablet-PC: connected.key == ''Cisco123'''
+      - name: 'Tablet-PC: connected.key == ''Wlanpa55'''
         code: check
         type: check
         device: Tablet-PC
@@ -431,7 +431,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: connected.key
-              value: Cisco123
+              value: Wlanpa55
 - code: WLC-1
   name: WLC-1
   subCriterions:
@@ -483,7 +483,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 2''] | [0].key == ''Cisco123'''
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 2''] | [0].key == ''Wlanpa55'''
         code: check
         type: check
         device: Enterprise-Admin
@@ -494,7 +494,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: wlans[?profile=='Wireless VLAN 2'] | [0].key
-              value: Cisco123
+              value: Wlanpa55
     - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-2-VLAN
       name: Wireless LANs.Wireless VLAN 2.VLAN
       description: 'WLAN «Wireless VLAN 2»: VLAN 2'
@@ -514,6 +514,63 @@ Criterions:
             assert_jmespath:
               path: wlans[?profile=='Wireless VLAN 2'] | [0].vlan
               value: 2
+    - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-2-ID
+      name: Wireless LANs.Wireless VLAN 2.WLAN ID
+      description: 'WLAN «Wireless VLAN 2»: ID 2'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 2''] | [0].id == 2'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='Wireless VLAN 2'] | [0].id
+              value: 2
+    - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-2-FLEX-SWITCHING
+      name: Wireless LANs.Wireless VLAN 2.FlexConnect Local Switching
+      description: 'WLAN «Wireless VLAN 2»: FlexConnect local switching'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 2''] | [0].local_switching == True'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='Wireless VLAN 2'] | [0].local_switching
+              value: true
+    - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-2-FLEX-AUTH
+      name: Wireless LANs.Wireless VLAN 2.FlexConnect Local Auth
+      description: 'WLAN «Wireless VLAN 2»: FlexConnect local auth'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 2''] | [0].local_auth == True'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='Wireless VLAN 2'] | [0].local_auth
+              value: true
     - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-5-SSID
       name: Wireless LANs.Wireless VLAN 5.SSID
       description: 'WLAN «Wireless VLAN 5»: SSID SSID-5'
@@ -609,6 +666,120 @@ Criterions:
             assert_jmespath:
               path: wlans[?profile=='Wireless VLAN 5'] | [0].vlan
               value: 5
+    - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-5-ID
+      name: Wireless LANs.Wireless VLAN 5.WLAN ID
+      description: 'WLAN «Wireless VLAN 5»: ID 5'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 5''] | [0].id == 5'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='Wireless VLAN 5'] | [0].id
+              value: 5
+    - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-5-FLEX-SWITCHING
+      name: Wireless LANs.Wireless VLAN 5.FlexConnect Local Switching
+      description: 'WLAN «Wireless VLAN 5»: FlexConnect local switching'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 5''] | [0].local_switching == True'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='Wireless VLAN 5'] | [0].local_switching
+              value: true
+    - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-5-FLEX-AUTH
+      name: Wireless LANs.Wireless VLAN 5.FlexConnect Local Auth
+      description: 'WLAN «Wireless VLAN 5»: FlexConnect local auth'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 5''] | [0].local_auth == True'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='Wireless VLAN 5'] | [0].local_auth
+              value: true
+    - code: WLC-1.CAPWAP-WIRELESS.RADIUS-10-6-0-254-IP
+      name: Security.RADIUS Servers.Server 10.6.0.254.Address
+      description: RADIUS-сервер 10.6.0.254
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: config.radius[?ip==''10.6.0.254''] | [0].ip == ''10.6.0.254'''
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: config.radius[?ip=='10.6.0.254'] | [0].ip
+              value: 10.6.0.254
+    - code: WLC-1.CAPWAP-WIRELESS.RADIUS-10-6-0-254-PORT
+      name: Security.RADIUS Servers.Server 10.6.0.254.Port
+      description: 'RADIUS-сервер: порт 1812'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: config.radius[?ip==''10.6.0.254''] | [0].port == 1812'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: config.radius[?ip=='10.6.0.254'] | [0].port
+              value: 1812
+    - code: WLC-1.CAPWAP-WIRELESS.RADIUS-10-6-0-254-KEY
+      name: Security.RADIUS Servers.Server 10.6.0.254.Secret
+      description: 'RADIUS-сервер: общий ключ задан'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: config.radius[?ip==''10.6.0.254''] | [0].secret == ''RadiusPW'''
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: config.radius[?ip=='10.6.0.254'] | [0].secret
+              value: RadiusPW
   - code: WLC-1.DHCP-SERVER-LIST
     name: DHCP Server List
     aspects:
@@ -748,6 +919,44 @@ Criterions:
             assert_jmespath:
               path: interfaces[?name=='WLAN 2'] | [0].ip
               value: 192.168.2.254
+    - code: WLC-1.PORTS.WLAN-2-GW
+      name: WLAN 2.Port Gateway
+      description: 'Интерфейс WLAN 2: шлюз 192.168.2.1'
+      skills:
+      - Ip
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: interfaces[?name==''WLAN 2''] | [0].gateway == ''192.168.2.1'''
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: interfaces[?name=='WLAN 2'] | [0].gateway
+              value: 192.168.2.1
+    - code: WLC-1.PORTS.WLAN-2-VLAN
+      name: WLAN 2.VLAN Identifier
+      description: 'Интерфейс WLAN 2: VLAN 2'
+      skills:
+      - Ip
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: interfaces[?name==''WLAN 2''] | [0].vlan == 2'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: interfaces[?name=='WLAN 2'] | [0].vlan
+              value: 2
     - code: WLC-1.PORTS.WLAN-2-STATUS
       name: WLAN 2.Port Status
       description: 'Интерфейс WLAN 2: состояние up'
@@ -824,6 +1033,44 @@ Criterions:
             assert_jmespath:
               path: interfaces[?name=='WLAN 5'] | [0].ip
               value: 192.168.5.254
+    - code: WLC-1.PORTS.WLAN-5-GW
+      name: WLAN 5.Port Gateway
+      description: 'Интерфейс WLAN 5: шлюз 192.168.5.1'
+      skills:
+      - Ip
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: interfaces[?name==''WLAN 5''] | [0].gateway == ''192.168.5.1'''
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: interfaces[?name=='WLAN 5'] | [0].gateway
+              value: 192.168.5.1
+    - code: WLC-1.PORTS.WLAN-5-VLAN
+      name: WLAN 5.VLAN Identifier
+      description: 'Интерфейс WLAN 5: VLAN 5'
+      skills:
+      - Ip
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: interfaces[?name==''WLAN 5''] | [0].vlan == 5'
+        code: check
+        type: check
+        device: Enterprise-Admin
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: interfaces[?name=='WLAN 5'] | [0].vlan
+              value: 5
     - code: WLC-1.PORTS.WLAN-5-STATUS
       name: WLAN 5.Port Status
       description: 'Интерфейс WLAN 5: состояние up'
