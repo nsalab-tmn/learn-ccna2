@@ -230,7 +230,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: RTA
@@ -238,7 +238,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line con 0( |$)
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
   - code: RTA.PORTS
     name: Ports
@@ -491,8 +491,8 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscolinepa55|7
-          00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Netlinepa55|7
+          002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: RTA
@@ -500,7 +500,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
   - code: RTA.MISC
     name: Miscellaneous
@@ -530,7 +530,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM'
+      - name: 'show running-config: has enable secret 5 $1$mERr$V86HNsko1vmhNBrI'
         code: check
         type: check
         device: RTA
@@ -539,7 +539,7 @@ Criterions:
           action_vars:
             command: show running-config
             assert_tags:
-            - enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM
+            - enable secret 5 $1$mERr$V86HNsko1vmhNBrI
             tags_are_present: true
     - code: RTA.MISC.HOSTNAME
       name: Host Name
@@ -606,7 +606,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: SW1
@@ -614,7 +614,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line con 0( |$)
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
   - code: SW1.PORTS
     name: Ports
@@ -701,8 +701,8 @@ Criterions:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
             expr: (?m)^ login\s*$
             match: true
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscolinepa55|7
-          00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Netlinepa55|7
+          002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: SW1
@@ -710,7 +710,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
     - code: SW1.VTY.VTY0-PASSWORD
       name: VTY Line 0.Password
@@ -719,8 +719,8 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscolinepa55|7
-          00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Netlinepa55|7
+          002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: SW1
@@ -728,7 +728,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
   - code: SW1.MISC
     name: Miscellaneous
@@ -757,7 +757,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM'
+      - name: 'show running-config: has enable secret 5 $1$mERr$V86HNsko1vmhNBrI'
         code: check
         type: check
         device: SW1
@@ -766,7 +766,7 @@ Criterions:
           action_vars:
             command: show running-config
             assert_tags:
-            - enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM
+            - enable secret 5 $1$mERr$V86HNsko1vmhNBrI
             tags_are_present: true
     - code: SW1.MISC.STARTUP-CONFIG
       name: Startup Config
@@ -816,7 +816,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: SW2
@@ -824,7 +824,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line con 0( |$)
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
   - code: SW2.PORTS
     name: Ports
@@ -911,8 +911,8 @@ Criterions:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
             expr: (?m)^ login\s*$
             match: true
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscolinepa55|7
-          00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Netlinepa55|7
+          002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: SW2
@@ -920,7 +920,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
     - code: SW2.VTY.VTY0-PASSWORD
       name: VTY Line 0.Password
@@ -929,8 +929,8 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscolinepa55|7
-          00271A150754070F01245C4F5C4C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Netlinepa55|7
+          002A1612085205031F20191B)\s*$'
         code: check
         type: check
         device: SW2
@@ -938,7 +938,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscolinepa55|7 00271A150754070F01245C4F5C4C)\s*$
+            expr: (?m)^ password (?:Netlinepa55|7 002A1612085205031F20191B)\s*$
             match: true
   - code: SW2.MISC
     name: Miscellaneous
@@ -967,7 +967,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM'
+      - name: 'show running-config: has enable secret 5 $1$mERr$V86HNsko1vmhNBrI'
         code: check
         type: check
         device: SW2
@@ -976,7 +976,7 @@ Criterions:
           action_vars:
             command: show running-config
             assert_tags:
-            - enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM
+            - enable secret 5 $1$mERr$V86HNsko1vmhNBrI
             tags_are_present: true
     - code: SW2.MISC.STARTUP-CONFIG
       name: Startup Config

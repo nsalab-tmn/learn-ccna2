@@ -269,7 +269,7 @@ Criterions:
       - Security
       max_mark: 2
       steps:
-      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:cisco|7 00071A150754)\s*$'
+      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:R2linepa55|7 0036410A0D550E160E7419)\s*$'
         code: check
         type: check
         device: R2
@@ -277,7 +277,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line con 0( |$)
-            expr: (?m)^ password (?:cisco|7 00071A150754)\s*$
+            expr: (?m)^ password (?:R2linepa55|7 0036410A0D550E160E7419)\s*$
             match: true
   - code: R2.PORTS
     name: Ports
@@ -897,7 +897,7 @@ Criterions:
       - Security
       max_mark: 2
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$nacf1U9PtCAR.RnT'
+      - name: 'show running-config: has enable secret 5 $1$mERr$LlKIyqhasvaC86M2'
         code: check
         type: check
         device: R2
@@ -906,7 +906,7 @@ Criterions:
           action_vars:
             command: show running-config
             assert_tags:
-            - enable secret 5 $1$mERr$nacf1U9PtCAR.RnT
+            - enable secret 5 $1$mERr$LlKIyqhasvaC86M2
             tags_are_present: true
     - code: R2.MISC.HOSTNAME
       name: Host Name
