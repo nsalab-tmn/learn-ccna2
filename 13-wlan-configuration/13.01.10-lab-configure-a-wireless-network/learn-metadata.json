@@ -8,18 +8,15 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
@@ -27,13 +24,9 @@
         "$ref": "./README.md"
     },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
-    },
-    "assets": {
-        "$ref": "./assets"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,32 +34,32 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какой IP-адрес у данного компьютера?",
+                "title": "1. Какой IPv4-адрес получил компьютер Admin по DHCP?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Укажите маску подсети данного компьютера.",
+                "title": "2. Какую маску подсети получил компьютер Admin?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Укажите шлюз по умолчанию данного компьютера.",
+                "title": "3. Какой шлюз по умолчанию получил компьютер Admin?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Находится ли IP-адрес **Admin** в этом диапазоне? Можно ли ожидать этого? Поясните свой ответ.",
+                "title": "4. Входит ли IP-адрес компьютера Admin в диапазон DHCP-сервера маршрутизатора WR? Можно ли было этого ожидать? Поясните ответ.",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Почему через некоторое время веб-браузер отображает сообщение **Request Timeout** (Время ожидания запроса истекло)?",
+                "title": "5. Почему после изменения адреса локальной сети маршрутизатора WR браузер компьютера Admin теряет связь с ним?",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. Какая информация о новом IP-адресе для **Admin**?",
+                "title": "6. Какие IP-адрес, маску подсети, шлюз по умолчанию и DNS-сервер получил компьютер Admin после обновления аренды?",
                 "placeholder": "Enter your answer here"
             }
         }

@@ -8,18 +8,15 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
@@ -27,13 +24,9 @@
         "$ref": "./README.md"
     },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
-    },
-    "assets": {
-        "$ref": "./assets"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,22 +34,22 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Что можно узнать на этом экране?",
+                "title": "1. Что показывает страница «Dashboard» контроллера WLC-1 сразу после входа?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Есть ли точки доступа АР подключенные к контроллеру WLC?",
+                "title": "2. Есть ли точки доступа, присоединенные к контроллеру WLC-1?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Какую информацию вы можете найти о AP на экране All AP?",
+                "title": "3. Какие сведения о точке доступа LAP-1 показывает раздел «Access points»?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Какая информация о новой сети WLAN доступна на этом экране?",
+                "title": "4. Какие сведения о новой сети WLAN показывает страница «WLANs» после ее создания?",
                 "placeholder": "Enter your answer here"
             }
         }
