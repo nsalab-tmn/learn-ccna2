@@ -2,6 +2,11 @@
   "title": "Ведение в коммутацию, маршрутизацию и беспроводные сети",
   "materialType": "learning-path",
   "tags": { "$ref": "./material-tags.json" },
+  "path": {
+    "goal": "Учащийся настраивает и защищает коммутаторы и маршрутизаторы корпоративной локальной сети: VLAN и маршрутизацию между ними, STP и EtherChannel, DHCP и SLAAC, резервирование первого перехода, беспроводные сети и статическую маршрутизацию, — и находит неполадки в этих настройках.",
+    "prerequisites": [],
+    "targets": [ "ksa.ccna2.final-exam" ]
+  },
   "materials": [
     { "$ref": "./01-basic-device-configuration/learn-metadata.json" },
     { "$ref": "./02-switching-concepts/learn-metadata.json" },

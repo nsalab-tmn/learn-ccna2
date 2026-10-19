@@ -1,10 +1,38 @@
 {
     "title": "Экзамен по протоколам конфигурации и резервирования",
+    "shortName": "ccna2.07-09-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* DHCPv4\r* Принципы работы SLAAC и DHCPv6\r* Принципы работы протоколов резервирования первого перехода (FHRP)",
     "difficulty": 1,
     "duration": "PT1H29M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.07-09-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 7–9, identify the DHCPv4, SLAAC and DHCPv6 messages and steps a scenario describes, choose the server, client or relay configuration it calls for, and identify the FHRP option that fits a router-redundancy requirement."
+        },
+        "requires": [
+            "ksa.ccna2.dhcpv4.summary",
+            "ksa.ccna2.slaac-and-dhcpv6-concepts.summary",
+            "ksa.ccna2.fhrp-concepts.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 51 questions covering modules 7–9; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "matching",
@@ -1476,12 +1504,5 @@
             ],
             "question": "Какое утверждение описывает HSRP?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

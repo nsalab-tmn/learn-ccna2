@@ -1,10 +1,37 @@
 {
     "title": "Экзамен по избыточной коммутации",
+    "shortName": "ccna2.05-06-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Протокол связующего дерева (STP)\r* Агрегация каналов с использованием EtherChannel",
     "difficulty": 1,
     "duration": "PT1H25M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.05-06-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 5–6, identify the STP root bridge, port roles and states and the STP variant a scenario describes, and choose the EtherChannel negotiation modes, matching settings and verification commands it calls for."
+        },
+        "requires": [
+            "ksa.ccna2.stp.summary",
+            "ksa.ccna2.etherchannel.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 51 questions covering modules 5–6; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "multiChoice",
@@ -1450,12 +1477,5 @@
             ],
             "question": "![](./assets/10.png) Посмотрите на рисунок. Администратор хочет сформировать EtherChannel между двумя коммутаторами, используя протокол агрегации портов (PAgP). Какой режим нужно настроить на коммутаторе S2 для создания EtherChannel, если на коммутаторе S1 настроен автоматический (auto) режим?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

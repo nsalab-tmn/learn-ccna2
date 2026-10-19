@@ -1,10 +1,40 @@
 {
     "title": "Экзамен по основам коммутации, маршрутизации и беспроводных сетей",
+    "shortName": "ccna2.final-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Базовая настройка устройств\r* Принципы коммутации\r* Виртуальные локальные сети (VLAN)\r* Маршрутизация между VLAN\r* Протокол оставного дерева (STP)\r* Агрегация каналов с использованием EtherChannel\r* DHCPv4\r* Принципы работы SLAAC и DHCPv6\r* Принципы работы протоколов резервирования первого перехода (FHRP)\r* Принципы обеспечения безопасности локальной сети\r* Настройка параметров безопасности коммутатора\r* Принципы работы беспроводных локальных сетей\r* Настройка беспроводных локальных сетей\r* Принципы маршрутизации\r* Статическая IP-маршрутизация\r* Поиск и устранение неисправностей в статической маршрутизации",
     "difficulty": 1,
     "duration": "PT1H40M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.final-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across all modules of the course, identify the switching, routing, redundancy, security or wireless mechanism a scenario describes, and choose the configuration or verification command it calls for."
+        },
+        "requires": [
+            "ksa.ccna2.01-04-exam",
+            "ksa.ccna2.05-06-exam",
+            "ksa.ccna2.07-09-exam",
+            "ksa.ccna2.10-13-exam",
+            "ksa.ccna2.14-16-exam"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 54 questions covering the whole course; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1554,12 +1584,5 @@
             ],
             "question": "![](./assets/15.png) Посмотрите на изображение. Когда на интерфейс Serial0/0/0 маршрутизатора R1 поступает пакет с IP-адресом назначения PC1, какие два события происходят? (верны два варианта)"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

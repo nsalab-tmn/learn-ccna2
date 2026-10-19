@@ -1,10 +1,39 @@
 {
     "title": "Экзамен по безопасности локальных сетей и основам беспроводных сетей ",
+    "shortName": "ccna2.10-13-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Принципы обеспечения безопасности локальной сети\r* Настройка параметров безопасности коммутатора\r* Принципы работы беспроводных локальных сетей\r* Настройка беспроводных локальных сетей",
     "difficulty": 1,
     "duration": "PT1H38M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.10-13-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 10–13, identify the LAN attack, AAA or 802.1X element a scenario describes, choose the switch security measure it calls for, and identify the wireless standard, component or security method and the WLAN configuration or troubleshooting action it needs."
+        },
+        "requires": [
+            "ksa.ccna2.lan-security-concepts.summary",
+            "ksa.ccna2.switch-security-configuration.summary",
+            "ksa.ccna2.wlan-concepts.summary",
+            "ksa.ccna2.wlan-configuration.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 68 questions covering modules 10–13; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1854,12 +1883,5 @@
             ],
             "question": "Какова функция, предоставляемая протоколом CAPWAP в корпоративной беспроводной сети?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }
