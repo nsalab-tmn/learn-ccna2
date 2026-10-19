@@ -1,9 +1,10 @@
 {
     "title": "Компоненты беспроводных сетей",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-concepts.components-of-wlans",
+    "type": "scored-lecture",
     "description": "Из каких компонентов состоят беспроводные сети? Какие существуют типы точек доступа? Какими бывают типы антенн?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H19M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,129 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-concepts.components-of-wlans",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the components of a WLAN (wireless adapters, the parts built into a home wireless router, autonomous and controller-based APs, omnidirectional and directional antennas) and judge whether a range extender suits a given coverage need."
+        },
+        "requires": [
+            "ksa.ccna2.wlan-concepts.introduction-to-wireless"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): wireless adapters, home wireless router, range extender, autonomous AP, antenna types.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Верно ли утверждение, что ноутбуки, не имеющие встроенного беспроводного сетевого адаптера, могут быть подключены к сети только через проводное соединение?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Это утверждение неверно. Ноутбуки без встроенного беспроводного сетевого адаптера могут использовать беспроводной сетевой адаптер USB для подключения к сети"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие из следующих компонентов встроены в беспроводной домашний маршрутизатор? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "точка доступа",
+                    "correct": true
+                },
+                {
+                    "answer": "коммутатор",
+                    "correct": true
+                },
+                {
+                    "answer": "маршрутизатор",
+                    "correct": true
+                },
+                {
+                    "answer": "усилитель сигнала",
+                    "correct": false,
+                    "comment": "Беспроводные домашние маршрутизаторы – это интегрированные устройства, которые включают в себя точку доступа, коммутатор для проводных клиентов и маршрутизатор для подключения к другой сети, такой как Интернет"
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что когда вам нужно расширить зону покрытия небольшой сети, лучшим решением будет использование расширителя диапазона?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Хотя расширители диапазона просты в установке и настройке, лучшим решением будет установка другой точки беспроводного доступа для предоставления выделенного беспроводного доступа для пользовательских устройств, поэтому данное утверждение неверно"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Что из перечисленного является самостоятельным устройством, таким как домашний маршрутизатор, где вся конфигурация WLAN находится на устройстве?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "усилитель сигнала",
+                    "correct": false,
+                    "comment": "Автономная точка доступа – это самостоятельное устройство, например, домашний маршрутизатор, где вся конфигурация WLAN находится на устройстве"
+                },
+                {
+                    "answer": "автономная точка доступа",
+                    "correct": true
+                },
+                {
+                    "answer": "AP на основе контроллера",
+                    "correct": false,
+                    "comment": "Автономная точка доступа – это самостоятельное устройство, например, домашний маршрутизатор, где вся конфигурация WLAN находится на устройстве"
+                },
+                {
+                    "answer": "беспроводной сетевой USB-адаптер",
+                    "correct": false,
+                    "comment": "Автономная точка доступа – это самостоятельное устройство, например, домашний маршрутизатор, где вся конфигурация WLAN находится на устройстве"
+                }
+            ]
+        },
+        {
+            "question": "Какие из следующих антенн обеспечивают 360 градусов покрытия?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "адаптер беспроводной сети",
+                    "correct": false,
+                    "comment": "360 градусов покрытия обеспечивает ненаправленная антенна"
+                },
+                {
+                    "answer": "направленная",
+                    "correct": false,
+                    "comment": "360 градусов покрытия обеспечивает ненаправленная антенна"
+                },
+                {
+                    "answer": "ненаправленная",
+                    "correct": true
+                },
+                {
+                    "answer": "MIMO",
+                    "correct": false,
+                    "comment": "360 градусов покрытия обеспечивает ненаправленная антенна"
+                }
+            ]
+        }
+    ]
 }

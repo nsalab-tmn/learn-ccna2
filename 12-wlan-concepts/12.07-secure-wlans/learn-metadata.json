@@ -1,9 +1,10 @@
 {
     "title": "Безопасность беспроводных локальных сетей",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-concepts.secure-wlans",
+    "type": "scored-lecture",
     "description": "Какие методы аутентификации являются актуальными для беспроводных сетей?",
     "difficulty": 3,
-    "duration": "PT0H18M",
+    "duration": "PT0H26M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,156 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-concepts.secure-wlans",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose authentication and encryption over SSID cloaking and MAC filtering, and match WLAN authentication methods (open, WEP, WPA and WPA2 Personal and Enterprise) and encryption methods (RC4, TKIP, AES) to their properties."
+        },
+        "requires": [
+            "ksa.ccna2.wlan-concepts.wlan-operation",
+            "ksa.ccna2.wlan-concepts.wlan-threats",
+            "ksa.ccna2.lan-security-concepts.access-control"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): best ways to secure a WLAN, open authentication, RC4, AES with CCMP, Personal pre-shared keys.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Каковы лучшие способы защиты WLAN? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "аутентификация",
+                    "correct": true
+                },
+                {
+                    "answer": "маскировка (сокрытие) SSID",
+                    "correct": false,
+                    "comment": "Лучший способ защиты беспроводных сетей — использовать системы аутентификации и шифрования"
+                },
+                {
+                    "answer": "шифрование",
+                    "correct": true
+                },
+                {
+                    "answer": "фильтрация MAC-адресов",
+                    "correct": false,
+                    "comment": "Лучший способ защиты беспроводных сетей — использовать системы аутентификации и шифрования"
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих способов аутентификации не использует пароль, общий для беспроводного клиента и точки доступа?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WEP",
+                    "correct": false,
+                    "comment": "WEP, WPA, WPA2 и WPA3 используют предварительно согласованный пароль между беспроводным клиентом и точкой доступа"
+                },
+                {
+                    "answer": "WPA",
+                    "correct": false,
+                    "comment": "WEP, WPA, WPA2 и WPA3 используют предварительно согласованный пароль между беспроводным клиентом и точкой доступа"
+                },
+                {
+                    "answer": "WPA2",
+                    "correct": false,
+                    "comment": "WEP, WPA, WPA2 и WPA3 используют предварительно согласованный пароль между беспроводным клиентом и точкой доступа"
+                },
+                {
+                    "answer": "WPA3",
+                    "correct": false,
+                    "comment": "WEP, WPA, WPA2 и WPA3 используют предварительно согласованный пароль между беспроводным клиентом и точкой доступа"
+                },
+                {
+                    "answer": "открытая аутентификация",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой метод шифрования используется в исходной спецификации 802.11?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "AES",
+                    "correct": false,
+                    "comment": "Первоначальная спецификация 802.11 была разработана для защиты данных с использованием метода шифрования Rivest Cipher 4 (RC4) со статическим ключом"
+                },
+                {
+                    "answer": "TKIP",
+                    "correct": false,
+                    "comment": "Первоначальная спецификация 802.11 была разработана для защиты данных с использованием метода шифрования Rivest Cipher 4 (RC4) со статическим ключом"
+                },
+                {
+                    "answer": "AES или TKIP",
+                    "correct": false,
+                    "comment": "Первоначальная спецификация 802.11 была разработана для защиты данных с использованием метода шифрования Rivest Cipher 4 (RC4) со статическим ключом"
+                },
+                {
+                    "answer": "RC4",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов шифрования использует CCMP для распознавания изменения зашифрованных и незашифрованных битов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "RC4",
+                    "correct": false,
+                    "comment": "AES использует режим счетного шифра с протоколом кода аутентификации сообщений с цепочкой блоков (CCMP), который позволяет узлам назначения распознавать, были ли изменены зашифрованные и незашифрованные биты"
+                },
+                {
+                    "answer": "TKIP",
+                    "correct": false,
+                    "comment": "AES использует режим счетного шифра с протоколом кода аутентификации сообщений с цепочкой блоков (CCMP), который позволяет узлам назначения распознавать, были ли изменены зашифрованные и незашифрованные биты"
+                },
+                {
+                    "answer": "AES",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "В каком из следующих способов аутентификации пользователю необходимо ввести предварительно согласованный пароль? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "открытая аутентификация",
+                    "correct": false,
+                    "comment": "WPA Personal и WPA2 Personal задействуют предварительно согласованный пароль, который беспроводные клиенты используют для аутентификации в точке доступа"
+                },
+                {
+                    "answer": "WPA Personal",
+                    "correct": true
+                },
+                {
+                    "answer": "WPA Enterprise",
+                    "correct": false,
+                    "comment": "WPA Personal и WPA2 Personal задействуют предварительно согласованный пароль, который беспроводные клиенты используют для аутентификации в точке доступа"
+                },
+                {
+                    "answer": "WPA2 Personal",
+                    "correct": true
+                },
+                {
+                    "answer": "WPA2 Enterprise",
+                    "correct": false,
+                    "comment": "WPA Personal и WPA2 Personal задействуют предварительно согласованный пароль, который беспроводные клиенты используют для аутентификации в точке доступа"
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Угрозы безопасности на уровне коммутации",
-    "materialType": "lecture",
+    "shortName": "ccna2.lan-security-concepts.layer-2-security-threats",
+    "type": "scored-lecture",
     "description": "Какие слабые места существуют на уровне коммутации? Какими бывают категории атак на коммутаторы?",
     "difficulty": 3,
-    "duration": "PT0H5M",
+    "duration": "PT0H12M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,156 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.lan-security-concepts.layer-2-security-threats",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Match each Layer 2 mitigation (port security, DHCP snooping, DAI, IP Source Guard) to the attacks it prevents, and name the measures (VPN, firewalls, IPS) that protect Layers 3 to 7."
+        },
+        "requires": [
+            "ksa.ccna2.lan-security-concepts.endpoint-security",
+            "ksa.ccna2.switching-concepts.frame-forwarding",
+            "ksa.ccna2.dhcpv4.dhcpv4-concepts"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): Layer 2 mitigations and the attacks they stop, protection of Layers 3 to 7.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие из следующих методов нейтрализации используются для защиты уровней с 3 по 7 модели OSI? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "отслеживание DHCP-сообщений",
+                    "correct": false,
+                    "comment": "Отслеживание DHCP-сообщений — решение уровня 2, которое предотвращает истощение пула адресов и подмену сервера"
+                },
+                {
+                    "answer": "сеть VPN",
+                    "correct": true
+                },
+                {
+                    "answer": "межсетевые экраны",
+                    "correct": true
+                },
+                {
+                    "answer": "IP Source Guard",
+                    "correct": false,
+                    "comment": "Эта функция относится к решениям уровня 2: она предотвращает атаки подмены MAC- и IP-адресов"
+                },
+                {
+                    "answer": "IPS-устройства",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов нейтрализации атак предотвращает многие типы атак, включая переполнение таблицы MAC-адресов и атаки с истощением DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Безопасность портов предотвращает различные типы атак, включая переполнение таблицы CAM и истощение ресурсов DHCP"
+                },
+                {
+                    "answer": "анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "Безопасность портов предотвращает различные типы атак, включая переполнение таблицы CAM и истощение ресурсов DHCP"
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "Безопасность портов предотвращает различные типы атак, включая переполнение таблицы CAM и истощение ресурсов DHCP"
+                },
+                {
+                    "answer": "безопасность портов",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой из перечисленных ниже способов нейтрализации атак может предотвратить подделку MAC и IP-адресов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": true
+                },
+                {
+                    "answer": "анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "IP Source Guard (IPSG) предотвращает атаки спуфингом MAC и IP-адресов"
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "IP Source Guard (IPSG) предотвращает атаки спуфингом MAC и IP-адресов"
+                },
+                {
+                    "answer": "безопасность портов",
+                    "correct": false,
+                    "comment": "IP Source Guard (IPSG) предотвращает атаки спуфингом MAC и IP-адресов"
+                }
+            ]
+        },
+        {
+            "question": "Какой из перечисленных ниже способов нейтрализации атак может предотвратить атаки подмены ARP и «отравление» ARP-кэша?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Динамический анализ протокола ARP (DAI) предотвращает ARP-спуфинг и «отравление» ARP-кэша"
+                },
+                {
+                    "answer": "анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "Динамический анализ протокола ARP (DAI) предотвращает ARP-спуфинг и «отравление» ARP-кэша"
+                },
+                {
+                    "answer": "DAI",
+                    "correct": true
+                },
+                {
+                    "answer": "безопасность портов",
+                    "correct": false,
+                    "comment": "Динамический анализ протокола ARP (DAI) предотвращает ARP-спуфинг и «отравление» ARP-кэша"
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов нейтрализации атак предотвращает истощение DHCP и атаки спуфинга DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Анализ DHCP-трафика предотвращает истощение ресурсов DHCP и DHCP-спуфинг (атака подмены)"
+                },
+                {
+                    "answer": "анализ DHCP-трафика",
+                    "correct": true
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "Анализ DHCP-трафика предотвращает истощение ресурсов DHCP и DHCP-спуфинг (атака подмены)"
+                },
+                {
+                    "answer": "безопасность портов",
+                    "correct": false,
+                    "comment": "Анализ DHCP-трафика предотвращает истощение ресурсов DHCP и DHCP-спуфинг (атака подмены)"
+                }
+            ]
+        }
+    ]
 }

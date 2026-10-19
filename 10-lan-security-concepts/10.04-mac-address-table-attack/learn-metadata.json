@@ -1,9 +1,10 @@
 {
     "title": "Атака на таблицу MAC-адресов",
-    "materialType": "lecture",
+    "shortName": "ccna2.lan-security-concepts.mac-address-table-attack",
+    "type": "scored-lecture",
     "description": "Как осуществляется атака на таблицу MAC-адресов коммутатора и как ей противодействовать?",
     "difficulty": 3,
-    "duration": "PT0H5M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,102 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.lan-security-concepts.mac-address-table-attack",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe how a switch forwards frames after a successful MAC address table overflow, what the attacker gains from it, and which mitigation (port security) prevents it."
+        },
+        "requires": [
+            "ksa.ccna2.lan-security-concepts.layer-2-security-threats",
+            "ksa.ccna2.switching-concepts.frame-forwarding"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): switch behaviour after a CAM table overflow, the attacker's goal, port security.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Как будет вести себя коммутатор в результате успешной атаки на таблицу CAM?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "отключится",
+                    "correct": false,
+                    "comment": "Атака на таблицу MAC-адресов заполнит ее. Когда таблица заполнена, коммутатор начинает пересылать все кадры, которые он получает, на все порты в пределах VLAN, кроме входящего"
+                },
+                {
+                    "answer": "интерфейсы коммутатора перейдут в состояние отключения из-за ошибки",
+                    "correct": false,
+                    "comment": "Атака на таблицу MAC-адресов заполнит ее. Когда таблица заполнена, коммутатор начинает пересылать все кадры, которые он получает, на все порты в пределах VLAN, кроме входящего"
+                },
+                {
+                    "answer": "будет пересылать все полученные кадры на все порты, кроме входящего, в пределах VLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "будет отклонять все полученные кадры",
+                    "correct": false,
+                    "comment": "Атака на таблицу MAC-адресов заполнит ее. Когда таблица заполнена, коммутатор начинает пересылать все кадры, которые он получает, на все порты в пределах VLAN, кроме входящего"
+                }
+            ]
+        },
+        {
+            "question": "Какую главную цель мог бы преследовать злоумышленник, запуская атаку переполнением таблицы MAC-адресов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "увидеть кадры, предназначенные для других устройств",
+                    "correct": true
+                },
+                {
+                    "answer": "выполнить произвольный код на коммутаторе",
+                    "correct": false,
+                    "comment": "Основная причина, по которой злоумышленник запускает атаку переполнения таблицы MAC-адресов, заключается в том, что коммутатор отправляет все полученные кадры на все порты, в результате чего исполнитель угрозы может перехватить трафик"
+                },
+                {
+                    "answer": "прекратить пересылку трафика через коммутатор",
+                    "correct": false,
+                    "comment": "Основная причина, по которой злоумышленник запускает атаку переполнения таблицы MAC-адресов, заключается в том, что коммутатор отправляет все полученные кадры на все порты, в результате чего исполнитель угрозы может перехватить трафик"
+                },
+                {
+                    "answer": "не дать легитимным узлам получить MAC-адрес",
+                    "correct": false,
+                    "comment": "Основная причина, по которой злоумышленник запускает атаку переполнения таблицы MAC-адресов, заключается в том, что коммутатор отправляет все полученные кадры на все порты, в результате чего исполнитель угрозы может перехватить трафик"
+                }
+            ]
+        },
+        {
+            "question": "Какая технология нейтрализации должна быть реализована для предотвращения атак переполнения MAC-адресов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPSG",
+                    "correct": false,
+                    "comment": "Основным методом защиты от атак на таблицу MAC-адресов является безопасность портов"
+                },
+                {
+                    "answer": "DAI",
+                    "correct": false,
+                    "comment": "Основным методом защиты от атак на таблицу MAC-адресов является безопасность портов"
+                },
+                {
+                    "answer": "безопасность портов",
+                    "correct": true
+                },
+                {
+                    "answer": "анализ DHCP-трафика",
+                    "correct": false,
+                    "comment": "Основным методом защиты от атак на таблицу MAC-адресов является безопасность портов"
+                }
+            ]
+        }
+    ]
 }

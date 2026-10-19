@@ -1,9 +1,10 @@
 {
     "title": "Введение в технологии беспроводной связи",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-concepts.introduction-to-wireless",
+    "type": "scored-lecture",
     "description": "В чем преимущества беспроводных сетей? Какие бывают типы и стандарты беспроводных сетей?",
     "difficulty": 3,
-    "duration": "PT0H10M",
+    "duration": "PT0H17M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,148 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-concepts.introduction-to-wireless",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Classify wireless networks (WPAN, WLAN, WMAN, WWAN) by range and defining standard, identify Bluetooth as the pairing-based IEEE 802.15 technology, name the 802.11 standards that use only 5 GHz, and name the body that allocates radio frequencies."
+        },
+        "requires": [],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): wireless network types, Bluetooth, 5 GHz-only 802.11 standards, ITU-R.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какая из следующих беспроводных сетей обычно использует маломощные передатчики на небольших расстояниях?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WPAN",
+                    "correct": true
+                },
+                {
+                    "answer": "WLAN",
+                    "correct": false,
+                    "comment": "В WPAN используются маломощные передатчики на коротких дистанциях, обычно от 6 до 9 метров"
+                },
+                {
+                    "answer": "WMAN",
+                    "correct": false,
+                    "comment": "В WPAN используются маломощные передатчики на коротких дистанциях, обычно от 6 до 9 метров"
+                },
+                {
+                    "answer": "WWAN",
+                    "correct": false,
+                    "comment": "В WPAN используются маломощные передатчики на коротких дистанциях, обычно от 6 до 9 метров"
+                }
+            ]
+        },
+        {
+            "question": "Какие из следующих беспроводных сетей определены в стандартах IEEE 802.11 для радиочастот 2,4 ГГц и 5 ГГц?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WPAN",
+                    "correct": false,
+                    "comment": "WLAN основаны на стандартах 802.11 и могут охватывать до 100 м"
+                },
+                {
+                    "answer": "WLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "WMAN",
+                    "correct": false,
+                    "comment": "WLAN основаны на стандартах 802.11 и могут охватывать до 100 м"
+                },
+                {
+                    "answer": "WWAN",
+                    "correct": false,
+                    "comment": "WLAN основаны на стандартах 802.11 и могут охватывать до 100 м"
+                }
+            ]
+        },
+        {
+            "question": "Что из следующего является стандартом IEEE 802.15 WPAN, в котором для связи используется процесс сопряжения устройств?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сотовая связь",
+                    "correct": false,
+                    "comment": "Bluetooth – стандарт IEEE 802.15 WPAN, использующий процесс сопряжения устройств для связи"
+                },
+                {
+                    "answer": "WiMAX",
+                    "correct": false,
+                    "comment": "Bluetooth – стандарт IEEE 802.15 WPAN, использующий процесс сопряжения устройств для связи"
+                },
+                {
+                    "answer": "Wi-Fi",
+                    "correct": false,
+                    "comment": "Bluetooth – стандарт IEEE 802.15 WPAN, использующий процесс сопряжения устройств для связи"
+                },
+                {
+                    "answer": "Bluetooth",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие стандарты 802.11 используют исключительно радиочастоту 5 ГГц? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "802.11a",
+                    "correct": true
+                },
+                {
+                    "answer": "802.11g",
+                    "correct": false,
+                    "comment": "802.11a и 802.11ac используют исключительно радиочастоту 5 ГГц"
+                },
+                {
+                    "answer": "802.11n",
+                    "correct": false,
+                    "comment": "802.11a и 802.11ac используют исключительно радиочастоту 5 ГГц"
+                },
+                {
+                    "answer": "802.11ac",
+                    "correct": true
+                },
+                {
+                    "answer": "802.11ax",
+                    "correct": false,
+                    "comment": "802.11a и 802.11ac используют исключительно радиочастоту 5 ГГц"
+                }
+            ]
+        },
+        {
+            "question": "Какая организация по стандартизации отвечает за распределение радиочастот?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IEEE",
+                    "correct": false,
+                    "comment": "За распределение радиочастот отвечает ITU-R"
+                },
+                {
+                    "answer": "ITU-R",
+                    "correct": true
+                },
+                {
+                    "answer": "Wi-Fi Alliance",
+                    "correct": false,
+                    "comment": "За распределение радиочастот отвечает ITU-R"
+                }
+            ]
+        }
+    ]
 }
