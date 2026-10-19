@@ -18,7 +18,7 @@
             "$ref": "./09.03.03-lab-hsrp-configuration-guide/learn-metadata.json"
         },
         {
-            "$ref": "./09.04-summary/learn-metadata.json"
+            "$ref": "./09.04-exam/learn-metadata.json"
         }
     ]
 }
