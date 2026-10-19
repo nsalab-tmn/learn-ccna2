@@ -1476,6 +1476,32 @@
                 }
             ],
             "question": "![](./assets/10.png) Посмотрите на рисунок. Администратор хочет сформировать EtherChannel между двумя коммутаторами, используя протокол агрегации портов (PAgP). Какой режим нужно настроить на коммутаторе S2 для создания EtherChannel, если на коммутаторе S1 настроен автоматический (auto) режим?"
+        },
+        {
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "interface Port-channel 1\nno shutdown",
+                    "comment": "В конфигурации SW1 у интерфейса GigabitEthernet0/1 нет команды channel-group 1 mode desirable: без нее в канал Port-channel1 входит только GigabitEthernet0/2. На SW2 оба интерфейса уже в группе 1, а интерфейсы не выключены, так что команда no shutdown ничего не меняет.",
+                    "correct": false
+                },
+                {
+                    "answer": "interface GigabitEthernet0/1\nchannel-group 1 mode desirable",
+                    "comment": "",
+                    "correct": true
+                },
+                {
+                    "answer": "interface GigabitEthernet0/1\nno shutdown",
+                    "comment": "В конфигурации SW1 у интерфейса GigabitEthernet0/1 нет команды channel-group 1 mode desirable: без нее в канал Port-channel1 входит только GigabitEthernet0/2. На SW2 оба интерфейса уже в группе 1, а интерфейсы не выключены, так что команда no shutdown ничего не меняет.",
+                    "correct": false
+                },
+                {
+                    "answer": "interface GigabitEthernet0/2\nchannel-group 1 mode desirable",
+                    "comment": "В конфигурации SW1 у интерфейса GigabitEthernet0/1 нет команды channel-group 1 mode desirable: без нее в канал Port-channel1 входит только GigabitEthernet0/2. На SW2 оба интерфейса уже в группе 1, а интерфейсы не выключены, так что команда no shutdown ничего не меняет.",
+                    "correct": false
+                }
+            ],
+            "question": "Сетевой администратор настраивает канал EtherChannel между коммутаторами SW1 и SW2 через порты GigabitEthernet0/1 и GigabitEthernet0/2. Текущая конфигурация интерфейсов:\n\n```\nSW1# show running-config | begin interface Port-channel\ninterface Port-channel1\n switchport mode trunk\n!\ninterface GigabitEthernet0/1\n switchport mode trunk\n!\ninterface GigabitEthernet0/2\n switchport mode trunk\n channel-group 1 mode desirable\n!\n(output omitted)\n\nSW2# show running-config | begin interface Port-channel\ninterface Port-channel1\n switchport mode trunk\n!\ninterface GigabitEthernet0/1\n switchport mode trunk\n channel-group 1 mode desirable\n!\ninterface GigabitEthernet0/2\n switchport mode trunk\n channel-group 1 mode desirable\n!\n(output omitted)\n```\n\nКакой набор команд на SW1 завершит настройку канала EtherChannel между SW1 и SW2?"
         }
     ]
 }
