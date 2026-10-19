@@ -305,7 +305,7 @@ scenario:
             Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
         ```
 
-        У маршрутизатора R-B-10 интерфейсы Ethernet включены, но без адресов (**show ip interface brief** в консоли):
+        У маршрутизатора R-B-10 интерфейсы Ethernet включены, но без адресов (в консоли: **enable**, затем **show ip interface brief**):
 
         ```
         R-B-10>enable
@@ -352,6 +352,8 @@ scenario:
         **Требование 14.** Интерфейс G0/0/1 маршрутизатора R-B-10, подключенный к сети поставщика услуг, получает IPv4-адрес по DHCP.
 
         **Требование 15.** Компьютер Admin-PC получает IPv4-адрес по DHCP, а его IPv6-адрес 2001:db8:10:10::10/64 и шлюз IPv6 по умолчанию 2001:db8:10:10::1 заданы вручную.
+
+        **Примечание.** Пул выдает адреса в порядке запросов. Точка доступа LAP-10 запрашивает адрес не сразу после создания пула, а когда на контроллере WLC-10 создается интерфейс WLAN 10 (страница «Настройка контроллера беспроводной сети WLC-10»). Маршруты к узлу Admin-PC (Требования 19 и 21) названы по адресу 192.168.10.10 — первому свободному адресу пула, — поэтому включите на компьютере Admin-PC получение адреса по DHCP после создания пула и до настройки контроллера, как идут страницы: компьютер получит 192.168.10.10, а точка доступа — 192.168.10.11.
     - title: "Статические маршруты на маршрутизаторе R-1-A"
       body: |
         **Требование 16.** На маршрутизаторе R-1-A включена маршрутизация IPv6.
@@ -431,8 +433,8 @@ scenario:
         Tracing route to 172.16.1.100 over a maximum of 30 hops:
 
           1     1 ms    <1 ms    <1 ms  192.168.10.1
-          2     *        *        1 ms  10.1.1.2
-          3     *        2 ms     2 ms  172.16.1.100
+          2     *        1 ms     1 ms  10.1.1.2
+          3     1 ms     1 ms     1 ms  172.16.1.100
 
         Trace complete.
         ```
@@ -471,7 +473,7 @@ scenario:
             Minimum = 2ms, Maximum = 4ms, Average = 2ms
         ```
 
-        **Шаг 4.** На маршрутизаторе R-B-10 команда **show ip dhcp binding** показывает аренду адреса 192.168.10.10 компьютером Admin-PC, а на коммутаторе Sw-A команда **show ip dhcp snooping binding** — ту же привязку на порту F0/1 в сети VLAN 10.
+        **Шаг 4.** На маршрутизаторе R-B-10 команда **show ip dhcp binding** показывает аренды компьютера Admin-PC (192.168.10.10) и точки доступа LAP-10 (192.168.10.11), а на коммутаторе Sw-A в привилегированном режиме (**enable**) команда **show ip dhcp snooping binding** — три привязки: Admin-PC на порту F0/1, точка доступа LAP-10 и ноутбук LT-1 (192.168.10.240, адрес из области Wired_Admin контроллера) на порту F0/3 в сети VLAN 10.
 
         ```
         R-B-10#show ip dhcp binding
@@ -479,7 +481,8 @@ scenario:
         IP address          Client-ID/              Lease expiration        Type
                             Hardware address/
                             User name
-        192.168.10.10       0100.d0d3.dc28.25       Mar 02 1993 12:06 AM    Automatic
+        192.168.10.10       0100.d0d3.dc28.25       Mar 02 1993 12:09 AM    Automatic
+        192.168.10.11       0100.d0d9.b044.01       Mar 02 1993 12:06 AM    Automatic
         ```
 
         ```
@@ -487,8 +490,10 @@ scenario:
         Sw-A#show ip dhcp snooping binding
         MacAddress          IpAddress        Lease(sec)  Type           VLAN  Interface
         ------------------  ---------------  ----------  -------------  ----  --------------------
+        00:D0:D9:B0:44:01   192.168.10.11    86400       dhcp-snooping  10    FastEthernet0/3
+        00:D0:C6:DD:3F:01   192.168.10.240   86400       dhcp-snooping  10    FastEthernet0/3
         00:D0:D3:DC:28:25   192.168.10.10    86400       dhcp-snooping  10    FastEthernet0/1
-        Total number of bindings: 1
+        Total number of bindings: 3
         ```
 
         **Шаг 5.** На коммутаторе Sw-A команда **show port-security interface f0/1** показывает включенную защиту порта в режиме Restrict, не больше 2 адресов, время устаревания 10 минут и один настроенный адрес.
@@ -509,7 +514,7 @@ scenario:
         Security Violation Count   : 0
         ```
 
-        **Шаг 6.** Проверьте резервный маршрут: в консоли коммутатора ISP-Switch выключите порты F0/1 и F0/2, к которым подключены маршрутизаторы (**configure terminal**, **interface range f0/1 - 2**, **shutdown**, **end**). Каналы Ethernet обоих маршрутизаторов опускаются, и их основные маршруты исчезают из таблиц маршрутизации.
+        **Шаг 6.** Проверьте резервный маршрут: в консоли коммутатора ISP-Switch войдите в привилегированный режим (**enable**) и выключите порты F0/1 и F0/2, к которым подключены маршрутизаторы (**configure terminal**, **interface range f0/1 - 2**, **shutdown**, **end**). Каналы Ethernet обоих маршрутизаторов опускаются, и их основные маршруты исчезают из таблиц маршрутизации.
 
         ```
         ISP-Switch>enable
@@ -517,12 +522,12 @@ scenario:
         Enter configuration commands, one per line.  End with CNTL/Z.
         ISP-Switch(config)#interface range f0/1 - 2
         ISP-Switch(config-if-range)#shutdown
-        *Mar  1 00:08:35.030: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-        *Mar  1 00:08:35.030: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
-        *Mar  1 00:08:35.030: %LINK-5-CHANGED: Interface FastEthernet0/2, changed state to administratively down
-        *Mar  1 00:08:35.030: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/2, changed state to down
+        *Mar  1 00:11:18.052: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+        *Mar  1 00:11:18.052: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+        *Mar  1 00:11:18.052: %LINK-5-CHANGED: Interface FastEthernet0/2, changed state to administratively down
+        *Mar  1 00:11:18.052: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/2, changed state to down
         ISP-Switch(config-if-range)#end
-        *Mar  1 00:08:38.030: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:11:21.052: %SYS-5-CONFIG_I: Configured from console by console
         ```
 
         **Шаг 7.** Путь от компьютера Admin-PC к серверу теперь проходит через последовательный канал (**tracert 172.16.1.100**: второй переход — 10.2.2.1), и сервер по-прежнему отвечает по IPv6 (**ping 2001:db8:16:1::100**): плавающие маршруты с расстоянием 5 заняли место основных.
@@ -562,12 +567,12 @@ scenario:
         Enter configuration commands, one per line.  End with CNTL/Z.
         ISP-Switch(config)#interface range f0/1 - 2
         ISP-Switch(config-if-range)#no shutdown
-        *Mar  1 00:09:31.047: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
-        *Mar  1 00:09:31.047: %LINK-3-UPDOWN: Interface FastEthernet0/2, changed state to up
-        *Mar  1 00:09:32.047: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
-        *Mar  1 00:09:32.047: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/2, changed state to up
+        *Mar  1 00:12:14.070: %LINK-3-UPDOWN: Interface FastEthernet0/1, changed state to up
+        *Mar  1 00:12:14.070: %LINK-3-UPDOWN: Interface FastEthernet0/2, changed state to up
+        *Mar  1 00:12:15.070: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+        *Mar  1 00:12:15.070: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/2, changed state to up
         ISP-Switch(config-if-range)#end
-        *Mar  1 00:10:07.047: %SYS-5-CONFIG_I: Configured from console by console
+        *Mar  1 00:12:50.070: %SYS-5-CONFIG_I: Configured from console by console
         ```
 
         ```
@@ -613,16 +618,4 @@ scenario:
             Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
         Approximate round trip times in milli-seconds:
             Minimum = 2ms, Maximum = 2ms, Average = 2ms
-        ```
-
-        **Шаг 11.** На маршрутизаторе R-B-10 команда **show ip dhcp binding** показывает аренды компьютера Admin-PC (192.168.10.10) и точки доступа LAP-10 (192.168.10.11).
-
-        ```
-        R-B-10#show ip dhcp binding
-        Bindings from all pools not associated with VRF:
-        IP address          Client-ID/              Lease expiration        Type
-                            Hardware address/
-                            User name
-        192.168.10.10       0100.d0d3.dc28.25       Mar 02 1993 12:06 AM    Automatic
-        192.168.10.11       0100.d0d9.b044.01       Mar 02 1993 12:11 AM    Automatic
         ```
