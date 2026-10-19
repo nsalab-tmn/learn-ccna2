@@ -23,9 +23,6 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
         "local": {
             "$ref": "./assessment"
