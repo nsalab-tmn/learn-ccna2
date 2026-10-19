@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,7 +34,7 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Как вы думаете, что это индикатор канала означает?",
+                "title": "1. Что означает оранжевый индикатор порта G0/2 коммутатора S3 на схеме?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
@@ -56,12 +49,12 @@
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Почему связующее дерево помещало порт в блокирующее состояние?",
+                "title": "4. Почему протокол STP перевел порт G0/2 коммутатора S3 в состояние блокировки?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Что произошло со статусом порта G0/2 во время этого процесса?",
+                "title": "5. Как менялось состояние порта G0/2 коммутатора S3 после удаления соединения S1–S2?",
                 "placeholder": "Enter your answer here"
             }
         }
