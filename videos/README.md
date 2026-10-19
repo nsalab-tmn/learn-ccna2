@@ -24,7 +24,7 @@
 
 | videoId | Модуль / тема | Название | Длит. | Класс | Пересборка | Видеоряд (Figma) | Документ |
 |---|---|---|---|---|---|---|---|
-| `fi7Ss-_9LvY` | 02-switching-concepts / 02.01-frame-forwarding | Таблицы MAC-адресов на соединённых коммутаторах | 3:05 | explainer | анимация Figma ≤ 60 с (+ опц. озвученный ~2:30) | **готов** · 1:35 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=4933-8671) | [02.01--fi7Ss-_9LvY](02-switching-concepts/02.01-frame-forwarding--fi7Ss-_9LvY.md) |
+| `fi7Ss-_9LvY` | 02-switching-concepts / 02.01-frame-forwarding | Таблицы MAC-адресов на соединённых коммутаторах | 3:05 | explainer | анимация Figma ≤ 60 с (+ опц. озвученный ~2:30) | **готов** · 1:35 · [Figma](https://www.figma.com/design/3FtCg22qFubpLBPOetQU03/CCNA-Design?node-id=5413-8758) | [02.01--fi7Ss-_9LvY](02-switching-concepts/02.01-frame-forwarding--fi7Ss-_9LvY.md) |
 | `TZrrTw5uhNI` | 05-stp / 05.01-purpose-of-stp | Наблюдение за работой STP | 6:18 | lab-demo | видео с голосом (код-рендер) ~4:30; часть 1 — анимация Figma | — | [05.01--TZrrTw5uhNI](05-stp/05.01-purpose-of-stp--TZrrTw5uhNI.md) |
 | `ye_f86EfTl8` | 10-lan-security-concepts / 10.05-lan-attacks | Атаки на VLAN и DHCP | 5:41 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (double-tagging, DHCP spoofing) | — | [10.05--ye_f86EfTl8](10-lan-security-concepts/10.05-lan-attacks--ye_f86EfTl8.md) |
 | `JhiaFeH9ZOU` | 10-lan-security-concepts / 10.05-lan-attacks | ARP-атаки, STP-атаки, CDP-разведка | 6:14 | explainer | текст + иллюстрация; 2 анимации Figma ≤ 60 с (ARP poisoning, STP root) | — | [10.05--JhiaFeH9ZOU](10-lan-security-concepts/10.05-lan-attacks--JhiaFeH9ZOU.md) |
