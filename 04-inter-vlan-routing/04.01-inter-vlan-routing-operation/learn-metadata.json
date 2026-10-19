@@ -1,9 +1,10 @@
 {
     "title": "Принципы маршрутизации между виртуальными локальными сетями",
-    "materialType": "lecture",
+    "shortName": "ccna2.inter-vlan-routing.inter-vlan-routing-operation",
+    "type": "scored-lecture",
     "description": "Для чего нужна маршрутизация между VLAN? Какие методы устарели и какие являются актуальными?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H10M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,60 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.inter-vlan-routing.inter-vlan-routing-operation",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Classify a topology as legacy, router-on-a-stick or Layer 3 switch inter-VLAN routing."
+        },
+        "requires": [
+            "ksa.ccna2.vlans.vlans-in-a-multi-switched-environment",
+            "ksa.ccna2.basic-device-configuration.configure-a-switch-with-initial-settings"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): legacy, router-on-a-stick and Layer 3 switch topologies.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Рассмотрите топологии трех сценариев. **Сценарий A** ![](./assets/4.1.5-1.png) **Сценарий B** ![](./assets/4.1.5-2.png) **Сценарий C** ![](./assets/4.1.5-3.png) Какие утверждения лучше всего описывают различные типы решений маршрутизации между VLAN? (выберите все подходящие варианты)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Сценарий A — это устаревшее решение маршрутизации между VLAN",
+                    "correct": false,
+                    "comment": "Сценарий A — это решение для маршрутизации между VLAN уровня 3. Сценарий B — это устаревшее решение маршрутизации между VLAN. Сценарий C — это решение маршрутизации между VLAN с использованием router-on-a-stick"
+                },
+                {
+                    "answer": "Сценарий B — это решение для  маршрутизации между VLAN уровня 3",
+                    "correct": false,
+                    "comment": "Сценарий A — это решение для маршрутизации между VLAN уровня 3. Сценарий B — это устаревшее решение маршрутизации между VLAN. Сценарий C — это решение маршрутизации между VLAN с использованием router-on-a-stick"
+                },
+                {
+                    "answer": "Сценарии B и C — это решения маршрутизации между VLAN с использованием router-on-a-stick",
+                    "correct": false,
+                    "comment": "Сценарий A — это решение для маршрутизации между VLAN уровня 3. Сценарий B — это устаревшее решение маршрутизации между VLAN. Сценарий C — это решение маршрутизации между VLAN с использованием router-on-a-stick"
+                },
+                {
+                    "answer": "Сценарий A — это решение для маршрутизации между VLAN уровня 3",
+                    "correct": true
+                },
+                {
+                    "answer": "Сценарий B — это устаревшее решение маршрутизации между VLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "Сценарий C — это решение маршрутизации между VLAN с использованием router-on-a-stick",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }
