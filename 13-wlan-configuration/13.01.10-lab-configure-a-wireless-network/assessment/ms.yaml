@@ -70,7 +70,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'AP: config.wifinet0.key == ''Cisco123!'''
+      - name: 'AP: config.wifinet0.key == ''Wifipa55!'''
         code: check
         type: check
         device: Admin
@@ -81,7 +81,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: config.wifinet0.key
-              value: Cisco123!
+              value: Wifipa55!
 - code: ADMIN
   name: Admin
   subCriterions:
@@ -351,7 +351,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WR: config.wifinet0.key == ''Cisco123!'''
+      - name: 'WR: config.wifinet0.key == ''Wifipa55!'''
         code: check
         type: check
         device: Admin
@@ -362,7 +362,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: config.wifinet0.key
-              value: Cisco123!
+              value: Wifipa55!
   - code: WR.MISC
     name: Miscellaneous
     aspects:
@@ -411,7 +411,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WR: password == ''cisco'''
+      - name: 'WR: password == ''Routerpa55'''
         code: check
         type: check
         device: Admin
@@ -422,4 +422,4 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: password
-              value: cisco
+              value: Routerpa55
