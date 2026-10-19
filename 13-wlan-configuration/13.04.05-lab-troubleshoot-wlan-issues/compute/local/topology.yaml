@@ -12,7 +12,7 @@ devices:
     password admin
     wifinet0.ssid HomeSSID
     wifinet0.encryption psk2
-    wifinet0.key Cisco123
+    wifinet0.key Wlanpa55
     radio1.disabled true
     radio2.disabled true
     wan.proto static
@@ -34,7 +34,7 @@ devices:
     network: &id001
       ssid: HomeSSID
       security: psk2
-      key: Cisco123
+      key: Wlanpa55
 - name: Smartphone
   type: laptop
   model: NLP
@@ -168,7 +168,7 @@ devices:
   config: |-
     ipconfig 172.31.1.254 255.255.255.0 172.31.1.1
     service aaa on
-    aaa client 192.168.200.254 Cisco123
+    aaa client 192.168.200.254 Wlanpa55
     aaa user user2 user2Pass
 - name: SW1
   type: switch
@@ -215,13 +215,13 @@ devices:
     x: 1248
     y: 300
   config: |-
-    password Cisco123
+    password Wlanpa55
     interface management ip 192.168.200.254 mask 255.255.255.0 gateway 192.168.200.1 dhcp 192.168.200.254
     interface vlan10 vlan 10 ip 192.168.10.254 mask 255.255.255.0 gateway 192.168.10.1 dhcp 192.168.10.1
     interface vlan20 vlan 20 ip 192.168.20.254 mask 255.255.255.0 gateway 192.168.20.1 dhcp 192.168.20.1
     scope "Wired Management" start 192.168.200.240 end 192.168.200.249 network 192.168.200.0 mask 255.255.255.0 router 192.168.200.1 enabled
-    radius 1 ip 172.31.1.254 secret Cisco123
-    wlan 1 profile "Wireless VLAN 10" ssid SSID-10 enabled interface vlan10 security wpa2 key Cisco321 radius 1
+    radius 1 ip 172.31.1.254 secret Wlanpa55
+    wlan 1 profile "Wireless VLAN 10" ssid SSID-10 enabled interface vlan10 security wpa2 key Wlanpa66 radius 1
     wlan 2 profile "Wireless VLAN 20" ssid SSID-20 interface vlan20 security wpa2 radius 1
 - name: LAP-1
   type: access-point
@@ -244,7 +244,7 @@ devices:
     network:
       ssid: SSID-10
       security: psk2
-      key: Cisco123
+      key: Wlanpa55
 - name: Laptop-2
   type: laptop
   model: NLP
@@ -368,19 +368,19 @@ scenario:
 
         | Сеть WLAN | SSID | Защита | Имя пользователя | Пароль или ключ |
         |---|---|---|---|---|
-        | Домашняя сеть (Home-Wireless-Router) | HomeSSID | WPA2-Personal | — | Cisco123 |
-        | Wireless VLAN 10 (WLC-1) | SSID-10 | WPA2-Personal (PSK) | — | Cisco123 |
+        | Домашняя сеть (Home-Wireless-Router) | HomeSSID | WPA2-Personal | — | Wlanpa55 |
+        | Wireless VLAN 10 (WLC-1) | SSID-10 | WPA2-Personal (PSK) | — | Wlanpa55 |
         | Wireless VLAN 20 (WLC-1) | SSID-20 | WPA2-Enterprise (802.1X) | user2 | user2Pass |
 
         | Доступ к настройкам | Значение |
         |---|---|
         | Домашний маршрутизатор | 192.168.0.1 в браузере ноутбука Laptop, имя admin, пароль admin |
-        | Контроллер WLC-1 | https://192.168.200.254 в браузере компьютера Admin-PC (предупреждение о сертификате — так и должно быть), имя admin, пароль Cisco123 |
+        | Контроллер WLC-1 | https://192.168.200.254 в браузере компьютера Admin-PC (предупреждение о сертификате — так и должно быть), имя admin, пароль Wlanpa55 |
         | DNS-сервер для узлов обеих сетей | 10.100.100.254 (DNS-Server) |
     - title: "Начальное состояние"
       body: |
         - Домашняя сеть и сеть предприятия выходят к веб-серверу www.nsalab.local (203.0.113.78) через маршрутизатор Router0 поставщика услуг, который выдает домашнему маршрутизатору адрес порта Internet по DHCP; имя сайта разрешает сервер DNS-Server (10.100.100.254). Связь между домашней сетью и сетью предприятия не нужна.
-        - Домашний маршрутизатор Home-Wireless-Router раздает сеть HomeSSID (WPA2-Personal, ключ Cisco123) и адреса в сети 192.168.0.0/24. Адаптеры ноутбука Laptop, планшета Tablet-PC и смартфона Smartphone настроены на эту сеть.
+        - Домашний маршрутизатор Home-Wireless-Router раздает сеть HomeSSID (WPA2-Personal, ключ Wlanpa55) и адреса в сети 192.168.0.0/24. Адаптеры ноутбука Laptop, планшета Tablet-PC и смартфона Smartphone настроены на эту сеть.
         - В сети предприятия маршрутизатор R1 — шлюз сетей VLAN 10, 20 и 200 с DHCP-пулами для сетей 192.168.10.0/24 и 192.168.20.0/24; коммутатор SW1 настроен. Контроллер WLC-1 с присоединенной точкой доступа LAP-1 раздает сети «Wireless VLAN 10» (SSID-10) и «Wireless VLAN 20» (SSID-20); сервер RADIUS-Server знает контроллер и учетную запись user2. Адаптер ноутбука Laptop1 настроен на SSID-10, ноутбука Laptop-2 — на SSID-20.
         - В настройках домашнего маршрутизатора, контроллера и беспроводных узлов есть неполадки. Сколько их и где — вам предстоит выяснить; маршрутизаторы, коммутатор и серверы исправны, и настраивать их не нужно.
         - Компьютер Home-Admin изображен на схеме, но ни к чему не подключен и в работе не используется.
@@ -415,7 +415,7 @@ scenario:
         **Примечание.** Узел, который получил аренду до исправления настроек DHCP-сервера, хранит старые параметры до ее обновления: команда ipconfig /renew в приложении «Командная строка» запрашивает их заново.
     - title: "Беспроводная сеть предприятия"
       body: |
-        **Требование 5.** Сеть WLAN «Wireless VLAN 10» (SSID-10) контроллера WLC-1 защищена по WPA2-Personal (PSK) с ключом Cisco123.
+        **Требование 5.** Сеть WLAN «Wireless VLAN 10» (SSID-10) контроллера WLC-1 защищена по WPA2-Personal (PSK) с ключом Wlanpa55.
 
         **Требование 6.** Сеть WLAN «Wireless VLAN 20» (SSID-20) включена.
 
