@@ -44,7 +44,7 @@
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Маска сети интерфейса management:",
+                "title": "3. Маска подсети интерфейса management:",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
