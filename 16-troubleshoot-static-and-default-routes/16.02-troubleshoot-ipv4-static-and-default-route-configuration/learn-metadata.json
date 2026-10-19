@@ -20,7 +20,7 @@
             "id": "ksa.ccna2.troubleshoot-static-and-default-routes.troubleshoot-ipv4-static-and-default-route-configuration",
             "kind": "K",
             "bloom": "understand",
-            "objective": "Trace how routers forward a packet along static routes (a new frame on every hop, the all-ones Layer 2 address on point-to-point links, an ARP request on the last hop) and choose the commands that isolate a missing or wrong static route (ping with a source, traceroute, show ip route, show ip interface brief, show cdp neighbors or show lldp neighbors)."
+            "objective": "Trace how routers forward a packet along static routes (a new frame on every hop, the all-ones Layer 2 address on point-to-point links, an ARP request on the last hop) and state the order in which a router processes a received frame; choose the commands that isolate a missing or wrong static route (ping, show ip route, show ip interface brief), remove a static route with no ip route, state what show cdp neighbors displays, and explain what a router does with a packet that matches no route and what the code C marks."
         },
         "requires": [
             "ksa.ccna2.routing-concepts.packet-forwarding",
