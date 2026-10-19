@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -71,32 +64,32 @@
             },
             "q_7": {
                 "type": "string",
-                "title": "7. Какой адрес следует использовать?",
+                "title": "7. Какой адрес нужно задать шлюзом по умолчанию на компьютерах PC-A и PC-B и коммутаторах S1 и S3?",
                 "placeholder": "Enter your answer here"
             },
             "q_8": {
                 "type": "string",
-                "title": "8. Успешно ли выполнены эхо-запросы?",
+                "title": "8. Выполняются ли эхо-запросы от компьютеров PC-A и PC-B к веб-серверу после смены шлюза по умолчанию?",
                 "placeholder": "Enter your answer here"
             },
             "q_9": {
                 "type": "string",
-                "title": "9. Отличается ли путь от пути, использованного до настройки HSRP?",
+                "title": "9. Отличается ли путь от компьютера PC-B к веб-серверу от пути, который трассировка показывала до настройки HSRP?",
                 "placeholder": "Enter your answer here"
             },
             "q_10": {
                 "type": "string",
-                "title": "10. Чем эта трасировка отличается от предыдущей?",
+                "title": "10. Чем трассировка от компьютера PC-B к веб-серверу после удаления соединения R1–S1 отличается от предыдущей?",
                 "placeholder": "Enter your answer here"
             },
             "q_11": {
                 "type": "string",
-                "title": "11. Какой путь используется для доступа к веб-серверу?",
+                "title": "11. Какой путь используется для доступа от компьютера PC-B к веб-серверу после восстановления соединения R1–S1?",
                 "placeholder": "Enter your answer here"
             },
             "q_12": {
                 "type": "string",
-                "title": "12. Если команда preempt не была настроена для группы HSRP на R1, будут ли результаты такими же?",
+                "title": "12. Стал бы маршрутизатор R1 снова активным после восстановления соединения R1–S1, если бы на нем не было настроено вытеснение (standby 1 preempt)? Почему?",
                 "placeholder": "Enter your answer here"
             }
         }
