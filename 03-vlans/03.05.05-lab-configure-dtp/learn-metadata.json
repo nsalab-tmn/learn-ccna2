@@ -44,22 +44,22 @@
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Успешно ли выполнен эхо-запрос? Дайте пояснение.",
+                "title": "3. Выполняются ли эхо-запросы от PC1 к PC6? Объясните почему.",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Что будет результатом согласования транка между S1 и S2?",
+                "title": "4. Чем закончилось согласование магистрального канала между S1 и S2?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Каков режим и состояние этого порта?",
+                "title": "5. Каковы режим и состояние порта G0/1 коммутатора S2?",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. Какая сеть VLAN с нетегированным трафиком сейчас используется для этих магистралей?",
+                "title": "6. Какая собственная VLAN (native VLAN) сейчас используется на магистральных каналах коммутатора S1?",
                 "placeholder": "Enter your answer here"
             },
             "q_7": {
@@ -69,22 +69,22 @@
             },
             "q_8": {
                 "type": "string",
-                "title": "8. Почему проверка связи с помощью эхо-запросов завершается неудачно?",
+                "title": "8. Почему эхо-запросы от PC1 к PC6 по-прежнему не выполняются?",
                 "placeholder": "Enter your answer here"
             },
             "q_9": {
                 "type": "string",
-                "title": "9. Какой режим и инкапсуляция на G0/2?",
+                "title": "9. Каковы режим и инкапсуляция порта G0/2 коммутатора S3?",
                 "placeholder": "Enter your answer here"
             },
             "q_10": {
                 "type": "string",
-                "title": "10. Каков режим и инкапсуляция на G0/2 после изменения?",
+                "title": "10. Каковы режим и инкапсуляция порта G0/2 коммутатора S3 после изменения?",
                 "placeholder": "Enter your answer here"
             },
             "q_11": {
                 "type": "string",
-                "title": "11. Что отображается в состоянии **\"Negotiation of Trunking\"**?",
+                "title": "11. Какое значение показано в строке «Negotiation of Trunking» для порта G0/2 коммутатора S3?",
                 "placeholder": "Enter your answer here"
             }
         }
