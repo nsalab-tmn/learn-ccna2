@@ -119,7 +119,7 @@
                     "correct": true
                 },
                 {
-                    "answer": "Команда будет отклонена, пока VLAN 30 не создана командой vlan 30",
+                    "answer": "Команда будет отклонена, если VLAN 30 не создана командой vlan 30",
                     "correct": false,
                     "comment": "Команда switchport access vlan принудительно создает VLAN, если ее еще нет: коммутатор выводит сообщение «% Access VLAN does not exist. Creating vlan 30»."
                 },
