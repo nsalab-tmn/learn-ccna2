@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,22 +34,22 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Успешно ли выполнена проверка связи? Почему вы получили этот результат?",
+                "title": "1. Выполняются ли эхо-запросы от PC1 к PC3 после создания сетей VLAN? Почему?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Отправьте эхо-запрос от узла **PC1** на **PC3**. Эхо-запросы по-прежнему должны не проходить между узлами. Дайте пояснение.",
+                "title": "2. Почему после настройки подинтерфейсов эхо-запросы от PC1 к PC3 по-прежнему не выполняются?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3.  Какой сети VLAN назначен интерфейс G0/1?",
+                "title": "3. Какой сети VLAN назначен интерфейс G0/1 коммутатора S1?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Как с помощью команды **show vlan** можно определить, что интерфейс — это магистральный порт?",
+                "title": "4. Как по выводу команды show vlan brief можно определить, что интерфейс G0/1 стал магистральным портом?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
