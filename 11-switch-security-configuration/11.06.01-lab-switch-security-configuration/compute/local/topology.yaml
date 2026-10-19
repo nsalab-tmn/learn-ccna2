@@ -354,7 +354,7 @@ scenario:
 
         Pinging 192.168.10.21 with 32 bytes of data:
 
-        Reply from 192.168.10.21: bytes=32 time=1ms TTL=128
+        Reply from 192.168.10.21: bytes=32 time=3ms TTL=128
         Reply from 192.168.10.21: bytes=32 time=1ms TTL=128
         Reply from 192.168.10.21: bytes=32 time=1ms TTL=128
         Reply from 192.168.10.21: bytes=32 time=1ms TTL=128
@@ -362,7 +362,7 @@ scenario:
         Ping statistics for 192.168.10.21:
             Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
         Approximate round trip times in milli-seconds:
-            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
         ```
 
         **Шаг 2.** На компьютере PC-101 проверьте связь с компьютером PC-210 сети VLAN 20 командой **ping 192.168.20.21**. Эхо-запросы выполняются: трафик между сетями VLAN маршрутизирует коммутатор MLS.
