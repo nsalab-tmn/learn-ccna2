@@ -1,9 +1,10 @@
 {
     "title": "Отражение атак на DHCP",
-    "materialType": "lecture",
+    "shortName": "ccna2.switch-security-configuration.mitigate-dhcp-attacks",
+    "type": "scored-lecture",
     "description": "Какие бывают атаки на протокол DHCP? Зачем нужно отслеживать сообщения DHCP?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H12M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,147 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.switch-security-configuration.mitigate-dhcp-attacks",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Explain why DHCP spoofing calls for DHCP snooping rather than port security alone, and identify the default trust state of interfaces, the command for a trusted port, the purpose of the rate limit and the contents of the DHCP snooping binding table."
+        },
+        "requires": [
+            "ksa.ccna2.switch-security-configuration.implement-port-security",
+            "ksa.ccna2.lan-security-concepts.lan-attacks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): port security versus DHCP snooping, trusted and untrusted ports, ip dhcp snooping trust, rate limit, binding table.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какое утверждение о защите коммутатора от атак на DHCP верно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Истощение DHCP можно смягчить с помощью безопасности портов, а для защиты от подмены DHCP нужно отслеживание DHCP",
+                    "correct": true
+                },
+                {
+                    "answer": "Безопасность портов надежно защищает и от истощения, и от подмены DHCP",
+                    "correct": false,
+                    "comment": "Инструмент атаки может отправлять кадры с настоящим MAC-адресом источника, а другой адрес указывать в полезной нагрузке DHCP-пакета, и тогда безопасность портов бесполезна. Против подмены DHCP используют отслеживание DHCP."
+                },
+                {
+                    "answer": "Отслеживание DHCP отличает доверенные источники от ненадежных по MAC-адресу источника",
+                    "correct": false,
+                    "comment": "Отслеживание DHCP не зависит от MAC-адресов источника: оно определяет, пришло ли сообщение с административно настроенного доверенного или с ненадежного порта."
+                },
+                {
+                    "answer": "Чтобы защититься от истощения DHCP, достаточно объявить доверенными порты, к которым подключены клиенты",
+                    "correct": false,
+                    "comment": "Порты доступа считаются ненадежными, и доверенными их не объявляют. Доверенными настраивают магистральные каналы и порты, к которым подключен легитимный DHCP-сервер."
+                }
+            ]
+        },
+        {
+            "question": "Какие интерфейсы коммутатора считаются ненадежными сразу после включения отслеживания DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Все интерфейсы, пока их явно не настроят как доверенные",
+                    "correct": true
+                },
+                {
+                    "answer": "Только порты доступа, а магистральные каналы становятся доверенными автоматически",
+                    "correct": false,
+                    "comment": "Магистральные каналы обычно делают доверенными, но это нужно настроить явно. По умолчанию ненадежными считаются все интерфейсы."
+                },
+                {
+                    "answer": "Только порт, к которому подключен легитимный DHCP-сервер",
+                    "correct": false,
+                    "comment": "Порт легитимного DHCP-сервера как раз настраивают доверенным. По умолчанию же ненадежными считаются все интерфейсы."
+                }
+            ]
+        },
+        {
+            "question": "Порт F0/1 коммутатора подключен к легитимному DHCP-серверу. Какую команду нужно ввести на этом интерфейсе при настройке отслеживания DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip dhcp snooping trust",
+                    "correct": true
+                },
+                {
+                    "answer": "ip dhcp snooping limit rate 6",
+                    "correct": false,
+                    "comment": "Эта команда ограничивает число сообщений обнаружения DHCP на ненадежных портах. Порт, к которому подключен легитимный DHCP-сервер, объявляют доверенным командой ip dhcp snooping trust."
+                },
+                {
+                    "answer": "ip dhcp snooping vlan 5",
+                    "correct": false,
+                    "comment": "Это команда глобальной конфигурации: она включает отслеживание DHCP в VLAN 5. Порт DHCP-сервера объявляют доверенным командой интерфейса ip dhcp snooping trust."
+                },
+                {
+                    "answer": "ip dhcp snooping",
+                    "correct": false,
+                    "comment": "Это команда глобальной конфигурации, которая включает отслеживание DHCP на коммутаторе. Порт DHCP-сервера объявляют доверенным командой интерфейса ip dhcp snooping trust."
+                }
+            ]
+        },
+        {
+            "question": "Какие сведения содержит таблица привязки отслеживания DHCP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "MAC-адрес устройства на ненадежном порту и IP-адрес, который DHCP-сервер назначил этому устройству",
+                    "correct": true
+                },
+                {
+                    "answer": "Список доверенных портов и ограничения скорости на них",
+                    "correct": false,
+                    "comment": "Это настройки отслеживания DHCP. Таблица привязки связывает MAC-адрес устройства на ненадежном порту с IP-адресом, который назначил ему DHCP-сервер."
+                },
+                {
+                    "answer": "MAC-адреса, которые коммутатор изучил на защищенных портах",
+                    "correct": false,
+                    "comment": "Защищенные MAC-адреса относятся к безопасности портов. Таблица привязки отслеживания DHCP связывает MAC-адрес устройства на ненадежном порту с IP-адресом, который назначил ему DHCP-сервер."
+                },
+                {
+                    "answer": "Адреса всех DHCP-серверов сети",
+                    "correct": false,
+                    "comment": "Таблица привязки хранит данные о клиентах, а не о серверах: MAC-адрес устройства на ненадежном порту и IP-адрес, который назначил ему DHCP-сервер."
+                }
+            ]
+        },
+        {
+            "question": "Для чего на ненадежных портах настраивают команду ip dhcp snooping limit rate?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Чтобы ограничить число сообщений обнаружения DHCP, которые порт принимает в секунду",
+                    "correct": true
+                },
+                {
+                    "answer": "Чтобы объявить порт доверенным",
+                    "correct": false,
+                    "comment": "Доверенным порт объявляет команда ip dhcp snooping trust. Команда ip dhcp snooping limit rate ограничивает число сообщений обнаружения DHCP, которые ненадежный порт принимает в секунду."
+                },
+                {
+                    "answer": "Чтобы ограничить число MAC-адресов, разрешенных на порту",
+                    "correct": false,
+                    "comment": "Число MAC-адресов на порту ограничивает безопасность портов. Команда ip dhcp snooping limit rate ограничивает число сообщений обнаружения DHCP в секунду."
+                },
+                {
+                    "answer": "Чтобы включить отслеживание DHCP в выбранных VLAN",
+                    "correct": false,
+                    "comment": "Отслеживание DHCP в VLAN включает команда глобальной конфигурации ip dhcp snooping vlan. Команда ip dhcp snooping limit rate ограничивает число сообщений обнаружения DHCP в секунду."
+                }
+            ]
+        }
+    ]
 }

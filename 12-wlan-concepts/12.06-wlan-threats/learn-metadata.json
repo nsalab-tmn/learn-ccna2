@@ -1,9 +1,10 @@
 {
     "title": "Угрозы для беспроводных локальных сетей",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-concepts.wlan-threats",
+    "type": "scored-lecture",
     "description": "Какие угрозы безопасности являются актуальными для беспроводных сетей?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H15M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,92 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-concepts.wlan-threats",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the sources of a wireless DoS attack, define a rogue access point as distinct from a misconfigured one, and classify the evil twin attack as a man-in-the-middle attack."
+        },
+        "requires": [
+            "ksa.ccna2.wlan-concepts.components-of-wlans",
+            "ksa.ccna2.wlan-concepts.wlan-operation"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): sources of wireless DoS, rogue access points, the evil twin attack.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Что из следующего, скорее всего, НЕ является источником беспроводной DoS-атаки?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "радиочастотные помехи",
+                    "correct": false,
+                    "comment": "Неправильно настроенные устройства, злонамеренные пользователи и случайные помехи, вероятно, являются источниками беспроводной DoS-атаки"
+                },
+                {
+                    "answer": "неправильно настроенные устройства",
+                    "correct": false,
+                    "comment": "Неправильно настроенные устройства, злонамеренные пользователи и случайные помехи, вероятно, являются источниками беспроводной DoS-атаки"
+                },
+                {
+                    "answer": "несанкционированная точка доступа",
+                    "correct": true
+                },
+                {
+                    "answer": "злонамеренный пользователь",
+                    "correct": false,
+                    "comment": "Неправильно настроенные устройства, злонамеренные пользователи и случайные помехи, вероятно, являются источниками беспроводной DoS-атаки"
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что вредоносная точка доступа – это неправильно настроенная точка доступа, подключенная к сети, и возможный источник DoS-атак?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Вредоносная точка доступа – это точка доступа или беспроводной маршрутизатор, который был подключен к корпоративной сети без явного разрешения и противоречит корпоративной политике, поэтому утверждение неверно"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "К какому типу относится атака «злой близнец AP»?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DoS-атака",
+                    "correct": false,
+                    "comment": "Популярная беспроводная атака MITM называется атакой «злой близнец AP», когда злоумышленник вводит мошенническую точку доступа и настраивает ее с тем же SSID, что и у законной"
+                },
+                {
+                    "answer": "MITM",
+                    "correct": true
+                },
+                {
+                    "answer": "беспроводные злоумышленники",
+                    "correct": false,
+                    "comment": "Популярная беспроводная атака MITM называется атакой «злой близнец AP», когда злоумышленник вводит мошенническую точку доступа и настраивает ее с тем же SSID, что и у законной"
+                },
+                {
+                    "answer": "радиочастотные помехи",
+                    "correct": false,
+                    "comment": "Популярная беспроводная атака MITM называется атакой «злой близнец AP», когда злоумышленник вводит мошенническую точку доступа и настраивает ее с тем же SSID, что и у законной"
+                }
+            ]
+        }
+    ]
 }

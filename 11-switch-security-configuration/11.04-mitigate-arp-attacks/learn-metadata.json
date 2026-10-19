@@ -1,9 +1,10 @@
 {
     "title": "Отражение атак на ARP",
-    "materialType": "lecture",
+    "shortName": "ccna2.switch-security-configuration.mitigate-arp-attacks",
+    "type": "scored-lecture",
     "description": "Что такое динамический анализ ARP и как он помогает предотвратить подмену пары MAC- и IP-адреса?",
     "difficulty": 3,
-    "duration": "PT0H4M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,126 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.switch-security-configuration.mitigate-arp-attacks",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe what dynamic ARP inspection depends on and does (DHCP snooping, IP-to-MAC checks on untrusted ports, dropping invalid ARP replies), which ports to make trusted, and the effect of entering several ip arp inspection validate commands one after another."
+        },
+        "requires": [
+            "ksa.ccna2.switch-security-configuration.mitigate-dhcp-attacks",
+            "ksa.ccna2.lan-security-concepts.lan-attacks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): DAI and DHCP snooping, DAI checks, trusted ports, ip arp inspection validate.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Что необходимо для работы динамической проверки ARP (DAI) на коммутаторе?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Отслеживание DHCP, потому что DAI использует таблицу привязки отслеживания DHCP",
+                    "correct": true
+                },
+                {
+                    "answer": "Безопасность портов на всех портах доступа",
+                    "correct": false,
+                    "comment": "DAI не опирается на безопасность портов. Ей требуется отслеживание DHCP, потому что она проверяет ARP-пакеты по таблице привязки отслеживания DHCP."
+                },
+                {
+                    "answer": "Режим магистрального канала на всех портах коммутатора",
+                    "correct": false,
+                    "comment": "Режим портов для DAI не важен. Ей требуется отслеживание DHCP, потому что она проверяет ARP-пакеты по таблице привязки отслеживания DHCP."
+                },
+                {
+                    "answer": "Статическая запись ARP для каждого узла сети",
+                    "correct": false,
+                    "comment": "Вручную задавать привязки не нужно: DAI берет правильные привязки IP- и MAC-адресов из таблицы отслеживания DHCP, поэтому ей требуется отслеживание DHCP."
+                }
+            ]
+        },
+        {
+            "question": "Какие действия выполняет динамическая проверка ARP (DAI)? (выберите два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Проверяет каждый перехваченный ARP-пакет на правильность привязки IP-адреса к MAC-адресу",
+                    "correct": true
+                },
+                {
+                    "answer": "Отбрасывает и регистрирует ARP-ответы из недействительных источников",
+                    "correct": true
+                },
+                {
+                    "answer": "Перехватывает ARP-запросы и ответы только на доверенных портах",
+                    "correct": false,
+                    "comment": "DAI перехватывает все ARP-запросы и ответы на ненадежных, а не на доверенных портах, и проверяет каждый перехваченный пакет."
+                },
+                {
+                    "answer": "Пересылает незапрошенные ARP-ответы на все порты той же VLAN",
+                    "correct": false,
+                    "comment": "Наоборот, DAI не дает ретранслировать недопустимые и незапрошенные ARP-ответы на другие порты той же VLAN."
+                },
+                {
+                    "answer": "Назначает узлам IP-адреса вместо DHCP-сервера",
+                    "correct": false,
+                    "comment": "DAI не назначает адреса, а проверяет ARP-пакеты: сверяет привязку IP-адреса к MAC-адресу, отбрасывает и регистрирует ARP-ответы из недействительных источников."
+                }
+            ]
+        },
+        {
+            "question": "Администратор вводит одну за другой три команды: ip arp inspection validate src-mac, затем ip arp inspection validate dst-mac, затем ip arp inspection validate ip. Какие проверки будут действовать?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Только проверка IP-адресов, потому что каждая новая команда ip arp inspection validate заменяет предыдущую",
+                    "correct": true
+                },
+                {
+                    "answer": "Все три проверки: src-mac, dst-mac и ip",
+                    "correct": false,
+                    "comment": "Каждая новая команда ip arp inspection validate заменяет предыдущую, поэтому действует только последняя, ip. Чтобы включить все три проверки, их указывают в одной команде: ip arp inspection validate src-mac dst-mac ip."
+                },
+                {
+                    "answer": "Только проверка src-mac, потому что действует первая введенная команда",
+                    "correct": false,
+                    "comment": "Действует не первая, а последняя команда: каждая новая команда ip arp inspection validate заменяет предыдущую, поэтому остается только проверка ip."
+                },
+                {
+                    "answer": "Проверки src-mac и dst-mac, а проверка ip не включится",
+                    "correct": false,
+                    "comment": "Каждая новая команда ip arp inspection validate заменяет предыдущую, поэтому останется только последняя проверка, ip."
+                }
+            ]
+        },
+        {
+            "question": "Какие порты коммутатора рекомендуется настраивать доверенными при внедрении DAI?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Порты, которые связывают коммутатор с вышестоящими устройствами, например порт, ведущий к маршрутизатору",
+                    "correct": true
+                },
+                {
+                    "answer": "Все порты доступа, к которым подключены компьютеры пользователей",
+                    "correct": false,
+                    "comment": "Порты доступа рекомендуется оставлять ненадежными, чтобы DAI проверяла приходящие через них ARP-пакеты. Доверенными настраивают порты, ведущие к вышестоящим устройствам."
+                },
+                {
+                    "answer": "Только неиспользуемые порты",
+                    "correct": false,
+                    "comment": "Рекомендация по внедрению DAI другая: доверенными настраивают порты, ведущие к вышестоящим устройствам, а все остальные порты коммутатора доступа оставляют ненадежными."
+                }
+            ]
+        }
+    ]
 }
