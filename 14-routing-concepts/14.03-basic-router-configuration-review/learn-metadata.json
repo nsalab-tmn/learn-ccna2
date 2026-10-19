@@ -1,9 +1,10 @@
 {
     "title": "Обзор базовой конфигурации маршрутизатора",
-    "materialType": "lecture",
+    "shortName": "ccna2.routing-concepts.basic-router-configuration-review",
+    "type": "scored-lecture",
     "description": "Какие базовые настройки необходимо произвести на маршрутизаторе, чтобы подготовить его к работе? С помощью каких комманд можно проверить эту конфигурацию?",
     "difficulty": 3,
-    "duration": "PT0H13M",
+    "duration": "PT0H18M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,117 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.routing-concepts.basic-router-configuration-review",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the output filter (section, include, exclude, begin) for a given need, name the IPv6 variants of the router verification commands, and interpret the C and L entries a router installs for its configured interfaces."
+        },
+        "requires": [
+            "ksa.ccna2.basic-device-configuration.basic-router-configuration",
+            "ksa.ccna2.basic-device-configuration.verify-directly-connected-networks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): show output filters, IPv6 verification commands, C and L routing table entries.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Администратору нужно увидеть в выводе show running-config только раздел с настройками линий vty целиком. Какой параметр фильтрации указать после вертикальной черты?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "section",
+                    "correct": true
+                },
+                {
+                    "answer": "include",
+                    "correct": false,
+                    "comment": "Параметр include выводит только строки, которые соответствуют фильтру, а не весь раздел. Целый раздел, который начинается с заданного фильтра, показывает параметр section: show running-config | section line vty."
+                },
+                {
+                    "answer": "begin",
+                    "correct": false,
+                    "comment": "Параметр begin выводит все строки от первой подходящей до конца вывода, а не один раздел. Целый раздел показывает параметр section: show running-config | section line vty."
+                },
+                {
+                    "answer": "exclude",
+                    "correct": false,
+                    "comment": "Параметр exclude, наоборот, убирает строки, которые соответствуют фильтру. Целый раздел показывает параметр section: show running-config | section line vty."
+                }
+            ]
+        },
+        {
+            "question": "Что выведет команда show ip interface brief | exclude unassigned?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Все строки вывода, кроме строк со словом unassigned: интерфейсы без IP-адреса будут скрыты",
+                    "correct": true
+                },
+                {
+                    "answer": "Только строки интерфейсов, которым не назначен IP-адрес",
+                    "correct": false,
+                    "comment": "Такой результат дал бы параметр include. Параметр exclude исключает строки, которые соответствуют фильтру, поэтому интерфейсы со словом unassigned будут скрыты."
+                },
+                {
+                    "answer": "Все строки, начиная с первого интерфейса без IP-адреса",
+                    "correct": false,
+                    "comment": "Так работает параметр begin. Параметр exclude исключает строки, которые соответствуют фильтру, поэтому интерфейсы со словом unassigned будут скрыты."
+                }
+            ]
+        },
+        {
+            "question": "Как получить IPv6-вариант команд проверки show ip interface brief, show ip interface и show ip route?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Заменить в команде ip на ipv6, например show ipv6 interface brief",
+                    "correct": true
+                },
+                {
+                    "answer": "Ничего менять не нужно: эти команды сразу показывают и IPv4, и IPv6",
+                    "correct": false,
+                    "comment": "Команды с ip показывают сведения IPv4. Для IPv6 в каждой из них ip заменяют на ipv6, например show ipv6 route."
+                },
+                {
+                    "answer": "Добавить в конец команды слово ipv6, например show ip route ipv6",
+                    "correct": false,
+                    "comment": "Ключевое слово ставится не в конец команды. В каждой команде проверки ip заменяют на ipv6, например show ipv6 route."
+                }
+            ]
+        },
+        {
+            "question": "После настройки и включения трех интерфейсов маршрутизатора R1 команда show ip route выводит только записи с кодами C и L, а шлюз последней надежды не задан. Что означают эти записи?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Для каждого интерфейса — напрямую подключенную сеть (C) и локальный адрес самого интерфейса (L)",
+                    "correct": true
+                },
+                {
+                    "answer": "Статические маршруты к удаленным сетям",
+                    "correct": false,
+                    "comment": "Статические маршруты помечаются кодом S, а на R1 они не настроены. Коды C и L означают напрямую подключенную сеть каждого интерфейса и локальный адрес самого интерфейса."
+                },
+                {
+                    "answer": "Маршруты по умолчанию к соседнему маршрутизатору",
+                    "correct": false,
+                    "comment": "В выводе сказано, что шлюз последней надежды не задан, то есть маршрута по умолчанию нет. Коды C и L означают напрямую подключенную сеть каждого интерфейса и локальный адрес самого интерфейса."
+                },
+                {
+                    "answer": "Маршруты, полученные по протоколу динамической маршрутизации",
+                    "correct": false,
+                    "comment": "Протокол динамической маршрутизации на R1 не настроен. Коды C и L означают напрямую подключенную сеть каждого интерфейса и локальный адрес самого интерфейса."
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Конфигурация беспроводной сети с использованием контроллера",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-configuration.configure-a-basic-wlc-on-the-wlc",
+    "type": "scored-lecture",
     "description": "Как выглядит топология беспроводной сети с использованием централизованного контроллера? Какие типовые настройки необходимо произвести на контроллере для организации беспроводной сети?",
     "difficulty": 3,
-    "duration": "PT0H17M",
+    "duration": "PT0H22M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,113 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-configuration.configure-a-basic-wlc-on-the-wlc",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Distinguish the physical ports of a WLC from its virtual interfaces, explain how a few trunk ports carry the traffic of many VLANs and APs, identify the interface choice that ties a WLAN to a VLAN, and state which clients can join a WPA2-PSK WLAN."
+        },
+        "requires": [
+            "ksa.ccna2.wlan-configuration.remote-site-wlan-configuration",
+            "ksa.ccna2.wlan-concepts.components-of-wlans",
+            "ksa.ccna2.vlans.vlan-trunks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): WLC ports and interfaces, ports as trunks, interface of a WLAN, WPA2-PSK clients.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Чем порты контроллера беспроводной локальной сети (WLC) отличаются от его интерфейсов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Порты — физические гнезда для подключения к проводной сети, а интерфейсы — виртуальные, созданные программно и похожие на интерфейсы VLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "Интерфейсы — физические гнезда для подключения к проводной сети, а порты — виртуальные, созданные программно",
+                    "correct": false,
+                    "comment": "Наоборот: порты — физические гнезда, напоминающие порты коммутатора, а интерфейсы — виртуальные, созданные программно и похожие на интерфейсы VLAN."
+                },
+                {
+                    "answer": "Через порты подключаются беспроводные клиенты, а через интерфейсы — коммутатор",
+                    "correct": false,
+                    "comment": "Беспроводные клиенты подключаются к точкам доступа, а не к портам контроллера. Порты WLC — физические гнезда для подключения к проводной сети, а интерфейсы — виртуальные, похожие на интерфейсы VLAN."
+                }
+            ]
+        },
+        {
+            "question": "Контроллер беспроводной сети поддерживает 150 точек доступа и 4096 VLAN, но у него всего пять физических портов. Как это возможно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Порты контроллера по сути магистральные: каждый передает к коммутатору трафик нескольких VLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "Каждая точка доступа подключается к отдельному порту контроллера",
+                    "correct": false,
+                    "comment": "Портов всего пять, а точек доступа может быть 150: точки доступа подключаются к коммутатору. Порты контроллера по сути магистральные и передают к коммутатору трафик нескольких VLAN."
+                },
+                {
+                    "answer": "Каждой VLAN отводится отдельный физический порт контроллера",
+                    "correct": false,
+                    "comment": "Пяти портов не хватило бы для 4096 VLAN. Каждый физический порт поддерживает множество VLAN, потому что по сути он магистральный."
+                }
+            ]
+        },
+        {
+            "question": "Что нужно выбрать при создании WLAN на контроллере, чтобы определить, в какой VLAN будет передаваться ее трафик?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Интерфейс контроллера, который будет передавать трафик этой WLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "SSID этой WLAN",
+                    "correct": false,
+                    "comment": "SSID — имя беспроводной сети, по которому ее находят клиенты. VLAN для трафика WLAN определяется выбранным интерфейсом: каждый такой интерфейс настроен на контроллере как отдельная VLAN."
+                },
+                {
+                    "answer": "Предварительный общий ключ",
+                    "correct": false,
+                    "comment": "Предварительный общий ключ относится к безопасности WLAN. VLAN для трафика WLAN определяется выбранным интерфейсом: каждый такой интерфейс настроен на контроллере как отдельная VLAN."
+                },
+                {
+                    "answer": "IP-адрес точки доступа",
+                    "correct": false,
+                    "comment": "Адрес точки доступа нужен для ее связи с сетью, а не для выбора VLAN. VLAN для трафика WLAN определяется выбранным интерфейсом контроллера."
+                }
+            ]
+        },
+        {
+            "question": "Какие беспроводные клиенты смогут подключиться к WLAN с аутентификацией WPA2-PSK?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Клиенты, которые знают предварительный общий ключ",
+                    "correct": true
+                },
+                {
+                    "answer": "Любые клиенты, без пароля",
+                    "correct": false,
+                    "comment": "WPA2-PSK требует ключа: подключиться и пройти аутентификацию на точке доступа могут только клиенты, которые знают предварительный общий ключ."
+                },
+                {
+                    "answer": "Только клиенты, MAC-адреса которых внесены в контроллер",
+                    "correct": false,
+                    "comment": "WPA2-PSK проверяет не MAC-адрес, а знание ключа: подключиться могут клиенты, которые знают предварительный общий ключ."
+                }
+            ]
+        }
+    ]
 }
