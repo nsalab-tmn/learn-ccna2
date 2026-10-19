@@ -1,9 +1,10 @@
 {
     "title": "Базовая конфигурация маршрутизатора",
-    "materialType": "lecture",
+    "shortName": "ccna2.basic-device-configuration.basic-router-configuration",
+    "type": "scored-lecture",
     "description": "Как подготовить маршрутизатор к работе? Как настроить интерфейсы для топологии Dual-Stack? Что такое интерфейс типа \"петля\"?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H12M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,150 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.basic-device-configuration.basic-router-configuration",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the commands for a router's legal-notice banner and for making an interface available, describe what a loopback interface is and the addressing rule for several of them, and state why interfaces are given descriptions."
+        },
+        "requires": [
+            "ksa.ccna2.basic-device-configuration.configure-a-switch-with-initial-settings"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): banner motd, making an interface available, loopback interfaces and their addresses, interface descriptions.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Администратор хочет, чтобы при подключении к маршрутизатору выводилось юридическое уведомление о запрете несанкционированного доступа. Какую команду он использует?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "banner motd #Authorized Access Only!#",
+                    "correct": true
+                },
+                {
+                    "answer": "description Link to LAN 1",
+                    "correct": false,
+                    "comment": "Команда description задает короткое описание интерфейса для администраторов. Юридическое уведомление о запрете несанкционированного доступа задает команда banner motd."
+                },
+                {
+                    "answer": "hostname R1",
+                    "correct": false,
+                    "comment": "Команда hostname присваивает устройству имя, чтобы отличать его от других маршрутизаторов. Юридическое уведомление задает команда banner motd."
+                },
+                {
+                    "answer": "service password-encryption",
+                    "correct": false,
+                    "comment": "Эта команда шифрует пароли в конфигурации. Юридическое уведомление о запрете несанкционированного доступа задает команда banner motd."
+                }
+            ]
+        },
+        {
+            "question": "Что необходимо сделать, чтобы интерфейс маршрутизатора стал доступен? (выберите два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Настроить на нем хотя бы один IP-адрес",
+                    "correct": true
+                },
+                {
+                    "answer": "Активировать его командой no shutdown",
+                    "correct": true
+                },
+                {
+                    "answer": "Ввести для него команду banner motd",
+                    "correct": false,
+                    "comment": "banner motd — команда режима глобальной конфигурации для юридического уведомления, к доступности интерфейса она не относится. Интерфейс становится доступен, когда на нем настроен IP-адрес и он активирован командой no shutdown."
+                },
+                {
+                    "answer": "Включить шифрование паролей командой service password-encryption",
+                    "correct": false,
+                    "comment": "Шифрование паролей не влияет на доступность интерфейса. Интерфейс становится доступен, когда на нем настроен IP-адрес и он активирован командой no shutdown."
+                },
+                {
+                    "answer": "Создать на маршрутизаторе loopback-интерфейс",
+                    "correct": false,
+                    "comment": "Loopback-интерфейс — отдельный логический интерфейс, он не делает доступными другие интерфейсы. Интерфейс становится доступен, когда на нем настроен IP-адрес и он активирован командой no shutdown."
+                }
+            ]
+        },
+        {
+            "question": "Что представляет собой loopback-интерфейс маршрутизатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Логический внутренний интерфейс, который не назначается физическому порту и автоматически находится в состоянии up, пока маршрутизатор работает",
+                    "correct": true
+                },
+                {
+                    "answer": "Физический порт, к которому подключают другой маршрутизатор",
+                    "correct": false,
+                    "comment": "Loopback-интерфейс не назначается физическому порту и не может быть подключен к другому устройству. Это логический внутренний интерфейс, который автоматически находится в состоянии up."
+                },
+                {
+                    "answer": "Интерфейс, который по умолчанию выключен и включается командой no shutdown",
+                    "correct": false,
+                    "comment": "Так ведут себя интерфейсы LAN и WAN. Loopback-интерфейс — программный интерфейс, который автоматически переводится в состояние up во время работы маршрутизатора."
+                },
+                {
+                    "answer": "Разъем для интерфейсной карты WAN",
+                    "correct": false,
+                    "comment": "Разъемы для интерфейсных карт WAN служат для физических интерфейсов WAN, например последовательного, DSL или кабельного. Loopback-интерфейс — логический внутренний интерфейс без физического порта."
+                }
+            ]
+        },
+        {
+            "question": "Администратор создает на маршрутизаторе R1 несколько loopback-интерфейсов. Какое утверждение верно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IPv4-адрес каждого loopback-интерфейса должен быть уникальным и не использоваться другим интерфейсом",
+                    "correct": true
+                },
+                {
+                    "answer": "На маршрутизаторе можно создать только один loopback-интерфейс",
+                    "correct": false,
+                    "comment": "На маршрутизаторе можно активировать несколько loopback-интерфейсов. IPv4-адрес каждого из них должен быть уникальным и не использоваться другим интерфейсом."
+                },
+                {
+                    "answer": "Все loopback-интерфейсы используют один общий IPv4-адрес",
+                    "correct": false,
+                    "comment": "IPv4-адрес каждого loopback-интерфейса должен быть уникальным и не использоваться другим интерфейсом."
+                },
+                {
+                    "answer": "Loopback-интерфейсы подключают к коммутатору, чтобы имитировать другие сети",
+                    "correct": false,
+                    "comment": "Loopback-интерфейс нельзя подключить к другому устройству: сети он имитирует внутри маршрутизатора. IPv4-адрес каждого loopback-интерфейса должен быть уникальным."
+                }
+            ]
+        },
+        {
+            "question": "Почему рекомендуется настраивать описание (description) на каждом интерфейсе маршрутизатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Описание удобно при устранении неполадок, а также помогает определить стороннее подключение и найти контактную информацию",
+                    "correct": true
+                },
+                {
+                    "answer": "Без описания интерфейс не перейдет в состояние up",
+                    "correct": false,
+                    "comment": "Описание настраивается при необходимости и не влияет на состояние интерфейса: интерфейс включает команда no shutdown. Описание удобно при устранении неполадок и помогает определить стороннее подключение."
+                },
+                {
+                    "answer": "Описание задает IP-адрес и маску подсети интерфейса",
+                    "correct": false,
+                    "comment": "Адрес и маску подсети задает команда ip address. Описание удобно при устранении неполадок и помогает определить стороннее подключение и найти контактную информацию."
+                }
+            ]
+        }
+    ]
 }

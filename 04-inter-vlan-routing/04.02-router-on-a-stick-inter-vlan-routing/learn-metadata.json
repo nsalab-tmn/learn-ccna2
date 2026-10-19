@@ -1,9 +1,10 @@
 {
     "title": "Маршрутизация между сетями VLAN с использованием метода Router-on-a-Stick",
-    "materialType": "lecture",
+    "shortName": "ccna2.inter-vlan-routing.router-on-a-stick-inter-vlan-routing",
+    "type": "scored-lecture",
     "description": "Как настроить маршрутизацию между VLAN с помощью одного интерфейса маршрутизатора?",
     "difficulty": 3,
-    "duration": "PT0H55M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,138 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.inter-vlan-routing.router-on-a-stick-inter-vlan-routing",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the router subinterface configuration for router-on-a-stick (802.1Q encapsulation per VLAN, subinterface numbering, an address that serves as the VLAN's default gateway, enabling the physical interface) and interpret the routing table it produces."
+        },
+        "requires": [
+            "ksa.ccna2.inter-vlan-routing.inter-vlan-routing-operation",
+            "ksa.ccna2.vlans.vlan-trunks",
+            "ksa.ccna2.basic-device-configuration.verify-directly-connected-networks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): encapsulation dot1Q, subinterface numbers, the physical interface state, subinterface addresses as default gateways, connected routes per VLAN.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какая команда настраивает подинтерфейс маршрутизатора так, чтобы он отвечал на трафик 802.1Q из VLAN 20?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "encapsulation dot1Q 20",
+                    "correct": true
+                },
+                {
+                    "answer": "interface G0/0/1.20",
+                    "correct": false,
+                    "comment": "Эта команда создает подинтерфейс с номером 20, но номер не связывает его с VLAN. Связь с VLAN 20 задает команда encapsulation dot1Q 20."
+                },
+                {
+                    "answer": "switchport access vlan 20",
+                    "correct": false,
+                    "comment": "Это команда коммутатора: она назначает порт доступа VLAN 20. На подинтерфейсе маршрутизатора VLAN задает команда encapsulation dot1Q 20."
+                },
+                {
+                    "answer": "ip address 192.168.20.1 255.255.255.0",
+                    "correct": false,
+                    "comment": "Эта команда задает IPv4-адрес подинтерфейса, а не VLAN. Связь с VLAN 20 задает команда encapsulation dot1Q 20."
+                }
+            ]
+        },
+        {
+            "question": "Что верно о номере подинтерфейса, например о числе 10 в имени G0/0/1.10?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Обычно его выбирают равным номеру VLAN, но это не обязательно",
+                    "correct": true
+                },
+                {
+                    "answer": "Он обязательно должен совпадать с номером VLAN",
+                    "correct": false,
+                    "comment": "Сопоставлять номер подинтерфейса с номером VLAN принято, но не требуется: VLAN задает команда encapsulation dot1q."
+                },
+                {
+                    "answer": "Он задает собственную VLAN магистрального канала",
+                    "correct": false,
+                    "comment": "Собственную VLAN задает ключевое слово native в команде encapsulation dot1q. Номер подинтерфейса обычно равен номеру VLAN, но это не обязательно."
+                },
+                {
+                    "answer": "Он равен номеру порта коммутатора, к которому подключен маршрутизатор",
+                    "correct": false,
+                    "comment": "Номер подинтерфейса не связан с портом коммутатора. Обычно его выбирают равным номеру VLAN, но это не обязательно."
+                }
+            ]
+        },
+        {
+            "question": "Администратор настроил подинтерфейсы G0/0/1.10, G0/0/1.20 и G0/0/1.99, но физический интерфейс G0/0/1 остался выключенным. Что произойдет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Все подинтерфейсы тоже будут отключены, пока физический интерфейс не включат командой no shutdown",
+                    "correct": true
+                },
+                {
+                    "answer": "Подинтерфейсы будут работать, потому что каждый из них включается отдельно",
+                    "correct": false,
+                    "comment": "Если физический интерфейс отключен, отключаются и все его подинтерфейсы. После создания подинтерфейсов физический интерфейс включают командой no shutdown."
+                },
+                {
+                    "answer": "Будет работать только подинтерфейс собственной VLAN",
+                    "correct": false,
+                    "comment": "Если физический интерфейс отключен, отключаются все его подинтерфейсы без исключения. Физический интерфейс нужно включить командой no shutdown."
+                }
+            ]
+        },
+        {
+            "question": "Какую роль для узлов VLAN обычно выполняет IPv4-адрес, настроенный на подинтерфейсе маршрутизатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Шлюза по умолчанию для этой VLAN",
+                    "correct": true
+                },
+                {
+                    "answer": "Адреса интерфейса управления коммутатора",
+                    "correct": false,
+                    "comment": "Интерфейс управления настраивают на коммутаторе командой interface vlan 99. Адрес подинтерфейса маршрутизатора обычно служит шлюзом по умолчанию для своей VLAN."
+                },
+                {
+                    "answer": "Общего адреса всех подинтерфейсов физического интерфейса",
+                    "correct": false,
+                    "comment": "Каждому подинтерфейсу назначают IP-адрес в его собственной подсети. Этот адрес обычно служит шлюзом по умолчанию для своей VLAN."
+                }
+            ]
+        },
+        {
+            "question": "Маршрутизация между VLAN методом router-on-a-stick настроена правильно. Что покажет команда show ip route на маршрутизаторе R1?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Для каждой VLAN — напрямую подключенный маршрут (C), интерфейсом выхода которого служит соответствующий подинтерфейс",
+                    "correct": true
+                },
+                {
+                    "answer": "Один подключенный маршрут через физический интерфейс G0/0/1 для всех VLAN",
+                    "correct": false,
+                    "comment": "Каждому подинтерфейсу назначена своя подсеть, поэтому для каждой VLAN в таблице есть свой подключенный маршрут (C) через соответствующий подинтерфейс."
+                },
+                {
+                    "answer": "Статические маршруты (S) к подсетям всех VLAN",
+                    "correct": false,
+                    "comment": "Подсети подинтерфейсов — напрямую подключенные сети, их маршруты обозначаются кодом C. Для каждой VLAN в таблице есть подключенный маршрут через соответствующий подинтерфейс."
+                }
+            ]
+        }
+    ]
 }

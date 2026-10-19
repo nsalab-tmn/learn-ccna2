@@ -1,9 +1,10 @@
 {
     "title": "Настройка VLAN",
-    "materialType": "lecture",
+    "shortName": "ccna2.vlans.vlan-configuration",
+    "type": "scored-lecture",
     "description": "Сколько всего VLAN можно создать на коммутаторе? Как создать и удалить VLAN? Как назначить VLAN на порт коммутатора?",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,146 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.vlans.vlan-configuration",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Distinguish normal-range from extended-range VLAN IDs and choose the commands that create VLANs and assign access and voice VLANs to a port, including what happens when a port is assigned to a VLAN that does not exist yet."
+        },
+        "requires": [
+            "ksa.ccna2.vlans.overview-of-vlans"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): VLAN ranges, creating several VLANs, access port commands, assigning a missing VLAN, data and voice VLANs on one port.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие идентификаторы относятся к VLAN расширенного диапазона?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "От 1006 до 4094",
+                    "correct": true
+                },
+                {
+                    "answer": "От 1 до 1005",
+                    "correct": false,
+                    "comment": "Это VLAN нормального диапазона. VLAN расширенного диапазона имеют идентификаторы от 1006 до 4094."
+                },
+                {
+                    "answer": "От 1002 до 1005",
+                    "correct": false,
+                    "comment": "Эти идентификаторы нормального диапазона зарезервированы для VLAN типа Token Ring и FDDI. VLAN расширенного диапазона имеют идентификаторы от 1006 до 4094."
+                },
+                {
+                    "answer": "От 1 до 4096",
+                    "correct": false,
+                    "comment": "4096 — верхняя граница числа VLAN, которую задает 12-битное поле идентификатора VLAN в заголовке IEEE 802.1Q. VLAN расширенного диапазона имеют идентификаторы от 1006 до 4094."
+                }
+            ]
+        },
+        {
+            "question": "Администратору нужно одной командой создать VLAN 100, 102, 105, 106 и 107. Какую команду режима глобальной конфигурации он введет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "vlan 100,102,105-107",
+                    "correct": true
+                },
+                {
+                    "answer": "vlan 100-107",
+                    "correct": false,
+                    "comment": "Диапазон через дефис создаст все VLAN с 100 по 107, в том числе лишние VLAN 101, 103 и 104. Нужный набор создает команда vlan 100,102,105-107."
+                },
+                {
+                    "answer": "vlan 100,102,105,107",
+                    "correct": false,
+                    "comment": "В этом списке нет VLAN 106. Нужный набор создает команда vlan 100,102,105-107: запятые разделяют отдельные идентификаторы, а дефис задает диапазон."
+                },
+                {
+                    "answer": "switchport access vlan 100,102,105-107",
+                    "correct": false,
+                    "comment": "Команда switchport access vlan вводится в режиме конфигурации интерфейса и назначает порт одной VLAN. Создает VLAN команда глобальной конфигурации vlan 100,102,105-107."
+                }
+            ]
+        },
+        {
+            "question": "Какие команды режима конфигурации интерфейса переводят порт F0/6 в постоянный режим доступа и назначают его VLAN 20?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "switchport mode access и switchport access vlan 20",
+                    "correct": true
+                },
+                {
+                    "answer": "vlan 20 и name student",
+                    "correct": false,
+                    "comment": "Эти команды создают VLAN 20 и присваивают ей имя, но не назначают ей порт. Порт назначают командами switchport mode access и switchport access vlan 20."
+                },
+                {
+                    "answer": "switchport voice vlan 20",
+                    "correct": false,
+                    "comment": "Эта команда назначает порту голосовую VLAN. Порт доступа VLAN данных назначают командами switchport mode access и switchport access vlan 20."
+                },
+                {
+                    "answer": "no switchport access vlan",
+                    "correct": false,
+                    "comment": "Эта команда возвращает порт в VLAN 1 по умолчанию. Порт назначают VLAN 20 командами switchport mode access и switchport access vlan 20."
+                }
+            ]
+        },
+        {
+            "question": "VLAN 30 на коммутаторе еще нет. Администратор вводит на интерфейсе команду switchport access vlan 30. Что произойдет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Коммутатор создаст VLAN 30 и сообщит об этом",
+                    "correct": true
+                },
+                {
+                    "answer": "Команда будет отклонена, пока VLAN 30 не создана командой vlan 30",
+                    "correct": false,
+                    "comment": "Команда switchport access vlan принудительно создает VLAN, если ее еще нет: коммутатор выводит сообщение «% Access VLAN does not exist. Creating vlan 30»."
+                },
+                {
+                    "answer": "Порт останется в VLAN 1 по умолчанию",
+                    "correct": false,
+                    "comment": "Команда switchport access vlan принудительно создает отсутствующую VLAN 30 и назначает ей порт: коммутатор выводит сообщение «% Access VLAN does not exist. Creating vlan 30»."
+                },
+                {
+                    "answer": "Порт станет неактивным до создания VLAN 30",
+                    "correct": false,
+                    "comment": "Команда switchport access vlan сама создает отсутствующую VLAN: коммутатор выводит сообщение «% Access VLAN does not exist. Creating vlan 30»."
+                }
+            ]
+        },
+        {
+            "question": "Порт коммутатора подключен к IP-телефону, а к телефону подключен компьютер. Что верно для такого порта доступа?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Он связан с двумя VLAN: голосовой и VLAN данных",
+                    "correct": true
+                },
+                {
+                    "answer": "Он может принадлежать только одной VLAN, поэтому голосовой трафик передается в VLAN данных",
+                    "correct": false,
+                    "comment": "Порт доступа принадлежит одной VLAN данных, но может быть дополнительно связан с голосовой VLAN. Такой порт связан с двумя VLAN: голосовой и VLAN данных."
+                },
+                {
+                    "answer": "Голосовую VLAN ему назначают командой switchport access vlan",
+                    "correct": false,
+                    "comment": "Команда switchport access vlan назначает VLAN данных. Голосовую VLAN назначает команда switchport voice vlan, и порт оказывается связан с двумя VLAN."
+                }
+            ]
+        }
+    ]
 }

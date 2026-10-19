@@ -1,9 +1,10 @@
 {
     "title": "Коммутационные домены",
-    "materialType": "lecture",
+    "shortName": "ccna2.switching-concepts.switching-domains",
+    "type": "scored-lecture",
     "description": "Что такое домен коллизии? Что такое домен широковещательной рассылки? Чем отличаются эти домены?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,101 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.switching-concepts.switching-domains",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the speed two ports auto-negotiate, the device that separates broadcast domains, and the switch characteristics that reduce network congestion."
+        },
+        "requires": [
+            "ksa.ccna2.switching-concepts.frame-forwarding",
+            "ksa.ccna2.basic-device-configuration.configure-switch-ports"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): negotiated speed, broadcast domain boundary, congestion-reducing switch characteristics.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какая скорость будет автоматически согласована между узлом с NIC 1 Гбит/с и портом коммутатора 100 Мбит/с?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "10 Мбит/с",
+                    "correct": false,
+                    "comment": "Узел и коммутатор автоматически согласуют меньшую из двух скоростей — 100 Мбит/с"
+                },
+                {
+                    "answer": "100 Мбит/с",
+                    "correct": true
+                },
+                {
+                    "answer": "1 Гбит/с",
+                    "correct": false,
+                    "comment": "Узел и коммутатор автоматически согласуют меньшую из двух скоростей — 100 Мбит/с"
+                },
+                {
+                    "answer": "10 Гбит/с",
+                    "correct": false,
+                    "comment": "Узел и коммутатор автоматически согласуют меньшую из двух скоростей — 100 Мбит/с"
+                }
+            ]
+        },
+        {
+            "question": "Какое устройство разделяет широковещательные домены?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "точка доступа",
+                    "correct": false,
+                    "comment": "Маршрутизатор разделяет домены широковещательной рассылки. Точки доступа, концентраторы и коммутаторы их не разделяют"
+                },
+                {
+                    "answer": "концентратор",
+                    "correct": false,
+                    "comment": "Маршрутизатор разделяет домены широковещательной рассылки. Точки доступа, концентраторы и коммутаторы их не разделяют"
+                },
+                {
+                    "answer": "маршрутизатор",
+                    "correct": true
+                },
+                {
+                    "answer": "коммутатор",
+                    "correct": false,
+                    "comment": "Маршрутизатор разделяет домены широковещательной рассылки. Точки доступа, концентраторы и коммутаторы их не разделяют"
+                }
+            ]
+        },
+        {
+            "question": "Какие особые характеристики используются коммутаторами LAN для уменьшения перегрузки сети? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "высокая скорость портов",
+                    "correct": true
+                },
+                {
+                    "answer": "быстрая внутренняя коммутация",
+                    "correct": true
+                },
+                {
+                    "answer": "низкая плотность портов",
+                    "correct": false,
+                    "comment": "Чтобы облегчить перегрузку, коммутаторы используют высокую скорость портов, быструю внутреннюю коммутацию, большие буферы кадров и высокую плотность портов"
+                },
+                {
+                    "answer": "маленькие буферы кадров",
+                    "correct": false,
+                    "comment": "Чтобы облегчить перегрузку, коммутаторы используют высокую скорость портов, быструю внутреннюю коммутацию, большие буферы кадров и высокую плотность портов"
+                }
+            ]
+        }
+    ]
 }

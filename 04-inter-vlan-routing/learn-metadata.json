@@ -12,9 +12,6 @@
             "$ref": "./04.01-inter-vlan-routing-operation/learn-metadata.json"
         },
         {
-            "$ref": "./04.01.05-inter-vlan-routing-operation-quiz/learn-metadata.json"
-        },
-        {
             "$ref": "./04.02-router-on-a-stick-inter-vlan-routing/learn-metadata.json"
         },
         {
@@ -30,9 +27,6 @@
             "$ref": "./04.04-troubleshoot-inter-vlan-routing/learn-metadata.json"
         },
         {
-            "$ref": "./04.04.07-troubleshoot-inter-vlan-routing-quiz/learn-metadata.json"
-        },
-        {
             "$ref": "./04.04.08-lab-troubleshoot-inter-vlan-routing/learn-metadata.json"
         },
         {
@@ -43,9 +37,6 @@
         },
         {
             "$ref": "./04.06-summary/learn-metadata.json"
-        },
-        {
-            "$ref": "./04.05.04-quiz/learn-metadata.json"
         }
     ]
 }
