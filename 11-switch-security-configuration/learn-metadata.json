@@ -30,7 +30,7 @@
             "$ref": "./11.06.01-lab-switch-security-configuration/learn-metadata.json"
         },
         {
-            "$ref": "./11.07-summary/learn-metadata.json"
+            "$ref": "./11.07-exam/learn-metadata.json"
         }
     ]
 }

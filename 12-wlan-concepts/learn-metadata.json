@@ -30,7 +30,7 @@
             "$ref": "./12.07-secure-wlans/learn-metadata.json"
         },
         {
-            "$ref": "./12.08-summary/learn-metadata.json"
+            "$ref": "./12.08-exam/learn-metadata.json"
         }
     ]
 }
