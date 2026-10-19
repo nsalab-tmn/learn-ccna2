@@ -1,9 +1,10 @@
 {
     "title": "Назначение глобальных IPv6-адресов",
-    "materialType": "lecture",
+    "shortName": "ccna2.slaac-and-dhcpv6-concepts.ipv6-global-unicast-address-assignment",
+    "type": "scored-lecture",
     "description": "Какими бывают типы IPv6-адресов? Зачем нужны сообщения Router Advertisement в контексте SLAAC и DHCPv6?",
     "difficulty": 3,
-    "duration": "PT0H5M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,66 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.slaac-and-dhcpv6-concepts.ipv6-global-unicast-address-assignment",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the address a host creates on its own when no RA arrives (the link-local address) and the combination of methods that stateless DHCPv6 relies on (SLAAC with a DHCPv6 server)."
+        },
+        "requires": [
+            "ksa.ccna2.dhcpv4.dhcpv4-concepts"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): link-local address without an RA, stateless DHCPv6 as SLAAC plus a DHCPv6 server.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой тип адреса автоматически создается по умолчанию на интерфейсе узла при отсутствии RA?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "глобальный индивидуальный адрес",
+                    "correct": false,
+                    "comment": "Локальный адрес канала IPv6 автоматически создается узлом при его загрузке и активном интерфейсе Ethernet"
+                },
+                {
+                    "answer": "локальный адрес канала",
+                    "correct": true
+                },
+                {
+                    "answer": "MAC-адрес",
+                    "correct": false,
+                    "comment": "Локальный адрес канала IPv6 автоматически создается узлом при его загрузке и активном интерфейсе Ethernet"
+                }
+            ]
+        },
+        {
+            "question": "Какой метод использует DHCP без сохранения состояния?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "только SLAAC",
+                    "correct": false,
+                    "comment": "SLAAC с сервером DHCPv6 — это метод распределения IPv6-адресов без сохранения состояния"
+                },
+                {
+                    "answer": "SLAAC с DHCPv6 сервером",
+                    "correct": true
+                },
+                {
+                    "answer": "только DHCPv6",
+                    "correct": false,
+                    "comment": "SLAAC с сервером DHCPv6 — это метод распределения IPv6-адресов без сохранения состояния"
+                }
+            ]
+        }
+    ]
 }

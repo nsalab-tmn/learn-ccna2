@@ -1,9 +1,10 @@
 {
     "title": "Настройка сервера DHCPv4 на маршрутизаторе",
-    "materialType": "lecture",
+    "shortName": "ccna2.dhcpv4.configure-dhcpv4-server",
+    "type": "scored-lecture",
     "description": "Как настроить DHCP-сервер? Как проверить его работу? В каких случаях требуется ретрансляция DHCP-сообщений?",
     "difficulty": 3,
-    "duration": "PT0H15M",
+    "duration": "PT0H21M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,156 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.dhcpv4.configure-dhcpv4-server",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the commands that configure a router as a DHCPv4 server (excluded addresses, the mandatory pool settings) and verify its bindings, and describe how a router relays client broadcasts to a DHCPv4 server in another subnet with ip helper-address."
+        },
+        "requires": [
+            "ksa.ccna2.dhcpv4.dhcpv4-concepts",
+            "ksa.ccna2.basic-device-configuration.basic-router-configuration"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): excluded addresses, mandatory pool settings, show ip dhcp binding, ip helper-address, what a DHCPv4 relay agent does.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Адреса с 192.168.10.1 по 192.168.10.9 вручную назначены маршрутизаторам, серверам и принтерам. Какая команда не позволит серверу DHCPv4 на маршрутизаторе выдавать их клиентам?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip dhcp excluded-address 192.168.10.1 192.168.10.9",
+                    "correct": true
+                },
+                {
+                    "answer": "network 192.168.10.0 255.255.255.0",
+                    "correct": false,
+                    "comment": "Эта команда пула определяет диапазон доступных адресов, но не исключает из него отдельные адреса. Исключает их команда ip dhcp excluded-address 192.168.10.1 192.168.10.9."
+                },
+                {
+                    "answer": "ip dhcp pool LAN-POOL-1",
+                    "correct": false,
+                    "comment": "Эта команда создает пул с указанным именем и переводит в режим конфигурации DHCPv4. Исключает адреса команда ip dhcp excluded-address 192.168.10.1 192.168.10.9."
+                },
+                {
+                    "answer": "default-router 192.168.10.1",
+                    "correct": false,
+                    "comment": "Эта команда задает шлюз по умолчанию для клиентов. Исключает адреса из выдачи команда ip dhcp excluded-address 192.168.10.1 192.168.10.9."
+                }
+            ]
+        },
+        {
+            "question": "Какие параметры пула DHCPv4 обязательно нужно настроить? (выберите два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Пул адресов командой network",
+                    "correct": true
+                },
+                {
+                    "answer": "Шлюз по умолчанию командой default-router",
+                    "correct": true
+                },
+                {
+                    "answer": "DNS-сервер командой dns-server",
+                    "correct": false,
+                    "comment": "Команда dns-server дополнительная. Обязательно настраивают пул адресов (network) и шлюз по умолчанию (default-router)."
+                },
+                {
+                    "answer": "Доменное имя командой domain-name",
+                    "correct": false,
+                    "comment": "Команда domain-name дополнительная. Обязательно настраивают пул адресов (network) и шлюз по умолчанию (default-router)."
+                },
+                {
+                    "answer": "Срок аренды командой lease",
+                    "correct": false,
+                    "comment": "Команда lease дополнительная: по умолчанию срок аренды равен одному дню. Обязательно настраивают пул адресов (network) и шлюз по умолчанию (default-router)."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда показывает список всех привязок IPv4-адресов, выданных сервером DHCPv4, к MAC-адресам?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip dhcp binding",
+                    "correct": true
+                },
+                {
+                    "answer": "show ip dhcp server statistics",
+                    "correct": false,
+                    "comment": "Эта команда показывает количество принятых и отправленных сообщений DHCPv4. Привязки IPv4-адресов к MAC-адресам показывает команда show ip dhcp binding."
+                },
+                {
+                    "answer": "show running-config | section dhcp",
+                    "correct": false,
+                    "comment": "Эта команда показывает команды DHCPv4, настроенные на маршрутизаторе. Привязки IPv4-адресов к MAC-адресам показывает команда show ip dhcp binding."
+                },
+                {
+                    "answer": "show ip interface",
+                    "correct": false,
+                    "comment": "Эта команда показывает параметры интерфейса, например адрес ретрансляции (Helper address). Привязки IPv4-адресов к MAC-адресам показывает команда show ip dhcp binding."
+                }
+            ]
+        },
+        {
+            "question": "Компьютер PC1 и сервер DHCPv4 с адресом 192.168.11.6 находятся в разных подсетях, и PC1 не может получить адрес. Что нужно настроить на интерфейсе маршрутизатора R1, который принимает широковещательную рассылку от PC1?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip helper-address 192.168.11.6",
+                    "correct": true
+                },
+                {
+                    "answer": "no service dhcp",
+                    "correct": false,
+                    "comment": "Эта команда отключает службу DHCPv4 на маршрутизаторе. Чтобы R1 ретранслировал широковещательные запросы серверу, на интерфейсе настраивают ip helper-address 192.168.11.6."
+                },
+                {
+                    "answer": "ip dhcp excluded-address 192.168.11.6",
+                    "correct": false,
+                    "comment": "Эта команда исключает адрес из пула сервера DHCPv4 на самом маршрутизаторе. Чтобы R1 ретранслировал широковещательные запросы серверу, на интерфейсе настраивают ip helper-address 192.168.11.6."
+                },
+                {
+                    "answer": "default-router 192.168.11.6",
+                    "correct": false,
+                    "comment": "Эта команда пула DHCPv4 задает шлюз по умолчанию для клиентов. Чтобы R1 ретранслировал широковещательные запросы серверу, на интерфейсе настраивают ip helper-address 192.168.11.6."
+                }
+            ]
+        },
+        {
+            "question": "Что делает маршрутизатор, настроенный как агент ретрансляции DHCPv4?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Принимает широковещательные запросы клиентов и пересылает их серверу DHCPv4 одноадресной рассылкой",
+                    "correct": true
+                },
+                {
+                    "answer": "Пересылает широковещательные запросы клиентов во все подсети как широковещательную рассылку",
+                    "correct": false,
+                    "comment": "Маршрутизаторы не пересылают широковещательные рассылки. Агент ретрансляции принимает широковещательный запрос и пересылает его серверу DHCPv4 одноадресной рассылкой."
+                },
+                {
+                    "answer": "Сам выдает клиентам адреса из собственного пула DHCPv4",
+                    "correct": false,
+                    "comment": "Так работает маршрутизатор, настроенный как сервер DHCPv4. Агент ретрансляции принимает широковещательный запрос и пересылает его серверу DHCPv4 одноадресной рассылкой."
+                },
+                {
+                    "answer": "Пересылает только сообщения DHCPv4 и не пересылает сообщения других служб",
+                    "correct": false,
+                    "comment": "По умолчанию команда ip helper-address пересылает восемь служб UDP, в том числе DNS и TFTP. Агент ретрансляции принимает широковещательный запрос и пересылает его серверу одноадресной рассылкой."
+                }
+            ]
+        }
+    ]
 }

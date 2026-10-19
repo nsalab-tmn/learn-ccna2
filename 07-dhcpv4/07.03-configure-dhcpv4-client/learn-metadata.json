@@ -1,9 +1,10 @@
 {
     "title": "Настройка клиента DHCPv4",
-    "materialType": "lecture",
+    "shortName": "ccna2.dhcpv4.configure-dhcpv4-client",
+    "type": "scored-lecture",
     "description": "В каких случаях маршрутизатор может выступать DHCP-клиентом? Как настроить маршрутизатор в качестве DHCP-клиента?",
     "difficulty": 3,
-    "duration": "PT0H3M",
+    "duration": "PT0H7M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,92 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.dhcpv4.configure-dhcpv4-client",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the interface commands that make a router a DHCPv4 client of its ISP, identify the home-router WAN setting for the same role, and confirm from show ip interface output that an address was assigned by DHCP."
+        },
+        "requires": [
+            "ksa.ccna2.dhcpv4.dhcpv4-concepts",
+            "ksa.ccna2.basic-device-configuration.basic-router-configuration"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): ip address dhcp, the Address determined by DHCP line, the home-router Automatic Configuration — DHCP setting.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Интерфейс G0/0/1 маршрутизатора SOHO подключен к DSL-модему, а интернет-провайдер выдает адреса по DHCP. Какие команды режима настройки интерфейса настроят G0/0/1 как клиент DHCPv4?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip address dhcp и no shutdown",
+                    "correct": true
+                },
+                {
+                    "answer": "ip address 209.165.201.12 255.255.255.224 и no shutdown",
+                    "correct": false,
+                    "comment": "Так адрес задают вручную. Чтобы интерфейс получал адрес от сервера DHCPv4 провайдера, вводят ip address dhcp и включают интерфейс командой no shutdown."
+                },
+                {
+                    "answer": "ip dhcp pool SOHO и network 209.165.201.0 255.255.255.224",
+                    "correct": false,
+                    "comment": "Эти команды настраивают на маршрутизаторе пул сервера DHCPv4: маршрутизатор стал бы выдавать адреса, а не получать их. Клиентом DHCPv4 интерфейс делают команды ip address dhcp и no shutdown."
+                }
+            ]
+        },
+        {
+            "question": "Какая строка вывода show ip interface g0/0/1 подтверждает, что адрес интерфейса выдан сервером DHCPv4?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Address determined by DHCP",
+                    "correct": true
+                },
+                {
+                    "answer": "Internet address is 209.165.201.12/27",
+                    "correct": false,
+                    "comment": "Эта строка показывает адрес интерфейса, но не то, как он получен. Что адрес выдан сервером DHCPv4, подтверждает строка Address determined by DHCP."
+                },
+                {
+                    "answer": "Broadcast address is 255.255.255.255",
+                    "correct": false,
+                    "comment": "Эта строка показывает широковещательный адрес. Что адрес интерфейса выдан сервером DHCPv4, подтверждает строка Address determined by DHCP."
+                },
+                {
+                    "answer": "GigabitEthernet0/0/1 is up, line protocol is up",
+                    "correct": false,
+                    "comment": "Эта строка показывает только, что интерфейс работает. Что адрес выдан сервером DHCPv4, подтверждает строка Address determined by DHCP."
+                }
+            ]
+        },
+        {
+            "question": "Домашний беспроводной маршрутизатор подключен к кабельному модему и должен запрашивать IPv4-адрес у интернет-провайдера. Какой тип подключения выбирают на странице настройки глобальной сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Automatic Configuration — DHCP (автоматическая настройка — DHCP)",
+                    "correct": true
+                },
+                {
+                    "answer": "Ручная настройка статического IPv4-адреса",
+                    "correct": false,
+                    "comment": "При ручной настройке маршрутизатор не запрашивает адрес у провайдера. Чтобы он работал как клиент DHCPv4, выбирают Automatic Configuration — DHCP."
+                },
+                {
+                    "answer": "Режим, в котором маршрутизатор сам выдает адреса провайдеру",
+                    "correct": false,
+                    "comment": "Здесь маршрутизатор получает адрес от провайдера, а не выдает его. Для этого выбирают тип подключения Automatic Configuration — DHCP."
+                }
+            ]
+        }
+    ]
 }
