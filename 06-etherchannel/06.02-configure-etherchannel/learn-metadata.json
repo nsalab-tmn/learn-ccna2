@@ -1,9 +1,10 @@
 {
     "title": "Настройка EtherChannel",
-    "materialType": "lecture",
+    "shortName": "ccna2.etherchannel.configure-etherchannel",
+    "type": "scored-lecture",
     "description": "Как настроить агрегацию каналов между коммутаторами по протоколу LACP?",
     "difficulty": 3,
-    "duration": "PT0H4M",
+    "duration": "PT0H9M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,110 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.etherchannel.configure-etherchannel",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "State the settings that must match on all EtherChannel member interfaces, predict that a channel does not form when they differ, and choose where and with which command an LACP EtherChannel is created and its settings changed."
+        },
+        "requires": [
+            "ksa.ccna2.etherchannel.etherchannel-operation"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): member interface requirements, mismatched duplex, the port-channel interface, channel-group mode active.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие требования должны выполняться для интерфейсов, объединяемых в EtherChannel? (выберите два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "Все интерфейсы работают на одной скорости и в одном режиме дуплекса",
+                    "correct": true
+                },
+                {
+                    "answer": "Все интерфейсы назначены в одну VLAN или настроены как магистральные каналы",
+                    "correct": true
+                },
+                {
+                    "answer": "Интерфейсы физически расположены рядом друг с другом",
+                    "correct": false,
+                    "comment": "Физическая смежность интерфейсов не требуется. Нужны одинаковые скорость и режим дуплекса, а также одна VLAN или режим магистрального канала на всех интерфейсах."
+                },
+                {
+                    "answer": "На магистральных интерфейсах разрешены разные диапазоны VLAN",
+                    "correct": false,
+                    "comment": "Разрешенные диапазоны VLAN должны совпадать, иначе EtherChannel не сформируется даже в режимах auto или desirable. Кроме того, нужны одинаковые скорость и режим дуплекса и одна VLAN или режим магистрального канала."
+                }
+            ]
+        },
+        {
+            "question": "На портах S1, которые объединяют в EtherChannel с S2, настроен полудуплексный режим, а на портах S2 — полнодуплексный. Что произойдет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "EtherChannel не сформируется, потому что параметры на коммутаторах отличаются",
+                    "correct": true
+                },
+                {
+                    "answer": "EtherChannel сформируется и будет работать в полудуплексном режиме",
+                    "correct": false,
+                    "comment": "EtherChannel формируется, только когда настройки совпадают на обоих коммутаторах. При разных режимах дуплекса канал не сформируется."
+                },
+                {
+                    "answer": "S2 автоматически переведет свои порты в полудуплексный режим, и EtherChannel сформируется",
+                    "correct": false,
+                    "comment": "Коммутаторы не подстраивают параметры друг под друга: EtherChannel формируется, только когда настройки совпадают на обоих коммутаторах. При разных режимах дуплекса канал не сформируется."
+                }
+            ]
+        },
+        {
+            "question": "Администратору нужно изменить параметры уже созданного EtherChannel, например режим магистрального канала. Где это следует делать?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "В режиме конфигурации интерфейса агрегированного канала (interface port-channel)",
+                    "correct": true
+                },
+                {
+                    "answer": "На каждом физическом интерфейсе группы по отдельности",
+                    "correct": false,
+                    "comment": "Настройки отдельных интерфейсов не влияют на интерфейс агрегированного канала и могут вызвать проблемы совместимости. Настройки интерфейса агрегированного канала применяются и к отдельным интерфейсам."
+                },
+                {
+                    "answer": "В режиме глобальной конфигурации командой channel-group",
+                    "correct": false,
+                    "comment": "Команда channel-group вводится в режиме конфигурации диапазона интерфейсов и создает интерфейс агрегированного канала. Параметры созданного EtherChannel меняют в режиме конфигурации интерфейса агрегированного канала."
+                }
+            ]
+        },
+        {
+            "question": "Порты FastEthernet 0/1 и 0/2 выбраны командой interface range. Какая команда создаст интерфейс агрегированного канала с номером 1 и настроит EtherChannel с использованием LACP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "channel-group 1 mode active",
+                    "correct": true
+                },
+                {
+                    "answer": "interface port-channel 1",
+                    "correct": false,
+                    "comment": "Эта команда переводит в режим конфигурации интерфейса агрегированного канала, чтобы изменить его настройки второго уровня. Создает его и задает LACP команда channel-group 1 mode active."
+                },
+                {
+                    "answer": "switchport mode trunk",
+                    "correct": false,
+                    "comment": "Эта команда переводит интерфейс в режим магистрального канала, а не создает EtherChannel. Интерфейс агрегированного канала с LACP создает команда channel-group 1 mode active."
+                }
+            ]
+        }
+    ]
 }

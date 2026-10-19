@@ -1,9 +1,10 @@
 {
     "title": "Принципы работы EtherChannel",
-    "materialType": "lecture",
+    "shortName": "ccna2.etherchannel.etherchannel-operation",
+    "type": "scored-lecture",
     "description": "Что такое агрегация каналов и для чего она нужна? Какие бывают протоколы автосогласования для агрегации каналов?",
     "difficulty": 3,
-    "duration": "PT0H13M",
+    "duration": "PT0H23M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,161 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.etherchannel.etherchannel-operation",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the benefits of EtherChannel, the rule against mixing interface types in one channel, whether PAgP and LACP are both proprietary, and the PAgP modes and mode pairs that form a channel."
+        },
+        "requires": [
+            "ksa.ccna2.stp.purpose-of-stp",
+            "ksa.ccna2.vlans.vlan-trunks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): EtherChannel benefits, mixing interface types, PAgP and LACP, PAgP modes and mode pairs.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Каковы преимущества технологии EtherChannel? (выберите все подходящие варианты)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "устойчивость к сбоям",
+                    "correct": true
+                },
+                {
+                    "answer": "распределение нагрузки",
+                    "correct": true
+                },
+                {
+                    "answer": "увеличение пропускной способности",
+                    "correct": true
+                },
+                {
+                    "answer": "избыточность каналов связи",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что каналы FastEthernet и GigabitEthernet могут быть объединены в один EtherChannel?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Интерфейсы, объединенные в EtherChannel, должны быть одинаковыми по типу и скорости"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что PAgP и LACP являются проприетарными протоколами агрегации каналов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "PAgP — это проприетарный протокол, а LACP является спецификацией IEEE 802.3ad"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие режимы интерфейса относятся к PAgP? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "on",
+                    "correct": true
+                },
+                {
+                    "answer": "auto",
+                    "correct": true
+                },
+                {
+                    "answer": "active",
+                    "correct": false,
+                    "comment": "On, Auto и Desirable — режимы PAgP. On, Active и Passive — режимы LACP"
+                },
+                {
+                    "answer": "passive",
+                    "correct": false,
+                    "comment": "On, Auto и Desirable — режимы PAgP. On, Active и Passive — режимы LACP"
+                },
+                {
+                    "answer": "desirable",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой режим интерфейса PAgP инициирует согласование с другими интерфейсами?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "active",
+                    "correct": false,
+                    "comment": "Только режим PAgP Desirable инициирует согласование"
+                },
+                {
+                    "answer": "desirable",
+                    "correct": true
+                },
+                {
+                    "answer": "auto",
+                    "correct": false,
+                    "comment": "Только режим PAgP Desirable инициирует согласование"
+                }
+            ]
+        },
+        {
+            "question": "Какие комбинации режимов PAgP образуют EtherChannel? (выберите все подходящие варианты).",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "auto > desirable",
+                    "correct": true
+                },
+                {
+                    "answer": "desirable > on",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
+                },
+                {
+                    "answer": "auto > on",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
+                },
+                {
+                    "answer": "on > on",
+                    "correct": true
+                },
+                {
+                    "answer": "on > active",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
+                },
+                {
+                    "answer": "active > passive",
+                    "correct": false,
+                    "comment": "On > On и Auto > Desirable образуют EtherChannel"
+                }
+            ]
+        }
+    ]
 }
