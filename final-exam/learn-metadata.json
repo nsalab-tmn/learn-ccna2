@@ -26,7 +26,9 @@
             "ksa.ccna2.inter-vlan-routing.exam",
             "ksa.ccna2.stp.exam",
             "ksa.ccna2.etherchannel.exam",
-            "ksa.ccna2.07-09-exam",
+            "ksa.ccna2.dhcpv4.exam",
+            "ksa.ccna2.slaac-and-dhcpv6-concepts.exam",
+            "ksa.ccna2.fhrp-concepts.exam",
             "ksa.ccna2.10-13-exam",
             "ksa.ccna2.14-16-exam"
         ],
