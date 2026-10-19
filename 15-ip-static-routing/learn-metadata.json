@@ -27,7 +27,7 @@
             "$ref": "./15.06.01-lab-configure-ipv4-and-ipv6-static-and-default-routes/learn-metadata.json"
         },
         {
-            "$ref": "./15.07-summary/learn-metadata.json"
+            "$ref": "./15.07-exam/learn-metadata.json"
         }
     ]
 }

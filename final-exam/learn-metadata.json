@@ -33,7 +33,9 @@
             "ksa.ccna2.switch-security-configuration.exam",
             "ksa.ccna2.wlan-concepts.exam",
             "ksa.ccna2.wlan-configuration.exam",
-            "ksa.ccna2.14-16-exam"
+            "ksa.ccna2.routing-concepts.exam",
+            "ksa.ccna2.ip-static-routing.exam",
+            "ksa.ccna2.troubleshoot-static-and-default-routes.exam"
         ],
         "measurement": {
             "mode": "exam",
