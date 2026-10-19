@@ -42,7 +42,7 @@
             "$ref": "./03.06.01-lab-implement-vlans-and-trunking/learn-metadata.json"
         },
         {
-            "$ref": "./03.07-summary/learn-metadata.json"
+            "$ref": "./03.07-exam/learn-metadata.json"
         }
     ]
 }

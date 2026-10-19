@@ -20,7 +20,10 @@
             "objective": "Across all modules of the course, identify the switching, routing, redundancy, security or wireless mechanism a scenario describes, and choose the configuration or verification command it calls for."
         },
         "requires": [
-            "ksa.ccna2.01-04-exam",
+            "ksa.ccna2.basic-device-configuration.exam",
+            "ksa.ccna2.switching-concepts.exam",
+            "ksa.ccna2.vlans.exam",
+            "ksa.ccna2.inter-vlan-routing.exam",
             "ksa.ccna2.05-06-exam",
             "ksa.ccna2.07-09-exam",
             "ksa.ccna2.10-13-exam",
