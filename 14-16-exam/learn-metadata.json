@@ -1,10 +1,38 @@
 {
     "title": "Экзамен по базовым концепциям маршрутизации",
+    "shortName": "ccna2.14-16-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Принципы маршрутизации\r* Статическая IP-маршрутизация\r* Поиск и устранение неисправностей в статической маршрутизации",
     "difficulty": 1,
     "duration": "PT1H28M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.14-16-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 14–16, identify the routing-table entry, route source, administrative distance or forwarding decision a scenario describes, choose the IPv4 or IPv6 static, default, floating or host route it calls for, and identify the cause of a static-routing fault from verification output."
+        },
+        "requires": [
+            "ksa.ccna2.routing-concepts.summary",
+            "ksa.ccna2.ip-static-routing.summary",
+            "ksa.ccna2.troubleshoot-static-and-default-routes.troubleshoot-ipv4-static-and-default-route-configuration"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 52 questions covering modules 14–16; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1427,12 +1455,5 @@
             ],
             "question": "![](./assets/24.png) Посмотрите на изображение. Какой статический маршрут следует ввести IT-специалисту для создания резервного маршрута к сети 172.16.1.0, который будет использоваться при отказе основного маршрута, полученного с помощью RIP?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }

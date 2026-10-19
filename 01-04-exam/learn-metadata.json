@@ -1,10 +1,39 @@
 {
     "title": "Экзамен по базовым концепциям коммутации",
+    "shortName": "ccna2.01-04-exam",
+    "type": "exam",
     "description": "Проверьте свои знания по темам:\r\r* Базовая настройка сетевых устройств\r* Принципы коммутации\r* Виртуальные локальные сети (VLAN)\r* Маршрутизация между VLAN",
     "difficulty": 1,
     "duration": "PT1H45M",
-    "materialType": "test-exam",
-    "passingScore": 100,
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "skills": {},
+    "assets": {
+        "$ref": "./assets"
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.01-04-exam",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Across modules 1–4, choose the switch and router configuration and verification commands for a basic setup, identify the switch forwarding behaviour and switching method a scenario describes, and choose the VLAN, trunk and inter-VLAN routing configuration it calls for."
+        },
+        "requires": [
+            "ksa.ccna2.basic-device-configuration.summary",
+            "ksa.ccna2.switching-concepts.summary",
+            "ksa.ccna2.vlans.summary",
+            "ksa.ccna2.inter-vlan-routing.summary"
+        ],
+        "measurement": {
+            "mode": "exam",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "Learner scores at least 80% on the exam's 67 questions covering modules 1–4; attempts unlimited.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 80,
     "questions": [
         {
             "answerType": "singleChoice",
@@ -1909,12 +1938,5 @@
             ],
             "question": "Сетевой администратор выполняет команду `show vlan brief` во время поиска и устранения неполадок по обращению пользователя в службу поддержки. Какие выходные данные будут отображаться?"
         }
-    ],
-    "tags": {
-        "$ref": "../material-tags.json"
-    },
-    "skills": {},
-    "assets": {
-        "$ref": "./assets"
-    }
+    ]
 }
