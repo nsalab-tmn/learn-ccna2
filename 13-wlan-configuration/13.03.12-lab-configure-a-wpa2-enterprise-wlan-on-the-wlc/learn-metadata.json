@@ -8,18 +8,15 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
@@ -27,13 +24,9 @@
         "$ref": "./README.md"
     },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
-    },
-    "assets": {
-        "$ref": "./assets"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,42 +34,42 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какие интерфейсы присутствуют?",
+                "title": "1. Какие интерфейсы перечислены на странице «Controller → Interfaces» контроллера WLC-1 после создания интерфейса WLAN-5?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. IP-адрес:",
+                "title": "2. IP-адрес интерфейса management:",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Маска сети:",
+                "title": "3. Маска сети интерфейса management:",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Шлюз:",
+                "title": "4. Шлюз интерфейса management:",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Основной сервер DHCP:",
+                "title": "5. Основной DHCP-сервер интерфейса management до изменения:",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. В какой сети должен быть адрес? Дайте пояснение.",
+                "title": "6. В какой сети должны быть адреса области DHCP «Wired Management»? Поясните ответ.",
                 "placeholder": "Enter your answer here"
             },
             "q_7": {
                 "type": "string",
-                "title": "7. Какие две вещи аутентифицируются сервером RADIUS? Для чего это необходимо?",
+                "title": "7. Какие две стороны проверяет сервер RADIUS и для чего это нужно?",
                 "placeholder": "Enter your answer here"
             },
             "q_8": {
                 "type": "string",
-                "title": "8. Каковы преимущества WPA2-Enterprise перед WPA2-PSK?",
+                "title": "8. В чем преимущества WPA2-Enterprise перед WPA2-PSK? Назовите те, которые вы увидели в этой работе.",
                 "placeholder": "Enter your answer here"
             }
         }
