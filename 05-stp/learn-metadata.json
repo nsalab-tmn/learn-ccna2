@@ -21,7 +21,7 @@
             "$ref": "./05.03-evolution-of-stp/learn-metadata.json"
         },
         {
-            "$ref": "./05.04-summary/learn-metadata.json"
+            "$ref": "./05.04-exam/learn-metadata.json"
         }
     ]
 }
