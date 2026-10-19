@@ -3,6 +3,94 @@ Criterions:
 - code: R-1-A
   name: R-1-A
   subCriterions:
+  - code: R-1-A.ROUTES
+    name: Routes
+    aspects:
+    - code: R-1-A.ROUTES.ROUTE-0
+      name: Static Routes.Route0
+      description: 'Статический маршрут: ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/1'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+GigabitEthernet0/0/1\s*$'
+        code: check
+        type: check
+        device: R-1-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+GigabitEthernet0/0/1\s*$
+            match: true
+    - code: R-1-A.ROUTES.ROUTE-1
+      name: Static Routes.Route1
+      description: 'Статический маршрут: ip route 0.0.0.0 0.0.0.0 Serial0/1/0 5'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+Serial0/1/0\s+5\s*$'
+        code: check
+        type: check
+        device: R-1-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+Serial0/1/0\s+5\s*$
+            match: true
+    - code: R-1-A.ROUTES.ROUTE-2
+      name: Static Routes.Route2
+      description: 'Статический маршрут: ip route 192.168.10.0 255.255.255.0 GigabitEthernet0/0/1'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 192\.168\.10\.0\s+255\.255\.255\.0\s+GigabitEthernet0/0/1\s*$'
+        code: check
+        type: check
+        device: R-1-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 192\.168\.10\.0\s+255\.255\.255\.0\s+GigabitEthernet0/0/1\s*$
+            match: true
+    - code: R-1-A.ROUTES.ROUTE-3
+      name: Static Routes.Route3
+      description: 'Статический маршрут: ip route 192.168.10.0 255.255.255.0 Serial0/1/0 5'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 192\.168\.10\.0\s+255\.255\.255\.0\s+Serial0/1/0\s+5\s*$'
+        code: check
+        type: check
+        device: R-1-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 192\.168\.10\.0\s+255\.255\.255\.0\s+Serial0/1/0\s+5\s*$
+            match: true
+    - code: R-1-A.ROUTES.ROUTE-4
+      name: Static Routes.Route4
+      description: 'Статический маршрут: ip route 192.168.10.10 255.255.255.255 GigabitEthernet0/0/1'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 192\.168\.10\.10\s+255\.255\.255\.255\s+GigabitEthernet0/0/1\s*$'
+        code: check
+        type: check
+        device: R-1-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 192\.168\.10\.10\s+255\.255\.255\.255\s+GigabitEthernet0/0/1\s*$
+            match: true
   - code: R-1-A.ROUTESV6
     name: Routesv6
     aspects:
@@ -256,6 +344,43 @@ Criterions:
             command: show running-config interface GigabitEthernet0/0/1
             expr: (?m)^ ip address dhcp\s*$
             match: true
+  - code: R-B-10.ROUTES
+    name: Routes
+    aspects:
+    - code: R-B-10.ROUTES.ROUTE-0
+      name: Static Routes.Route0
+      description: 'Статический маршрут: ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/1'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+GigabitEthernet0/0/1\s*$'
+        code: check
+        type: check
+        device: R-B-10
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+GigabitEthernet0/0/1\s*$
+            match: true
+    - code: R-B-10.ROUTES.ROUTE-1
+      name: Static Routes.Route1
+      description: 'Статический маршрут: ip route 0.0.0.0 0.0.0.0 Serial0/1/0 5'
+      skills:
+      - Routing
+      max_mark: 1
+      steps:
+      - name: 'show running-config: matches (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+Serial0/1/0\s+5\s*$'
+        code: check
+        type: check
+        device: R-B-10
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config
+            expr: (?m)^ip route 0\.0\.0\.0\s+0\.0\.0\.0\s+Serial0/1/0\s+5\s*$
+            match: true
   - code: R-B-10.ROUTESV6
     name: Routesv6
     aspects:
@@ -366,6 +491,23 @@ Criterions:
           action_vars:
             command: show ip dhcp snooping
             expr: (?m)^DHCP snooping is configured on following VLANs:\s*\n(.*[ ,])?999([,-].*)?\s*$
+            match: true
+    - code: SW-A.DHCP-SNOOPING.G0-1-SNOOPING-TRUST
+      name: Trusted Ports.GigabitEthernet0/1
+      description: 'G0/1: доверенный порт DHCP snooping'
+      skills:
+      - Ip
+      max_mark: 1
+      steps:
+      - name: 'show running-config interface GigabitEthernet0/1: matches (?m)^ ip dhcp snooping trust\s*$'
+        code: check
+        type: check
+        device: Sw-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface GigabitEthernet0/1
+            expr: (?m)^ ip dhcp snooping trust\s*$
             match: true
   - code: SW-A.DYNAMIC-ARP-INSPECTION
     name: Dynamic Arp Inspection
@@ -2337,6 +2479,23 @@ Criterions:
             command: show running-config | section ^interface GigabitEthernet0/2( |$)
             expr: (?m)^ shutdown\s*$
             match: true
+    - code: SW-A.PORTS.G0-1-DTP-MODE
+      name: GigabitEthernet0/1.Dynamic Mode
+      description: 'G0/1: режим trunk'
+      skills:
+      - Switching
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet0/1 switchport: matches (?m)Administrative Mode: trunk\s*$'
+        code: check
+        type: check
+        device: Sw-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/1 switchport
+            expr: '(?m)Administrative Mode: trunk\s*$'
+            match: true
   - code: SW-A.VLANS
     name: VLANS
     aspects:
@@ -2406,7 +2565,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WLC-10: config.radius[?ip==''172.16.1.100''] | [0].secret == ''Cisco123'''
+      - name: 'WLC-10: config.radius[?ip==''172.16.1.100''] | [0].secret == ''Wlanpa55'''
         code: check
         type: check
         device: Admin-PC
@@ -2417,7 +2576,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: config.radius[?ip=='172.16.1.100'] | [0].secret
-              value: Cisco123
+              value: Wlanpa55
     - code: WLC-10.CAPWAP-WIRELESS.WLAN-WLAN-10-ENABLED
       name: Wireless LANs.WLAN 10.Enabled
       description: 'WLAN «WLAN 10»: включена'
@@ -2750,6 +2909,40 @@ Criterions:
             assert_jmespath:
               path: config.traps[0].ip
               value: 172.16.1.100
+  - code: WLC-10.MISC
+    name: Miscellaneous
+    aspects:
+    - code: WLC-10.MISC.SAVED
+      name: Configuration Saved
+      description: Конфигурация контроллера сохранена
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'WLC-10: WLAN WLAN 10 exists'
+        code: check
+        type: check
+        device: Admin-PC
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-10/config
+            assert_code: 200
+            assert_jmespath:
+              path: wlans[?profile=='WLAN 10'] | [0].profile
+              value: WLAN 10
+      - name: 'WLC-10: saved == True'
+        code: check
+        type: check
+        device: Admin-PC
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-10/config
+            assert_code: 200
+            assert_jmespath:
+              path: saved
+              value: true
 - code: LT-1
   name: LT-1
   subCriterions:

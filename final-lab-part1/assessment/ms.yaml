@@ -13,7 +13,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Ciscoconpa55|7 00271A150754080901314D1B5C)\s*$'
+      - name: 'show running-config | section ^line con 0( |$): matches (?m)^ password (?:Edgeconpa55|7 00211701015804081F20191B)\s*$'
         code: check
         type: check
         device: Edge-Router
@@ -21,7 +21,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line con 0( |$)
-            expr: (?m)^ password (?:Ciscoconpa55|7 00271A150754080901314D1B5C)\s*$
+            expr: (?m)^ password (?:Edgeconpa55|7 00211701015804081F20191B)\s*$
             match: true
   - code: EDGE-ROUTER.PORTS
     name: Ports
@@ -655,8 +655,8 @@ Criterions:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
             expr: (?m)^ login\s*$
             match: true
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscovtypa55|7
-          00271A1507541D1216314D1B5C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Edgevtypa55|7
+          00211701014D1F1F1F20191B)\s*$'
         code: check
         type: check
         device: Edge-Router
@@ -664,7 +664,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscovtypa55|7 00271A1507541D1216314D1B5C)\s*$
+            expr: (?m)^ password (?:Edgevtypa55|7 00211701014D1F1F1F20191B)\s*$
             match: true
     - code: EDGE-ROUTER.VTY.VTY0-PASSWORD
       name: VTY Line 0.Password
@@ -673,8 +673,8 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Ciscovtypa55|7
-          00271A1507541D1216314D1B5C)\s*$'
+      - name: 'show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$: matches (?m)^ password (?:Edgevtypa55|7
+          00211701014D1F1F1F20191B)\s*$'
         code: check
         type: check
         device: Edge-Router
@@ -682,7 +682,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^line vty (0 1|0 2|0 3|0 4|0)$
-            expr: (?m)^ password (?:Ciscovtypa55|7 00271A1507541D1216314D1B5C)\s*$
+            expr: (?m)^ password (?:Edgevtypa55|7 00211701014D1F1F1F20191B)\s*$
             match: true
   - code: EDGE-ROUTER.MISC
     name: Miscellaneous
@@ -712,7 +712,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM'
+      - name: 'show running-config: has enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1'
         code: check
         type: check
         device: Edge-Router
@@ -721,7 +721,7 @@ Criterions:
           action_vars:
             command: show running-config
             assert_tags:
-            - enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM
+            - enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1
             tags_are_present: true
     - code: EDGE-ROUTER.MISC.HOSTNAME
       name: Host Name
@@ -818,31 +818,20 @@ Criterions:
             match: true
     - code: L3-SW1.PORTS.PORT-CHANNEL1-UP
       name: Port-channel1.Port Status
-      description: 'Port-channel1: интерфейс включён (no shutdown)'
+      description: 'Port-channel1: канал собран и работает (SU)'
       skills:
       - Physical
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^interface Port\-channel1( |$): has interface Port-channel1'
-        code: check
-        type: check
-        device: L3-SW1
-        action_chain:
-        - action: verify_output
-          action_vars:
-            command: show running-config | section ^interface Port\-channel1( |$)
-            assert_tags:
-            - interface Port-channel1
-            tags_are_present: true
-      - name: 'show running-config | section ^interface Port\-channel1( |$): matches (?m)\A(?![\s\S]*^ shutdown\s*$)'
+      - name: 'show etherchannel summary: matches (?m)^1\s+Po1\(SU\)\s'
         code: check
         type: check
         device: L3-SW1
         action_chain:
         - action: verify_output_regex
           action_vars:
-            command: show running-config | section ^interface Port\-channel1( |$)
-            expr: (?m)\A(?![\s\S]*^ shutdown\s*$)
+            command: show etherchannel summary
+            expr: (?m)^1\s+Po1\(SU\)\s
             match: true
     - code: L3-SW1.PORTS.PORT-CHANNEL1-PORT-TYPE
       name: Port-channel1.Port Type
@@ -863,31 +852,20 @@ Criterions:
             match: true
     - code: L3-SW1.PORTS.PORT-CHANNEL2-UP
       name: Port-channel2.Port Status
-      description: 'Port-channel2: интерфейс включён (no shutdown)'
+      description: 'Port-channel2: канал собран и работает (SU)'
       skills:
       - Physical
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^interface Port\-channel2( |$): has interface Port-channel2'
-        code: check
-        type: check
-        device: L3-SW1
-        action_chain:
-        - action: verify_output
-          action_vars:
-            command: show running-config | section ^interface Port\-channel2( |$)
-            assert_tags:
-            - interface Port-channel2
-            tags_are_present: true
-      - name: 'show running-config | section ^interface Port\-channel2( |$): matches (?m)\A(?![\s\S]*^ shutdown\s*$)'
+      - name: 'show etherchannel summary: matches (?m)^2\s+Po2\(SU\)\s'
         code: check
         type: check
         device: L3-SW1
         action_chain:
         - action: verify_output_regex
           action_vars:
-            command: show running-config | section ^interface Port\-channel2( |$)
-            expr: (?m)\A(?![\s\S]*^ shutdown\s*$)
+            command: show etherchannel summary
+            expr: (?m)^2\s+Po2\(SU\)\s
             match: true
     - code: L3-SW1.PORTS.PORT-CHANNEL2-PORT-TYPE
       name: Port-channel2.Port Type
@@ -904,6 +882,142 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces Port-channel2 switchport
+            expr: 'Administrative Mode: trunk'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-1-NONEGOTIATE
+      name: GigabitEthernet1/0/1.Nonegotiate
+      description: 'G1/0/1: DTP выключен (nonegotiate)'
+      skills:
+      - Switching
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/1 switchport: matches Negotiation of Trunking: Off'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/1 switchport
+            expr: 'Negotiation of Trunking: Off'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-1-TRUNK
+      name: GigabitEthernet1/0/1.Port Mode
+      description: 'G1/0/1: статический транк (switchport mode trunk)'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/1 switchport: matches Administrative Mode: trunk'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/1 switchport
+            expr: 'Administrative Mode: trunk'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-2-NONEGOTIATE
+      name: GigabitEthernet1/0/2.Nonegotiate
+      description: 'G1/0/2: DTP выключен (nonegotiate)'
+      skills:
+      - Switching
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/2 switchport: matches Negotiation of Trunking: Off'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/2 switchport
+            expr: 'Negotiation of Trunking: Off'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-2-TRUNK
+      name: GigabitEthernet1/0/2.Port Mode
+      description: 'G1/0/2: статический транк (switchport mode trunk)'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/2 switchport: matches Administrative Mode: trunk'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/2 switchport
+            expr: 'Administrative Mode: trunk'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-3-NONEGOTIATE
+      name: GigabitEthernet1/0/3.Nonegotiate
+      description: 'G1/0/3: DTP выключен (nonegotiate)'
+      skills:
+      - Switching
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/3 switchport: matches Negotiation of Trunking: Off'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/3 switchport
+            expr: 'Negotiation of Trunking: Off'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-3-TRUNK
+      name: GigabitEthernet1/0/3.Port Mode
+      description: 'G1/0/3: статический транк (switchport mode trunk)'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/3 switchport: matches Administrative Mode: trunk'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/3 switchport
+            expr: 'Administrative Mode: trunk'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-4-NONEGOTIATE
+      name: GigabitEthernet1/0/4.Nonegotiate
+      description: 'G1/0/4: DTP выключен (nonegotiate)'
+      skills:
+      - Switching
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/4 switchport: matches Negotiation of Trunking: Off'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/4 switchport
+            expr: 'Negotiation of Trunking: Off'
+            match: true
+    - code: L3-SW1.PORTS.G1-0-4-TRUNK
+      name: GigabitEthernet1/0/4.Port Mode
+      description: 'G1/0/4: статический транк (switchport mode trunk)'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet1/0/4 switchport: matches Administrative Mode: trunk'
+        code: check
+        type: check
+        device: L3-SW1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet1/0/4 switchport
             expr: 'Administrative Mode: trunk'
             match: true
     - code: L3-SW1.PORTS.VLAN10-IP
@@ -2677,6 +2791,34 @@ Criterions:
             command: show interfaces GigabitEthernet0/2 switchport
             expr: 'Administrative Mode: trunk'
             match: true
+    - code: SW-B.PORTS.F0-6-UP
+      name: FastEthernet0/6.Port Status
+      description: 'F0/6: интерфейс включён (no shutdown)'
+      skills:
+      - Physical
+      max_mark: 1
+      steps:
+      - name: 'show running-config | section ^interface FastEthernet0/6( |$): has interface FastEthernet0/6'
+        code: check
+        type: check
+        device: Sw-B
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: show running-config | section ^interface FastEthernet0/6( |$)
+            assert_tags:
+            - interface FastEthernet0/6
+            tags_are_present: true
+      - name: 'show running-config | section ^interface FastEthernet0/6( |$): matches (?m)\A(?![\s\S]*^ shutdown\s*$)'
+        code: check
+        type: check
+        device: Sw-B
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config | section ^interface FastEthernet0/6( |$)
+            expr: (?m)\A(?![\s\S]*^ shutdown\s*$)
+            match: true
   - code: SW-B.VLANS
     name: VLANS
     aspects:
@@ -3335,7 +3477,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM'
+      - name: 'show running-config: has enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1'
         code: check
         type: check
         device: Sw-C
@@ -3344,7 +3486,7 @@ Criterions:
           action_vars:
             command: show running-config
             assert_tags:
-            - enable secret 5 $1$mERr$GK3L4mY8Ynlm4SbM
+            - enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1
             tags_are_present: true
 - code: WS-1-1
   name: WS-1-1

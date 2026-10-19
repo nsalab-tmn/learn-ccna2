@@ -127,7 +127,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 10''] | [0].key == ''Cisco123'''
+      - name: 'WLC-1: wlans[?profile==''Wireless VLAN 10''] | [0].key == ''Wlanpa55'''
         code: check
         type: check
         device: Laptop-2
@@ -138,7 +138,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: wlans[?profile=='Wireless VLAN 10'] | [0].key
-              value: Cisco123
+              value: Wlanpa55
     - code: WLC-1.CAPWAP-WIRELESS.WLAN-WIRELESS-VLAN-20-ENABLED
       name: Wireless LANs.Wireless VLAN 20.Enabled
       description: 'WLAN «Wireless VLAN 20»: включена'

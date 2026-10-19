@@ -70,7 +70,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WLC-1: wlans[?profile==''Floor 2 Employees''] | [0].key == ''Cisco123'''
+      - name: 'WLC-1: wlans[?profile==''Floor 2 Employees''] | [0].key == ''Wlanpa55'''
         code: check
         type: check
         device: Admin-PC
@@ -81,7 +81,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: wlans[?profile=='Floor 2 Employees'] | [0].key
-              value: Cisco123
+              value: Wlanpa55
     - code: WLC-1.CAPWAP-WIRELESS.WLAN-FLOOR-2-EMPLOYEES-VLAN
       name: Wireless LANs.Floor 2 Employees.VLAN
       description: 'WLAN «Floor 2 Employees»: VLAN 5'
@@ -171,7 +171,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'Wireless-Host: connected.key == ''Cisco123'''
+      - name: 'Wireless-Host: connected.key == ''Wlanpa55'''
         code: check
         type: check
         device: Wireless-Host
@@ -182,4 +182,4 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: connected.key
-              value: Cisco123
+              value: Wlanpa55

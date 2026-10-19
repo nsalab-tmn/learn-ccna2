@@ -51,7 +51,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WLC-1: config.radius[?ip==''172.31.1.254''] | [0].secret == ''Cisco123'''
+      - name: 'WLC-1: config.radius[?ip==''172.31.1.254''] | [0].secret == ''Wlanpa55'''
         code: check
         type: check
         device: Admin-PC
@@ -62,7 +62,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: config.radius[?ip=='172.31.1.254'] | [0].secret
-              value: Cisco123
+              value: Wlanpa55
     - code: WLC-1.CAPWAP-WIRELESS.WLAN-FLOOR-2-EMPLOYEES-ENABLED
       name: Wireless LANs.Floor 2 Employees.Enabled
       description: 'WLAN «Floor 2 Employees»: включена'
@@ -146,7 +146,7 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'WLC-1: wlans[?profile==''Floor 2 Employees''] | [0].radius_secret == ''Cisco123'''
+      - name: 'WLC-1: wlans[?profile==''Floor 2 Employees''] | [0].radius_secret == ''Wlanpa55'''
         code: check
         type: check
         device: Admin-PC
@@ -157,7 +157,7 @@ Criterions:
             assert_code: 200
             assert_jmespath:
               path: wlans[?profile=='Floor 2 Employees'] | [0].radius_secret
-              value: Cisco123
+              value: Wlanpa55
     - code: WLC-1.CAPWAP-WIRELESS.WLAN-FLOOR-2-EMPLOYEES-VLAN
       name: Wireless LANs.Floor 2 Employees.VLAN
       description: 'WLAN «Floor 2 Employees»: VLAN 5'
@@ -430,6 +430,25 @@ Criterions:
             assert_jmespath:
               path: interfaces[?name=='WLAN-5'] | [0].vlan
               value: 5
+    - code: WLC-1.PORTS.MANAGEMENT-DHCP
+      name: management.DHCP Server IP
+      description: 'Интерфейс management: основной DHCP-сервер 192.168.200.254'
+      skills:
+      - Ip
+      max_mark: 1
+      steps:
+      - name: 'WLC-1: interfaces[?name==''management''] | [0].dhcp == ''192.168.200.254'''
+        code: check
+        type: check
+        device: Admin-PC
+        action_chain:
+        - action: validate_web_response
+          action_vars:
+            name: http://{lab_ip}:7681/api/devices/WLC-1/config
+            assert_code: 200
+            assert_jmespath:
+              path: interfaces[?name=='management'] | [0].dhcp
+              value: 192.168.200.254
   - code: WLC-1.SNMP
     name: SNMP
     aspects:
