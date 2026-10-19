@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -46,7 +39,7 @@
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Взгляните на Simulation Panel (Панель моделирования) и скажите, куда коммутатор **S3** отправил пакет после того, как получил его?",
+                "title": "2. Взгляните на список событий на панели «Симуляция»: куда коммутатор **S3** отправил пакет после того, как получил его?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
