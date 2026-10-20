@@ -63,7 +63,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/2.png) Посмотрите на рисунок. Администратор пытается установить канал EtherChannel между S1 и двумя другими коммутаторами, используя указанные команды, но терпит неудачу. В чем заключается проблема?"
+            "question": "![](./assets/2.svg) Посмотрите на рисунок. Администратор пытается установить канал EtherChannel между S1 и двумя другими коммутаторами с помощью следующих команд:\n\n```\nS1(config)#interface range fa0/1 - 4\nS1(config-if-range)#channel-group 1 mode on\nCreating a port-channel interface Port-channel 1\nS1(config-if-range)#\n```\n\nНо это ему не удается. В чем заключается проблема?"
         },
         {
             "questionId": "q02",
@@ -168,7 +168,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/3.png) Взгляните на рисунок. Какие выводы о канале EtherChannel можно сделать на основании показанного результата?"
+            "question": "![](./assets/3.svg) Взгляните на рисунок. Какие выводы о канале EtherChannel можно сделать на основании показанного результата?"
         },
         {
             "questionId": "q05",
@@ -304,7 +304,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/4.png) Посмотрите на рисунок. EtherChannel был настроен между коммутаторами S1 и S2, но интерфейсы не сформировали EtherChannel. В чем заключается проблема?"
+            "question": "Коммутаторы S1 и S2 соединены двумя каналами между портами Fa0/1 и Fa0/2. EtherChannel был настроен между ними следующими командами.\n\nS1:\n\n```\nS1(config)#interface range FastEthernet0/1 - 2\nS1(config-if-range)#channel-group 1 mode active\nCreating a port-channel interface Port-channel 1\nS1(config-if-range)#interface port-channel 1\nS1(config-if)#switchport mode trunk\nS1(config-if)#switchport trunk allowed vlan 1-5,10\nS1(config-if)#\n```\n\nS2:\n\n```\nS2(config)#interface range FastEthernet0/1 - 2\nS2(config-if-range)#channel-group 1 mode active\nCreating a port-channel interface Port-channel 1\nS2(config-if-range)#interface port-channel 1\nS2(config-if)#switchport mode trunk\nS2(config-if)#switchport trunk allowed vlan 1,5,10\nS2(config-if)#\n```\n\nНо интерфейсы не сформировали EtherChannel. В чем заключается проблема?"
         },
         {
             "questionId": "q09",
@@ -440,7 +440,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/5.png) Посмотрите на изображение. Сетевой администратор настраивает EtherChannel между двумя коммутаторами, SW1 и SW2. Какое утверждение описывает эффект после выполнения команд на SW1 и SW2?"
+            "question": "Сетевой администратор настраивает EtherChannel между двумя коммутаторами, SW1 и SW2, соединенными двумя каналами между портами Gi0/1 и Gi0/2. На SW1 выполнены команды:\n\n```\nSW1(config)#interface gigabitEthernet 0/1\nSW1(config-if)#switchport mode trunk\nSW1(config-if)#channel-group 1 mode on\nCreating a port-channel interface Port-channel 1\nSW1(config-if)#exit\nSW1(config)#interface gigabitEthernet 0/2\nSW1(config-if)#switchport mode trunk\nSW1(config-if)#channel-group 1 mode on\nSW1(config-if)#exit\nSW1(config)#interface port-channel 1\nSW1(config-if)#switchport mode trunk\nSW1(config-if)#end\nSW1#\n```\n\nНа SW2:\n\n```\nSW2(config)#interface gigabitEthernet 0/1\nSW2(config-if)#switchport mode trunk\nSW2(config-if)#channel-group 1 mode desirable\nCreating a port-channel interface Port-channel 1\nSW2(config-if)#exit\nSW2(config)#interface gigabitEthernet 0/2\nSW2(config-if)#switchport mode trunk\nSW2(config-if)#channel-group 1 mode desirable\nSW2(config-if)#exit\nSW2(config)#interface port-channel 1\nSW2(config-if)#switchport mode trunk\nSW2(config-if)#end\nSW2#\n```\n\nКакое утверждение описывает эффект после выполнения команд на SW1 и SW2?"
         },
         {
             "questionId": "q13",
@@ -471,7 +471,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/6.png) Посмотрите на изображение. Сетевой администратор настраивает EtherChannel между двумя коммутаторами, SW1 и SW2. Тем не менее этот канал не может включиться. Какое изменение конфигурации позволит устранить проблему?"
+            "question": "Сетевой администратор настраивает EtherChannel между двумя коммутаторами, SW1 и SW2, соединенными двумя каналами между портами Gi0/1 и Gi0/2. Фрагменты текущей конфигурации SW1:\n\n```\nSW1#show running-config\n…\ninterface Port-channel1\n switchport mode trunk\n!\ninterface GigabitEthernet0/1\n switchport mode trunk\n channel-group 1 mode auto\n!\ninterface GigabitEthernet0/2\n switchport mode trunk\n channel-group 1 mode auto\n!\n…\n```\n\nи SW2:\n\n```\nSW2#show running-config\n…\ninterface Port-channel1\n switchport mode trunk\n!\ninterface GigabitEthernet0/1\n switchport mode trunk\n channel-group 1 mode active\n!\ninterface GigabitEthernet0/2\n switchport mode trunk\n channel-group 1 mode active\n!\n…\n```\n\nТем не менее этот канал не может включиться. Какое изменение конфигурации позволит устранить проблему?"
         },
         {
             "questionId": "q14",
@@ -657,7 +657,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/7.png) Посмотрите на изображение. Сетевой администратор ввел команду `show etherchannel summary` на коммутаторе S1. Какой вывод можно сделать?"
+            "question": "![](./assets/7.svg) Посмотрите на изображение. Сетевой администратор ввел команду `show etherchannel summary` на коммутаторе S1. Какой вывод можно сделать?"
         },
         {
             "questionId": "q20",
@@ -799,7 +799,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/9.png) Посмотрите на рисунок. При какой технологии коммутации каждый канал коммутатора уровня 3 будет агрегированным, чтобы обеспечить большую пропускную способность между каждым коммутатором 2-го уровня и коммутатором 3-го уровня?"
+            "question": "Каждый из трех коммутаторов 2-го уровня подключен к коммутатору 3-го уровня двумя параллельными каналами. При какой технологии коммутации каждый канал коммутатора уровня 3 будет агрегированным, чтобы обеспечить большую пропускную способность между каждым коммутатором 2-го уровня и коммутатором 3-го уровня?"
         },
         {
             "questionId": "q24",
@@ -830,7 +830,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/10.png) Посмотрите на рисунок. Администратор хочет сформировать EtherChannel между двумя коммутаторами, используя протокол агрегации портов (PAgP). Какой режим нужно настроить на коммутаторе S2 для создания EtherChannel, если на коммутаторе S1 настроен автоматический (auto) режим?"
+            "question": "Коммутаторы S1 и S2 соединены двумя каналами. Администратор хочет сформировать EtherChannel между этими коммутаторами, используя протокол агрегации портов (PAgP). Какой режим нужно настроить на коммутаторе S2 для создания EtherChannel, если на коммутаторе S1 настроен автоматический (auto) режим?"
         },
         {
             "questionId": "q25",
