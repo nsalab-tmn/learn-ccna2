@@ -111,13 +111,16 @@ R1#
 Команда **show cdp neighbors** предоставляет список напрямую подключенных устройств. Команда **show cdp neighbors detail** выполняет проверку соединения второго уровня (и, как следствие, первого уровня). Например, если соседнее устройство указано в выходных данных команды, но эхо-запрос к нему не может быть выполнен, следует искать проблему в адресации третьего уровня.
 
 ```
-R1# show cdp neighbors
+R1#show cdp neighbors
 Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
                   S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone,
                   D - Remote, C - CVTA, M - Two-port Mac Relay
-Device ID Local Intrfce Holdtme Capability Platform Port ID
-Switch Gig 0/0/1 129 S I WS-C3560- Fas 0/5
-R2 Ser 0/1/0 156 R S I ISR4221/K Ser 0/1/0
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+S1               Gig 0/0/0         150                S I NS01      Gig 0/1
+Switch           Gig 0/0/1         150                S I NS03      Fas 0/5
+R2               Ser 0/1/0         150            R B S I NR05      Ser 0/1/0
+
 Total cdp entries displayed : 3
 R1#
 ```

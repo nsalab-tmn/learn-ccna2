@@ -136,36 +136,36 @@ R1#
 **show interfaces**
 
 ```
-R1# show interfaces gigabitEthernet 0/0/0
+R1#show interfaces gigabitEthernet 0/0/0
 GigabitEthernet0/0/0 is up, line protocol is up
-  Hardware is ISR4321-2x1GE, address is a0e0.af0d.e140 (bia a0e0.af0d.e140)
+  Hardware is Gigabit Ethernet, address is 00d0.e72c.7a01 (bia 00d0.e72c.7a01)
   Internet address is 10.0.1.1/24
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec,
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec,
      reliability 255/255, txload 1/255, rxload 1/255
   Encapsulation ARPA, loopback not set
-  Keepalive not supported
-  Full Duplex, 100Mbps, link type is auto, media type is RJ45
-  output flow-control is off, input flow-control is off
+  Keepalive set (10 sec)
+  Full Duplex, 1Gbps, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
   ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:00, output 00:00:06, output hang never
-  Last clearing of show interface counters never
-  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
-  5 minute input rate 2000 bits/sec, 1 packets/sec
+  5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     57793 packets input, 10528767 bytes, 0 no buffer
-     Received 19711 broadcasts (0 IP multicasts)
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
      0 runts, 0 giants, 0 throttles
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 36766 multicast, 0 pause input
-     10350 packets output, 1280030 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
      0 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
      0 lost carrier, 0 no carrier, 0 pause output
      0 output buffer failures, 0 output buffers swapped out
-R1# 
+R1#
 ```
 
 **show ip interface**
