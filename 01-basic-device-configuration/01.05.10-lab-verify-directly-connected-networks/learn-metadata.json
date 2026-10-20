@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,32 +34,32 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Какой шлюз является шлюзом «последней надежды»?",
+                "title": "1. Какой адрес указан в выводе как шлюз последней надежды (Gateway of last resort)?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Что такое Circuit ID, отображаемый на выводе?",
+                "title": "2. Какие описания заданы на интерфейсах маршрутизатора R1?",
                 "placeholder": "Enter your answer here"
             },
             "q_3": {
                 "type": "string",
-                "title": "3. Что такое настройка дуплекса, скорость и тип среды?",
+                "title": "3. Каковы режим дуплекса, скорость и тип среды интерфейса G0/0/0 маршрутизатора R1?",
                 "placeholder": "Enter your answer here"
             },
             "q_4": {
                 "type": "string",
-                "title": "4. Каково состояние настроенных интерфейсов?",
+                "title": "4. В каком состоянии находятся интерфейсы маршрутизатора R2, которым назначены адреса?",
                 "placeholder": "Enter your answer here"
             },
             "q_5": {
                 "type": "string",
-                "title": "5. Какой правильный адрес должен быть установлен на интерфейсе.",
+                "title": "5. Какой глобальный IPv6-адрес должен быть назначен интерфейсу G0/0/1 маршрутизатора R2?",
                 "placeholder": "Enter your answer here"
             },
             "q_6": {
                 "type": "string",
-                "title": "6. Сколько адресов настроено на каждом интерфейсе Gigabit?",
+                "title": "6. Сколько IPv6-адресов настроено на каждом интерфейсе GigabitEthernet маршрутизатора R2?",
                 "placeholder": "Enter your answer here"
             }
         }

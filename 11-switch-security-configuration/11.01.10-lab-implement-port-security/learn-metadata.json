@@ -8,32 +8,25 @@
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    },
     "assessment": {
-        "$ref": "./assessment.json"
-    },
-    "deploy": {
-        "$ref": "./deploy"
+        "local": {
+            "$ref": "./assessment"
+        }
     },
     "answerSchema": {
         "type": "object",
@@ -41,12 +34,12 @@
         "properties": {
             "q_1": {
                 "type": "string",
-                "title": "1. Сколько нарушений произошло?",
+                "title": "1. Сколько нарушений безопасности зафиксировано на порту F0/2?",
                 "placeholder": "Enter your answer here"
             },
             "q_2": {
                 "type": "string",
-                "title": "2. Почему узел **PC2** может отправлять эхо-запросы на **PC1**, а **постороннее подключение** не может?",
+                "title": "2. Почему компьютер PC2 получает ответы на эхо-запросы от PC1 через порт F0/2, а ноутбук Rogue-Laptop на том же порту — нет?",
                 "placeholder": "Enter your answer here"
             }
         }

@@ -5305,39 +5305,60 @@
   },
   {
    "id": "ccna2-zxfbh6x",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "1.1.3"
    },
-   "out": {
-    "path": "01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/assets/1.1.3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5464:11562",
+    "page": "CCNA2 · 01 basic-device-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/assets/1.1.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.1.3.png"
+   }
   },
   {
    "id": "ccna2-hogtbh5",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "1.3.1"
    },
-   "out": {
-    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5464:11866",
+    "page": "CCNA2 · 01 basic-device-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.3.1.png"
+   }
   },
   {
    "id": "ccna2-sgwsmzp",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "1.3.2"
    },
-   "out": {
-    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5464:12175",
+    "page": "CCNA2 · 01 basic-device-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.3.2.png"
+   }
   },
   {
    "id": "ccna2-24ydbhg",
@@ -5353,27 +5374,41 @@
   },
   {
    "id": "ccna2-vzvxiad",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "8.1.1-1"
    },
-   "out": {
-    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5464:8031",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.1.1-1.png"
+   }
   },
   {
    "id": "ccna2-22bg3na",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "8.1.1-2"
    },
-   "out": {
-    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5464:8160",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.1.1-2.png"
+   }
   },
   {
    "id": "ccna2-ohmgjha",
@@ -5389,39 +5424,41 @@
   },
   {
    "id": "ccna2-rqnt64r",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.2.2"
    },
-   "out": {
-    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5464:10857",
+    "page": "CCNA2 · 10 lan-security-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.2.2.png"
+   }
   },
   {
    "id": "ccna2-xcipdwf",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "10.5.10"
    },
-   "out": {
-    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.10.png",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna2-espzyao",
-   "kind": "native",
-   "display": {
-    "key": "12.1.1"
+   "figma": {
+    "nodeId": "5464:10905",
+    "page": "CCNA2 · 10 lan-security-concepts"
    },
    "out": {
-    "path": "12-wlan-concepts/12.01-introduction-to-wireless/assets/12.1.1.jpg",
-    "format": "native"
+    "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.10.svg",
+    "format": "svg"
    },
-   "status": "manual"
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.5.10.png"
+   }
   },
   {
    "id": "ccna2-ndskmzn",
@@ -5443,18 +5480,6 @@
    },
    "out": {
     "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.3.jpg",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna2-wrs5sh3",
-   "kind": "native",
-   "display": {
-    "key": "12.2.4"
-   },
-   "out": {
-    "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.4.png",
     "format": "native"
    },
    "status": "manual"
@@ -5605,15 +5630,22 @@
   },
   {
    "id": "ccna2-x2rrjlr",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.4-5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-5.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5431:8443",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.4-5.jpeg"
+   }
   },
   {
    "id": "ccna2-tvtxnq4",

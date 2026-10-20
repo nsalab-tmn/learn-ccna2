@@ -1,9 +1,10 @@
 {
     "title": "Защищенный удаленный доступ",
-    "materialType": "lecture",
+    "shortName": "ccna2.basic-device-configuration.secure-remote-access",
+    "type": "scored-lecture",
     "description": "Что такое SSH и чем он отличается от Telnet? Как настроить SSH для управления коммутатором?",
     "difficulty": 3,
-    "duration": "PT0H8M",
+    "duration": "PT0H14M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,146 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.basic-device-configuration.secure-remote-access",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Distinguish Telnet from SSH by TCP port and encryption, state the trade-off of the RSA modulus length, and choose the commands that create the RSA key pair, restrict vty lines to SSH and display the SSH version and settings."
+        },
+        "requires": [
+            "ksa.ccna2.basic-device-configuration.configure-a-switch-with-initial-settings"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): Telnet and SSH ports and encryption, RSA modulus length, crypto key generate rsa, transport input ssh, show ip ssh.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какое утверждение о протоколах Telnet и SSH верно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Telnet использует TCP-порт 23 и передает имя пользователя и пароль в незашифрованном виде",
+                    "correct": true
+                },
+                {
+                    "answer": "SSH использует TCP-порт 23 и шифрует только пароль",
+                    "correct": false,
+                    "comment": "SSH использует TCP-порт 22 и шифрует и данные аутентификации, и все данные, которые передаются между устройствами. Порт 23 использует Telnet."
+                },
+                {
+                    "answer": "Telnet использует TCP-порт 22 и шифрует передаваемые данные",
+                    "correct": false,
+                    "comment": "Telnet использует TCP-порт 23 и ничего не шифрует: данные, имя пользователя и пароль передаются в открытом виде. Порт 22 и шифрование — свойства SSH."
+                },
+                {
+                    "answer": "SSH шифрует имя пользователя и пароль, а данные сеанса передает в открытом виде",
+                    "correct": false,
+                    "comment": "SSH шифрует и данные аутентификации, и данные, которые передаются между устройствами. В открытом виде все передает Telnet."
+                }
+            ]
+        },
+        {
+            "question": "При создании пары ключей RSA администратор выбирает длину модуля. Что верно в отношении этого выбора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Более длинный модуль безопаснее, но его создание и использование занимает больше времени",
+                    "correct": true
+                },
+                {
+                    "answer": "Более короткий модуль безопаснее, потому что ключи создаются быстрее",
+                    "correct": false,
+                    "comment": "Скорость создания не делает ключ надежнее. Более длинный модуль безопаснее, хотя его создание и использование занимает больше времени."
+                },
+                {
+                    "answer": "Длина модуля влияет только на скорость, но не на безопасность",
+                    "correct": false,
+                    "comment": "Длина модуля влияет на безопасность: более длинный модуль безопаснее, хотя его создание и использование занимает больше времени."
+                },
+                {
+                    "answer": "Длину модуля задает команда ip ssh version 2",
+                    "correct": false,
+                    "comment": "Команда ip ssh version 2 включает вторую версию SSH. Длину модуля запрашивает команда crypto key generate rsa, и чем длиннее модуль, тем он безопаснее, хотя создание ключей и шифрование при этом занимают больше времени."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда режима глобальной конфигурации включает на коммутаторе сервер SSH и создает пару ключей RSA?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "crypto key generate rsa",
+                    "correct": true
+                },
+                {
+                    "answer": "crypto key zeroize rsa",
+                    "correct": false,
+                    "comment": "Эта команда удаляет пару ключей RSA, после чего сервер SSH автоматически отключается. Команда crypto key generate rsa включает сервер SSH и создает ключи."
+                },
+                {
+                    "answer": "ip ssh version 2",
+                    "correct": false,
+                    "comment": "Эта команда выбирает вторую версию SSH, но не создает ключи. Команда crypto key generate rsa включает сервер SSH и создает ключи."
+                },
+                {
+                    "answer": "ip domain-name nsalab.local",
+                    "correct": false,
+                    "comment": "Эта команда задает имя IP-домена — шаг перед созданием ключей. Команда crypto key generate rsa включает сервер SSH и создает ключи."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда режима конфигурации линии разрешает на линиях vty только подключения SSH и запрещает остальные, например Telnet?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "transport input ssh",
+                    "correct": true
+                },
+                {
+                    "answer": "login local",
+                    "correct": false,
+                    "comment": "Команда login local включает локальную аутентификацию по базе имен пользователей, но не ограничивает протоколы. Команда transport input ssh разрешает только подключения SSH."
+                },
+                {
+                    "answer": "line vty 0 15",
+                    "correct": false,
+                    "comment": "Эта команда только переводит в режим конфигурации линий vty с 0 по 15. Команда transport input ssh разрешает только подключения SSH."
+                },
+                {
+                    "answer": "username admin secret netlab",
+                    "correct": false,
+                    "comment": "Эта команда режима глобальной конфигурации создает учетную запись для локальной аутентификации. Команда transport input ssh разрешает только подключения SSH."
+                }
+            ]
+        },
+        {
+            "question": "Администратор хочет узнать, какая версия SSH включена на коммутаторе, настроенном как сервер SSH, и каковы параметры аутентификации. Какую команду он использует?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "show ip ssh",
+                    "correct": true
+                },
+                {
+                    "answer": "show ssh",
+                    "correct": false,
+                    "comment": "Команда show ssh показывает текущие подключения SSH к устройству. Версию и настройки SSH показывает команда show ip ssh."
+                },
+                {
+                    "answer": "show version",
+                    "correct": false,
+                    "comment": "Команда show version показывает версию работающей ОС, а не настройки SSH. Версию и настройки SSH показывает команда show ip ssh."
+                }
+            ]
+        }
+    ]
 }

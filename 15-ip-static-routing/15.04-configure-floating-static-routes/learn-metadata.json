@@ -1,9 +1,10 @@
 {
     "title": "Настройка плавающих статических маршрутов",
-    "materialType": "lecture",
+    "shortName": "ccna2.ip-static-routing.configure-floating-static-routes",
+    "type": "scored-lecture",
     "description": "Что такое \"плавающий\" статический маршрут и для чего он нужен? Как проверить его работу?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,138 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.ip-static-routing.configure-floating-static-routes",
+            "kind": "K",
+            "bloom": "apply",
+            "objective": "Build floating static route commands by choosing an administrative distance higher than that of the primary route (static default 1, EIGRP 90), and explain why a floating route stays out of the routing table while the primary path works and how to confirm it in the running configuration."
+        },
+        "requires": [
+            "ksa.ccna2.ip-static-routing.static-routes",
+            "ksa.ccna2.ip-static-routing.configure-ip-default-static-routes",
+            "ksa.ccna2.routing-concepts.ip-routing-table"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "apply",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): primary and floating default routes, administrative distance of a floating route, default distance of a static route, verifying a floating route.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "R1 должен отправлять трафик по умолчанию через R2 (адрес 172.16.2.2), а канал к R3 (адрес 10.10.10.2) использовать только как резервный. Какие команды нужно ввести на R1?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip route 0.0.0.0 0.0.0.0 172.16.2.2 и ip route 0.0.0.0 0.0.0.0 10.10.10.2 5",
+                    "correct": true
+                },
+                {
+                    "answer": "ip route 0.0.0.0 0.0.0.0 172.16.2.2 5 и ip route 0.0.0.0 0.0.0.0 10.10.10.2",
+                    "correct": false,
+                    "comment": "Здесь большее административное расстояние получил маршрут через R2, поэтому основным станет путь через R3. Плавающим должен быть маршрут к R3: ip route 0.0.0.0 0.0.0.0 10.10.10.2 5."
+                },
+                {
+                    "answer": "ip route 0.0.0.0 0.0.0.0 172.16.2.2 и ip route 0.0.0.0 0.0.0.0 10.10.10.2",
+                    "correct": false,
+                    "comment": "Без аргумента distance оба маршрута получают административное расстояние 1, и маршрут к R3 не становится плавающим. Резервному маршруту задают большее значение: ip route 0.0.0.0 0.0.0.0 10.10.10.2 5."
+                }
+            ]
+        },
+        {
+            "question": "Основной путь к локальной сети головного офиса маршрутизатор филиала получает по протоколу EIGRP. Какое административное расстояние можно задать плавающему статическому маршруту, чтобы он служил резервным?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "95",
+                    "correct": true
+                },
+                {
+                    "answer": "1 (значение по умолчанию)",
+                    "correct": false,
+                    "comment": "Статический маршрут с расстоянием 1 предпочтительнее маршрута EIGRP с расстоянием 90 и вытеснит его. Плавающему маршруту нужно значение больше 90, например 95."
+                },
+                {
+                    "answer": "5",
+                    "correct": false,
+                    "comment": "Значение 5 меньше административного расстояния EIGRP (90), поэтому статический маршрут станет основным. Плавающему маршруту нужно значение больше 90, например 95."
+                },
+                {
+                    "answer": "90",
+                    "correct": false,
+                    "comment": "Значение 90 лишь равно административному расстоянию EIGRP, а плавающему маршруту нужно большее: 91 или больше, например 95."
+                }
+            ]
+        },
+        {
+            "question": "Почему плавающий статический маршрут отсутствует в таблице маршрутизации, пока работает основной путь?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Его административное расстояние больше, чем у основного маршрута, а из нескольких путей маршрутизатор выбирает путь с наименьшим административным расстоянием",
+                    "correct": true
+                },
+                {
+                    "answer": "Плавающий маршрут удаляется из текущей конфигурации, пока основной путь работает",
+                    "correct": false,
+                    "comment": "Плавающий маршрут остается в текущей конфигурации, это видно в выводе show run. В таблицу маршрутизации он не попадает, потому что его административное расстояние больше, чем у основного маршрута."
+                },
+                {
+                    "answer": "У плавающего маршрута метрика больше, чем у основного",
+                    "correct": false,
+                    "comment": "Плавающий маршрут отличается административным расстоянием, а не метрикой. Его административное расстояние больше, чем у основного маршрута, поэтому маршрутизатор выбирает основной путь."
+                }
+            ]
+        },
+        {
+            "question": "Какое административное расстояние получает статический маршрут, если аргумент distance не задан?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "1",
+                    "correct": true
+                },
+                {
+                    "answer": "90",
+                    "correct": false,
+                    "comment": "90 — административное расстояние EIGRP. По умолчанию у статического маршрута значение 1, поэтому он предпочтительнее маршрутов протоколов динамической маршрутизации."
+                },
+                {
+                    "answer": "110",
+                    "correct": false,
+                    "comment": "110 — административное расстояние OSPF. По умолчанию у статического маршрута значение 1, поэтому он предпочтительнее маршрутов протоколов динамической маршрутизации."
+                },
+                {
+                    "answer": "115",
+                    "correct": false,
+                    "comment": "115 — административное расстояние IS-IS. По умолчанию у статического маршрута значение 1, поэтому он предпочтительнее маршрутов протоколов динамической маршрутизации."
+                }
+            ]
+        },
+        {
+            "question": "Основной путь работает, и плавающего статического маршрута IPv6 нет в таблице маршрутизации. Как убедиться, что этот маршрут все же настроен?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Найти его в текущей конфигурации командой show run | include ipv6 route",
+                    "correct": true
+                },
+                {
+                    "answer": "Выполнить команду show ipv6 route static",
+                    "correct": false,
+                    "comment": "Эта команда показывает только маршруты из таблицы маршрутизации, а плавающего маршрута там нет, пока работает основной путь. Его ищут в текущей конфигурации командой show run | include ipv6 route."
+                },
+                {
+                    "answer": "Выполнить команду show ipv6 interface brief",
+                    "correct": false,
+                    "comment": "Эта команда показывает состояние и адреса интерфейсов, а не статические маршруты. Плавающий маршрут ищут в текущей конфигурации командой show run | include ipv6 route."
+                }
+            ]
+        }
+    ]
 }

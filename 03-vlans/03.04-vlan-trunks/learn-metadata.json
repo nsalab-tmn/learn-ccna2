@@ -1,9 +1,10 @@
 {
     "title": "Конфигурация магистральных каналов",
-    "materialType": "lecture",
+    "shortName": "ccna2.vlans.vlan-trunks",
+    "type": "scored-lecture",
     "description": "Как настроить магистральный канал на коммутаторе и как проверить его работу?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,147 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.vlans.vlan-trunks",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe what a VLAN trunk carries, choose the command that sets a trunk's native VLAN, state the recommended native-VLAN setup, predict the effect of resetting trunk settings, and read the allowed VLANs from show interfaces switchport output."
+        },
+        "requires": [
+            "ksa.ccna2.vlans.vlans-in-a-multi-switched-environment",
+            "ksa.ccna2.vlans.vlan-configuration"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): what a trunk carries, setting the native VLAN, native VLAN recommendations, resetting a trunk, allowed VLANs in show interfaces switchport.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Что такое магистральный канал VLAN (trunk)?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Канал второго уровня между двумя коммутаторами, который несет трафик всех VLAN, если список разрешенных VLAN не ограничен",
+                    "correct": true
+                },
+                {
+                    "answer": "Порт доступа, который принадлежит одной VLAN",
+                    "correct": false,
+                    "comment": "Порт доступа передает трафик одной VLAN. Магистральный канал — канал второго уровня между двумя коммутаторами, который несет трафик всех VLAN, если список разрешенных VLAN не ограничен."
+                },
+                {
+                    "answer": "Канал, по которому передается только трафик собственной VLAN",
+                    "correct": false,
+                    "comment": "Магистральный канал несет трафик всех VLAN, если список разрешенных VLAN не ограничен; собственная VLAN — лишь одна из них."
+                },
+                {
+                    "answer": "Канал третьего уровня между двумя маршрутизаторами",
+                    "correct": false,
+                    "comment": "Магистральный канал — канал второго уровня между двумя коммутаторами, который несет трафик всех VLAN, если список разрешенных VLAN не ограничен."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда режима конфигурации интерфейса назначает VLAN 99 собственной VLAN (native VLAN) магистрального канала?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "switchport trunk native vlan 99",
+                    "correct": true
+                },
+                {
+                    "answer": "switchport trunk allowed vlan 99",
+                    "correct": false,
+                    "comment": "Эта команда задает список VLAN, разрешенных в магистральном канале, — здесь только VLAN 99. Собственную VLAN задает команда switchport trunk native vlan 99."
+                },
+                {
+                    "answer": "switchport access vlan 99",
+                    "correct": false,
+                    "comment": "Эта команда назначает порт доступа VLAN 99. Собственную VLAN магистрального канала задает команда switchport trunk native vlan 99."
+                },
+                {
+                    "answer": "switchport mode trunk",
+                    "correct": false,
+                    "comment": "Эта команда переводит порт в постоянный режим магистрального канала, но не меняет собственную VLAN. Ее задает команда switchport trunk native vlan 99."
+                }
+            ]
+        },
+        {
+            "question": "Что рекомендуется при настройке собственной VLAN магистрального канала?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Назначить на обоих концах магистрального канала одну и ту же собственную VLAN, отличную от VLAN 1",
+                    "correct": true
+                },
+                {
+                    "answer": "Оставить на обоих концах VLAN 1 в качестве собственной",
+                    "correct": false,
+                    "comment": "Собственной рекомендуется назначить сеть, отличную от VLAN 1, — одну и ту же на обоих концах магистрального канала."
+                },
+                {
+                    "answer": "Назначить на концах разные собственные VLAN, чтобы разделить нетегированный трафик",
+                    "correct": false,
+                    "comment": "Если конфигурация 802.1Q на концах магистрального канала разная, ОС сообщает об ошибках. На обоих концах настраивают одну и ту же собственную VLAN, отличную от VLAN 1."
+                }
+            ]
+        },
+        {
+            "question": "На магистральном порту F0/1 был ограничен список разрешенных VLAN, а собственной назначена VLAN 99. Администратор вводит команды no switchport trunk allowed vlan и no switchport trunk native vlan. Каким станет магистральный канал?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Он будет разрешать все VLAN и использовать VLAN 1 в качестве собственной",
+                    "correct": true
+                },
+                {
+                    "answer": "Порт перейдет в статический режим доступа в VLAN 1",
+                    "correct": false,
+                    "comment": "В режим доступа порт переводит команда switchport mode access. Эти две команды возвращают магистральному каналу состояние по умолчанию: разрешены все VLAN, собственная — VLAN 1."
+                },
+                {
+                    "answer": "Он будет разрешать все VLAN, а собственной останется VLAN 99",
+                    "correct": false,
+                    "comment": "Команда no switchport trunk native vlan сбрасывает собственную VLAN на VLAN 1. В состоянии по умолчанию магистральный канал разрешает все VLAN и использует VLAN 1 как собственную."
+                },
+                {
+                    "answer": "Он перестанет передавать трафик любых VLAN",
+                    "correct": false,
+                    "comment": "Сброс к состоянию по умолчанию не отключает магистральный канал: он разрешает все VLAN и использует VLAN 1 в качестве собственной."
+                }
+            ]
+        },
+        {
+            "question": "Какая строка вывода команды show interfaces fa0/1 switchport показывает, какие VLAN разрешены в магистральном канале?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Trunking VLANs Enabled",
+                    "correct": true
+                },
+                {
+                    "answer": "Trunking Native Mode VLAN",
+                    "correct": false,
+                    "comment": "Эта строка показывает собственную VLAN магистрального канала. Разрешенные VLAN показывает строка Trunking VLANs Enabled."
+                },
+                {
+                    "answer": "Administrative Mode",
+                    "correct": false,
+                    "comment": "Эта строка показывает административный режим порта, например trunk. Разрешенные VLAN показывает строка Trunking VLANs Enabled."
+                },
+                {
+                    "answer": "Access Mode VLAN",
+                    "correct": false,
+                    "comment": "Эта строка относится к режиму доступа и не показывает разрешенные VLAN магистрального канала. Их показывает строка Trunking VLANs Enabled."
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Статическая и динамическая маршрутизация",
-    "materialType": "lecture",
+    "shortName": "ccna2.routing-concepts.static-and-dynamic-routing",
+    "type": "scored-lecture",
     "description": "Какие протоколы динамической маршрутизации актуальны сегодня? Как динамическая маршрутизация помогает распределять нагрузку на сеть? В каких случаях удобно использовать статическую маршрутизацию?",
     "difficulty": 3,
-    "duration": "PT0H12M",
+    "duration": "PT0H17M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,111 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.routing-concepts.static-and-dynamic-routing",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Compare static and dynamic routing by how they react to topology changes and where each is typically used (stub networks), and name the OSPF metric (cost) and equal-cost load balancing."
+        },
+        "requires": [
+            "ksa.ccna2.routing-concepts.ip-routing-table"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): adaptation to topology changes, routing in stub networks, OSPF cost, equal-cost load balancing.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой тип маршрутизации автоматически адаптируется к изменениям топологии?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "статическая маршрутизация",
+                    "correct": false,
+                    "comment": "Протоколы динамической маршрутизации автоматически адаптируются к изменениям топологии"
+                },
+                {
+                    "answer": "динамическая маршрутизация",
+                    "correct": true
+                },
+                {
+                    "answer": "как статическая, так и динамическая маршрутизация",
+                    "correct": false,
+                    "comment": "Протоколы динамической маршрутизации автоматически адаптируются к изменениям топологии"
+                }
+            ]
+        },
+        {
+            "question": "Какой тип маршрутизации обычно используется в тупиковой сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "статическая маршрутизация",
+                    "correct": true
+                },
+                {
+                    "answer": "динамическая маршрутизация",
+                    "correct": false,
+                    "comment": "Статические маршруты обычно используются для тупиковых сетей"
+                }
+            ]
+        },
+        {
+            "question": "Какая метрика используется OSPF для определения наилучшего пути?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "число переходов",
+                    "correct": false,
+                    "comment": "Чтобы определить оптимальный путь, OSPF использует значение стоимости, рассчитанное на основе полосы пропускания"
+                },
+                {
+                    "answer": "стоимость",
+                    "correct": true
+                },
+                {
+                    "answer": "пропускная способность и задержка",
+                    "correct": false,
+                    "comment": "Чтобы определить оптимальный путь, OSPF использует значение стоимости, рассчитанное на основе полосы пропускания"
+                },
+                {
+                    "answer": "по решению администратора сети",
+                    "correct": false,
+                    "comment": "Чтобы определить оптимальный путь, OSPF использует значение стоимости, рассчитанное на основе полосы пропускания"
+                }
+            ]
+        },
+        {
+            "question": "Какой термин используется для описания маршрутизации по двум или более путям к месту назначения с метриками равной стоимости?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "выбор равного пути",
+                    "correct": false,
+                    "comment": "Балансировка нагрузки с равной стоимостью — это отправка пакетов по двум или более путям к месту назначения с одинаковой метрикой"
+                },
+                {
+                    "answer": "равная пересылка пакетов",
+                    "correct": false,
+                    "comment": "Балансировка нагрузки с равной стоимостью — это отправка пакетов по двум или более путям к месту назначения с одинаковой метрикой"
+                },
+                {
+                    "answer": "балансировка нагрузки с равной стоимостью",
+                    "correct": true
+                },
+                {
+                    "answer": "маршрутизация с равной стоимостью",
+                    "correct": false,
+                    "comment": "Балансировка нагрузки с равной стоимостью — это отправка пакетов по двум или более путям к месту назначения с одинаковой метрикой"
+                }
+            ]
+        }
+    ]
 }

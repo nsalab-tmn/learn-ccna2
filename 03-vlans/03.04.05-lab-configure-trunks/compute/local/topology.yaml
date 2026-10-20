@@ -187,3 +187,321 @@ links:
     device: S3
     port: FastEthernet0/6
   cable: copper
+scenario:
+  pages:
+    - title: "Топология и адресация"
+      body: |
+        | Кабель | Устройство | Порт | Устройство | Порт |
+        |---|---|---|---|---|
+        | Медный | S1 | G0/1 | S2 | G0/1 |
+        | Медный | S1 | G0/2 | S3 | G0/2 |
+        | Медный | PC1 | F0 | S2 | F0/11 |
+        | Медный | PC2 | F0 | S2 | F0/18 |
+        | Медный | PC3 | F0 | S2 | F0/6 |
+        | Медный | PC4 | F0 | S3 | F0/11 |
+        | Медный | PC5 | F0 | S3 | F0/18 |
+        | Медный | PC6 | F0 | S3 | F0/6 |
+
+        | Устройство | Интерфейс | IP-адрес | Маска подсети | VLAN |
+        |---|---|---|---|---|
+        | PC1 | NIC | 172.17.10.21 | 255.255.255.0 | 10 |
+        | PC2 | NIC | 172.17.20.22 | 255.255.255.0 | 20 |
+        | PC3 | NIC | 172.17.30.23 | 255.255.255.0 | 30 |
+        | PC4 | NIC | 172.17.10.24 | 255.255.255.0 | 10 |
+        | PC5 | NIC | 172.17.20.25 | 255.255.255.0 | 20 |
+        | PC6 | NIC | 172.17.30.26 | 255.255.255.0 | 30 |
+    - title: "Начальное состояние"
+      body: |
+        - На компьютерах заданы IP-адреса и маски подсети по таблице адресации. Шлюз по умолчанию не задан: в сети нет маршрутизатора.
+        - На коммутаторах S1, S2 и S3 созданы сети VLAN 10 Faculty/Staff, 20 Students, 30 Guest(Default), 99 Management&Native и 150 VOICE.
+        - На коммутаторах S2 и S3 порты F0/11, F0/18 и F0/6 — порты доступа сетей VLAN 10, 20 и 30. На порту F0/11 коммутатора S3 настроена голосовая сеть VLAN 150.
+        - Порты, которыми соединены коммутаторы (G0/1 и G0/2), имеют параметры по умолчанию.
+
+        **Шаг 1.** Откройте консоль коммутатора S1 и нажмите Enter. Перейдите в привилегированный режим EXEC командой **enable**.
+
+        **Шаг 2.** Выведите список сетей VLAN командой **show vlan brief**. Сети VLAN 10, 20, 30, 99 и 150 созданы, но портов в них нет: все порты коммутатора S1, в том числе G0/1 и G0/2, к которым подключены коммутаторы S2 и S3, назначены сети VLAN 1.
+
+        ```
+        S1>enable
+        S1#show vlan brief
+        VLAN Name                             Status    Ports
+        ---- -------------------------------- --------- -------------------------------
+        1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                        Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                        Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                        Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                        Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                        Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                        Gi0/1, Gi0/2
+        10   Faculty/Staff                    active
+        20   Students                         active
+        30   Guest(Default)                   active
+        99   Management&Native                active
+        150  VOICE                            active
+        1002 fddi-default                     act/unsup
+        1003 token-ring-default               act/unsup
+        1004 fddinet-default                  act/unsup
+        1005 trnet-default                    act/unsup
+        ```
+
+        **Шаг 3.** Откройте консоль коммутатора S2, нажмите Enter и перейдите в привилегированный режим EXEC командой **enable**.
+
+        **Шаг 4.** Убедитесь с помощью команды **show vlan brief**, что порты F0/11, F0/18 и F0/6 назначены сетям VLAN 10, 20 и 30, а порт G0/1, которым коммутатор S2 подключен к коммутатору S1, назначен сети VLAN 1.
+
+        ```
+        S2>enable
+        S2#show vlan brief
+        VLAN Name                             Status    Ports
+        ---- -------------------------------- --------- -------------------------------
+        1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                        Fa0/5, Fa0/7, Fa0/8, Fa0/9
+                                                        Fa0/10, Fa0/12, Fa0/13, Fa0/14
+                                                        Fa0/15, Fa0/16, Fa0/17, Fa0/19
+                                                        Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                        Fa0/24, Gi0/1, Gi0/2
+        10   Faculty/Staff                    active    Fa0/11
+        20   Students                         active    Fa0/18
+        30   Guest(Default)                   active    Fa0/6
+        99   Management&Native                active
+        150  VOICE                            active
+        1002 fddi-default                     act/unsup
+        1003 token-ring-default               act/unsup
+        1004 fddinet-default                  act/unsup
+        1005 trnet-default                    act/unsup
+        ```
+
+        **Шаг 5.** Откройте окно компьютера PC1 и на вкладке «Рабочий стол» запустите приложение «Командная строка». Проверьте связь с компьютером PC4 командой **ping 172.17.10.24**. Эхо-запросы не выполняются, хотя PC1 и PC4 находятся в одной сети VLAN 10: соединения между коммутаторами принадлежат сети VLAN 1, и кадры сети VLAN 10 через них не проходят.
+
+        ```
+        C:\>ping 172.17.10.24
+
+        Pinging 172.17.10.24 with 32 bytes of data:
+
+        Reply from 172.17.10.21: Destination host unreachable.
+        Reply from 172.17.10.21: Destination host unreachable.
+        Reply from 172.17.10.21: Destination host unreachable.
+        Reply from 172.17.10.21: Destination host unreachable.
+
+        Ping statistics for 172.17.10.24:
+            Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+        ```
+    - title: "Настройка магистральных каналов"
+      body: |
+        **Примечание.** Магистральный канал (trunk) передает кадры всех сетей VLAN по одному соединению. Перед отправкой коммутатор добавляет к кадру тег 802.1Q с номером его сети VLAN, а коммутатор на другом конце канала по этому тегу передает кадр в ту же сеть VLAN. Кадры собственной VLAN (native VLAN) передаются без тега. По умолчанию собственная VLAN — сеть VLAN 1, которой назначены все порты коммутатора, поэтому ее заменяют отдельной сетью VLAN, здесь — VLAN 99.
+
+        **Шаг 1.** На коммутаторе S1 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке сразу двух интерфейсов, G0/1 и G0/2, командой **interface range g0/1 - 2**.
+
+        **Шаг 2.** Переведите интерфейсы в режим магистрального канала командой **switchport mode trunk**.
+
+        **Шаг 3.** Сделайте собственной VLAN этих магистральных каналов сеть VLAN 99 командой **switchport trunk native vlan 99** и вернитесь в привилегированный режим EXEC командой **end**. Сразу после этого на консоли появляются сообщения NATIVE_VLAN_MISMATCH: коммутатор S1 обнаружил, что у его соседей S2 и S3 собственная VLAN по-прежнему сеть VLAN 1.
+
+        ```
+        S1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S1(config)#interface range g0/1 - 2
+        S1(config-if-range)#switchport mode trunk
+        S1(config-if-range)#switchport trunk native vlan 99
+        *Mar  1 00:00:50.669: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (99), with S2 GigabitEthernet0/1 (1).
+        *Mar  1 00:00:50.669: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/2 (99), with S3 GigabitEthernet0/2 (1).
+        S1(config-if-range)#end
+        *Mar  1 00:00:53.779: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 4.** В приложении «Командная строка» компьютера PC1 снова проверьте связь с компьютером PC4 командой **ping 172.17.10.24**. Теперь эхо-запросы выполняются успешно, несмотря на несоответствие собственной VLAN.
+
+        ```
+        C:\>ping 172.17.10.24
+
+        Pinging 172.17.10.24 with 32 bytes of data:
+
+        Reply from 172.17.10.24: bytes=32 time=3ms TTL=128
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 172.17.10.24:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
+        ```
+
+        **Шаг 5.** Ответьте на вопрос 1 в форме ответов.
+
+        **Шаг 6.** На коммутаторе S2 выведите сведения о магистральных каналах командой **show interfaces trunk**. Порт G0/1 работает как магистральный канал (столбец «Status» — trunking), а его собственная VLAN — сеть VLAN 1 (столбец «Native vlan»).
+
+        ```
+        S2#show interfaces trunk
+
+        Port        Mode             Encapsulation  Status        Native vlan
+        Gi0/1       auto             n-802.1q       trunking      1
+
+        Port        Vlans allowed on trunk
+        Gi0/1       1-4094
+
+        Port        Vlans allowed and active in management domain
+        Gi0/1       1,10,20,30,99,150,1002-1005
+
+        Port        Vlans in spanning tree forwarding state and not pruned
+        Gi0/1       1,10,20,30,99,150,1002-1005
+        ```
+
+        **Примечание.** Порт G0/1 коммутатора S2 вы не настраивали. Порт коммутатора по умолчанию согласует режим с соседом по протоколу DTP: в режиме auto он становится магистральным каналом, если сосед работает в режиме магистрального канала. Поэтому настройки коммутатора S1 хватило, чтобы канал заработал с обеих сторон.
+
+        **Шаг 7.** Ответьте на вопрос 2 в форме ответов.
+    - title: "Устранение несоответствия собственной VLAN"
+      body: |
+        **Шаг 1.** На коммутаторе S2 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/1 командой **interface g0/1**.
+
+        **Шаг 2.** Сделайте собственной VLAN сеть VLAN 99 командой **switchport trunk native vlan 99** и вернитесь в привилегированный режим EXEC командой **end**.
+
+        **Шаг 3.** Убедитесь с помощью команды **show interfaces trunk**, что собственной VLAN порта G0/1 стала сеть VLAN 99 (столбец «Native vlan»).
+
+        ```
+        S2#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S2(config)#interface g0/1
+        S2(config-if)#switchport trunk native vlan 99
+        S2(config-if)#end
+        *Mar  1 00:01:18.980: %SYS-5-CONFIG_I: Configured from console by console
+        S2#show interfaces trunk
+
+        Port        Mode             Encapsulation  Status        Native vlan
+        Gi0/1       auto             n-802.1q       trunking      99
+
+        Port        Vlans allowed on trunk
+        Gi0/1       1-4094
+
+        Port        Vlans allowed and active in management domain
+        Gi0/1       1,10,20,30,99,150,1002-1005
+
+        Port        Vlans in spanning tree forwarding state and not pruned
+        Gi0/1       1,10,20,30,99,150,1002-1005
+        ```
+
+        **Шаг 4.** Откройте консоль коммутатора S3, нажмите Enter и перейдите в привилегированный режим EXEC командой **enable**.
+
+        **Шаг 5.** Аналогично сделайте сеть VLAN 99 собственной VLAN интерфейса G0/2, которым коммутатор S3 подключен к коммутатору S1: **configure terminal**, **interface g0/2**, **switchport trunk native vlan 99**, **end**.
+
+        **Шаг 6.** Убедитесь с помощью команды **show interfaces trunk**, что собственная VLAN порта G0/2 — сеть VLAN 99.
+
+        ```
+        S3>enable
+        S3#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S3(config)#interface g0/2
+        S3(config-if)#switchport trunk native vlan 99
+        S3(config-if)#end
+        *Mar  1 00:01:39.065: %SYS-5-CONFIG_I: Configured from console by console
+        S3#show interfaces trunk
+
+        Port        Mode             Encapsulation  Status        Native vlan
+        Gi0/2       auto             n-802.1q       trunking      99
+
+        Port        Vlans allowed on trunk
+        Gi0/2       1-4094
+
+        Port        Vlans allowed and active in management domain
+        Gi0/2       1,10,20,30,99,150,1002-1005
+
+        Port        Vlans in spanning tree forwarding state and not pruned
+        Gi0/2       1,10,20,30,99,150,1002-1005
+        ```
+
+        **Примечание.** Собственная VLAN должна совпадать на обоих концах магистрального канала. Кадр без тега, отправленный в собственной VLAN одного коммутатора, другой коммутатор передает в свою собственную VLAN, поэтому при несовпадении нетегированный трафик попадает в чужую сеть VLAN.
+    - title: "Проверка магистральных каналов и связи"
+      body: |
+        **Шаг 1.** На коммутаторе S2 выведите параметры порта G0/1 командой **show interfaces g0/1 switchport**. Порт работает как магистральный канал (строка «Operational Mode: trunk»), хотя его режим остался режимом по умолчанию dynamic auto (строка «Administrative Mode»), а его собственная VLAN — сеть VLAN 99 (строка «Trunking Native Mode VLAN»).
+
+        ```
+        S2#show interfaces g0/1 switchport
+        Name: Gi0/1
+        Switchport: Enabled
+        Administrative Mode: dynamic auto
+        Operational Mode: trunk
+        Administrative Trunking Encapsulation: dot1q
+        Operational Trunking Encapsulation: dot1q
+        Negotiation of Trunking: On
+        Access Mode VLAN: 1 (default)
+        Trunking Native Mode VLAN: 99 (Management&Native)
+        …
+        ```
+
+        **Шаг 2.** Выведите сведения о сетях VLAN командой **show vlan**. Порта G0/1 больше нет в списке портов сети VLAN 1.
+
+        ```
+        S2#show vlan
+        VLAN Name                             Status    Ports
+        ---- -------------------------------- --------- -------------------------------
+        1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                        Fa0/5, Fa0/7, Fa0/8, Fa0/9
+                                                        Fa0/10, Fa0/12, Fa0/13, Fa0/14
+                                                        Fa0/15, Fa0/16, Fa0/17, Fa0/19
+                                                        Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                        Fa0/24, Gi0/2
+        10   Faculty/Staff                    active    Fa0/11
+        20   Students                         active    Fa0/18
+        30   Guest(Default)                   active    Fa0/6
+        99   Management&Native                active
+        150  VOICE                            active
+        1002 fddi-default                     act/unsup
+        1003 token-ring-default               act/unsup
+        1004 fddinet-default                  act/unsup
+        1005 trnet-default                    act/unsup
+        …
+        ```
+
+        **Шаг 3.** Ответьте на вопрос 3 в форме ответов.
+
+        **Шаг 4.** В приложении «Командная строка» компьютера PC1 проверьте связь с компьютером PC4 командой **ping 172.17.10.24**. Эхо-запросы выполняются успешно.
+
+        ```
+        C:\>ping 172.17.10.24
+
+        Pinging 172.17.10.24 with 32 bytes of data:
+
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+        Reply from 172.17.10.24: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 172.17.10.24:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 1ms, Average = 1ms
+        ```
+
+        **Шаг 5.** Откройте окно компьютера PC2 и в приложении «Командная строка» проверьте связь с компьютером PC5 сети VLAN 20 командой **ping 172.17.20.25**. Эхо-запросы выполняются успешно.
+
+        ```
+        C:\>ping 172.17.20.25
+
+        Pinging 172.17.20.25 with 32 bytes of data:
+
+        Reply from 172.17.20.25: bytes=32 time=3ms TTL=128
+        Reply from 172.17.20.25: bytes=32 time=1ms TTL=128
+        Reply from 172.17.20.25: bytes=32 time=1ms TTL=128
+        Reply from 172.17.20.25: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 172.17.20.25:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
+        ```
+
+        **Шаг 6.** Аналогично проверьте связь компьютера PC3 с компьютером PC6 сети VLAN 30 командой **ping 172.17.30.26**. Эхо-запросы выполняются успешно: магистральные каналы передают кадры всех сетей VLAN.
+
+        ```
+        C:\>ping 172.17.30.26
+
+        Pinging 172.17.30.26 with 32 bytes of data:
+
+        Reply from 172.17.30.26: bytes=32 time=3ms TTL=128
+        Reply from 172.17.30.26: bytes=32 time=1ms TTL=128
+        Reply from 172.17.30.26: bytes=32 time=1ms TTL=128
+        Reply from 172.17.30.26: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 172.17.30.26:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
+        ```

@@ -1,9 +1,10 @@
 {
     "title": "Статические маршруты",
-    "materialType": "lecture",
+    "shortName": "ccna2.ip-static-routing.static-routes",
+    "type": "scored-lecture",
     "description": "Какими бывают типы статических маршрутов? Как настроить статический маршрут на маршрутизаторе?",
     "difficulty": 3,
-    "duration": "PT0H10M",
+    "duration": "PT0H15M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,106 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.ip-static-routing.static-routes",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify the ways a static route names its next hop (next-hop IP address, exit interface), when an exit interface alone is typical (point-to-point links), and how an IPv6 static route defines its destination (prefix and prefix length) as distinct from masks."
+        },
+        "requires": [
+            "ksa.ccna2.routing-concepts.ip-routing-table",
+            "ksa.ccna2.routing-concepts.static-and-dynamic-routing"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): next-hop options, exit interface on point-to-point links, IPv6 destination prefix and length.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какие методы можно использовать для идентификации следующего перехода в статическом маршруте? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "интерфейс назначения",
+                    "correct": false,
+                    "comment": "При настройке статического маршрута следующий переход может быть идентифицирован по его IP-адресу и/или по выходному интерфейсу"
+                },
+                {
+                    "answer": "IP-адрес следующего перехода",
+                    "correct": true
+                },
+                {
+                    "answer": "адрес сети назначения",
+                    "correct": false,
+                    "comment": "При настройке статического маршрута следующий переход может быть идентифицирован по его IP-адресу и/или по выходному интерфейсу"
+                },
+                {
+                    "answer": "выходной интерфейс",
+                    "correct": true
+                },
+                {
+                    "answer": "IP-адрес источника",
+                    "correct": false,
+                    "comment": "При настройке статического маршрута следующий переход может быть идентифицирован по его IP-адресу и/или по выходному интерфейсу"
+                }
+            ]
+        },
+        {
+            "question": "Какое утверждение о статическом маршруте IPv4 является истинным?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сеть назначения определяется с помощью сетевого адреса и шаблонной маски",
+                    "correct": false,
+                    "comment": "Сеть назначения в статическом маршруте IPv4 задается сетевым адресом и маской подсети, а не шаблонной маской. Использование только выходного интерфейса является обычным явлением в конфигурации «точка-точка»"
+                },
+                {
+                    "answer": "ключевое слово distance используется для создания полностью заданного статического маршрута",
+                    "correct": false,
+                    "comment": "Сеть назначения в статическом маршруте IPv4 задается сетевым адресом и маской подсети, а не шаблонной маской. Использование только выходного интерфейса является обычным явлением в конфигурации «точка-точка»"
+                },
+                {
+                    "answer": "исходная сеть определяется с помощью сетевого адреса и маски",
+                    "correct": false,
+                    "comment": "Сеть назначения в статическом маршруте IPv4 задается сетевым адресом и маской подсети, а не шаблонной маской. Использование только выходного интерфейса является обычным явлением в конфигурации «точка-точка»"
+                },
+                {
+                    "answer": "использование только выходного интерфейса является обычным явлением в конфигурации «точка-точка»",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Как определяется сеть назначения в статическом маршруте IPv6?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "с использованием префикса и длины префикса IPv6",
+                    "correct": true
+                },
+                {
+                    "answer": "с помощью префикса IPv6 и маски подсети",
+                    "correct": false,
+                    "comment": "Сеть назначения в статическом маршруте IPv6 идентифицируется с помощью префикса и длины префикса IPv6"
+                },
+                {
+                    "answer": "с помощью префикса IPv6 и шаблонной маски",
+                    "correct": false,
+                    "comment": "Сеть назначения в статическом маршруте IPv6 идентифицируется с помощью префикса и длины префикса IPv6"
+                },
+                {
+                    "answer": "только с помощью префикса IPv6",
+                    "correct": false,
+                    "comment": "Сеть назначения в статическом маршруте IPv6 идентифицируется с помощью префикса и длины префикса IPv6"
+                }
+            ]
+        }
+    ]
 }

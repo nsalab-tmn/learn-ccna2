@@ -1,9 +1,10 @@
 {
     "title": "Управление каналами внутри частотного спектра",
-    "materialType": "lecture",
+    "shortName": "ccna2.wlan-concepts.channel-management",
+    "type": "scored-lecture",
     "description": "Как планировать установку точек доступа для беспроводных сетей с точки зрения частотного спектра?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,152 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.wlan-concepts.channel-management",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Match the modulation techniques (DSSS, FHSS, OFDM, OFDMA) to their descriptions and state how many channels the 2.4 GHz band (in Europe) and the 5 GHz band offer."
+        },
+        "requires": [
+            "ksa.ccna2.wlan-concepts.introduction-to-wireless",
+            "ksa.ccna2.wlan-concepts.wlan-operation"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): DSSS, FHSS, OFDMA in 802.11ax, channel counts in the 2.4 GHz and 5 GHz bands.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой из следующих методов модуляции быстро переключает сигнал между частотными каналами?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DSSS",
+                    "correct": false,
+                    "comment": "Радиосигналы путем быстрого переключения несущего сигнала между многими частотными каналами передает FHSS"
+                },
+                {
+                    "answer": "FHSS",
+                    "correct": true
+                },
+                {
+                    "answer": "OFDM",
+                    "correct": false,
+                    "comment": "Радиосигналы путем быстрого переключения несущего сигнала между многими частотными каналами передает FHSS"
+                },
+                {
+                    "answer": "OFDMA",
+                    "correct": false,
+                    "comment": "Радиосигналы путем быстрого переключения несущего сигнала между многими частотными каналами передает FHSS"
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов модуляции распространяет сигнал по большей полосе частот?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DSSS",
+                    "correct": true
+                },
+                {
+                    "answer": "FHSS",
+                    "correct": false,
+                    "comment": "Для распространения сигнала по более широкой полосе частот предназначена DSSS-модуляция"
+                },
+                {
+                    "answer": "OFDM",
+                    "correct": false,
+                    "comment": "Для распространения сигнала по более широкой полосе частот предназначена DSSS-модуляция"
+                },
+                {
+                    "answer": "OFDMA",
+                    "correct": false,
+                    "comment": "Для распространения сигнала по более широкой полосе частот предназначена DSSS-модуляция"
+                }
+            ]
+        },
+        {
+            "question": "Какой из следующих методов модуляции используется в новом стандарте 802.11ax?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DSSS",
+                    "correct": false,
+                    "comment": "Новый стандарт 802.11ax использует разновидность OFDM, называемую ортогональным множественным доступом с частотным разделением (OFDMA)"
+                },
+                {
+                    "answer": "FHSS",
+                    "correct": false,
+                    "comment": "Новый стандарт 802.11ax использует разновидность OFDM, называемую ортогональным множественным доступом с частотным разделением (OFDMA)"
+                },
+                {
+                    "answer": "OFDM",
+                    "correct": false,
+                    "comment": "Новый стандарт 802.11ax использует разновидность OFDM, называемую ортогональным множественным доступом с частотным разделением (OFDMA)"
+                },
+                {
+                    "answer": "OFDMA",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сколько каналов доступно для диапазона 2,4 ГГц в Европе?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "11",
+                    "correct": false,
+                    "comment": "В Европе имеется 13 каналов в диапазоне 2,4 ГГц (11 каналов в Северной Америке и 14 каналов в Японии)"
+                },
+                {
+                    "answer": "13",
+                    "correct": true
+                },
+                {
+                    "answer": "14",
+                    "correct": false,
+                    "comment": "В Европе имеется 13 каналов в диапазоне 2,4 ГГц (11 каналов в Северной Америке и 14 каналов в Японии)"
+                },
+                {
+                    "answer": "24",
+                    "correct": false,
+                    "comment": "В Европе имеется 13 каналов в диапазоне 2,4 ГГц (11 каналов в Северной Америке и 14 каналов в Японии)"
+                }
+            ]
+        },
+        {
+            "question": "Сколько каналов доступно для диапазона 5 ГГц?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "11",
+                    "correct": false,
+                    "comment": "В полосе 5 ГГц 24 канала"
+                },
+                {
+                    "answer": "13",
+                    "correct": false,
+                    "comment": "В полосе 5 ГГц 24 канала"
+                },
+                {
+                    "answer": "14",
+                    "correct": false,
+                    "comment": "В полосе 5 ГГц 24 канала"
+                },
+                {
+                    "answer": "24",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Безопасность оконечных устройств",
-    "materialType": "lecture",
-    "description": "Какие атаки на конечные устройства популярны сегодня? Какие устройства помогают повысить уровень безопасности локальной сети?",
+    "shortName": "ccna2.lan-security-concepts.endpoint-security",
+    "type": "scored-lecture",
+    "description": "Какие атаки на оконечные устройства популярны сегодня? Какие устройства помогают повысить уровень безопасности локальной сети?",
     "difficulty": 3,
-    "duration": "PT0H7M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,128 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.lan-security-concepts.endpoint-security",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify ransomware among current network attacks, name the devices built specifically for network security (VPN-enabled router, NGFW, NAC) as distinct from switches and WLCs, and match the email security and web security gateways to the traffic they monitor."
+        },
+        "requires": [],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): ransomware, network security devices, email and web security gateways.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какая атака шифрует данные на узлах в попытке получить денежные средства от жертвы?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "DDoS-атака",
+                    "correct": false,
+                    "comment": "DDoS — скоординированная атака со многих устройств-зомби, которая ослабляет или прекращает публичный доступ к сайту организации. Данные она не шифрует"
+                },
+                {
+                    "answer": "кража данных",
+                    "correct": false,
+                    "comment": "При краже данных злоумышленник похищает конфиденциальную информацию с серверов или узлов организации, а не шифрует ее ради выкупа"
+                },
+                {
+                    "answer": "переполнение таблицы MAC-адресов",
+                    "correct": false,
+                    "comment": "Переполнение таблицы MAC-адресов — атака на коммутатор: он начинает рассылать кадры через все порты, а злоумышленник их перехватывает. Данные на узлах при этом не шифруются"
+                },
+                {
+                    "answer": "программы-вымогатели",
+                    "correct": true,
+                    "comment": "Программа-вымогатель (например, WannaCry) — вид вредоносного ПО: она шифрует данные на узле и блокирует доступ к ним, пока жертва не заплатит выкуп"
+                }
+            ]
+        },
+        {
+            "question": "Какие устройства специально спроектированы для обеспечения сетевой безопасности? (верны три варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "маршрутизатор с поддержкой VPN",
+                    "correct": true
+                },
+                {
+                    "answer": "NGFW",
+                    "correct": true
+                },
+                {
+                    "answer": "коммутатор",
+                    "correct": false,
+                    "comment": "Маршрутизатор с поддержкой VPN, NGFW и NAC – это сетевые устройства, специально разработанные для обеспечения безопасности. Хотя на коммутаторе и WLC можно настроить функции безопасности, они являются устройствами доступа для оконечных устройств"
+                },
+                {
+                    "answer": "WLC",
+                    "correct": false,
+                    "comment": "Маршрутизатор с поддержкой VPN, NGFW и NAC – это сетевые устройства, специально разработанные для обеспечения безопасности. Хотя на коммутаторе и WLC можно настроить функции безопасности, они являются устройствами доступа для оконечных устройств"
+                },
+                {
+                    "answer": "NAC",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какое устройство отслеживает SMTP-трафик, чтобы блокировать угрозы и шифровать исходящие сообщения для предотвращения потери данных?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "NGFW",
+                    "correct": false,
+                    "comment": "Для мониторинга SMTP-трафика специально разработан шлюз безопасности почты"
+                },
+                {
+                    "answer": "Шлюз безопасности почты",
+                    "correct": true
+                },
+                {
+                    "answer": "NAC",
+                    "correct": false,
+                    "comment": "Для мониторинга SMTP-трафика специально разработан шлюз безопасности почты"
+                },
+                {
+                    "answer": "Шлюз веб-безопасности",
+                    "correct": false,
+                    "comment": "Для мониторинга SMTP-трафика специально разработан шлюз безопасности почты"
+                }
+            ]
+        },
+        {
+            "question": "Какое устройство отслеживает HTTP-трафик, чтобы блокировать доступ к опасным сайтам и шифровать исходящие сообщения?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "NGFW",
+                    "correct": false,
+                    "comment": "Для мониторинга HTTP-трафика специально разработан шлюз веб-безопасности"
+                },
+                {
+                    "answer": "Шлюз безопасности почты",
+                    "correct": false,
+                    "comment": "Для мониторинга HTTP-трафика специально разработан шлюз веб-безопасности"
+                },
+                {
+                    "answer": "NAC",
+                    "correct": false,
+                    "comment": "Для мониторинга HTTP-трафика специально разработан шлюз веб-безопасности"
+                },
+                {
+                    "answer": "Шлюз веб-безопасности",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

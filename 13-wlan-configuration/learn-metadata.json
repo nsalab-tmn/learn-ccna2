@@ -36,13 +36,7 @@
             "$ref": "./13.05.01-lab-wlan-configuration/learn-metadata.json"
         },
         {
-            "$ref": "./13.05.02-lab-wireless-technology-exploration-physical-mode/learn-metadata.json"
-        },
-        {
-            "$ref": "./13.06-summary/learn-metadata.json"
-        },
-        {
-            "$ref": "./13.05.04-quiz/learn-metadata.json"
+            "$ref": "./13.06-exam/learn-metadata.json"
         }
     ]
 }

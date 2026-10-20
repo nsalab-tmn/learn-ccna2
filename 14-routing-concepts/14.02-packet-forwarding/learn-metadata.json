@@ -1,9 +1,10 @@
 {
     "title": "Пересылка пакетов",
-    "materialType": "lecture",
+    "shortName": "ccna2.routing-concepts.packet-forwarding",
+    "type": "scored-lecture",
     "description": "Как происходит процесс принятия решения о пересылке пакетов? Какие существуют способы пересылки пакетов? Что такое CEF как он используется в процессе пересылки пакетов?",
     "difficulty": 3,
-    "duration": "PT0H9M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,81 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.routing-concepts.packet-forwarding",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Determine from the address a router resolves with ARP whether a packet goes to the destination device or to the next-hop router, and name CEF as the default packet-forwarding mechanism, as distinct from process and fast switching."
+        },
+        "requires": [
+            "ksa.ccna2.routing-concepts.path-determination"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): ARP for the destination or the next hop, CEF as the default forwarding mechanism.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Если маршрутизатору необходимо отправить ARP-запрос для адреса назначения IPv4-пакета, это означает, что пакет будет переслан:",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "маршрутизатору следующего перехода",
+                    "correct": false,
+                    "comment": "Если маршрутизатору необходимо отправить ARP-запрос для адреса назначения IPv4-пакета, это означает, что пакет будет перенаправлен на устройство с адресом назначения IPv4-пакета"
+                },
+                {
+                    "answer": "на устройство с адресом назначения IPv4-пакета",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Если маршрутизатору необходимо отправить ARP-запрос для IPv4-адреса в одной из записей маршрута, это означает, что пакет будет переслан:",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "маршрутизатору следующего перехода",
+                    "correct": true
+                },
+                {
+                    "answer": "на устройство с адресом назначения IPv4-пакета",
+                    "correct": false,
+                    "comment": "Если маршрутизатору необходимо отправить ARP-запрос для IPv4-адреса в одной из записей маршрута, это означает, что пакет будет переслан устройству следующего перехода"
+                }
+            ]
+        },
+        {
+            "question": "Какой метод пересылки пакетов используется по умолчанию в ОС маршрутизатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "коммутация процессов",
+                    "correct": false,
+                    "comment": "Метод пересылки пакетов, используемый по умолчанию в ОС маршрутизатора, — технология CEF."
+                },
+                {
+                    "answer": "быстрая коммутация",
+                    "correct": false,
+                    "comment": "Метод пересылки пакетов, используемый по умолчанию в ОС маршрутизатора, — технология CEF."
+                },
+                {
+                    "answer": "CEF",
+                    "correct": true
+                },
+                {
+                    "answer": "коммутация Ethernet",
+                    "correct": false,
+                    "comment": "Метод пересылки пакетов, используемый по умолчанию в ОС маршрутизатора, — технология CEF."
+                }
+            ]
+        }
+    ]
 }

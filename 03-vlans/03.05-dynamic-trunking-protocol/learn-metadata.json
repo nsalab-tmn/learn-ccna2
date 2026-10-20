@@ -1,9 +1,10 @@
 {
     "title": "Протокол динамического согласования магистрали (DTP)",
-    "materialType": "lecture",
+    "shortName": "ccna2.vlans.dynamic-trunking-protocol",
+    "type": "scored-lecture",
     "description": "Для чего нужен протокол DTP? Как происходит согласование магистрального режима на интерфейсе?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H12M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -11,7 +12,104 @@
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
-    }
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.vlans.dynamic-trunking-protocol",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Identify DTP as a proprietary protocol, state its default port mode on many switches, and predict which pairs of DTP modes form a trunk."
+        },
+        "requires": [
+            "ksa.ccna2.vlans.vlan-trunks"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): DTP is proprietary, default dynamic auto mode, mode pairs that form a trunk.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Верно ли утверждение, что DTP — это открытый стандартный протокол IEEE, который определяет автоматическое согласование магистральных каналов коммутатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "DTP — это проприетарный протокол для автоматического согласования магистральных портов коммутатора"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Каков режим порта по умолчанию на многих коммутаторах с поддержкой DTP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "access",
+                    "correct": false,
+                    "comment": "На многих коммутаторах с поддержкой DTP режим порта по умолчанию — dynamic auto"
+                },
+                {
+                    "answer": "trunk",
+                    "correct": false,
+                    "comment": "На многих коммутаторах с поддержкой DTP режим порта по умолчанию — dynamic auto"
+                },
+                {
+                    "answer": "dynamic auto",
+                    "correct": true
+                },
+                {
+                    "answer": "dynamic desirable",
+                    "correct": false,
+                    "comment": "На многих коммутаторах с поддержкой DTP режим порта по умолчанию — dynamic auto"
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что два коммутационных порта на канале, сконфигурированные как dynamic auto, успешно согласуют магистраль?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какие режимы DTP образуют магистраль с интерфейсом, настроенным как dynamic auto? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "access",
+                    "correct": false,
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
+                },
+                {
+                    "answer": "trunk",
+                    "correct": true
+                },
+                {
+                    "answer": "dynamic auto",
+                    "correct": false,
+                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
+                },
+                {
+                    "answer": "dynamic desirable",
+                    "correct": true
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Обеспечение безопасности портов",
-    "materialType": "lecture",
+    "shortName": "ccna2.switch-security-configuration.implement-port-security",
+    "type": "scored-lecture",
     "description": "Зачем нужно защищать неиспользуемые порты и как это правильно делать?",
     "difficulty": 3,
-    "duration": "PT0H21M",
+    "duration": "PT0H27M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,142 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.switch-security-configuration.implement-port-security",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Choose the port security setting for a given need (access mode before enabling the feature, the restrict violation mode, sticky MAC addresses, inactivity aging) and state what happens to a dynamically secured address after a reload."
+        },
+        "requires": [
+            "ksa.ccna2.lan-security-concepts.mac-address-table-attack",
+            "ksa.ccna2.vlans.dynamic-trunking-protocol"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): enabling port security on an access port, violation modes, sticky addresses, aging types, dynamically secured addresses after a reload.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Администратор вводит на порту коммутатора команду switchport port-security, но коммутатор отклоняет ее, сообщая, что порт находится в динамическом режиме. Что нужно сделать, чтобы включить безопасность порта?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Явно перевести порт в режим доступа командой switchport mode access, а затем повторить команду switchport port-security",
+                    "correct": true
+                },
+                {
+                    "answer": "Сначала задать максимальное число MAC-адресов командой switchport port-security maximum 1",
+                    "correct": false,
+                    "comment": "Максимальное число адресов настраивают уже после включения безопасности порта. Команду отклонили потому, что безопасность порта включается только на вручную настроенном порту доступа или магистральном порту. Поэтому порт сначала переводят в режим доступа командой switchport mode access."
+                },
+                {
+                    "answer": "Выключить порт командой shutdown, а затем включить его командой no shutdown",
+                    "correct": false,
+                    "comment": "Перезапуск порта не меняет его динамический режим. Безопасность порта включается только на вручную настроенном порту доступа или магистральном порту, поэтому порт переводят в режим доступа командой switchport mode access."
+                },
+                {
+                    "answer": "Включить на порту изучение адресов командой switchport port-security mac-address sticky",
+                    "correct": false,
+                    "comment": "Это параметр безопасности порта, и его тоже можно задать только после ее включения. Сначала порт нужно явно перевести в режим доступа командой switchport mode access."
+                }
+            ]
+        },
+        {
+            "question": "Какой режим нарушения безопасности порта отбрасывает трафик с неизвестными MAC-адресами источника, отправляет сообщение системного журнала и увеличивает счетчик нарушений, но не выключает порт?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "restrict",
+                    "correct": true
+                },
+                {
+                    "answer": "protect",
+                    "correct": false,
+                    "comment": "Режим protect тоже отбрасывает такой трафик, но не отправляет сообщений системного журнала и не увеличивает счетчик нарушений. Все три действия без выключения порта выполняет режим restrict."
+                },
+                {
+                    "answer": "shutdown",
+                    "correct": false,
+                    "comment": "Режим shutdown, кроме этих действий, сразу переводит порт в состояние отключения по ошибке (error-disabled). Порт продолжает работать в режиме restrict."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда позволяет коммутатору динамически изучать MAC-адреса на защищенном порту и добавлять их в текущую конфигурацию?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "switchport port-security mac-address sticky",
+                    "correct": true
+                },
+                {
+                    "answer": "switchport port-security mac-address aaaa.bbbb.1234",
+                    "correct": false,
+                    "comment": "Эта команда вручную задает один статический защищенный адрес. Динамически изучать адреса и добавлять их в текущую конфигурацию позволяет команда switchport port-security mac-address sticky."
+                },
+                {
+                    "answer": "switchport port-security maximum 2",
+                    "correct": false,
+                    "comment": "Эта команда только ограничивает число разрешенных MAC-адресов на порту. Динамически изучать адреса и добавлять их в текущую конфигурацию позволяет команда switchport port-security mac-address sticky."
+                },
+                {
+                    "answer": "switchport port-security aging type inactivity",
+                    "correct": false,
+                    "comment": "Эта команда задает тип устаревания защищенных адресов. Динамически изучать адреса и добавлять их в текущую конфигурацию позволяет команда switchport port-security mac-address sticky."
+                }
+            ]
+        },
+        {
+            "question": "Защищенные MAC-адреса на порту должны удаляться только тогда, когда от них не было трафика в течение 10 минут. Какую команду нужно ввести вместе с командой switchport port-security aging time 10?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "switchport port-security aging type inactivity",
+                    "correct": true
+                },
+                {
+                    "answer": "switchport port-security aging type absolute",
+                    "correct": false,
+                    "comment": "При абсолютном устаревании защищенные адреса удаляются точно по истечении заданного времени, даже если от них идет трафик. Удалять только неактивные адреса позволяет устаревание по таймеру неактивности: switchport port-security aging type inactivity."
+                },
+                {
+                    "answer": "switchport port-security aging static",
+                    "correct": false,
+                    "comment": "Параметр static включает устаревание для статически настроенных защищенных адресов, но не задает условие неактивности. Нужна команда switchport port-security aging type inactivity."
+                }
+            ]
+        },
+        {
+            "question": "На защищенном порту введена только команда switchport port-security, и коммутатор динамически изучил MAC-адрес подключенного устройства. Что произойдет с этим адресом после перезагрузки коммутатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Адрес не сохранится, потому что он не добавляется в загрузочную конфигурацию, и порт изучит MAC-адрес устройства заново",
+                    "correct": true
+                },
+                {
+                    "answer": "Адрес сохранится, потому что коммутатор автоматически записывает его в загрузочную конфигурацию",
+                    "correct": false,
+                    "comment": "Динамически изученный адрес не добавляется в загрузочную конфигурацию, поэтому после перезагрузки порт изучает его заново. В конфигурацию попадают sticky-адреса, если ввести команду switchport port-security mac-address sticky и сохранить текущую конфигурацию."
+                },
+                {
+                    "answer": "Адрес станет статическим защищенным адресом, настроенным вручную",
+                    "correct": false,
+                    "comment": "Статический защищенный адрес администратор задает сам командой switchport port-security mac-address. Динамически изученный адрес после перезагрузки не сохраняется, и порт изучает его заново."
+                },
+                {
+                    "answer": "Порт перейдет в состояние отключения по ошибке (error-disabled), потому что защищенный адрес потерян",
+                    "correct": false,
+                    "comment": "Порт переходит в это состояние при нарушении безопасности, а не после перезагрузки. После перезагрузки порт просто изучает MAC-адрес устройства заново."
+                }
+            ]
+        }
+    ]
 }

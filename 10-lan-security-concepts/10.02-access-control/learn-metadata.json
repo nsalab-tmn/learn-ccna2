@@ -1,9 +1,10 @@
 {
     "title": "Контроль доступа",
-    "materialType": "lecture",
+    "shortName": "ccna2.lan-security-concepts.access-control",
+    "type": "scored-lecture",
     "description": "Что такое концепция AAA? Чем отличаются друг от друга аутентификация, авторизация и учет?",
     "difficulty": 3,
-    "duration": "PT0H8M",
+    "duration": "PT0H13M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,117 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.lan-security-concepts.access-control",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Match each AAA component (authentication, authorization, accounting) to its function and identify the 802.1X role that relays responses between the client and the authentication server."
+        },
+        "requires": [
+            "ksa.ccna2.lan-security-concepts.endpoint-security",
+            "ksa.ccna2.basic-device-configuration.secure-remote-access"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): authentication, authorization, accounting, the 802.1X authenticator.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какой компонент AAA отвечает за сбор и представление данных об использовании для целей аудита и выставления счетов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "аутентификация",
+                    "correct": false,
+                    "comment": "Сбор данных и формирование отчетов — задача учета AAA"
+                },
+                {
+                    "answer": "авторизация",
+                    "correct": false,
+                    "comment": "Сбор данных и формирование отчетов — задача учета AAA"
+                },
+                {
+                    "answer": "учет",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какой компонент AAA отвечает за контроль того, кому разрешен доступ к сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "аутентификация",
+                    "correct": true
+                },
+                {
+                    "answer": "авторизация",
+                    "correct": false,
+                    "comment": "Кому разрешен доступ к сети, контролирует аутентификация"
+                },
+                {
+                    "answer": "учет",
+                    "correct": false,
+                    "comment": "Кому разрешен доступ к сети, контролирует аутентификация"
+                }
+            ]
+        },
+        {
+            "question": "Какой компонент AAA отвечает за определение того, к каким ресурсам пользователь может получить доступ?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "аутентификация",
+                    "correct": false,
+                    "comment": "К каким ресурсам пользователь имеет доступ, определяет авторизация"
+                },
+                {
+                    "answer": "авторизация",
+                    "correct": true
+                },
+                {
+                    "answer": "учет",
+                    "correct": false,
+                    "comment": "К каким ресурсам пользователь имеет доступ, определяет авторизация"
+                }
+            ]
+        },
+        {
+            "question": "В реализации 802.1X какое устройство отвечает за ретрансляцию ответов?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "запрашивающее устройство",
+                    "correct": false,
+                    "comment": "В 802.1X аутентификатор, который обычно является коммутатором или беспроводной точкой доступа, отвечает за ретрансляцию сообщений между запрашивающим устройством и сервером аутентификации"
+                },
+                {
+                    "answer": "аутентификатор",
+                    "correct": true
+                },
+                {
+                    "answer": "маршрутизатор",
+                    "correct": false,
+                    "comment": "В 802.1X аутентификатор, который обычно является коммутатором или беспроводной точкой доступа, отвечает за ретрансляцию сообщений между запрашивающим устройством и сервером аутентификации"
+                },
+                {
+                    "answer": "сервер аутентификации",
+                    "correct": false,
+                    "comment": "В 802.1X аутентификатор, который обычно является коммутатором или беспроводной точкой доступа, отвечает за ретрансляцию сообщений между запрашивающим устройством и сервером аутентификации"
+                },
+                {
+                    "answer": "клиент",
+                    "correct": false,
+                    "comment": "В 802.1X аутентификатор, который обычно является коммутатором или беспроводной точкой доступа, отвечает за ретрансляцию сообщений между запрашивающим устройством и сервером аутентификации"
+                }
+            ]
+        }
+    ]
 }

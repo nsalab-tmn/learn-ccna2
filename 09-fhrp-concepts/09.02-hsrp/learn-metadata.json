@@ -1,9 +1,10 @@
 {
     "title": "Протокол HSRP",
-    "materialType": "lecture",
+    "shortName": "ccna2.fhrp-concepts.hsrp",
+    "type": "scored-lecture",
     "description": "Как работает протокол HSRP?",
     "difficulty": 3,
-    "duration": "PT0H6M",
+    "duration": "PT0H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,116 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.fhrp-concepts.hsrp",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "State the default HSRP priority, explain that a router with a higher priority takes over the active role only when preemption is enabled, and match HSRP states to their behaviour (the state that starts periodic hellos, the state without the virtual IP address)."
+        },
+        "requires": [
+            "ksa.ccna2.fhrp-concepts.first-hop-redundancy-protocol"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): default HSRP priority, preemption, HSRP states.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Каков приоритет HSRP по умолчанию?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "50",
+                    "correct": false,
+                    "comment": "Приоритет HSRP по умолчанию — 100, диапазон приоритетов — 0-255, маршрутизатор с наивысшим приоритетом HSRP станет активным"
+                },
+                {
+                    "answer": "100",
+                    "correct": true
+                },
+                {
+                    "answer": "150",
+                    "correct": false,
+                    "comment": "Приоритет HSRP по умолчанию — 100, диапазон приоритетов — 0-255, маршрутизатор с наивысшим приоритетом HSRP станет активным"
+                },
+                {
+                    "answer": "255",
+                    "correct": false,
+                    "comment": "Приоритет HSRP по умолчанию — 100, диапазон приоритетов — 0-255, маршрутизатор с наивысшим приоритетом HSRP станет активным"
+                }
+            ]
+        },
+        {
+            "question": "Верно ли утверждение, что если к сети подключается маршрутизатор с более высоким приоритетом HSRP, он перенимает роль активного у существующего устройства, имеющего более низкий приоритет?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "верно",
+                    "correct": false,
+                    "comment": "Активные маршрутизаторы HSRP остаются таковыми, даже если к сети присоединяется другое устройство с более высоким приоритетом"
+                },
+                {
+                    "answer": "неверно",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Во время какого состояния HSRP интерфейс начинает отправлять периодические приветствия?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Initial (начальное)",
+                    "correct": false,
+                    "comment": "HSRP-маршрутизатор начинает отправлять периодические приветствия в состоянии Speak (приветствие)"
+                },
+                {
+                    "answer": "Listen (прослушивание)",
+                    "correct": false,
+                    "comment": "HSRP-маршрутизатор начинает отправлять периодические приветствия в состоянии Speak (приветствие)"
+                },
+                {
+                    "answer": "Speak (приветствие)",
+                    "correct": true
+                },
+                {
+                    "answer": "active (активный)",
+                    "correct": false,
+                    "comment": "HSRP-маршрутизатор начинает отправлять периодические приветствия в состоянии Speak (приветствие)"
+                }
+            ]
+        },
+        {
+            "question": "Что является характеристикой состояния обучения (learn) HSRP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "маршрутизатор не определил виртуальный IP-адрес",
+                    "correct": true
+                },
+                {
+                    "answer": "маршрутизатор знает виртуальный IP-адрес",
+                    "correct": false,
+                    "comment": "В состоянии learn HSRP маршрутизатор еще не определил виртуальный IP-адрес"
+                },
+                {
+                    "answer": "маршрутизатор периодически отправляет сообщения приветствия",
+                    "correct": false,
+                    "comment": "В состоянии learn HSRP маршрутизатор еще не определил виртуальный IP-адрес"
+                },
+                {
+                    "answer": "маршрутизатор активно участвует в процессе выбора активного/резервного устройств",
+                    "correct": false,
+                    "comment": "В состоянии learn HSRP маршрутизатор еще не определил виртуальный IP-адрес"
+                }
+            ]
+        }
+    ]
 }

@@ -1,9 +1,10 @@
 {
     "title": "Автоматическая конфигурация IPv6-адресов без сохранения состояния (SLAAC)",
-    "materialType": "lecture",
+    "shortName": "ccna2.slaac-and-dhcpv6-concepts.slaac",
+    "type": "scored-lecture",
     "description": "Что такео SLAAC в IPv6-сетях? Как генерируется идентификатор IPv6-интерфейса? Как работает обнаружение дублирующихся адресов?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H18M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,150 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.slaac-and-dhcpv6-concepts.slaac",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Describe the SLAAC process: the RS and RA messages a host exchanges with the router, the command that makes a router join the all-routers group ff02::2, the A/O/M flag values for SLAAC only, and DAD as the uniqueness check, as distinct from NS/NA exchanges, ARP and ping."
+        },
+        "requires": [
+            "ksa.ccna2.slaac-and-dhcpv6-concepts.ipv6-global-unicast-address-assignment"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): RS and RA messages, ipv6 unicast-routing, RA flags for SLAAC only, DAD.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Какими сообщениями ICMPv6 узел при SLAAC обменивается с маршрутизатором, чтобы получить префикс и шлюз по умолчанию? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "сообщение «Объявление соседа» (Neighbor Advertisement, NA)",
+                    "correct": false,
+                    "comment": "Сообщения NS и NA служат для разрешения адресов и обнаружения дублирующихся адресов (DAD). Префикс и шлюз по умолчанию узел получает из сообщения RA и может запросить его сообщением RS"
+                },
+                {
+                    "answer": "сообщение «Запрос соседа» (Neighbor Solicitation, NS)",
+                    "correct": false,
+                    "comment": "Сообщения NS и NA служат для разрешения адресов и обнаружения дублирующихся адресов (DAD). Префикс и шлюз по умолчанию узел получает из сообщения RA и может запросить его сообщением RS"
+                },
+                {
+                    "answer": "сообщение «Запрос маршрутизатора» (Router Solicitation, RS)",
+                    "correct": true
+                },
+                {
+                    "answer": "сообщение «Объявление маршрутизатора» (Router Advertisement, RA)",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Какая команда должна быть настроена на маршрутизаторе, чтобы подключить его к многоадресной рассылке IPv6 ff02::2?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip routing",
+                    "correct": false,
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы маршрутизатор присоединился к группе IPv6 all-routers (адрес многоадресной рассылки ff02::2)"
+                },
+                {
+                    "answer": "ipv6 unicast-routing",
+                    "correct": true
+                },
+                {
+                    "answer": "ipv6 address (ipv6-address/prefix-length)",
+                    "correct": false,
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы маршрутизатор присоединился к группе IPv6 all-routers (адрес многоадресной рассылки ff02::2)"
+                },
+                {
+                    "answer": "ipv6 address (ipv6-address) link-local",
+                    "correct": false,
+                    "comment": "Команда глобальной конфигурации ipv6 unicast-routing необходима, чтобы маршрутизатор присоединился к группе IPv6 all-routers (адрес многоадресной рассылки ff02::2)"
+                }
+            ]
+        },
+        {
+            "question": "Какие значения флагов необходимо установить, если узел должен использовать только SLAAC?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "A=1, M=0, O=0",
+                    "correct": true
+                },
+                {
+                    "answer": "A=1, M=1, O=0",
+                    "correct": false,
+                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0"
+                },
+                {
+                    "answer": "A=1, M=0, O=1",
+                    "correct": false,
+                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0"
+                },
+                {
+                    "answer": "A=0, M=1, O=1",
+                    "correct": false,
+                    "comment": "SLAAC устанавливает флаги в A=1, M=0, O=0"
+                }
+            ]
+        },
+        {
+            "question": "Какое сообщение ICMPv6 отправляется узлом в попытке найти сетевой маршрутизатор с поддержкой IPv6 для получения информации об адресации IPv6?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "сообщение «Объявление соседа» (Neighbor Advertisement, NA)",
+                    "correct": false,
+                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор"
+                },
+                {
+                    "answer": "сообщение «Запрос соседа» (Neighbor Solicitation, NS)",
+                    "correct": false,
+                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор"
+                },
+                {
+                    "answer": "сообщение «Запрос маршрутизатора» (Router Solicitation, RS)",
+                    "correct": true
+                },
+                {
+                    "answer": "сообщение «Объявление маршрутизатора» (Router Advertisement, RA)",
+                    "correct": false,
+                    "comment": "Узел отправляет сообщение Router Solicitation (RS) группе IPv6 all-routers, чтобы найти активный маршрутизатор"
+                }
+            ]
+        },
+        {
+            "question": "Какой метод используется узлом для проверки уникальности IPv6-адреса в локальной сети перед назначением его интерфейсу?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "протокол ARP",
+                    "correct": false,
+                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
+                },
+                {
+                    "answer": "DAD",
+                    "correct": true
+                },
+                {
+                    "answer": "PING",
+                    "correct": false,
+                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
+                },
+                {
+                    "answer": "SLAAC",
+                    "correct": false,
+                    "comment": "Узел использует DAD, чтобы убедиться, что IPv6-адрес уникален в локальной сети"
+                }
+            ]
+        }
+    ]
 }

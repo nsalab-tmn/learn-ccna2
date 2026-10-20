@@ -157,3 +157,506 @@ links:
     device: S3
     port: FastEthernet0/2
   cable: copper
+scenario:
+  pages:
+    - title: "Топология и адресация"
+      body: |
+        | Кабель | Устройство | Порт | Устройство | Порт |
+        |---|---|---|---|---|
+        | Медный | S1 | G0/1 | S2 | G0/1 |
+        | Медный | S1 | G0/2 | S3 | G0/2 |
+        | Медный | PC1 | F0 | S2 | F0/1 |
+        | Медный | PC2 | F0 | S2 | F0/12 |
+        | Медный | PC3 | F0 | S2 | F0/20 |
+        | Медный | PC4 | F0 | S3 | F0/20 |
+        | Медный | PC5 | F0 | S3 | F0/11 |
+        | Медный | PC6 | F0 | S3 | F0/2 |
+
+        | Устройство | Интерфейс | IP-адрес | Маска подсети | VLAN |
+        |---|---|---|---|---|
+        | PC1 | NIC | 192.168.10.1 | 255.255.255.0 | 10 |
+        | PC2 | NIC | 192.168.20.1 | 255.255.255.0 | 20 |
+        | PC3 | NIC | 192.168.30.1 | 255.255.255.0 | 30 |
+        | PC4 | NIC | 192.168.30.2 | 255.255.255.0 | 30 |
+        | PC5 | NIC | 192.168.20.2 | 255.255.255.0 | 20 |
+        | PC6 | NIC | 192.168.10.2 | 255.255.255.0 | 10 |
+        | S1 | VLAN 99 | 192.168.99.1 | 255.255.255.0 | 99 |
+        | S2 | VLAN 99 | 192.168.99.2 | 255.255.255.0 | 99 |
+        | S3 | VLAN 99 | 192.168.99.3 | 255.255.255.0 | 99 |
+
+        | VLAN | Имя | Порты коммутаторов S2 и S3 | Сеть |
+        |---|---|---|---|
+        | 10 | Red | F0/1–F0/8 | 192.168.10.0/24 |
+        | 20 | Blue | F0/9–F0/16 | 192.168.20.0/24 |
+        | 30 | Yellow | F0/17–F0/24 | 192.168.30.0/24 |
+    - title: "Начальное состояние"
+      body: |
+        - На компьютерах заданы IP-адреса и маски подсети по таблице адресации. Шлюз по умолчанию не задан: в сети нет маршрутизатора.
+        - На коммутаторах S1, S2 и S3 заданы имя устройства, сети VLAN 99 Management и 999 Native и IP-адрес интерфейса VLAN 99 по таблице адресации. Остальные параметры имеют значения по умолчанию: все порты назначены сети VLAN 1 и работают в режиме dynamic auto протокола DTP.
+
+        **Шаг 1.** Откройте консоль коммутатора S1 и нажмите Enter. Перейдите в привилегированный режим EXEC командой **enable**.
+
+        **Шаг 2.** Выведите список сетей VLAN командой **show vlan brief**. Кроме сетей VLAN по умолчанию, на коммутаторе созданы сети VLAN 99 Management и 999 Native, а все порты назначены сети VLAN 1.
+
+        ```
+        S1>enable
+        S1#show vlan brief
+        VLAN Name                             Status    Ports
+        ---- -------------------------------- --------- -------------------------------
+        1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                        Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                        Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                        Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                        Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                        Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                        Gi0/1, Gi0/2
+        99   Management                       active
+        999  Native                           active
+        1002 fddi-default                     act/unsup
+        1003 token-ring-default               act/unsup
+        1004 fddinet-default                  act/unsup
+        1005 trnet-default                    act/unsup
+        ```
+
+        **Шаг 3.** Аналогично выведите список сетей VLAN на коммутаторах S2 и S3: откройте их консоли, нажмите Enter и перейдите в привилегированный режим EXEC командой **enable**. На них созданы те же сети VLAN.
+
+        **Шаг 4.** Ответьте на вопрос 1 в форме ответов.
+
+        **Шаг 5.** На коммутаторе S1 выведите список магистральных каналов (trunk) командой **show interfaces trunk**. Вывод пуст: порты в режиме dynamic auto сами не предлагают соседу образовать магистральный канал, поэтому между коммутаторами нет ни одного магистрального канала.
+
+        ```
+        S1#show interfaces trunk
+        ```
+    - title: "Создание сетей VLAN"
+      body: |
+        **Шаг 1.** На коммутаторе S2 перейдите в режим глобальной конфигурации командой **configure terminal**.
+
+        **Шаг 2.** Создайте сеть VLAN 10 командой **vlan 10** и присвойте ей имя Red командой **name Red**. Имена сетей VLAN чувствительны к регистру, поэтому вводите их точно так, как они написаны.
+
+        **Шаг 3.** Аналогично создайте сеть VLAN 20 с именем Blue и сеть VLAN 30 с именем Yellow. Вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        S2#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S2(config)#vlan 10
+        S2(config-vlan)#name Red
+        S2(config-vlan)#vlan 20
+        S2(config-vlan)#name Blue
+        S2(config-vlan)#vlan 30
+        S2(config-vlan)#name Yellow
+        S2(config-vlan)#end
+        *Mar  1 00:00:33.565: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 4.** Убедитесь, что сети VLAN 10, 20 и 30 созданы, с помощью команды **show vlan brief**. Новые сети VLAN активны, но портов в них пока нет.
+
+        ```
+        S2#show vlan brief
+        VLAN Name                             Status    Ports
+        ---- -------------------------------- --------- -------------------------------
+        1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                        Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                        Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                        Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                        Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                        Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                        Gi0/1, Gi0/2
+        10   Red                              active
+        20   Blue                             active
+        30   Yellow                           active
+        99   Management                       active
+        999  Native                           active
+        1002 fddi-default                     act/unsup
+        1003 token-ring-default               act/unsup
+        1004 fddinet-default                  act/unsup
+        1005 trnet-default                    act/unsup
+        ```
+
+        **Шаг 5.** Ответьте на вопрос 2 в форме ответов.
+
+        **Шаг 6.** На коммутаторе S3 аналогично создайте те же сети VLAN с теми же именами. Команды те же, что на S2.
+
+        **Шаг 7.** На коммутаторе S1 аналогично создайте те же сети VLAN с теми же именами. Компьютеры к S1 не подключены, но кадры между S2 и S3 проходят через него, а коммутатор не передает кадры сети VLAN, которой у него нет.
+
+        ```
+        S1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S1(config)#vlan 10
+        S1(config-vlan)#name Red
+        S1(config-vlan)#vlan 20
+        S1(config-vlan)#name Blue
+        S1(config-vlan)#vlan 30
+        S1(config-vlan)#name Yellow
+        S1(config-vlan)#end
+        *Mar  1 00:00:45.524: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+    - title: "Назначение портов сетям VLAN"
+      body: |
+        **Шаг 1.** На коммутаторе S2 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке диапазона интерфейсов F0/1–F0/8 командой **interface range f0/1 - 8**.
+
+        **Шаг 2.** Переведите интерфейсы в режим порта доступа командой **switchport mode access** и назначьте их сети VLAN 10 командой **switchport access vlan 10**.
+
+        **Шаг 3.** Аналогично назначьте интерфейсы F0/9–F0/16 (**interface range f0/9 - 16**) сети VLAN 20, а интерфейсы F0/17–F0/24 (**interface range f0/17 - 24**) — сети VLAN 30. Вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        S2#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S2(config)#interface range f0/1 - 8
+        S2(config-if-range)#switchport mode access
+        S2(config-if-range)#switchport access vlan 10
+        S2(config-if-range)#interface range f0/9 - 16
+        S2(config-if-range)#switchport mode access
+        S2(config-if-range)#switchport access vlan 20
+        S2(config-if-range)#interface range f0/17 - 24
+        S2(config-if-range)#switchport mode access
+        S2(config-if-range)#switchport access vlan 30
+        S2(config-if-range)#end
+        *Mar  1 00:00:53.260: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 4.** На коммутаторе S3 аналогично назначьте те же диапазоны интерфейсов тем же сетям VLAN.
+
+        **Шаг 5.** Убедитесь с помощью команды **show vlan brief**, что порты коммутатора S3 перешли в свои сети VLAN. Порты G0/1 и G0/2 остались в сети VLAN 1.
+
+        ```
+        S3#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S3(config)#interface range f0/1 - 8
+        S3(config-if-range)#switchport mode access
+        S3(config-if-range)#switchport access vlan 10
+        S3(config-if-range)#interface range f0/9 - 16
+        S3(config-if-range)#switchport mode access
+        S3(config-if-range)#switchport access vlan 20
+        S3(config-if-range)#interface range f0/17 - 24
+        S3(config-if-range)#switchport mode access
+        S3(config-if-range)#switchport access vlan 30
+        S3(config-if-range)#end
+        *Mar  1 00:01:01.000: %SYS-5-CONFIG_I: Configured from console by console
+        S3#show vlan brief
+        VLAN Name                             Status    Ports
+        ---- -------------------------------- --------- -------------------------------
+        1    default                          active    Gi0/1, Gi0/2
+        10   Red                              active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                        Fa0/5, Fa0/6, Fa0/7, Fa0/8
+        20   Blue                             active    Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                        Fa0/13, Fa0/14, Fa0/15, Fa0/16
+        30   Yellow                           active    Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                        Fa0/21, Fa0/22, Fa0/23, Fa0/24
+        99   Management                       active
+        999  Native                           active
+        1002 fddi-default                     act/unsup
+        1003 token-ring-default               act/unsup
+        1004 fddinet-default                  act/unsup
+        1005 trnet-default                    act/unsup
+        ```
+
+        **Шаг 6.** Откройте окно компьютера PC1 и на вкладке «Рабочий стол» запустите приложение «Командная строка». Проверьте связь с компьютером PC6 командой **ping 192.168.10.2**. Эхо-запросы не выполняются, хотя PC1 и PC6 теперь находятся в одной сети VLAN 10.
+
+        ```
+        C:\>ping 192.168.10.2
+
+        Pinging 192.168.10.2 with 32 bytes of data:
+
+        Reply from 192.168.10.1: Destination host unreachable.
+        Reply from 192.168.10.1: Destination host unreachable.
+        Reply from 192.168.10.1: Destination host unreachable.
+        Reply from 192.168.10.1: Destination host unreachable.
+
+        Ping statistics for 192.168.10.2:
+            Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+        ```
+
+        **Шаг 7.** Ответьте на вопрос 3 в форме ответов.
+    - title: "Настройка магистральных каналов"
+      body: |
+        **Примечание.** О режиме порта соседние коммутаторы договариваются по протоколу динамического согласования магистральных каналов (DTP). Порт в режиме dynamic desirable сам предлагает соседу образовать магистральный канал, порт в режиме dynamic auto только соглашается на предложение, а порт в режиме trunk работает как магистральный канал при любом режиме соседа.
+
+        **Шаг 1.** На коммутаторе S1 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/1 командой **interface g0/1**.
+
+        **Шаг 2.** Переведите порт в режим dynamic desirable командой **switchport mode dynamic desirable** и вернитесь в привилегированный режим EXEC командой **end**. Сообщение о том, что интерфейс Vlan99 перешел в состояние up, означает, что у сети VLAN 99 на коммутаторе S1 появился работающий порт.
+
+        ```
+        S1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S1(config)#interface g0/1
+        S1(config-if)#switchport mode dynamic desirable
+        *Mar  1 00:01:35.148: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan99, changed state to up
+        S1(config-if)#end
+        *Mar  1 00:01:38.259: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 3.** На коммутаторе S2 выведите список магистральных каналов командой **show interfaces trunk**. Столбцы «Mode» и «Status» показывают режим и состояние порта G0/1.
+
+        ```
+        S2#show interfaces trunk
+
+        Port        Mode             Encapsulation  Status        Native vlan
+        Gi0/1       auto             n-802.1q       trunking      1
+
+        Port        Vlans allowed on trunk
+        Gi0/1       1-4094
+
+        Port        Vlans allowed and active in management domain
+        Gi0/1       1,10,20,30,99,999,1002-1005
+
+        Port        Vlans in spanning tree forwarding state and not pruned
+        Gi0/1       1,10,20,30,99,999,1002-1005
+        ```
+
+        **Шаг 4.** Ответьте на вопросы 4 и 5 в форме ответов.
+
+        **Шаг 5.** На коммутаторе S1 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/2 командой **interface g0/2**.
+
+        **Шаг 6.** Сделайте порт статическим магистральным каналом командой **switchport mode trunk** и отключите на нем согласование DTP командой **switchport nonegotiate**. Вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        S1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S1(config)#interface g0/2
+        S1(config-if)#switchport mode trunk
+        S1(config-if)#switchport nonegotiate
+        S1(config-if)#end
+        *Mar  1 00:01:54.567: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Примечание.** Команда **switchport nonegotiate** останавливает отправку кадров DTP: порт работает как магистральный канал, но не предлагает соседу образовать магистральный канал. Режим такого порта не зависит от настройки соседа, поэтому соседний порт нужно настроить вручную.
+
+        **Шаг 7.** Проверьте состояние протокола DTP на коммутаторе S1 командой **show dtp**. Строка «interfaces using DTP» показывает число портов, на которых работает DTP: это все порты коммутатора, кроме G0/2.
+
+        ```
+        S1#show dtp
+        Global DTP information
+        	Sending DTP Hello packets every 30 seconds
+        	Dynamic Trunk timeout is 300 seconds
+        	25 interfaces using DTP
+        ```
+
+        **Шаг 8.** Убедитесь, что порты G0/1 и G0/2 коммутатора S1 работают как магистральные каналы, с помощью команды **show interfaces trunk**. Столбец «Mode» показывает режим каждого порта, а столбец «Native vlan» — собственную VLAN (native VLAN) магистрального канала.
+
+        ```
+        S1#show interfaces trunk
+
+        Port        Mode             Encapsulation  Status        Native vlan
+        Gi0/1       desirable        n-802.1q       trunking      1
+        Gi0/2       on               802.1q         trunking      1
+
+        Port        Vlans allowed on trunk
+        Gi0/1       1-4094
+        Gi0/2       1-4094
+
+        Port        Vlans allowed and active in management domain
+        Gi0/1       1,10,20,30,99,999,1002-1005
+        Gi0/2       1,10,20,30,99,999,1002-1005
+
+        Port        Vlans in spanning tree forwarding state and not pruned
+        Gi0/1       1,10,20,30,99,999,1002-1005
+        Gi0/2       1,10,20,30,99,999,1002-1005
+        ```
+
+        **Шаг 9.** Ответьте на вопрос 6 в форме ответов.
+    - title: "Настройка собственной VLAN"
+      body: |
+        **Примечание.** Кадры собственной VLAN передаются по магистральному каналу без тега. По умолчанию это сеть VLAN 1, в которую входят все порты коммутатора, поэтому собственной VLAN назначают отдельную сеть VLAN без узлов, здесь VLAN 999: нетегированный кадр не попадет в сеть VLAN пользователей. Оба конца магистрального канала должны использовать одну и ту же собственную VLAN.
+
+        **Шаг 1.** На коммутаторе S1 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке обоих магистральных портов командой **interface range g0/1 - 2**.
+
+        **Шаг 2.** Назначьте портам собственную VLAN 999 командой **switchport trunk native vlan 999** и вернитесь в привилегированный режим EXEC командой **end**. В консоли появляется сообщение протокола CDP о порте G0/1.
+
+        ```
+        S1#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S1(config)#interface range g0/1 - 2
+        S1(config-if-range)#switchport trunk native vlan 999
+        *Mar  1 00:02:07.318: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (999), with S2 GigabitEthernet0/1 (1).
+        S1(config-if-range)#end
+        *Mar  1 00:02:11.433: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 3.** Ответьте на вопрос 7 в форме ответов.
+
+        **Шаг 4.** На коммутаторе S2 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/1 командой **interface g0/1**. Назначьте ему собственную VLAN 999 командой **switchport trunk native vlan 999** и вернитесь в привилегированный режим EXEC командой **end**.
+
+        ```
+        S2#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S2(config)#interface g0/1
+        S2(config-if)#switchport trunk native vlan 999
+        S2(config-if)#end
+        *Mar  1 00:02:24.891: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 5.** На коммутаторе S3 аналогично назначьте собственную VLAN 999 интерфейсу G0/2 (**interface g0/2**).
+
+        **Шаг 6.** На коммутаторе S1 проверьте связь с коммутаторами S2 и S3 по адресам их интерфейсов VLAN 99 командами **ping 192.168.99.2** и **ping 192.168.99.3**. Коммутатор S2 отвечает (первый эхо-запрос теряется, пока S1 определяет MAC-адрес S2 по протоколу ARP), а коммутатор S3 не отвечает.
+
+        ```
+        S1#ping 192.168.99.2
+        Type escape sequence to abort.
+        Sending 5, 100-byte ICMP Echos to 192.168.99.2, timeout is 2 seconds:
+        .!!!!
+        Success rate is 80 percent (4/5), round-trip min/avg/max = 1/2/4 ms
+        S1#ping 192.168.99.3
+        Type escape sequence to abort.
+        Sending 5, 100-byte ICMP Echos to 192.168.99.3, timeout is 2 seconds:
+        .....
+        Success rate is 0 percent (0/5)
+        ```
+
+        **Шаг 7.** В приложении «Командная строка» компьютера PC1 снова проверьте связь с компьютером PC6 командой **ping 192.168.10.2**. Эхо-запросы по-прежнему не выполняются.
+
+        ```
+        C:\>ping 192.168.10.2
+
+        Pinging 192.168.10.2 with 32 bytes of data:
+
+        Reply from 192.168.10.1: Destination host unreachable.
+        Reply from 192.168.10.1: Destination host unreachable.
+        Reply from 192.168.10.1: Destination host unreachable.
+        Reply from 192.168.10.1: Destination host unreachable.
+
+        Ping statistics for 192.168.10.2:
+            Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+        ```
+    - title: "Перенастройка магистрального канала на S3"
+      body: |
+        **Шаг 1.** На коммутаторе S3 выведите список магистральных каналов командой **show interfaces trunk**. Вывод пуст: порт G0/2 не работает как магистральный канал.
+
+        ```
+        S3#show interfaces trunk
+        ```
+
+        **Шаг 2.** Выведите параметры порта G0/2 командой **show interfaces g0/2 switchport**. Строки «Administrative Mode» и «Operational Mode» показывают заданный и фактический режим порта, а строка «Operational Trunking Encapsulation» — инкапсуляцию, с которой он работает.
+
+        ```
+        S3#show interfaces g0/2 switchport
+        Name: Gi0/2
+        Switchport: Enabled
+        Administrative Mode: dynamic auto
+        Operational Mode: static access
+        Administrative Trunking Encapsulation: dot1q
+        Operational Trunking Encapsulation: native
+        Negotiation of Trunking: On
+        Access Mode VLAN: 1 (default)
+        Trunking Native Mode VLAN: 999 (Native)
+        …
+        ```
+
+        **Шаг 3.** Ответьте на вопросы 8 и 9 в форме ответов.
+
+        **Шаг 4.** На коммутаторе S3 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса G0/2 командой **interface g0/2**.
+
+        **Шаг 5.** Настройте порт так же, как порт G0/2 коммутатора S1: сделайте его статическим магистральным каналом командой **switchport mode trunk** и отключите на нем согласование DTP командой **switchport nonegotiate**. Вернитесь в привилегированный режим EXEC командой **end**. Интерфейс Vlan99 коммутатора S3 переходит в состояние up.
+
+        ```
+        S3#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S3(config)#interface g0/2
+        S3(config-if)#switchport mode trunk
+        *Mar  1 00:03:36.378: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan99, changed state to up
+        S3(config-if)#switchport nonegotiate
+        S3(config-if)#end
+        *Mar  1 00:03:42.602: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
+        **Шаг 6.** Убедитесь, что порт G0/2 работает как магистральный канал с собственной VLAN 999, с помощью команды **show interfaces trunk**.
+
+        ```
+        S3#show interfaces trunk
+
+        Port        Mode             Encapsulation  Status        Native vlan
+        Gi0/2       on               802.1q         trunking      999
+
+        Port        Vlans allowed on trunk
+        Gi0/2       1-4094
+
+        Port        Vlans allowed and active in management domain
+        Gi0/2       1,10,20,30,99,999,1002-1005
+
+        Port        Vlans in spanning tree forwarding state and not pruned
+        Gi0/2       1,10,20,30,99,999,1002-1005
+        ```
+
+        **Шаг 7.** Ответьте на вопрос 10 в форме ответов.
+
+        **Шаг 8.** Выведите параметры порта G0/2 командой **show interfaces g0/2 switchport** и найдите в выводе строку «Negotiation of Trunking».
+
+        ```
+        S3#show interfaces g0/2 switchport
+        Name: Gi0/2
+        Switchport: Enabled
+        Administrative Mode: trunk
+        Operational Mode: trunk
+        Administrative Trunking Encapsulation: dot1q
+        Operational Trunking Encapsulation: dot1q
+        Negotiation of Trunking: Off
+        Access Mode VLAN: 1 (default)
+        Trunking Native Mode VLAN: 999 (Native)
+        …
+        ```
+
+        **Шаг 9.** Ответьте на вопрос 11 в форме ответов.
+    - title: "Проверка связи"
+      body: |
+        **Шаг 1.** На коммутаторе S1 снова проверьте связь с коммутатором S3 командой **ping 192.168.99.3**. Теперь S3 отвечает: оба конца соединения S1–S3 работают как магистральные каналы.
+
+        ```
+        S1#ping 192.168.99.3
+        Type escape sequence to abort.
+        Sending 5, 100-byte ICMP Echos to 192.168.99.3, timeout is 2 seconds:
+        .!!!!
+        Success rate is 80 percent (4/5), round-trip min/avg/max = 1/2/4 ms
+        ```
+
+        **Шаг 2.** В приложении «Командная строка» компьютера PC1 проверьте связь с компьютером PC6 командой **ping 192.168.10.2**. Эхо-запросы выполняются успешно: кадры сети VLAN 10 проходят от S2 через S1 к S3 по магистральным каналам.
+
+        ```
+        C:\>ping 192.168.10.2
+
+        Pinging 192.168.10.2 with 32 bytes of data:
+
+        Reply from 192.168.10.2: bytes=32 time=3ms TTL=128
+        Reply from 192.168.10.2: bytes=32 time=1ms TTL=128
+        Reply from 192.168.10.2: bytes=32 time=1ms TTL=128
+        Reply from 192.168.10.2: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 192.168.10.2:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
+        ```
+
+        **Шаг 3.** Откройте окно компьютера PC2 и в приложении «Командная строка» проверьте связь с компьютером PC5 командой **ping 192.168.20.2**. Эхо-запросы выполняются успешно.
+
+        ```
+        C:\>ping 192.168.20.2
+
+        Pinging 192.168.20.2 with 32 bytes of data:
+
+        Reply from 192.168.20.2: bytes=32 time=3ms TTL=128
+        Reply from 192.168.20.2: bytes=32 time=1ms TTL=128
+        Reply from 192.168.20.2: bytes=32 time=1ms TTL=128
+        Reply from 192.168.20.2: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 192.168.20.2:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
+        ```
+
+        **Шаг 4.** Откройте окно компьютера PC3 и в приложении «Командная строка» проверьте связь с компьютером PC4 командой **ping 192.168.30.2**. Эхо-запросы выполняются успешно.
+
+        ```
+        C:\>ping 192.168.30.2
+
+        Pinging 192.168.30.2 with 32 bytes of data:
+
+        Reply from 192.168.30.2: bytes=32 time=3ms TTL=128
+        Reply from 192.168.30.2: bytes=32 time=1ms TTL=128
+        Reply from 192.168.30.2: bytes=32 time=1ms TTL=128
+        Reply from 192.168.30.2: bytes=32 time=1ms TTL=128
+
+        Ping statistics for 192.168.30.2:
+            Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+        Approximate round trip times in milli-seconds:
+            Minimum = 1ms, Maximum = 3ms, Average = 1ms
+        ```

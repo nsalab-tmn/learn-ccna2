@@ -1,9 +1,10 @@
 {
     "title": "Маршрутизация между VLAN на многоуровневом коммутаторе",
-    "materialType": "lecture",
+    "shortName": "ccna2.inter-vlan-routing.inter-vlan-routing-using-layer-3-switches",
+    "type": "scored-lecture",
     "description": "Как настроить маршрутизацию между VLAN на многоуровневом коммутаторе?",
     "difficulty": 3,
-    "duration": "PT0H11M",
+    "duration": "PT0H17M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -13,5 +14,152 @@
     },
     "assets": {
         "$ref": "./assets"
-    }
+    },
+    "competency": {
+        "produces": {
+            "id": "ksa.ccna2.inter-vlan-routing.inter-vlan-routing-using-layer-3-switches",
+            "kind": "K",
+            "bloom": "understand",
+            "objective": "Explain why enterprises route between VLANs on Layer 3 switches and identify what this needs: an SVI per VLAN as the hosts' default gateway, the ip routing command, routed ports toward other Layer 3 devices, and static or dynamic routing to advertise the VLANs."
+        },
+        "requires": [
+            "ksa.ccna2.inter-vlan-routing.inter-vlan-routing-operation",
+            "ksa.ccna2.vlans.vlan-configuration"
+        ],
+        "measurement": {
+            "mode": "test",
+            "grader": "test-auto",
+            "aligned_bloom": "understand",
+            "passes_when": "All embedded questions answered correctly (100%, unlimited attempts): why Layer 3 switches, ip routing, SVIs as default gateways, routed ports, advertising VLANs to other Layer 3 devices.",
+            "calibration": "operator-judge"
+        }
+    },
+    "passingScore": 100,
+    "questions": [
+        {
+            "question": "Почему в корпоративных локальных сетях предпочитают маршрутизацию между VLAN на коммутаторах уровня 3, а не метод router-on-a-stick?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Коммутаторы уровня 3 обрабатывают пакеты быстрее благодаря аппаратной коммутации, а метод router-on-a-stick плохо масштабируется",
+                    "correct": true
+                },
+                {
+                    "answer": "Коммутаторам уровня 3 не нужны SVI для маршрутизируемых VLAN",
+                    "correct": false,
+                    "comment": "Коммутаторы уровня 3 как раз используют SVI: для каждой маршрутизируемой VLAN нужен свой SVI. Их предпочитают за аппаратную коммутацию с более высокой скоростью обработки пакетов, а метод router-on-a-stick плохо масштабируется."
+                },
+                {
+                    "answer": "На коммутаторе уровня 3 не нужно включать IP-маршрутизацию",
+                    "correct": false,
+                    "comment": "Для маршрутизации между VLAN на коммутаторе уровня 3 нужна команда ip routing. Такие коммутаторы предпочитают за аппаратную коммутацию с более высокой скоростью обработки пакетов."
+                },
+                {
+                    "answer": "Метод router-on-a-stick слишком сложен для малых и средних организаций",
+                    "correct": false,
+                    "comment": "Для малых и средних организаций метод router-on-a-stick прост в реализации. Крупному предприятию нужен более быстрый и масштабируемый метод — коммутаторы уровня 3 с аппаратной коммутацией."
+                }
+            ]
+        },
+        {
+            "question": "Какая команда режима глобальной конфигурации нужна на коммутаторе уровня 3, чтобы разрешить обмен трафиком IPv4 между VLAN 10 и VLAN 20?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "ip routing",
+                    "correct": true
+                },
+                {
+                    "answer": "interface vlan 10",
+                    "correct": false,
+                    "comment": "Эта команда создает SVI для VLAN 10, но сама по себе не включает маршрутизацию. Обмен трафиком IPv4 между VLAN разрешает команда ip routing."
+                },
+                {
+                    "answer": "no switchport",
+                    "correct": false,
+                    "comment": "Это команда режима конфигурации интерфейса: она превращает порт в маршрутизируемый. Обмен трафиком IPv4 между VLAN разрешает команда ip routing."
+                },
+                {
+                    "answer": "router ospf 10",
+                    "correct": false,
+                    "comment": "Эта команда настраивает протокол маршрутизации OSPF для обмена маршрутами с другими устройствами уровня 3. Обмен трафиком IPv4 между VLAN на самом коммутаторе разрешает команда ip routing."
+                }
+            ]
+        },
+        {
+            "question": "Что служит шлюзом по умолчанию для узлов VLAN 10 при маршрутизации между VLAN на коммутаторе уровня 3?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "IP-адрес SVI для VLAN 10 (interface vlan 10)",
+                    "correct": true
+                },
+                {
+                    "answer": "IP-адрес подинтерфейса маршрутизатора",
+                    "correct": false,
+                    "comment": "Подинтерфейсы маршрутизатора используются в методе router-on-a-stick. На коммутаторе уровня 3 шлюзом по умолчанию для узлов VLAN служит IP-адрес SVI этой VLAN."
+                },
+                {
+                    "answer": "IP-адрес маршрутизируемого порта, подключенного к маршрутизатору R1",
+                    "correct": false,
+                    "comment": "Маршрутизируемый порт связывает коммутатор с другим устройством уровня 3. Шлюзом по умолчанию для узлов VLAN 10 служит IP-адрес SVI для VLAN 10."
+                },
+                {
+                    "answer": "Порт доступа, к которому подключен узел",
+                    "correct": false,
+                    "comment": "Порт доступа только относит подключенный узел к VLAN 10. Шлюзом по умолчанию для узлов VLAN 10 служит IP-адрес SVI для VLAN 10."
+                }
+            ]
+        },
+        {
+            "question": "Какое утверждение о маршрутизируемом порте коммутатора уровня 3 верно?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Это интерфейс уровня 3, аналогичный физическому интерфейсу маршрутизатора; ему назначают IPv4-адрес",
+                    "correct": true
+                },
+                {
+                    "answer": "Это виртуальный интерфейс, который создается командой interface vlan",
+                    "correct": false,
+                    "comment": "Так создается SVI. Маршрутизируемый порт — порт коммутатора, преобразованный командой no switchport в интерфейс уровня 3, аналогичный физическому интерфейсу маршрутизатора."
+                },
+                {
+                    "answer": "Он передает трафик нескольких VLAN как магистральный канал",
+                    "correct": false,
+                    "comment": "Маршрутизируемый порт — простой интерфейс уровня 3 с IPv4-адресом для подключения к маршрутизатору или другому коммутатору уровня 3, а не магистральный канал."
+                },
+                {
+                    "answer": "Он создается командой switchport mode access",
+                    "correct": false,
+                    "comment": "Эта команда делает порт портом доступа второго уровня. Маршрутизируемый порт создает команда no switchport, которая преобразует порт в интерфейс уровня 3."
+                }
+            ]
+        },
+        {
+            "question": "Сети VLAN 10 и VLAN 20 на коммутаторе уровня 3 должны быть доступны маршрутизатору R1. Что для этого нужно сделать?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "Объявить эти сети с помощью статической или динамической маршрутизации",
+                    "correct": true
+                },
+                {
+                    "answer": "Перевести порты доступа узлов в режим магистрального канала",
+                    "correct": false,
+                    "comment": "Режим портов доступа не влияет на то, известны ли R1 сети VLAN. Чтобы VLAN были доступны другим устройствам уровня 3, их объявляют с помощью статической или динамической маршрутизации."
+                },
+                {
+                    "answer": "Ничего: R1 автоматически получит сведения о сетях всех SVI",
+                    "correct": false,
+                    "comment": "Сами по себе сети SVI другим устройствам уровня 3 неизвестны. Их объявляют с помощью статической или динамической маршрутизации, например протоколом OSPF."
+                },
+                {
+                    "answer": "Заменить SVI подинтерфейсами",
+                    "correct": false,
+                    "comment": "Подинтерфейсы используются в методе router-on-a-stick. Чтобы VLAN на коммутаторе уровня 3 были доступны другим устройствам уровня 3, их объявляют с помощью статической или динамической маршрутизации."
+                }
+            ]
+        }
+    ]
 }
