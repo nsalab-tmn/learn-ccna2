@@ -7407,6 +7407,156 @@
      "sha256": "5bf401d0832f66b71bd86a1e1f6fd9fc8640d268b537390aa5224e87a1902906"
     }
    }
+  },
+  {
+   "id": "ccna2-k2knomb",
+   "kind": "illustration",
+   "display": {
+    "key": "8.5.4"
+   },
+   "claim": "На маршрутизаторе R1 настроен пул DHCPv6 ACAD_NET с адресом DNS-сервера и доменным именем и привязан к интерфейсу G0/0; команда ipv6 nd other-config-flag не введена, активных клиентов 0.",
+   "figma": {
+    "nodeId": "5968:9922",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.05-exam/assets/4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "a564c22ef6b32021a012bfdbdd2b3fa90421f63cb97062f7a83640e5ca9b8600"
+    }
+   }
+  },
+  {
+   "id": "ccna2-6x2usmu",
+   "kind": "illustration",
+   "display": {
+    "key": "8.5.5"
+   },
+   "claim": "На маршрутизаторе R1 настроен DHCPv6 без сохранения состояния: пул ACAD_CLASS с адресом DNS-сервера и доменным именем, флаг other-config на интерфейсе G0/0; активных клиентов 0.",
+   "figma": {
+    "nodeId": "5968:9925",
+    "page": "CCNA2 · 08 slaac-and-dhcpv6-concepts"
+   },
+   "out": {
+    "path": "08-slaac-and-dhcpv6-concepts/08.05-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "5.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "9e4323c91cd7aaeec1f48c6eb70a5e0b288970e309895cf48209f782e5b2e63e"
+    }
+   }
+  },
+  {
+   "id": "ccna2-hwp467r",
+   "kind": "illustration",
+   "display": {
+    "key": "9.4.9"
+   },
+   "claim": "Вывод show glbp на R1: группа 1 на Fa0/1, виртуальный IP-адрес 192.168.2.100, R1 (192.168.2.1) — активный, 192.168.2.2 — резервный.",
+   "figma": {
+    "nodeId": "5968:10420",
+    "page": "CCNA2 · 09 fhrp-concepts"
+   },
+   "out": {
+    "path": "09-fhrp-concepts/09.04-exam/assets/9.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "9.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "c44c3de64f2009a15a7ca43a570095949dc531711593b234e3374f2e87aebef2"
+    }
+   }
+  },
+  {
+   "id": "ccna2-izagqk5",
+   "kind": "illustration",
+   "display": {
+    "key": "11.7.1"
+   },
+   "claim": "Вывод show port-security на S1: на порту Fa0/2 — одно нарушение безопасности, действие Shutdown; на Fa0/1 нарушений нет.",
+   "figma": {
+    "nodeId": "5968:10859",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.07-exam/assets/1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "1.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "e27200cbab691f662784ded4b5175598d5e40d402c0f9942bc1b923acece9026"
+    }
+   }
+  },
+  {
+   "id": "ccna2-n7k5js4",
+   "kind": "illustration",
+   "display": {
+    "key": "11.7.4"
+   },
+   "claim": "Маршрутизаторы R1 и R2 соединены с обоими коммутаторами распределения DS1 и DS2, каждый из которых соединен с коммутаторами доступа AS1, AS2 и AS3; к AS1 подключен PC1, к AS2 — PC2, к AS3 — сервер DHCP.",
+   "figma": {
+    "nodeId": "5968:10865",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.07-exam/assets/4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "6db937d9c2d96c15ef77684ebb208a0dd2bc48380c2ee516c9ed68584e2100cf"
+    }
+   }
+  },
+  {
+   "id": "ccna2-akuqft6",
+   "kind": "illustration",
+   "display": {
+    "key": "11.7.5"
+   },
+   "claim": "Вывод show port-security interface fastethernet 0/3: порт защищен и работает, режим нарушения Shutdown, максимум 2 MAC-адреса, изучен один закрепленный (sticky) адрес, нарушений 0.",
+   "figma": {
+    "nodeId": "5968:10862",
+    "page": "CCNA2 · 11 switch-security-configuration"
+   },
+   "out": {
+    "path": "11-switch-security-configuration/11.07-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "5.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "1978b54dbb591d48f5a055f46a6759d47d2af4070b7dafa0d9a11a588d3a68e6"
+    }
+   }
   }
  ]
 }
