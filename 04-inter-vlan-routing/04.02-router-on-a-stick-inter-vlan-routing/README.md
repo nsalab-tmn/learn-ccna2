@@ -272,20 +272,20 @@ R1#
 
 **show interfaces**
 
-Подинтерфейсы можно проверить с помощью команды **show interfaces _subinterface-id_**, как показано на рисунке.
+Подинтерфейсы можно проверить с помощью команды **show interfaces _subinterface-id_**, как показано в примере.
 
 ```
-R1# show interfaces g0/0/1.10 
-GigabitEthernet0/0/1.10 is up, line protocol is up 
-  Hardware is ISR4221-2x1GE, address is 10b3.d605.0301 (bia 10b3.d605.0301)
-  Description Default Gateway for VLAN 10
+R1#show interfaces g0/0/1.10
+GigabitEthernet0/0/1.10 is up, line protocol is up
+  Hardware is Gigabit Ethernet, address is 00d0.38e1.5501 (bia 00d0.38e1.5501)
+  Description: Default Gateway for VLAN 10
   Internet address is 192.168.10.1/24
   MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec,
      reliability 255/255, txload 1/255, rxload 1/255
-  Hardware is ISR4221-2x1GE, address is 10b3.d605.0301 (bia 10b3.d605.0301)
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  10.
   ARP type: ARPA, ARP Timeout 04:00:00
-  Keepalive not supported
-  Last clearing of show interface counters never
+  Keepalive set (10 sec)
+  Last clearing of "show interface" counters never
 R1#
 ```
 

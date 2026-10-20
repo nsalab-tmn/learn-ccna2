@@ -49,7 +49,13 @@ Processor board ID NSA00000001
 Configuration register is 0x2102
 ```
 
-Проверить поддержку SSH напрямую позволяет команда **show ip ssh**.
+Проверить поддержку SSH напрямую позволяет команда **show ip ssh**: если ОС поддерживает SSH, команда распознается и выводит состояние сервера SSH. Пока на коммутаторе нет ключей RSA, SSH выключен, как в примере.
+
+```
+S1#show ip ssh
+SSH Disabled - version 1.99
+%Please create RSA keys to enable SSH (and of atleast 768 bits for SSH v2).
+```
 
 <!-- 1.3.4 -->
 ## Конфигурация SSH
