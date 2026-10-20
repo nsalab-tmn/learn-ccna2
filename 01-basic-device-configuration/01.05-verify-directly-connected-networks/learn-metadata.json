@@ -36,49 +36,59 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Какая команда будет отображать сводку всех интерфейсов с поддержкой IPv6 на маршрутизаторе, которая включает IPv6-адрес и рабочее состояние?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "show ip interface brief",
                     "correct": false,
                     "comment": "Командой для просмотра сводки интерфейсов с поддержкой IPv6 вместе с их адресом и рабочим состоянием является show ipv6 interface brief. show ip interface brief даст ту же информацию, но для IPv4. show ipv6 route и show running-config interface не предоставляют эту информацию"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "show ipv6 route",
                     "correct": false,
                     "comment": "Командой для просмотра сводки интерфейсов с поддержкой IPv6 вместе с их адресом и рабочим состоянием является show ipv6 interface brief. show ip interface brief даст ту же информацию, но для IPv4. show ipv6 route и show running-config interface не предоставляют эту информацию"
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "show running-config interface",
                     "correct": false,
                     "comment": "Командой для просмотра сводки интерфейсов с поддержкой IPv6 вместе с их адресом и рабочим состоянием является show ipv6 interface brief. show ip interface brief даст ту же информацию, но для IPv4. show ipv6 route и show running-config interface не предоставляют эту информацию"
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "show ipv6 interface brief",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q02",
             "question": "Каким кодом в таблице маршрутизации обозначаются напрямую подключенные маршруты?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "C",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "D",
                     "correct": false,
                     "comment": "Напрямую подключенные маршруты будут иметь код «C». Маршруты с «D» обозначают маршрут EIGRP. Маршруты с буквой «L» обозначают локальный маршрут, а «R» — маршрут, полученный по протоколу RIP. RIP (Routing Information Protocol) — один из первых протоколов маршрутизации"
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "L",
                     "correct": false,
                     "comment": "Напрямую подключенные маршруты будут иметь код «C». Маршруты с «D» обозначают маршрут EIGRP. Маршруты с буквой «L» обозначают локальный маршрут, а «R» — маршрут, полученный по протоколу RIP. RIP (Routing Information Protocol) — один из первых протоколов маршрутизации"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "R",
                     "correct": false,
                     "comment": "Напрямую подключенные маршруты будут иметь код «C». Маршруты с «D» обозначают маршрут EIGRP. Маршруты с буквой «L» обозначают локальный маршрут, а «R» — маршрут, полученный по протоколу RIP. RIP (Routing Information Protocol) — один из первых протоколов маршрутизации"
@@ -86,19 +96,23 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какая команда будет отображать статистику потока пакетов, коллизии и сбои буфера на интерфейсе?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "show interface",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "show ip interface",
                     "correct": false,
                     "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, коллизии и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "show running-config interface",
                     "correct": false,
                     "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, коллизии и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
@@ -106,24 +120,29 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Какой тип адреса должен иметь интерфейс с включенным IPv6?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "обратная петля",
                     "correct": false,
                     "comment": "Каждый сетевой интерфейс с включенным IPv6 должен иметь локальный адрес канала. Если он не настроен вручную, интерфейс автоматически сгенерирует его"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "глобальный индивидуальный адрес",
                     "correct": false,
                     "comment": "Каждый сетевой интерфейс с включенным IPv6 должен иметь локальный адрес канала. Если он не настроен вручную, интерфейс автоматически сгенерирует его"
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "локальный адрес канала",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "статический MAC-адрес",
                     "correct": false,
                     "comment": "Каждый сетевой интерфейс с включенным IPv6 должен иметь локальный адрес канала. Если он не настроен вручную, интерфейс автоматически сгенерирует его"
@@ -131,24 +150,29 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Какой символ используется для фильтрации команд?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "вертикальная черта |",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "запятая ,",
                     "correct": false,
                     "comment": "Фильтровать выходные данные при использовании с командами позволяет символ «|»"
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "двоеточие :",
                     "correct": false,
                     "comment": "Фильтровать выходные данные при использовании с командами позволяет символ «|»"
                 },
                 {
+                    "answerId": "q05-a4",
                     "answer": "точка с запятой ;",
                     "correct": false,
                     "comment": "Фильтровать выходные данные при использовании с командами позволяет символ «|»"
@@ -156,19 +180,23 @@
             ]
         },
         {
+            "questionId": "q06",
             "question": "Какое выражение фильтрации будет показывать все выходные строки, начиная от строки, соответствующей выражению фильтрации?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q06-a1",
                     "answer": "section",
                     "correct": false,
                     "comment": "Хотя все три выражения будут показывать совпадающие выходные строки, выражение «begin» покажет все выходные строки, начиная от строки, соответствующей выражению фильтра. Выражение «include» показывает все выходные строки, соответствующие выражению фильтра, а выражение «section» включает весь раздел, который начинается с выражения фильтра"
                 },
                 {
+                    "answerId": "q06-a2",
                     "answer": "begin",
                     "correct": true
                 },
                 {
+                    "answerId": "q06-a3",
                     "answer": "include",
                     "correct": false,
                     "comment": "Хотя все три выражения будут показывать совпадающие выходные строки, выражение «begin» покажет все выходные строки, начиная от строки, соответствующей выражению фильтра. Выражение «include» показывает все выходные строки, соответствующие выражению фильтра, а выражение «section» включает весь раздел, который начинается с выражения фильтра"

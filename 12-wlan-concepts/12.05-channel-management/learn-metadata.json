@@ -37,24 +37,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Какой из следующих методов модуляции быстро переключает сигнал между частотными каналами?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "DSSS",
                     "correct": false,
                     "comment": "Радиосигналы путем быстрого переключения несущего сигнала между многими частотными каналами передает FHSS"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "FHSS",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "OFDM",
                     "correct": false,
                     "comment": "Радиосигналы путем быстрого переключения несущего сигнала между многими частотными каналами передает FHSS"
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "OFDMA",
                     "correct": false,
                     "comment": "Радиосигналы путем быстрого переключения несущего сигнала между многими частотными каналами передает FHSS"
@@ -62,24 +67,29 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Какой из следующих методов модуляции распространяет сигнал по большей полосе частот?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "DSSS",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "FHSS",
                     "correct": false,
                     "comment": "Для распространения сигнала по более широкой полосе частот предназначена DSSS-модуляция"
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "OFDM",
                     "correct": false,
                     "comment": "Для распространения сигнала по более широкой полосе частот предназначена DSSS-модуляция"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "OFDMA",
                     "correct": false,
                     "comment": "Для распространения сигнала по более широкой полосе частот предназначена DSSS-модуляция"
@@ -87,49 +97,59 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какой из следующих методов модуляции используется в новом стандарте 802.11ax?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "DSSS",
                     "correct": false,
                     "comment": "Новый стандарт 802.11ax использует разновидность OFDM, называемую ортогональным множественным доступом с частотным разделением (OFDMA)"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "FHSS",
                     "correct": false,
                     "comment": "Новый стандарт 802.11ax использует разновидность OFDM, называемую ортогональным множественным доступом с частотным разделением (OFDMA)"
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "OFDM",
                     "correct": false,
                     "comment": "Новый стандарт 802.11ax использует разновидность OFDM, называемую ортогональным множественным доступом с частотным разделением (OFDMA)"
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "OFDMA",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q04",
             "question": "Сколько каналов доступно для диапазона 2,4 ГГц в Европе?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "11",
                     "correct": false,
                     "comment": "В Европе имеется 13 каналов в диапазоне 2,4 ГГц (11 каналов в Северной Америке и 14 каналов в Японии)"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "13",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "14",
                     "correct": false,
                     "comment": "В Европе имеется 13 каналов в диапазоне 2,4 ГГц (11 каналов в Северной Америке и 14 каналов в Японии)"
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "24",
                     "correct": false,
                     "comment": "В Европе имеется 13 каналов в диапазоне 2,4 ГГц (11 каналов в Северной Америке и 14 каналов в Японии)"
@@ -137,25 +157,30 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Сколько каналов доступно для диапазона 5 ГГц?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "11",
                     "correct": false,
                     "comment": "В полосе 5 ГГц 24 канала"
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "13",
                     "correct": false,
                     "comment": "В полосе 5 ГГц 24 канала"
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "14",
                     "correct": false,
                     "comment": "В полосе 5 ГГц 24 канала"
                 },
                 {
+                    "answerId": "q05-a4",
                     "answer": "24",
                     "correct": true
                 }

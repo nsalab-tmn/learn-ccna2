@@ -37,99 +37,120 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Каковы преимущества технологии EtherChannel? (выберите все подходящие варианты)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "устойчивость к сбоям",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "распределение нагрузки",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "увеличение пропускной способности",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "избыточность каналов связи",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q02",
             "question": "Верно ли утверждение, что каналы FastEthernet и GigabitEthernet могут быть объединены в один EtherChannel?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "верно",
                     "correct": false,
                     "comment": "Интерфейсы, объединенные в EtherChannel, должны быть одинаковыми по типу и скорости"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "неверно",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q03",
             "question": "Верно ли утверждение, что PAgP и LACP являются проприетарными протоколами агрегации каналов?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "верно",
                     "correct": false,
                     "comment": "PAgP — это проприетарный протокол, а LACP является спецификацией IEEE 802.3ad"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "неверно",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q04",
             "question": "Какие режимы интерфейса относятся к PAgP? (верны три варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "on",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "auto",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "active",
                     "correct": false,
                     "comment": "On, Auto и Desirable — режимы PAgP. On, Active и Passive — режимы LACP"
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "passive",
                     "correct": false,
                     "comment": "On, Auto и Desirable — режимы PAgP. On, Active и Passive — режимы LACP"
                 },
                 {
+                    "answerId": "q04-a5",
                     "answer": "desirable",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q05",
             "question": "Какой режим интерфейса PAgP инициирует согласование с другими интерфейсами?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "active",
                     "correct": false,
                     "comment": "Только режим PAgP Desirable инициирует согласование"
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "desirable",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "auto",
                     "correct": false,
                     "comment": "Только режим PAgP Desirable инициирует согласование"
@@ -137,33 +158,40 @@
             ]
         },
         {
+            "questionId": "q06",
             "question": "Какие комбинации режимов PAgP образуют EtherChannel? (выберите все подходящие варианты).",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q06-a1",
                     "answer": "auto > desirable",
                     "correct": true
                 },
                 {
+                    "answerId": "q06-a2",
                     "answer": "desirable > on",
                     "correct": false,
                     "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 },
                 {
+                    "answerId": "q06-a3",
                     "answer": "auto > on",
                     "correct": false,
                     "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 },
                 {
+                    "answerId": "q06-a4",
                     "answer": "on > on",
                     "correct": true
                 },
                 {
+                    "answerId": "q06-a5",
                     "answer": "on > active",
                     "correct": false,
                     "comment": "On > On и Auto > Desirable образуют EtherChannel"
                 },
                 {
+                    "answerId": "q06-a6",
                     "answer": "active > passive",
                     "correct": false,
                     "comment": "On > On и Auto > Desirable образуют EtherChannel"

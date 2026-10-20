@@ -37,24 +37,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "На коммутаторе настроено несколько интерфейсов агрегированного канала. Какая команда выведет по одной строке данных на каждый канал EtherChannel?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "show etherchannel summary",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "show interfaces port-channel",
                     "correct": false,
                     "comment": "Эта команда показывает общий статус интерфейса агрегированного канала. По одной строке на каждый канал выводит команда show etherchannel summary."
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "show etherchannel port-channel",
                     "correct": false,
                     "comment": "Эта команда показывает подробные сведения о конкретном интерфейсе агрегированного канала. По одной строке на каждый канал выводит команда show etherchannel summary."
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "show interfaces etherchannel",
                     "correct": false,
                     "comment": "Эта команда показывает роль физического интерфейса в работе EtherChannel. По одной строке на каждый канал выводит команда show etherchannel summary."
@@ -62,19 +67,23 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "В выводе show etherchannel summary рядом с номером агрегированного канала стоят буквы SU: Po1(SU). Что это означает?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "EtherChannel второго уровня, который задействован",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "EtherChannel третьего уровня, который не используется",
                     "correct": false,
                     "comment": "Буква S означает второй уровень (Layer2), а U — что канал задействован (in use). Третий уровень обозначает буква R."
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "EtherChannel, который выключен",
                     "correct": false,
                     "comment": "Выключенный канал обозначается буквой D (down), как в Po1(SD). Буквы SU означают EtherChannel второго уровня, который задействован."
@@ -82,19 +91,23 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "EtherChannel между S1 и S2 не работает. На портах S1 настроена команда channel-group 1 mode on, на портах S2 — channel-group 1 mode desirable. Как в разобранном примере устраняют эту проблему?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "Меняют режим на портах S1 на desirable",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "Настраивают режим магистрального канала на отдельных физических портах, а не на интерфейсе EtherChannel",
                     "correct": false,
                     "comment": "Режим магистрального канала не рекомендуется настраивать на отдельных портах EtherChannel. Проблема в несовместимых режимах PAgP, и ее устраняют, меняя режим на портах S1 на desirable."
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "Назначают портам S1 и S2 разные собственные VLAN",
                     "correct": false,
                     "comment": "Порты с разными собственными VLAN вообще не могут образовать EtherChannel. Проблема в несовместимых режимах PAgP, и ее устраняют, меняя режим на портах S1 на desirable."
@@ -102,19 +115,23 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Какая ситуация помешает формированию EtherChannel?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "У портов, объединяемых в EtherChannel, разные собственные VLAN",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "У всех портов одинаковые скорость и режим дуплекса",
                     "correct": false,
                     "comment": "Одинаковые скорость и режим дуплекса — требование EtherChannel, а не помеха. Канал не образуют порты с разными собственными VLAN."
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "На всех портах разрешен один и тот же диапазон VLAN",
                     "correct": false,
                     "comment": "Одинаковый диапазон разрешенных VLAN — тоже требование EtherChannel. Канал не образуют порты с разными собственными VLAN."
@@ -122,19 +139,23 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Чем PAgP и LACP отличаются от DTP?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "PAgP и LACP нужны для агрегирования каналов, а DTP — для автоматизации создания магистральных каналов",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "PAgP и LACP автоматизируют создание магистральных каналов, а DTP агрегирует каналы",
                     "correct": false,
                     "comment": "Наоборот: PAgP и LACP нужны для агрегирования каналов (EtherChannel), а DTP — для автоматизации создания магистральных каналов."
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "Все три протокола служат для агрегирования каналов в EtherChannel",
                     "correct": false,
                     "comment": "DTP не агрегирует каналы: он автоматизирует создание магистральных каналов. Для агрегирования каналов нужны PAgP и LACP."

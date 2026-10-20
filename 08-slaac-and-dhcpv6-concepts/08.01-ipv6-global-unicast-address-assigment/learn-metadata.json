@@ -36,19 +36,23 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Какой тип адреса автоматически создается по умолчанию на интерфейсе узла при отсутствии RA?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "глобальный индивидуальный адрес",
                     "correct": false,
                     "comment": "Локальный адрес канала IPv6 автоматически создается узлом при его загрузке и активном интерфейсе Ethernet"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "локальный адрес канала",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "MAC-адрес",
                     "correct": false,
                     "comment": "Локальный адрес канала IPv6 автоматически создается узлом при его загрузке и активном интерфейсе Ethernet"
@@ -56,19 +60,23 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Какой метод использует DHCP без сохранения состояния?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "только SLAAC",
                     "correct": false,
                     "comment": "SLAAC с сервером DHCPv6 — это метод распределения IPv6-адресов без сохранения состояния"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "SLAAC с DHCPv6 сервером",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "только DHCPv6",
                     "correct": false,
                     "comment": "SLAAC с сервером DHCPv6 — это метод распределения IPv6-адресов без сохранения состояния"

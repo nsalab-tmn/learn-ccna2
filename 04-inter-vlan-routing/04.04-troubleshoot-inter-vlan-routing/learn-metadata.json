@@ -36,29 +36,35 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Вы устраняете проблему маршрутизации между VLAN на маршрутизаторе. Необходимо убедиться, что подинтерфейсы находятся в таблице маршрутизации. Какую команду вы используете для этого?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "show interfaces",
                     "correct": false,
                     "comment": "Команда show ip route подтверждает, что подинтерфейсы находятся в таблице маршрутизации"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "show interfaces interface-id switchport",
                     "correct": false,
                     "comment": "Команда show ip route подтверждает, что подинтерфейсы находятся в таблице маршрутизации"
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "show ip interface brief",
                     "correct": false,
                     "comment": "Команда show ip route подтверждает, что подинтерфейсы находятся в таблице маршрутизации"
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "show ip route",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a5",
                     "answer": "show vlan",
                     "correct": false,
                     "comment": "Команда show ip route подтверждает, что подинтерфейсы находятся в таблице маршрутизации"
@@ -66,59 +72,71 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Вы устраняете проблему маршрутизации между VLAN на коммутаторе. Необходимо проверить список VLAN и назначенных им портов. Какую команду вы используете для этого?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "show interfaces",
                     "correct": false,
                     "comment": "Команда show vlan отобразит список VLAN и назначенных им портов"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "show interfaces interface-id switchport",
                     "correct": false,
                     "comment": "Команда show vlan отобразит список VLAN и назначенных им портов"
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "show ip interface brief",
                     "correct": false,
                     "comment": "Команда show vlan отобразит список VLAN и назначенных им портов"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "show ip route",
                     "correct": false,
                     "comment": "Команда show vlan отобразит список VLAN и назначенных им портов"
                 },
                 {
+                    "answerId": "q02-a5",
                     "answer": "show vlan",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q03",
             "question": "Вы устраняете проблему маршрутизации между VLAN на коммутаторе. Необходимо проверить состояние порта доступа и режим доступа VLAN. Какую команду вы используете для этого?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "show interfaces",
                     "correct": false,
                     "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к VLAN"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "show interfaces (interface-id) switchport",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "show ip interface brief",
                     "correct": false,
                     "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к VLAN"
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "show ip route",
                     "correct": false,
                     "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к VLAN"
                 },
                 {
+                    "answerId": "q03-a5",
                     "answer": "show vlan",
                     "correct": false,
                     "comment": "Команда show interfaces (interface-id) switchport отображает состояние порта и режим доступа к VLAN"
@@ -126,29 +144,35 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Вы устраняете проблему маршрутизации между сетями VLAN на маршрутизаторе и должны проверить состояние и IP-адрес всех интерфейсов в сжатом формате. Какую команду вы используете для этого?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "show interfaces",
                     "correct": false,
                     "comment": "Команда show ip interface brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "show interfaces interface-id switchport",
                     "correct": false,
                     "comment": "Команда show ip interface brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате"
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "show ip interface brief",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "show ip route",
                     "correct": false,
                     "comment": "Команда show ip interface brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате"
                 },
                 {
+                    "answerId": "q04-a5",
                     "answer": "show vlan",
                     "correct": false,
                     "comment": "Команда show ip interface brief используется для проверки состояния и IP-адреса всех интерфейсов в сжатом формате"
