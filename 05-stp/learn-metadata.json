@@ -1,5 +1,5 @@
 {
-    "title": "Протокол остовного дерева (STP)",
+    "title": "Протокол связующего дерева (STP)",
     "materialType": "course",
     "tags": {
         "$ref": "../material-tags.json"
