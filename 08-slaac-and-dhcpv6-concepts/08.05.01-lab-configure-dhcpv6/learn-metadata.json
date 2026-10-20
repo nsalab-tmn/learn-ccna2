@@ -1,32 +1,52 @@
 {
-    "title": "Лабораторная работа: настройка DHCPv6",
+    "title": "Работа в симуляторе: настройка протокола DHCPv6",
     "shortName": "lab-8.5.1",
     "materialType": "lab",
-    "description": "Цель лабораторной работы: отработка навыков, необходимых для настройки DHCPv6.",
+    "description": "Цель лабораторной работы: отработка навыков, необходимых для настройки автоматической выдачи адресов IPv6 с помощью SLAAC и протокола DHCPv6.",
     "difficulty": 1,
     "duration": "PT0H47M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
+    "compute": {
+        "local": {
+            "$ref": "./compute/local"
+        }
+    },
     "credentialsSchema": {
-        "userName": {
-            "title": "Имя пользователя",
-            "source": "learn_user"
-        },
-        "password": {
-            "title": "Пароль",
-            "source": "learn_password"
-        },
         "consoleURL": {
-            "title": "Адрес портала",
-            "value": "https://portal.skillscloud.company"
+            "title": "Адрес лаборатории",
+            "source": "URL"
         }
     },
     "skills": {},
     "text": {
         "$ref": "./README.md"
     },
-    "assets": {
-        "$ref": "./assets"
+    "assessment": {
+        "local": {
+            "$ref": "./assessment"
+        }
+    },
+    "answerSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "q_1": {
+                "type": "string",
+                "title": "1. Откуда взялась часть IPv6-адреса компьютера PC-A, содержащая идентификатор интерфейса?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_2": {
+                "type": "string",
+                "title": "2. Каким способом PC-A получает IPv6-адрес после настройки R1 и каким способом — адрес DNS-сервера и DNS-суффикс?",
+                "placeholder": "Enter your answer here"
+            },
+            "q_3": {
+                "type": "string",
+                "title": "3. Какой адрес выдал сервер DHCPv6 компьютеру PC-B и почему в выводе команды show ipv6 dhcp binding нет записи для PC-A?",
+                "placeholder": "Enter your answer here"
+            }
+        }
     }
 }
