@@ -37,24 +37,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Что делает функция BPDU Guard, когда на порт приходит BPDU?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "Немедленно переводит порт в состояние отключения по ошибке (error-disabled)",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "Переводит порт из состояния блокировки в состояние пересылки, минуя прослушивание и обучение",
                     "correct": false,
                     "comment": "Так работает PortFast. BPDU Guard при получении BPDU немедленно переводит порт в состояние отключения по ошибке."
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "Пропускает BPDU и только записывает сообщение в системный журнал",
                     "correct": false,
                     "comment": "BPDU Guard не пропускает BPDU: порт, получивший BPDU, немедленно переводится в состояние отключения по ошибке, и его нужно снова включить вручную или восстановить автоматически."
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "Делает коммутатор корневым мостом, чтобы злоумышленник не смог им стать",
                     "correct": false,
                     "comment": "BPDU Guard не участвует в выборе корневого моста. Она немедленно переводит в состояние отключения по ошибке порт, на который пришел BPDU."
@@ -62,24 +67,29 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Чем опасно включение PortFast на порту, к которому подключен другой коммутатор?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "Может возникнуть коммутационная петля",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "Порт будет дольше ожидать сходимости STP",
                     "correct": false,
                     "comment": "PortFast, наоборот, сокращает ожидание, минуя прослушивание и обучение. Опасность в том, что на порту, к которому подключен другой коммутатор, это может создать коммутационную петлю."
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "Порт перестанет передавать трафик пользователей",
                     "correct": false,
                     "comment": "PortFast не мешает передаче трафика, а сразу переводит порт в состояние пересылки. На порту, к которому подключен другой коммутатор, это опасно: может возникнуть коммутационная петля."
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "Подключенный коммутатор автоматически станет корневым мостом",
                     "correct": false,
                     "comment": "PortFast не влияет на выбор корневого моста. Опасность в том, что на порту, к которому подключен другой коммутатор, может возникнуть коммутационная петля."
@@ -87,24 +97,29 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какая команда глобальной конфигурации включает BPDU Guard на всех портах с включенной функцией PortFast?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "spanning-tree portfast bpduguard default",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "spanning-tree portfast default",
                     "correct": false,
                     "comment": "Эта команда включает PortFast на всех портах доступа, но не BPDU Guard. BPDU Guard на всех портах с PortFast включает команда spanning-tree portfast bpduguard default."
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "spanning-tree bpduguard enable",
                     "correct": false,
                     "comment": "Это команда настройки интерфейса: она включает BPDU Guard только на одном порту. Для всех портов с PortFast используют команду глобальной конфигурации spanning-tree portfast bpduguard default."
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "show spanning-tree summary",
                     "correct": false,
                     "comment": "Эта команда только показывает состояние связующего дерева, в том числе включены ли PortFast и BPDU Guard по умолчанию. Включает BPDU Guard на всех портах с PortFast команда spanning-tree portfast bpduguard default."
@@ -112,24 +127,29 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Почему BPDU Guard рекомендуется включать на всех портах с PortFast?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "Порт с PortFast по-прежнему принимает BPDU, а неожиданный BPDU может означать попытку несанкционированно добавить коммутатор в сеть",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "Без BPDU Guard функция PortFast не переводит порт в состояние пересылки",
                     "correct": false,
                     "comment": "PortFast переводит порт в состояние пересылки и без BPDU Guard. BPDU Guard нужна потому, что порт с PortFast по-прежнему принимает BPDU, а неожиданный BPDU может означать попытку добавить коммутатор в сеть."
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "BPDU Guard ускоряет сходимость STP на магистральных каналах",
                     "correct": false,
                     "comment": "BPDU Guard настраивают только на портах, к которым подключены оконечные устройства, и сходимость она не ускоряет. Она отключает порт, получивший неожиданный BPDU, например при попытке добавить коммутатор в сеть."
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "BPDU Guard заменяет PortFast на портах доступа",
                     "correct": false,
                     "comment": "Эти функции не заменяют друг друга, а работают вместе: PortFast сразу переводит порт в пересылку, а BPDU Guard отключает его, если на порт пришел неожиданный BPDU."

@@ -38,49 +38,59 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Какой UDP-порт используют клиенты DHCPv6 для отправки сообщений DHCPv6?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "67",
                     "correct": false,
                     "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "68",
                     "correct": false,
                     "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "546",
                     "correct": false,
                     "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "547",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q02",
             "question": "Какое сообщение DHCPv6 отправляет узел для поиска сервера DHCPv6?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "ADVERTISE",
                     "correct": false,
                     "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "SOLICIT",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "INFORMATION-REQUEST",
                     "correct": false,
                     "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "REQUEST",
                     "correct": false,
                     "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
@@ -88,49 +98,59 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какое сообщение отправляет узел серверу DHCPv6, если он использует DHCPv6 с сохранением состояния?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "ADVERTISE",
                     "correct": false,
                     "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "SOLICIT",
                     "correct": false,
                     "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "INFORMATION-REQUEST",
                     "correct": false,
                     "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "REQUEST",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q04",
             "question": "Какая комбинация параметров флага используется для DHCP без сохранения состояния?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "A=1, M=0, O=0",
                     "correct": false,
                     "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "A=0, M=1, O=0",
                     "correct": false,
                     "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "A=1, M=0, O=1",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "A=0, M=1, O=1",
                     "correct": false,
                     "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
@@ -138,15 +158,18 @@
             ]
         },
         {
+            "questionId": "q05",
             "question": "Какая настройка флага M указывает на то, что используется DHCPv6 с сохранением состояния?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "M=0",
                     "correct": false,
                     "comment": "DHCPv6 с сохранением состояния  устанавливает флаги M=1"
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "M=1",
                     "correct": true
                 }

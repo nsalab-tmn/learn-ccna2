@@ -36,14 +36,17 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Верно ли утверждение, что, разделяя крупные широковещательные домены на более мелкие сети, VLAN повышают производительность сети?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "верно",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "неверно",
                     "correct": false,
                     "comment": "VLAN создает логический домен широковещательной рассылки, который может охватывать несколько физических сегментов LAN. Разделяя крупные широковещательные домены на более мелкие сети, VLAN повышают производительность сети. Кадры широковещательной передачи не пересылаются между VLAN"
@@ -51,14 +54,17 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Верно ли утверждение, что VLAN могут повысить безопасность, изолируя конфиденциальные данные от остальных сетей?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "верно",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "неверно",
                     "correct": false,
                     "comment": "Трафик, создаваемый в VLAN, остается внутри нее и полностью отделен от других частей сети"
@@ -66,24 +72,29 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какой тип VLAN назначается магистральным портам 802.1Q для передачи нетегированного трафика?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "VLAN по умолчанию",
                     "correct": false,
                     "comment": "Магистральным портам 802.1Q для передачи нетегированного трафика назначается собственная VLAN (native VLAN)"
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "собственная VLAN",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "VLAN данных",
                     "correct": false,
                     "comment": "Магистральным портам 802.1Q для передачи нетегированного трафика назначается собственная VLAN (native VLAN)"
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "WAN",
                     "correct": false,
                     "comment": "Магистральным портам 802.1Q для передачи нетегированного трафика назначается собственная VLAN (native VLAN)"
@@ -91,37 +102,45 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "Верно ли утверждение, что рекомендуется настроить VLAN 1 в качестве Native VLAN?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "верно",
                     "correct": false,
                     "comment": "По умолчанию Native VLAN является VLAN 1. Однако рекомендуется настроить Native VLAN на неиспользуемую VLAN"
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "неверно",
                     "correct": true
                 }
             ]
         },
         {
+            "questionId": "q05",
             "question": "Что верно для VLAN 1? (Выберите все подходящие варианты)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q05-a1",
                     "answer": "все порты коммутатора назначены для сети VLAN 1 по умолчанию",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a2",
                     "answer": "сетью VLAN с нетегированным трафиком по умолчанию является сеть VLAN 1",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a3",
                     "answer": "сетью управления VLAN по умолчанию является сеть VLAN 1",
                     "correct": true
                 },
                 {
+                    "answerId": "q05-a4",
                     "answer": "VLAN 1 нельзя переименовывать или удалять",
                     "correct": true
                 }

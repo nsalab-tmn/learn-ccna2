@@ -36,27 +36,33 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Какие состояния порта STP объединяются в состояние отбрасывания порта RSTP? (верны три варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "отключено",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "блокирование",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "прослушивание",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "обучение",
                     "correct": false,
                     "comment": "Состояния STP «отключено», «блокировка» и «прослушивание» объединяются в состояние отбрасывания RSTP"
                 },
                 {
+                    "answerId": "q01-a5",
                     "answer": "пересылка",
                     "correct": false,
                     "comment": "Состояния STP «отключено», «блокировка» и «прослушивание» объединяются в состояние отбрасывания RSTP"
@@ -64,24 +70,29 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Какой протокол был разработан для ускорения сходимости STP?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "PortFast",
                     "correct": false,
                     "comment": "RSTP (или IEEE 802.1w) — это эволюция протокола STP, которая обеспечивает более быструю сходимость, чем в исходной реализации 802.1D"
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "RSTP",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "PVST",
                     "correct": false,
                     "comment": "RSTP (или IEEE 802.1w) — это эволюция протокола STP, которая обеспечивает более быструю сходимость, чем в исходной реализации 802.1D"
                 },
                 {
+                    "answerId": "q02-a4",
                     "answer": "MSTP",
                     "correct": false,
                     "comment": "RSTP (или IEEE 802.1w) — это эволюция протокола STP, которая обеспечивает более быструю сходимость, чем в исходной реализации 802.1D"
@@ -89,24 +100,29 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Какая технология решает проблему, когда устройство не может получить IPv4-адрес от DHCP-сервера из-за таймеров задержки пересылки STP?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "PortFast",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "BPDU guard",
                     "correct": false,
                     "comment": "При включении на порту коммутатора PortFast позволяет порту сразу перейти из состояния блокировки в состояние пересылки, чтобы запросы клиентов DHCP к DHCP-серверу не задерживались"
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "PVST",
                     "correct": false,
                     "comment": "При включении на порту коммутатора PortFast позволяет порту сразу перейти из состояния блокировки в состояние пересылки, чтобы запросы клиентов DHCP к DHCP-серверу не задерживались"
                 },
                 {
+                    "answerId": "q03-a4",
                     "answer": "MSTP",
                     "correct": false,
                     "comment": "При включении на порту коммутатора PortFast позволяет порту сразу перейти из состояния блокировки в состояние пересылки, чтобы запросы клиентов DHCP к DHCP-серверу не задерживались"
