@@ -5389,9 +5389,14 @@
     "path": "07-dhcpv4/07.03-configure-dhcpv4-client/assets/7.3.3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.3.3.png"
+    "legacy": "7.3.3.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "fea0c6e62f156d44986d315a648e06d8efc70a00109b7dbfdc4ca70dee59b9f0"
+    }
    }
   },
   {
@@ -5540,9 +5545,14 @@
     "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.6.4.png"
+    "legacy": "12.6.4.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "d73eb7a1b5d9f03fa46e73981562a2c87814358831af3f91d742daeaf0f78b32"
+    }
    }
   },
   {
@@ -5559,9 +5569,14 @@
     "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.7.2-1.png"
+    "legacy": "12.7.2-1.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "4a236ba39b6878649391d7f174b1b031be8dcc7f18a9c910f85a3799a29de250"
+    }
    }
   },
   {
@@ -5578,9 +5593,14 @@
     "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.7.2-2.png"
+    "legacy": "12.7.2-2.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "42e9d9a0ee6281b6e9022e2778c2a8555b202091fd29651c69c1d3a977091b26"
+    }
    }
   },
   {
@@ -5597,9 +5617,14 @@
     "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.7.5.png"
+    "legacy": "12.7.5.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "a21eb365abae69fb2bfc84e1d2e59348349f5bbe7d4a9580c9c94830159d529b"
+    }
    }
   },
   {
@@ -5616,9 +5641,14 @@
     "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.7.6.png"
+    "legacy": "12.7.6.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "5e12574dcfef9d9a116ccb0162474185b59ffbe9f8e4fd96023a663c0c52e2d7"
+    }
    }
   },
   {
@@ -5635,9 +5665,14 @@
     "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.7.7.png"
+    "legacy": "12.7.7.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "3444e13528d44bd34a66a08c7789809a365c78ad97bb2d812312c6a54e974855"
+    }
    }
   },
   {
@@ -5666,9 +5701,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.3.png"
+    "legacy": "13.1.3.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "c82bbc274313c33960dacf13cf2b9263e41f1a20808e15e3aa57f9911357645a"
+    }
    }
   },
   {
@@ -5685,9 +5725,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.4-1.jpeg"
+    "legacy": "13.1.4-1.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "d3a9feefb24802efc07db303491d91817adab0ad87e1202c45c04dd41c3aee18"
+    }
    }
   },
   {
@@ -5704,9 +5749,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.4-2.jpeg"
+    "legacy": "13.1.4-2.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "af735173d01b37d3c68a45d7b7d4ec265e19ae16c6ac921a45c4ed04fee55b30"
+    }
    }
   },
   {
@@ -5723,9 +5773,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.4-4.jpeg"
+    "legacy": "13.1.4-4.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "e03efaeff2787465d40ddf39e13dab88270bc8da2f29d017e0242e3c7c5a2868"
+    }
    }
   },
   {
@@ -5766,9 +5821,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.4-6.jpeg"
+    "legacy": "13.1.4-6.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "5ee81d1f96c2c0e74ad9716acc3c2659841f04f945438dfdddb0194b812f3d9f"
+    }
    }
   },
   {
@@ -5785,9 +5845,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.5-1.jpeg"
+    "legacy": "13.1.5-1.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "081feb0c69a37fe30f88fd7887b6cd62829f09ccb1da22244e5ab499dbf7d3f5"
+    }
    }
   },
   {
@@ -5804,9 +5869,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.5-2.jpeg"
+    "legacy": "13.1.5-2.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "258e2f54cf0a5d8bbedd849b96e21bb2429bbcd400401f7d430bb29587e07391"
+    }
    }
   },
   {
@@ -5823,9 +5893,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.5-3.jpeg"
+    "legacy": "13.1.5-3.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "48cdd168efdda21fa7657b7f86e08b9e9821226355b86c763d83fa1ccb21b087"
+    }
    }
   },
   {
@@ -5842,9 +5917,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.5-4.jpeg"
+    "legacy": "13.1.5-4.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "6cd2559a7545df1aed3fa21644b18109142309ecceae7a79c9c4d5e33de1a127"
+    }
    }
   },
   {
@@ -5861,9 +5941,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.5-5.jpeg"
+    "legacy": "13.1.5-5.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "e83c2382e1b19f9930b058714cb5301a15793340b28c769cadd1af940a05b447"
+    }
    }
   },
   {
@@ -5880,9 +5965,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.5-6.jpeg"
+    "legacy": "13.1.5-6.jpeg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "bdb8d5a43850651e9593feb42a010deea200af345bf5ebcd0b70d708fc8d334a"
+    }
    }
   },
   {
@@ -5911,9 +6001,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.7.png"
+    "legacy": "13.1.7.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "61ceec698a844702d048141a3ef5578c8279ac3c9e7303606deb371ef6fb05af"
+    }
    }
   },
   {
@@ -5942,9 +6037,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.9.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.9.png"
+    "legacy": "13.1.9.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "df314dce79c248ed4e06bc76545a8c3195a80c7f51ade6b7dac20d801ef35d1d"
+    }
    }
   },
   {
@@ -5961,9 +6061,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.3-1.png"
+    "legacy": "13.2.3-1.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "7c51e712d03cd4bf45c5eccbc3aea003ba14be0c4a318a72ffa17f1d65c05789"
+    }
    }
   },
   {
@@ -5980,9 +6085,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.3-2.png"
+    "legacy": "13.2.3-2.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "dad221c5ba3db4c7e06be56c8ce05c7f9993a3aaf2544a9b4644bcca2fe4f8e2"
+    }
    }
   },
   {
@@ -5999,9 +6109,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.4.png"
+    "legacy": "13.2.4.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "41035e861e70d9f1328494c6c5edd799d5ca6a23e00e9bc5c5c976071fe2e716"
+    }
    }
   },
   {
@@ -6018,9 +6133,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.5.png"
+    "legacy": "13.2.5.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "325a9fd43fa4874e95439f671eeb9f6845779fa59a14dc2755c24bb77afd648d"
+    }
    }
   },
   {
@@ -6049,9 +6169,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-2.png"
+    "legacy": "13.2.6-2.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "0392b98a91edd3c6cb42c311c49b1217f3910723656574f12604bd5b72b994b9"
+    }
    }
   },
   {
@@ -6068,9 +6193,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-3.png"
+    "legacy": "13.2.6-3.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "fb450249510feb1203e3ebdcab112f5ccce29b18713fb7ecc5af52700e24c28b"
+    }
    }
   },
   {
@@ -6087,9 +6217,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-4.png"
+    "legacy": "13.2.6-4.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "977ebfe900c305bb9c9af458c22b588d232f40e238e05a0625fc4962e85f593f"
+    }
    }
   },
   {
@@ -6106,9 +6241,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-5.png"
+    "legacy": "13.2.6-5.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "7ee9703dc716bc62c535838adbf0b57c7745090cfcceae23c109fe087b72c9f2"
+    }
    }
   },
   {
@@ -6125,9 +6265,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-6.png"
+    "legacy": "13.2.6-6.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "5dde018cb14126e69b1ff13be983d1c05c2a4307843ab8aba131d4d8cc8035d7"
+    }
    }
   },
   {
@@ -6144,9 +6289,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-7.png"
+    "legacy": "13.2.6-7.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "97ea79447fbb69083cac9f51a2585ff8ea1ae93f9607f7fcb5a56adc053d1d62"
+    }
    }
   },
   {
@@ -6163,9 +6313,14 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-8.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.2.6-8.png"
+    "legacy": "13.2.6-8.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "859fb018d775b742bbc1c9029d6dce92e7b616cc8f0e96c1d63c74e576fde525"
+    }
    }
   },
   {
@@ -6182,9 +6337,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.3-1.jpg"
+    "legacy": "13.3.3-1.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "bb405bfb90e6dc7cbc8ca909ca77031612534ba5306975de9740fd0d205cc767"
+    }
    }
   },
   {
@@ -6201,9 +6361,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.3-2.jpg"
+    "legacy": "13.3.3-2.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "331cf7ea2a7ec0abb5abea7d2e3f920af212e71869b7e0ac319c5680e7c9fdef"
+    }
    }
   },
   {
@@ -6220,9 +6385,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.4-1.jpg"
+    "legacy": "13.3.4-1.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "092c372e76548cd36eac92e22846524ef5e715fcf5cd029c878ad032f8c67e57"
+    }
    }
   },
   {
@@ -6239,9 +6409,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.4-2.jpg"
+    "legacy": "13.3.4-2.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "73adcf2a23319faf2a2d101c2f8508124ee74ca9cf01d06dec2c658fa328af45"
+    }
    }
   },
   {
@@ -6258,9 +6433,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.4-3.jpg"
+    "legacy": "13.3.4-3.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "312a226d7b56b6ffa4c9034c1952266df8c859ce23c625b2fea8009fbdcb014e"
+    }
    }
   },
   {
@@ -6277,9 +6457,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.7-1.jpg"
+    "legacy": "13.3.7-1.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "ab8b170f4f24f06e4c41897e9c84a6aa7009df08a59f2c65e8c4f2d5022c432d"
+    }
    }
   },
   {
@@ -6296,9 +6481,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.7-2.jpg"
+    "legacy": "13.3.7-2.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "07e839c1a7fa9ff46a27090183c5bbada1878f451dbc8d4402a3e11ca706e863"
+    }
    }
   },
   {
@@ -6315,9 +6505,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.7-3.jpg"
+    "legacy": "13.3.7-3.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "6a1ae1b92190d0d9e6e5a02e3e93b2be2a04ad9ad7bc22d4f15de69a6a47fbac"
+    }
    }
   },
   {
@@ -6334,9 +6529,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.7-4.jpg"
+    "legacy": "13.3.7-4.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "4b90755dbc088d71e79f798376026740daeeb2d31c7acb4750b6c58fe59c961f"
+    }
    }
   },
   {
@@ -6353,9 +6553,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.7-5.jpg"
+    "legacy": "13.3.7-5.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "c0c74af649855e9ea7559e2cd81070c2acf2849220e9fb7ec6b60ba7dfb477ab"
+    }
    }
   },
   {
@@ -6372,9 +6577,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.7-6.jpg"
+    "legacy": "13.3.7-6.jpg",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "80d90b202cda276f1baedc26e3efa3e4e88943b824fa69f42a0eb4858f6b8ca9"
+    }
    }
   },
   {
@@ -6391,9 +6601,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.9-1.png"
+    "legacy": "13.3.9-1.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "c5a42a59450d1a6f3e68dba134cb964d14415d2affd3813c42aa3dc1bec3c9e7"
+    }
    }
   },
   {
@@ -6410,9 +6625,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.9-2.png"
+    "legacy": "13.3.9-2.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "b4bf63498f2ec059d9ee0cfe9bd86fe335c0d086f90925ef55f16bdb0d77daf2"
+    }
    }
   },
   {
@@ -6429,9 +6649,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.9-3.png"
+    "legacy": "13.3.9-3.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "9bad7d3acf4f8677ce3e9b62bc01cd8b9011f462a28904ba52a8e064c349b5ef"
+    }
    }
   },
   {
@@ -6448,9 +6673,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.9-4.png"
+    "legacy": "13.3.9-4.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "0041c944b51f4facc3ae22bfb6651301cfc97231065b7952446a1c5ff5e4ce3d"
+    }
    }
   },
   {
@@ -6467,9 +6697,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.9-5.png"
+    "legacy": "13.3.9-5.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "db6856ecb8a41dc0282b51629af47eb8ad19f277be041a8e3d77042a16d3465c"
+    }
    }
   },
   {
@@ -6486,9 +6721,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.11-1.png"
+    "legacy": "13.3.11-1.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "8d38e211600641269afbaae92313feae0414bb52ba4e1516678c780bc860a33c"
+    }
    }
   },
   {
@@ -6505,9 +6745,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.11-2.png"
+    "legacy": "13.3.11-2.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "f3a9dcc02f564852766db8174eb84ca452362bbb3b9e0346936c01ca9b41aab4"
+    }
    }
   },
   {
@@ -6524,9 +6769,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.11-3.png"
+    "legacy": "13.3.11-3.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "1d64595d61a79dfd84f6b77b723796c6d299024b6fd8dca881a3f293746dc105"
+    }
    }
   },
   {
@@ -6543,9 +6793,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.11-4.png"
+    "legacy": "13.3.11-4.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "f877674c1c9a50b70c6bbde55f2289f1f05742a911e71dc81770ce8c632a3c03"
+    }
    }
   },
   {
@@ -6562,9 +6817,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.11-5.png"
+    "legacy": "13.3.11-5.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "ef5a290394ab0c8e8417ee6407eea10f87361825c59a5cfea6df84a315809687"
+    }
    }
   },
   {
@@ -6581,9 +6841,14 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.3.11-6.png"
+    "legacy": "13.3.11-6.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "72c019d1df5f822fa79b22671232fec289a335efa2efa3097f284a661d90fcb7"
+    }
    }
   },
   {
@@ -6612,9 +6877,14 @@
     "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.4-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.4.4-2.png"
+    "legacy": "13.4.4-2.png",
+    "synced": {
+     "figmaVersion": "2412219307514478185",
+     "at": "2026-10-20T01:19:46Z",
+     "sha256": "7eb2b128efba93a3ea0183a530425960bcbcebfa2d3daac2aee270a02f1f94a7"
+    }
    }
   }
  ]
