@@ -7528,8 +7528,8 @@
     "legacy": "4.png",
     "synced": {
      "figmaVersion": "2412572938496201544",
-     "at": "2026-10-20T23:24:00Z",
-     "sha256": "6db937d9c2d96c15ef77684ebb208a0dd2bc48380c2ee516c9ed68584e2100cf"
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "fcfdd6b19ed6d7a82e8fb15b88bf9d1f4b52b828491fcc06f96120a34aaecacf"
     }
    }
   },
@@ -7555,6 +7555,359 @@
      "figmaVersion": "2412572938496201544",
      "at": "2026-10-20T23:24:00Z",
      "sha256": "1978b54dbb591d48f5a055f46a6759d47d2af4070b7dafa0d9a11a588d3a68e6"
+    }
+   }
+  },
+  {
+   "id": "ccna2-llhbp7p",
+   "kind": "illustration",
+   "display": {
+    "key": "14.6.1"
+   },
+   "claim": "Таблица маршрутизации R1: подключенные сети 192.168.10.0/24 (G0/0), 192.168.11.0/24 (G0/1) и 209.165.200.224/30 (Serial0/0/0) и статический маршрут по умолчанию через 209.165.200.226.",
+   "figma": {
+    "nodeId": "5972:11136",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.06-exam/assets/1.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "1.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "bcb2e45c838e67c3a466d4a4023f1d39c3054fa495066509d46068745dbfde43"
+    }
+   }
+  },
+  {
+   "id": "ccna2-t2cb5jq",
+   "kind": "illustration",
+   "display": {
+    "key": "14.6.2"
+   },
+   "claim": "ПК A подключен через коммутатор S1 к маршрутизатору R1, который последовательным каналом через облако WAN связан с сервером B; у каждого устройства подписаны MAC- и IPv4-адрес (сервер B — 192.168.12.16).",
+   "figma": {
+    "nodeId": "5972:11139",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.06-exam/assets/2.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "2.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "943d49519a0da524d3dab8094623d765a23ab5a3d2516b19eff04386b32f3f82"
+    }
+   }
+  },
+  {
+   "id": "ccna2-r4stu5q",
+   "kind": "illustration",
+   "display": {
+    "key": "14.6.4"
+   },
+   "claim": "Таблица маршрутизации IPv6 маршрутизатора R1: маршрут к 2001:DB8:CAFE:4::/64 получен по RIP с административным расстоянием 120, маршрут к 2001:DB8:CAFE:3::/64 — по OSPF (110).",
+   "figma": {
+    "nodeId": "5972:11231",
+    "page": "CCNA2 · 14 routing-concepts"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.06-exam/assets/4.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "ddbb5f4acb2af193d35c8c1c35faa767e347b523cf6de36b0b88d174e4fafbe4"
+    }
+   }
+  },
+  {
+   "id": "ccna2-go5kpag",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.10"
+   },
+   "claim": "Интерфейс G0/1 маршрутизатора R1 (fe80::1) подключен к интерфейсу G0/0 маршрутизатора R2 (fe80::2); R2 подключен последовательным каналом S0/0/0 к интернет-провайдеру по сети 2001:db8:32::/64.",
+   "figma": {
+    "nodeId": "5975:10077",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/10.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "10.gif",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "b8913a7cc315876d79e9629ccd612ea5bff0672c747dc6b681238938db2b3b58"
+    }
+   }
+  },
+  {
+   "id": "ccna2-irj2ner",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.12"
+   },
+   "claim": "Маршрутизатор HQ подключен последовательными каналами к основному интернет-провайдеру через S0/0/0 (203.0.113.25/30) и к резервному через S0/1/0 (64.100.210.82/30), а также к маршрутизаторам Филиал1 и Филиал2.",
+   "figma": {
+    "nodeId": "5975:10132",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/12.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "12.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "298731c9d0c6e877727b92594b31d508d9fde99455f9a8692be38e3770d683a3"
+    }
+   }
+  },
+  {
+   "id": "ccna2-ihgqyn5",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.13"
+   },
+   "claim": "Маршрутизатор Alta подключен к Интернету через S0/0/0, к маршрутизатору Park — через S0/0/1 (192.168.14.1/24, у Park — 192.168.14.2/24); к Fa0/0 Alta подключена сеть 172.16.67.0/24, к Fa0/0 Park — сеть 10.0.234.0/24.",
+   "figma": {
+    "nodeId": "5975:10211",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/13.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "13.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "7c0f57e3a9fcc26dbf0f2c8150283dce013660e9121546d1bbfa70f64197a40d"
+    }
+   }
+  },
+  {
+   "id": "ccna2-pjopcxx",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.16"
+   },
+   "claim": "Таблица маршрутизации IPv6 маршрутизатора R1 содержит статический маршрут по умолчанию через Serial0/0/0 и статический маршрут к узлу 2001:DB8:CAFE:4::1/128.",
+   "figma": {
+    "nodeId": "5975:10300",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/16.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "16.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "a405454105d10ef0a65a91bfac093f0a93c703779eb100868c166161e47f6e93"
+    }
+   }
+  },
+  {
+   "id": "ccna2-e7daexn",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.23"
+   },
+   "claim": "PC1 подключен через S1 к интерфейсу G0/0 маршрутизатора R1 (сеть 2001:db8:10:12::/64), R1 (S0/0/1) и R2 (S0/0/0) соединены последовательным каналом 2001:db8:32::/64, PC2 подключен через S2 к G0/0 маршрутизатора R2 (сеть 2001:db8:10:11::/64).",
+   "figma": {
+    "nodeId": "5975:10303",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/23.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "23.gif",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "f49126da9b8980a71e8518b2a6d0210d7f9d00eb273e4faffb5e9a7bd9357ef8"
+    }
+   }
+  },
+  {
+   "id": "ccna2-sq7hzni",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.24"
+   },
+   "claim": "Таблица маршрутизации R1: маршрут к 172.16.1.0/24 получен по RIP (административное расстояние 120) через 10.0.0.2, маршрут по умолчанию — через Serial0/0/0.",
+   "figma": {
+    "nodeId": "5975:10414",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/24.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "24.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "08791fa53fd9a56bcb3067fc1c5d0ef35685e780392f35a18f88e9aab7bddcfc"
+    }
+   }
+  },
+  {
+   "id": "ccna2-hmhc5vv",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.5"
+   },
+   "claim": "Маршрутизаторы R1 (S0/0/1, ::1) и R2 (S0/0/0, ::2) соединены последовательным каналом 2001:db8:1:3::/64; к R1 подключены сети 2001:db8:1:1::/64 и 2001:db8:1:2::/64, к R2 — сеть 2001:db8:1:4::/64.",
+   "figma": {
+    "nodeId": "5975:10417",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/5.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "5.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "ff6568ae180e228db3163de71f13db70d2691dd2182f3e3dd3a955bb59aeeb70"
+    }
+   }
+  },
+  {
+   "id": "ccna2-akjohqs",
+   "kind": "illustration",
+   "display": {
+    "key": "15.7.6"
+   },
+   "claim": "Маршрутизаторы A, B и C соединены последовательно: A (.1) – B (.2) по сети 192.168.3.0/24, B (.1) – C (.2) по сети 192.168.5.0/24; к ним подключены LAN A 192.168.2.0/24, LAN B 192.168.6.0/24 и LAN C 192.168.4.0/24.",
+   "figma": {
+    "nodeId": "5975:10508",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "15-ip-static-routing/15.07-exam/assets/6.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "6.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "c47090a0b223d6f16645b9df214024364dddded8f8ae2bb5f7bd4ed6418dbfd8"
+    }
+   }
+  },
+  {
+   "id": "ccna2-db3wtv2",
+   "ref": "ccna1-sybqpia",
+   "kind": "illustration",
+   "display": {
+    "key": "14.6.17"
+   },
+   "claim": "Узел A и сервер B находятся в разных сетях: путь между ними проходит через коммутатор A, маршрутизатор A, последовательный канал, маршрутизатор B и коммутатор B.",
+   "figma": {
+    "nodeId": "5923:11467",
+    "page": "CCNA1 · 03 protocols-and-models"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.06-exam/assets/17.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "17.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "0db88034f8c0247b998cb9ded6c03d82164790a2e7003f8847c237684cb860e1"
+    }
+   }
+  },
+  {
+   "id": "ccna2-povuwqu",
+   "ref": "ccna2-sq7hzni",
+   "kind": "illustration",
+   "display": {
+    "key": "14.6.22"
+   },
+   "claim": "Таблица маршрутизации R1: маршрут к 172.16.1.0/24 получен по RIP (административное расстояние 120) через 10.0.0.2, маршрут по умолчанию — через Serial0/0/0.",
+   "figma": {
+    "nodeId": "5975:10414",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "14-routing-concepts/14.06-exam/assets/22.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "22.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "08791fa53fd9a56bcb3067fc1c5d0ef35685e780392f35a18f88e9aab7bddcfc"
+    }
+   }
+  },
+  {
+   "id": "ccna2-msplzgl",
+   "ref": "ccna2-pjopcxx",
+   "kind": "illustration",
+   "display": {
+    "key": "17.0.14"
+   },
+   "claim": "Таблица маршрутизации IPv6 маршрутизатора R1 содержит статический маршрут по умолчанию через Serial0/0/0 и статический маршрут к узлу 2001:DB8:CAFE:4::1/128.",
+   "figma": {
+    "nodeId": "5975:10300",
+    "page": "CCNA2 · 15 ip-static-routing"
+   },
+   "out": {
+    "path": "final-exam/assets/14.svg",
+    "format": "svg"
+   },
+   "status": "synced",
+   "provenance": {
+    "legacy": "14.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "a405454105d10ef0a65a91bfac093f0a93c703779eb100868c166161e47f6e93"
     }
    }
   }

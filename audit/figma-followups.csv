@@ -1,7 +1,5 @@
 path,asset_or_figure,what_is_shown,should_become,reason
 final-exam/learn-metadata.json,assets/8.png,«domain-name cisco.com» в show running-config,«nsalab.local» (словарь ADR),растр с конфигурацией
-14-routing-concepts/14.06-exam/learn-metadata.json,"assets/2.jpg, 3.jpg, 8.png, 17.png",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
-15-ip-static-routing/15.07-exam/learn-metadata.json,"assets/5.jpg, 6.png, 7.png, 10.gif, 12.jpg, 13.png, 20.png, 21.gif, 23.gif",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
 16-troubleshoot-static-and-default-routes/16.03-exam/learn-metadata.json,"assets/14.png, 15.gif, 18.jpg, 19.gif",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
 final-exam/learn-metadata.json,"assets/1.png, 3.png, 4.PNG, 5.png, 12.gif, 13.png, 15.png",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
 12-wlan-concepts/12.04-capwap-operation/README.md,assets/12.4.5.svg (figma 4191:445978),подпись «FlexConnect AP» у точки доступа в филиале,нейтральная подпись вместе с переписанным разделом 12.4.5,"иллюстрация; раздел 12.4.5 о фирменной функции FlexConnect оставлен на переписывание (ярус 3, модули WLAN отложены — ADR)"

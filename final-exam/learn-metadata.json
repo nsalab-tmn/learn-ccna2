@@ -1832,7 +1832,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/13.png) Посмотрите на изображение. Таблица маршрутизации для R2 выглядит следующим образом:\n\n```\nGateway of last resort is not set\n\n10.0.0.0/30 is subnetted, 2 subnets\nC 10.0.0.0 is directly connected, Serial0/0/0\nC 10.0.0.4 is directly connected, Serial0/0/1\n192.168.10.0/26 is subnetted, 3 subnets\nS 192.168.10.0 is directly connected, Serial0/0/0\nC 192.168.10.64 is directly connected, FastEthernet0/0\nS 192.168.10.128 [1/0] via 10.0.0.6\n```\n\nЧто маршрутизатор R2 сделает с пакетом, предназначенным для 192.168.10.129?"
+            "question": "Таблица маршрутизации маршрутизатора R2 выглядит следующим образом:\n\n```\nGateway of last resort is not set\n\n10.0.0.0/30 is subnetted, 2 subnets\nC 10.0.0.0 is directly connected, Serial0/0/0\nC 10.0.0.4 is directly connected, Serial0/0/1\n192.168.10.0/26 is subnetted, 3 subnets\nS 192.168.10.0 is directly connected, Serial0/0/0\nC 192.168.10.64 is directly connected, FastEthernet0/0\nS 192.168.10.128 [1/0] via 10.0.0.6\n```\n\nЧто маршрутизатор R2 сделает с пакетом, предназначенным для 192.168.10.129?"
         },
         {
             "questionId": "q53",
@@ -1863,7 +1863,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/14.png) Посмотрите на изображение. Как маршрут узла 2001:DB8:CAFE:4::1/128 был занесен в таблицу маршрутизации?"
+            "question": "![](./assets/14.svg) Посмотрите на изображение. Как маршрут узла 2001:DB8:CAFE:4::1/128 был занесен в таблицу маршрутизации?"
         },
         {
             "questionId": "q54",
