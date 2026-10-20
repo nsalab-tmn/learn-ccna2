@@ -5317,9 +5317,14 @@
     "path": "01-basic-device-configuration/01.01-configure-a-switch-with-initial-settings/assets/1.1.3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.1.3.png"
+    "legacy": "1.1.3.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "6cee873c9bf0e1eaa9eaaf23535a538c6c870bc96bca9b8ad321063e72e67c75"
+    }
    }
   },
   {
@@ -5336,9 +5341,14 @@
     "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.3.1.png"
+    "legacy": "1.3.1.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "dbda6ac07dc80361f47ec2f7b8141871eaff2593d007da0dd919861f5f4416e0"
+    }
    }
   },
   {
@@ -5355,9 +5365,14 @@
     "path": "01-basic-device-configuration/01.03-secure-remote-access/assets/1.3.2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.3.2.png"
+    "legacy": "1.3.2.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "80a437f9cb325e2037f6664a5fb4b21799fadf30b0377b1cd96d3d91bef1158f"
+    }
    }
   },
   {
@@ -5386,9 +5401,14 @@
     "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "8.1.1-1.png"
+    "legacy": "8.1.1-1.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "b4762af5b9f185608ad1d44a5ec64cf2ebb6cd7684acc2725acbf5ac35dce346"
+    }
    }
   },
   {
@@ -5405,9 +5425,14 @@
     "path": "08-slaac-and-dhcpv6-concepts/08.01-ipv6-global-unicast-address-assigment/assets/8.1.1-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "8.1.1-2.png"
+    "legacy": "8.1.1-2.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "5557a44e68a75df60d05ce0e0c7bd48aea422ee006d5527e799c9b8addeb5cad"
+    }
    }
   },
   {
@@ -5436,9 +5461,14 @@
     "path": "10-lan-security-concepts/10.02-access-control/assets/10.2.2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "10.2.2.png"
+    "legacy": "10.2.2.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "8900bf6513d54f67150f26617a43d23064eb62ac46283277ed0fd78d476adb35"
+    }
    }
   },
   {
@@ -5455,9 +5485,14 @@
     "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.10.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "10.5.10.png"
+    "legacy": "10.5.10.png",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "064f15792f757478c57d30b4030ef04ba56820e3dcf490db6e39a685f8ab50cb"
+    }
    }
   },
   {
@@ -5642,9 +5677,14 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.1.4-5.jpeg"
+    "legacy": "13.1.4-5.jpeg",
+    "synced": {
+     "figmaVersion": "2412212482874515719",
+     "at": "2026-10-20T00:54:13Z",
+     "sha256": "d61781663fcb7e382117822fc3c5166ccce14bfb04b3719b04d4688e2277d1f0"
+    }
    }
   },
   {
