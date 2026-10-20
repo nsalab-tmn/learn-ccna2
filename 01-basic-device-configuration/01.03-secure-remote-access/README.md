@@ -29,12 +29,27 @@ Telnet использует TCP-порт 23. Он является более р
 <!-- 1.3.3 -->
 ## Убедитесь, что коммутатор поддерживает SSH
 
-Для использования протокола SSH на коммутаторах Catalyst 2960 требуется версия операционной системы Cisco IOS с функциями и возможностями криптографии (шифрования). Используйте команду **show version** на коммутаторе, чтобы увидеть, какая версия IOS работает в данный момент. Имя файла IOS, которое включает комбинацию «k9» поддерживает криптографические (зашифрованные) функции и возможности. В примере показаны выходные данные команды **show version**.
+Протокол SSH работает только в той ОС, которая поддерживает криптографические функции (шифрование): для одной модели коммутатора производитель обычно выпускает образы ОС с такими функциями и без них. Какой образ ОС и какая версия работают на коммутаторе, показывает команда **show version** — строки с названием и версией ОС и строка `System image file`.
 
 ```
-S1# show version
-Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE7, RELEASE SOFTWARE (fc1)
+S1#show version
+NSALAB NetOS Software, NS01 Software (NS01-NETOS-M), Version 0.1.0, RELEASE SOFTWARE
+Copyright (c) 2026 NSALAB
+
+S1 uptime is 0 minutes
+System returned to ROM by power-on
+System image file is "flash0:ns01-netos-0.1.0.bin"
+
+NSALAB NS01 (revision 1.0) with 65536K bytes of memory.
+Processor board ID NSA00000001
+24 FastEthernet interfaces
+2 Gigabit Ethernet interfaces
+256K bytes of non-volatile configuration memory.
+
+Configuration register is 0x2102
 ```
+
+Проверить поддержку SSH напрямую позволяет команда **show ip ssh**.
 
 <!-- 1.3.4 -->
 ## Конфигурация SSH
