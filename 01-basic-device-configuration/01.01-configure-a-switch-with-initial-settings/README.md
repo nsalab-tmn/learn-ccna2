@@ -40,7 +40,7 @@ S1(config)# boot system flash:/c2960-lanbasek9-mz.150-2.SE/c2960-lanbasek9-mz.15
 
 На рисунке показаны светодиоды и кнопка Mode на передней панели коммутатора.
 
-![](./assets/1.1.3.png)
+![](./assets/1.1.3.svg)
 
 
 <!--
