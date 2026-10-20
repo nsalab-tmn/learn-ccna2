@@ -3,8 +3,8 @@
     "shortName": "ccna2.vlans.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: обзор технологии VLAN, виртуальные локальные сети в среде с несколькими коммутаторами, настройка VLAN, конфигурация магистральных каналов, протокол динамического согласования магистрали (DTP).",
-    "difficulty": 1,
-    "duration": "PT0H59M",
+    "difficulty": 3,
+    "duration": "PT1H2M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -30,7 +30,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 39 questions covering module 3; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 41 questions covering module 3; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -1101,6 +1101,50 @@
                     "answer": "позволяет реализовать native VLAN 30 на Fa0/5.",
                     "correct": false,
                     "comment": "Тема 3.4.0. - Команда switchport trunk allowed vlan 30 разрешает трафик, помеченный VLAN 30, через магистральный порт. Любая VLAN, не указанная в этой команде, не будет разрешена на этом магистральном порту"
+                }
+            ]
+        },
+        {
+            "question": "Администратор выполняет команду **show vlan brief** на коммутаторе, и выходные данные показывают, что все порты в настоящее время назначены VLAN по умолчанию. Какой вывод можно сделать?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "существует риск безопасности, поскольку управляющая VLAN и native VLAN одинаковы",
+                    "correct": true
+                },
+                {
+                    "answer": "весь трафик пользовательских данных будет отделен и защищен от других пользователей",
+                    "correct": false
+                },
+                {
+                    "answer": "коммутатор не может управляться удаленно с помощью Telnet или SSH до тех пор, пока не будет создана управляющая VLAN",
+                    "correct": false
+                },
+                {
+                    "answer": "трафик управления уровня 2 не связан ни с одной VLAN",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Какая характеристика описывает настройку виртуальных локальных сетей данных или голосовых данных в сети?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "порт коммутатора, настроенный в режиме доступа, может одновременно принадлежать только одной VLAN данных",
+                    "correct": true
+                },
+                {
+                    "answer": "голосовые VLAN настраиваются на магистральном канале между IP-телефоном и коммутатором",
+                    "correct": false
+                },
+                {
+                    "answer": "команда **switchport access vlan** должна указать VLAN, настроенную в настоящее время в файле vlan.dat",
+                    "correct": false
+                },
+                {
+                    "answer": "для VLAN данных и голосовых сетей используется различный диапазон значений идентификаторов VLAN",
+                    "correct": false
                 }
             ]
         }

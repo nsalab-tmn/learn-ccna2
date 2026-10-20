@@ -3,8 +3,8 @@
     "shortName": "ccna2.stp.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: назначение протокола STP, принципы работы STP, эволюция протоколов STP.",
-    "difficulty": 1,
-    "duration": "PT1H4M",
+    "difficulty": 3,
+    "duration": "PT1H6M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -28,7 +28,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 40 questions covering module 5; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 41 questions covering module 5; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -1155,6 +1155,28 @@
                     "answer": "настройка маршрутизатора с полной базой данных MAC-адресов, чтобы гарантировать, что все кадры могут быть перенаправлены в нужное место назначения",
                     "correct": false,
                     "comment": "Тема 5.1.0. - Резервирование устраняет единую точку отказа в сети за счет нескольких физических кабельных путей между коммутаторами"
+                }
+            ]
+        },
+        {
+            "question": "Каковы преимущества PortFast, настроенного на порту коммутатора?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "позволяет порту избежать 30-секундной задержки доступа к сети путем немедленного перехода из отключенного состояния в состояние пересылки",
+                    "correct": false
+                },
+                {
+                    "answer": "позволяет избежать создания петли связующего дерева с другими напрямую подключенными коммутаторами",
+                    "correct": false
+                },
+                {
+                    "answer": "минимизирует время, в течение которого магистральные порты должны ждать схождения связующего дерева",
+                    "correct": false
+                },
+                {
+                    "answer": "позволяет устройству, подключенному к этому порту, получать доступ к сети, не дожидаясь схождения STP в каждой VLAN",
+                    "correct": true
                 }
             ]
         }
