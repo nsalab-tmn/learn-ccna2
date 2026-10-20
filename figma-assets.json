@@ -7528,8 +7528,8 @@
     "legacy": "4.png",
     "synced": {
      "figmaVersion": "2412572938496201544",
-     "at": "2026-10-20T23:24:00Z",
-     "sha256": "6db937d9c2d96c15ef77684ebb208a0dd2bc48380c2ee516c9ed68584e2100cf"
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "fcfdd6b19ed6d7a82e8fb15b88bf9d1f4b52b828491fcc06f96120a34aaecacf"
     }
    }
   },
@@ -7573,9 +7573,14 @@
     "path": "14-routing-concepts/14.06-exam/assets/1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.jpg"
+    "legacy": "1.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "bcb2e45c838e67c3a466d4a4023f1d39c3054fa495066509d46068745dbfde43"
+    }
    }
   },
   {
@@ -7593,9 +7598,14 @@
     "path": "14-routing-concepts/14.06-exam/assets/2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "2.jpg"
+    "legacy": "2.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "943d49519a0da524d3dab8094623d765a23ab5a3d2516b19eff04386b32f3f82"
+    }
    }
   },
   {
@@ -7613,9 +7623,14 @@
     "path": "14-routing-concepts/14.06-exam/assets/4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.png"
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "ddbb5f4acb2af193d35c8c1c35faa767e347b523cf6de36b0b88d174e4fafbe4"
+    }
    }
   },
   {
@@ -7633,9 +7648,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/10.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "10.gif"
+    "legacy": "10.gif",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "b8913a7cc315876d79e9629ccd612ea5bff0672c747dc6b681238938db2b3b58"
+    }
    }
   },
   {
@@ -7653,9 +7673,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/12.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "12.jpg"
+    "legacy": "12.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "298731c9d0c6e877727b92594b31d508d9fde99455f9a8692be38e3770d683a3"
+    }
    }
   },
   {
@@ -7673,9 +7698,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/13.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "13.png"
+    "legacy": "13.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "7c0f57e3a9fcc26dbf0f2c8150283dce013660e9121546d1bbfa70f64197a40d"
+    }
    }
   },
   {
@@ -7693,9 +7723,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/16.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "16.png"
+    "legacy": "16.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "a405454105d10ef0a65a91bfac093f0a93c703779eb100868c166161e47f6e93"
+    }
    }
   },
   {
@@ -7713,9 +7748,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/23.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "23.gif"
+    "legacy": "23.gif",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "f49126da9b8980a71e8518b2a6d0210d7f9d00eb273e4faffb5e9a7bd9357ef8"
+    }
    }
   },
   {
@@ -7733,9 +7773,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/24.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "24.png"
+    "legacy": "24.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "08791fa53fd9a56bcb3067fc1c5d0ef35685e780392f35a18f88e9aab7bddcfc"
+    }
    }
   },
   {
@@ -7753,9 +7798,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "5.jpg"
+    "legacy": "5.jpg",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "ff6568ae180e228db3163de71f13db70d2691dd2182f3e3dd3a955bb59aeeb70"
+    }
    }
   },
   {
@@ -7773,9 +7823,14 @@
     "path": "15-ip-static-routing/15.07-exam/assets/6.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "6.png"
+    "legacy": "6.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "c47090a0b223d6f16645b9df214024364dddded8f8ae2bb5f7bd4ed6418dbfd8"
+    }
    }
   },
   {
@@ -7794,9 +7849,14 @@
     "path": "14-routing-concepts/14.06-exam/assets/17.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "17.png"
+    "legacy": "17.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "0db88034f8c0247b998cb9ded6c03d82164790a2e7003f8847c237684cb860e1"
+    }
    }
   },
   {
@@ -7815,9 +7875,14 @@
     "path": "14-routing-concepts/14.06-exam/assets/22.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "22.png"
+    "legacy": "22.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "08791fa53fd9a56bcb3067fc1c5d0ef35685e780392f35a18f88e9aab7bddcfc"
+    }
    }
   },
   {
@@ -7836,9 +7901,14 @@
     "path": "final-exam/assets/14.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "14.png"
+    "legacy": "14.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:36:51Z",
+     "sha256": "a405454105d10ef0a65a91bfac093f0a93c703779eb100868c166161e47f6e93"
+    }
    }
   }
  ]
