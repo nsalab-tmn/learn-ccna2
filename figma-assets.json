@@ -7423,9 +7423,14 @@
     "path": "08-slaac-and-dhcpv6-concepts/08.05-exam/assets/4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.png"
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "a564c22ef6b32021a012bfdbdd2b3fa90421f63cb97062f7a83640e5ca9b8600"
+    }
    }
   },
   {
@@ -7443,9 +7448,14 @@
     "path": "08-slaac-and-dhcpv6-concepts/08.05-exam/assets/5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "5.png"
+    "legacy": "5.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "9e4323c91cd7aaeec1f48c6eb70a5e0b288970e309895cf48209f782e5b2e63e"
+    }
    }
   },
   {
@@ -7463,9 +7473,14 @@
     "path": "09-fhrp-concepts/09.04-exam/assets/9.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "9.png"
+    "legacy": "9.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "c44c3de64f2009a15a7ca43a570095949dc531711593b234e3374f2e87aebef2"
+    }
    }
   },
   {
@@ -7483,9 +7498,14 @@
     "path": "11-switch-security-configuration/11.07-exam/assets/1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "1.png"
+    "legacy": "1.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "e27200cbab691f662784ded4b5175598d5e40d402c0f9942bc1b923acece9026"
+    }
    }
   },
   {
@@ -7503,9 +7523,14 @@
     "path": "11-switch-security-configuration/11.07-exam/assets/4.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.png"
+    "legacy": "4.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "6db937d9c2d96c15ef77684ebb208a0dd2bc48380c2ee516c9ed68584e2100cf"
+    }
    }
   },
   {
@@ -7523,9 +7548,14 @@
     "path": "11-switch-security-configuration/11.07-exam/assets/5.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "5.png"
+    "legacy": "5.png",
+    "synced": {
+     "figmaVersion": "2412572938496201544",
+     "at": "2026-10-20T23:24:00Z",
+     "sha256": "1978b54dbb591d48f5a055f46a6759d47d2af4070b7dafa0d9a11a588d3a68e6"
+    }
    }
   }
  ]
