@@ -37,24 +37,29 @@
     "passingScore": 100,
     "questions": [
         {
+            "questionId": "q01",
             "question": "Администратору нужно увидеть в выводе show running-config только раздел с настройками линий vty целиком. Какой параметр фильтрации указать после вертикальной черты?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q01-a1",
                     "answer": "section",
                     "correct": true
                 },
                 {
+                    "answerId": "q01-a2",
                     "answer": "include",
                     "correct": false,
                     "comment": "Параметр include выводит только строки, которые соответствуют фильтру, а не весь раздел. Целый раздел, который начинается с заданного фильтра, показывает параметр section: show running-config | section line vty."
                 },
                 {
+                    "answerId": "q01-a3",
                     "answer": "begin",
                     "correct": false,
                     "comment": "Параметр begin выводит все строки от первой подходящей до конца вывода, а не один раздел. Целый раздел показывает параметр section: show running-config | section line vty."
                 },
                 {
+                    "answerId": "q01-a4",
                     "answer": "exclude",
                     "correct": false,
                     "comment": "Параметр exclude, наоборот, убирает строки, которые соответствуют фильтру. Целый раздел показывает параметр section: show running-config | section line vty."
@@ -62,19 +67,23 @@
             ]
         },
         {
+            "questionId": "q02",
             "question": "Что выведет команда show ip interface brief | exclude unassigned?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q02-a1",
                     "answer": "Все строки вывода, кроме строк со словом unassigned: интерфейсы без IP-адреса будут скрыты",
                     "correct": true
                 },
                 {
+                    "answerId": "q02-a2",
                     "answer": "Только строки интерфейсов, которым не назначен IP-адрес",
                     "correct": false,
                     "comment": "Такой результат дал бы параметр include. Параметр exclude исключает строки, которые соответствуют фильтру, поэтому интерфейсы со словом unassigned будут скрыты."
                 },
                 {
+                    "answerId": "q02-a3",
                     "answer": "Все строки, начиная с первого интерфейса без IP-адреса",
                     "correct": false,
                     "comment": "Так работает параметр begin. Параметр exclude исключает строки, которые соответствуют фильтру, поэтому интерфейсы со словом unassigned будут скрыты."
@@ -82,19 +91,23 @@
             ]
         },
         {
+            "questionId": "q03",
             "question": "Как получить IPv6-вариант команд проверки show ip interface brief, show ip interface и show ip route?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q03-a1",
                     "answer": "Заменить в команде ip на ipv6, например show ipv6 interface brief",
                     "correct": true
                 },
                 {
+                    "answerId": "q03-a2",
                     "answer": "Ничего менять не нужно: эти команды сразу показывают и IPv4, и IPv6",
                     "correct": false,
                     "comment": "Команды с ip показывают сведения IPv4. Для IPv6 в каждой из них ip заменяют на ipv6, например show ipv6 route."
                 },
                 {
+                    "answerId": "q03-a3",
                     "answer": "Добавить в конец команды слово ipv6, например show ip route ipv6",
                     "correct": false,
                     "comment": "Ключевое слово ставится не в конец команды. В каждой команде проверки ip заменяют на ipv6, например show ipv6 route."
@@ -102,24 +115,29 @@
             ]
         },
         {
+            "questionId": "q04",
             "question": "После настройки и включения трех интерфейсов маршрутизатора R1 команда show ip route выводит только записи с кодами C и L, а шлюз последней надежды не задан. Что означают эти записи?",
             "answerType": "singleChoice",
             "answers": [
                 {
+                    "answerId": "q04-a1",
                     "answer": "Для каждого интерфейса — напрямую подключенную сеть (C) и локальный адрес самого интерфейса (L)",
                     "correct": true
                 },
                 {
+                    "answerId": "q04-a2",
                     "answer": "Статические маршруты к удаленным сетям",
                     "correct": false,
                     "comment": "Статические маршруты помечаются кодом S, а на R1 они не настроены. Коды C и L означают напрямую подключенную сеть каждого интерфейса и локальный адрес самого интерфейса."
                 },
                 {
+                    "answerId": "q04-a3",
                     "answer": "Маршруты по умолчанию к соседнему маршрутизатору",
                     "correct": false,
                     "comment": "В выводе сказано, что шлюз последней надежды не задан, то есть маршрута по умолчанию нет. Коды C и L означают напрямую подключенную сеть каждого интерфейса и локальный адрес самого интерфейса."
                 },
                 {
+                    "answerId": "q04-a4",
                     "answer": "Маршруты, полученные по протоколу динамической маршрутизации",
                     "correct": false,
                     "comment": "Протокол динамической маршрутизации на R1 не настроен. Коды C и L означают напрямую подключенную сеть каждого интерфейса и локальный адрес самого интерфейса."
