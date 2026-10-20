@@ -3,8 +3,8 @@
     "shortName": "ccna2.wlan-configuration.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: настройка беспроводных локальных сетей для домашнего офиса, конфигурация беспроводной сети с использованием контроллера, базовая настройка контроллера беспроводной сети, поиск и устранение типовых неисправностей в беспроводных локальных сетях.",
-    "difficulty": 1,
-    "duration": "PT0H38M",
+    "difficulty": 3,
+    "duration": "PT0H42M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -26,7 +26,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 28 questions covering module 13; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 31 questions covering module 13; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -764,6 +764,72 @@
                     "answer": "настроить смешанный режим на точке доступа",
                     "correct": false,
                     "comment": "Тема 13.4.0 - Самый простой способ улучшить производительность беспроводной сети – это разделить беспроводной трафик 802.11n между полосой 2,4 ГГц и полосой 5 ГГц. Сети IEEE 802.11n могут использовать эти две полосы как отдельные беспроводные сети для управления трафиком"
+                }
+            ]
+        },
+        {
+            "question": "Сетевой администратор настраивает безопасность для новых сетей WLAN на WLC. Какой протокол по умолчанию используется для управления ключами аутентификации?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "AES",
+                    "correct": false
+                },
+                {
+                    "answer": "802.11",
+                    "correct": false
+                },
+                {
+                    "answer": "WPA2",
+                    "correct": false
+                },
+                {
+                    "answer": "802.1X",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Сетевой администратор настраивает функцию SNMP на WLC. Задача состоит в том, чтобы добавить SNMP-сервер ловушки, на который этот WLC будет пересылать сообщения журнала SNMP. Какую вкладку следует использовать администратору для добавления информации о сервере ловушек SNMP?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "MONITOR",
+                    "correct": false
+                },
+                {
+                    "answer": "COMMANDS",
+                    "correct": false
+                },
+                {
+                    "answer": "CONTROLLER",
+                    "correct": false
+                },
+                {
+                    "answer": "MANAGEMENT",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "question": "Администратор сети настраивает WLAN с WPA2 Enterprise на WLC. Аутентификация клиента будет обрабатываться RADIUS-сервером. Какую вкладку следует использовать администратору для добавления сведений о сервере RADIUS?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "WLANs",
+                    "correct": false
+                },
+                {
+                    "answer": "WIRELESS",
+                    "correct": false
+                },
+                {
+                    "answer": "SECURITY",
+                    "correct": true
+                },
+                {
+                    "answer": "MANAGEMENT",
+                    "correct": false
                 }
             ]
         }

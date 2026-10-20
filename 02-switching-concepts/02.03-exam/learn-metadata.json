@@ -3,7 +3,7 @@
     "shortName": "ccna2.switching-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: пересылка кадров, коммутационные домены.",
-    "difficulty": 1,
+    "difficulty": 3,
     "duration": "PT0H36M",
     "tags": {
         "$ref": "../../material-tags.json"
