@@ -7198,9 +7198,14 @@
     "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.5-1.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.1.5-1.png"
+    "legacy": "4.1.5-1.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "e142b1023f6a6ad6aa84d3577999e271f692cb60f4eacc76c16837eac74531f2"
+    }
    }
   },
   {
@@ -7218,9 +7223,14 @@
     "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.5-2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.1.5-2.png"
+    "legacy": "4.1.5-2.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "ef873ca59626050ff8d2eab9d47115c210375e9b13705d943b77859a3a6b04c0"
+    }
    }
   },
   {
@@ -7238,9 +7248,14 @@
     "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.5-3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "4.1.5-3.png"
+    "legacy": "4.1.5-3.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "d30b0e6d8708718272deae1ba2b62532b17ad809d51d848cf940ceb0b0fafaee"
+    }
    }
   },
   {
@@ -7258,9 +7273,14 @@
     "path": "04-inter-vlan-routing/04.06-exam/assets/10.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "10.png"
+    "legacy": "10.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "bf50704735a0049c28dffcd6c7a60c3dc99c29c58f4af76b9e954a7c507a496a"
+    }
    }
   },
   {
@@ -7278,9 +7298,14 @@
     "path": "04-inter-vlan-routing/04.06-exam/assets/8.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "8.png"
+    "legacy": "8.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "58d8878998adb9b784d8c23d78d601f0447ab686678218cb9bdc8f3b440add84"
+    }
    }
   },
   {
@@ -7298,9 +7323,14 @@
     "path": "05-stp/05.04-exam/assets/8.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "8.png"
+    "legacy": "8.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "c5dcf3de2b99353805142fb45ef25359d349386a25768a4873941ac1c72562dd"
+    }
    }
   },
   {
@@ -7318,9 +7348,14 @@
     "path": "06-etherchannel/06.05-exam/assets/2.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "2.png"
+    "legacy": "2.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "8d8987c53e149c35ec71114ac1ab76f781d4ab7d1a6e2bee986aa122ce66725c"
+    }
    }
   },
   {
@@ -7338,9 +7373,14 @@
     "path": "06-etherchannel/06.05-exam/assets/3.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "3.png"
+    "legacy": "3.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "10bd164f2e36f94a10eb02e65928ca993c1527f762ab38a2a7bbda330acda099"
+    }
    }
   },
   {
@@ -7358,9 +7398,14 @@
     "path": "06-etherchannel/06.05-exam/assets/7.svg",
     "format": "svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "legacy": "7.png"
+    "legacy": "7.png",
+    "synced": {
+     "figmaVersion": "2412570954211210090",
+     "at": "2026-10-20T23:14:39Z",
+     "sha256": "5bf401d0832f66b71bd86a1e1f6fd9fc8640d268b537390aa5224e87a1902906"
+    }
    }
   }
  ]
