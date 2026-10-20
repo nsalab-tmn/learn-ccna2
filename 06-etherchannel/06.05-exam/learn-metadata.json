@@ -3,7 +3,7 @@
     "shortName": "ccna2.etherchannel.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: принципы работы EtherChannel, настройка EtherChannel, поиск и устранение проблем в работе EtherChannel.",
-    "difficulty": 1,
+    "difficulty": 3,
     "duration": "PT1H5M",
     "tags": {
         "$ref": "../../material-tags.json"

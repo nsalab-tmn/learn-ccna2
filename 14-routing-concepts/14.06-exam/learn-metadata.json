@@ -3,8 +3,8 @@
     "shortName": "ccna2.routing-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: определение пути, пересылка пакетов, обзор базовой конфигурации маршрутизатора, таблица IP-маршрутизации, статическая и динамическая маршрутизация.",
-    "difficulty": 1,
-    "duration": "PT0H56M",
+    "difficulty": 3,
+    "duration": "PT0H59M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -30,7 +30,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 34 questions covering module 14; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 36 questions covering module 14; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -970,6 +970,50 @@
                     "answer": "0.0.0.0/0",
                     "correct": false,
                     "comment": "Тема 14.1.0 - IPv6-адрес и префикс для статического маршрута по умолчанию — ::/0, то есть адрес из одних нулей с длиной префикса 0"
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер изучает таблицу маршрутизации маршрутизатора. Рассмотрим следующую запись таблицы маршрутизации:\n\n```\nS 10.2.2.0/30 [1/0] via 10.1.1.2, 00:00:13, Serial0/0/0\n```\n\nЧто означает Serial0/0/0?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "интерфейс конечного маршрутизатора назначения, напрямую подключенного к 10.1.1.0/24",
+                    "correct": false
+                },
+                {
+                    "answer": "интерфейс маршрутизатора R1, который используется для отправки данных, предназначенных для 10.1.1.0/24",
+                    "correct": true
+                },
+                {
+                    "answer": "интерфейс маршрутизатора R4, через который получено обновление OSPF",
+                    "correct": false
+                },
+                {
+                    "answer": "интерфейс маршрутизатора следующего перехода, который напрямую подключен к сети 10.2.2.0/30",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Таблица маршрутизации маршрутизатора содержит четыре статических маршрута для сети 10.0.0.0. Какой маршрут лучше всего подходит для пакета, поступающего в маршрутизатор с целью 10.16.0.10?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "S 10.0.0.0/8 [1/0] via 202.16.0.2",
+                    "correct": false
+                },
+                {
+                    "answer": "S 10.16.0.0/24 [1/0] via 202.16.0.2",
+                    "correct": true
+                },
+                {
+                    "answer": "S 10.16.0.0/16 is directly connected, GigabitEthernet 0/0",
+                    "correct": false
+                },
+                {
+                    "answer": "S 10.0.0.0/16 is directly connected, GigabitEthernet 0/1",
+                    "correct": false
                 }
             ]
         }

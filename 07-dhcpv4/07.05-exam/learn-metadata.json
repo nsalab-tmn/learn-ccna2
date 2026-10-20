@@ -3,8 +3,8 @@
     "shortName": "ccna2.dhcpv4.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: принципы работы DHCP в сетях IPv4, настройка сервера DHCPv4 на маршрутизаторе, настройка клиента DHCPv4.",
-    "difficulty": 1,
-    "duration": "PT1H8M",
+    "difficulty": 3,
+    "duration": "PT1H11M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -28,7 +28,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "apply",
-            "passes_when": "Learner scores at least 80% on the exam's 42 questions covering module 7; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 44 questions covering module 7; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -1210,6 +1210,54 @@
                     "answer": "MAC-адрес широковещательной рассылки",
                     "correct": false,
                     "comment": "Тема  7.1.0 - Если у клиента DHCPv4 нет IPv4-адреса, сервер DHCPv4 отправит сообщение DHCPOFFER обратно по аппаратному адресу клиента, с которого поступил запрос"
+                }
+            ]
+        },
+        {
+            "question": "Когда оконечное устройство запрашивает службы с сервера DHCPv4, оно получает адрес IPv4 узла и маску подсети. Какие другие адреса IPv4 также обычно предоставляются клиенту DHCPv4? (верны два варианта)",
+            "answerType": "multiChoice",
+            "answers": [
+                {
+                    "answer": "адрес шлюза LAN по умолчанию",
+                    "correct": true
+                },
+                {
+                    "answer": "адрес DNS-сервера",
+                    "correct": true
+                },
+                {
+                    "answer": "адрес NTP-сервера",
+                    "correct": false
+                },
+                {
+                    "answer": "локальный адрес веб-сервера HTTP",
+                    "correct": false
+                },
+                {
+                    "answer": "автоматический частный IPv4 адрес",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "question": "Сетевой инженер настраивает маршрутизатор в качестве агента ретрансляции DHCP. При выполнении команды **ip helper-address** в режиме конфигурации интерфейса какой IPv4 адрес добавляется в команду?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "адрес сервера DHCPv4",
+                    "correct": true
+                },
+                {
+                    "answer": "адрес клиента DHCPv4",
+                    "correct": false
+                },
+                {
+                    "answer": "адрес шлюза клиента DHCPv4 по умолчанию",
+                    "correct": false
+                },
+                {
+                    "answer": "адрес подсети DHCPv4",
+                    "correct": false
                 }
             ]
         }

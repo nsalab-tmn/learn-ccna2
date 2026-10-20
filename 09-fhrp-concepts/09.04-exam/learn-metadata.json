@@ -3,8 +3,8 @@
     "shortName": "ccna2.fhrp-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: протоколы резервирования первого перехода (FHRP), протокол HSRP.",
-    "difficulty": 1,
-    "duration": "PT0H42M",
+    "difficulty": 3,
+    "duration": "PT0H44M",
     "tags": {
         "$ref": "../../material-tags.json"
     },
@@ -27,7 +27,7 @@
             "mode": "exam",
             "grader": "test-auto",
             "aligned_bloom": "understand",
-            "passes_when": "Learner scores at least 80% on the exam's 25 questions covering module 9; attempts unlimited.",
+            "passes_when": "Learner scores at least 80% on the exam's 26 questions covering module 9; attempts unlimited.",
             "calibration": "operator-judge"
         }
     },
@@ -716,6 +716,28 @@
                     "answer": "использует главный виртуальный маршрутизатор",
                     "correct": false,
                     "comment": "Тема 9.1.0 - GLBP — это проприетарный протокол, обеспечивающий распределение нагрузки в группе маршрутизаторов с резервированием. VRRPv2 и VRRPv3 — это свободно распространяемые протоколы, которые используют виртуальный главный маршрутизатор"
+                }
+            ]
+        },
+        {
+            "question": "Какова цель протокола резервирования первого перехода (FHRP)?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answer": "предоставление списка IP-адресов устройств, которые могут взять на себя роль маршрутизатора пересылки",
+                    "correct": false
+                },
+                {
+                    "answer": "предоставление физической связи с новым маршрутизатором по умолчанию для замены недостижимого шлюза по умолчанию",
+                    "correct": false
+                },
+                {
+                    "answer": "предоставление двух или более маршрутизаторов, работающих вместе, совместного использования IP-и MAC-адресов виртуального шлюза по умолчанию",
+                    "correct": true
+                },
+                {
+                    "answer": "предоставление динамического метода, с помощью которого устройства в локальной сети могут определять адрес нового шлюза по умолчанию",
+                    "correct": false
                 }
             ]
         }

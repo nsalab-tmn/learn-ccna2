@@ -3,7 +3,7 @@
     "shortName": "ccna2.inter-vlan-routing.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: принципы маршрутизации между виртуальными локальными сетями, маршрутизация между сетями VLAN с использованием метода Router-on-a-Stick, маршрутизация между VLAN на многоуровневом коммутаторе, поиск и устранение неполадок в маршрутизации между VLAN.",
-    "difficulty": 1,
+    "difficulty": 3,
     "duration": "PT0H41M",
     "tags": {
         "$ref": "../../material-tags.json"

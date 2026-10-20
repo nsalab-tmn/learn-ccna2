@@ -3,7 +3,7 @@
     "shortName": "ccna2.slaac-and-dhcpv6-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: назначение глобальных IPv6-адресов, автоматическая конфигурация IPv6-адресов без сохранения состояния (SLAAC), DHCPv6, настройка сервера DHCPv6.",
-    "difficulty": 1,
+    "difficulty": 3,
     "duration": "PT0H39M",
     "tags": {
         "$ref": "../../material-tags.json"

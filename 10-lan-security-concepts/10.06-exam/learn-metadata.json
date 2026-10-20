@@ -3,7 +3,7 @@
     "shortName": "ccna2.lan-security-concepts.exam",
     "type": "exam",
     "description": "Проверьте свои знания по темам модуля: безопасность оконечных устройств, контроль доступа, угрозы безопасности на уровне коммутации, атака на таблицу MAC-адресов, атаки на протоколы локальной сети.",
-    "difficulty": 1,
+    "difficulty": 3,
     "duration": "PT0H50M",
     "tags": {
         "$ref": "../../material-tags.json"
