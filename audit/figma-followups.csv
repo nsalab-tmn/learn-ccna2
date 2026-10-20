@@ -1,9 +1,5 @@
 path,asset_or_figure,what_is_shown,should_become,reason
-08-slaac-and-dhcpv6-concepts/08.05-exam/learn-metadata.json,assets/4.png; assets/5.png; assets/6.png; assets/7.png,"«domain-name netacad.net» / «Domain name: netacad.net», «domain-name netacad.com» в конфигурации пула DHCP",«nsalab.local» (словарь ADR),растры с конфигурацией; текст вопросов значения не содержит
 final-exam/learn-metadata.json,assets/8.png,«domain-name cisco.com» в show running-config,«nsalab.local» (словарь ADR),растр с конфигурацией
-08-slaac-and-dhcpv6-concepts/08.05-exam/learn-metadata.json,"assets/2.png, 3.png",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
-09-fhrp-concepts/09.04-exam/learn-metadata.json,"assets/8.png, 10.png",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
-11-switch-security-configuration/11.07-exam/learn-metadata.json,"assets/1.png, 2.jpg, 3.png, 4.png",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
 14-routing-concepts/14.06-exam/learn-metadata.json,"assets/2.jpg, 3.jpg, 8.png, 17.png",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
 15-ip-static-routing/15.07-exam/learn-metadata.json,"assets/5.jpg, 6.png, 7.png, 10.gif, 12.jpg, 13.png, 20.png, 21.gif, 23.gif",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
 16-troubleshoot-static-and-default-routes/16.03-exam/learn-metadata.json,"assets/14.png, 15.gif, 18.jpg, 19.gif",схемы из банка NetAcad с бирюзовыми иконками устройств,схемы в стиле курса из библиотеки,зависит от открытого пункта ADR о библиотеке иконок
