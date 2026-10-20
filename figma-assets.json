@@ -6982,6 +6982,166 @@
      "sha256": "30ed591916792acb58a25ec8146e2905b04bfec263d2361ecbf8a500df8c8c18"
     }
    }
+  },
+  {
+   "id": "ccna2-l44vxdr",
+   "kind": "illustration",
+   "display": {
+    "key": "2.3.1"
+   },
+   "claim": "Таблица MAC-адресов коммутатора S1: динамические записи 0050.0fae.7518 (VLAN 1, Fa0/24), 0000.0cd1.e501 (VLAN 2, Fa0/3) и 000b.beea.c5d4 (VLAN 1, Fa0/3) и статическая запись 00d0.d3b6.c26b (VLAN 1, Fa0/4).",
+   "figma": {
+    "nodeId": "5955:10533",
+    "page": "CCNA2 · 02 switching-concepts"
+   },
+   "out": {
+    "path": "02-switching-concepts/02.03-exam/assets/1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "1.png"
+   }
+  },
+  {
+   "id": "ccna2-pqo2eag",
+   "kind": "illustration",
+   "display": {
+    "key": "2.3.2"
+   },
+   "claim": "Центральный маршрутизатор соединен с четырьмя маршрутизаторами; к каждому из них подключена своя локальная сеть: 15, 20, 8 и 12 узлов.",
+   "figma": {
+    "nodeId": "5955:10536",
+    "page": "CCNA2 · 02 switching-concepts"
+   },
+   "out": {
+    "path": "02-switching-concepts/02.03-exam/assets/2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.png"
+   }
+  },
+  {
+   "id": "ccna2-eqbqt6y",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.9-1"
+   },
+   "claim": "Три коммутатора в ряд; к левому подключены PC1 (VLAN 10), PC2 (VLAN 20) и PC3 (VLAN 30), к правому — PC4 (VLAN 10), PC5 (VLAN 20) и PC6 (VLAN 30).",
+   "figma": {
+    "nodeId": "5956:10243",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.9-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.9-1.png"
+   }
+  },
+  {
+   "id": "ccna2-iojf2tx",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.9-2"
+   },
+   "claim": "Три коммутатора в ряд; к левому подключены PC1 (VLAN 10), PC2 (VLAN 30) и PC3 (VLAN 30), к правому — PC4 (VLAN 30), PC5 (VLAN 20) и PC6 (VLAN 30).",
+   "figma": {
+    "nodeId": "5956:10403",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.9-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.9-2.png"
+   }
+  },
+  {
+   "id": "ccna2-exggaux",
+   "kind": "illustration",
+   "display": {
+    "key": "3.2.9-3"
+   },
+   "claim": "Три коммутатора в ряд; к левому подключены PC1 (VLAN 30), PC2 (VLAN 20) и PC3 (VLAN 10), к правому — PC4 (VLAN 30), PC5 (VLAN 10) и PC6 (VLAN 30).",
+   "figma": {
+    "nodeId": "5956:10563",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.02-vlans-in-a-multi-switched-environment/assets/3.2.9-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.2.9-3.png"
+   }
+  },
+  {
+   "id": "ccna2-seb27pv",
+   "kind": "illustration",
+   "display": {
+    "key": "3.7.3"
+   },
+   "claim": "Вывод show vlan brief на коммутаторе S2: порты Fa0/1–Fa0/20 в VLAN 1, Fa0/21–Fa0/24 в VLAN 20 Student; портов Gi0/1 и Gi0/2 в списке нет.",
+   "figma": {
+    "nodeId": "5956:10723",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.07-exam/assets/3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.gif"
+   }
+  },
+  {
+   "id": "ccna2-7yaahub",
+   "kind": "illustration",
+   "display": {
+    "key": "3.7.4"
+   },
+   "claim": "Порт Gi0/1 коммутатора SW1 работает в режиме магистрального канала 802.1Q; на нем разрешены только VLAN 2–10 и 30–50.",
+   "figma": {
+    "nodeId": "5956:10726",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.07-exam/assets/4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.png"
+   }
+  },
+  {
+   "id": "ccna2-5ertcst",
+   "kind": "illustration",
+   "display": {
+    "key": "3.7.7"
+   },
+   "claim": "Вывод show interfaces trunk на DLS1: магистральным каналом работает только порт Gi0/1.",
+   "figma": {
+    "nodeId": "5956:10729",
+    "page": "CCNA2 · 03 vlans"
+   },
+   "out": {
+    "path": "03-vlans/03.07-exam/assets/7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.gif"
+   }
   }
  ]
 }

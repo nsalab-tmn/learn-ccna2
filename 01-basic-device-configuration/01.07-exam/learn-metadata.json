@@ -526,7 +526,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/16.gif) Взгляните на рисунок. Сетевой администратор настроил маршрутизатор R1 так, как показано. Но при проверке состояния последовательного интерфейса показывается, что интерфейс отключен администратором. Какую дополнительную команду необходимо ввести для последовательного интерфейса R1, чтобы включить его?"
+            "question": "Сетевой администратор настроил последовательный интерфейс маршрутизатора R1 следующими командами:\n\n```\nR1(config)#interface serial 0/0/0\nR1(config-if)#description Link to R2\nR1(config-if)#ip address 209.165.200.225 255.255.255.252\nR1(config-if)#exit\nR1(config)#\n```\n\nНо при проверке состояния последовательного интерфейса показывается, что интерфейс отключен администратором. Какую дополнительную команду необходимо ввести для последовательного интерфейса R1, чтобы включить его?"
         },
         {
             "answerType": "singleChoice",
@@ -552,7 +552,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/17.jpg) Посмотрите на изображение. Сетевому администратору нужно настроить коммутатор Switch1, чтобы разрешить подключения SSH и запретить подключения Telnet. Как ему для этого следует изменить отображаемую конфигурацию?"
+            "question": "Сетевому администратору нужно настроить коммутатор Switch1, чтобы разрешить подключения SSH и запретить подключения Telnet. Сейчас коммутатор настроен так:\n\n```\nSwitch1(config)#ip ssh version 2\nSwitch1(config)#ip domain-name nsalab.local\nSwitch1(config)#crypto key generate rsa\nThe name for the keys will be: Switch1.nsalab.local\nChoose the size of the key modulus in the range of 360 to 4096 for your\n  General Purpose Keys. Choosing a key modulus greater than 512 may take\n  a few minutes.\n\nHow many bits in the modulus [512]:\n% Generating 512 bit RSA keys, keys will be non-exportable...\n[OK]\nSwitch1(config)#line vty 0 15\nSwitch1(config-line)#transport input all\nSwitch1(config-line)#\n```\n\nКак ему для этого следует изменить эту конфигурацию?"
         },
         {
             "question": "Какие задачи можно выполнить с помощью функции истории команд? (верны два варианта)",
