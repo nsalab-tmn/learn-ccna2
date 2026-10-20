@@ -7182,6 +7182,186 @@
      "sha256": "9dc2160e225ef6e3230e9acc5160ad92b456df6f8f873cd95a1fc16b8ade07d3"
     }
    }
+  },
+  {
+   "id": "ccna2-rdqs3gb",
+   "kind": "illustration",
+   "display": {
+    "key": "4.1.5-1"
+   },
+   "claim": "Сценарий A: многоуровневый коммутатор S1 с интерфейсами SVI VLAN 10 (10.17.10.1/24) и VLAN 20 (10.17.20.1/24) соединен с коммутаторами S2 и S3; к S2 подключен PC1 (VLAN 10, 10.17.10.4/24), к S3 — PC2 (VLAN 20, 10.17.20.4/24).",
+   "figma": {
+    "nodeId": "5963:9567",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.1.5-1.png"
+   }
+  },
+  {
+   "id": "ccna2-z3wkizk",
+   "kind": "illustration",
+   "display": {
+    "key": "4.1.5-2"
+   },
+   "claim": "Сценарий B: маршрутизатор R1 соединен с коммутатором S1 двумя физическими каналами — G0/0 (10.17.10.1/24) и G0/1 (10.17.20.1/24); к S1 подключены PC1 (VLAN 10) и PC2 (VLAN 20).",
+   "figma": {
+    "nodeId": "5963:9676",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.1.5-2.png"
+   }
+  },
+  {
+   "id": "ccna2-rxo77un",
+   "kind": "illustration",
+   "display": {
+    "key": "4.1.5-3"
+   },
+   "claim": "Сценарий C: маршрутизатор R1 соединен с коммутатором S1 одним каналом G0/0 с подынтерфейсами G0/0.10, G0/0.20 и G0/0.30; к S1 подключены PC1 (VLAN 10), PC2 (VLAN 20) и PC3 (VLAN 30).",
+   "figma": {
+    "nodeId": "5963:9754",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.01-inter-vlan-routing-operation/assets/4.1.5-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "4.1.5-3.png"
+   }
+  },
+  {
+   "id": "ccna2-kzf7kk4",
+   "kind": "illustration",
+   "display": {
+    "key": "4.6.10"
+   },
+   "claim": "Порт Gi1/1 коммутатора работает в режиме магистрального канала, его VLAN доступа — VLAN 1 по умолчанию.",
+   "figma": {
+    "nodeId": "5963:9850",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.06-exam/assets/10.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "10.png"
+   }
+  },
+  {
+   "id": "ccna2-gus6p4p",
+   "kind": "illustration",
+   "display": {
+    "key": "4.6.8"
+   },
+   "claim": "При настройке подынтерфейса gig0/0.20 маршрутизатор Kostroma отклоняет команду ip address: для подынтерфейса не задана инкапсуляция 802.1Q.",
+   "figma": {
+    "nodeId": "5963:9853",
+    "page": "CCNA2 · 04 inter-vlan-routing"
+   },
+   "out": {
+    "path": "04-inter-vlan-routing/04.06-exam/assets/8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.png"
+   }
+  },
+  {
+   "id": "ccna2-4gpryje",
+   "kind": "illustration",
+   "display": {
+    "key": "5.4.8"
+   },
+   "claim": "S1 — корневой мост; S1, S2 и S3 соединены треугольником, к S2 подключены PC A, PC B и PC C; порты A и C — на S2 (к S3 и к S1), порт B — на S1 к S3, порт D — на S3 к S1.",
+   "figma": {
+    "nodeId": "5964:13399",
+    "page": "CCNA2 · 05 stp"
+   },
+   "out": {
+    "path": "05-stp/05.04-exam/assets/8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "8.png"
+   }
+  },
+  {
+   "id": "ccna2-qpeuqbg",
+   "kind": "illustration",
+   "display": {
+    "key": "6.5.2"
+   },
+   "claim": "S1 соединен двумя каналами с S2 (порты Fa0/1, Fa0/2) и двумя каналами с S3 (порты Fa0/3, Fa0/4); S2 и S3 тоже соединены двумя каналами.",
+   "figma": {
+    "nodeId": "5964:13986",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.05-exam/assets/2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "2.png"
+   }
+  },
+  {
+   "id": "ccna2-mm662oy",
+   "kind": "illustration",
+   "display": {
+    "key": "6.5.3"
+   },
+   "claim": "Вывод show etherchannel summary: Po1 — работающий канал уровня 2 (SU), протокол PAgP, порты Fa0/1 и Fa0/2 в составе канала.",
+   "figma": {
+    "nodeId": "5964:14057",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.05-exam/assets/3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "3.png"
+   }
+  },
+  {
+   "id": "ccna2-g6tavqd",
+   "kind": "illustration",
+   "display": {
+    "key": "6.5.7"
+   },
+   "claim": "Вывод show etherchannel summary: Po1 не работает (SD), протокол PAgP, порты Fa0/1–Fa0/3 работают по отдельности (I).",
+   "figma": {
+    "nodeId": "5964:14060",
+    "page": "CCNA2 · 06 etherchannel"
+   },
+   "out": {
+    "path": "06-etherchannel/06.05-exam/assets/7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.png"
+   }
   }
  ]
 }
