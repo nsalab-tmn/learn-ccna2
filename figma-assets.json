@@ -5377,15 +5377,22 @@
   },
   {
    "id": "ccna2-24ydbhg",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "7.3.3"
    },
-   "out": {
-    "path": "07-dhcpv4/07.03-configure-dhcpv4-client/assets/7.3.3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5487:7607",
+    "page": "CCNA2 · 07 dhcpv4"
    },
-   "status": "manual"
+   "out": {
+    "path": "07-dhcpv4/07.03-configure-dhcpv4-client/assets/7.3.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "7.3.3.png"
+   }
   },
   {
    "id": "ccna2-vzvxiad",
@@ -5521,75 +5528,117 @@
   },
   {
    "id": "ccna2-cdyqm6x",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.6.4"
    },
-   "out": {
-    "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5457:11662",
+    "page": "CCNA2 · 12 wlan-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.6.4.png"
+   }
   },
   {
    "id": "ccna2-27phqmb",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.7.2-1"
    },
-   "out": {
-    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5486:13034",
+    "page": "CCNA2 · 12 wlan-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.7.2-1.png"
+   }
   },
   {
    "id": "ccna2-on35ynb",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.7.2-2"
    },
-   "out": {
-    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5486:13502",
+    "page": "CCNA2 · 12 wlan-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.2-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.7.2-2.png"
+   }
   },
   {
    "id": "ccna2-vdp5yfi",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.7.5"
    },
-   "out": {
-    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5486:13945",
+    "page": "CCNA2 · 12 wlan-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.7.5.png"
+   }
   },
   {
    "id": "ccna2-4lyepeq",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.7.6"
    },
-   "out": {
-    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.6.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5486:14436",
+    "page": "CCNA2 · 12 wlan-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.7.6.png"
+   }
   },
   {
    "id": "ccna2-swrj7k3",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "12.7.7"
    },
-   "out": {
-    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.7.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5486:14920",
+    "page": "CCNA2 · 12 wlan-concepts"
    },
-   "status": "manual"
+   "out": {
+    "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "12.7.7.png"
+   }
   },
   {
    "id": "ccna2-f7gzukq",
@@ -5605,63 +5654,79 @@
   },
   {
    "id": "ccna2-aaddirv",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5435:8158",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.3.png"
+   }
   },
   {
    "id": "ccna2-h2ma3gz",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.4-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-1.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5483:12201",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.4-1.jpeg"
+   }
   },
   {
    "id": "ccna2-7em3x3d",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.4-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-2.jpeg",
-    "format": "native"
-   },
-   "status": "manual"
-  },
-  {
-   "id": "ccna2-gzusope",
-   "kind": "native",
-   "display": {
-    "key": "13.1.4-3"
+   "figma": {
+    "nodeId": "5485:12234",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
    "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-3.jpeg",
-    "format": "native"
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-2.svg",
+    "format": "svg"
    },
-   "status": "manual"
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.4-2.jpeg"
+   }
   },
   {
    "id": "ccna2-vwszqcz",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.4-4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-4.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:12382",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.4-4.jpeg"
+   }
   },
   {
    "id": "ccna2-x2rrjlr",
@@ -5689,87 +5754,136 @@
   },
   {
    "id": "ccna2-tvtxnq4",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.4-6"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-6.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5437:8367",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.4-6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.4-6.jpeg"
+   }
   },
   {
    "id": "ccna2-yqea2s2",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.5-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-1.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:12596",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.5-1.jpeg"
+   }
   },
   {
    "id": "ccna2-pbhi26r",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.5-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-2.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:12966",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.5-2.jpeg"
+   }
   },
   {
    "id": "ccna2-mc5ksd5",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.5-3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-3.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:12781",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.5-3.jpeg"
+   }
   },
   {
    "id": "ccna2-urys7ks",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.5-4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-4.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:13461",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.5-4.jpeg"
+   }
   },
   {
    "id": "ccna2-khy5kcn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.5-5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-5.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:13980",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.5-5.jpeg"
+   }
   },
   {
    "id": "ccna2-l5zzyrc",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.5-6"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-6.jpeg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5485:14471",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.5-6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.5-6.jpeg"
+   }
   },
   {
    "id": "ccna2-4fbge46",
@@ -5785,15 +5899,22 @@
   },
   {
    "id": "ccna2-twi4nmg",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.7"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.7.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5483:12671",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.7.png"
+   }
   },
   {
    "id": "ccna2-hmpls6f",
@@ -5809,63 +5930,98 @@
   },
   {
    "id": "ccna2-o4w7who",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.1.9"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.9.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5439:8896",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.9.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.1.9.png"
+   }
   },
   {
    "id": "ccna2-o57otdh",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.3-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5442:9082",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.3-1.png"
+   }
   },
   {
    "id": "ccna2-x3g6fjt",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.3-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:12055",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.3-2.png"
+   }
   },
   {
    "id": "ccna2-vrpox6i",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5442:9248",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.4.png"
+   }
   },
   {
    "id": "ccna2-ehpufl5",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:12187",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.5.png"
+   }
   },
   {
    "id": "ccna2-b3qhq2s",
@@ -5881,351 +6037,554 @@
   },
   {
    "id": "ccna2-543u5cp",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:12312",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-2.png"
+   }
   },
   {
    "id": "ccna2-jbdgdye",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:12484",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-3.png"
+   }
   },
   {
    "id": "ccna2-igaahnm",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:12675",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-4.png"
+   }
   },
   {
    "id": "ccna2-nixexlm",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:12871",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-5.png"
+   }
   },
   {
    "id": "ccna2-6leva43",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-6"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-6.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:13063",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-6.png"
+   }
   },
   {
    "id": "ccna2-2rb53d3",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-7"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-7.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5477:13174",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-7.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-7.png"
+   }
   },
   {
    "id": "ccna2-3ukquhl",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.2.6-8"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-8.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5447:9965",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.6-8.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.2.6-8.png"
+   }
   },
   {
    "id": "ccna2-kizdwf4",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.3-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12077",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.3-1.jpg"
+   }
   },
   {
    "id": "ccna2-7iwxofr",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.3-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-2.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12169",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.3-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.3-2.jpg"
+   }
   },
   {
    "id": "ccna2-abhq7bl",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.4-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12298",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.4-1.jpg"
+   }
   },
   {
    "id": "ccna2-kf4l7iv",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.4-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-2.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12392",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.4-2.jpg"
+   }
   },
   {
    "id": "ccna2-tfordvx",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.4-3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-3.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12576",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.4-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.4-3.jpg"
+   }
   },
   {
    "id": "ccna2-vxky4zg",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.7-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-1.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12676",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.7-1.jpg"
+   }
   },
   {
    "id": "ccna2-whna47d",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.7-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-2.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12802",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.7-2.jpg"
+   }
   },
   {
    "id": "ccna2-7yz54z3",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.7-3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-3.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:12993",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.7-3.jpg"
+   }
   },
   {
    "id": "ccna2-q6vpotn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.7-4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-4.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:13209",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.7-4.jpg"
+   }
   },
   {
    "id": "ccna2-pgjvfxp",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.7-5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-5.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:13430",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.7-5.jpg"
+   }
   },
   {
    "id": "ccna2-4mu7gag",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.7-6"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-6.jpg",
-    "format": "native"
+   "figma": {
+    "nodeId": "5478:13645",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.7-6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.7-6.jpg"
+   }
   },
   {
    "id": "ccna2-ywelc3y",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.9-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12133",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.9-1.png"
+   }
   },
   {
    "id": "ccna2-af4q2oy",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.9-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12227",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.9-2.png"
+   }
   },
   {
    "id": "ccna2-mfhfd2v",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.9-3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12406",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.9-3.png"
+   }
   },
   {
    "id": "ccna2-blxapmv",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.9-4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12506",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.9-4.png"
+   }
   },
   {
    "id": "ccna2-c54fbce",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.9-5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12700",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.9-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.9-5.png"
+   }
   },
   {
    "id": "ccna2-vfaxihk",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.11-1"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-1.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12801",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-1.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.11-1.png"
+   }
   },
   {
    "id": "ccna2-lifdcb6",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.11-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:12916",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.11-2.png"
+   }
   },
   {
    "id": "ccna2-wfb2ebn",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.11-3"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-3.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:13111",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-3.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.11-3.png"
+   }
   },
   {
    "id": "ccna2-xq4tgaa",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.11-4"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-4.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:13329",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-4.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.11-4.png"
+   }
   },
   {
    "id": "ccna2-4g3r6dq",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.11-5"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-5.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:13543",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-5.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.11-5.png"
+   }
   },
   {
    "id": "ccna2-2tjgb2b",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.3.11-6"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-6.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5479:13759",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.11-6.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.3.11-6.png"
+   }
   },
   {
    "id": "ccna2-cwdugsn",
@@ -6241,15 +6600,22 @@
   },
   {
    "id": "ccna2-xp2jz4k",
-   "kind": "native",
+   "kind": "illustration",
    "display": {
     "key": "13.4.4-2"
    },
-   "out": {
-    "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.4-2.png",
-    "format": "native"
+   "figma": {
+    "nodeId": "5454:12030",
+    "page": "CCNA2 · 13 wlan-configuration"
    },
-   "status": "manual"
+   "out": {
+    "path": "13-wlan-configuration/13.04-troubleshoot-wlan-issues/assets/13.4.4-2.svg",
+    "format": "svg"
+   },
+   "status": "pending",
+   "provenance": {
+    "legacy": "13.4.4-2.png"
+   }
   }
  ]
 }
