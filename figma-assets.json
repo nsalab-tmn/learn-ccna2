@@ -386,9 +386,9 @@
    "provenance": {
     "legacy": "3.1.3.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:35:16Z",
-     "sha256": "1610aa04bc9b99c9b618c9cb815045a25d237aeed458d18126b657fe4e8ec08d"
+     "figmaVersion": "2412462871892450623",
+     "at": "2026-10-20T15:00:00Z",
+     "sha256": "351d71a8a9b23d49e834c66ea7606d9fb443467b0bfcc20e4ba60187df7ced67"
     }
    },
    "notes": "[svg в git · пара: косвенно]"
@@ -549,9 +549,9 @@
    "provenance": {
     "legacy": "3.2.6.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:35:16Z",
-     "sha256": "23c38907b190f1d895b776b19efbcadc9d9116c4b7a87ef0a03d3c71900ea158"
+     "figmaVersion": "2412462871892450623",
+     "at": "2026-10-20T15:00:00Z",
+     "sha256": "d4144f4bc5ac02a3b52afde45035075a521ebf01fe6c8a9f96a0ecb768a3fa7c"
     }
    },
    "notes": "[svg в git · пара: косвенно]"
@@ -624,9 +624,9 @@
    "provenance": {
     "legacy": "3.3.6.svg",
     "synced": {
-     "figmaVersion": "2409982897191414088",
-     "at": "2026-10-14T00:02:02Z",
-     "sha256": "a1ef498ee1da5dac2a592c2cccef6cda43712373b62063a53594792d0c35a8e0"
+     "figmaVersion": "2412462871892450623",
+     "at": "2026-10-20T15:00:00Z",
+     "sha256": "85fe01a6df4a1b316c4e004f28b4a867874edb4127c63446f3341d39f723acb2"
     }
    },
    "notes": "[svg в git · пара: косвенно]"
@@ -1579,9 +1579,9 @@
    "provenance": {
     "legacy": "5.3.5-1.svg",
     "synced": {
-     "figmaVersion": "2409982897191414088",
-     "at": "2026-10-14T00:02:02Z",
-     "sha256": "86748452f5f31ce4decc2811a22a901351b29876f841aa50723c1c04bd01c340"
+     "figmaVersion": "2412462871892450623",
+     "at": "2026-10-20T15:00:00Z",
+     "sha256": "4cf96caedd3e39bd618b933d981096d39d68b60ca6e97dfcda28115fcc0d1e0b"
     }
    },
    "notes": "[svg в git · пара: косвенно]"
@@ -2697,9 +2697,9 @@
    "provenance": {
     "legacy": "10.1.3.svg",
     "synced": {
-     "figmaVersion": "2409982897191414088",
-     "at": "2026-10-14T00:02:02Z",
-     "sha256": "d8f4b30c0f2d435f97ad5870a63fb4f823651fed31b6bc0360b4a6c637c86df3"
+     "figmaVersion": "2412462871892450623",
+     "at": "2026-10-20T15:00:00Z",
+     "sha256": "1a4876e9e45cde751176b57de1fd3b299deb8dbcc7c76ac8c3d9be843f5b19e9"
     }
    }
   },
@@ -4334,9 +4334,9 @@
    "provenance": {
     "legacy": "14.1.2.png",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:35:16Z",
-     "sha256": "5b641c92c32099cff25b31555c5faf2e57283fb07eb5252aa4d4e114f3ed7e5d",
+     "figmaVersion": "2412462871892450623",
+     "at": "2026-10-20T15:00:00Z",
+     "sha256": "92ec53c6aa3a7df19041c9baa41c8119c74b9f41425ef1a05a3449c1e1d56850",
      "specSha256": "9a02c6da2b2434d72877c3650ddf7ebf774054650b31a69c6a5a1bd3c02cf9e3",
      "tracksSha256": "8460256678bb9388d6bba045424fbd892cb497ce9fb1feda3d9f64374abd5445"
     }
