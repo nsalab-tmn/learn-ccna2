@@ -37,149 +37,162 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какие роли DHCPv6 может выполнять маршрутизатор? (выберите все подходящие варианты)",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "Маршрутизатор филиала R5 получает GUA своего интерфейса G0/0/0 от сервера DHCPv6 провайдера. Через интерфейс G0/0/1 он сообщает компьютерам филиала адрес DNS-сервера и имя домена из своего пула, не назначая им адресов. Какие роли DHCPv6 выполняет R5? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
+                    "answerId": "q08-a1",
                     "answer": "клиент DHCPv6",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
-                    "answer": "агент ретрансляции DHCPv6",
+                    "answerId": "q08-a2",
+                    "answer": "сервер DHCPv6 без сохранения состояния",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a3",
-                    "answer": "DHCPv6-сервер",
-                    "correct": true
+                    "answerId": "q08-a3",
+                    "answer": "агент ретрансляции DHCPv6",
+                    "correct": false,
+                    "comment": "Агент ретрансляции пересылает сообщения клиентов серверу DHCPv6 в другой сети, а R5 отвечает компьютерам сам, из своего пула. На G0/0/0 он клиент, на G0/0/1 — сервер DHCPv6 без сохранения состояния."
+                },
+                {
+                    "answerId": "q08-a4",
+                    "answer": "сервер DHCPv6 с сохранением состояния",
+                    "correct": false,
+                    "comment": "Сервер с сохранением состояния назначает клиентам адреса из пула (команда address prefix), а R5 сообщает только адрес DNS-сервера и имя домена. Это сервер DHCPv6 без сохранения состояния."
                 }
             ]
         },
         {
             "questionId": "q02",
-            "question": "Какая команда не используется в конфигурации DHCPv6 без сохранения состояния?",
+            "bloom": "understand",
+            "question": "Какая команда нужна только в конфигурации сервера DHCPv6 с сохранением состояния?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answerId": "q02-a1",
-                    "answer": "address prefix (ipv6-address/prefix)",
+                    "answer": "address prefix (ipv6-prefix)",
                     "correct": true
                 },
                 {
                     "answerId": "q02-a2",
                     "answer": "domain-name (name)",
                     "correct": false,
-                    "comment": "Команда address prefix (ipv6-address/prefix) используется для DHCPv6 с сохранением состояния"
+                    "comment": "Команду domain-name используют оба вида серверов: имя домена сообщает клиентам и сервер без сохранения состояния. Только серверу с сохранением состояния нужна команда address prefix — префикс, из которого он назначает адреса."
                 },
                 {
                     "answerId": "q02-a3",
                     "answer": "dns-server (server-address)",
                     "correct": false,
-                    "comment": "Команда address prefix (ipv6-address/prefix) используется для DHCPv6 с сохранением состояния"
+                    "comment": "Адрес DNS-сервера — главное, что сообщает клиентам сервер без сохранения состояния, поэтому команда dns-server нужна обоим видам серверов. Только для назначения адресов нужна команда address prefix."
                 },
                 {
                     "answerId": "q02-a4",
                     "answer": "ipv6 dhcp server (pool-name)",
                     "correct": false,
-                    "comment": "Команда address prefix (ipv6-address/prefix) используется для DHCPv6 с сохранением состояния"
+                    "comment": "Команда ipv6 dhcp server привязывает пул к интерфейсу в обоих режимах: без нее маршрутизатор не отвечает на запросы DHCPv6 на этом интерфейсе. Только серверу с сохранением состояния нужна команда address prefix."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Маршрутизатор с поддержкой IPv6 должен получить свой GUA IPv6 от другого устройства IPv6 с помощью SLAAC. Какая команда конфигурации интерфейса должна быть настроена на клиентском маршрутизаторе?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "На интерфейсе G0/0/1 маршрутизатора R4 введены команды ipv6 enable и ipv6 address autoconfig. Маршрутизатор R1 в этой сети отправляет RA с флагами A = 1, O = 1, M = 0 и обслуживает пул DHCPv6 с командами dns-server и domain-name. Как R4 получит GUA и адрес DNS-сервера для G0/0/1?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "ipv6 address autoconfig",
+                    "answerId": "q09-a1",
+                    "answer": "GUA создаст сам по SLAAC, адрес DNS-сервера получит от R1",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "ipv6 address auto config",
+                    "answerId": "q09-a2",
+                    "answer": "GUA и адрес DNS-сервера получит из пула на маршрутизаторе R1",
                     "correct": false,
-                    "comment": "Команда ipv6 address autoconfig включает автоматическую настройку адресации IPv6 с помощью SLAAC"
+                    "comment": "В пуле R1 нет команды address prefix, и при M = 0 он адресов не назначает. Команда ipv6 address autoconfig велит R4 создать GUA самому по префиксу из RA, а у R1 он получит только адрес DNS-сервера и имя домена."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "ipv6 address dhcp",
+                    "answerId": "q09-a3",
+                    "answer": "GUA получит из пула R1, адрес DNS-сервера возьмет из RA",
                     "correct": false,
-                    "comment": "Команда ipv6 address autoconfig включает автоматическую настройку адресации IPv6 с помощью SLAAC"
+                    "comment": "Роли перепутаны: пул R1 без команды address prefix адресов не назначает. GUA R4 создаст сам по SLAAC, а адрес DNS-сервера получит от R1 как от сервера DHCPv6 без сохранения состояния."
                 },
                 {
-                    "answerId": "q03-a4",
-                    "answer": "ipv6 address dhcpv6",
+                    "answerId": "q09-a4",
+                    "answer": "Получит только локальный адрес канала, GUA не появится",
                     "correct": false,
-                    "comment": "Команда ipv6 address autoconfig включает автоматическую настройку адресации IPv6 с помощью SLAAC"
+                    "comment": "Команда ipv6 enable создает локальный адрес канала, а ipv6 address autoconfig дополнительно включает SLAAC. По префиксу из RA R4 создаст GUA, а адрес DNS-сервера получит от R1."
                 }
             ]
         },
         {
-            "questionId": "q04",
-            "question": "Маршрутизатор должен предоставлять службы DHCPv6 сервера. Какая команда должна быть настроена на интерфейсе, к которому подключены клиенты?",
+            "questionId": "q10",
+            "bloom": "understand",
+            "question": "Компьютеры подключены к интерфейсу G0/0/0 маршрутизатора R2, а сервер DHCPv6 2001:db8:acad:5::10 находится в сети за его интерфейсом G0/0/1. На R2 получен такой вывод:\n\n```\nR2# show ipv6 dhcp interface\nGigabitEthernet0/0/0 is in relay mode\n  Relay destinations:\n    2001:DB8:ACAD:5::10 via GigabitEthernet0/0/1\n```\n\nЧто подтверждает этот вывод?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q04-a1",
-                    "answer": "ipv6 enable",
-                    "correct": false,
-                    "comment": "Команду ipv6 dhcp server POOL-NAME следует выполнять на интерфейсе, к которому подключены клиенты DHCPv6"
-                },
-                {
-                    "answerId": "q04-a2",
-                    "answer": "ipv6 dhcp pool POOL-NAME",
-                    "correct": false,
-                    "comment": "Команду ipv6 dhcp server POOL-NAME следует выполнять на интерфейсе, к которому подключены клиенты DHCPv6"
-                },
-                {
-                    "answerId": "q04-a3",
-                    "answer": "ipv6 dhcp server POOL-NAME",
+                    "answerId": "q10-a1",
+                    "answer": "G0/0/0 пересылает сообщения клиентов серверу 2001:DB8:ACAD:5::10",
                     "correct": true
                 },
                 {
-                    "answerId": "q04-a4",
-                    "answer": "ipv6 nd other-config-flag",
+                    "answerId": "q10-a2",
+                    "answer": "R2 назначает клиентам сети G0/0/0 адреса из собственного пула DHCPv6",
                     "correct": false,
-                    "comment": "Команду ipv6 dhcp server POOL-NAME следует выполнять на интерфейсе, к которому подключены клиенты DHCPv6"
+                    "comment": "Режим relay означает, что R2 только пересылает сообщения клиентов серверу 2001:DB8:ACAD:5::10, а адреса назначает этот сервер. Собственного пула для клиентов у R2 в этом режиме нет."
+                },
+                {
+                    "answerId": "q10-a3",
+                    "answer": "G0/0/0 сам получает свой GUA от сервера 2001:DB8:ACAD:5::10",
+                    "correct": false,
+                    "comment": "Интерфейс, который сам получает конфигурацию от сервера DHCPv6, находится в режиме client (client mode). Режим relay значит, что G0/0/0 пересылает запросы клиентов своей сети серверу 2001:DB8:ACAD:5::10."
+                },
+                {
+                    "answerId": "q10-a4",
+                    "answer": "Сервер 2001:DB8:ACAD:5::10 уже назначил адреса клиентам G0/0/0",
+                    "correct": false,
+                    "comment": "Команда show ipv6 dhcp interface показывает только режим интерфейса и адрес сервера, а не назначенные адреса. Назначенные адреса проверяют на самом сервере командой show ipv6 dhcp binding."
                 }
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Маршрутизатор с поддержкой IPv6 должен получить свой GUA IPv6 с сервера DHCPv6. Какая команда конфигурации интерфейса должна быть настроена на клиентском устройстве?",
+            "questionId": "q11",
+            "bloom": "understand",
+            "question": "Интерфейс G0/0/1 маршрутизатора R4 должен получать GUA из пула сервера DHCPv6 с сохранением состояния на маршрутизаторе R1 в той же сети. На R4 включена маршрутизация IPv6, а на G0/0/1 введены команды ipv6 enable и ipv6 address autoconfig. В выводе show ipv6 dhcp binding на R1 записи о R4 нет. В чем причина?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "ipv6 address autoconfig",
-                    "correct": false,
-                    "comment": "Команда ipv6 address dhcp настроит интерфейс маршрутизатора как клиент DHCPv6"
-                },
-                {
-                    "answerId": "q05-a2",
-                    "answer": "ipv6 address auto config",
-                    "correct": false,
-                    "comment": "Команда ipv6 address dhcp настроит интерфейс маршрутизатора как клиент DHCPv6"
-                },
-                {
-                    "answerId": "q05-a3",
-                    "answer": "ipv6 address dhcp",
+                    "answerId": "q11-a1",
+                    "answer": "ipv6 address autoconfig включает SLAAC, а не запрос адреса у сервера",
                     "correct": true
                 },
                 {
-                    "answerId": "q05-a4",
-                    "answer": "ipv6 address dhcpv6",
+                    "answerId": "q11-a2",
+                    "answer": "Команда ipv6 enable не позволяет интерфейсу получать адрес по DHCPv6",
                     "correct": false,
-                    "comment": "Команда ipv6 address dhcp настроит интерфейс маршрутизатора как клиент DHCPv6"
+                    "comment": "Команда ipv6 enable лишь создает локальный адрес канала, а он клиенту DHCPv6 как раз нужен для обмена с сервером. Адрес у сервера интерфейс запрашивает после команды ipv6 address dhcp."
+                },
+                {
+                    "answerId": "q11-a3",
+                    "answer": "Сервер с сохранением состояния не хранит записей о маршрутизаторах-клиентах",
+                    "correct": false,
+                    "comment": "Сервер с сохранением состояния хранит привязку для каждого клиента, в том числе для маршрутизатора. Записи нет, потому что R4 адрес не запрашивал: для этого нужна команда ipv6 address dhcp."
+                },
+                {
+                    "answerId": "q11-a4",
+                    "answer": "На R1 не введена команда ipv6 dhcp relay destination",
+                    "correct": false,
+                    "comment": "Агент ретрансляции нужен, только когда клиент и сервер находятся в разных сетях, а R4 и R1 в одной. Записи нет, потому что R4 запросит адрес у сервера только после команды ipv6 address dhcp."
                 }
             ]
         },
         {
             "questionId": "q06",
+            "bloom": "remember",
             "question": "Какая команда проверки DHCPv6 будет отображать локальный адрес канала и GUA для каждого активного клиента?",
             "answerType": "singleChoice",
             "answers": [
@@ -187,7 +200,7 @@
                     "answerId": "q06-a1",
                     "answer": "show ip dhcp pool",
                     "correct": false,
-                    "comment": "Выходные данные команды show ipv6 dhcp binding показывают список активных аренд DHCPv6"
+                    "comment": "show ip dhcp pool — команда DHCPv4: она показывает пулы IPv4. Локальный адрес канала и GUA каждого клиента DHCPv6 показывает show ipv6 dhcp binding."
                 },
                 {
                     "answerId": "q06-a2",
@@ -198,43 +211,44 @@
                     "answerId": "q06-a3",
                     "answer": "show ipv6 dhcp interface",
                     "correct": false,
-                    "comment": "Выходные данные команды show ipv6 dhcp binding показывают список активных аренд DHCPv6"
+                    "comment": "show ipv6 dhcp interface показывает режим интерфейса, например клиента или агента ретрансляции, а не список клиентов. Адреса каждого клиента показывает show ipv6 dhcp binding."
                 },
                 {
                     "answerId": "q06-a4",
                     "answer": "show ipv6 dhcp pool",
                     "correct": false,
-                    "comment": "Выходные данные команды show ipv6 dhcp binding показывают список активных аренд DHCPv6"
+                    "comment": "show ipv6 dhcp pool показывает параметры пула и число активных клиентов, но не их адреса. Локальный адрес канала и GUA каждого клиента выводит show ipv6 dhcp binding."
                 }
             ]
         },
         {
-            "questionId": "q07",
-            "question": "Какая команда конфигурации интерфейса локальной сети клиентов настраивает маршрутизатор как агент ретрансляции DHCPv6?",
+            "questionId": "q12",
+            "bloom": "understand",
+            "question": "Компьютеры подключены к сети 2001:db8:acad:2::/64 за интерфейсом G0/0/0 маршрутизатора R2, а сервер DHCPv6 с сохранением состояния с адресом 2001:db8:acad:5::10 — к сети за интерфейсом G0/0/1. Как настроить R2 агентом ретрансляции DHCPv6?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q07-a1",
-                    "answer": "ip helper-address",
-                    "correct": false,
-                    "comment": "Команда ipv6 dhcp relay destination настраивает маршрутизатор как агент ретрансляции DHCPv6"
-                },
-                {
-                    "answerId": "q07-a2",
-                    "answer": "ipv6 dhcp relay destination",
+                    "answerId": "q12-a1",
+                    "answer": "На G0/0/0 ввести ipv6 dhcp relay destination 2001:db8:acad:5::10",
                     "correct": true
                 },
                 {
-                    "answerId": "q07-a3",
-                    "answer": "ipv6 enable",
+                    "answerId": "q12-a2",
+                    "answer": "На G0/0/1 ввести ipv6 dhcp relay destination 2001:db8:acad:5::10",
                     "correct": false,
-                    "comment": "Команда ipv6 dhcp relay destination настраивает маршрутизатор как агент ретрансляции DHCPv6"
+                    "comment": "Команду вводят на интерфейсе, обращенном к клиентам: на него приходят их сообщения SOLICIT на FF02::1:2, которые маршрутизатор иначе не пересылает. Компьютеры подключены к G0/0/0."
                 },
                 {
-                    "answerId": "q07-a4",
-                    "answer": "ipv6 helper-address",
+                    "answerId": "q12-a3",
+                    "answer": "На G0/0/0 ввести ip helper-address 2001:db8:acad:5::10",
                     "correct": false,
-                    "comment": "Команда ipv6 dhcp relay destination настраивает маршрутизатор как агент ретрансляции DHCPv6"
+                    "comment": "ip helper-address — команда агента ретрансляции DHCPv4. Для DHCPv6 на интерфейсе, обращенном к клиентам, вводят ipv6 dhcp relay destination с адресом сервера."
+                },
+                {
+                    "answerId": "q12-a4",
+                    "answer": "На G0/0/0 ввести ipv6 dhcp server 2001:db8:acad:5::10",
+                    "correct": false,
+                    "comment": "Команда ipv6 dhcp server привязывает к интерфейсу пул и делает сам маршрутизатор сервером DHCPv6; ей указывают имя пула, а не адрес. Агентом ретрансляции интерфейс делает ipv6 dhcp relay destination."
                 }
             ]
         }
