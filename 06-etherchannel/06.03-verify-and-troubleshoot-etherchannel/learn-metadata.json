@@ -37,109 +37,132 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "На коммутаторе настроено несколько интерфейсов агрегированного канала. Какая команда выведет по одной строке данных на каждый канал EtherChannel?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Администратору нужно узнать, какие сведения LACP получил порт FastEthernet0/1 от соседнего коммутатора: идентификатор устройства партнера и его флаги. Какая команда покажет эти сведения?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "show etherchannel summary",
+                    "answerId": "q06-a1",
+                    "answer": "show interfaces etherchannel",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
+                    "answerId": "q06-a2",
+                    "answer": "show etherchannel summary",
+                    "correct": false,
+                    "comment": "Эта команда выводит по одной строке на каждый агрегированный канал: его состояние, протокол и порты с флагами. Сведений о партнере по LACP в ней нет — их показывает show interfaces etherchannel для нужного порта."
+                },
+                {
+                    "answerId": "q06-a3",
                     "answer": "show interfaces port-channel",
                     "correct": false,
-                    "comment": "Эта команда показывает общий статус интерфейса агрегированного канала. По одной строке на каждый канал выводит команда show etherchannel summary."
+                    "comment": "Эта команда показывает общий статус интерфейса агрегированного канала, а не данные LACP отдельного порта. Сведения о партнере порта показывает show interfaces etherchannel."
                 },
                 {
-                    "answerId": "q01-a3",
+                    "answerId": "q06-a4",
                     "answer": "show etherchannel port-channel",
                     "correct": false,
-                    "comment": "Эта команда показывает подробные сведения о конкретном интерфейсе агрегированного канала. По одной строке на каждый канал выводит команда show etherchannel summary."
-                },
-                {
-                    "answerId": "q01-a4",
-                    "answer": "show interfaces etherchannel",
-                    "correct": false,
-                    "comment": "Эта команда показывает роль физического интерфейса в работе EtherChannel. По одной строке на каждый канал выводит команда show etherchannel summary."
+                    "comment": "Эта команда показывает сведения об агрегированном канале: его порты, протокол и их режим, но не данные, полученные от партнера. Их показывает show interfaces etherchannel для нужного порта."
                 }
             ]
         },
         {
-            "questionId": "q02",
-            "question": "В выводе show etherchannel summary рядом с номером агрегированного канала стоят буквы SU: Po1(SU). Что это означает?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Фрагмент вывода команды show etherchannel summary на коммутаторе S1:\n\n```\nFlags: D - down P - bundled in port-channel\n        I - stand-alone s - suspended\n        R - Layer3 S - Layer2\n        U - in use N - not in use, no aggregation\n…\nGroup Port-channel Protocol Ports\n------+-------------+-----------+-----------------------------------------------\n2 Po2(SD) LACP Gi0/3(I) Gi0/4(I)\n```\n\nЧто показывает строка группы 2?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "EtherChannel второго уровня, который задействован",
+                    "answerId": "q07-a1",
+                    "answer": "Канал второго уровня выключен, а порты Gi0/3 и Gi0/4 работают отдельно, вне канала",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a2",
-                    "answer": "EtherChannel третьего уровня, который не используется",
+                    "answerId": "q07-a2",
+                    "answer": "Канал третьего уровня задействован, а порты Gi0/3 и Gi0/4 объединены в него",
                     "correct": false,
-                    "comment": "Буква S означает второй уровень (Layer2), а U — что канал задействован (in use). Третий уровень обозначает буква R."
+                    "comment": "Буква S означает второй уровень, а D — что канал выключен (down); канал третьего уровня обозначает R. Флаг I у портов означает stand-alone: порты работают отдельно и в канал не объединены, иначе стоял бы флаг P."
                 },
                 {
-                    "answerId": "q02-a3",
-                    "answer": "EtherChannel, который выключен",
+                    "answerId": "q07-a3",
+                    "answer": "Канал второго уровня задействован, а порты Gi0/3 и Gi0/4 приостановлены",
                     "correct": false,
-                    "comment": "Выключенный канал обозначается буквой D (down), как в Po1(SD). Буквы SU означают EtherChannel второго уровня, который задействован."
+                    "comment": "Задействованный канал обозначают буквы SU, а здесь SD — канал выключен. Приостановленный порт отмечен флагом s, а флаг I означает, что порт работает отдельно, вне канала."
+                },
+                {
+                    "answerId": "q07-a4",
+                    "answer": "Канал второго уровня выключен, но порты Gi0/3 и Gi0/4 объединены в него",
+                    "correct": false,
+                    "comment": "Объединенный в канал порт отмечен флагом P (bundled in port-channel). Флаг I означает stand-alone: порты Gi0/3 и Gi0/4 работают отдельно, а сам канал выключен (SD)."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "EtherChannel между S1 и S2 не работает. На портах S1 настроена команда channel-group 1 mode on, на портах S2 — channel-group 1 mode desirable. Как в разобранном примере устраняют эту проблему?",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "EtherChannel между коммутаторами S1 и S2 не формируется, show etherchannel summary показывает Po1(SD). Скорость, режим дуплекса и настройки VLAN на всех портах совпадают, а на портах FastEthernet0/1 и FastEthernet0/2 обоих коммутаторов настроена команда channel-group 1 mode passive. Как устранить проблему?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "Меняют режим на портах S1 на desirable",
+                    "answerId": "q08-a1",
+                    "answer": "Перевести порты одного из коммутаторов в режим active",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "Настраивают режим магистрального канала на отдельных физических портах, а не на интерфейсе EtherChannel",
+                    "answerId": "q08-a2",
+                    "answer": "Перевести порты обоих коммутаторов в режим auto",
                     "correct": false,
-                    "comment": "Режим магистрального канала не рекомендуется настраивать на отдельных портах EtherChannel. Проблема в несовместимых режимах PAgP, и ее устраняют, меняя режим на портах S1 на desirable."
+                    "comment": "В режиме auto порты обоих коммутаторов тоже будут только ждать пакеты согласования, теперь PAgP, и канал снова не сформируется. Пассивным портам LACP нужен партнер в режиме active."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "Назначают портам S1 и S2 разные собственные VLAN",
+                    "answerId": "q08-a3",
+                    "answer": "Перевести порты S1 в режим desirable",
                     "correct": false,
-                    "comment": "Порты с разными собственными VLAN вообще не могут образовать EtherChannel. Проблема в несовместимых режимах PAgP, и ее устраняют, меняя режим на портах S1 на desirable."
+                    "comment": "desirable — режим PAgP: S1 будет отправлять пакеты PAgP, а пассивные порты S2 отвечают только на пакеты LACP. Канал сформируется, если порты одного из коммутаторов перевести в режим active."
+                },
+                {
+                    "answerId": "q08-a4",
+                    "answer": "Удалить интерфейс Port-channel 1 и создать его заново с теми же режимами",
+                    "correct": false,
+                    "comment": "Пересоздание интерфейса Port-channel 1 с теми же режимами ничего не меняет: два пассивных партнера по-прежнему не начнут согласование. Нужно перевести порты одного из коммутаторов в режим active."
                 }
             ]
         },
         {
-            "questionId": "q04",
-            "question": "Какая ситуация помешает формированию EtherChannel?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "Порты FastEthernet0/1 и FastEthernet0/3 коммутатора S1 настраивают для одного EtherChannel. Фрагмент их конфигурации:\n\n```\ninterface FastEthernet0/1\n switchport mode trunk\n switchport trunk allowed vlan 1,10,20,99\n channel-group 1 mode active\n!\ninterface FastEthernet0/3\n switchport mode trunk\n switchport trunk native vlan 99\n switchport trunk allowed vlan 1,10,20,99\n channel-group 1 mode active\n```\n\nКакая настройка мешает этим портам объединиться в один канал?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q04-a1",
-                    "answer": "У портов, объединяемых в EtherChannel, разные собственные VLAN",
+                    "answerId": "q09-a1",
+                    "answer": "Разные собственные VLAN на двух портах",
                     "correct": true
                 },
                 {
-                    "answerId": "q04-a2",
-                    "answer": "У всех портов одинаковые скорость и режим дуплекса",
+                    "answerId": "q09-a2",
+                    "answer": "Номера портов, которые идут не подряд",
                     "correct": false,
-                    "comment": "Одинаковые скорость и режим дуплекса — требование EtherChannel, а не помеха. Канал не образуют порты с разными собственными VLAN."
+                    "comment": "Порты одного EtherChannel не обязаны быть физически смежными: FastEthernet0/1 и FastEthernet0/3 можно объединить. Мешает другое — на FastEthernet0/3 задана собственная VLAN 99, а на FastEthernet0/1 осталась VLAN 1."
                 },
                 {
-                    "answerId": "q04-a3",
-                    "answer": "На всех портах разрешен один и тот же диапазон VLAN",
+                    "answerId": "q09-a3",
+                    "answer": "Списки разрешенных VLAN на двух портах",
                     "correct": false,
-                    "comment": "Одинаковый диапазон разрешенных VLAN — тоже требование EtherChannel. Канал не образуют порты с разными собственными VLAN."
+                    "comment": "Списки разрешенных VLAN на обоих портах одинаковые (1, 10, 20, 99), поэтому объединению они не мешают. Мешают разные собственные VLAN: 99 на FastEthernet0/3 и 1 на FastEthernet0/1."
+                },
+                {
+                    "answerId": "q09-a4",
+                    "answer": "Режим active, заданный на обоих портах",
+                    "correct": false,
+                    "comment": "Режим active одинаков на обоих портах и включает LACP — так EtherChannel и настраивают. Мешают разные собственные VLAN: 99 на FastEthernet0/3 и 1 на FastEthernet0/1."
                 }
             ]
         },
         {
             "questionId": "q05",
+            "bloom": "remember",
             "question": "Чем PAgP и LACP отличаются от DTP?",
             "answerType": "singleChoice",
             "answers": [

@@ -37,6 +37,7 @@
     "questions": [
         {
             "questionId": "q01",
+            "bloom": "remember",
             "question": "Какие требования должны выполняться для интерфейсов, объединяемых в EtherChannel? (выберите два варианта)",
             "answerType": "multiChoice",
             "answers": [
@@ -52,87 +53,102 @@
                 },
                 {
                     "answerId": "q01-a3",
-                    "answer": "Интерфейсы физически расположены рядом друг с другом",
+                    "answer": "Все интерфейсы расположены на коммутаторе физически рядом друг с другом",
                     "correct": false,
                     "comment": "Физическая смежность интерфейсов не требуется. Нужны одинаковые скорость и режим дуплекса, а также одна VLAN или режим магистрального канала на всех интерфейсах."
                 },
                 {
                     "answerId": "q01-a4",
-                    "answer": "На магистральных интерфейсах разрешены разные диапазоны VLAN",
+                    "answer": "Все магистральные интерфейсы имеют разные списки разрешенных VLAN",
                     "correct": false,
-                    "comment": "Разрешенные диапазоны VLAN должны совпадать, иначе EtherChannel не сформируется даже в режимах auto или desirable. Кроме того, нужны одинаковые скорость и режим дуплекса и одна VLAN или режим магистрального канала."
+                    "comment": "Наоборот: списки разрешенных VLAN на всех интерфейсах магистрального EtherChannel должны совпадать, иначе интерфейс с другим списком в канал не войдет. Кроме того, нужны одинаковые скорость и режим дуплекса и одна VLAN или режим магистрального канала."
                 }
             ]
         },
         {
-            "questionId": "q02",
-            "question": "На портах S1, которые объединяют в EtherChannel с S2, настроен полудуплексный режим, а на портах S2 — полнодуплексный. Что произойдет?",
+            "questionId": "q05",
+            "bloom": "understand",
+            "question": "Администратор объединяет в EtherChannel порты доступа FastEthernet0/1–0/3 коммутатора S1. Фрагмент их конфигурации:\n\n```\ninterface FastEthernet0/1\n switchport mode access\n switchport access vlan 10\n channel-group 1 mode active\n!\ninterface FastEthernet0/2\n switchport mode access\n switchport access vlan 10\n channel-group 1 mode active\n!\ninterface FastEthernet0/3\n switchport mode access\n switchport access vlan 20\n channel-group 1 mode active\n```\n\nСкорость и режим дуплекса на всех трех портах одинаковые. Какое требование к интерфейсам EtherChannel здесь нарушено?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "EtherChannel не сформируется, потому что параметры на коммутаторах отличаются",
+                    "answerId": "q05-a1",
+                    "answer": "Все интерфейсы должны быть назначены в одну VLAN",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a2",
-                    "answer": "EtherChannel сформируется и будет работать в полудуплексном режиме",
+                    "answerId": "q05-a2",
+                    "answer": "Все интерфейсы должны работать в режиме магистрального канала",
                     "correct": false,
-                    "comment": "EtherChannel формируется, только когда настройки совпадают на обоих коммутаторах. При разных режимах дуплекса канал не сформируется."
+                    "comment": "Порты доступа тоже можно объединить в EtherChannel, если все они назначены в одну VLAN. Здесь FastEthernet0/3 назначен в VLAN 20, а остальные порты — в VLAN 10."
                 },
                 {
-                    "answerId": "q02-a3",
-                    "answer": "S2 автоматически переведет свои порты в полудуплексный режим, и EtherChannel сформируется",
+                    "answerId": "q05-a3",
+                    "answer": "Все интерфейсы должны работать на одной скорости и в одном режиме дуплекса",
                     "correct": false,
-                    "comment": "Коммутаторы не подстраивают параметры друг под друга: EtherChannel формируется, только когда настройки совпадают на обоих коммутаторах. При разных режимах дуплекса канал не сформируется."
+                    "comment": "Это требование есть, но здесь оно выполнено: скорость и режим дуплекса на всех портах одинаковые. Различаются VLAN: FastEthernet0/3 назначен в VLAN 20, а остальные — в VLAN 10."
+                },
+                {
+                    "answerId": "q05-a4",
+                    "answer": "Все интерфейсы должны согласовывать канал через PAgP, а не LACP",
+                    "correct": false,
+                    "comment": "Порты доступа объединяют в EtherChannel и через LACP, и через PAgP, а режим active задан на всех трех портах одинаково. Нарушено другое требование: FastEthernet0/3 назначен в другую VLAN."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Администратору нужно изменить параметры уже созданного EtherChannel, например режим магистрального канала. Где это следует делать?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Магистральный EtherChannel Port-channel 1 коммутатора S1 объединяет порты FastEthernet0/1 и FastEthernet0/2. Администратору нужно разрешить в нем VLAN 10, 20 и 30, и он ввел команду switchport trunk allowed vlan 10,20,30 только на интерфейсе FastEthernet0/1. Как правильно внести это изменение?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "В режиме конфигурации интерфейса агрегированного канала (interface port-channel)",
+                    "answerId": "q06-a1",
+                    "answer": "Ввести команду на Port-channel 1: она применится к обоим портам канала",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "На каждом физическом интерфейсе группы по отдельности",
+                    "answerId": "q06-a2",
+                    "answer": "Ввести ту же команду еще и на FastEthernet0/2, а Port-channel 1 не менять",
                     "correct": false,
-                    "comment": "Настройки отдельных интерфейсов не влияют на интерфейс агрегированного канала и могут вызвать проблемы совместимости. Настройки интерфейса агрегированного канала применяются и к отдельным интерфейсам."
+                    "comment": "Настройки отдельных интерфейсов не влияют на интерфейс агрегированного канала, и порты разойдутся с ним по настройкам — это вызовет проблемы совместимости. Настройку меняют на Port-channel 1, и она применяется ко всем портам канала."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "В режиме глобальной конфигурации командой channel-group",
+                    "answerId": "q06-a3",
+                    "answer": "Ввести команду в режиме глобальной конфигурации вместе с channel-group",
                     "correct": false,
-                    "comment": "Команда channel-group вводится в режиме конфигурации диапазона интерфейсов и создает интерфейс агрегированного канала. Параметры созданного EtherChannel меняют в режиме конфигурации интерфейса агрегированного канала."
+                    "comment": "Команду channel-group вводят в режиме конфигурации диапазона интерфейсов: она создает агрегированный канал, а не меняет его параметры. Параметры созданного EtherChannel меняют на интерфейсе Port-channel 1."
                 }
             ]
         },
         {
-            "questionId": "q04",
-            "question": "Порты FastEthernet 0/1 и 0/2 выбраны командой interface range. Какая команда создаст интерфейс агрегированного канала с номером 1 и настроит EtherChannel с использованием LACP?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Коммутаторы S1 и S2 соединены каналами между портами FastEthernet0/1 и FastEthernet0/2. На S2 эти порты уже настроены командой channel-group 1 mode passive. Какую команду нужно ввести на S1 после interface range FastEthernet 0/1 - 2, чтобы между коммутаторами сформировался EtherChannel с использованием LACP?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q04-a1",
+                    "answerId": "q07-a1",
                     "answer": "channel-group 1 mode active",
                     "correct": true
                 },
                 {
-                    "answerId": "q04-a2",
-                    "answer": "interface port-channel 1",
+                    "answerId": "q07-a2",
+                    "answer": "channel-group 1 mode passive",
                     "correct": false,
-                    "comment": "Эта команда переводит в режим конфигурации интерфейса агрегированного канала, чтобы изменить его настройки второго уровня. Создает его и задает LACP команда channel-group 1 mode active."
+                    "comment": "В режиме passive порты S1 тоже будут только ждать пакеты LACP, и согласование не начнется. С пассивными портами S2 канал образует режим active."
                 },
                 {
-                    "answerId": "q04-a3",
-                    "answer": "switchport mode trunk",
+                    "answerId": "q07-a3",
+                    "answer": "channel-group 1 mode on",
                     "correct": false,
-                    "comment": "Эта команда переводит интерфейс в режим магистрального канала, а не создает EtherChannel. Интерфейс агрегированного канала с LACP создает команда channel-group 1 mode active."
+                    "comment": "Режим on помещает порты в канал без LACP: S1 не отправит пакеты LACP, которых ждут пассивные порты S2. Нужен режим active."
+                },
+                {
+                    "answerId": "q07-a4",
+                    "answer": "channel-group 1 mode desirable",
+                    "correct": false,
+                    "comment": "desirable — режим PAgP: S1 будет отправлять пакеты PAgP, а порты S2 в режиме passive отвечают только на пакеты LACP. Нужен режим active."
                 }
             ]
         }
