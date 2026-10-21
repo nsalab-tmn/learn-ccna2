@@ -320,12 +320,12 @@ scenario:
 
         **Шаг 5.** Включите шифрование паролей, которые хранятся в конфигурации открытым текстом, командой **service password-encryption**.
 
-        **Шаг 6.** Создайте баннер с предупреждением о запрете несанкционированного доступа командой **banner motd #Authorized Users Only!#**. Символ # отмечает начало и конец текста баннера.
+        **Шаг 6.** Создайте баннер с предупреждением о запрете несанкционированного доступа командой **banner motd #WARNING: Authorized Users Only!#**. Символ # отмечает начало и конец текста баннера. В тексте баннера должно быть слово WARNING.
 
         ```
         R2(config)#no ip domain-lookup
         R2(config)#service password-encryption
-        R2(config)#banner motd #Authorized Users Only!#
+        R2(config)#banner motd #WARNING: Authorized Users Only!#
         ```
 
         **Шаг 7.** Перейдите к настройке линии консоли командой **line con 0**. Задайте пароль консоли командой **password R2linepa55** и включите его проверку при входе командой **login**. Настройте отключение сеанса после шести минут бездействия командой **exec-timeout 6 0**. Чтобы сообщения системы не прерывали ввод команд, введите команду **logging synchronous**.
@@ -464,7 +464,7 @@ scenario:
 
         ```
         C:\>ssh -l SSHadmin 10.0.4.1
-        Authorized Users Only!
+        WARNING: Authorized Users Only!
         Password: 
         R2>show version
         NSALAB NetOS Software, NR05 Software (NR05-NETOS-M), Version 0.1.0, RELEASE SOFTWARE
