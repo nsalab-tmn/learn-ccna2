@@ -350,7 +350,7 @@ scenario:
 
         **Шаг 2.** Создайте учетную запись администратора SSHadmin с зашифрованным паролем командой **username SSHadmin secret 55Hadm!n**.
 
-        **Шаг 3.** Создайте ключи RSA командой **crypto key generate rsa**. На вопрос «How many bits in the modulus [512]:» введите длину ключа **1024**. Имя ключей — R2.CCNA-lab.com, и после их создания маршрутизатор включает протокол SSH.
+        **Шаг 3.** Создайте ключи RSA командой **crypto key generate rsa**. На вопрос «How many bits in the modulus [512]:» введите длину ключа **2048**. Имя ключей — R2.CCNA-lab.com, и после их создания маршрутизатор включает протокол SSH.
 
         ```
         R2(config)#ip domain-name CCNA-lab.com
@@ -361,8 +361,8 @@ scenario:
           General Purpose Keys. Choosing a key modulus greater than 512 may take
           a few minutes.
 
-        How many bits in the modulus [512]: 1024
-        % Generating 1024 bit RSA keys, keys will be non-exportable...
+        How many bits in the modulus [512]: 2048
+        % Generating 2048 bit RSA keys, keys will be non-exportable...
         [OK]
         *Mar  1 00:01:32.921: %SSH-5-ENABLED: SSH 1.99 has been enabled
         ```
