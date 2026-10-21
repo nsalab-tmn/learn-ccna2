@@ -288,6 +288,24 @@ scenario:
         S2(config-vlan)#end
         *Mar  1 00:01:17.951: %SYS-5-CONFIG_I: Configured from console by console
         ```
+
+        ```
+        S3>enable
+        S3#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S3(config)#vlan 10
+        S3(config-vlan)#name Faculty/Staff
+        S3(config-vlan)#vlan 20
+        S3(config-vlan)#name Students
+        S3(config-vlan)#vlan 30
+        S3(config-vlan)#name Guest(Default)
+        S3(config-vlan)#vlan 99
+        S3(config-vlan)#name Management&Native
+        S3(config-vlan)#vlan 150
+        S3(config-vlan)#name VOICE
+        S3(config-vlan)#end
+        *Mar  1 00:02:47.284: %SYS-5-CONFIG_I: Configured from console by console
+        ```
     - title: "Назначение портов сетям VLAN"
       body: |
         **Шаг 1.** На коммутаторе S2 перейдите в режим глобальной конфигурации командой **configure terminal**, а затем к настройке интерфейса F0/11 командой **interface f0/11**.
