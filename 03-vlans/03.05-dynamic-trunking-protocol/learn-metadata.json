@@ -33,81 +33,109 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Верно ли утверждение, что DTP — это открытый стандартный протокол IEEE, который определяет автоматическое согласование магистральных каналов коммутатора?",
+            "questionId": "q05",
+            "bloom": "understand",
+            "question": "Порт F0/1 коммутатора S1 подключен к коммутатору S2 другого производителя. Порт S2 настроен как магистральный, а порт S1 оставлен в режиме dynamic auto. Каким будет порт S1?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "верно",
-                    "correct": false,
-                    "comment": "DTP — это проприетарный протокол для автоматического согласования магистральных портов коммутатора"
+                    "answerId": "q05-a1",
+                    "answer": "Портом доступа: S2 не отправляет кадры DTP",
+                    "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
-                    "answer": "неверно",
-                    "correct": true
+                    "answerId": "q05-a2",
+                    "answer": "Магистральным: dynamic auto образует магистральный канал с портом trunk",
+                    "correct": false,
+                    "comment": "Это верно, только если сосед поддерживает DTP. DTP — проприетарный протокол, коммутаторы других производителей его не поддерживают, и без предложения от S2 порт S1 останется портом доступа."
+                },
+                {
+                    "answerId": "q05-a3",
+                    "answer": "Магистральным: DTP — открытый стандарт, и S2 согласует канал",
+                    "correct": false,
+                    "comment": "DTP — проприетарный протокол, коммутаторы других производителей его не поддерживают. S1 не получит предложения магистрального канала и останется портом доступа."
+                },
+                {
+                    "answerId": "q05-a4",
+                    "answer": "Магистральным: dynamic auto сам предлагает соседу магистральный канал",
+                    "correct": false,
+                    "comment": "Порт dynamic auto только ждет предложения соседа; активно предлагает канал режим dynamic desirable. S2 кадров DTP не отправляет, поэтому порт S1 останется портом доступа."
                 }
             ]
         },
         {
-            "questionId": "q02",
-            "question": "Каков режим порта по умолчанию на многих коммутаторах с поддержкой DTP?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Порт коммутатора S1 настроен как dynamic desirable. Порт соседнего коммутатора S2 не настраивали: на нем действует режим DTP, который на многих коммутаторах задан по умолчанию. Каким станет канал между ними?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "access",
-                    "correct": false,
-                    "comment": "На многих коммутаторах с поддержкой DTP режим порта по умолчанию — dynamic auto"
-                },
-                {
-                    "answerId": "q02-a2",
-                    "answer": "trunk",
-                    "correct": false,
-                    "comment": "На многих коммутаторах с поддержкой DTP режим порта по умолчанию — dynamic auto"
-                },
-                {
-                    "answerId": "q02-a3",
-                    "answer": "dynamic auto",
+                    "answerId": "q06-a1",
+                    "answer": "Магистральным: S1 предлагает магистральный канал, и S2 соглашается",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a4",
-                    "answer": "dynamic desirable",
+                    "answerId": "q06-a2",
+                    "answer": "Каналом доступа: порт в режиме по умолчанию не образует магистральный канал",
                     "correct": false,
-                    "comment": "На многих коммутаторах с поддержкой DTP режим порта по умолчанию — dynamic auto"
+                    "comment": "На многих коммутаторах режим по умолчанию — dynamic auto, а такой порт становится магистральным, если сосед в режиме trunk или dynamic desirable. Здесь S1 предлагает канал, и он становится магистральным."
+                },
+                {
+                    "answerId": "q06-a3",
+                    "answer": "Каналом доступа: магистральный канал образуют только два порта trunk",
+                    "correct": false,
+                    "comment": "Динамические режимы тоже образуют магистральный канал: dynamic desirable активно предлагает его, а dynamic auto, режим по умолчанию на многих коммутаторах, соглашается."
+                },
+                {
+                    "answerId": "q06-a4",
+                    "answer": "Каналом с ограниченными возможностями подключения: режимы разные",
+                    "correct": false,
+                    "comment": "Ограниченные возможности подключения дает сочетание trunk и access. Режим dynamic desirable с режимом dynamic auto образуют магистральный канал."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Верно ли утверждение, что два коммутационных порта на канале, сконфигурированные как dynamic auto, успешно согласуют магистраль?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Два коммутатора с DTP соединены каналом, порты на обоих оставлены в режиме по умолчанию. Команда show dtp interface на обоих показывает административный режим AUTO, и канал работает как канал доступа. Какое решение соответствует рекомендациям, если канал должен быть магистральным?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "верно",
-                    "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
+                    "answerId": "q07-a1",
+                    "answer": "Перевести оба порта в режим trunk и отключить DTP командой switchport nonegotiate",
+                    "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "неверно",
-                    "correct": true
+                    "answerId": "q07-a2",
+                    "answer": "Оставить на обоих портах режим dynamic auto и дождаться, пока DTP согласует канал",
+                    "correct": false,
+                    "comment": "Два порта dynamic auto только ждут предложения соседа, и магистральный канал не образуется никогда. Рекомендуется режим trunk с командой switchport nonegotiate на обоих концах."
+                },
+                {
+                    "answerId": "q07-a3",
+                    "answer": "Перевести порт одного коммутатора в trunk, а порт другого — в access",
+                    "correct": false,
+                    "comment": "Сочетание trunk и access дает ограниченные возможности подключения, а не магистральный канал. Рекомендуется режим trunk с командой switchport nonegotiate на обоих концах."
+                },
+                {
+                    "answerId": "q07-a4",
+                    "answer": "Ввести на обоих портах switchport nonegotiate, оставив режим dynamic auto",
+                    "correct": false,
+                    "comment": "Команду switchport nonegotiate можно ввести только в режиме access или trunk, и она останавливает DTP, а не включает магистральный канал. Рекомендуется режим trunk вместе с nonegotiate."
                 }
             ]
         },
         {
             "questionId": "q04",
-            "question": "Какие режимы DTP образуют магистраль с интерфейсом, настроенным как dynamic auto? (верны два варианта)",
+            "bloom": "remember",
+            "question": "Какие режимы DTP образуют магистральный канал с интерфейсом, настроенным как dynamic auto? (верны два варианта)",
             "answerType": "multiChoice",
             "answers": [
                 {
                     "answerId": "q04-a1",
                     "answer": "access",
                     "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
+                    "comment": "Порт access остается немагистральным при любом режиме соседа, поэтому с портом dynamic auto канал будет каналом доступа. Магистральный канал с dynamic auto образуют trunk и dynamic desirable."
                 },
                 {
                     "answerId": "q04-a2",
@@ -118,7 +146,7 @@
                     "answerId": "q04-a3",
                     "answer": "dynamic auto",
                     "correct": false,
-                    "comment": "Порт коммутатора, настроенный как dynamic auto, формирует магистраль только с интерфейсом, настроенным как trunk или dynamic desirable"
+                    "comment": "Порт dynamic auto только ждет предложения соседа, поэтому два таких порта магистральный канал не образуют. С dynamic auto его образуют trunk и dynamic desirable."
                 },
                 {
                     "answerId": "q04-a4",

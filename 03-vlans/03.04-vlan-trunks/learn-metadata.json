@@ -37,91 +37,101 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Что такое магистральный канал VLAN (trunk)?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "На коммутаторе S1 созданы VLAN 10, 20 и 30. Порт F0/1 переведен командой switchport mode trunk в режим магистрального канала, других команд на нем нет. Трафик каких VLAN может передавать этот канал?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "Канал второго уровня между двумя коммутаторами, который несет трафик всех VLAN, если список разрешенных VLAN не ограничен",
+                    "answerId": "q06-a1",
+                    "answer": "Всех VLAN, созданных на коммутаторе",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
-                    "answer": "Порт доступа, который принадлежит одной VLAN",
+                    "answerId": "q06-a2",
+                    "answer": "Только собственной VLAN 1",
                     "correct": false,
-                    "comment": "Порт доступа передает трафик одной VLAN. Магистральный канал — канал второго уровня между двумя коммутаторами, который несет трафик всех VLAN, если список разрешенных VLAN не ограничен."
+                    "comment": "Магистральный канал несет трафик всех VLAN; собственная VLAN 1 — лишь та, чьи кадры идут без тега. Пока список не ограничен, разрешены все VLAN."
                 },
                 {
-                    "answerId": "q01-a3",
-                    "answer": "Канал, по которому передается только трафик собственной VLAN",
+                    "answerId": "q06-a3",
+                    "answer": "Ни одной, пока не задан список разрешенных VLAN",
                     "correct": false,
-                    "comment": "Магистральный канал несет трафик всех VLAN, если список разрешенных VLAN не ограничен; собственная VLAN — лишь одна из них."
+                    "comment": "Список разрешенных VLAN только ограничивает магистральный канал. Пока он не задан, канал передает трафик всех VLAN."
                 },
                 {
-                    "answerId": "q01-a4",
-                    "answer": "Канал третьего уровня между двумя маршрутизаторами",
+                    "answerId": "q06-a4",
+                    "answer": "Только одной VLAN, назначенной порту",
                     "correct": false,
-                    "comment": "Магистральный канал — канал второго уровня между двумя коммутаторами, который несет трафик всех VLAN, если список разрешенных VLAN не ограничен."
+                    "comment": "Одну VLAN передает порт доступа. Магистральный канал передает трафик всех VLAN, если список разрешенных VLAN не ограничен."
                 }
             ]
         },
         {
-            "questionId": "q02",
-            "question": "Какая команда режима конфигурации интерфейса назначает VLAN 99 собственной VLAN (native VLAN) магистрального канала?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Порт F0/1 настроен командами switchport mode trunk, switchport trunk native vlan 50 и switchport trunk allowed vlan 10,20,50. Кадры какой VLAN этот порт передает без тега 802.1Q?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "switchport trunk native vlan 99",
+                    "answerId": "q07-a1",
+                    "answer": "VLAN 50",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a2",
-                    "answer": "switchport trunk allowed vlan 99",
+                    "answerId": "q07-a2",
+                    "answer": "VLAN 1",
                     "correct": false,
-                    "comment": "Эта команда задает список VLAN, разрешенных в магистральном канале, — здесь только VLAN 99. Собственную VLAN задает команда switchport trunk native vlan 99."
+                    "comment": "VLAN 1 — собственная VLAN только по умолчанию. Команда switchport trunk native vlan 50 сделала собственной VLAN 50, и без тега идут ее кадры."
                 },
                 {
-                    "answerId": "q02-a3",
-                    "answer": "switchport access vlan 99",
+                    "answerId": "q07-a3",
+                    "answer": "VLAN 10",
                     "correct": false,
-                    "comment": "Эта команда назначает порт доступа VLAN 99. Собственную VLAN магистрального канала задает команда switchport trunk native vlan 99."
+                    "comment": "VLAN 10 — первая в списке разрешенных, но порядок в списке ничего не значит: ее кадры получают тег. Без тега идут кадры собственной VLAN 50."
                 },
                 {
-                    "answerId": "q02-a4",
-                    "answer": "switchport mode trunk",
+                    "answerId": "q07-a4",
+                    "answer": "Ни одной: все кадры получают тег",
                     "correct": false,
-                    "comment": "Эта команда переводит порт в постоянный режим магистрального канала, но не меняет собственную VLAN. Ее задает команда switchport trunk native vlan 99."
+                    "comment": "По магистральному каналу 802.1Q без тега передаются кадры собственной VLAN. Здесь это VLAN 50."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Что рекомендуется при настройке собственной VLAN магистрального канала?",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "Коммутаторы S1 и S2 соединены магистральным каналом. VLAN 10 и 20 — VLAN данных, VLAN 99 не назначена ни одному порту. Какая настройка собственной VLAN на концах канала соответствует рекомендациям?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "Назначить на обоих концах магистрального канала одну и ту же собственную VLAN, отличную от VLAN 1",
+                    "answerId": "q08-a1",
+                    "answer": "VLAN 99 на S1 и на S2",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "Оставить на обоих концах VLAN 1 в качестве собственной",
+                    "answerId": "q08-a2",
+                    "answer": "VLAN 1 на S1 и на S2",
                     "correct": false,
-                    "comment": "Собственной рекомендуется назначить сеть, отличную от VLAN 1, — одну и ту же на обоих концах магистрального канала."
+                    "comment": "VLAN 1 по умолчанию еще и управляющая, поэтому нетегированный трафик попадал бы в VLAN управления. Рекомендуется неиспользуемая VLAN, одна на обоих концах, — здесь VLAN 99."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "Назначить на концах разные собственные VLAN, чтобы разделить нетегированный трафик",
+                    "answerId": "q08-a3",
+                    "answer": "VLAN 99 на S1 и VLAN 1 на S2",
                     "correct": false,
-                    "comment": "Если конфигурация 802.1Q на концах магистрального канала разная, ОС сообщает об ошибках. На обоих концах настраивают одну и ту же собственную VLAN, отличную от VLAN 1."
+                    "comment": "Собственные VLAN на концах должны совпадать: при несовпадении ОС сообщает об ошибках, а нетегированный трафик одной VLAN может попасть в другую. Нужна VLAN 99 на обоих концах."
+                },
+                {
+                    "answerId": "q08-a4",
+                    "answer": "VLAN 10 на S1 и на S2",
+                    "correct": false,
+                    "comment": "VLAN 10 — VLAN данных: нетегированные кадры попадали бы к пользователям. Собственной рекомендуется назначать неиспользуемую VLAN — здесь VLAN 99 на обоих концах."
                 }
             ]
         },
         {
             "questionId": "q04",
+            "bloom": "remember",
             "question": "На магистральном порту F0/1 был ограничен список разрешенных VLAN, а собственной назначена VLAN 99. Администратор вводит команды no switchport trunk allowed vlan и no switchport trunk native vlan. Каким станет магистральный канал?",
             "answerType": "singleChoice",
             "answers": [
@@ -151,32 +161,33 @@
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Какая строка вывода команды show interfaces fa0/1 switchport показывает, какие VLAN разрешены в магистральном канале?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "В выводе команды show interfaces fa0/2 switchport есть строки:\n\n```\nAdministrative Mode: trunk\nTrunking Native Mode VLAN: 99 (VLAN0099)\nTrunking VLANs Enabled: 10,30-40\n```\n\nКадры какой VLAN пропустит этот магистральный канал?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "Trunking VLANs Enabled",
+                    "answerId": "q09-a1",
+                    "answer": "VLAN 35",
                     "correct": true
                 },
                 {
-                    "answerId": "q05-a2",
-                    "answer": "Trunking Native Mode VLAN",
+                    "answerId": "q09-a2",
+                    "answer": "VLAN 20",
                     "correct": false,
-                    "comment": "Эта строка показывает собственную VLAN магистрального канала. Разрешенные VLAN показывает строка Trunking VLANs Enabled."
+                    "comment": "Запятая отделяет VLAN 10 от диапазона 30-40, поэтому VLAN 11–29 не разрешены. Из перечисленных разрешена только VLAN 35."
                 },
                 {
-                    "answerId": "q05-a3",
-                    "answer": "Administrative Mode",
+                    "answerId": "q09-a3",
+                    "answer": "VLAN 1",
                     "correct": false,
-                    "comment": "Эта строка показывает административный режим порта, например trunk. Разрешенные VLAN показывает строка Trunking VLANs Enabled."
+                    "comment": "Список разрешенных VLAN заменяет значение по умолчанию: VLAN 1 в строке Trunking VLANs Enabled нет. Из перечисленных разрешена только VLAN 35."
                 },
                 {
-                    "answerId": "q05-a4",
-                    "answer": "Access Mode VLAN",
+                    "answerId": "q09-a4",
+                    "answer": "VLAN 99",
                     "correct": false,
-                    "comment": "Эта строка относится к режиму доступа и не показывает разрешенные VLAN магистрального канала. Их показывает строка Trunking VLANs Enabled."
+                    "comment": "VLAN 99 — собственная VLAN порта, но ее нет в списке разрешенных VLAN, поэтому ее кадры канал не передает. Разрешена VLAN 35 из диапазона 30-40."
                 }
             ]
         }
