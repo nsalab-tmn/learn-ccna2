@@ -276,6 +276,19 @@ scenario:
 
         **Шаг 6.** На коммутаторе S3 аналогично создайте те же сети VLAN с теми же именами. Команды те же, что на S2.
 
+        ```
+        S3#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S3(config)#vlan 10
+        S3(config-vlan)#name Red
+        S3(config-vlan)#vlan 20
+        S3(config-vlan)#name Blue
+        S3(config-vlan)#vlan 30
+        S3(config-vlan)#name Yellow
+        S3(config-vlan)#end
+        *Mar  1 00:01:12.377: %SYS-5-CONFIG_I: Configured from console by console
+        ```
+
         **Шаг 7.** На коммутаторе S1 аналогично создайте те же сети VLAN с теми же именами. Компьютеры к S1 не подключены, но кадры между S2 и S3 проходят через него, а коммутатор не передает кадры сети VLAN, которой у него нет.
 
         ```
@@ -486,6 +499,15 @@ scenario:
         ```
 
         **Шаг 5.** На коммутаторе S3 аналогично назначьте собственную VLAN 999 интерфейсу G0/2 (**interface g0/2**).
+
+        ```
+        S3#configure terminal
+        Enter configuration commands, one per line.  End with CNTL/Z.
+        S3(config)#interface g0/2
+        S3(config-if)#switchport trunk native vlan 999
+        S3(config-if)#end
+        *Mar  1 00:04:21.323: %SYS-5-CONFIG_I: Configured from console by console
+        ```
 
         **Шаг 6.** На коммутаторе S1 проверьте связь с коммутаторами S2 и S3 по адресам их интерфейсов VLAN 99 командами **ping 192.168.99.2** и **ping 192.168.99.3**. Коммутатор S2 отвечает (первый эхо-запрос теряется, пока S1 определяет MAC-адрес S2 по протоколу ARP), а коммутатор S3 не отвечает.
 
