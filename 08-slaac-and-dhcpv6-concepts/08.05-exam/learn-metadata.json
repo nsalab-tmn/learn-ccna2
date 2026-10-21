@@ -126,7 +126,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/2.png) Посмотрите на изображение. Какие действия необходимы, чтобы разрешить компьютеру PC-A получить IPv6-адрес от сервера DHCPv6?"
+            "question": "Маршрутизатор RTR1 подключен интерфейсом Fa0/0 к сегменту 2001:DB8:1234:5678::/64, в котором находится компьютер PC-A, а интерфейсом Fa0/1 — к сегменту 2001:DB8:1234:ABCD::/64, в котором находится сервер DHCPv6 с адресом 2001:DB8:1234:ABCD::10. Фрагмент текущей конфигурации RTR1:\n\n```\nRTR1#show running-config\n…\nhostname RTR1\n!\n…\ninterface FastEthernet0/0\n ip address dhcp\n duplex auto\n speed auto\n ipv6 address 2001:DB8:1234:5678::1/64\n ipv6 nd managed-config-flag\n!\ninterface FastEthernet0/1\n no ip address\n duplex auto\n speed auto\n ipv6 address 2001:DB8:1234:ABCD::1/64\n!\n…\n```\n\nКакие действия необходимы, чтобы разрешить компьютеру PC-A получить IPv6-адрес от сервера DHCPv6?"
         },
         {
             "questionId": "q04",
@@ -157,7 +157,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/3.png) Посмотрите на изображение. PC-A не может получить IPv6-адрес от DHCPv6-сервера с сохранением состояния. В чем проблема?"
+            "question": "Маршрутизатор RTR1 подключен интерфейсом Gig0/0 к сегменту 2001:DB8:1234:5678::/64, в котором находится компьютер PC-A, а интерфейсом Gig0/1 — к сегменту 2001:DB8:1234:ABCD::/64, в котором находится сервер DHCPv6 с адресом 2001:DB8:1234:ABCD::10. Фрагмент текущей конфигурации RTR1:\n\n```\nRTR1#show running-config\n…\ninterface GigabitEthernet0/0\n no ip address\n duplex auto\n speed auto\n ipv6 address 2001:DB8:1234:5678::1/64\n ipv6 enable\n ipv6 nd managed-config-flag\n!\ninterface GigabitEthernet0/1\n no ip address\n duplex auto\n speed auto\n ipv6 address 2001:DB8:1234:ABCD::1/64\n ipv6 enable\n ipv6 dhcp relay destination 2001:DB8:1234:ABCD::10 GigabitEthernet0/1\n!\n…\n```\n\nPC-A не может получить IPv6-адрес от DHCPv6-сервера с сохранением состояния. В чем проблема?"
         },
         {
             "questionId": "q05",
@@ -188,7 +188,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/4.png) Посмотрите на изображение. Сетевой администратор внедряет в компании DHCPv6 без сохранения состояния. Клиенты настраивают IPv6-адреса ожидаемым образом. Но они не получают сведения об адресе DNS-сервера и доменном имени, настроенных в пуле DHCP. В чем может заключаться причина проблемы?"
+            "question": "![](./assets/4.svg) Посмотрите на изображение. Сетевой администратор внедряет в компании DHCPv6 без сохранения состояния. Клиенты настраивают IPv6-адреса ожидаемым образом. Но они не получают сведения об адресе DNS-сервера и доменном имени, настроенных в пуле DHCP. В чем может заключаться причина проблемы?"
         },
         {
             "questionId": "q06",
@@ -278,7 +278,7 @@
                     "correct": true
                 }
             ],
-            "question": "![](./assets/5.png) Посмотрите на изображение. Сетевой администратор настраивает маршрутизатор в качестве DHCPv6-сервера. Администратор использует команду show ipv6 dhcp pool для проверки конфигурации. Какое утверждение объясняет, почему количество активных клиентов равно нулю?"
+            "question": "![](./assets/5.svg) Посмотрите на изображение. Сетевой администратор настраивает маршрутизатор в качестве DHCPv6-сервера. Администратор использует команду show ipv6 dhcp pool для проверки конфигурации. Какое утверждение объясняет, почему количество активных клиентов равно нулю?"
         },
         {
             "questionId": "q08",
@@ -340,7 +340,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/6.png) Посмотрите на изображение. Сетевой администратор настраивает маршрутизатор для работы в режиме DHCPv6. Какие выводы можно сделать на основе показанных команд?"
+            "question": "Сетевой администратор настраивает маршрутизатор для работы в режиме DHCPv6 следующими командами:\n\n```\nR1#configure terminal\nEnter configuration commands, one per line.  End with CNTL/Z.\nR1(config)#ipv6 unicast-routing\nR1(config)#ipv6 dhcp pool ACAD_CLASS\nR1(config-dhcpv6)#dns-server 2001:db8:acad:a1::10\nR1(config-dhcpv6)#domain-name nsalab.local\nR1(config-dhcpv6)#exit\nR1(config)#interface gigabitEthernet 0/0\nR1(config-if)#ipv6 address 2001:db8:acad:1::1/64\nR1(config-if)#ipv6 dhcp server ACAD_CLASS\nR1(config-if)#ipv6 nd other-config-flag\nR1(config-if)#end\nR1#\n```\n\nКакие выводы можно сделать на основе этих команд?"
         },
         {
             "questionId": "q10",
@@ -371,7 +371,7 @@
                     "correct": false
                 }
             ],
-            "question": "![](./assets/7.png) Посмотрите на изображение. Исходя из показанных выходных данных, какой устанавливается тип IPv6-адресации?"
+            "question": "Фрагмент текущей конфигурации маршрутизатора R1:\n\n```\nR1#show running-config\n…\nipv6 unicast-routing\n!\nipv6 dhcp pool IPV6\n dns-server 2001:DB8:1234:5678::100\n domain-name nsalab.local\n!\ninterface FastEthernet0/0\n no ip address\n duplex auto\n speed auto\n ipv6 address 2001:DB8:1234:5678::1/64\n ipv6 nd other-config-flag\n ipv6 dhcp server IPV6\n!\n…\n```\n\nИсходя из этих выходных данных, какой устанавливается тип IPv6-адресации?"
         },
         {
             "questionId": "q11",
