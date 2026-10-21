@@ -1184,3 +1184,9 @@ final-exam,q52,apply,,"Key true: 192.168.10.129 is in 192.168.10.128/26 via 10.0
 final-exam,q53,understand,2;10,"Key true (code S, 15.05). The shared comment explains host routes in general but not that S marks a configured static route, L the automatic /128 of an interface address and a protocol code a learned route; «путь IPv6 со 128-битовой маской»: IPv6 has a prefix length (glossary «длина префикса»). Waits for #154 (exhibit to SVG).",text
 final-exam,q54,apply,5;10,"Keys true: 192.168.10.2 is in 192.168.10.0/24 on Gig0/1 (recomputed), and the frame there is Ethernet (14.02). Five options for two keys; the shared comment does not say why Gig0/0 and S0/0/0 are wrong or that PPP framing belongs to the serial link only; «деинкапсулирует пакет» should be «извлекает пакет из кадра PPP». Waits for #154.",text
 final-exam,q55,understand,,Key true (16.02: a static route that is present but points to a wrong next hop); per-option comments explain each. Passes.,none
+final-exam,q56,understand,,New item replacing q12.,none
+final-exam,q57,understand,,New item replacing q23.,none
+final-exam,q58,apply,,New item replacing q50.,none
+final-exam,q59,apply,,New item replacing q52.,none
+final-exam,q60,apply,,New item replacing q46.,none
+final-exam,q61,understand,,New item replacing q53.,none
