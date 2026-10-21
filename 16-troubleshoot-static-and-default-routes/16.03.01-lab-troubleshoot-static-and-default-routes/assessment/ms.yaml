@@ -126,3 +126,95 @@ Criterions:
             command: show running-config
             expr: (?m)^ipv6 route 2001:DB8:3::/64\s+2001:DB8:4::197\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 172.31.1.190 : 172.31.1.190 (ICMP)'
+      description: 'PC1 → 172.31.1.190 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.31.1.190: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.31.1.190
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC1.CONNECTIVITY-TESTS.CT-2
+      name: 'PC1 to 2001:db8:5::190 : 2001:db8:5::190 (ICMP)'
+      description: 'PC1 → 2001:db8:5::190 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 2001:db8:5::190: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:5::190
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 172.31.1.126 : 172.31.1.126 (ICMP)'
+      description: 'PC2 → 172.31.1.126 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.31.1.126: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.31.1.126
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC2.CONNECTIVITY-TESTS.CT-3
+      name: 'PC2 to 2001:db8:1::126 : 2001:db8:1::126 (ICMP)'
+      description: 'PC2 → 2001:db8:1::126 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 2001:db8:1::126: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:1::126
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5

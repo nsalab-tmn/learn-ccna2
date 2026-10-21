@@ -23,6 +23,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?172\.17\.30\.1\s*$'
             match: true
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-1
+      name: 'PC3 to 172.17.10.1 : 172.17.10.1 (ICMP)'
+      description: 'PC3 → 172.17.10.1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.17.10.1: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.10.1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: R1
   name: R1
   subCriterions:
@@ -116,3 +139,29 @@ Criterions:
             command: show interfaces GigabitEthernet0/1 switchport
             expr: 'Operational Mode: trunk'
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 172.17.30.10 : 172.17.30.10 (ICMP)'
+      description: 'PC1 → 172.17.30.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.17.30.10: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.30.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

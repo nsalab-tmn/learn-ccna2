@@ -694,17 +694,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has banner motd'
+      - name: 'show running-config: matches (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$'
         code: check
         type: check
         device: Edge-Router
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - banner motd
-            tags_are_present: true
+            expr: (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$
+            match: true
     - code: EDGE-ROUTER.MISC.ENABLE-SECRET
       name: Enable Secret
       description: Пароль привилегированного режима задан как enable secret
@@ -712,17 +711,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$yWVbWYlEMkpZq7H1\s*$'
         code: check
         type: check
         device: Edge-Router
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$yWVbWYlEMkpZq7H1\s*$
+            match: true
     - code: EDGE-ROUTER.MISC.HOSTNAME
       name: Host Name
       description: Имя устройства — Edge-Router
@@ -747,17 +745,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has service password-encryption'
+      - name: 'show running-config: matches (?m)^service password\-encryption\s*$'
         code: check
         type: check
         device: Edge-Router
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - service password-encryption
-            tags_are_present: true
+            expr: (?m)^service password\-encryption\s*$
+            match: true
 - code: L3-SW1
   name: L3-SW1
   subCriterions:
@@ -1433,6 +1430,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.99\.1\s*$'
             match: true
+  - code: MANAGEMENT-PC.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: MANAGEMENT-PC.CONNECTIVITY-TESTS.CT-3
+      name: 'Management-PC to 192.168.10.11 : 192.168.10.11 (ICMP)'
+      description: 'Management-PC → 192.168.10.11 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 6
+      steps:
+      - name: 'ping -n 2 192.168.10.11: has : bytes='
+        code: check
+        type: check
+        device: Management-PC
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.11
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: SW-A
   name: Sw-A
   subCriterions:
@@ -1446,7 +1466,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/7 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/7 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-A
@@ -1454,7 +1475,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/7 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-A.PORTS.F0-8-ACCESS-VLAN
       name: FastEthernet0/8.Access VLAN
@@ -1463,7 +1484,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/8 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/8 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-A
@@ -1471,7 +1493,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/8 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-A.PORTS.F0-9-ACCESS-VLAN
       name: FastEthernet0/9.Access VLAN
@@ -1480,7 +1502,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/9 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/9 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-A
@@ -1488,7 +1511,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/9 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-A.PORTS.F0-10-ACCESS-VLAN
       name: FastEthernet0/10.Access VLAN
@@ -1497,7 +1520,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/10 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/10 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-A
@@ -1505,7 +1529,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/10 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-A.PORTS.F0-11-ACCESS-VLAN
       name: FastEthernet0/11.Access VLAN
@@ -1514,7 +1538,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/11 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-A
@@ -1522,7 +1547,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/11 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-A.PORTS.F0-12-ACCESS-VLAN
       name: FastEthernet0/12.Access VLAN
@@ -1531,7 +1556,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/12 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/12 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-A
@@ -1539,7 +1565,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/12 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-A.PORTS.F0-13-ACCESS-VLAN
       name: FastEthernet0/13.Access VLAN
@@ -1548,7 +1574,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/13 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/13 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-A
@@ -1556,7 +1583,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/13 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-A.PORTS.F0-14-ACCESS-VLAN
       name: FastEthernet0/14.Access VLAN
@@ -1565,7 +1592,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/14 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/14 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-A
@@ -1573,7 +1601,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/14 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-A.PORTS.F0-15-ACCESS-VLAN
       name: FastEthernet0/15.Access VLAN
@@ -1582,7 +1610,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/15 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/15 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-A
@@ -1590,7 +1619,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/15 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-A.PORTS.F0-16-ACCESS-VLAN
       name: FastEthernet0/16.Access VLAN
@@ -1599,7 +1628,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/16 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/16 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-A
@@ -1607,7 +1637,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/16 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-A.PORTS.F0-17-ACCESS-VLAN
       name: FastEthernet0/17.Access VLAN
@@ -1616,7 +1646,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/17 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/17 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-A
@@ -1624,7 +1655,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/17 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-A.PORTS.F0-18-ACCESS-VLAN
       name: FastEthernet0/18.Access VLAN
@@ -1633,7 +1664,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/18 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/18 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-A
@@ -1641,7 +1673,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/18 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-A.PORTS.F0-19-ACCESS-VLAN
       name: FastEthernet0/19.Access VLAN
@@ -1650,7 +1682,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/19 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/19 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-A
@@ -1658,7 +1691,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/19 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-A.PORTS.F0-20-ACCESS-VLAN
       name: FastEthernet0/20.Access VLAN
@@ -1667,7 +1700,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/20 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-A
@@ -1675,7 +1709,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/20 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-A.PORTS.F0-21-ACCESS-VLAN
       name: FastEthernet0/21.Access VLAN
@@ -1684,7 +1718,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/21 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/21 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-A
@@ -1692,7 +1727,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/21 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-A.PORTS.F0-22-ACCESS-VLAN
       name: FastEthernet0/22.Access VLAN
@@ -1701,7 +1736,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/22 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/22 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-A
@@ -1709,7 +1745,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/22 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-A.PORTS.F0-23-ACCESS-VLAN
       name: FastEthernet0/23.Access VLAN
@@ -1718,7 +1754,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/23 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/23 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-A
@@ -1726,7 +1763,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/23 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-A.PORTS.F0-24-ACCESS-VLAN
       name: FastEthernet0/24.Access VLAN
@@ -1735,7 +1772,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/24 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/24 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-A
@@ -1743,7 +1781,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/24 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-A.PORTS.F0-5-CHANNEL-GROUP
       name: FastEthernet0/5.Channel Group
@@ -2152,7 +2190,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/7 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/7 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-B
@@ -2160,7 +2199,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/7 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-B.PORTS.F0-8-ACCESS-VLAN
       name: FastEthernet0/8.Access VLAN
@@ -2169,7 +2208,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/8 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/8 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-B
@@ -2177,7 +2217,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/8 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-B.PORTS.F0-9-ACCESS-VLAN
       name: FastEthernet0/9.Access VLAN
@@ -2186,7 +2226,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/9 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/9 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-B
@@ -2194,7 +2235,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/9 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-B.PORTS.F0-10-ACCESS-VLAN
       name: FastEthernet0/10.Access VLAN
@@ -2203,7 +2244,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/10 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/10 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-B
@@ -2211,7 +2253,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/10 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-B.PORTS.F0-11-ACCESS-VLAN
       name: FastEthernet0/11.Access VLAN
@@ -2220,7 +2262,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/11 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-B
@@ -2228,7 +2271,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/11 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-B.PORTS.F0-12-ACCESS-VLAN
       name: FastEthernet0/12.Access VLAN
@@ -2237,7 +2280,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/12 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/12 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: Sw-B
@@ -2245,7 +2289,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/12 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SW-B.PORTS.F0-13-ACCESS-VLAN
       name: FastEthernet0/13.Access VLAN
@@ -2254,7 +2298,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/13 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/13 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-B
@@ -2262,7 +2307,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/13 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-B.PORTS.F0-14-ACCESS-VLAN
       name: FastEthernet0/14.Access VLAN
@@ -2271,7 +2316,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/14 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/14 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-B
@@ -2279,7 +2325,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/14 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-B.PORTS.F0-15-ACCESS-VLAN
       name: FastEthernet0/15.Access VLAN
@@ -2288,7 +2334,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/15 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/15 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-B
@@ -2296,7 +2343,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/15 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-B.PORTS.F0-16-ACCESS-VLAN
       name: FastEthernet0/16.Access VLAN
@@ -2305,7 +2352,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/16 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/16 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-B
@@ -2313,7 +2361,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/16 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-B.PORTS.F0-17-ACCESS-VLAN
       name: FastEthernet0/17.Access VLAN
@@ -2322,7 +2370,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/17 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/17 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-B
@@ -2330,7 +2379,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/17 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-B.PORTS.F0-18-ACCESS-VLAN
       name: FastEthernet0/18.Access VLAN
@@ -2339,7 +2388,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/18 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/18 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: Sw-B
@@ -2347,7 +2397,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/18 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SW-B.PORTS.F0-19-ACCESS-VLAN
       name: FastEthernet0/19.Access VLAN
@@ -2356,7 +2406,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/19 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/19 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-B
@@ -2364,7 +2415,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/19 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-B.PORTS.F0-20-ACCESS-VLAN
       name: FastEthernet0/20.Access VLAN
@@ -2373,7 +2424,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/20 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-B
@@ -2381,7 +2433,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/20 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-B.PORTS.F0-21-ACCESS-VLAN
       name: FastEthernet0/21.Access VLAN
@@ -2390,7 +2442,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/21 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/21 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-B
@@ -2398,7 +2451,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/21 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-B.PORTS.F0-22-ACCESS-VLAN
       name: FastEthernet0/22.Access VLAN
@@ -2407,7 +2460,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/22 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/22 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-B
@@ -2415,7 +2469,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/22 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-B.PORTS.F0-23-ACCESS-VLAN
       name: FastEthernet0/23.Access VLAN
@@ -2424,7 +2478,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/23 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/23 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-B
@@ -2432,7 +2487,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/23 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-B.PORTS.F0-24-ACCESS-VLAN
       name: FastEthernet0/24.Access VLAN
@@ -2441,7 +2496,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/24 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/24 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: Sw-B
@@ -2449,7 +2505,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/24 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SW-B.PORTS.F0-5-CHANNEL-GROUP
       name: FastEthernet0/5.Channel Group
@@ -2906,7 +2962,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/1 switchport: matches Access Mode VLAN: 40 \('
+      - name: 'show interfaces FastEthernet0/1 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 40 \('
         code: check
         type: check
         device: Sw-C
@@ -2914,7 +2971,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/1 switchport
-            expr: 'Access Mode VLAN: 40 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 40 \('
             match: true
     - code: SW-C.PORTS.F0-2-ACCESS-VLAN
       name: FastEthernet0/2.Access VLAN
@@ -2923,7 +2980,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/2 switchport: matches Access Mode VLAN: 40 \('
+      - name: 'show interfaces FastEthernet0/2 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 40 \('
         code: check
         type: check
         device: Sw-C
@@ -2931,7 +2989,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/2 switchport
-            expr: 'Access Mode VLAN: 40 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 40 \('
             match: true
     - code: SW-C.PORTS.F0-3-ACCESS-VLAN
       name: FastEthernet0/3.Access VLAN
@@ -2940,7 +2998,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/3 switchport: matches Access Mode VLAN: 40 \('
+      - name: 'show interfaces FastEthernet0/3 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 40 \('
         code: check
         type: check
         device: Sw-C
@@ -2948,7 +3007,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/3 switchport
-            expr: 'Access Mode VLAN: 40 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 40 \('
             match: true
     - code: SW-C.PORTS.F0-4-ACCESS-VLAN
       name: FastEthernet0/4.Access VLAN
@@ -2957,7 +3016,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/4 switchport: matches Access Mode VLAN: 40 \('
+      - name: 'show interfaces FastEthernet0/4 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 40 \('
         code: check
         type: check
         device: Sw-C
@@ -2965,7 +3025,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/4 switchport
-            expr: 'Access Mode VLAN: 40 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 40 \('
             match: true
     - code: SW-C.PORTS.F0-5-ACCESS-VLAN
       name: FastEthernet0/5.Access VLAN
@@ -2974,7 +3034,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/5 switchport: matches Access Mode VLAN: 40 \('
+      - name: 'show interfaces FastEthernet0/5 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 40 \('
         code: check
         type: check
         device: Sw-C
@@ -2982,7 +3043,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/5 switchport
-            expr: 'Access Mode VLAN: 40 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 40 \('
             match: true
     - code: SW-C.PORTS.F0-6-ACCESS-VLAN
       name: FastEthernet0/6.Access VLAN
@@ -2991,7 +3052,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/6 switchport: matches Access Mode VLAN: 50 \('
+      - name: 'show interfaces FastEthernet0/6 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 50 \('
         code: check
         type: check
         device: Sw-C
@@ -2999,7 +3061,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/6 switchport
-            expr: 'Access Mode VLAN: 50 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 50 \('
             match: true
     - code: SW-C.PORTS.F0-7-ACCESS-VLAN
       name: FastEthernet0/7.Access VLAN
@@ -3008,7 +3070,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/7 switchport: matches Access Mode VLAN: 50 \('
+      - name: 'show interfaces FastEthernet0/7 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 50 \('
         code: check
         type: check
         device: Sw-C
@@ -3016,7 +3079,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/7 switchport
-            expr: 'Access Mode VLAN: 50 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 50 \('
             match: true
     - code: SW-C.PORTS.F0-8-ACCESS-VLAN
       name: FastEthernet0/8.Access VLAN
@@ -3025,7 +3088,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/8 switchport: matches Access Mode VLAN: 50 \('
+      - name: 'show interfaces FastEthernet0/8 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 50 \('
         code: check
         type: check
         device: Sw-C
@@ -3033,7 +3097,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/8 switchport
-            expr: 'Access Mode VLAN: 50 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 50 \('
             match: true
     - code: SW-C.PORTS.F0-9-ACCESS-VLAN
       name: FastEthernet0/9.Access VLAN
@@ -3042,7 +3106,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/9 switchport: matches Access Mode VLAN: 50 \('
+      - name: 'show interfaces FastEthernet0/9 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 50 \('
         code: check
         type: check
         device: Sw-C
@@ -3050,7 +3115,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/9 switchport
-            expr: 'Access Mode VLAN: 50 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 50 \('
             match: true
     - code: SW-C.PORTS.F0-10-ACCESS-VLAN
       name: FastEthernet0/10.Access VLAN
@@ -3059,7 +3124,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/10 switchport: matches Access Mode VLAN: 50 \('
+      - name: 'show interfaces FastEthernet0/10 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 50 \('
         code: check
         type: check
         device: Sw-C
@@ -3067,7 +3133,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/10 switchport
-            expr: 'Access Mode VLAN: 50 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 50 \('
             match: true
     - code: SW-C.PORTS.F0-11-ACCESS-VLAN
       name: FastEthernet0/11.Access VLAN
@@ -3076,7 +3142,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/11 switchport: matches Access Mode VLAN: 60 \('
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 60 \('
         code: check
         type: check
         device: Sw-C
@@ -3084,7 +3151,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/11 switchport
-            expr: 'Access Mode VLAN: 60 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 60 \('
             match: true
     - code: SW-C.PORTS.F0-12-ACCESS-VLAN
       name: FastEthernet0/12.Access VLAN
@@ -3093,7 +3160,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/12 switchport: matches Access Mode VLAN: 60 \('
+      - name: 'show interfaces FastEthernet0/12 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 60 \('
         code: check
         type: check
         device: Sw-C
@@ -3101,7 +3169,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/12 switchport
-            expr: 'Access Mode VLAN: 60 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 60 \('
             match: true
     - code: SW-C.PORTS.F0-13-ACCESS-VLAN
       name: FastEthernet0/13.Access VLAN
@@ -3110,7 +3178,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/13 switchport: matches Access Mode VLAN: 60 \('
+      - name: 'show interfaces FastEthernet0/13 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 60 \('
         code: check
         type: check
         device: Sw-C
@@ -3118,7 +3187,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/13 switchport
-            expr: 'Access Mode VLAN: 60 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 60 \('
             match: true
     - code: SW-C.PORTS.F0-14-ACCESS-VLAN
       name: FastEthernet0/14.Access VLAN
@@ -3127,7 +3196,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/14 switchport: matches Access Mode VLAN: 60 \('
+      - name: 'show interfaces FastEthernet0/14 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 60 \('
         code: check
         type: check
         device: Sw-C
@@ -3135,7 +3205,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/14 switchport
-            expr: 'Access Mode VLAN: 60 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 60 \('
             match: true
     - code: SW-C.PORTS.F0-15-ACCESS-VLAN
       name: FastEthernet0/15.Access VLAN
@@ -3144,7 +3214,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/15 switchport: matches Access Mode VLAN: 60 \('
+      - name: 'show interfaces FastEthernet0/15 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 60 \('
         code: check
         type: check
         device: Sw-C
@@ -3152,7 +3223,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/15 switchport
-            expr: 'Access Mode VLAN: 60 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 60 \('
             match: true
     - code: SW-C.PORTS.F0-24-ACCESS-VLAN
       name: FastEthernet0/24.Access VLAN
@@ -3161,7 +3232,8 @@ Criterions:
       - Switching
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/24 switchport: matches Access Mode VLAN: 99 \('
+      - name: 'show interfaces FastEthernet0/24 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 99 \('
         code: check
         type: check
         device: Sw-C
@@ -3169,7 +3241,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/24 switchport
-            expr: 'Access Mode VLAN: 99 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 99 \('
             match: true
     - code: SW-C.PORTS.G0-1-DTP-MODE
       name: GigabitEthernet0/1.Dynamic Mode
@@ -3477,17 +3549,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$yWVbWYlEMkpZq7H1\s*$'
         code: check
         type: check
         device: Sw-C
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$yWVbWYlEMkpZq7H1
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$yWVbWYlEMkpZq7H1\s*$
+            match: true
 - code: WS-1-1
   name: WS-1-1
   subCriterions:
@@ -3511,6 +3582,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.10\.1\s*$'
             match: true
+  - code: WS-1-1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: WS-1-1.CONNECTIVITY-TESTS.CT-0
+      name: 'WS-1-1 to 192.168.30.16 : 192.168.30.16 (ICMP)'
+      description: 'WS-1-1 → 192.168.30.16 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 6
+      steps:
+      - name: 'ping -n 2 192.168.30.16: has : bytes='
+        code: check
+        type: check
+        device: WS-1-1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.16
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: WS-1-2
   name: WS-1-2
   subCriterions:
@@ -3580,6 +3674,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.10\.1\s*$'
             match: true
+  - code: WS-1-4.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: WS-1-4.CONNECTIVITY-TESTS.CT-1
+      name: 'WS-1-4 to 192.168.40.11 : 192.168.40.11 (ICMP)'
+      description: 'WS-1-4 → 192.168.40.11 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 6
+      steps:
+      - name: 'ping -n 2 192.168.40.11: has : bytes='
+        code: check
+        type: check
+        device: WS-1-4
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.40.11
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: WS-1-5
   name: WS-1-5
   subCriterions:
@@ -3649,6 +3766,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?192\.168\.40\.1\s*$'
             match: true
+  - code: WS-2-1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: WS-2-1.CONNECTIVITY-TESTS.CT-2
+      name: 'WS-2-1 to 209.165.201.10 : 209.165.201.10 (ICMP)'
+      description: 'WS-2-1 → 209.165.201.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 6
+      steps:
+      - name: 'ping -n 2 209.165.201.10: has : bytes='
+        code: check
+        type: check
+        device: WS-2-1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.201.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: WS-2-2
   name: WS-2-2
   subCriterions:

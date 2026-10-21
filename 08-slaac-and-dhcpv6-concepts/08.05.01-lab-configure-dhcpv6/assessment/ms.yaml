@@ -30,17 +30,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$QKvQG0F70xbh/P54'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$QKvQG0F70xbh/P54\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$QKvQG0F70xbh/P54
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$QKvQG0F70xbh/P54\s*$
+            match: true
     - code: R1.MISC.PWD-ENCRYPTION
       name: Service Password Encryption
       description: Включено шифрование паролей (service password-encryption)
@@ -48,17 +47,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has service password-encryption'
+      - name: 'show running-config: matches (?m)^service password\-encryption\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - service password-encryption
-            tags_are_present: true
+            expr: (?m)^service password\-encryption\s*$
+            match: true
     - code: R1.MISC.DOMAIN-LOOKUP
       name: IP Domain-Lookup
       description: Поиск DNS отключён (no ip domain-lookup)
@@ -66,17 +64,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has no ip domain-lookup'
+      - name: 'show running-config: matches (?m)^no ip domain\-lookup\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no ip domain-lookup
-            tags_are_present: true
+            expr: (?m)^no ip domain\-lookup\s*$
+            match: true
     - code: R1.MISC.STARTUP-CONFIG
       name: Startup Config
       description: Конфигурация сохранена в NVRAM
@@ -84,17 +81,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show startup-config: has ipv6 unicast-routing'
+      - name: 'show startup-config: matches (?m)^ ?ipv6 unicast\-routing\s*$'
         code: check
         type: check
         device: R1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show startup-config
-            assert_tags:
-            - ipv6 unicast-routing
-            tags_are_present: true
+            expr: (?m)^ ?ipv6 unicast\-routing\s*$
+            match: true
     - code: R1.MISC.IPV6-ROUTING
       name: IPv6 Unicast Routing
       description: Включена маршрутизация IPv6 (ipv6 unicast-routing)
@@ -566,17 +562,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$QKvQG0F70xbh/P54'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$QKvQG0F70xbh/P54\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$QKvQG0F70xbh/P54
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$QKvQG0F70xbh/P54\s*$
+            match: true
     - code: R2.MISC.PWD-ENCRYPTION
       name: Service Password Encryption
       description: Включено шифрование паролей (service password-encryption)
@@ -584,17 +579,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has service password-encryption'
+      - name: 'show running-config: matches (?m)^service password\-encryption\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - service password-encryption
-            tags_are_present: true
+            expr: (?m)^service password\-encryption\s*$
+            match: true
     - code: R2.MISC.DOMAIN-LOOKUP
       name: IP Domain-Lookup
       description: Поиск DNS отключён (no ip domain-lookup)
@@ -602,17 +596,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has no ip domain-lookup'
+      - name: 'show running-config: matches (?m)^no ip domain\-lookup\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - no ip domain-lookup
-            tags_are_present: true
+            expr: (?m)^no ip domain\-lookup\s*$
+            match: true
     - code: R2.MISC.STARTUP-CONFIG
       name: Startup Config
       description: Конфигурация сохранена в NVRAM
@@ -620,17 +613,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show startup-config: has ipv6 unicast-routing'
+      - name: 'show startup-config: matches (?m)^ ?ipv6 unicast\-routing\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show startup-config
-            assert_tags:
-            - ipv6 unicast-routing
-            tags_are_present: true
+            expr: (?m)^ ?ipv6 unicast\-routing\s*$
+            match: true
     - code: R2.MISC.IPV6-ROUTING
       name: IPv6 Unicast Routing
       description: Включена маршрутизация IPv6 (ipv6 unicast-routing)
@@ -994,9 +986,19 @@ Criterions:
             command: ipv6config
             expr: '(?m)IPv6 Address[. ]*: 2001:DB8:ACAD:1:[0-9A-F:]+/\d+\s*$'
             match: true
+      - name: 'ipv6config /all: matches (?m)IPv6 Auto Config[. ]*: Yes\s*$'
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ipv6config /all
+            expr: '(?m)IPv6 Auto Config[. ]*: Yes\s*$'
+            match: true
     - code: PC-A.PORTS.DEFAULT-GW6
       name: Default Gateway IPv6
-      description: Шлюз IPv6 по умолчанию FE80::1
+      description: Шлюз IPv6 по умолчанию FE80::1 (автоматическая настройка)
       skills:
       - Ipv6
       max_mark: 1
@@ -1010,6 +1012,16 @@ Criterions:
           action_vars:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: FE80::1\s*$'
+            match: true
+      - name: 'ipv6config /all: matches (?m)IPv6 Auto Config[. ]*: Yes\s*$'
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ipv6config /all
+            expr: '(?m)IPv6 Auto Config[. ]*: Yes\s*$'
             match: true
   - code: PC-A.MISC
     name: Miscellaneous
@@ -1048,6 +1060,29 @@ Criterions:
             command: ipconfig /all
             expr: '(?mi)Connection-specific DNS Suffix[. ]*: STATELESS\.com\s*$'
             match: true
+  - code: PC-A.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-A.CONNECTIVITY-TESTS.CT-0
+      name: 'PC-A to 2001:db8:acad:3::1 : 2001:db8:acad:3::1 (ICMP)'
+      description: 'PC-A → 2001:db8:acad:3::1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 2001:db8:acad:3::1: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:acad:3::1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC-B
   name: PC-B
   subCriterions:
@@ -1071,9 +1106,19 @@ Criterions:
             command: ipv6config
             expr: '(?m)IPv6 Address[. ]*: 2001:DB8:ACAD:3:AAA:[0-9A-F:]+/\d+\s*$'
             match: true
+      - name: 'ipv6config /all: matches (?m)IPv6 Auto Config[. ]*: Yes\s*$'
+        code: check
+        type: check
+        device: PC-B
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ipv6config /all
+            expr: '(?m)IPv6 Auto Config[. ]*: Yes\s*$'
+            match: true
     - code: PC-B.PORTS.DEFAULT-GW6
       name: Default Gateway IPv6
-      description: Шлюз IPv6 по умолчанию FE80::1
+      description: Шлюз IPv6 по умолчанию FE80::1 (автоматическая настройка)
       skills:
       - Ipv6
       max_mark: 1
@@ -1087,6 +1132,16 @@ Criterions:
           action_vars:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: FE80::1\s*$'
+            match: true
+      - name: 'ipv6config /all: matches (?m)IPv6 Auto Config[. ]*: Yes\s*$'
+        code: check
+        type: check
+        device: PC-B
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ipv6config /all
+            expr: '(?m)IPv6 Auto Config[. ]*: Yes\s*$'
             match: true
   - code: PC-B.MISC
     name: Miscellaneous
@@ -1125,3 +1180,26 @@ Criterions:
             command: ipconfig /all
             expr: '(?mi)Connection-specific DNS Suffix[. ]*: STATEFUL\.com\s*$'
             match: true
+  - code: PC-B.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-B.CONNECTIVITY-TESTS.CT-1
+      name: 'PC-B to 2001:db8:acad:1::1 : 2001:db8:acad:1::1 (ICMP)'
+      description: 'PC-B → 2001:db8:acad:1::1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 2001:db8:acad:1::1: has : bytes='
+        code: check
+        type: check
+        device: PC-B
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:acad:1::1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

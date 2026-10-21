@@ -271,7 +271,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/1 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/1 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: SWB
@@ -279,7 +280,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/1 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SWB.PORTS.F0-2-ACCESS-VLAN
       name: FastEthernet0/2.Access VLAN
@@ -288,7 +289,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/2 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/2 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: SWB
@@ -296,7 +298,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/2 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SWB.PORTS.F0-3-ACCESS-VLAN
       name: FastEthernet0/3.Access VLAN
@@ -305,7 +307,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/3 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/3 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: SWB
@@ -313,7 +316,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/3 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SWB.PORTS.G0-1-NATIVE
       name: GigabitEthernet0/1.Native VLAN
@@ -533,6 +536,28 @@ Criterions:
             command: show vlan brief
             expr: (?m)^99\s+Management\s+active
             match: true
+  - code: SWB.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: SWB.CONNECTIVITY-TESTS.CT-0
+      name: 'SWB to 192.168.99.254 : 192.168.99.254 (ICMP)'
+      description: 'SWB → 192.168.99.254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 5
+      steps:
+      - name: 'ping 192.168.99.254: some replies'
+        code: check
+        type: check
+        device: SWB
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ping 192.168.99.254 repeat 2
+            expr: Success rate is [1-9]
+            match: true
+            retries: 3
+            retry_interval: 15
 - code: SWC
   name: SWC
   subCriterions:
@@ -546,7 +571,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/1 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/1 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: SWC
@@ -554,7 +580,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/1 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SWC.PORTS.F0-2-ACCESS-VLAN
       name: FastEthernet0/2.Access VLAN
@@ -563,7 +589,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/2 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/2 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: SWC
@@ -571,7 +598,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/2 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: SWC.PORTS.F0-3-ACCESS-VLAN
       name: FastEthernet0/3.Access VLAN
@@ -580,7 +607,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/3 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/3 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: SWC
@@ -588,7 +616,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/3 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: SWC.PORTS.F0-4-ACCESS-VLAN
       name: FastEthernet0/4.Access VLAN
@@ -597,7 +625,8 @@ Criterions:
       - VLAN Config
       max_mark: 1
       steps:
-      - name: 'show interfaces FastEthernet0/4 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/4 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: SWC
@@ -605,7 +634,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/4 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: SWC.PORTS.F0-4-VOICE-VLAN
       name: FastEthernet0/4.Voice VLAN

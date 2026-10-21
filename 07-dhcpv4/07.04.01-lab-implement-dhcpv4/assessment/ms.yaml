@@ -23,6 +23,29 @@ Criterions:
             command: ipconfig /all
             expr: '(?m)DHCP Enabled[. ]*: Yes\s*$'
             match: true
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 192.168.30.11 : 192.168.30.11 (ICMP)'
+      description: 'PC1 → 192.168.30.11 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 192.168.30.11: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.11
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC2
   name: PC2
   subCriterions:
@@ -46,6 +69,29 @@ Criterions:
             command: ipconfig /all
             expr: '(?m)DHCP Enabled[. ]*: Yes\s*$'
             match: true
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 192.168.20.254 : 192.168.20.254 (ICMP)'
+      description: 'PC2 → 192.168.20.254 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 192.168.20.254: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.20.254
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: R1
   name: R1
   subCriterions:
@@ -82,7 +128,19 @@ Criterions:
       - Ip
       max_mark: 1
       steps:
-      - name: 'show running-config: matches (?m)^ip dhcp excluded-address 192\.168\.10\.1 192\.168\.10\.10\s*$'
+      - name: 'show running-config: matches (?m)^ip dhcp excluded-address 192\.168\.10\.1 192\.168\.10\.10\s*$|\A(?=[\s\S]*^ip
+          dhcp excluded-address (?:192\.168\.10\.1|192\.168\.10\.(?:[0-1]) 192\.168\.10\.(?:[1-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.2|192\.168\.10\.(?:[0-2]) 192\.168\.10\.(?:[2-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.3|192\.168\.10\.(?:[0-3]) 192\.168\.10\.(?:[3-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.4|192\.168\.10\.(?:[0-4]) 192\.168\.10\.(?:[4-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.5|192\.168\.10\.(?:[0-5]) 192\.168\.10\.(?:[5-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.6|192\.168\.10\.(?:[0-6]) 192\.168\.10\.(?:[6-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.7|192\.168\.10\.(?:[0-7]) 192\.168\.10\.(?:[7-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.8|192\.168\.10\.(?:[0-8]) 192\.168\.10\.(?:[8-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.9|192\.168\.10\.(?:[0-9]) 192\.168\.10\.(?:9|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.10|192\.168\.10\.(?:[0-9]|10) 192\.168\.10\.(?:[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?![\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.11|192\.168\.10\.(?:[0-9]|1[0-1]) 192\.168\.10\.(?:1[1-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)'
         code: check
         type: check
         device: R2
@@ -90,7 +148,19 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config
-            expr: (?m)^ip dhcp excluded-address 192\.168\.10\.1 192\.168\.10\.10\s*$
+            expr: (?m)^ip dhcp excluded-address 192\.168\.10\.1 192\.168\.10\.10\s*$|\A(?=[\s\S]*^ip dhcp excluded-address
+              (?:192\.168\.10\.1|192\.168\.10\.(?:[0-1]) 192\.168\.10\.(?:[1-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.2|192\.168\.10\.(?:[0-2]) 192\.168\.10\.(?:[2-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.3|192\.168\.10\.(?:[0-3]) 192\.168\.10\.(?:[3-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.4|192\.168\.10\.(?:[0-4]) 192\.168\.10\.(?:[4-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.5|192\.168\.10\.(?:[0-5]) 192\.168\.10\.(?:[5-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.6|192\.168\.10\.(?:[0-6]) 192\.168\.10\.(?:[6-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.7|192\.168\.10\.(?:[0-7]) 192\.168\.10\.(?:[7-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.8|192\.168\.10\.(?:[0-8]) 192\.168\.10\.(?:[8-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.9|192\.168\.10\.(?:[0-9]) 192\.168\.10\.(?:9|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.10|192\.168\.10\.(?:[0-9]|10) 192\.168\.10\.(?:[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?![\s\S]*^ip dhcp excluded-address (?:192\.168\.10\.11|192\.168\.10\.(?:[0-9]|1[0-1]) 192\.168\.10\.(?:1[1-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)
             match: true
     - code: R2.DHCP-SERVER.EXCLUDED-192-168-30-1
       name: Excluded Addresses.192.168.30.1 192.168.30.10
@@ -99,7 +169,19 @@ Criterions:
       - Ip
       max_mark: 1
       steps:
-      - name: 'show running-config: matches (?m)^ip dhcp excluded-address 192\.168\.30\.1 192\.168\.30\.10\s*$'
+      - name: 'show running-config: matches (?m)^ip dhcp excluded-address 192\.168\.30\.1 192\.168\.30\.10\s*$|\A(?=[\s\S]*^ip
+          dhcp excluded-address (?:192\.168\.30\.1|192\.168\.30\.(?:[0-1]) 192\.168\.30\.(?:[1-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.2|192\.168\.30\.(?:[0-2]) 192\.168\.30\.(?:[2-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.3|192\.168\.30\.(?:[0-3]) 192\.168\.30\.(?:[3-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.4|192\.168\.30\.(?:[0-4]) 192\.168\.30\.(?:[4-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.5|192\.168\.30\.(?:[0-5]) 192\.168\.30\.(?:[5-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.6|192\.168\.30\.(?:[0-6]) 192\.168\.30\.(?:[6-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.7|192\.168\.30\.(?:[0-7]) 192\.168\.30\.(?:[7-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.8|192\.168\.30\.(?:[0-8]) 192\.168\.30\.(?:[8-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.9|192\.168\.30\.(?:[0-9]) 192\.168\.30\.(?:9|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.10|192\.168\.30\.(?:[0-9]|10) 192\.168\.30\.(?:[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)(?![\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.11|192\.168\.30\.(?:[0-9]|1[0-1]) 192\.168\.30\.(?:1[1-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+          \t\r]*$)'
         code: check
         type: check
         device: R2
@@ -107,7 +189,19 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config
-            expr: (?m)^ip dhcp excluded-address 192\.168\.30\.1 192\.168\.30\.10\s*$
+            expr: (?m)^ip dhcp excluded-address 192\.168\.30\.1 192\.168\.30\.10\s*$|\A(?=[\s\S]*^ip dhcp excluded-address
+              (?:192\.168\.30\.1|192\.168\.30\.(?:[0-1]) 192\.168\.30\.(?:[1-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.2|192\.168\.30\.(?:[0-2]) 192\.168\.30\.(?:[2-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.3|192\.168\.30\.(?:[0-3]) 192\.168\.30\.(?:[3-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.4|192\.168\.30\.(?:[0-4]) 192\.168\.30\.(?:[4-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.5|192\.168\.30\.(?:[0-5]) 192\.168\.30\.(?:[5-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.6|192\.168\.30\.(?:[0-6]) 192\.168\.30\.(?:[6-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.7|192\.168\.30\.(?:[0-7]) 192\.168\.30\.(?:[7-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.8|192\.168\.30\.(?:[0-8]) 192\.168\.30\.(?:[8-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.9|192\.168\.30\.(?:[0-9]) 192\.168\.30\.(?:9|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?=[\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.10|192\.168\.30\.(?:[0-9]|10) 192\.168\.30\.(?:[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)(?![\s\S]*^ip dhcp excluded-address (?:192\.168\.30\.11|192\.168\.30\.(?:[0-9]|1[0-1]) 192\.168\.30\.(?:1[1-9]|[2-9]\d|1\d\d|2[0-4]\d|25[0-5]))[
+              \t\r]*$)
             match: true
     - code: R2.DHCP-SERVER.POOL-R1-LAN-DNS
       name: Pools.Pool R1-LAN.DNS server IP
@@ -116,7 +210,8 @@ Criterions:
       - Ip
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^ip dhcp pool R1\-LAN( |$): matches (?m)^ dns-server 192\.168\.20\.254\s*$'
+      - name: 'show running-config | section ^ip dhcp pool R1\-LAN( |$): matches (?m)^ dns-server(?: \S+)* 192\.168\.20\.254(?:
+          \S+)*\s*$'
         code: check
         type: check
         device: R2
@@ -124,7 +219,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^ip dhcp pool R1\-LAN( |$)
-            expr: (?m)^ dns-server 192\.168\.20\.254\s*$
+            expr: '(?m)^ dns-server(?: \S+)* 192\.168\.20\.254(?: \S+)*\s*$'
             match: true
     - code: R2.DHCP-SERVER.POOL-R1-LAN-GW
       name: Pools.Pool R1-LAN.Default Gateway
@@ -202,7 +297,8 @@ Criterions:
       - Ip
       max_mark: 1
       steps:
-      - name: 'show running-config | section ^ip dhcp pool R3\-LAN( |$): matches (?m)^ dns-server 192\.168\.20\.254\s*$'
+      - name: 'show running-config | section ^ip dhcp pool R3\-LAN( |$): matches (?m)^ dns-server(?: \S+)* 192\.168\.20\.254(?:
+          \S+)*\s*$'
         code: check
         type: check
         device: R2
@@ -210,7 +306,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show running-config | section ^ip dhcp pool R3\-LAN( |$)
-            expr: (?m)^ dns-server 192\.168\.20\.254\s*$
+            expr: '(?m)^ dns-server(?: \S+)* 192\.168\.20\.254(?: \S+)*\s*$'
             match: true
     - code: R2.DHCP-SERVER.POOL-R3-LAN-GW
       name: Pools.Pool R3-LAN.Default Gateway
@@ -301,6 +397,28 @@ Criterions:
             command: show running-config interface GigabitEthernet0/1
             expr: (?m)^ ip address dhcp\s*$
             match: true
+  - code: R2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: R2.CONNECTIVITY-TESTS.CT-2
+      name: 'R2 to 209.165.200.225 : 209.165.200.225 (ICMP)'
+      description: 'R2 → 209.165.200.225 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping 209.165.200.225: some replies'
+        code: check
+        type: check
+        device: R2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ping 209.165.200.225 repeat 2
+            expr: Success rate is [1-9]
+            match: true
+            retries: 3
+            retry_interval: 15
 - code: R3
   name: R3
   subCriterions:

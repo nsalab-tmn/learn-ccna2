@@ -153,7 +153,8 @@ Criterions:
       - VLAN Configuration
       max_mark: 5
       steps:
-      - name: 'show interfaces FastEthernet0/11 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: S1
@@ -161,7 +162,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/11 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: S1.PORTS.F0-6-ACCESS-VLAN
       name: FastEthernet0/6.Access VLAN
@@ -170,7 +171,8 @@ Criterions:
       - VLAN Configuration
       max_mark: 5
       steps:
-      - name: 'show interfaces FastEthernet0/6 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/6 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: S1
@@ -178,7 +180,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/6 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: S1.PORTS.G0-1-TRUNK
       name: GigabitEthernet0/1.Port Mode
@@ -234,3 +236,75 @@ Criterions:
             command: show vlan brief
             expr: (?m)^30\s+VLAN0030\s+active
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 172.17.30.10 : 172.17.30.10 (ICMP)'
+      description: 'PC1 → 172.17.30.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'ping -n 2 172.17.30.10: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.30.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC1.CONNECTIVITY-TESTS.CT-2
+      name: 'PC1 to 172.17.10.1 : 172.17.10.1 (ICMP)'
+      description: 'PC1 → 172.17.10.1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'ping -n 2 172.17.10.1: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.10.1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-1
+      name: 'PC3 to 172.17.10.1 : 172.17.10.1 (ICMP)'
+      description: 'PC3 → 172.17.10.1 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'ping -n 2 172.17.10.1: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.10.1
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

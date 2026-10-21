@@ -60,6 +60,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?172\.16\.20\.1\s*$'
             match: true
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 172.16.20.138 : 172.16.20.138 (ICMP)'
+      description: 'PC1 → 172.16.20.138 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.16.20.138: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.16.20.138
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC2
   name: PC2
   subCriterions:
@@ -120,6 +143,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: (?:\S+\s*\n\s+)?172\.16\.20\.129\s*$'
             match: true
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 64.100.1.10 : 64.100.1.10 (ICMP)'
+      description: 'PC2 → 64.100.1.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 64.100.1.10: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 64.100.1.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC3
   name: PC3
   subCriterions:
@@ -180,6 +226,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: FE80::2\s*$'
             match: true
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 2001:db8:c0de:13::a : 2001:db8:c0de:13::a (ICMP)'
+      description: 'PC3 → 2001:db8:c0de:13::a (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 2001:db8:c0de:13::a: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:c0de:13::a
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: PC4
   name: PC4
   subCriterions:
@@ -240,6 +309,29 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: FE80::2\s*$'
             match: true
+  - code: PC4.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC4.CONNECTIVITY-TESTS.CT-3
+      name: 'PC4 to 2001:db8:100:1::a : 2001:db8:100:1::a (ICMP)'
+      description: 'PC4 → 2001:db8:100:1::a (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 2001:db8:100:1::a: has : bytes='
+        code: check
+        type: check
+        device: PC4
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:100:1::a
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
 - code: R1
   name: R1
   subCriterions:

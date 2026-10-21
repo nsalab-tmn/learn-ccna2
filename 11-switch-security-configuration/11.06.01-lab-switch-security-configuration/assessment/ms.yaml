@@ -523,7 +523,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/3 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/3 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -531,7 +532,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/3 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-3-SHUT
       name: FastEthernet0/3.Port Status
@@ -557,7 +558,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/4 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/4 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -565,7 +567,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/4 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-4-SHUT
       name: FastEthernet0/4.Port Status
@@ -591,7 +593,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/5 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/5 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -599,7 +602,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/5 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-5-SHUT
       name: FastEthernet0/5.Port Status
@@ -625,7 +628,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/6 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/6 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -633,7 +637,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/6 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-6-SHUT
       name: FastEthernet0/6.Port Status
@@ -659,7 +663,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/7 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/7 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -667,7 +672,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/7 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-7-SHUT
       name: FastEthernet0/7.Port Status
@@ -693,7 +698,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/8 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/8 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -701,7 +707,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/8 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-8-SHUT
       name: FastEthernet0/8.Port Status
@@ -727,7 +733,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/9 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/9 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -735,7 +742,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/9 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-9-SHUT
       name: FastEthernet0/9.Port Status
@@ -761,7 +768,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/11 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -769,7 +777,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/11 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-11-SHUT
       name: FastEthernet0/11.Port Status
@@ -795,7 +803,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/12 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/12 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -803,7 +812,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/12 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-12-SHUT
       name: FastEthernet0/12.Port Status
@@ -829,7 +838,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/13 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/13 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -837,7 +847,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/13 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-13-SHUT
       name: FastEthernet0/13.Port Status
@@ -863,7 +873,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/14 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/14 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -871,7 +882,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/14 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-14-SHUT
       name: FastEthernet0/14.Port Status
@@ -897,7 +908,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/15 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/15 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -905,7 +917,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/15 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-15-SHUT
       name: FastEthernet0/15.Port Status
@@ -931,7 +943,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/16 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/16 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -939,7 +952,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/16 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-16-SHUT
       name: FastEthernet0/16.Port Status
@@ -965,7 +978,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/17 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/17 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -973,7 +987,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/17 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-17-SHUT
       name: FastEthernet0/17.Port Status
@@ -999,7 +1013,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/18 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/18 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -1007,7 +1022,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/18 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-18-SHUT
       name: FastEthernet0/18.Port Status
@@ -1033,7 +1048,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/19 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/19 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -1041,7 +1057,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/19 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-19-SHUT
       name: FastEthernet0/19.Port Status
@@ -1067,7 +1083,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/20 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -1075,7 +1092,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/20 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-20-SHUT
       name: FastEthernet0/20.Port Status
@@ -1101,7 +1118,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/21 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/21 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -1109,7 +1127,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/21 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-21-SHUT
       name: FastEthernet0/21.Port Status
@@ -1135,7 +1153,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/22 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/22 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -1143,7 +1162,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/22 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-22-SHUT
       name: FastEthernet0/22.Port Status
@@ -1169,7 +1188,8 @@ Criterions:
       - Secure unused ports
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/23 switchport: matches Access Mode VLAN: 999 \('
+      - name: 'show interfaces FastEthernet0/23 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 999 \('
         code: check
         type: check
         device: SW-1
@@ -1177,7 +1197,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/23 switchport
-            expr: 'Access Mode VLAN: 999 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 999 \('
             match: true
     - code: SW-1.PORTS.F0-23-SHUT
       name: FastEthernet0/23.Port Status
