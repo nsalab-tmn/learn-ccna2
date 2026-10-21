@@ -92,10 +92,28 @@ NVRAM/Config file
 Доступ в начальный загрузчик можно получить через консольное подключение, выполнив несколько действий.
 
 **Шаг 1**. Подключите ПК через консольный кабель к консольному порту коммутатора. Настройте на ПК программу эмуляции терминалов для подключения к коммутатору.  
-**Шаг 2**. Отсоедините кабель питания коммутатора.  
-**Шаг 3**. Подключите шнур питания к коммутатору, в течение 15 секунд нажмите и удерживайте кнопку **Mode**, пока системный индикатор все еще мигает зеленым.  
-**Шаг 4**. Продолжайте удерживать **Mode** кнопку до тех пор, пока светодиод **System** не станет на мгновение желтым, затем постоянным зеленым, после чего отпустите кнопку **Mode**.  
-**Шаг 5**. В эмуляторе терминала на ПК появится запрос **switch:** от начального загрузчика.
+**Шаг 2**. Выключите питание коммутатора: отсоедините кабель питания.  
+**Шаг 3**. Включите питание и в первые секунды загрузки удерживайте кнопку **Mode**. В симуляторе для этого служит команда «Удерживать Mode» в меню коммутатора: выберите ее в первые пять секунд после включения.  
+**Шаг 4**. На настоящем коммутаторе кнопку **Mode** отпускают, когда системный индикатор SYST на мгновение станет желтым, а затем постоянным зеленым.  
+**Шаг 5**. В эмуляторе терминала на ПК появится приглашение **switch:** начального загрузчика.
+
+```
+System Bootstrap, Version 0.1.0, RELEASE SOFTWARE
+Copyright (c) 2026 NSALAB
+
+Xmodem file system is available.
+The password-recovery mechanism is enabled.
+
+The system has been interrupted prior to initializing the
+flash filesystem.  The following commands will initialize
+the flash filesystem, and finish loading the operating
+system software:
+
+    flash_init
+    boot
+
+switch:
+```
 
 Введите **help** или **?** в командной строке загрузчика, чтобы просмотреть список доступных команд.
 
@@ -103,36 +121,46 @@ NVRAM/Config file
 
 ```
 switch: set
-BOOT=flash:/c2960-lanbasek9-mz.122-55.SE7/c2960-lanbasek9-mz.122-55.SE7.bin
-(output omitted)
+BOOT=flash:ns01-netos-0.1.0.bin
+MAC_ADDR=00:D0:E5:91:6B:01
+SWITCH_NUMBER=1
 switch: flash_init
 Initializing Flash...
-flashfs[0]: 2 files, 1 directories
+flashfs[0]: 3 files, 0 directories
 flashfs[0]: 0 orphaned files, 0 orphaned directories
-flashfs[0]: Total bytes: 32514048
-flashfs[0]: Bytes used: 11838464
-flashfs[0]: Bytes available: 20675584
-flashfs[0]: flashfs fsck took 10 seconds.
+flashfs[0]: Total bytes: 64016384
+flashfs[0]: Bytes used: 4416482
+flashfs[0]: Bytes available: 59599902
+flashfs[0]: flashfs fsck took 1 seconds.
 ...done Initializing Flash.
+Boot Sector Filesystem (bs:) installed, fsid: 3
 ```
 
 После завершения инициализации флэш-памяти вы можете ввести команду **dir flash:** для просмотра каталогов и файлов во флэш-памяти, как показано в выходных данных.
 
 ```
-switch: dir flash: 
+switch: dir flash:
 Directory of flash:/
-    2  -rwx  11834846                 c2960-lanbasek9-mz.150-2.SE8.bin
-    3  -rwx  2072                     multiple-fs
+
+    1  -rwx  4414921   <date>               ns01-netos-0.1.0.bin
+    2  -rwx  616       <date>               vlan.dat
+    3  -rwx  945       <date>               config.text
+
+59599902 bytes available (4416482 bytes used)
 ```
 
-Команда **BOOT=flash:**_имя-файла_ задает в переменной среды BOOT путь к другому образу ОС во флэш-памяти. Чтобы проверить новое значение переменной, выполните команду **set** еще раз. Наконец, чтобы загрузить этот образ, введите команду **boot** без аргументов, как показано в выходных данных.
+Команда **BOOT=flash:**_имя-файла_ задает в переменной среды BOOT путь к образу ОС во флэш-памяти, который нужно загрузить, например к другой версии образа. В примере во флэш-памяти один образ, и переменная указывает на него. Чтобы проверить новое значение переменной, выполните команду **set** еще раз. Наконец, чтобы загрузить этот образ, введите команду **boot** без аргументов, как показано в выходных данных.
 
 ```
-switch: BOOT=flash:c2960-lanbasek9-mz.150-2.SE8.bin
+switch: BOOT=flash:ns01-netos-0.1.0.bin
 switch: set
-BOOT=flash:c2960-lanbasek9-mz.150-2.SE8.bin
-(output omitted)
+BOOT=flash:ns01-netos-0.1.0.bin
+MAC_ADDR=00:D0:E5:91:6B:01
+SWITCH_NUMBER=1
 switch: boot
+
+Loading "flash:ns01-netos-0.1.0.bin" ...
+################################################## [OK]
 ```
 
 Команды загрузчика позволяют инициализировать и форматировать флэш-память, установить новый образ ОС, изменить переменную среды BOOT и восстановить утерянные или забытые пароли.
