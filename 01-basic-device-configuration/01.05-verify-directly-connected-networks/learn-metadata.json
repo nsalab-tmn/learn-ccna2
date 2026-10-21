@@ -36,37 +36,39 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какая команда будет отображать сводку всех интерфейсов с поддержкой IPv6 на маршрутизаторе, которая включает IPv6-адрес и рабочее состояние?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Администратор выполнил на маршрутизаторе R2 команду и получил такой вывод:\n\n```\nGigabitEthernet0/0     [up/up]\n    FE80::2E0:B0FF:FE4C:1A01\n    2001:DB8:ACAD:7::1\nGigabitEthernet0/1     [up/up]\n    FE80::2E0:B0FF:FE4C:1A02\n    2001:DB8:ACAD:8::1\nSerial0/1              [down/down]     Unassigned\n```\n\nКакую команду он выполнил?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "show ip interface brief",
-                    "correct": false,
-                    "comment": "Командой для просмотра сводки интерфейсов с поддержкой IPv6 вместе с их адресом и рабочим состоянием является show ipv6 interface brief. show ip interface brief даст ту же информацию, но для IPv4. show ipv6 route и show running-config interface не предоставляют эту информацию"
-                },
-                {
-                    "answerId": "q01-a2",
-                    "answer": "show ipv6 route",
-                    "correct": false,
-                    "comment": "Командой для просмотра сводки интерфейсов с поддержкой IPv6 вместе с их адресом и рабочим состоянием является show ipv6 interface brief. show ip interface brief даст ту же информацию, но для IPv4. show ipv6 route и show running-config interface не предоставляют эту информацию"
-                },
-                {
-                    "answerId": "q01-a3",
-                    "answer": "show running-config interface",
-                    "correct": false,
-                    "comment": "Командой для просмотра сводки интерфейсов с поддержкой IPv6 вместе с их адресом и рабочим состоянием является show ipv6 interface brief. show ip interface brief даст ту же информацию, но для IPv4. show ipv6 route и show running-config interface не предоставляют эту информацию"
-                },
-                {
-                    "answerId": "q01-a4",
+                    "answerId": "q07-a1",
                     "answer": "show ipv6 interface brief",
                     "correct": true
+                },
+                {
+                    "answerId": "q07-a2",
+                    "answer": "show ip interface brief",
+                    "correct": false,
+                    "comment": "Эта команда выводит таблицу со столбцами IP-Address, Status и Protocol и показывает только IPv4-адреса. Список интерфейсов с IPv6-адресами и состоянием в квадратных скобках выводит show ipv6 interface brief."
+                },
+                {
+                    "answerId": "q07-a3",
+                    "answer": "show ipv6 route",
+                    "correct": false,
+                    "comment": "Эта команда выводит таблицу маршрутизации IPv6 — маршруты с кодами C и L и длиной префикса, а не список интерфейсов с их состоянием. Такой вывод дает show ipv6 interface brief."
+                },
+                {
+                    "answerId": "q07-a4",
+                    "answer": "show running-config interface",
+                    "correct": false,
+                    "comment": "Эта команда выводит команды, настроенные на одном указанном интерфейсе, например ipv6 address с длиной префикса, но не локальный адрес канала и не состояние. Краткую сводку по всем интерфейсам с IPv6 дает show ipv6 interface brief."
                 }
             ]
         },
         {
             "questionId": "q02",
+            "bloom": "remember",
             "question": "Каким кодом в таблице маршрутизации обозначаются напрямую подключенные маршруты?",
             "answerType": "singleChoice",
             "answers": [
@@ -96,110 +98,120 @@
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Какая команда будет отображать статистику потока пакетов, коллизии и сбои буфера на интерфейсе?",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "Администратор ищет причину ошибок на интерфейсе GigabitEthernet0/1 маршрутизатора R1 и видит строки:\n\n```\n     0 runts, 0 giants, 0 throttles\n     27 input errors, 27 CRC, 0 frame, 0 overrun, 0 ignored\n     0 output errors, 0 collisions, 1 interface resets\n```\n\nКакой командой он получил этот вывод?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "show interface",
+                    "answerId": "q08-a1",
+                    "answer": "show interfaces gigabitethernet 0/1",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "show ip interface",
+                    "answerId": "q08-a2",
+                    "answer": "show ip interface gigabitethernet 0/1",
                     "correct": false,
-                    "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, коллизии и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
+                    "comment": "Эта команда показывает IP-настройки интерфейса (сведения, связанные с IPv4), а не счетчики кадров и ошибок. Счетчики потока пакетов и ошибок выводит show interfaces."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "show running-config interface",
+                    "answerId": "q08-a3",
+                    "answer": "show running-config interface gigabitethernet 0/1",
                     "correct": false,
-                    "comment": "Команда show interface будет отображать много информации о потоке пакетов (их количество, коллизии и ошибки буфера). Команды show ip interface и show running-config interface тоже дают много сведений, но не о потоке пакетов"
+                    "comment": "Эта команда выводит только команды, настроенные на интерфейсе, например description и ip address, а не статистику. Счетчики потока пакетов и ошибок выводит show interfaces."
+                },
+                {
+                    "answerId": "q08-a4",
+                    "answer": "show ip interface brief",
+                    "correct": false,
+                    "comment": "Эта команда выводит краткую сводку по всем интерфейсам: IPv4-адрес и состояние, без счетчиков. Счетчики потока пакетов, коллизий и ошибок выводит show interfaces."
                 }
             ]
         },
         {
-            "questionId": "q04",
-            "question": "Какой тип адреса должен иметь интерфейс с включенным IPv6?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "На интерфейсе GigabitEthernet0/1 маршрутизатора R1 включен IPv6, но глобальный индивидуальный адрес администратор не настраивал. Какой IPv6-адрес обязательно есть у этого интерфейса?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q04-a1",
-                    "answer": "обратная петля",
-                    "correct": false,
-                    "comment": "Каждый сетевой интерфейс с включенным IPv6 должен иметь локальный адрес канала. Если он не настроен вручную, интерфейс автоматически сгенерирует его"
-                },
-                {
-                    "answerId": "q04-a2",
-                    "answer": "глобальный индивидуальный адрес",
-                    "correct": false,
-                    "comment": "Каждый сетевой интерфейс с включенным IPv6 должен иметь локальный адрес канала. Если он не настроен вручную, интерфейс автоматически сгенерирует его"
-                },
-                {
-                    "answerId": "q04-a3",
-                    "answer": "локальный адрес канала",
+                    "answerId": "q09-a1",
+                    "answer": "Локальный адрес канала, который начинается с FE80",
                     "correct": true
                 },
                 {
-                    "answerId": "q04-a4",
-                    "answer": "статический MAC-адрес",
+                    "answerId": "q09-a2",
+                    "answer": "Глобальный индивидуальный адрес, созданный автоматически",
                     "correct": false,
-                    "comment": "Каждый сетевой интерфейс с включенным IPv6 должен иметь локальный адрес канала. Если он не настроен вручную, интерфейс автоматически сгенерирует его"
+                    "comment": "Глобальный индивидуальный адрес для интерфейса необязателен, и здесь его не настраивали. Обязательный адрес интерфейса с IPv6 — локальный адрес канала, который начинается с FE80."
+                },
+                {
+                    "answerId": "q09-a3",
+                    "answer": "Адрес loopback ::1",
+                    "correct": false,
+                    "comment": "Адрес ::1 — адрес loopback самого устройства, он не назначается сетевому интерфейсу вроде GigabitEthernet0/1. У интерфейса с IPv6 всегда есть локальный адрес канала, который начинается с FE80."
+                },
+                {
+                    "answerId": "q09-a4",
+                    "answer": "Уникальный локальный адрес из блока FC00::/7",
+                    "correct": false,
+                    "comment": "Уникальный локальный адрес, как и глобальный, необязателен и появляется, только если его настроить. Обязательный адрес интерфейса с IPv6 — локальный адрес канала, который начинается с FE80."
                 }
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Какой символ используется для фильтрации команд?",
+            "questionId": "q10",
+            "bloom": "understand",
+            "question": "За сеанс администратор ввел на R1 около тридцати команд, но show history показывает только последние десять. Он хочет, чтобы до конца сеанса буфер хранил больше команд. Что ему нужно сделать?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "вертикальная черта |",
+                    "answerId": "q10-a1",
+                    "answer": "Ввести команду terminal history size с большим значением",
                     "correct": true
                 },
                 {
-                    "answerId": "q05-a2",
-                    "answer": "запятая ,",
+                    "answerId": "q10-a2",
+                    "answer": "Ввести команду terminal length 0",
                     "correct": false,
-                    "comment": "Фильтровать выходные данные при использовании с командами позволяет символ «|»"
+                    "comment": "terminal length задает, сколько строк вывода показывать до паузы --More--, а значение 0 отключает паузу. Размер буфера истории команд меняет terminal history size."
                 },
                 {
-                    "answerId": "q05-a3",
-                    "answer": "двоеточие :",
+                    "answerId": "q10-a3",
+                    "answer": "Нажимать Ctrl+P, пока не появятся более старые команды",
                     "correct": false,
-                    "comment": "Фильтровать выходные данные при использовании с командами позволяет символ «|»"
+                    "comment": "Ctrl+P вызывает команды только из буфера, а в нем по умолчанию хранятся последние десять командных строк. Чтобы буфер хранил больше, его размер увеличивают командой terminal history size."
                 },
                 {
-                    "answerId": "q05-a4",
-                    "answer": "точка с запятой ;",
+                    "answerId": "q10-a4",
+                    "answer": "Сохранить конфигурацию командой copy running-config startup-config",
                     "correct": false,
-                    "comment": "Фильтровать выходные данные при использовании с командами позволяет символ «|»"
+                    "comment": "История команд не входит в конфигурацию, и сохранение ее не меняет. Размер буфера истории на время сеанса задает terminal history size."
                 }
             ]
         },
         {
-            "questionId": "q06",
-            "question": "Какое выражение фильтрации будет показывать все выходные строки, начиная от строки, соответствующей выражению фильтрации?",
+            "questionId": "q11",
+            "bloom": "understand",
+            "question": "Вывод команды show ip interface brief на маршрутизаторе R1:\n\n```\nInterface              IP-Address      OK? Method Status                Protocol\nGigabitEthernet0/0     192.168.20.1    YES manual up                    up\nGigabitEthernet0/1     192.168.21.1    YES manual administratively down down\nSerial0/0              10.1.1.1        YES manual up                    up\nSerial0/1              unassigned      YES unset  down                  down\n```\n\nАдминистратору нужны только строки GigabitEthernet0/1 и Serial0/1. Какую команду ему ввести?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q06-a1",
-                    "answer": "section",
-                    "correct": false,
-                    "comment": "Хотя все три выражения будут показывать совпадающие выходные строки, выражение «begin» покажет все выходные строки, начиная от строки, соответствующей выражению фильтра. Выражение «include» показывает все выходные строки, соответствующие выражению фильтра, а выражение «section» включает весь раздел, который начинается с выражения фильтра"
-                },
-                {
-                    "answerId": "q06-a2",
-                    "answer": "begin",
+                    "answerId": "q11-a1",
+                    "answer": "show ip interface brief | include down",
                     "correct": true
                 },
                 {
-                    "answerId": "q06-a3",
-                    "answer": "include",
+                    "answerId": "q11-a2",
+                    "answer": "show ip interface brief | begin down",
                     "correct": false,
-                    "comment": "Хотя все три выражения будут показывать совпадающие выходные строки, выражение «begin» покажет все выходные строки, начиная от строки, соответствующей выражению фильтра. Выражение «include» показывает все выходные строки, соответствующие выражению фильтра, а выражение «section» включает весь раздел, который начинается с выражения фильтра"
+                    "comment": "begin выводит все строки начиная с первой совпавшей: GigabitEthernet0/1, Serial0/0 и Serial0/1, то есть и работающий Serial0/0. Только строки со словом down оставляет include."
+                },
+                {
+                    "answerId": "q11-a3",
+                    "answer": "show ip interface brief | exclude down",
+                    "correct": false,
+                    "comment": "exclude, наоборот, убирает строки со словом down и оставляет заголовок, GigabitEthernet0/0 и Serial0/0. Только строки со словом down выводит include."
                 }
             ]
         }
