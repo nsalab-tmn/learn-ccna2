@@ -20,7 +20,7 @@
             "id": "ksa.ccna2.etherchannel.etherchannel-operation",
             "kind": "K",
             "bloom": "understand",
-            "objective": "Identify the benefits of EtherChannel, the rule against mixing interface types in one channel, whether PAgP and LACP are both proprietary, and the PAgP modes and mode pairs that form a channel."
+            "objective": "Identify the benefits of EtherChannel, the rule against mixing interface types in one channel, whether PAgP and LACP are both proprietary, and the PAgP and LACP modes and the mode pairs that form a channel."
         },
         "requires": [
             "ksa.ccna2.stp.purpose-of-stp",
