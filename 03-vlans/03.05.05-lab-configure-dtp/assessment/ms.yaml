@@ -175,7 +175,8 @@ Criterions:
       - VLAN Config
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/1 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/1 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: S2
@@ -183,7 +184,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/1 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: S2.PORTS.F0-12-ACCESS-VLAN
       name: FastEthernet0/12.Access VLAN
@@ -192,7 +193,8 @@ Criterions:
       - VLAN Config
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/12 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/12 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: S2
@@ -200,7 +202,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/12 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: S2.PORTS.F0-20-ACCESS-VLAN
       name: FastEthernet0/20.Access VLAN
@@ -209,7 +211,8 @@ Criterions:
       - VLAN Config
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/20 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: S2
@@ -217,7 +220,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/20 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: S2.PORTS.G0-1-NATIVE
       name: GigabitEthernet0/1.Native VLAN
@@ -290,6 +293,28 @@ Criterions:
             command: show vlan brief
             expr: (?m)^30\s+Yellow\s+active
             match: true
+  - code: S2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: S2.CONNECTIVITY-TESTS.CT-0
+      name: 'S2 to 192.168.99.3 : 192.168.99.3 (ICMP)'
+      description: 'S2 → 192.168.99.3 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 7
+      steps:
+      - name: 'ping 192.168.99.3: some replies'
+        code: check
+        type: check
+        device: S2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ping 192.168.99.3 repeat 2
+            expr: Success rate is [1-9]
+            match: true
+            retries: 3
+            retry_interval: 15
 - code: S3
   name: S3
   subCriterions:
@@ -303,7 +328,8 @@ Criterions:
       - VLAN Config
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/11 switchport: matches Access Mode VLAN: 20 \('
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
         code: check
         type: check
         device: S3
@@ -311,7 +337,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/11 switchport
-            expr: 'Access Mode VLAN: 20 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
             match: true
     - code: S3.PORTS.F0-2-ACCESS-VLAN
       name: FastEthernet0/2.Access VLAN
@@ -320,7 +346,8 @@ Criterions:
       - VLAN Config
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/2 switchport: matches Access Mode VLAN: 10 \('
+      - name: 'show interfaces FastEthernet0/2 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
         code: check
         type: check
         device: S3
@@ -328,7 +355,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/2 switchport
-            expr: 'Access Mode VLAN: 10 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
             match: true
     - code: S3.PORTS.F0-20-ACCESS-VLAN
       name: FastEthernet0/20.Access VLAN
@@ -337,7 +364,8 @@ Criterions:
       - VLAN Config
       max_mark: 2
       steps:
-      - name: 'show interfaces FastEthernet0/20 switchport: matches Access Mode VLAN: 30 \('
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
         code: check
         type: check
         device: S3
@@ -345,7 +373,7 @@ Criterions:
         - action: verify_output_regex
           action_vars:
             command: show interfaces FastEthernet0/20 switchport
-            expr: 'Access Mode VLAN: 30 \('
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
             match: true
     - code: S3.PORTS.G0-2-DTP-MODE
       name: GigabitEthernet0/2.Dynamic Mode

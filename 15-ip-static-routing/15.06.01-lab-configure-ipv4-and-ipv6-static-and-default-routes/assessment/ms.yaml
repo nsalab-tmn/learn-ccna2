@@ -290,3 +290,75 @@ Criterions:
             command: show running-config
             expr: (?m)^ipv6 route 2001:DB8:1:11::/64\s+2001:DB8:F:F::2\s+5\s*$
             match: true
+- code: PC-A
+  name: PC-A
+  subCriterions:
+  - code: PC-A.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-A.CONNECTIVITY-TESTS.CT-0
+      name: 'PC-A to 198.0.0.10 : 198.0.0.10 (ICMP)'
+      description: 'PC-A → 198.0.0.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 198.0.0.10: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 198.0.0.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC-A.CONNECTIVITY-TESTS.CT-2
+      name: 'PC-A to 2001:db8:f:f::10 : 2001:db8:f:f::10 (ICMP)'
+      description: 'PC-A → 2001:db8:f:f::10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 2001:db8:f:f::10: has : bytes='
+        code: check
+        type: check
+        device: PC-A
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:f:f::10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
+- code: PC-B
+  name: PC-B
+  subCriterions:
+  - code: PC-B.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC-B.CONNECTIVITY-TESTS.CT-1
+      name: 'PC-B to 2001:db8:f:f::10 : 2001:db8:f:f::10 (ICMP)'
+      description: 'PC-B → 2001:db8:f:f::10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 2001:db8:f:f::10: has : bytes='
+        code: check
+        type: check
+        device: PC-B
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:f:f::10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

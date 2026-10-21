@@ -429,3 +429,101 @@ Criterions:
             command: show interfaces GigabitEthernet0/1 switchport
             expr: 'Operational Mode: trunk'
             match: true
+- code: PC0
+  name: PC0
+  subCriterions:
+  - code: PC0.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC0.CONNECTIVITY-TESTS.CT-0
+      name: 'PC0 to 192.168.30.2 : 192.168.30.2 (ICMP)'
+      description: 'PC0 → 192.168.30.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 192.168.30.2: has : bytes='
+        code: check
+        type: check
+        device: PC0
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 209.165.200.226 : 209.165.200.226 (ICMP)'
+      description: 'PC2 → 209.165.200.226 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 209.165.200.226: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.200.226
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 2001:db8:acad:30::2 : 2001:db8:acad:30::2 (ICMP)'
+      description: 'PC3 → 2001:db8:acad:30::2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 2001:db8:acad:30::2: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:acad:30::2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC3.CONNECTIVITY-TESTS.CT-3
+      name: 'PC3 to 2001:db8:acad:a::2 : 2001:db8:acad:a::2 (ICMP)'
+      description: 'PC3 → 2001:db8:acad:a::2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'ping -n 2 2001:db8:acad:a::2: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:acad:a::2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5

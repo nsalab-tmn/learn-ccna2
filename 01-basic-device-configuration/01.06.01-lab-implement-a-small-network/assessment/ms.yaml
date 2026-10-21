@@ -512,17 +512,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has banner motd'
+      - name: 'show running-config: matches (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$'
         code: check
         type: check
         device: RTA
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - banner motd
-            tags_are_present: true
+            expr: (?m)^banner motd \^C\s*(?!\^C\s*$)\S[\s\S]*?\^C\s*$
+            match: true
     - code: RTA.MISC.ENABLE-SECRET
       name: Enable Secret
       description: Пароль привилегированного режима задан как enable secret
@@ -530,17 +529,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$V86HNsko1vmhNBrI'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$V86HNsko1vmhNBrI\s*$'
         code: check
         type: check
         device: RTA
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$V86HNsko1vmhNBrI
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$V86HNsko1vmhNBrI\s*$
+            match: true
     - code: RTA.MISC.HOSTNAME
       name: Host Name
       description: Имя устройства — RTA
@@ -565,17 +563,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show startup-config: has hostname RTA'
+      - name: 'show startup-config: matches (?m)^ ?hostname RTA\s*$'
         code: check
         type: check
         device: RTA
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show startup-config
-            assert_tags:
-            - hostname RTA
-            tags_are_present: true
+            expr: (?m)^ ?hostname RTA\s*$
+            match: true
 - code: SW1
   name: SW1
   subCriterions:
@@ -757,17 +754,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$V86HNsko1vmhNBrI'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$V86HNsko1vmhNBrI\s*$'
         code: check
         type: check
         device: SW1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$V86HNsko1vmhNBrI
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$V86HNsko1vmhNBrI\s*$
+            match: true
     - code: SW1.MISC.STARTUP-CONFIG
       name: Startup Config
       description: Конфигурация сохранена в NVRAM
@@ -775,17 +771,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show startup-config: has ip default-gateway 10.10.10.1'
+      - name: 'show startup-config: matches (?m)^ ?ip default\-gateway 10\.10\.10\.1\s*$'
         code: check
         type: check
         device: SW1
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show startup-config
-            assert_tags:
-            - ip default-gateway 10.10.10.1
-            tags_are_present: true
+            expr: (?m)^ ?ip default\-gateway 10\.10\.10\.1\s*$
+            match: true
 - code: SW2
   name: SW2
   subCriterions:
@@ -967,17 +962,16 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$V86HNsko1vmhNBrI'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$V86HNsko1vmhNBrI\s*$'
         code: check
         type: check
         device: SW2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$V86HNsko1vmhNBrI
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$V86HNsko1vmhNBrI\s*$
+            match: true
     - code: SW2.MISC.STARTUP-CONFIG
       name: Startup Config
       description: Конфигурация сохранена в NVRAM
@@ -985,14 +979,13 @@ Criterions:
       - Other
       max_mark: 1
       steps:
-      - name: 'show startup-config: has ip default-gateway 10.10.20.1'
+      - name: 'show startup-config: matches (?m)^ ?ip default\-gateway 10\.10\.20\.1\s*$'
         code: check
         type: check
         device: SW2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show startup-config
-            assert_tags:
-            - ip default-gateway 10.10.20.1
-            tags_are_present: true
+            expr: (?m)^ ?ip default\-gateway 10\.10\.20\.1\s*$
+            match: true

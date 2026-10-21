@@ -111,6 +111,69 @@ Criterions:
             command: ipconfig
             expr: '(?m)Default Gateway[. ]*: FE80::2:A\s*$'
             match: true
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-0
+      name: 'PC3 to 10.0.5.10 : 10.0.5.10 (ICMP)'
+      description: 'PC3 → 10.0.5.10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 4
+      steps:
+      - name: 'ping -n 2 10.0.5.10: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 10.0.5.10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC3.CONNECTIVITY-TESTS.CT-1
+      name: 'PC3 to 2001:db8:acad:5::10 : 2001:db8:acad:5::10 (ICMP)'
+      description: 'PC3 → 2001:db8:acad:5::10 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 4
+      steps:
+      - name: 'ping -n 2 2001:db8:acad:5::10: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 2001:db8:acad:5::10
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 209.165.200.226 : 209.165.200.226 (ICMP)'
+      description: 'PC3 → 209.165.200.226 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 4
+      steps:
+      - name: 'ping -n 2 209.165.200.226: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 209.165.200.226
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 1
+            retry_interval: 5
 - code: PC4
   name: PC4
   subCriterions:
@@ -879,17 +942,16 @@ Criterions:
       - Basic Config
       max_mark: 2
       steps:
-      - name: 'show running-config: has banner motd'
+      - name: 'show running-config: matches (?m)^banner motd \^C(?:(?!\^C\s*$)[\s\S])*?[Ww][Aa][Rr][Nn][\s\S]*?\^C\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - banner motd
-            tags_are_present: true
+            expr: (?m)^banner motd \^C(?:(?!\^C\s*$)[\s\S])*?[Ww][Aa][Rr][Nn][\s\S]*?\^C\s*$
+            match: true
     - code: R2.MISC.ENABLE-SECRET
       name: Enable Secret
       description: Пароль привилегированного режима задан как enable secret
@@ -897,17 +959,16 @@ Criterions:
       - Security
       max_mark: 2
       steps:
-      - name: 'show running-config: has enable secret 5 $1$mERr$LlKIyqhasvaC86M2'
+      - name: 'show running-config: matches (?m)^enable secret 5 \$1\$mERr\$LlKIyqhasvaC86M2\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - enable secret 5 $1$mERr$LlKIyqhasvaC86M2
-            tags_are_present: true
+            expr: (?m)^enable secret 5 \$1\$mERr\$LlKIyqhasvaC86M2\s*$
+            match: true
     - code: R2.MISC.HOSTNAME
       name: Host Name
       description: Имя устройства — R2
@@ -949,14 +1010,13 @@ Criterions:
       - Security
       max_mark: 2
       steps:
-      - name: 'show running-config: has service password-encryption'
+      - name: 'show running-config: matches (?m)^service password\-encryption\s*$'
         code: check
         type: check
         device: R2
         action_chain:
-        - action: verify_output
+        - action: verify_output_regex
           action_vars:
             command: show running-config
-            assert_tags:
-            - service password-encryption
-            tags_are_present: true
+            expr: (?m)^service password\-encryption\s*$
+            match: true

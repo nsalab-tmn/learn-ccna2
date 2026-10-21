@@ -154,3 +154,81 @@ Criterions:
             command: show interfaces GigabitEthernet0/2 switchport
             expr: 'Operational Mode: trunk'
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 172.17.10.24 : 172.17.10.24 (ICMP)'
+      description: 'PC1 → 172.17.10.24 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.17.10.24: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.10.24
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 172.17.20.25 : 172.17.20.25 (ICMP)'
+      description: 'PC2 → 172.17.20.25 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.17.20.25: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.20.25
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 172.17.30.26 : 172.17.30.26 (ICMP)'
+      description: 'PC3 → 172.17.30.26 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 3
+      steps:
+      - name: 'ping -n 2 172.17.30.26: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 172.17.30.26
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
