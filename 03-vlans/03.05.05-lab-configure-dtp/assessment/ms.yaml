@@ -296,12 +296,12 @@ Criterions:
   - code: S2.CONNECTIVITY-TESTS
     name: Connectivity Tests
     aspects:
-    - code: S2.CONNECTIVITY-TESTS.CT-0
+    - code: S2.CONNECTIVITY-TESTS.CT-3
       name: 'S2 to 192.168.99.3 : 192.168.99.3 (ICMP)'
       description: 'S2 → 192.168.99.3 (PING): проходит'
       skills:
       - Other
-      max_mark: 7
+      max_mark: 2
       steps:
       - name: 'ping 192.168.99.3: some replies'
         code: check
@@ -480,3 +480,177 @@ Criterions:
             command: show vlan brief
             expr: (?m)^30\s+Yellow\s+active
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 192.168.10.2 : 192.168.10.2 (ICMP)'
+      description: 'PC1 → 192.168.10.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show interfaces FastEthernet0/1 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
+        code: check
+        type: check
+        device: S2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces FastEthernet0/1 switchport
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
+            match: true
+      - name: 'show interfaces FastEthernet0/2 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 10 \('
+        code: check
+        type: check
+        device: S3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces FastEthernet0/2 switchport
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 10 \('
+            match: true
+      - name: 'show interfaces GigabitEthernet0/2 switchport: matches Operational Mode: trunk'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/2 switchport
+            expr: 'Operational Mode: trunk'
+            match: true
+      - name: 'ping -n 2 192.168.10.2: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 192.168.20.2 : 192.168.20.2 (ICMP)'
+      description: 'PC2 → 192.168.20.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show interfaces FastEthernet0/12 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
+        code: check
+        type: check
+        device: S2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces FastEthernet0/12 switchport
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
+            match: true
+      - name: 'show interfaces FastEthernet0/11 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 20 \('
+        code: check
+        type: check
+        device: S3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces FastEthernet0/11 switchport
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 20 \('
+            match: true
+      - name: 'show interfaces GigabitEthernet0/2 switchport: matches Operational Mode: trunk'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/2 switchport
+            expr: 'Operational Mode: trunk'
+            match: true
+      - name: 'ping -n 2 192.168.20.2: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.20.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC3
+  name: PC3
+  subCriterions:
+  - code: PC3.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC3.CONNECTIVITY-TESTS.CT-2
+      name: 'PC3 to 192.168.30.2 : 192.168.30.2 (ICMP)'
+      description: 'PC3 → 192.168.30.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 2
+      steps:
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
+        code: check
+        type: check
+        device: S2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces FastEthernet0/20 switchport
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
+            match: true
+      - name: 'show interfaces FastEthernet0/20 switchport: matches (?ms)^Administrative Mode: static access\s*$.*^Access
+          Mode VLAN: 30 \('
+        code: check
+        type: check
+        device: S3
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces FastEthernet0/20 switchport
+            expr: '(?ms)^Administrative Mode: static access\s*$.*^Access Mode VLAN: 30 \('
+            match: true
+      - name: 'show interfaces GigabitEthernet0/2 switchport: matches Operational Mode: trunk'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/2 switchport
+            expr: 'Operational Mode: trunk'
+            match: true
+      - name: 'ping -n 2 192.168.30.2: has : bytes='
+        code: check
+        type: check
+        device: PC3
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.30.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

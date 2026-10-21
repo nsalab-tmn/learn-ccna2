@@ -628,3 +628,85 @@ Criterions:
             command: show running-config | section ^interface GigabitEthernet0/2( |$)
             expr: (?m)^ shutdown\s*$
             match: true
+- code: PC1
+  name: PC1
+  subCriterions:
+  - code: PC1.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC1.CONNECTIVITY-TESTS.CT-0
+      name: 'PC1 to 10.10.10.11 : 10.10.10.11 (ICMP)'
+      description: 'PC1 → 10.10.10.11 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 6
+      steps:
+      - name: 'show running-config interface FastEthernet0/1: matches (?m)^ switchport port-security\s*$'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/1
+            expr: (?m)^ switchport port-security\s*$
+            match: true
+      - name: 'show running-config interface FastEthernet0/2: matches (?m)^ switchport port-security\s*$'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/2
+            expr: (?m)^ switchport port-security\s*$
+            match: true
+      - name: 'ping -n 2 10.10.10.11: has : bytes='
+        code: check
+        type: check
+        device: PC1
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 10.10.10.11
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+- code: PC2
+  name: PC2
+  subCriterions:
+  - code: PC2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: PC2.CONNECTIVITY-TESTS.CT-1
+      name: 'PC2 to 10.10.10.2 : 10.10.10.2 (ICMP)'
+      description: 'PC2 → 10.10.10.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 6
+      steps:
+      - name: 'show running-config interface FastEthernet0/2: matches (?m)^ switchport port-security\s*$'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show running-config interface FastEthernet0/2
+            expr: (?m)^ switchport port-security\s*$
+            match: true
+      - name: 'ping -n 2 10.10.10.2: has : bytes='
+        code: check
+        type: check
+        device: PC2
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 10.10.10.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15

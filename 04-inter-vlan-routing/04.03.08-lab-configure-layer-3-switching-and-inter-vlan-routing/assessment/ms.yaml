@@ -436,6 +436,36 @@ Criterions:
     name: Connectivity Tests
     aspects:
     - code: PC0.CONNECTIVITY-TESTS.CT-0
+      name: 'PC0 to 192.168.10.2 : 192.168.10.2 (ICMP)'
+      description: 'PC0 → 192.168.10.2 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet0/1 switchport: matches Operational Mode: trunk'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/1 switchport
+            expr: 'Operational Mode: trunk'
+            match: true
+      - name: 'ping -n 2 192.168.10.2: has : bytes='
+        code: check
+        type: check
+        device: PC0
+        action_chain:
+        - action: verify_output
+          action_vars:
+            command: ping -n 2 192.168.10.2
+            assert_tags:
+            - ': bytes='
+            tags_are_present: true
+            retries: 3
+            retry_interval: 15
+    - code: PC0.CONNECTIVITY-TESTS.CT-1
       name: 'PC0 to 192.168.30.2 : 192.168.30.2 (ICMP)'
       description: 'PC0 → 192.168.30.2 (PING): проходит'
       skills:
@@ -453,15 +483,15 @@ Criterions:
             assert_tags:
             - ': bytes='
             tags_are_present: true
-            retries: 3
-            retry_interval: 15
+            retries: 1
+            retry_interval: 5
 - code: PC2
   name: PC2
   subCriterions:
   - code: PC2.CONNECTIVITY-TESTS
     name: Connectivity Tests
     aspects:
-    - code: PC2.CONNECTIVITY-TESTS.CT-1
+    - code: PC2.CONNECTIVITY-TESTS.CT-2
       name: 'PC2 to 209.165.200.226 : 209.165.200.226 (ICMP)'
       description: 'PC2 → 209.165.200.226 (PING): проходит'
       skills:
@@ -487,7 +517,7 @@ Criterions:
   - code: PC3.CONNECTIVITY-TESTS
     name: Connectivity Tests
     aspects:
-    - code: PC3.CONNECTIVITY-TESTS.CT-2
+    - code: PC3.CONNECTIVITY-TESTS.CT-3
       name: 'PC3 to 2001:db8:acad:30::2 : 2001:db8:acad:30::2 (ICMP)'
       description: 'PC3 → 2001:db8:acad:30::2 (PING): проходит'
       skills:
@@ -507,7 +537,7 @@ Criterions:
             tags_are_present: true
             retries: 3
             retry_interval: 15
-    - code: PC3.CONNECTIVITY-TESTS.CT-3
+    - code: PC3.CONNECTIVITY-TESTS.CT-4
       name: 'PC3 to 2001:db8:acad:a::2 : 2001:db8:acad:a::2 (ICMP)'
       description: 'PC3 → 2001:db8:acad:a::2 (PING): проходит'
       skills:
@@ -527,3 +557,38 @@ Criterions:
             tags_are_present: true
             retries: 1
             retry_interval: 5
+- code: S2
+  name: S2
+  subCriterions:
+  - code: S2.CONNECTIVITY-TESTS
+    name: Connectivity Tests
+    aspects:
+    - code: S2.CONNECTIVITY-TESTS.CT-5
+      name: 'S2 to 192.168.99.3 : 192.168.99.3 (ICMP)'
+      description: 'S2 → 192.168.99.3 (PING): проходит'
+      skills:
+      - Other
+      max_mark: 1
+      steps:
+      - name: 'show interfaces GigabitEthernet0/1 switchport: matches Operational Mode: trunk'
+        code: check
+        type: check
+        device: S1
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: show interfaces GigabitEthernet0/1 switchport
+            expr: 'Operational Mode: trunk'
+            match: true
+      - name: 'ping 192.168.99.3: some replies'
+        code: check
+        type: check
+        device: S2
+        action_chain:
+        - action: verify_output_regex
+          action_vars:
+            command: ping 192.168.99.3 repeat 2
+            expr: Success rate is [1-9]
+            match: true
+            retries: 3
+            retry_interval: 15
