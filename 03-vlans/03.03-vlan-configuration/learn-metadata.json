@@ -36,97 +36,101 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какие идентификаторы относятся к VLAN расширенного диапазона?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Администратор создает для отдела кадров новую VLAN нормального диапазона. Какой идентификатор он может ей назначить?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
-                    "answer": "От 1006 до 4094",
+                    "answerId": "q06-a1",
+                    "answer": "1001",
                     "correct": true
                 },
                 {
-                    "answerId": "q01-a2",
-                    "answer": "От 1 до 1005",
+                    "answerId": "q06-a2",
+                    "answer": "1003",
                     "correct": false,
-                    "comment": "Это VLAN нормального диапазона. VLAN расширенного диапазона имеют идентификаторы от 1006 до 4094."
+                    "comment": "Идентификаторы 1002–1005 входят в нормальный диапазон, но зарезервированы для VLAN Token Ring и FDDI и создаются автоматически. Для новой VLAN подходит 1001."
                 },
                 {
-                    "answerId": "q01-a3",
-                    "answer": "От 1002 до 1005",
+                    "answerId": "q06-a3",
+                    "answer": "1006",
                     "correct": false,
-                    "comment": "Эти идентификаторы нормального диапазона зарезервированы для VLAN типа Token Ring и FDDI. VLAN расширенного диапазона имеют идентификаторы от 1006 до 4094."
+                    "comment": "Идентификаторы 1006–4094 — расширенный диапазон. Нормальный диапазон — 1–1005, и из свободных номеров в нем подходит 1001."
                 },
                 {
-                    "answerId": "q01-a4",
-                    "answer": "От 1 до 4096",
+                    "answerId": "q06-a4",
+                    "answer": "1",
                     "correct": false,
-                    "comment": "4096 — верхняя граница числа VLAN, которую задает 12-битное поле идентификатора VLAN в заголовке IEEE 802.1Q. VLAN расширенного диапазона имеют идентификаторы от 1006 до 4094."
+                    "comment": "VLAN 1 — VLAN по умолчанию: она создается автоматически, и ее нельзя удалить или переименовать. Для новой VLAN нормального диапазона подходит 1001."
                 }
             ]
         },
         {
-            "questionId": "q02",
-            "question": "Администратору нужно одной командой создать VLAN 100, 102, 105, 106 и 107. Какую команду режима глобальной конфигурации он введет?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Администратор вводит в режиме глобальной конфигурации команду vlan 10,12,20-22. Какие VLAN будут созданы?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "vlan 100,102,105-107",
+                    "answerId": "q07-a1",
+                    "answer": "VLAN 10, 12, 20, 21 и 22",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a2",
-                    "answer": "vlan 100-107",
+                    "answerId": "q07-a2",
+                    "answer": "VLAN 10, 12, 20 и 22",
                     "correct": false,
-                    "comment": "Диапазон через дефис создаст все VLAN с 100 по 107, в том числе лишние VLAN 101, 103 и 104. Нужный набор создает команда vlan 100,102,105-107."
+                    "comment": "Дефис задает диапазон, а не две отдельные VLAN: 20-22 — это VLAN 20, 21 и 22. Будут созданы VLAN 10, 12, 20, 21 и 22."
                 },
                 {
-                    "answerId": "q02-a3",
-                    "answer": "vlan 100,102,105,107",
+                    "answerId": "q07-a3",
+                    "answer": "Все VLAN с 10 по 22",
                     "correct": false,
-                    "comment": "В этом списке нет VLAN 106. Нужный набор создает команда vlan 100,102,105-107: запятые разделяют отдельные идентификаторы, а дефис задает диапазон."
+                    "comment": "Запятые разделяют отдельные идентификаторы, поэтому VLAN 11 и 13–19 созданы не будут. Будут созданы VLAN 10, 12, 20, 21 и 22."
                 },
                 {
-                    "answerId": "q02-a4",
-                    "answer": "switchport access vlan 100,102,105-107",
+                    "answerId": "q07-a4",
+                    "answer": "VLAN 10, 11, 12, 20, 21 и 22",
                     "correct": false,
-                    "comment": "Команда switchport access vlan вводится в режиме конфигурации интерфейса и назначает порт одной VLAN. Создает VLAN команда глобальной конфигурации vlan 100,102,105-107."
+                    "comment": "Запятая разделяет отдельные идентификаторы, а не задает диапазон: VLAN 11 создана не будет. Будут созданы VLAN 10, 12, 20, 21 и 22."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Какие команды режима конфигурации интерфейса переводят порт F0/6 в постоянный режим доступа и назначают его VLAN 20?",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "Порт доступа Fa0/8 по ошибке назначен VLAN 10, а должен быть в VLAN 30, которая уже создана. Администратор вводит на Fa0/8 команду switchport access vlan 30. Что произойдет?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "switchport mode access и switchport access vlan 20",
+                    "answerId": "q08-a1",
+                    "answer": "Порт перейдет из VLAN 10 в VLAN 30",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "vlan 20 и name student",
+                    "answerId": "q08-a2",
+                    "answer": "Порт станет членом VLAN 10 и VLAN 30 одновременно",
                     "correct": false,
-                    "comment": "Эти команды создают VLAN 20 и присваивают ей имя, но не назначают ей порт. Порт назначают командами switchport mode access и switchport access vlan 20."
+                    "comment": "Порт доступа принадлежит одной VLAN данных, поэтому новая команда заменяет прежнее назначение. Порт перейдет в VLAN 30."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "switchport voice vlan 20",
+                    "answerId": "q08-a3",
+                    "answer": "Команда будет отклонена до ввода no switchport access vlan",
                     "correct": false,
-                    "comment": "Эта команда назначает порту голосовую VLAN. Порт доступа VLAN данных назначают командами switchport mode access и switchport access vlan 20."
+                    "comment": "Отменять прежнее назначение не нужно: достаточно повторно ввести switchport access vlan с правильным идентификатором. Порт перейдет в VLAN 30."
                 },
                 {
-                    "answerId": "q03-a4",
-                    "answer": "no switchport access vlan",
+                    "answerId": "q08-a4",
+                    "answer": "Порт вернется в VLAN 1 по умолчанию",
                     "correct": false,
-                    "comment": "Эта команда возвращает порт в VLAN 1 по умолчанию. Порт назначают VLAN 20 командами switchport mode access и switchport access vlan 20."
+                    "comment": "В VLAN 1 порт возвращает команда no switchport access vlan. Команда switchport access vlan 30 переведет порт в VLAN 30."
                 }
             ]
         },
         {
             "questionId": "q04",
+            "bloom": "remember",
             "question": "VLAN 30 на коммутаторе еще нет. Администратор вводит на интерфейсе команду switchport access vlan 30. Что произойдет?",
             "answerType": "singleChoice",
             "answers": [
@@ -156,26 +160,95 @@
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Порт коммутатора подключен к IP-телефону, а к телефону подключен компьютер. Что верно для такого порта доступа?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "Порт Fa0/12 настроен командами switchport mode access, switchport access vlan 20 и switchport voice vlan 150. К порту подключен IP-телефон, а к телефону — компьютер. В какие VLAN попадет их трафик?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "Он связан с двумя VLAN: голосовой и VLAN данных",
+                    "answerId": "q09-a1",
+                    "answer": "Трафик телефона — в VLAN 150, трафик компьютера — в VLAN 20",
                     "correct": true
                 },
                 {
-                    "answerId": "q05-a2",
-                    "answer": "Он может принадлежать только одной VLAN, поэтому голосовой трафик передается в VLAN данных",
+                    "answerId": "q09-a2",
+                    "answer": "Трафик обоих устройств — в VLAN 20",
                     "correct": false,
-                    "comment": "Порт доступа принадлежит одной VLAN данных, но может быть дополнительно связан с голосовой VLAN. Такой порт связан с двумя VLAN: голосовой и VLAN данных."
+                    "comment": "Порт доступа принадлежит одной VLAN данных, но может быть связан и с голосовой VLAN. Голосовой трафик телефона идет в VLAN 150, трафик компьютера — в VLAN 20."
                 },
                 {
-                    "answerId": "q05-a3",
-                    "answer": "Голосовую VLAN ему назначают командой switchport access vlan",
+                    "answerId": "q09-a3",
+                    "answer": "Трафик обоих устройств — в VLAN 150",
                     "correct": false,
-                    "comment": "Команда switchport access vlan назначает VLAN данных. Голосовую VLAN назначает команда switchport voice vlan, и порт оказывается связан с двумя VLAN."
+                    "comment": "Голосовая VLAN 150 предназначена для трафика телефона. Трафик компьютера идет в VLAN данных, назначенную командой switchport access vlan 20."
+                },
+                {
+                    "answerId": "q09-a4",
+                    "answer": "Трафик телефона — в VLAN 20, трафик компьютера — в VLAN 150",
+                    "correct": false,
+                    "comment": "Команда switchport access vlan назначает VLAN данных — для компьютера, а switchport voice vlan — голосовую VLAN для телефона. Телефон работает в VLAN 150, компьютер — в VLAN 20."
+                }
+            ]
+        },
+        {
+            "questionId": "q10",
+            "bloom": "understand",
+            "question": "Администратор ввел на коммутаторе вариант команды show vlan и получил такой вывод:\n\n```\nNumber of existing VLANs              : 12\nNumber of existing VTP VLANs          : 10\nNumber of existing extended VLANS     : 2\n```\n\nКакой вариант команды он ввел?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answerId": "q10-a1",
+                    "answer": "show vlan summary",
+                    "correct": true
+                },
+                {
+                    "answerId": "q10-a2",
+                    "answer": "show vlan brief",
+                    "correct": false,
+                    "comment": "Команда show vlan brief выводит по одной строке на каждую VLAN: номер, имя, состояние и порты. Число VLAN без подробностей показывает show vlan summary."
+                },
+                {
+                    "answerId": "q10-a3",
+                    "answer": "show vlan id 12",
+                    "correct": false,
+                    "comment": "Команда show vlan id выводит сведения об одной VLAN с указанным идентификатором. Общее число VLAN показывает show vlan summary."
+                },
+                {
+                    "answerId": "q10-a4",
+                    "answer": "show vlan name default",
+                    "correct": false,
+                    "comment": "Команда show vlan name выводит сведения об одной VLAN с указанным именем. Общее число VLAN показывает show vlan summary."
+                }
+            ]
+        },
+        {
+            "questionId": "q11",
+            "bloom": "understand",
+            "question": "На коммутаторе S1 порты Fa0/5–Fa0/8 назначены VLAN 30. Администратор удаляет VLAN 30 командой no vlan 30 и не переназначает эти порты. Что произойдет с компьютерами на этих портах?",
+            "answerType": "singleChoice",
+            "answers": [
+                {
+                    "answerId": "q11-a1",
+                    "answer": "Они не смогут обмениваться данными, пока порты не назначат активной VLAN",
+                    "correct": true
+                },
+                {
+                    "answerId": "q11-a2",
+                    "answer": "Порты вернутся в VLAN 1, и компьютеры продолжат работу в ней",
+                    "correct": false,
+                    "comment": "Порты не переходят в VLAN 1 сами: они остаются назначенными удаленной VLAN и не работают, пока их не назначат активной VLAN."
+                },
+                {
+                    "answerId": "q11-a3",
+                    "answer": "Команда no vlan 30 будет отклонена, пока VLAN 30 назначены порты",
+                    "correct": false,
+                    "comment": "ОС удалит VLAN и с назначенными портами, поэтому порты рекомендуют переназначить заранее. Не перемещенные порты не смогут обмениваться данными."
+                },
+                {
+                    "answerId": "q11-a4",
+                    "answer": "Порты станут магистральными и будут передавать все VLAN",
+                    "correct": false,
+                    "comment": "Удаление VLAN не меняет режим порта. Порты остаются назначенными удаленной VLAN и не работают, пока их не назначат активной VLAN."
                 }
             ]
         }
