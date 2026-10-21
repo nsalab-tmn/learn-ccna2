@@ -38,6 +38,7 @@
     "questions": [
         {
             "questionId": "q01",
+            "bloom": "remember",
             "question": "Администратору нужно увидеть в выводе show running-config только раздел с настройками линий vty целиком. Какой параметр фильтрации указать после вертикальной черты?",
             "answerType": "singleChoice",
             "answers": [
@@ -67,61 +68,70 @@
             ]
         },
         {
-            "questionId": "q02",
-            "question": "Что выведет команда show ip interface brief | exclude unassigned?",
+            "questionId": "q05",
+            "bloom": "understand",
+            "question": "На маршрутизаторе настроены IPv4- и IPv6-адреса двух интерфейсов, оба интерфейса в состоянии up/up. Пакеты IPv4 между двумя локальными сетями маршрутизатор пересылает, а пакеты IPv6 — нет. Какую команду нужно ввести на маршрутизаторе?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "Все строки вывода, кроме строк со словом unassigned: интерфейсы без IP-адреса будут скрыты",
+                    "answerId": "q05-a1",
+                    "answer": "ipv6 unicast-routing",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a2",
-                    "answer": "Только строки интерфейсов, которым не назначен IP-адрес",
+                    "answerId": "q05-a2",
+                    "answer": "no shutdown",
                     "correct": false,
-                    "comment": "Такой результат дал бы параметр include. Параметр exclude исключает строки, которые соответствуют фильтру, поэтому интерфейсы со словом unassigned будут скрыты."
+                    "comment": "Интерфейсы уже в состоянии up/up, значит, они включены. Пересылку пакетов IPv6 включает команда глобальной конфигурации ipv6 unicast-routing."
                 },
                 {
-                    "answerId": "q02-a3",
-                    "answer": "Все строки, начиная с первого интерфейса без IP-адреса",
+                    "answerId": "q05-a3",
+                    "answer": "copy running-config startup-config",
                     "correct": false,
-                    "comment": "Так работает параметр begin. Параметр exclude исключает строки, которые соответствуют фильтру, поэтому интерфейсы со словом unassigned будут скрыты."
+                    "comment": "Команда сохраняет текущую конфигурацию, чтобы та сохранилась после перезагрузки; сами изменения в текущей конфигурации действуют сразу. Пересылку пакетов IPv6 включает команда ipv6 unicast-routing."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Как получить IPv6-вариант команд проверки show ip interface brief, show ip interface и show ip route?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Администратору нужно увидеть подробные сведения IPv6 интерфейса GigabitEthernet0/0/1: локальный адрес канала, глобальный индивидуальный адрес и группы многоадресной рассылки, к которым присоединился интерфейс. Какую команду он введет?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "Заменить в команде ip на ipv6, например show ipv6 interface brief",
+                    "answerId": "q06-a1",
+                    "answer": "show ipv6 interface gigabitethernet 0/0/1",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "Ничего менять не нужно: эти команды сразу показывают и IPv4, и IPv6",
+                    "answerId": "q06-a2",
+                    "answer": "show ip interface gigabitethernet 0/0/1",
                     "correct": false,
-                    "comment": "Команды с ip показывают сведения IPv4. Для IPv6 в каждой из них ip заменяют на ipv6, например show ipv6 route."
+                    "comment": "Команда show ip interface выводит сведения IPv4. Чтобы получить сведения IPv6 того же интерфейса, в команде заменяют ip на ipv6: show ipv6 interface gigabitethernet 0/0/1."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "Добавить в конец команды слово ipv6, например show ip route ipv6",
+                    "answerId": "q06-a3",
+                    "answer": "show ipv6 interface brief",
                     "correct": false,
-                    "comment": "Ключевое слово ставится не в конец команды. В каждой команде проверки ip заменяют на ipv6, например show ipv6 route."
+                    "comment": "Краткий вывод показывает состояние и адреса всех интерфейсов, но не группы многоадресной рассылки. Подробные сведения одного интерфейса выводит show ipv6 interface gigabitethernet 0/0/1."
+                },
+                {
+                    "answerId": "q06-a4",
+                    "answer": "show ipv6 route",
+                    "correct": false,
+                    "comment": "Команда выводит таблицу маршрутизации IPv6, а не настройки интерфейса. Адреса и группы интерфейса показывает show ipv6 interface gigabitethernet 0/0/1."
                 }
             ]
         },
         {
             "questionId": "q04",
+            "bloom": "understand",
             "question": "После настройки и включения трех интерфейсов маршрутизатора R1 команда show ip route выводит только записи с кодами C и L, а шлюз последней надежды не задан. Что означают эти записи?",
             "answerType": "singleChoice",
             "answers": [
                 {
                     "answerId": "q04-a1",
-                    "answer": "Для каждого интерфейса — напрямую подключенную сеть (C) и локальный адрес самого интерфейса (L)",
+                    "answer": "Сеть каждого интерфейса (C) и адрес самого интерфейса (L)",
                     "correct": true
                 },
                 {
