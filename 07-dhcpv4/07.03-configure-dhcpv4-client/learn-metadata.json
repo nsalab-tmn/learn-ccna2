@@ -38,6 +38,7 @@
     "questions": [
         {
             "questionId": "q01",
+            "bloom": "remember",
             "question": "Интерфейс G0/0/1 маршрутизатора SOHO подключен к DSL-модему, а интернет-провайдер выдает адреса по DHCP. Какие команды режима настройки интерфейса настроят G0/0/1 как клиент DHCPv4?",
             "answerType": "singleChoice",
             "answers": [
@@ -61,56 +62,64 @@
             ]
         },
         {
-            "questionId": "q02",
-            "question": "Какая строка вывода show ip interface g0/0/1 подтверждает, что адрес интерфейса выдан сервером DHCPv4?",
+            "questionId": "q04",
+            "bloom": "understand",
+            "question": "Интерфейс GigabitEthernet0/1 маршрутизатора филиала должен получать адрес от провайдера по DHCP. Администратор проверяет его:\n\n```\nBranch# show ip interface g0/1\nGigabitEthernet0/1 is up, line protocol is up\n  Internet address is 203.0.113.18/28\n  Broadcast address is 255.255.255.255\n  Address determined by setup command\n```\n\nЧто показывает этот вывод?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q02-a1",
-                    "answer": "Address determined by DHCP",
+                    "answerId": "q04-a1",
+                    "answer": "Адрес задан вручную командой ip address",
                     "correct": true
                 },
                 {
-                    "answerId": "q02-a2",
-                    "answer": "Internet address is 209.165.201.12/27",
+                    "answerId": "q04-a2",
+                    "answer": "Адрес получен от сервера DHCPv4 провайдера",
                     "correct": false,
-                    "comment": "Эта строка показывает адрес интерфейса, но не то, как он получен. Что адрес выдан сервером DHCPv4, подтверждает строка Address determined by DHCP."
+                    "comment": "Адрес, выданный сервером DHCPv4, отмечен строкой Address determined by DHCP. Строка Address determined by setup command означает, что адрес задан вручную командой ip address."
                 },
                 {
-                    "answerId": "q02-a3",
-                    "answer": "Broadcast address is 255.255.255.255",
+                    "answerId": "q04-a3",
+                    "answer": "Интерфейс выключен и адреса не получил",
                     "correct": false,
-                    "comment": "Эта строка показывает широковещательный адрес. Что адрес интерфейса выдан сервером DHCPv4, подтверждает строка Address determined by DHCP."
+                    "comment": "Строка GigabitEthernet0/1 is up, line protocol is up показывает, что интерфейс работает, и адрес 203.0.113.18/28 на нем есть. Он задан вручную: так показывает строка Address determined by setup command."
                 },
                 {
-                    "answerId": "q02-a4",
-                    "answer": "GigabitEthernet0/0/1 is up, line protocol is up",
+                    "answerId": "q04-a4",
+                    "answer": "Адрес выдан из пула DHCPv4 самого маршрутизатора",
                     "correct": false,
-                    "comment": "Эта строка показывает только, что интерфейс работает. Что адрес выдан сервером DHCPv4, подтверждает строка Address determined by DHCP."
+                    "comment": "Пул DHCPv4 маршрутизатора выдает адреса клиентам, а не его собственным интерфейсам. Строка Address determined by setup command означает, что адрес задан вручную командой ip address."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Домашний беспроводной маршрутизатор подключен к кабельному модему и должен запрашивать IPv4-адрес у интернет-провайдера. Какой тип подключения выбирают на странице настройки глобальной сети?",
+            "questionId": "q05",
+            "bloom": "understand",
+            "question": "Домашний маршрутизатор раньше работал у провайдера, который выдал ему постоянный адрес, поэтому на странице Interfaces » wan в списке Protocol выбрано Static address. Новый провайдер подключил квартиру через кабельный модем и выдает адреса по DHCP. Что нужно изменить в настройках маршрутизатора?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "Automatic Configuration — DHCP (автоматическая настройка — DHCP)",
+                    "answerId": "q05-a1",
+                    "answer": "Выбрать для интерфейса wan в списке Protocol значение DHCP client",
                     "correct": true
                 },
                 {
-                    "answerId": "q03-a2",
-                    "answer": "Ручная настройка статического IPv4-адреса",
+                    "answerId": "q05-a2",
+                    "answer": "Оставить для wan Static address и указать шлюз нового провайдера",
                     "correct": false,
-                    "comment": "При ручной настройке маршрутизатор не запрашивает адрес у провайдера. Чтобы он работал как клиент DHCPv4, выбирают Automatic Configuration — DHCP."
+                    "comment": "Со значением Static address маршрутизатор не запрашивает адрес у провайдера, а новый провайдер выдает адреса по DHCP. Для интерфейса wan выбирают DHCP client, и адрес со шлюзом маршрутизатор получит сам."
                 },
                 {
-                    "answerId": "q03-a3",
-                    "answer": "Режим, в котором маршрутизатор сам выдает адреса провайдеру",
+                    "answerId": "q05-a3",
+                    "answer": "Выбрать для интерфейса lan в списке Protocol значение DHCP client",
                     "correct": false,
-                    "comment": "Здесь маршрутизатор получает адрес от провайдера, а не выдает его. Для этого выбирают тип подключения Automatic Configuration — DHCP."
+                    "comment": "Интерфейс lan обращен к домашним устройствам, а провайдер подключен к интерфейсу wan. Значение DHCP client выбирают для интерфейса wan."
+                },
+                {
+                    "answerId": "q05-a4",
+                    "answer": "Включить сервер DHCP на интерфейсе lan",
+                    "correct": false,
+                    "comment": "Сервер DHCP на интерфейсе lan выдает адреса домашним устройствам и адрес от провайдера маршрутизатору не получит. Для этого интерфейс wan переводят в режим DHCP client."
                 }
             ]
         }
