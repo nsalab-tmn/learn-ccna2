@@ -38,37 +38,39 @@
     "passingScore": 100,
     "questions": [
         {
-            "questionId": "q01",
-            "question": "Какой UDP-порт используют клиенты DHCPv6 для отправки сообщений DHCPv6?",
+            "questionId": "q06",
+            "bloom": "understand",
+            "question": "Анализатор пакетов перехватил сообщение ADVERTISE, которое сервер DHCPv6 отправил компьютеру PC1. Какой UDP-порт назначения указан в этом сообщении?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q01-a1",
+                    "answerId": "q06-a1",
+                    "answer": "546",
+                    "correct": true
+                },
+                {
+                    "answerId": "q06-a2",
+                    "answer": "547",
+                    "correct": false,
+                    "comment": "На UDP-порт 547 отправляет сообщения клиент — серверам DHCPv6. ADVERTISE идет от сервера к клиенту, поэтому его порт назначения 546."
+                },
+                {
+                    "answerId": "q06-a3",
                     "answer": "67",
                     "correct": false,
-                    "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
+                    "comment": "UDP-порт 67 — порт сервера DHCPv4, а у DHCPv6 свои порты. Сообщения от сервера DHCPv6 к клиенту идут на UDP-порт 546."
                 },
                 {
-                    "answerId": "q01-a2",
+                    "answerId": "q06-a4",
                     "answer": "68",
                     "correct": false,
-                    "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
-                },
-                {
-                    "answerId": "q01-a3",
-                    "answer": "546",
-                    "correct": false,
-                    "comment": "Клиенты DHCPv6 используют для отправки сообщений DHCPv6 UDP-порт 547. Серверам DHCPv6 для этого нужен UDP-порт 546"
-                },
-                {
-                    "answerId": "q01-a4",
-                    "answer": "547",
-                    "correct": true
+                    "comment": "UDP-порт 68 — порт клиента DHCPv4, а у DHCPv6 свои порты. Сообщения от сервера DHCPv6 к клиенту, такие как ADVERTISE, идут на UDP-порт 546."
                 }
             ]
         },
         {
             "questionId": "q02",
+            "bloom": "remember",
             "question": "Какое сообщение DHCPv6 отправляет узел для поиска сервера DHCPv6?",
             "answerType": "singleChoice",
             "answers": [
@@ -76,7 +78,7 @@
                     "answerId": "q02-a1",
                     "answer": "ADVERTISE",
                     "correct": false,
-                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
+                    "comment": "ADVERTISE отправляет сервер DHCPv6 в ответ на SOLICIT: так он сообщает, что готов обслужить клиента. Сам узел ищет серверы сообщением SOLICIT на адрес FF02::1:2."
                 },
                 {
                     "answerId": "q02-a2",
@@ -87,91 +89,106 @@
                     "answerId": "q02-a3",
                     "answer": "INFORMATION-REQUEST",
                     "correct": false,
-                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
+                    "comment": "INFORMATION-REQUEST запрашивает только параметры конфигурации, например адрес DNS-сервера, без назначения адреса. Для поиска серверов DHCPv6 узел отправляет SOLICIT."
                 },
                 {
                     "answerId": "q02-a4",
                     "answer": "REQUEST",
                     "correct": false,
-                    "comment": "Клиент передает сообщение DHCPv6 SOLICIT на зарезервированный IPv6-адрес многоадресной рассылки FF02::1:2, используемый всеми DHCPv6 серверами"
+                    "comment": "REQUEST клиент отправляет уже выбранному серверу, чтобы получить у него адрес и другие параметры. Поиск серверов DHCPv6 начинается с сообщения SOLICIT."
                 }
             ]
         },
         {
-            "questionId": "q03",
-            "question": "Какое сообщение отправляет узел серверу DHCPv6, если он использует DHCPv6 с сохранением состояния?",
+            "questionId": "q07",
+            "bloom": "understand",
+            "question": "Компьютер PC1 получил RA с флагом M = 1, отправил SOLICIT и получил от сервера DHCPv6 сообщение ADVERTISE. Какое сообщение PC1 отправит этому серверу следующим?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q03-a1",
-                    "answer": "ADVERTISE",
-                    "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
-                },
-                {
-                    "answerId": "q03-a2",
-                    "answer": "SOLICIT",
-                    "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
-                },
-                {
-                    "answerId": "q03-a3",
-                    "answer": "INFORMATION-REQUEST",
-                    "correct": false,
-                    "comment": "Клиент DHCPv6 отправляет DHCPv6 REQUEST, если он использует DHCPv6 с сохранением состояния, и сообщение DHCPv6 INFORMATION-REQUEST, если он использует DHCPv6 без сохранения состояния"
-                },
-                {
-                    "answerId": "q03-a4",
+                    "answerId": "q07-a1",
                     "answer": "REQUEST",
                     "correct": true
+                },
+                {
+                    "answerId": "q07-a2",
+                    "answer": "INFORMATION-REQUEST",
+                    "correct": false,
+                    "comment": "INFORMATION-REQUEST запрашивает только дополнительные параметры, и его отправляет клиент DHCPv6 без сохранения состояния. При M = 1 клиент запрашивает у сервера адрес сообщением REQUEST."
+                },
+                {
+                    "answerId": "q07-a3",
+                    "answer": "REPLY",
+                    "correct": false,
+                    "comment": "REPLY отправляет сервер в ответ на запрос клиента, а не клиент. После ADVERTISE клиент с сохранением состояния отправляет серверу REQUEST."
+                },
+                {
+                    "answerId": "q07-a4",
+                    "answer": "SOLICIT",
+                    "correct": false,
+                    "comment": "SOLICIT уже отправлен: им клиент нашел сервер, а ADVERTISE — ответ на него. Следующим клиент отправляет REQUEST, чтобы получить адрес."
                 }
             ]
         },
         {
-            "questionId": "q04",
-            "question": "Какая комбинация параметров флага используется для DHCP без сохранения состояния?",
+            "questionId": "q08",
+            "bloom": "understand",
+            "question": "На маршрутизаторе R1 включена маршрутизация IPv6, а на его интерфейсе G0/0/1 ввели команду ipv6 nd other-config-flag; других команд ipv6 nd нет. В сети работает сервер DHCPv6. Как компьютер PC1 этой сети получит GUA и адрес DNS-сервера?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q04-a1",
-                    "answer": "A=1, M=0, O=0",
-                    "correct": false,
-                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
-                },
-                {
-                    "answerId": "q04-a2",
-                    "answer": "A=0, M=1, O=0",
-                    "correct": false,
-                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
-                },
-                {
-                    "answerId": "q04-a3",
-                    "answer": "A=1, M=0, O=1",
+                    "answerId": "q08-a1",
+                    "answer": "GUA создаст сам по префиксу из RA, адрес DNS-сервера — от сервера DHCPv6",
                     "correct": true
                 },
                 {
-                    "answerId": "q04-a4",
-                    "answer": "A=0, M=1, O=1",
+                    "answerId": "q08-a2",
+                    "answer": "GUA и адрес DNS-сервера получит от сервера DHCPv6 с сохранением состояния",
                     "correct": false,
-                    "comment": "DHCPv6 без сохранения состояния устанавливает флаги в A=1, M=0, O=1"
+                    "comment": "Команда ipv6 nd other-config-flag устанавливает только флаг O = 1, а флаг M остается равным 0. Значит, GUA узел создает сам по префиксу из RA, а у сервера DHCPv6 получает лишь дополнительные параметры."
+                },
+                {
+                    "answerId": "q08-a3",
+                    "answer": "GUA создаст сам по префиксу из RA, адрес DNS-сервера — только из RA",
+                    "correct": false,
+                    "comment": "Только сведениями из RA узел обходится при O = 0. Команда ipv6 nd other-config-flag устанавливает O = 1: адрес DNS-сервера узел получает от сервера DHCPv6 без сохранения состояния."
+                },
+                {
+                    "answerId": "q08-a4",
+                    "answer": "GUA получит от сервера DHCPv6, а адрес DNS-сервера — из RA",
+                    "correct": false,
+                    "comment": "Роли перепутаны: при M = 0 сервер DHCPv6 адресов не назначает. GUA узел создает сам по префиксу из RA (флаг A по умолчанию равен 1), а адрес DNS-сервера получает от сервера DHCPv6."
                 }
             ]
         },
         {
-            "questionId": "q05",
-            "question": "Какая настройка флага M указывает на то, что используется DHCPv6 с сохранением состояния?",
+            "questionId": "q09",
+            "bloom": "understand",
+            "question": "На маршрутизаторе R1 включена маршрутизация IPv6, а на его интерфейсе G0/0/1 ввели команды ipv6 nd managed-config-flag и ipv6 nd prefix default no-autoconfig. В сети работает сервер DHCPv6. Как компьютер PC1 этой сети получит GUA?",
             "answerType": "singleChoice",
             "answers": [
                 {
-                    "answerId": "q05-a1",
-                    "answer": "M=0",
-                    "correct": false,
-                    "comment": "DHCPv6 с сохранением состояния  устанавливает флаги M=1"
+                    "answerId": "q09-a1",
+                    "answer": "Получит его от сервера DHCPv6 с сохранением состояния",
+                    "correct": true
                 },
                 {
-                    "answerId": "q05-a2",
-                    "answer": "M=1",
-                    "correct": true
+                    "answerId": "q09-a2",
+                    "answer": "Создаст сам по SLAAC и получит еще один от сервера DHCPv6",
+                    "correct": false,
+                    "comment": "Так ведут себя некоторые ОС, например Windows, при A = 1 и M = 1. Команда ipv6 nd prefix default no-autoconfig устанавливает A = 0, поэтому PC1 не создает GUA по SLAAC, а получает его от сервера DHCPv6 с сохранением состояния."
+                },
+                {
+                    "answerId": "q09-a3",
+                    "answer": "Создаст сам по SLAAC, а у сервера DHCPv6 получит только адрес DNS-сервера",
+                    "correct": false,
+                    "comment": "Так работает DHCPv6 без сохранения состояния (A = 1, O = 1, M = 0). Здесь команды установили M = 1 и A = 0: GUA PC1 получает от сервера DHCPv6 с сохранением состояния."
+                },
+                {
+                    "answerId": "q09-a4",
+                    "answer": "Получит его из сообщения RA вместе с адресом шлюза по умолчанию",
+                    "correct": false,
+                    "comment": "RA сообщает префикс и адрес шлюза по умолчанию, но не готовый GUA. При M = 1 и A = 0 адрес PC1 получает от сервера DHCPv6 с сохранением состояния."
                 }
             ]
         }
