@@ -472,7 +472,7 @@ scenario:
 
         R2 uptime is 3 minutes
         System returned to ROM by power-on
-        System image file is "flash0:nr05-netos-0.1.0.bin"
+        System image file is "flash:nr05-netos-0.1.0.bin"
 
         NSALAB NR05 (revision 1.0) with 1048576K/6147K bytes of memory.
         Processor board ID NSA00000001
