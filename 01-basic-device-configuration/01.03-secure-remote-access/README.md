@@ -38,7 +38,7 @@ Copyright (c) 2026 NSALAB
 
 S1 uptime is 0 minutes
 System returned to ROM by power-on
-System image file is "flash0:ns01-netos-0.1.0.bin"
+System image file is "flash:ns01-netos-0.1.0.bin"
 
 NSALAB NS01 (revision 1.0) with 65536K bytes of memory.
 Processor board ID NSA00000001
