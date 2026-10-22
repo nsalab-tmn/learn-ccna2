@@ -9,12 +9,14 @@
 S1# show mac address-table dynamic
           Mac Address Table
 -------------------------------------------
+
 Vlan    Mac Address       Type        Ports
 ----    -----------       --------    -----
-   1    0001.9717.22e0    DYNAMIC     Fa0/4
-   1    000a.f38e.74b3    DYNAMIC     Fa0/1
-   1    0090.0c23.ceca    DYNAMIC     Fa0/3
-   1    00d0.ba07.8499    DYNAMIC     Fa0/2
+   1    00d0.2227.6001    DYNAMIC     Fa0/2
+   1    00d0.4997.6d01    DYNAMIC     Fa0/3
+   1    00d0.8455.dc01    DYNAMIC     Fa0/1
+   1    00d0.c522.ce01    DYNAMIC     Fa0/4
+Total Mac Addresses for this criterion: 4
 S1#
 ```
 
