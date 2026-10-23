@@ -1852,9 +1852,9 @@
    "provenance": {
     "legacy": "6.3.1.svg",
     "synced": {
-     "figmaVersion": "2410325910918669022",
-     "at": "2026-10-14T21:35:16Z",
-     "sha256": "7c44ec4be372f8f9ee8730af452c8d1d0989d842a85b0005f9631f06b89b4228"
+     "figmaVersion": "2413632773733067770",
+     "at": "2026-10-23T19:44:15Z",
+     "sha256": "a4f66a7699845b022395d652fec318f3fc9021c4ca5ecf579a483f001ab615e3"
     }
    },
    "notes": "[ref → 6.2.2 (ccna2-vnw5nfa): pixel-identical, kb#242 exact repeat; own frame 4191:442702 deleted in the Figma tidy-up, operator 2026-10-24]"
