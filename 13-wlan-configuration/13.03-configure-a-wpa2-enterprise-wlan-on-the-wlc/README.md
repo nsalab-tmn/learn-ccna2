@@ -11,7 +11,7 @@
 4. После **Apply** сервер появляется в списке серверов аутентификации RADIUS: 1, 172.16.1.254, 1812, **Enabled**.
 5. Пока изменения не сохранены, у ссылки **Save configuration** горит метка «●». **Save configuration** сохраняет конфигурацию контроллера, и метка гаснет.
 
-![youtube](https://www.youtube.com/watch?v=0f4OhO7N1mg)
+![](./assets/13.3.1.svg)
 
 <!-- 13.3.2 -->
 ## SNMP и RADIUS
@@ -71,7 +71,7 @@
 5. В поле **Primary DHCP server** — 192.168.5.1: клиенты новой WLAN получат адреса из пула DHCP на R1. Затем **Apply**.
 6. В списке интерфейсов появляется vlan5: VLAN 5, порт 1, 192.168.5.254, тип **Dynamic**. **Save configuration** сохраняет конфигурацию контроллера.
 
-![youtube](https://www.youtube.com/watch?v=DinzgbcB-So)
+![](./assets/13.3.5.svg)
 
 <!-- 13.3.6 -->
 ## Топология с адресацией VLAN 5
@@ -156,7 +156,7 @@ WLC, точка доступа AP1 и PC-B находятся в сети упр
 4. В списке **Status** выбирается **Enabled**, затем **Apply**.
 5. В списке областей — Wireless\_Management: пул 192.168.200.240–192.168.200.249, сеть 192.168.200.0 / 255.255.255.0, **Enabled**. **Save configuration** сохраняет конфигурацию контроллера.
 
-![youtube](https://www.youtube.com/watch?v=j9nrRvV3JKo)
+![](./assets/13.3.8.svg)
 
 <!-- 13.3.9 -->
 ## Настройка области DHCP
@@ -215,7 +215,7 @@ WLC, точка доступа AP1 и PC-B находятся в сети упр
 6. В списке WLANs обе сети включены: Wireless\_LAN с WPA2 Personal (PSK) и CompanyName с WPA2 Enterprise (802.1X). **Save configuration** сохраняет конфигурацию контроллера.
 7. На странице **Dashboard** — две включенные WLAN и один клиент: ноутбук подключился к CompanyName, сервер RADIUS принял его учетную запись. В разделе **Clients** у клиента адрес 192.168.5.2 из VLAN 5, точка доступа AP1 и WLAN CompanyName. На холсте между AP1 и ноутбуком — беспроводная связь «CompanyName · 802.1X».
 
-![youtube](https://www.youtube.com/watch?v=PF8gfBfJN8M)
+![](./assets/13.3.10.svg)
 
 <!-- 13.3.11 -->
 ## Конфигурация WPA2 Enterprise WLAN

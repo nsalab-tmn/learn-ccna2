@@ -12,7 +12,7 @@
 5. Та же проверка, S3 и R2 по-прежнему подключены. Команда **show interfaces trunk** показывает одну магистраль — Gi0/2 с native VLAN 999, а **show interfaces fa0/3 switchport** — режим static access и выключенное согласование магистрали. PC2 после **ipconfig /release** и **ipconfig /renew** получает адрес 192.168.10.11 от R1, и ping шлюза проходит: предложение DHCP от R2 пришло на недоверенный порт, и коммутатор его отбросил — в журнале появляется сообщение DHCP_SNOOPING_UNTRUSTED_PORT. Команда **show ip dhcp snooping binding** показывает привязку PC2, а PC1 работает как прежде.
 6. Итог: пользовательские порты — в режиме доступа, неиспользуемые — в отдельной VLAN и выключены; магистраль настроена вручную, без DTP, с native VLAN не 1; DHCP snooping доверяет только порту к серверу. Результат проверяют командами **show interfaces trunk** и **show ip dhcp snooping binding**.
 
-![youtube](https://www.youtube.com/watch?v=ye_f86EfTl8)
+![](./assets/10.5.1.svg)
 
 <!-- 10.5.2 -->
 ## Атака VLAN Hopping
@@ -132,7 +132,7 @@ VLAN hopping позволяет видеть трафик из одной VLAN �
 5. Та же проверка: S3 снова подключают к Fa0/2. Порт получает BPDU, и BPDU Guard сразу переводит его в состояние err-disabled: в журнале появляются сообщения BLOCK_BPDUGUARD и ERR_DISABLE, а **show interfaces status err-disabled** показывает Fa0/2 с причиной bpduguard. R3 на порту Fa0/3 сразу пересылает кадры (PortFast), но **show cdp neighbors** и **show lldp neighbors** на R3 соседей не показывают. Выключенный порт сам не включится: S3 отключают, а порт включают командами **shutdown** и **no shutdown**.
 6. Итог: пользовательские порты — в режиме доступа, без CDP и LLDP, с PortFast и BPDU Guard по умолчанию. Результат проверяют командами **show spanning-tree summary** и **show interfaces status err-disabled**.
 
-![youtube](https://www.youtube.com/watch?v=JhiaFeH9ZOU)
+![](./assets/10.5.6.svg)
 
 <!-- 10.5.7 -->
 ## ARP атаки

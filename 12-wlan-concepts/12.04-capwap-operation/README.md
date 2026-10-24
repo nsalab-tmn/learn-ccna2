@@ -1,11 +1,7 @@
 <!-- 12.4.1 -->
-## Видео: CAPWAP
-
 CAPWAP (Control And Provisioning of Wireless Access Points) отвечает за управление и инициализацию беспроводных точек доступа в топологиях беспроводных сетей с использованием контроллера.
 
-Посмотрите видео о протоколе CAPWAP.
-
-![youtube](https://www.youtube.com/watch?v=qXXGwkLZ6hI)
+![](./assets/12.4.1.svg)
 
 <!-- 12.4.2 -->
 ## Введение в CAPWAP
