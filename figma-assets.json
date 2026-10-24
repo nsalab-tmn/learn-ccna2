@@ -8188,11 +8188,18 @@
     "path": "02-switching-concepts/02.01-frame-forwarding/assets/2.1.4.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "provenance": {
-    "youtube": "fi7Ss-_9LvY"
+    "youtube": "fi7Ss-_9LvY",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "f4e98cb3f88255ac4c32914d378809a8f6d01d046975e35e82917b94b11d3917",
+     "tracksSha256": "9e3da242e0b7931777242d968fbb46d7e97afc49291a3e4759f90ce7357111d4"
+    }
    },
-   "notes": "[ремейк видео NetAcad «MAC-таблицы двух коммутаторов» (YouTube fi7Ss-_9LvY, kb#327); тот же ролик, что CCNA1 7.3.4 — ref на ccna1-rcgwqft, 2026-10-24]"
+   "notes": "[ремейк видео NetAcad «MAC-таблицы двух коммутаторов» (YouTube fi7Ss-_9LvY, kb#327); тот же ролик, что CCNA1 7.3.4 — ref на ccna1-rcgwqft, 2026-10-24]",
+   "tracks": "animations/ccna2-aql6mnv/tracks.json"
   },
   {
    "id": "ccna2-7ewo7rn",
@@ -8211,10 +8218,16 @@
     "path": "05-stp/05.01-purpose-of-stp/assets/5.1.8.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-7ewo7rn/tracks.json",
    "provenance": {
-    "youtube": "TZrrTw5uhNI"
+    "youtube": "TZrrTw5uhNI",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "75194bce232320a929810a0303402223aea39ae41e8114c6e00fc6ff74ae3358",
+     "tracksSha256": "8661c8c5599dda49a1acc54f3d9a1b459c544e371e90179bd52dbd4413c9335b"
+    }
    },
    "notes": "[ремейк видео NetAcad «Наблюдение за работой STP» (YouTube TZrrTw5uhNI, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8235,10 +8248,16 @@
     "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-wapbcef/tracks.json",
    "provenance": {
-    "youtube": "ye_f86EfTl8"
+    "youtube": "ye_f86EfTl8",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "cb5012b9204fca865b7f73b3c77e9857bc3501604c3bafee06b9759458e98211",
+     "tracksSha256": "9f2596f6e679ebe7b484b5f0becab436472601e5fbaf9b14c3508f7d4f25a8b3"
+    }
    },
    "notes": "[ремейк видео NetAcad «Защита магистралей и DHCP на коммутаторе» (YouTube ye_f86EfTl8, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8259,10 +8278,16 @@
     "path": "10-lan-security-concepts/10.05-lan-attacks/assets/10.5.6.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-2xxxk3h/tracks.json",
    "provenance": {
-    "youtube": "JhiaFeH9ZOU"
+    "youtube": "JhiaFeH9ZOU",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "7cf3f4cea52bb53ab465befc0c6ef8fd8f399b006971671d663849eacb4229dd",
+     "tracksSha256": "945f78245871cff527c79b959979b49125354883937779989bf856fd1a00e849"
+    }
    },
    "notes": "[ремейк видео NetAcad «Защита STP и служб обнаружения» (YouTube JhiaFeH9ZOU, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8283,10 +8308,16 @@
     "path": "12-wlan-concepts/12.02-components-of-wlans/assets/12.2.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-y5xbjig/tracks.json",
    "provenance": {
-    "youtube": "3bOfIlu0BzI"
+    "youtube": "3bOfIlu0BzI",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "cf504fd2572c4e36957626f26f2734e95317e001eb6f9530de813443cba05298",
+     "tracksSha256": "486e347460554ed1d38ddf6f652c3ed07d353e455b2b1fa2bc4254fade1005b8"
+    }
    },
    "notes": "[ремейк видео NetAcad «Компоненты беспроводной сети» (YouTube 3bOfIlu0BzI, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8307,10 +8338,16 @@
     "path": "12-wlan-concepts/12.03-wlan-operation/assets/12.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-zzxzxta/tracks.json",
    "provenance": {
-    "youtube": "XI_F7TvuDBs"
+    "youtube": "XI_F7TvuDBs",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "02a3efe795ffac9b9ae3002a1b7de6f3a74c7a5526584f63e8db6220f9131de9",
+     "tracksSha256": "24862670ac0e74488368e0caef8f845b316b55ad1b125768e955046768fcf1b5"
+    }
    },
    "notes": "[ремейк видео NetAcad «Принципы работы WLAN» (YouTube XI_F7TvuDBs, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8331,10 +8368,16 @@
     "path": "12-wlan-concepts/12.04-capwap-operation/assets/12.4.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-5sjllsz/tracks.json",
    "provenance": {
-    "youtube": "qXXGwkLZ6hI"
+    "youtube": "qXXGwkLZ6hI",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "ec57074e6f89339aa713cbd97986c73a924c51e101b662040ab9db814c70af00",
+     "tracksSha256": "ebf6badac049b41ad6c5a41e74fff3641aac442cb963d3eda86ea480fdbabc2c"
+    }
    },
    "notes": "[ремейк видео NetAcad «CAPWAP» (YouTube qXXGwkLZ6hI, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8355,10 +8398,16 @@
     "path": "12-wlan-concepts/12.06-wlan-threats/assets/12.6.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-45jw75t/tracks.json",
    "provenance": {
-    "youtube": "RhcFm7fBVH0"
+    "youtube": "RhcFm7fBVH0",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "92cbf1af511e738c1952363526623696f1e72676265740db691e70703481b3de",
+     "tracksSha256": "8311aaa5fd613e6fe698b33f408c4116fad2912bab5cfe1a7ca3a1b8e6d42d75"
+    }
    },
    "notes": "[ремейк видео NetAcad «Защита беспроводной сети» (YouTube RhcFm7fBVH0, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8379,10 +8428,16 @@
     "path": "12-wlan-concepts/12.07-secure-wlans/assets/12.7.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-ylz4zws/tracks.json",
    "provenance": {
-    "youtube": "Pl3u95xY2RQ"
+    "youtube": "Pl3u95xY2RQ",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "19a2fd8c0ca06817a7eb1088dc1606e62d2581159d22a67c7cb28d4f2a630674",
+     "tracksSha256": "8f69f3bca8eaf35f58a8709f01bf6bd318ae116bdcbb41fc9c6af64c321a78d3"
+    }
    },
    "notes": "[ремейк видео NetAcad «Защита WLAN» (YouTube Pl3u95xY2RQ, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8403,10 +8458,16 @@
     "path": "13-wlan-configuration/13.01-remote-site-wlan-configuration/assets/13.1.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-jitjdpl/tracks.json",
    "provenance": {
-    "youtube": "dzWPJ4Q57cg"
+    "youtube": "dzWPJ4Q57cg",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "dc2f6bdb622fdbf8ab6c363f0638dbcfc1a3481f1606f4b38d8f159efe455107",
+     "tracksSha256": "7707159631416e9c7a999d463b798b5461cdf69dea40888a9a7d574f405ae885"
+    }
    },
    "notes": "[ремейк видео NetAcad «Настройка беспроводной сети» (YouTube dzWPJ4Q57cg, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8427,10 +8488,16 @@
     "path": "13-wlan-configuration/13.02-configure-a-basic-wlc-on-the-wlc/assets/13.2.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-4u2ckax/tracks.json",
    "provenance": {
-    "youtube": "O-KpLNWHQhA"
+    "youtube": "O-KpLNWHQhA",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "387a44077e7698dfd152061df2ad515560abad14f11e90e7b371a244cc6d1b9c",
+     "tracksSha256": "57ee4ad1362c57b82815dfabab92a7def72933702b49f9c39e971f4d5a61ff85"
+    }
    },
    "notes": "[ремейк видео NetAcad «Базовая WLAN на WLC» (YouTube O-KpLNWHQhA, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8451,10 +8518,16 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.1.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-ccv4l3m/tracks.json",
    "provenance": {
-    "youtube": "0f4OhO7N1mg"
+    "youtube": "0f4OhO7N1mg",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "2ad02d6f8379e58a0f5d6c66750d8439ae91732919bb694a6444ee52a7550c26",
+     "tracksSha256": "560f922e8648ec23f408920cb069f1c97aa9eff774b900f8244a6b74a3d79a49"
+    }
    },
    "notes": "[ремейк видео NetAcad «Серверы SNMP и RADIUS на WLC» (YouTube 0f4OhO7N1mg, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8475,10 +8548,16 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.5.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-k7s2cig/tracks.json",
    "provenance": {
-    "youtube": "DinzgbcB-So"
+    "youtube": "DinzgbcB-So",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "d5e13340647a2b44b95e40d4c57ceb9cf99fc184092c40a76526c2663baf79e3",
+     "tracksSha256": "156ad2b78db6b432d9b7e2489c6fdc7fffbe6f3846d9cfb34f4f372b792697d5"
+    }
    },
    "notes": "[ремейк видео NetAcad «Интерфейс VLAN для новой WLAN» (YouTube DinzgbcB-So, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8499,10 +8578,16 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.8.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-2ytl73b/tracks.json",
    "provenance": {
-    "youtube": "j9nrRvV3JKo"
+    "youtube": "j9nrRvV3JKo",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "fe75347353a8f5163b8aa013dba47dcbfc960437a9c619f0df5d071b9c106a39",
+     "tracksSha256": "923d288bbb078d50ff2103c3138ae26e7cef9a36043250d9d9308ee869482f30"
+    }
    },
    "notes": "[ремейк видео NetAcad «Область DHCP на WLC» (YouTube j9nrRvV3JKo, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   },
@@ -8523,10 +8608,16 @@
     "path": "13-wlan-configuration/13.03-configure-a-wpa2-enterprise-wlan-on-the-wlc/assets/13.3.10.svg",
     "format": "animated-svg"
    },
-   "status": "pending",
+   "status": "synced",
    "tracks": "animations/ccna2-ke3pdov/tracks.json",
    "provenance": {
-    "youtube": "PF8gfBfJN8M"
+    "youtube": "PF8gfBfJN8M",
+    "synced": {
+     "figmaVersion": "2413683815138594987",
+     "at": "2026-10-24T00:30:43Z",
+     "sha256": "7de14105a9bd1190d9d9b2092497cd3a43a67f8406568170bcd52db7cf86bdba",
+     "tracksSha256": "3aaf91fbeef4c478adbeb0d688ce740a73c719add7c88feb267bfed2ca352dec"
+    }
    },
    "notes": "[ремейк видео NetAcad «WLAN с WPA2 Enterprise» (YouTube PF8gfBfJN8M, kb#327), принят оператором; кадр перенесён в поток курса 2026-10-24]"
   }
