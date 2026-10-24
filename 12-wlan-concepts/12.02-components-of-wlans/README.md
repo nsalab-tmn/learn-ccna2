@@ -5,7 +5,7 @@
 
 Посмотрите видео о компонентах WLAN.
 
-![youtube](https://www.youtube.com/watch?v=3bOfIlu0BzI)
+![](./assets/12.2.1.svg)
 
 <!-- 12.2.2 -->
 ## Беспроводные сетевые адаптеры

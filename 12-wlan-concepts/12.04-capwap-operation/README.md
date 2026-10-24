@@ -5,7 +5,7 @@ CAPWAP (Control And Provisioning of Wireless Access Points) отвечает з�
 
 Посмотрите видео о протоколе CAPWAP.
 
-![youtube](https://www.youtube.com/watch?v=qXXGwkLZ6hI)
+![](./assets/12.4.1.svg)
 
 <!-- 12.4.2 -->
 ## Введение в CAPWAP
