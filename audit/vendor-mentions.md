@@ -219,12 +219,12 @@
 
 | семейство | растров | что делать |
 |---|---|---|
-| экзаменационные и квизовые схемы NetAcad (бирюзовые 3D-иконки Cisco) | 59 | перерисовать в библиотеке курса; в `raster-inventory-ccna2.md` их нет — это новый объём работ |
-| GUI Cisco WLC с логотипом (классический и новый UI, вкладка браузера «CCNA7», страница входа с ©) | 35 | компоненты К4/К5/К6 из `raster-inventory-ccna2.md`, без логотипа; зависит от D5 |
+| экзаменационные и квизовые схемы NetAcad (бирюзовые 3D-иконки Cisco) | 59 | перерисовать в библиотеке курса; в learn-materials `research/raster-inventory-ccna2.md` их нет — это новый объём работ |
+| GUI Cisco WLC с логотипом (классический и новый UI, вкладка браузера «CCNA7», страница входа с ©) | 35 | компоненты К4/К5/К6 из learn-materials `research/raster-inventory-ccna2.md`, без логотипа; зависит от D5 |
 | скриншоты логической топологии Packet Tracer (`topology.png` лаб) | 29 | схема топологии в стиле курса — вместе с переводом лабы |
 | GUI Packet Tracer (HomeRouter-PT-AC, WRT300N, Web Browser PT, Command Prompt PT) | 21 | компоненты К3/К4 |
 | схемы из лабораторных руководств NetAcad (синие иконки Cisco) | 10 | перерисовать |
-| продуктовые фото и схемы с логотипом (1.1.3 Catalyst 2960, 12.2.4 Meraki, 13.1.2-1 MX64W, 13.2.6-1 WLC 3504, 13.4.4-1 Meraki Dashboard) | 5 | как в raster-inventory (A/B/C) |
+| продуктовые фото и схемы с логотипом (1.1.3 Catalyst 2960, 12.2.4 Meraki, 13.1.2-1 MX64W, 13.2.6-1 WLC 3504, 13.4.4-1 Meraki Dashboard) | 5 | как в learn-materials `research/raster-inventory-ccna2.md` (A/B/C) |
 | Wireshark с вендорными данными (1.3.1 пароль ccna, 1.3.2 SSH-2.0-Cisco, 10.5.10 дерево CDP) | 3 | компонент К1 с нейтральными данными |
 | фигуры NetAcad (10.2.2, 13.1.6, 13.1.8) | 3 | перерисовать |
 | CLI-растры экзаменов с брендом в значениях (CiscoVille, cisco.com, netacad.net) или протоколами (PAgP, GLBP, CDP, EIGRP) | 14 | D11 / D4 |
@@ -423,7 +423,7 @@
 |---|---|---|---|---|
 | illustration | 197 | 187 | рендер + OCR + глазами (185 synced + 2 orphan, лежащих в git) | 10 orphan без файла в git (6.3.3, 10.1.2-1…-3, 14.3.3, 14.3.4, 15.2.3, 15.2.7, 15.3.2, 15.4.3): Figma недоступна. По `notes` манифеста это дубли просмотренных рисунков и три одиночные иконки |
 | animation | 18 | 18 | 5 кадров каждой (SMIL, Chromium: `pauseAnimations` + `setCurrentTime` на 12/32/52/72/92 %) + OCR + тексты узлов из `animations/*/spec.json` | — |
-| native | 73 | 73 | OCR + глазами, сверка с `design/raster-inventory-ccna2.md` | — |
+| native | 73 | 73 | OCR + глазами, сверка с `https://github.com/nsalab-tmn/learn-materials/blob/main/research/raster-inventory-ccna2.md` | — |
 | вне манифеста: SVG | 1 | 1 | `16.01.02-…-quiz/assets/16.1.2.svg` | — |
 | вне манифеста: растры | 152 | 152 | экзамены 82, `topology.png` лаб 39, `readme-assets` 17, квизы и фото 14 | — |
 
