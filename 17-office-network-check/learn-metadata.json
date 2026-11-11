@@ -1,0 +1,21 @@
+{
+    "title": "Настроить сеть офиса с VLAN, маршрутизацией и Wi-Fi",
+    "materialType": "course",
+    "tags": {
+        "$ref": "../material-tags.json"
+    },
+    "description": {
+        "$ref": "./README.md"
+    },
+    "materials": [
+        {
+            "$ref": "./17.01-final-lab-part1/learn-metadata.json"
+        },
+        {
+            "$ref": "./17.02-final-lab-part2/learn-metadata.json"
+        },
+        {
+            "$ref": "./17.03-final-exam/learn-metadata.json"
+        }
+    ]
+}
